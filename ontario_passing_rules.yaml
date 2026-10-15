@@ -1,13 +1,17 @@
 ruleset: Ontario passing rules
 source:
   title: The Official Ministry of Transportation (MTO) Driver's Handbook (ontario.ca)
-  edition: online edition, printed to PDF 2026-09-29, 221 pages
-  page_numbering: PDF page number as printed in the footer (n/221)
+  edition: online edition, scraped to local HTML by scrape_mto_handbook.py on 2026-10-06
+  base_dir: mto_drivers_handbook
+  online_base: https://www.ontario.ca/document/official-mto-drivers-handbook
+  citation: href is <page>.html#<section-id>, relative to base_dir. <page> is the page's slug on ontario.ca (online_base/<page>),
+    and <section-id> is the id of the nearest h2 heading; lower headings have no ids and appear only in location.
+    diagram_href is the section the diagram sits in, and diagram_image its image file, relative to base_dir.
 vocabulary:
 - term: PASS
   definition: The manoeuvre of changing lanes to move past a slower vehicle travelling in the same direction, then
     returning to the ORIGINAL LANE. Used interchangeably with ‘overtake’.
-  basis: 'p. 67: “Passing is changing lanes to move past a slower vehicle.”'
+  basis: 'changing-positions.html#passing: “Passing is changing lanes to move past a slower vehicle.”'
 - term: PASSER
   definition: The driver making a PASS. Unless a rule says otherwise, this is the ACTOR.
   basis: Defined for this rule set
@@ -19,84 +23,84 @@ vocabulary:
   basis: Defined for this rule set
 - term: ORIGINAL LANE
   definition: The lane the PASSER was in before the PASS began.
-  basis: 'p. 68: “Go back to your original lane.”'
+  basis: 'changing-positions.html#passing: “Go back to your original lane.”'
 - term: PASSING LANE
   definition: 'In the steps for a PASS: the lane the PASSER moves into. As a road feature: an extra lane provided
     so faster traffic can pass (see CLIMBING LANE).'
-  basis: pp. 67, 70
+  basis: changing-positions.html#passing, changing-positions.html#passing-and-climbing-lanes
 - term: CLIMBING LANE
   definition: An extra right-hand lane, often on grades, that lets slower vehicles move right so faster ones can
     pass in the left lane.
-  basis: p. 70, Diagram 2-48
+  basis: changing-positions.html#passing-and-climbing-lanes, Diagram 2-48 (changing-positions.html#passing-and-climbing-lanes)
 - term: TRUCK PASSING LANE
   definition: 'On roads with three or more lanes each way where trucks are barred from the far-left lane: the lane
     next to it.'
-  basis: p. 69
+  basis: changing-positions.html#passing
 - term: CENTRE LINE
   definition: The marking separating opposing traffic. Yellow lines separate opposing traffic; white lines separate
     traffic in the same direction.
-  basis: p. 137
+  basis: pavement-markings.html
 - term: SOLID LINE / BROKEN LINE
   definition: A continuous or dashed pavement line at the left of the PASSER's lane.
-  basis: p. 137, Diagrams 3-1, 3-2
+  basis: pavement-markings.html, Diagram 3-2 (pavement-markings.html), Diagram 3-3 (pavement-markings.html)
 - term: MULTI-LANE ROAD
   definition: A road with two or more lanes in the same direction.
-  basis: p. 66
+  basis: changing-positions.html#changing-lanes
 - term: ONE-WAY ROAD
   definition: A road on which all traffic travels in one direction.
-  basis: p. 70
+  basis: changing-positions.html#passing-on-the-right
 - term: SHOULDER
   definition: The strip beside the travelled lanes, paved or unpaved.
-  basis: p. 70
+  basis: changing-positions.html#passing-on-the-shoulder
 - term: ONCOMING TRAFFIC
   definition: Traffic approaching in the opposite direction.
-  basis: p. 68
+  basis: changing-positions.html#passing
 - term: CLEAR DISTANCE
   definition: Unobstructed road ahead that is long enough to complete a PASS safely.
-  basis: p. 68
+  basis: changing-positions.html#passing
 - term: ALONGSIDE
   definition: The phase of a PASS when the PASSER is level with the PASSED VEHICLE.
-  basis: p. 69
+  basis: changing-positions.html#passing-at-night
 - term: BLIND SPOT
   definition: Area around the vehicle not visible in the mirrors; checked by looking over the shoulder.
-  basis: p. 66
+  basis: changing-positions.html#changing-lanes
 - term: PEDESTRIAN CROSSOVER
   definition: A designated crossing without traffic lights, marked by signs, overhead yellow lights, and double
     white lines with an X in each lane.
-  basis: pp. 55, 139
+  basis: stopping.html#stopping-for-pedestrian-crossovers, pavement-markings.html
 - term: CROSSWALK
   definition: The part of a roadway linking sidewalks, or marked by signs or lines for pedestrian crossing, marked
     or not.
-  basis: p. 37
+  basis: sharing-road-other-road-users.html#sharing-the-road-with-pedestrians
 - term: CYCLIST
   definition: A person riding a bicycle.
-  basis: pp. 39–40
+  basis: sharing-road-other-road-users.html#sharing-the-road-with-cyclists
 - term: LARGE VEHICLE
   definition: A large commercial vehicle, such as a truck, tractor-trailer or bus.
-  basis: pp. 42–44
+  basis: sharing-road-other-road-users.html#sharing-the-road-with-large-commercial-vehicles
 - term: LCV
   definition: 'Long commercial vehicle: a double trailer up to 40 metres long, identified by a rear placard.'
-  basis: p. 128
+  basis: signs.html#other-signs
 - term: SLOW-MOVING VEHICLE SIGN
   definition: An orange triangle with a red border meaning the vehicle travels at 40 km/h or less.
-  basis: pp. 45, 128
+  basis: sharing-road-other-road-users.html#sharing-the-road-with-farm-machinery, signs.html#other-signs
 - term: EMERGENCY VEHICLE
   definition: A police, fire, ambulance or public-utility emergency vehicle using red or blue flashing lights, siren,
     bell, or alternating white high beams.
-  basis: p. 88
+  basis: dealing-particular-situations.html#emergency-vehicles
 - term: SCHOOL BUS
   definition: A chrome-yellow bus marked ‘School Bus’.
-  basis: p. 53
+  basis: stopping.html#stopping-for-school-buses
 - term: MEDIAN
   definition: A physical barrier (raised, lowered, earth or paved strip) separating opposing traffic that vehicles
     cannot cross.
-  basis: p. 54
+  basis: stopping.html#stopping-for-school-buses
 - term: STREETCAR
   definition: A rail transit vehicle running on the road.
-  basis: pp. 70–71
+  basis: changing-positions.html#passing-on-the-right, changing-positions.html#passing-streetcars
 - term: FREEWAY
   definition: A high-speed, controlled-access highway.
-  basis: pp. 77–80
+  basis: freeway-driving.html
 rules:
 - id: PASS-GEN-01
   group: GEN
@@ -111,7 +115,7 @@ rules:
     can be completed without danger to the PASSER or others.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 67
+    href: changing-positions.html#passing
     quote: Never overtake and pass another vehicle unless you are sure you can do so without danger to yourself
       or others.
 - id: PASS-GEN-02
@@ -125,7 +129,7 @@ rules:
   statement: WHEN the PASSER is in doubt about whether a PASS is safe, the PASSER MUST NOT begin the PASS.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 67
+    href: changing-positions.html#passing
     quote: If in doubt, do not pass.
 - id: PASS-GEN-03
   group: GEN
@@ -139,7 +143,7 @@ rules:
     PASS safely.
   sources:
   - location: Safe and Responsible Driving › Changing positions
-    page: 66
+    href: changing-positions.html
     quote: Before beginning, be sure you have enough space and time to complete the move safely.
 - id: PASS-GEN-04
   group: GEN
@@ -154,7 +158,7 @@ rules:
     of a MULTI-LANE ROAD, UNLESS the DRIVER is turning left or making a PASS.
   sources:
   - location: Safe and Responsible Driving › Driving along › Keep right
-    page: 34
+    href: driving-along.html#keep-right
     quote: Keep to the right of the road or in the right-hand lane on multi-lane roads unless you want to turn left
       or pass another vehicle.
   note: The handbook adds that this is especially important when driving more slowly than other vehicles.
@@ -170,7 +174,7 @@ rules:
     that the way is clear ahead and behind.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing › steps for passing, step 1
-    page: 67
+    href: changing-positions.html#passing
     quote: Use your left-turn signal to show that you want to pass and check that the way is clear ahead and behind
       before moving into the passing lane.
 - id: PASS-PROC-02
@@ -187,14 +191,15 @@ rules:
     steer gradually into the new lane without slowing down.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Changing lanes
-    page: 66
+    href: changing-positions.html#changing-lanes
     quote: Steer gradually into the new lane. Do not slow down, maintain the same speed or gently increase it.
     diagram: Diagram 2-45
-    diagram_page: 67
+    diagram_href: changing-positions.html#changing-lanes
+    diagram_image: images/2-35.jpg
     diagram_content: 'Shows a five-stage lane change labelled: "Check for safe space gap", "Check blind spot and
       signal", "Check again", "Make gradual change", "Make sure signal is off".'
   - location: Safe and Responsible Driving › Changing positions
-    page: 66
+    href: changing-positions.html
     quote: Changing your position on the road involves changing lanes or overtaking and passing another vehicle.
   note: Linking the lane-change steps to passing is an inference from the handbook placing both under ‘Changing
     positions’ and defining passing as ‘changing lanes’.
@@ -212,7 +217,7 @@ rules:
     driveway.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing › steps for passing, step 2
-    page: 67
+    href: changing-positions.html#passing
     quote: Watch for bicycles and small vehicles that may be hidden from view in front of the vehicle you are about
       to pass.
 - id: PASS-PROC-04
@@ -226,7 +231,7 @@ rules:
   statement: WHEN making any lane change that is part of a PASS, the PASSER MUST NOT change lanes before signalling.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing › steps for passing, step 3
-    page: 67
+    href: changing-positions.html#passing
     quote: Change lanes only after signalling.
 - id: PASS-PROC-05
   group: PROC
@@ -241,13 +246,14 @@ rules:
     the ORIGINAL LANE only once the entire front of the PASSED VEHICLE is visible in the inside (rear-view) mirror.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing › steps for passing, step 3
-    page: 67
+    href: changing-positions.html#passing
     quote: when you can see the entire front of the vehicle you are passing in your inside mirror, make the lane
       change.
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     diagram: Diagram 2-46
-    diagram_page: 68
+    diagram_href: changing-positions.html#passing
+    diagram_image: images/2-36.jpg
     diagram_content: Shows a car on a two-lane, two-way road leaving its lane across a broken yellow centre line,
       overtaking a slower white car, and returning to its own lane well ahead of it.
 - id: PASS-PROC-06
@@ -262,10 +268,10 @@ rules:
     in front of it.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing › steps for passing, step 3
-    page: 67
+    href: changing-positions.html#passing
     quote: Be careful not to cut off a vehicle by suddenly moving in front of it.
   - location: Keeping Your Driver's Licence › Other ways to lose your licence › Sanctions – dangerous behaviours
-    page: 150
+    href: other-ways-lose-your-licence.html#sanctions-dangerous-behaviours
     quote: intentionally cutting off another vehicle
   note: Intentionally cutting off another vehicle is listed as aggressive driving.
 - id: PASS-PROC-07
@@ -280,7 +286,7 @@ rules:
     ORIGINAL LANE rather than race.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing › steps for passing, step 4
-    page: 68
+    href: changing-positions.html#passing
     quote: If the vehicle you are passing speeds up, do not race. Go back to your original lane.
 - id: PASS-PROC-08
   group: PROC
@@ -294,9 +300,10 @@ rules:
     is off.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Changing lanes
-    page: 66
+    href: changing-positions.html#changing-lanes
     diagram: Diagram 2-45
-    diagram_page: 67
+    diagram_href: changing-positions.html#changing-lanes
+    diagram_image: images/2-35.jpg
     diagram_content: 'Final stage label: "Make sure signal is off".'
   note: 'Diagram-only source: this step appears in the Diagram 2-45 labels but not in the numbered lane-change steps.'
 - id: PASS-LOC-01
@@ -310,10 +317,10 @@ rules:
   statement: WHEN within 30 metres of a PEDESTRIAN CROSSOVER, the PASSER MUST NOT pass any vehicle.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     quote: Passing within 30 metres of a pedestrian crossover is not permitted.
   - location: Safe and Responsible Driving › Stopping › Stopping for pedestrian crossovers
-    page: 55
+    href: stopping.html#stopping-for-pedestrian-crossovers
     quote: You must not pass any vehicle within 30 metres of a pedestrian crossover.
 - id: PASS-LOC-02
   group: LOC
@@ -327,7 +334,7 @@ rules:
     LINE.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     quote: Passing left of a centreline is not permitted 30 metres from a bridge, viaduct or tunnel.
 - id: PASS-LOC-03
   group: LOC
@@ -342,7 +349,7 @@ rules:
     AND there is not enough CLEAR DISTANCE ahead, the PASSER MUST NOT attempt a PASS.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     quote: Don't attempt to pass when approaching the crest of a hill or on a curve where your vision of oncoming
       traffic is obstructed and there is not enough clear distance ahead to pass in safety.
 - id: PASS-LOC-04
@@ -356,7 +363,7 @@ rules:
   statement: WHEN a vehicle is stopped at a CROSSWALK, the PASSER MUST NOT pass the stopped vehicle.
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with pedestrians
-    page: 37
+    href: sharing-road-other-road-users.html#sharing-the-road-with-pedestrians
     quote: Do not pass a vehicle stopped at a crosswalk.
   note: 'Rationale given: a stopped vehicle may be a clue that a pedestrian is crossing.'
 - id: PASS-LOC-05
@@ -371,7 +378,7 @@ rules:
     left-turn lane for passing.
   sources:
   - location: Safe and Responsible Driving › Changing directions › Left-turn lanes
-    page: 60
+    href: changing-directions.html#left-turn-lanes
     quote: These left-turn lanes are not to be used for passing.
 - id: PASS-LOC-06
   group: LOC
@@ -384,7 +391,7 @@ rules:
   statement: WHEN following a moving snow plow (any conditions), the PASSER MUST NOT pass the snow plow.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 67
+    href: changing-positions.html#passing
     quote: Don't pass moving snow plows under any conditions.
 - id: PASS-LOC-07
   group: LOC
@@ -397,7 +404,7 @@ rules:
   statement: WHEN several snow plows are staggered across a freeway, the PASSER MUST NOT pass between them.
   sources:
   - location: Safe and Responsible Driving › Driving at night and in bad weather › Snow plows
-    page: 99
+    href: driving-night-and-bad-weather.html#snow-plows
     quote: Do not try to pass between them.
   note: 'Reason given: not enough room, and the ridge of wet snow can throw a vehicle out of control.'
 - id: PASS-LOC-08
@@ -411,14 +418,16 @@ rules:
   statement: WHEN driving in fog, the PASSER MUST NOT pass other vehicles, or speed up to pass a slow-moving vehicle.
   sources:
   - location: Safe and Responsible Driving › Driving at night and in bad weather › Fog › Tips for driving safely
-      in fog (DO)
-    page: 93
+      in fog › DO
+    href: driving-night-and-bad-weather.html#fog
     quote: Avoid passing, changing lanes and crossing traffic.
-  - location: Safe and Responsible Driving › Driving at night and in bad weather › Fog › DON'T
-    page: 94
+  - location: Safe and Responsible Driving › Driving at night and in bad weather › Fog › Tips for driving safely
+      in fog › DON'T
+    href: driving-night-and-bad-weather.html#fog
     quote: Don't speed up to pass a vehicle moving slowly
-  - location: Safe and Responsible Driving › Driving at night and in bad weather › Fog › REMEMBER
-    page: 94
+  - location: Safe and Responsible Driving › Driving at night and in bad weather › Fog › Tips for driving safely
+      in fog › REMEMBER
+    href: driving-night-and-bad-weather.html#fog
     quote: Don't pass other vehicles or speed up suddenly.
   note: The DO list uses the softer ‘Avoid passing’ (SHOULD NOT); the REMEMBER list states it absolutely, so the
     stronger form is used.
@@ -433,11 +442,13 @@ rules:
   statement: WHEN driving in blowing snow or whiteout conditions, the PASSER MUST NOT attempt to pass a slow-moving
     vehicle.
   sources:
-  - location: Safe and Responsible Driving › Driving at night and in bad weather › Snow › Whiteouts › DO
-    page: 98
+  - location: Safe and Responsible Driving › Driving at night and in bad weather › Whiteouts › Tips for driving
+      in blowing snow and whiteout conditions › DO
+    href: driving-night-and-bad-weather.html#whiteouts
     quote: Avoid passing, changing lanes and crossing traffic.
-  - location: Safe and Responsible Driving › Driving at night and in bad weather › Snow › Whiteouts › DON'T
-    page: 98
+  - location: Safe and Responsible Driving › Driving at night and in bad weather › Whiteouts › Tips for driving
+      in blowing snow and whiteout conditions › DON'T
+    href: driving-night-and-bad-weather.html#whiteouts
     quote: Don't attempt to pass a vehicle moving slowly
 - id: PASS-MARK-01
   group: MARK
@@ -450,12 +461,12 @@ rules:
   statement: WHEN there is a SOLID LINE at the left of the PASSER's lane, the PASSER SHOULD NOT pass.
   sources:
   - location: Traffic Signs and Lights › Pavement markings
-    page: 137
+    href: pavement-markings.html
     quote: A solid line at the left of your lane means it is unsafe to pass. ('A' should not pass.)
-    diagram: Diagram 3-1
-    diagram_page: 137
-    diagram_content: Shows a multi-lane road divided by a double solid yellow centre line; vehicles in the lanes
-      beside it keep to their own side.
+    diagram: Diagram 3-2
+    diagram_href: pavement-markings.html
+    diagram_image: images/3-2.jpg
+    diagram_content: Shows two vehicles marked ‘A’, each with a solid yellow line at the left of its lane.
   note: The handbook words this as ‘unsafe’ / ‘should not’, so it is recorded as ADVICE, not REQUIREMENT. The Highway
     Traffic Act, not the handbook, is the authority on whether it is an offence.
 - id: PASS-MARK-02
@@ -471,13 +482,14 @@ rules:
     line remains ahead to complete the PASS, the PASSER MAY pass.
   sources:
   - location: Traffic Signs and Lights › Pavement markings
-    page: 137
+    href: pavement-markings.html
     quote: A broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there
       are enough broken lines ahead to complete the pass safely.)
-    diagram: Diagram 3-2
-    diagram_page: 137
-    diagram_content: Shows vehicle ‘A’ in lanes with broken lines to its left, contrasted with solid lines elsewhere
-      on the road.
+    diagram: Diagram 3-3
+    diagram_href: pavement-markings.html
+    diagram_image: images/3-3a.jpg
+    diagram_content: Shows two vehicles marked ‘A’ behind trucks; on the left of the diagram, A has a broken yellow
+      line at the left of its lane.
 - id: PASS-MARK-03
   group: MARK
   title: ‘Do not pass’ sign
@@ -490,10 +502,10 @@ rules:
     the PASSER MUST NOT pass.
   sources:
   - location: Traffic Signs and Lights › Signs › Regulatory signs
-    page: 111
+    href: signs.html#regulatory-signs
     quote: Do not pass on this road.
   - location: Traffic Signs and Lights › Signs › Regulatory signs
-    page: 108
+    href: signs.html#regulatory-signs
     quote: These signs give a direction that must be obeyed.
 - id: PASS-MARK-04
   group: MARK
@@ -507,7 +519,7 @@ rules:
     PASSER MUST NOT pass that vehicle.
   sources:
   - location: Traffic Signs and Lights › Signs › Temporary condition signs
-    page: 124
+    href: signs.html#temporary-condition-signs
     quote: Do not pass the pilot vehicle or pace vehicle bearing this sign.
   note: Recorded as REQUIREMENT because it is a sign direction; the sign image reads ‘WHEN FLASHING’.
 - id: PASS-MARK-05
@@ -522,7 +534,7 @@ rules:
     MAY pass the hazard on the side to which the marker's stripes slope down.
   sources:
   - location: Traffic Signs and Lights › Signs › Warning signs
-    page: 118
+    href: signs.html#warning-signs
     quote: Hazard close to the edge of the road. The downward lines show the side on which you may safely pass.
 - id: PASS-SIDE-01
   group: SIDE
@@ -537,7 +549,7 @@ rules:
     or PASS-SIDE-04 applies.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing on the right
-    page: 70
+    href: changing-positions.html#passing-on-the-right
     quote: Most passing is done on the left.
 - id: PASS-SIDE-02
   group: SIDE
@@ -552,7 +564,7 @@ rules:
     a left-turning vehicle, the PASSER MAY pass on the right.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing on the right
-    page: 70
+    href: changing-positions.html#passing-on-the-right
     quote: You may pass on the right on multi-lane or one-way roads and when overtaking a streetcar or a left-turning
       vehicle.
 - id: PASS-SIDE-03
@@ -567,7 +579,7 @@ rules:
     and pass on the right; wait for the slower vehicle to move right.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing on the right
-    page: 70
+    href: changing-positions.html#passing-on-the-right
     quote: Do not suddenly change lanes and pass on the right; the driver in front may realize you want to pass
       and move to the right at the same time you do.
   note: The handbook also notes that passing on the right can be more dangerous than passing on the left.
@@ -583,7 +595,7 @@ rules:
     the right SHOULDER to pass it.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing on the shoulder
-    page: 70
+    href: changing-positions.html#passing-on-the-shoulder
     quote: You may drive on the right shoulder only to pass a vehicle turning left and only if the shoulder is paved.
   note: MAY ONLY = permitted in this case and prohibited in every other case.
 - id: PASS-SIDE-05
@@ -597,7 +609,7 @@ rules:
   statement: WHEN making any PASS, the PASSER MUST NOT pass on the left SHOULDER, whether paved or not.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing on the shoulder
-    page: 70
+    href: changing-positions.html#passing-on-the-shoulder
     quote: You may not pass on the left shoulder, paved or not.
 - id: PASS-LANE-01
   group: LANE
@@ -611,15 +623,16 @@ rules:
     to the right-hand lane unless making a PASS; faster vehicles pass in the left lane.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing and climbing lanes
-    page: 70
+    href: changing-positions.html#passing-and-climbing-lanes
     quote: These lanes let slower vehicles move into the right-hand lane so that faster ones can pass safely in
       the left lane.
     diagram: Diagram 2-48
-    diagram_page: 70
+    diagram_href: changing-positions.html#passing-and-climbing-lanes
+    diagram_image: images/2-48a.jpg
     diagram_content: 'Shows a rural road with a climbing lane: a truck in the right-hand lane, a car passing in
       the left lane, and signs at the roadside marking the lane.'
   - location: Traffic Signs and Lights › Signs › Regulatory signs
-    page: 113
+    href: signs.html#regulatory-signs
     quote: Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided.
 - id: PASS-LANE-02
   group: LANE
@@ -633,7 +646,7 @@ rules:
     lane, the DRIVER MUST begin to merge safely with traffic in the left-hand lane.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing and climbing lanes
-    page: 70
+    href: changing-positions.html#passing-and-climbing-lanes
     quote: Another sign warns when the lane is ending so drivers in the right-hand lane can begin to merge safely
       with traffic in the left-hand lane.
 - id: PASS-LANE-03
@@ -648,10 +661,10 @@ rules:
     in the far-left lane after passing.
   sources:
   - location: Safe and Responsible Driving › Freeway driving › Driving along a freeway
-    page: 79
+    href: freeway-driving.html#driving-along-a-freeway
     quote: Traffic should keep to the right, using the left lanes for passing.
   - location: Safe and Responsible Driving › Freeway driving › Driving along a freeway
-    page: 79
+    href: freeway-driving.html#driving-along-a-freeway
     quote: Use the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit, but
       don't stay there.
   note: ‘Traffic should keep to the right’ is advice, but ‘don't stay there’ is an instruction, so the stronger
@@ -670,11 +683,11 @@ rules:
     the TRUCK PASSING LANE.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 69
+    href: changing-positions.html#passing
     quote: On many high-speed roads with three or more lanes in each direction, trucks are not allowed to drive
       in the far left-hand lane.
   - location: Safe and Responsible Driving › Freeway driving › Driving along a freeway
-    page: 79
+    href: freeway-driving.html#driving-along-a-freeway
     quote: large trucks cannot travel in the far left lane and must use the lane to the right for passing.
   note: Applies on ‘many’ such roads, not all; the handbook does not say how the restriction is signed.
 - id: PASS-NIGHT-01
@@ -689,7 +702,7 @@ rules:
     extra care.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing at night
-    page: 69
+    href: changing-positions.html#passing-at-night
     quote: 'Be very careful when you pass other vehicles at night. If you have to pass and the way is clear, follow
       these steps:'
 - id: PASS-NIGHT-02
@@ -703,12 +716,13 @@ rules:
   statement: WHEN at night, approaching a vehicle from behind, the PASSER MUST use low-beam headlights.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing at night, step 1
-    page: 69
+    href: changing-positions.html#passing-at-night
     quote: Switch your headlights to low beams as you approach a vehicle from behind.
-  - location: Safe and Responsible Driving › Turn on headlights at night and in poor conditions
-    page: 31
+  - location: Safe and Responsible Driving › Getting ready to drive › Turn on headlights at night and in poor conditions
+    href: getting-ready-drive.html#turn-on-headlights-at-night-and-in-poor-conditions
     quote: Use your low beams when you are less than 60 metres behind another vehicle unless you are passing it.
-  note: Page 31 exempts the moment of passing from the 60-metre low-beam rule, which is consistent with PASS-NIGHT-03.
+  note: The headlight section (getting-ready-drive.html#turn-on-headlights-at-night-and-in-poor-conditions) exempts
+    the moment of passing from the 60-metre low-beam rule, which is consistent with PASS-NIGHT-03.
 - id: PASS-NIGHT-03
   group: NIGHT
   title: High beams once alongside
@@ -724,13 +738,13 @@ rules:
     metres (see note).
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing at night, step 2
-    page: 69
+    href: changing-positions.html#passing-at-night
     quote: As you move alongside the vehicle you are passing, switch on your high beams.
-  - location: Safe and Responsible Driving › Turn on headlights at night and in poor conditions
-    page: 31
+  - location: Safe and Responsible Driving › Getting ready to drive › Turn on headlights at night and in poor conditions
+    href: getting-ready-drive.html#turn-on-headlights-at-night-and-in-poor-conditions
     quote: remember to switch to low beams within 150 metres of an oncoming vehicle.
-  note: The UNLESS clause is inferred by combining p. 69 with the general headlight rule on p. 31; the passing-at-night
-    steps do not mention it themselves.
+  note: The UNLESS clause is inferred by combining the passing-at-night steps with the general headlight rule (getting-ready-drive.html#turn-on-headlights-at-night-and-in-poor-conditions);
+    the passing-at-night steps do not mention it themselves.
 - id: PASS-NIGHT-04
   group: NIGHT
   title: Night return point
@@ -743,7 +757,7 @@ rules:
     MUST signal AND pull back into the right lane.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing at night, step 3
-    page: 69
+    href: changing-positions.html#passing-at-night
     quote: When you can see all of the front of the vehicle you are passing in your rear view mirror, you are far
       enough ahead to pull back into the right lane. Remember to signal.
 - id: PASS-USER-01
@@ -754,16 +768,17 @@ rules:
   actor: DRIVER of a motor vehicle
   when: passing a CYCLIST
   action: keep at least 1 metre between the vehicle and the CYCLIST, where practical
-  penalty: A fine and 2 demerit points (p. 40).
+  penalty: A fine and 2 demerit points (sharing-road-other-road-users.html#sharing-the-road-with-cyclists).
   statement: WHEN passing a CYCLIST, the DRIVER of a motor vehicle MUST keep at least 1 metre between the vehicle
     and the CYCLIST, where practical.
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with cyclists
-    page: 40
+    href: sharing-road-other-road-users.html#sharing-the-road-with-cyclists
     quote: When passing a cyclist, drivers of motor vehicles must maintain a minimum distance of one metre, where
       practical between their vehicle and the cyclist.
     diagram: Diagram 2-11
-    diagram_page: 40
+    diagram_href: sharing-road-other-road-users.html#sharing-the-road-with-cyclists
+    diagram_image: images/diagram2-11.jpg
     diagram_content: Shows a car beside a cyclist in a lane marked with a bicycle sharrow; a dimension line marks
       ‘1.0 m’ between the car's side and the cyclist.
 - id: PASS-USER-02
@@ -777,7 +792,7 @@ rules:
   statement: WHEN passing a CYCLIST and another lane is available, the PASSER SHOULD change lanes to pass.
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with cyclists
-    page: 40
+    href: sharing-road-other-road-users.html#sharing-the-road-with-cyclists
     quote: Whenever possible, you should change lanes to pass.
 - id: PASS-USER-03
   group: USER
@@ -792,7 +807,7 @@ rules:
     tap it quickly and lightly while still some distance away.
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with cyclists
-    page: 40
+    href: sharing-road-other-road-users.html#sharing-the-road-with-cyclists
     quote: Do not sound your horn unnecessarily when you are overtaking a cyclist.
 - id: PASS-USER-04
   group: USER
@@ -806,7 +821,7 @@ rules:
     passing.
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with cyclists
-    page: 39
+    href: sharing-road-other-road-users.html#sharing-the-road-with-cyclists
     quote: Discourage passing where the lane is too narrow to be shared safely
   note: A PASSER can expect this behaviour and not treat it as an error by the cyclist.
 - id: PASS-USER-05
@@ -822,11 +837,12 @@ rules:
     lane.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     quote: Do not take this as an invitation to pass in the same lane. If you do want to pass these vehicles, do
       so by changing lanes.
     diagram: Diagram 2-47
-    diagram_page: 69
+    diagram_href: changing-positions.html#passing
+    diagram_image: images/2-36.5.jpg
     diagram_content: Shows a car on a two-lane road moving across the broken yellow centre line to go around a cyclist
       riding in a sharrow-marked lane, then returning.
   note: Diagram 2-47 is not captioned; linking it to this paragraph is an interpretation based on what it shows
@@ -842,8 +858,8 @@ rules:
   statement: WHEN turning left behind a motorcycle, bicycle, limited-speed motorcycle or moped, the PASSER MUST
     NOT pull up beside it to turn at the same time; wait for the smaller vehicle to move right before passing.
   sources:
-  - location: Safe and Responsible Driving › Changing directions › Turning a corner › Left turns
-    page: 58
+  - location: Safe and Responsible Driving › Changing directions › Left turns
+    href: changing-directions.html#left-turns
     quote: Wait for the smaller vehicle to move right before you pass.
 - id: PASS-USER-07
   group: USER
@@ -858,10 +874,10 @@ rules:
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with large
       commercial vehicles
-    page: 43
+    href: sharing-road-other-road-users.html#sharing-the-road-with-large-commercial-vehicles
     quote: When passing a large vehicle, do not cut in front closely.
-  note: 'Related hazard (p. 44): a large vehicle''s air turbulence may affect control of your vehicle while passing
-    it.'
+  note: 'Related hazard (sharing-road-other-road-users.html#sharing-the-road-with-large-commercial-vehicles): a
+    large vehicle''s air turbulence may affect control of your vehicle while passing it.'
 - id: PASS-USER-08
   group: USER
   title: Long commercial vehicles
@@ -874,7 +890,7 @@ rules:
     length (up to 40 metres) and limited speed.
   sources:
   - location: Traffic Signs and Lights › Signs › Other signs › Long commercial vehicle (LCV)
-    page: 128
+    href: signs.html#other-signs
     quote: anticipate both the extended length and limited speed when preparing to pass one on the highway.
 - id: PASS-USER-09
   group: USER
@@ -889,7 +905,7 @@ rules:
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with farm
       machinery
-    page: 45
+    href: sharing-road-other-road-users.html#sharing-the-road-with-farm-machinery
     quote: Stay well back and do not pass until it is safe to do so.
 - id: PASS-USER-10
   group: USER
@@ -904,7 +920,7 @@ rules:
   sources:
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with horse-drawn
       vehicles
-    page: 46
+    href: sharing-road-other-road-users.html#sharing-the-road-with-horse-drawn-vehicles
     quote: When passing, give as much distance between you and them as possible.
   note: 'Reason given: passing too closely can startle the horse into changing direction suddenly.'
 - id: PASS-USER-11
@@ -919,7 +935,7 @@ rules:
     and unloading.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     quote: When passing parked vehicles, watch carefully for people suddenly opening doors or for doors opened to
       load and unload.
 - id: PASS-USER-12
@@ -934,7 +950,7 @@ rules:
     workers, the PASSER MUST slow down and pass with caution; if safe, move over a lane.
   sources:
   - location: Safe and Responsible Driving › Dealing with particular situations › Workers on the road
-    page: 84
+    href: dealing-particular-situations.html#workers-on-the-road
     quote: Always slow down and pass with caution to prevent a collision. If safe to do so, move over a lane to
       increase the space between your vehicle and the hazard.
 - id: PASS-USER-13
@@ -948,7 +964,7 @@ rules:
   statement: WHEN an animal is on or near the road, the PASSER MUST slow down and pass carefully.
   sources:
   - location: Safe and Responsible Driving › Dealing with particular situations › Animals on the road
-    page: 85
+    href: dealing-particular-situations.html#animals-on-the-road
     quote: If you see an animal on or near the road, slow down and pass carefully
 - id: PASS-STOP-01
   group: STOP
@@ -960,21 +976,23 @@ rules:
     flashing, OR a stopped tow truck with amber lights flashing
   action: reduce speed and proceed with caution
   penalty: 'A fine and 3 demerit points for a first offence; higher fines and up to 6 months in jail for further
-    offences (p. 91). Table of offences: 3 points (p. 148).'
+    offences (dealing-particular-situations.html#reacting-to-a-stopped-emergency-vehicle-or-tow-truck). Table of
+    offences: 3 points (keeping-your-drivers-licence.html#table-of-offences).'
   statement: WHEN approaching, in the same direction of travel, a stopped EMERGENCY VEHICLE with red (or red and
     blue) lights flashing, OR a stopped tow truck with amber lights flashing, the PASSER MUST reduce speed and proceed
     with caution.
   sources:
-  - location: Safe and Responsible Driving › Emergency vehicles › Reacting to a stopped emergency vehicle or tow
-      truck
-    page: 90
+  - location: Safe and Responsible Driving › Dealing with particular situations › Reacting to a stopped emergency
+      vehicle or tow truck
+    href: dealing-particular-situations.html#reacting-to-a-stopped-emergency-vehicle-or-tow-truck
     quote: you are required to reduce the speed of your vehicle and proceed with caution.
     diagram: Diagram 2-57
-    diagram_page: 90
+    diagram_href: dealing-particular-situations.html#reacting-to-a-stopped-emergency-vehicle-or-tow-truck
+    diagram_image: images/diagram2-56.jpg
     diagram_content: Shows a stopped ambulance at the edge of a multi-lane road and a car moving from the lane next
       to it into the next lane over (arrow).
-  - location: Keeping Your Driver's Licence › The demerit point system › Table of offences › Three points
-    page: 148
+  - location: Keeping Your Driver's Licence › Table of offences › Three points
+    href: keeping-your-drivers-licence.html#table-of-offences
     quote: Failing to slow and carefully pass a stopped emergency vehicle
 - id: PASS-STOP-02
   group: STOP
@@ -984,21 +1002,22 @@ rules:
   actor: PASSER
   when: conditions of PASS-STOP-01 apply AND the road has two or more lanes in the PASSER's direction
   action: move into a lane away from the emergency vehicle or tow truck, if safe, changing lanes well in advance
-  penalty: 'As PASS-STOP-01. Table of offences: 3 points (p. 148).'
+  penalty: 'As PASS-STOP-01. Table of offences: 3 points (keeping-your-drivers-licence.html#table-of-offences).'
   statement: WHEN conditions of PASS-STOP-01 apply AND the road has two or more lanes in the PASSER's direction,
     the PASSER MUST move into a lane away from the emergency vehicle or tow truck, if safe, changing lanes well
     in advance.
   sources:
-  - location: Safe and Responsible Driving › Emergency vehicles › Reacting to a stopped emergency vehicle or tow
-      truck
-    page: 90
+  - location: Safe and Responsible Driving › Dealing with particular situations › Reacting to a stopped emergency
+      vehicle or tow truck
+    href: dealing-particular-situations.html#reacting-to-a-stopped-emergency-vehicle-or-tow-truck
     quote: When the roadway has two or more lanes of traffic in the same direction of your travel, you are required
       to move into a lane away from the emergency vehicle or tow truck, if
     diagram: Diagram 2-57
-    diagram_page: 90
+    diagram_href: dealing-particular-situations.html#reacting-to-a-stopped-emergency-vehicle-or-tow-truck
+    diagram_image: images/diagram2-56.jpg
     diagram_content: See PASS-STOP-01.
-  - location: Keeping Your Driver's Licence › The demerit point system › Table of offences › Three points
-    page: 148
+  - location: Keeping Your Driver's Licence › Table of offences › Three points
+    href: keeping-your-drivers-licence.html#table-of-offences
     quote: Failing to move, where possible, into another lane when passing a stopped emergency vehicle
 - id: PASS-STOP-03
   group: STOP
@@ -1010,49 +1029,54 @@ rules:
     from the front on a road without a MEDIAN
   action: pass the bus; instead the DRIVER stops (at least 20 metres back when behind it, at a safe distance when
     facing it) and stays stopped until the bus moves, or its lights stop flashing and the stop arm folds away
-  penalty: 'A heavy fine and 6 demerit points for a first offence (p. 54); the registered owner can be given the
-    fines, but not the points (p. 55). Table of offences: 6 points (p. 147).'
+  penalty: 'A heavy fine and 6 demerit points for a first offence (stopping.html#stopping-for-school-buses); the
+    registered owner can be given the fines, but not the points (stopping.html#stopping-for-school-buses). Table
+    of offences: 6 points (keeping-your-drivers-licence.html#table-of-offences).'
   statement: WHEN approaching a stopped SCHOOL BUS with its upper red lights flashing or its stop arm out, from
     behind, OR from the front on a road without a MEDIAN, the DRIVER MUST NOT pass the bus; instead the DRIVER stops
     (at least 20 metres back when behind it, at a safe distance when facing it) and stays stopped until the bus
     moves, or its lights stop flashing and the stop arm folds away.
   sources:
   - location: Safe and Responsible Driving › Stopping › Stopping for school buses
-    page: 53
+    href: stopping.html#stopping-for-school-buses
     quote: You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing,
       regardless of whether you are behind the bus or approaching it from the front.
     diagram: Diagram 2-27
-    diagram_page: 54
+    diagram_href: stopping.html#stopping-for-school-buses
+    diagram_image: images/2-27a.jpg
     diagram_content: 'Undivided road: the bus is stopped with red lights flashing and children crossing; ‘20 Metres’
       is marked between the bus and the stopped traffic behind it.'
   - location: Safe and Responsible Driving › Stopping › Stopping for school buses
-    page: 54
+    href: stopping.html#stopping-for-school-buses
     quote: If you are on a road with a median strip, only vehicles coming from behind the bus must stop.
     diagram: Diagram 2-28
-    diagram_page: 54
+    diagram_href: stopping.html#stopping-for-school-buses
+    diagram_image: images/2-28a.jpg
     diagram_content: 'Road with a median: traffic behind the bus stopped 20 metres back; oncoming traffic beyond
       the median keeps moving.'
   - location: Safe and Responsible Driving › Stopping › Stopping for school buses
-    page: 54
+    href: stopping.html#stopping-for-school-buses
     quote: It is illegal to fail to stop for a stopped school bus that has its red lights flashing.
   - location: Safe and Responsible Driving › Stopping › Stopping for school buses
-    page: 54
+    href: stopping.html#stopping-for-school-buses
     quote: If you don't stop, you can be fined heavily and get six demerit points for a first offence.
   - location: Safe and Responsible Driving › Stopping › Stopping for school buses
-    page: 55
+    href: stopping.html#stopping-for-school-buses
     quote: If you are the vehicle’s registered owner, these fines, but not demerit points or jail time, may be applied
       to you.
-  - location: Keeping Your Driver's Licence › The demerit point system › Table of offences › Six points
-    page: 147
+  - location: Keeping Your Driver's Licence › Table of offences › Six points
+    href: keeping-your-drivers-licence.html#table-of-offences
     quote: Failing to stop for a school bus
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with school
       buses
-    page: 46
+    href: sharing-road-other-road-users.html#sharing-the-road-with-school-buses
     diagram: Diagram 2-18
-    diagram_page: 46
+    diagram_href: sharing-road-other-road-users.html#sharing-the-road-with-school-buses
+    diagram_image: images/mto-school-bus-prepare_to_stop-2-28-en-300x300-2022-06-30-v1.jpg
     diagram_content: 'Amber-light stage: ‘Prepare to stop’ arrow behind the bus on a road with a median.'
   note: The handbook frames this as a duty to STOP; a PASS of a stopped school bus with red lights flashing is therefore
-    prohibited. The amber-light stage (p. 46) requires slowing and preparing to stop.
+    prohibited. The amber-light stage (sharing-road-other-road-users.html#sharing-the-road-with-school-buses) requires
+    slowing and preparing to stop.
 - id: PASS-SC-01
   group: SC
   title: Pass streetcars on the right
@@ -1066,10 +1090,11 @@ rules:
     ROAD.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing streetcars
-    page: 71
+    href: changing-positions.html#passing-streetcars
     quote: You must pass streetcars on the right unless you are driving on a one-way road.
     diagram: Diagram 2-49
-    diagram_page: 71
+    diagram_href: changing-positions.html#passing-streetcars
+    diagram_image: images/2-39.jpg
     diagram_content: Shows a stopped streetcar with passengers getting off toward the curb, and the cars behind
       it on the right stopped back, with a ‘2 Metres’ arrow marking the gap behind the rear doors.
 - id: PASS-SC-02
@@ -1085,11 +1110,12 @@ rules:
     island or zone) is provided, the DRIVER MUST stay at least 2 metres behind the streetcar's rear doors.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing streetcars
-    page: 71
+    href: changing-positions.html#passing-streetcars
     quote: At streetcar stops, stay at least two metres behind the rear doors where passengers are getting off or
       on.
     diagram: Diagram 2-49
-    diagram_page: 71
+    diagram_href: changing-positions.html#passing-streetcars
+    diagram_image: images/2-39.jpg
     diagram_content: See PASS-SC-01.
   note: Recorded as REQUIREMENT because the handbook calls it a ‘rule’ in the next sentence (‘This rule does not
     apply at stops where an area has been set aside...’).
@@ -1105,11 +1131,11 @@ rules:
     MUST pass at a reasonable speed and be ready for pedestrians to move suddenly or unexpectedly.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing streetcars
-    page: 71
+    href: changing-positions.html#passing-streetcars
     quote: Always pass these areas at a reasonable speed and be prepared for pedestrians to make sudden or unexpected
       moves.
   - location: Safe and Responsible Driving › Sharing the road with other road users › Sharing the road with pedestrians
-    page: 38
+    href: sharing-road-other-road-users.html#sharing-the-road-with-pedestrians
     quote: Pass these safety islands and zones at a reasonable speed.
 - id: PASS-BEING-01
   group: BEING
@@ -1122,7 +1148,7 @@ rules:
   statement: WHEN another driver is trying to pass, the PASSED DRIVER MUST NOT speed up.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing › steps for passing, step 4
-    page: 68
+    href: changing-positions.html#passing
     quote: And do not speed up when another driver is trying to pass you. It is unlawful and dangerous.
 - id: PASS-BEING-02
   group: BEING
@@ -1135,10 +1161,10 @@ rules:
   statement: WHEN faster traffic wants to pass, the PASSED DRIVER MUST move to the right and let it pass safely.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     quote: When faster traffic wants to pass you, move to the right and let it pass in safety.
-  - location: Test yourself – Sample knowledge test, question 5 and answer key
-    page: 170
+  - location: Your Vehicle › Test yourself - Sample knowledge test questions › question 5 and answer key
+    href: test-yourself-sample-knowledge-test-questions.html
     quote: Move to the right and allow such vehicle to pass.
   note: 'Sample test question 5 confirms this as the correct answer (key: 5-d); the wrong options were speeding
     up, moving left, and signalling the other driver not to pass.'
@@ -1156,7 +1182,7 @@ rules:
     the PASSER can get in front sooner.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 68
+    href: changing-positions.html#passing
     quote: Be prepared to slow down to let the passing driver get in front of you more quickly to prevent a collision.
 - id: PASS-BEING-04
   group: BEING
@@ -1170,7 +1196,7 @@ rules:
     the right-hand lane as soon as possible.
   sources:
   - location: Safe and Responsible Driving › Changing positions › Passing
-    page: 69
+    href: changing-positions.html#passing
     quote: If you are in this lane and a truck wants to pass, move into the right-hand lane as soon as you can.
 - id: PASS-BEING-05
   group: BEING
@@ -1180,13 +1206,13 @@ rules:
   actor: PASSED DRIVER
   when: another vehicle is attempting to pass
   action: drive in a way that prevents the other vehicle from passing
-  penalty: Listed under ‘Sanctions – dangerous behaviours’ as aggressive driving (p. 150); no specific penalty is
-    given there.
+  penalty: Listed under ‘Sanctions – dangerous behaviours’ as aggressive driving (other-ways-lose-your-licence.html#sanctions-dangerous-behaviours);
+    no specific penalty is given there.
   statement: WHEN another vehicle is attempting to pass, the PASSED DRIVER MUST NOT drive in a way that prevents
     the other vehicle from passing.
   sources:
   - location: Keeping Your Driver's Licence › Other ways to lose your licence › Sanctions – dangerous behaviours
-    page: 150
+    href: other-ways-lose-your-licence.html#sanctions-dangerous-behaviours
     quote: driving a motor vehicle to prevent another vehicle from passing
 - id: PASS-BEING-06
   group: BEING
@@ -1198,21 +1224,23 @@ rules:
     or bell sounding
   action: stop immediately, as near as practical to the right-hand curb or edge (on a one-way road or divided highway
     with more than two lanes, the nearest curb or edge), without stopping on the shoulder
-  penalty: A fine and 3 demerit points for a first offence (p. 91).
+  penalty: A fine and 3 demerit points for a first offence (dealing-particular-situations.html#reacting-to-a-stopped-emergency-vehicle-or-tow-truck).
   statement: WHEN an EMERGENCY VEHICLE approaches from any direction with flashing red (or red and blue) lights,
     or siren or bell sounding, the DRIVER MUST stop immediately, as near as practical to the right-hand curb or
     edge (on a one-way road or divided highway with more than two lanes, the nearest curb or edge), without stopping
     on the shoulder.
   sources:
-  - location: Safe and Responsible Driving › Emergency vehicles › Reacting to an approaching emergency vehicle
-    page: 88
+  - location: Safe and Responsible Driving › Dealing with particular situations › Reacting to an approaching emergency
+      vehicle
+    href: dealing-particular-situations.html#reacting-to-an-approaching-emergency-vehicle
     quote: you are required to bring your vehicle to an immediate stop.
     diagram: Diagram 2-56
-    diagram_page: 90
+    diagram_href: dealing-particular-situations.html#reacting-to-an-approaching-emergency-vehicle
+    diagram_image: images/2-46.jpg
     diagram_content: Shows an ambulance with lights on travelling on a multi-lane road while surrounding vehicles
       pull toward the edges.
   note: If already in an intersection preparing to turn, abandon the turn and clear the intersection by going straight,
-    because the emergency vehicle may pass on the side you meant to turn toward (p. 89).
+    because the emergency vehicle may pass on the side you meant to turn toward (dealing-particular-situations.html#reacting-to-an-approaching-emergency-vehicle).
 - id: PASS-TOW-01
   group: TOW
   title: Passing while towing
@@ -1226,8 +1254,8 @@ rules:
     time and room for the slower acceleration and greater length; allow extra room before moving back; do not cut
     back in too soon.
   sources:
-  - location: Towing › Passing
-    page: 167
+  - location: Your Vehicle › Towing › Passing
+    href: towing.html#passing
     quote: Before you pass, make sure you have enough time and room to complete the pass.
   note: 'Reason given: cutting back too soon can make the trailer sway.'
 - id: PASS-TOW-02
@@ -1241,8 +1269,8 @@ rules:
   statement: WHEN towing a trailer AND holding up a line of traffic, the PASSED DRIVER MUST signal, pull over, and
     let the other vehicles pass.
   sources:
-  - location: Towing › Being passed
-    page: 167
+  - location: Your Vehicle › Towing › Being passed
+    href: towing.html#being-passed
     quote: If you are holding up a line of traffic, signal, pull over and let the other vehicles pass.
   note: If a large bus or truck passes and its wind pushes the trailer, do not brake; steer back into position (a
     slight increase in speed may help).
