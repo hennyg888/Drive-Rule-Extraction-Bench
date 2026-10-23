@@ -1,6 +1,6 @@
 """Split the MTO handbook HTML pages into sentence-level units with structure context.
 
-Usage: python3 provenance/scripts/segment_sentences.py mto_drivers_handbook OUT_DIR   (writes units.jsonl, figures.jsonl, chapters.json)
+Usage: python3 provenance/scripts/segment_sentences.py handbooks/mto OUT_DIR   (writes units.jsonl, figures.jsonl, chapters.json)
 """
 import re, json, sys, glob, os
 from bs4 import BeautifulSoup, NavigableString, Tag

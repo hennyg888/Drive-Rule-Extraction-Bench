@@ -36,7 +36,7 @@ def arrow(d, label=None, lx=0, ly=0, anchor='middle', color='#555'):
 
 xs = [X0 + i * (BW + GAP) for i in range(7)]
 steps = [
-    ('hb', '1', 'Acquire', [('tool', 'scrape_<x>_handbook.py'), ('gap', ''), ('out', 'HTML pages, images'), ('out', 'source PDF'), ('note', 'Ontario, California,'), ('note', 'Texas: one layout')], False),
+    ('hb', '1', 'Acquire', [('tool', 'scrapers/scrape_<x>_*.py'), ('gap', ''), ('out', 'handbooks/<x>/:'), ('out', 'HTML, images, PDF'), ('note', 'Ontario, California,'), ('note', 'Texas: one layout')], False),
     ('hb', '2', 'Parse', [('tool', 'segment_handbook.py'), ('gap', ''), ('out', 'block passages with'), ('out', 'heading path'), ('out', 'analysis/segments/'), ('note', 'census: sentences')], False),
     ('run', '3', 'Select passages', [('tool', 'a person (Ontario)'), ('tool', 'select-passages.md'), ('gap', ''), ('out', 'passages JSON'), ('out', 'topic text'), ('note', 'ON 105, CA 105, TX 145')], True),
     ('run', '4', 'Extract', [('tool', 'fixed-v1 prompt'), ('tool', '+ any model'), ('gap', ''), ('out', 'statements JSON'), ('out', 'raw output, prompt'), ('out', 'one folder per run')], False),

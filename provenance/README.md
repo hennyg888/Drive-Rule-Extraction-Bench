@@ -50,12 +50,12 @@ michael's later page requests (chips, tabs, colours, navigation, figures under r
 
 ## Inputs
 
-All paths are relative to the repo root; sha256 values are in `provenance/SHA256SUMS`.
+All paths are relative to the repo root; sha256 values are in `provenance/SHA256SUMS`. On 23 October the handbook moved from `mto_drivers_handbook/` to `handbooks/mto/` (commit 74ebb7e, renames only, no content changed); the timeline above keeps the names used at the time.
 
 | Input | What it is | Where it came from |
 |---|---|---|
-| `mto_drivers_handbook/` | The handbook as local HTML and images | `scrape_mto_handbook.py`; identical to the copy used on 10 October |
-| `The Official Ministry of Transportation (MTO) Driver’s Handbook _ ontario.ca.pdf` | The handbook as PDF | saved from ontario.ca; not used for the reference |
+| `handbooks/mto/` | The handbook as local HTML and images | `scrapers/scrape_mto_handbook.py`; identical to the copy used on 10 October |
+| `handbooks/mto/source/MTO-drivers-handbook-ontario.ca.pdf` | The handbook as PDF | saved from ontario.ca; not used for the reference |
 | `analysis/passing-rules/inputs/passing-passages.json` | michael's 96 passages: `m`, `page`, `sec`, `text`, `kind`; figures add `src` and `cap`; `part`, `cls`, `w` and `grp` keep his grouping (`part: excluded` marks m92 to m96) | his Passing Topic Comparison page; on 23 October three image paths were corrected (below) |
 | `analysis/passing-rules/inputs/passing-structure.json` | His outline: 86 groups in sections 1, 2.1, 2.2, 3.1.1 to 3.6.3 and "Not included", each with its passage ids. The reference ids come from it | the same page |
 | `analysis/passing-rules/inputs/passing-page-notes.json` | The page's note and content-type tag for 85 passages (rule, procedure, caution, context, consequence, others, test, definition) | the same page |
@@ -79,7 +79,7 @@ All paths are relative to the repo root; sha256 values are in `provenance/SHA256
 From a clean clone, with `beautifulsoup4` installed:
 
 ```sh
-python3 provenance/scripts/segment_sentences.py mto_drivers_handbook /tmp/units   # units.jsonl, figures.jsonl, chapters.json
+python3 provenance/scripts/segment_sentences.py handbooks/mto /tmp/units   # units.jsonl, figures.jsonl, chapters.json
 python3 provenance/scripts/make_census_shards.py /tmp/units/units.jsonl /tmp/units/chapters.json /tmp/units
 cd /tmp/units && sha256sum -c <path-to-repo>/provenance/SHA256SUMS --ignore-missing
 ```

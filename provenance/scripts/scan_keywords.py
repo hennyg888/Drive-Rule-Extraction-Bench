@@ -1,4 +1,4 @@
-"""Count modal, condition and vague words on every handbook page (the 10 October keyword scan). Usage: python3 provenance/scripts/scan_keywords.py mto_drivers_handbook"""
+"""Count modal, condition and vague words on every handbook page (the 10 October keyword scan). Usage: python3 provenance/scripts/scan_keywords.py handbooks/mto"""
 import re,html,glob,collections,sys
 D=sys.argv[1]
 sents=[]

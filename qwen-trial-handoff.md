@@ -96,7 +96,7 @@ Still open:
 
 ## Files
 
-Everything the trial needs is in the working repo, [Drive-Rule-Extraction-Bench](https://github.com/hennyg888/Drive-Rule-Extraction-Bench). The handbook pages were already there in `mto_drivers_handbook/`. The rule files below were added in `analysis/`, a snapshot of 20 October 2026, and this document is `qwen-trial-handoff.md` at the top of the repo. Paths below are relative to the repo root, and to `Wise Lab/` in the project.
+Everything the trial needs is in the working repo, [Drive-Rule-Extraction-Bench](https://github.com/hennyg888/Drive-Rule-Extraction-Bench). The handbook pages were already there in `mto_drivers_handbook/`, which moved to `handbooks/mto/` on 23 October. The rule files below were added in `analysis/`, a snapshot of 20 October 2026, and this document is `qwen-trial-handoff.md` at the top of the repo. Paths below are relative to the repo root, and to `Wise Lab/` in the project, where the Ontario handbook is still at `mto_drivers_handbook/`.
 
 | File | What it holds | Use in the trial |
 | --- | --- | --- |
@@ -108,12 +108,12 @@ Everything the trial needs is in the working repo, [Drive-Rule-Extraction-Bench]
 | `analysis/census/census-guidelines.md` | The census labelling instructions (v0 grammar) | Prompt for T1 |
 | `analysis/census/census-labels.jsonl` | 3,444 sentences, one JSON object per line: `id`, `page`, `section`, `kind`, `text`, `label` | Input and reference for T1 |
 | `analysis/vla/normalized-vs-raw.md` | Where raw handbook text is weakest | Source of the hard cases |
-| `mto_drivers_handbook/` | The handbook pages saved from ontario.ca, with 241 images; each page shows its own update date, from August 2022 to September 2026 | Figures, and sections beyond passing |
-| `pages/` | Copies of the two published pages: `passing-rules.html` (the 88 statements beside the handbook) and `passing-topic-comparison.html` (michael's 96 passages). Their images load from `mto_drivers_handbook/images/` | Reading the statements beside their sources |
+| `handbooks/mto/` | The handbook pages saved from ontario.ca, with 241 images; each page shows its own update date, from August 2022 to September 2026 | Figures, and sections beyond passing |
+| `pages/` | Copies of the two published pages: `passing-rules.html` (the 88 statements beside the handbook) and `passing-topic-comparison.html` (michael's 96 passages). Their images load from `handbooks/mto/images/` | Reading the statements beside their sources |
 
 The two input files and the schema were added today; the inputs are copies of the passages behind the Passing Rules page. The excluded passages (m92 to m96) use "pass" to mean "go past", so a good model writes no passing rule from them.
 
-When building prompts, send only `page`, `sec`, `text` and `cap`. The `part` and `cls` fields mark m92 to m96 as excluded and would give that answer away. Image paths in `src` are relative to `mto_drivers_handbook/`.
+When building prompts, send only `page`, `sec`, `text` and `cap`. The `part` and `cls` fields mark m92 to m96 as excluded and would give that answer away. Image paths in `src` are relative to `handbooks/mto/`.
 
 ## The open-model trial
 

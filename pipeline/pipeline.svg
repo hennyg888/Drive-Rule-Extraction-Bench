@@ -6,9 +6,9 @@
 <text x="32" y="64" class="s">Drive-Rule-Extraction-Bench · current procedure as of 23 October 2026</text>
 <rect x="32" y="118" width="186" height="176" rx="10" fill="#EAF2FB" stroke="#2F6DB5" stroke-width="1.6"/>
 <text x="46" y="146" class="t" fill="#1F4E86">1  Acquire</text>
-<text x="46" y="175" class="m">scrape_&lt;x&gt;_handbook.py</text>
-<text x="46" y="202" class="o">HTML pages, images</text>
-<text x="46" y="221" class="o">source PDF</text>
+<text x="46" y="175" class="m">scrapers/scrape_&lt;x&gt;_*.py</text>
+<text x="46" y="202" class="o">handbooks/&lt;x&gt;/:</text>
+<text x="46" y="221" class="o">HTML, images, PDF</text>
 <text x="46" y="240" class="n">Ontario, California,</text>
 <text x="46" y="259" class="n">Texas: one layout</text>
 <rect x="242" y="118" width="186" height="176" rx="10" fill="#EAF2FB" stroke="#2F6DB5" stroke-width="1.6"/>

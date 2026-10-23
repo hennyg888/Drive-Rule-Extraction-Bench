@@ -22,6 +22,7 @@ All four used the local HTML in this repo's `mto_drivers_handbook/`. Neither the
 - All 105 passage texts (m1 to m96 and c1 to c9) occur word for word in the local HTML, once curly quotes and whitespace are normalised (checked 23 Oct).
 - Figure paths (`src`) point into `mto_drivers_handbook/images/`.
 - michael's first message linked the ontario.ca Changing positions page; the session worked from the local copy of that page. The PDF was never opened.
+- On 23 October, after these records were written, the handbook folders moved into `handbooks/` (commit 74ebb7e, renames only): `mto_drivers_handbook/` is now `handbooks/mto/`, and the PDF is `handbooks/mto/source/MTO-drivers-handbook-ontario.ca.pdf`. The paths above keep the names used at the time.
 
 ## (a) michael's 96 passing passages
 

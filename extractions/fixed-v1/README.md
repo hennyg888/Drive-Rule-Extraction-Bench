@@ -9,7 +9,7 @@ Model: michael adds the name and version here: `__________`
 
 ## How each run was made
 
-1. **Handbook.** Only the local copy on the server: `mto_drivers_handbook/`, `ca_drivers_handbook/` and `tx_drivers_handbook/` (committed in 7677c31 on `add-ca-tx-handbooks`). Ontario's 272 files are in `provenance/SHA256SUMS`; `inputs.sha256` in each folder lists the passage files, the images sent, the prompt and the topic file.
+1. **Handbook.** Only the local copy on the server: `handbooks/mto/`, `handbooks/ca/` and `handbooks/tx/` (called `mto_drivers_handbook/`, `ca_drivers_handbook/` and `tx_drivers_handbook/` when the runs were made, and moved on 23 October in commit 74ebb7e without changing any file). Ontario's 272 files are in `provenance/SHA256SUMS`; `inputs.sha256` in each folder lists the passage files, the images sent, the prompt and the topic file.
 2. **Passages.** Ontario: michael's 96 passages and the 9 census sentences. California (105) and Texas (145): chosen with `prompts/select-passages.md` and built by `tools/make_passages.py` from `analysis/segments/`. On 23 October `tools/segment_handbook.py` rebuilt all three segment files, and `tools/make_passages.py` both passage files, byte for byte.
 3. **Prompt.** `provenance/scripts/render_prompt.py` filled the prompt; `messages.json` is the exact system and user message, and `prompt.md` the same text as one readable file. Only `id`, `page`, `sec`, `kind`, `text`, `cap` and `image` are sent; selection fields (`part`, `why`, `seg`, `href`, `pdf_page`) are dropped. All three share the topic `passing` and the scope in `prompts/topics/passing.fixed-v1.txt`. The handbook lines were:
    - Ontario: `Ontario MTO Driver's Handbook (ontario.ca, offline copy checked 2026-10-06)`
