@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rule language v1 statements (extraction output, trial task T2)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "statements"
+  ],
+  "properties": {
+    "statements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "force",
+          "force_from",
+          "text",
+          "sources",
+          "flags",
+          "links"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "DEFINE",
+              "FACT",
+              "RULE",
+              "PROCEDURE",
+              "EXCEPTION"
+            ]
+          },
+          "force": {
+            "enum": [
+              "LEGAL",
+              "ADVISORY",
+              null
+            ]
+          },
+          "force_from": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text": {
+            "type": "string"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "n",
+                "text",
+                "sources"
+              ],
+              "properties": {
+                "n": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "quote"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "flags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "code",
+                "span",
+                "note"
+              ],
+              "properties": {
+                "code": {
+                  "enum": [
+                    "J",
+                    "S",
+                    "R",
+                    "G",
+                    "M",
+                    "D",
+                    "V",
+                    "X"
+                  ]
+                },
+                "span": {
+                  "type": "string"
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "see": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "figure",
+                "source"
+              ],
+              "properties": {
+                "figure": {
+                  "type": "string"
+                },
+                "source": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

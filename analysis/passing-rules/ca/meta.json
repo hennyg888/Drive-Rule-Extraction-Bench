@@ -1,0 +1,10 @@
+{
+ "name": "California Driver's Handbook",
+ "short": "California",
+ "zh_name": "加州駕駛手冊",
+ "edition": "DL 600 (Rev. 6/2025); web pages retrieved 2026-10-20",
+ "source_url": "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/",
+ "scraped": "2026-10-20",
+ "units": "US customary (ft, mi, mph)",
+ "handbook_dir": "ca_drivers_handbook"
+}

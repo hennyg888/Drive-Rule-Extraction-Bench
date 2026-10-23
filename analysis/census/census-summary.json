@@ -1,0 +1,2314 @@
+{
+ "n_target": 3444,
+ "n_labelled": 3444,
+ "n_bad_lines": 0,
+ "t": {
+  "META": 361,
+  "RULE": 1683,
+  "FACT": 789,
+  "DEFINE": 100,
+  "CONSEQ": 201,
+  "STEP": 310
+ },
+ "m": {
+  "SHOULD": 1186,
+  "MUST": 287,
+  "MAY": 216,
+  "MUST_NOT": 110,
+  "SHOULD_NOT": 190,
+  "NONE": 4
+ },
+ "b": {
+  "imperative": 1185,
+  "advice": 184,
+  "legal": 390,
+  "permission": 185,
+  "none": 49
+ },
+ "caution": 153,
+ "n_norm": 1993,
+ "m_by_b": {
+  "imperative|SHOULD": 1038,
+  "advice|SHOULD": 141,
+  "legal|MUST": 279,
+  "permission|MAY": 179,
+  "legal|MUST_NOT": 104,
+  "none|MAY": 30,
+  "none|MUST": 8,
+  "imperative|SHOULD_NOT": 147,
+  "advice|SHOULD_NOT": 43,
+  "legal|MAY": 7,
+  "none|NONE": 4,
+  "permission|MUST_NOT": 6,
+  "none|SHOULD": 7
+ },
+ "clauses_all": {
+  "WHEN": 1248,
+  "QUANT": 406,
+  "PURPOSE": 307,
+  "BEFORE_AFTER": 242,
+  "IF_VIOLATED": 194,
+  "WHILE": 165,
+  "ONLY_IF": 102,
+  "IF_THEN": 97,
+  "DEFAULT": 92,
+  "BECAUSE": 90,
+  "EXCEPTION_TO": 74,
+  "UNTIL": 66,
+  "UNLESS": 47
+ },
+ "clauses_norm": {
+  "WHEN": 1070,
+  "PURPOSE": 257,
+  "BEFORE_AFTER": 209,
+  "QUANT": 203,
+  "WHILE": 153,
+  "ONLY_IF": 96,
+  "IF_THEN": 91,
+  "EXCEPTION_TO": 68,
+  "BECAUSE": 66,
+  "UNTIL": 58,
+  "UNLESS": 46,
+  "DEFAULT": 21,
+  "IF_VIOLATED": 1
+ },
+ "fit_by_t": {
+  "RULE": {
+   "FULL": 1530,
+   "PARTIAL": 153
+  },
+  "STEP": {
+   "FULL": 306,
+   "PARTIAL": 4
+  },
+  "DEFINE": {
+   "PARTIAL": 26,
+   "FULL": 74
+  },
+  "CONSEQ": {
+   "FULL": 158,
+   "PARTIAL": 43
+  },
+  "FACT": {
+   "FULL": 776,
+   "PARTIAL": 13
+  }
+ },
+ "fit_rewrite": {
+  "FULL": 2068,
+  "PARTIAL": 226
+ },
+ "need": [
+  [
+   "list lead or definition by list",
+   65
+  ],
+  [
+   "right-of-way relation",
+   44
+  ],
+  [
+   "UNTIL",
+   40
+  ],
+  [
+   "time window",
+   17
+  ],
+  [
+   "BEFORE/AFTER",
+   10
+  ],
+  [
+   "question form (self-test)",
+   10
+  ],
+  [
+   "cumulative threshold (points over a period)",
+   10
+  ],
+  [
+   "rule by reference (role inheritance, deeming, scope)",
+   9
+  ],
+  [
+   "consequence without a broken rule",
+   8
+  ],
+  [
+   "hedged modality (may need, may or must)",
+   6
+  ],
+  [
+   "duty or liability of another role",
+   6
+  ],
+  [
+   "requirement on a thing (no role)",
+   5
+  ],
+  [
+   "generic default (generally, most)",
+   5
+  ],
+  [
+   "emphasis (especially)",
+   4
+  ],
+  [
+   "caution without a named hazard",
+   3
+  ],
+  [
+   "comparative (slower than)",
+   2
+  ],
+  [
+   "evaluation criterion",
+   2
+  ],
+  [
+   "other: priority between rules",
+   1
+  ],
+  [
+   "other: former alias",
+   1
+  ],
+  [
+   "other: conditional step",
+   1
+  ]
+ ],
+ "need_examples": {
+  "list lead or definition by list": [
+   "getting-your-drivers-licence:015.1",
+   "getting-your-drivers-licence:074.1",
+   "getting-your-drivers-licence:088.1",
+   "getting-your-drivers-licence:098.1",
+   "getting-your-drivers-licence:101.2",
+   "getting-your-drivers-licence:117.5"
+  ],
+  "rule by reference (role inheritance, deeming, scope)": [
+   "getting-your-drivers-licence:035.2",
+   "getting-your-drivers-licence:041.2",
+   "getting-your-drivers-licence:045.3",
+   "getting-your-drivers-licence:061.1",
+   "getting-your-drivers-licence:119.4",
+   "getting-ready-drive:060.7"
+  ],
+  "UNTIL": [
+   "getting-your-drivers-licence:144.1",
+   "sharing-road-other-road-users:034.1",
+   "sharing-road-other-road-users:050.6",
+   "sharing-road-other-road-users:051.3",
+   "driving-through-intersections:005.4",
+   "driving-through-intersections:006.1"
+  ],
+  "consequence without a broken rule": [
+   "getting-your-drivers-licence:165.1",
+   "getting-your-drivers-licence:165.2",
+   "getting-your-drivers-licence:167.2",
+   "getting-your-drivers-licence:167.3",
+   "other-ways-lose-your-licence:033.3",
+   "other-ways-lose-your-licence:052.1"
+  ],
+  "requirement on a thing (no role)": [
+   "getting-ready-drive:035.1",
+   "getting-ready-drive:060.2",
+   "driving-along:017.1",
+   "sharing-road-other-road-users:067.1",
+   "sharing-road-other-road-users:070.1"
+  ],
+  "emphasis (especially)": [
+   "driving-along:001.5",
+   "driving-along:012.2",
+   "dealing-particular-situations:047.5",
+   "driving-night-and-bad-weather:001.2"
+  ],
+  "BEFORE/AFTER": [
+   "driving-along:008.2",
+   "dealing-particular-situations:077.1",
+   "dealing-particular-situations:079.1",
+   "dealing-particular-situations:094.1",
+   "dealing-particular-situations:111.1",
+   "driving-night-and-bad-weather:012.1"
+  ],
+  "other: priority between rules": [
+   "driving-along:019.1"
+  ],
+  "right-of-way relation": [
+   "sharing-road-other-road-users:003.4",
+   "sharing-road-other-road-users:010.1",
+   "sharing-road-other-road-users:013.2",
+   "sharing-road-other-road-users:034.1",
+   "sharing-road-other-road-users:060.1",
+   "driving-through-intersections:010.4"
+  ],
+  "generic default (generally, most)": [
+   "stopping:016.1",
+   "pavement-markings:005.2",
+   "towing:034.2",
+   "off-road-vehicles-snowmobiles:176.1",
+   "off-road-vehicles-snowmobiles:223.1"
+  ],
+  "comparative (slower than)": [
+   "changing-directions:004.1",
+   "freeway-driving:022.2"
+  ],
+  "other: former alias": [
+   "parking-along-roadways:014.1"
+  ],
+  "time window": [
+   "parking-along-roadways:018.2",
+   "parking-along-roadways:018.3",
+   "keeping-your-drivers-licence:085.1",
+   "other-ways-lose-your-licence:013.1",
+   "other-ways-lose-your-licence:014.1",
+   "other-ways-lose-your-licence:015.1"
+  ],
+  "hedged modality (may need, may or must)": [
+   "signs:009.3",
+   "signs:072.2",
+   "keeping-your-drivers-licence:021.1",
+   "towing:005.2",
+   "towing:030.2",
+   "towing:046.6"
+  ],
+  "duty or liability of another role": [
+   "signs:073.2",
+   "off-road-vehicles-snowmobiles:029.3",
+   "off-road-vehicles-snowmobiles:052.6",
+   "off-road-vehicles-snowmobiles:061.5",
+   "off-road-vehicles-snowmobiles:175.2",
+   "off-road-vehicles-snowmobiles:184.3"
+  ],
+  "question form (self-test)": [
+   "keeping-your-drivers-licence:047.1",
+   "keeping-your-drivers-licence:048.1",
+   "keeping-your-drivers-licence:049.1",
+   "keeping-your-drivers-licence:050.1",
+   "keeping-your-drivers-licence:051.1",
+   "keeping-your-drivers-licence:052.1"
+  ],
+  "cumulative threshold (points over a period)": [
+   "keeping-your-drivers-licence:077.4",
+   "keeping-your-drivers-licence:080.1",
+   "keeping-your-drivers-licence:082.1",
+   "keeping-your-drivers-licence:084.1",
+   "keeping-your-drivers-licence:084.5",
+   "keeping-your-drivers-licence:085.1"
+  ],
+  "other: conditional step": [
+   "towing:039.5"
+  ],
+  "evaluation criterion": [
+   "level-two-road-test:033.5",
+   "level-two-road-test:070.4"
+  ],
+  "caution without a named hazard": [
+   "off-road-vehicles-snowmobiles:099.2",
+   "off-road-vehicles-snowmobiles:099.4",
+   "off-road-vehicles-snowmobiles:256.1"
+  ]
+ },
+ "need_raw": [
+  [
+   "RIGHT-OF-WAY relation",
+   44
+  ],
+  [
+   "list/enumeration",
+   42
+  ],
+  [
+   "UNTIL",
+   40
+  ],
+  [
+   "definition by list",
+   21
+  ],
+  [
+   "time window",
+   17
+  ],
+  [
+   "BEFORE/AFTER",
+   10
+  ],
+  [
+   "question form (self-check)",
+   10
+  ],
+  [
+   "cumulative threshold",
+   10
+  ],
+  [
+   "requirement on a thing (no role)",
+   5
+  ],
+  [
+   "event consequence",
+   4
+  ],
+  [
+   "non-violation trigger",
+   4
+  ],
+  [
+   "role inheritance",
+   3
+  ],
+  [
+   "hedged modality",
+   3
+  ],
+  [
+   "caution without hazard",
+   3
+  ],
+  [
+   "deeming/inclusion",
+   2
+  ],
+  [
+   "rule scope (applies to)",
+   2
+  ],
+  [
+   "degree/emphasis (especially)",
+   2
+  ],
+  [
+   "open-ended list (such as)",
+   2
+  ],
+  [
+   "comparative (slower than)",
+   2
+  ],
+  [
+   "emphasis (especially)",
+   2
+  ],
+  [
+   "epistemic may (possibility)",
+   2
+  ],
+  [
+   "DEFAULT (generally)",
+   2
+  ],
+  [
+   "evaluation criterion",
+   2
+  ],
+  [
+   "duty of another role",
+   2
+  ],
+  [
+   "liability of another role",
+   2
+  ],
+  [
+   "default rule",
+   2
+  ],
+  [
+   "priority between rules",
+   1
+  ],
+  [
+   "hedged scope (most)",
+   1
+  ],
+  [
+   "former alias",
+   1
+  ],
+  [
+   "rule scope extension",
+   1
+  ],
+  [
+   "disjunctive modality (may or must)",
+   1
+  ],
+  [
+   "shared duty (multiple roles)",
+   1
+  ],
+  [
+   "rule by reference (treat as X)",
+   1
+  ],
+  [
+   "conditional step",
+   1
+  ],
+  [
+   "shared liability",
+   1
+  ]
+ ],
+ "vg": {
+  "S": 171,
+  "J": 632,
+  "D": 33,
+  "R": 119,
+  "M": 239,
+  "G": 4
+ },
+ "units_with_vg": 1048,
+ "vg_top": {
+  "S": [
+   [
+    "often",
+    19
+   ],
+   [
+    "usually",
+    13
+   ],
+   [
+    "generally",
+    9
+   ],
+   [
+    "typically",
+    4
+   ],
+   [
+    "some roads",
+    3
+   ],
+   [
+    "some drugs",
+    3
+   ],
+   [
+    "several days",
+    3
+   ],
+   [
+    "some highways",
+    3
+   ],
+   [
+    "certain high-speed roads",
+    2
+   ],
+   [
+    "certain situations",
+    2
+   ],
+   [
+    "it is common",
+    2
+   ],
+   [
+    "sometimes",
+    2
+   ],
+   [
+    "in specific circumstances",
+    2
+   ],
+   [
+    "some public roads",
+    2
+   ],
+   [
+    "most collisions",
+    1
+   ]
+  ],
+  "J": [
+   [
+    "the way is clear",
+    15
+   ],
+   [
+    "safely",
+    13
+   ],
+   [
+    "too closely",
+    9
+   ],
+   [
+    "enough space",
+    8
+   ],
+   [
+    "carefully",
+    7
+   ],
+   [
+    "with caution",
+    7
+   ],
+   [
+    "if necessary",
+    7
+   ],
+   [
+    "properly",
+    5
+   ],
+   [
+    "extra caution",
+    5
+   ],
+   [
+    "whenever possible",
+    5
+   ],
+   [
+    "safe parking area",
+    5
+   ],
+   [
+    "moderately",
+    5
+   ],
+   [
+    "good working order",
+    4
+   ],
+   [
+    "regularly",
+    4
+   ],
+   [
+    "if possible",
+    4
+   ]
+  ],
+  "D": [
+   [
+    "where permitted",
+    2
+   ],
+   [
+    "if you fail or refuse to provide a breath sample",
+    2
+   ],
+   [
+    "you have 60 days to continue to use your existing driver’s licence",
+    1
+   ],
+   [
+    "driving while your licence is suspended",
+    1
+   ],
+   [
+    "bike lanes are reserved for cyclists",
+    1
+   ],
+   [
+    "sometimes you will need to enter or cross a bike lane",
+    1
+   ],
+   [
+    "motorcycles use a full lane",
+    1
+   ],
+   [
+    "if there is no crosswalk",
+    1
+   ],
+   [
+    "if there is no sidewalk",
+    1
+   ],
+   [
+    "you don't have to wear a seatbelt",
+    1
+   ],
+   [
+    "they expect you to yield the right-of-way",
+    1
+   ],
+   [
+    "only to pass a vehicle turning left",
+    1
+   ],
+   [
+    "you may pass on the right",
+    1
+   ],
+   [
+    "street racers run the risk of being charged",
+    1
+   ],
+   [
+    "you can still be charged",
+    1
+   ]
+  ],
+  "R": [
+   [
+    "this",
+    8
+   ],
+   [
+    "these entrances",
+    5
+   ],
+   [
+    "it",
+    4
+   ],
+   [
+    "these demands",
+    4
+   ],
+   [
+    "certain conditions",
+    3
+   ],
+   [
+    "any of these demands",
+    3
+   ],
+   [
+    "each person in the vehicle",
+    2
+   ],
+   [
+    "if applicable",
+    2
+   ],
+   [
+    "they",
+    2
+   ],
+   [
+    "'a'",
+    2
+   ],
+   [
+    "the interview level",
+    2
+   ],
+   [
+    "all these locations",
+    2
+   ],
+   [
+    "a pickup truck towing a house trailer exceeds 4,600 kilograms",
+    1
+   ],
+   [
+    "certain physical or medical conditions",
+    1
+   ],
+   [
+    "certain standards",
+    1
+   ]
+  ],
+  "M": [
+   [
+    "stop at the edge of the sidewalk",
+    7
+   ],
+   [
+    "stop at the edge of the intersection",
+    7
+   ],
+   [
+    "you may have to accelerate more quickly",
+    6
+   ],
+   [
+    "stop at the crosswalk",
+    5
+   ],
+   [
+    "bring the following items to the test",
+    3
+   ],
+   [
+    "money for test fees",
+    3
+   ],
+   [
+    "come to a complete stop",
+    3
+   ],
+   [
+    "avoid exceeding the speed limit",
+    3
+   ],
+   [
+    "vehicle in good working order",
+    2
+   ],
+   [
+    "always follow the manufacturer’s instructions",
+    2
+   ],
+   [
+    "will need to be re-certified",
+    2
+   ],
+   [
+    "make sure the full lighting system of your vehicle is turned on",
+    2
+   ],
+   [
+    "your full attention is required",
+    2
+   ],
+   [
+    "don't stop on the travelled portion of the road",
+    2
+   ],
+   [
+    "obey the speed limits",
+    2
+   ]
+  ],
+  "G": [
+   [
+    "passing left of a centreline",
+    1
+   ],
+   [
+    "slow down and pass carefully",
+    1
+   ],
+   [
+    "don't try to drive around the animal",
+    1
+   ],
+   [
+    "speed up to pass a vehicle moving slowly",
+    1
+   ]
+  ]
+ },
+ "act_top": [
+  [
+   "stop",
+   69
+  ],
+  [
+   "watch for",
+   67
+  ],
+  [
+   "signal",
+   34
+  ],
+  [
+   "yield",
+   34
+  ],
+  [
+   "slow down",
+   31
+  ],
+  [
+   "pass",
+   28
+  ],
+  [
+   "use hov lane",
+   25
+  ],
+  [
+   "accelerate",
+   20
+  ],
+  [
+   "use document as proof",
+   19
+  ],
+  [
+   "consider school criterion",
+   19
+  ],
+  [
+   "check mirrors",
+   19
+  ],
+  [
+   "drive",
+   18
+  ],
+  [
+   "shift gears",
+   17
+  ],
+  [
+   "keep right",
+   14
+  ],
+  [
+   "turn left",
+   14
+  ],
+  [
+   "reduce speed",
+   14
+  ],
+  [
+   "change lanes",
+   13
+  ],
+  [
+   "keep following distance",
+   12
+  ],
+  [
+   "park",
+   12
+  ],
+  [
+   "check blind spot",
+   11
+  ],
+  [
+   "check traffic",
+   10
+  ],
+  [
+   "look ahead",
+   10
+  ],
+  [
+   "look for",
+   9
+  ],
+  [
+   "use low beams",
+   7
+  ],
+  [
+   "proceed",
+   7
+  ],
+  [
+   "downshift",
+   7
+  ],
+  [
+   "wait",
+   7
+  ],
+  [
+   "set parking brake",
+   7
+  ],
+  [
+   "carry emergency supplies",
+   7
+  ],
+  [
+   "bring documents",
+   6
+  ],
+  [
+   "drive slowly",
+   6
+  ],
+  [
+   "cancel signal",
+   6
+  ],
+  [
+   "leave space",
+   6
+  ],
+  [
+   "increase following distance",
+   6
+  ],
+  [
+   "hold valid licence",
+   5
+  ],
+  [
+   "drive class g vehicle",
+   5
+  ],
+  [
+   "carry passengers",
+   5
+  ],
+  [
+   "take extra care",
+   5
+  ],
+  [
+   "turn wheels",
+   5
+  ],
+  [
+   "call for help",
+   5
+  ],
+  [
+   "cross",
+   5
+  ],
+  [
+   "drive impaired",
+   5
+  ],
+  [
+   "coast",
+   5
+  ],
+  [
+   "drive on public road",
+   5
+  ],
+  [
+   "trust sites",
+   4
+  ],
+  [
+   "read owner's manual",
+   4
+  ],
+  [
+   "let child wear seatbelt",
+   4
+  ],
+  [
+   "keep both hands on wheel",
+   4
+  ],
+  [
+   "obey speed limit",
+   4
+  ],
+  [
+   "stay in vehicle",
+   4
+  ],
+  [
+   "use any part of lane",
+   4
+  ],
+  [
+   "make eye contact",
+   4
+  ],
+  [
+   "prepare to stop",
+   4
+  ],
+  [
+   "turn steering wheel",
+   4
+  ],
+  [
+   "increase speed",
+   4
+  ],
+  [
+   "move forward",
+   4
+  ],
+  [
+   "adjust speed",
+   4
+  ],
+  [
+   "pull over",
+   4
+  ],
+  [
+   "make u-turn",
+   4
+  ],
+  [
+   "return to lane",
+   4
+  ]
+ ],
+ "ent_top": [
+  [
+   "intersection",
+   98
+  ],
+  [
+   "demerit point",
+   78
+  ],
+  [
+   "pedestrian",
+   66
+  ],
+  [
+   "traffic",
+   59
+  ],
+  [
+   "licence suspension",
+   55
+  ],
+  [
+   "collision",
+   54
+  ],
+  [
+   "trailer",
+   47
+  ],
+  [
+   "blind spot",
+   46
+  ],
+  [
+   "seatbelt",
+   44
+  ],
+  [
+   "mirror",
+   44
+  ],
+  [
+   "hov lane",
+   41
+  ],
+  [
+   "signal",
+   40
+  ],
+  [
+   "fog",
+   39
+  ],
+  [
+   "speed limit",
+   38
+  ],
+  [
+   "gear",
+   36
+  ],
+  [
+   "roundabout",
+   35
+  ],
+  [
+   "emergency vehicle",
+   35
+  ],
+  [
+   "freeway",
+   35
+  ],
+  [
+   "passenger",
+   34
+  ],
+  [
+   "police",
+   33
+  ],
+  [
+   "steering wheel",
+   33
+  ],
+  [
+   "vehicle ahead",
+   32
+  ],
+  [
+   "school bus",
+   32
+  ],
+  [
+   "vehicle",
+   31
+  ],
+  [
+   "cyclist",
+   31
+  ],
+  [
+   "lane",
+   31
+  ],
+  [
+   "curb",
+   31
+  ],
+  [
+   "red light",
+   31
+  ],
+  [
+   "lane change",
+   30
+  ],
+  [
+   "child",
+   30
+  ],
+  [
+   "alcohol",
+   28
+  ],
+  [
+   "fine",
+   27
+  ],
+  [
+   "following distance",
+   27
+  ],
+  [
+   "police officer",
+   27
+  ],
+  [
+   "speed",
+   27
+  ],
+  [
+   "headlight",
+   26
+  ],
+  [
+   "road test",
+   25
+  ],
+  [
+   "brake",
+   25
+  ],
+  [
+   "railway crossing",
+   25
+  ],
+  [
+   "motorcycle",
+   24
+  ],
+  [
+   "crosswalk",
+   24
+  ],
+  [
+   "sidewalk",
+   24
+  ],
+  [
+   "stop sign",
+   24
+  ],
+  [
+   "shoulder",
+   23
+  ],
+  [
+   "manual transmission",
+   23
+  ],
+  [
+   "curve",
+   23
+  ],
+  [
+   "tire",
+   23
+  ],
+  [
+   "bicycle",
+   22
+  ],
+  [
+   "bus",
+   21
+  ],
+  [
+   "whiteout",
+   21
+  ],
+  [
+   "truck",
+   20
+  ],
+  [
+   "large vehicle",
+   20
+  ],
+  [
+   "road",
+   20
+  ],
+  [
+   "child car seat",
+   19
+  ],
+  [
+   "driver's licence",
+   19
+  ],
+  [
+   "turn signal",
+   19
+  ],
+  [
+   "turn",
+   19
+  ],
+  [
+   "sign",
+   19
+  ],
+  [
+   "drug",
+   18
+  ],
+  [
+   "hand signal",
+   18
+  ]
+ ],
+ "dim": {
+  "own_vehicle": 627,
+  "other_road_user": 593,
+  "licence": 434,
+  "manoeuvre_phase": 421,
+  "location": 390,
+  "traffic_control": 375,
+  "driver_state": 291,
+  "lane": 253,
+  "road_type": 226,
+  "weather_surface": 199,
+  "emergency": 194,
+  "other": 126,
+  "time_light": 65
+ },
+ "role_top": [
+  [
+   "driver",
+   1383
+  ],
+  [
+   "snowmobile driver",
+   131
+  ],
+  [
+   "licence applicant",
+   72
+  ],
+  [
+   "off-road vehicle driver",
+   49
+  ],
+  [
+   "novice driver",
+   34
+  ],
+  [
+   "vehicle owner",
+   32
+  ],
+  [
+   "g1 driver",
+   25
+  ],
+  [
+   "senior driver",
+   22
+  ],
+  [
+   "g2 driver",
+   16
+  ],
+  [
+   "pedestrian",
+   13
+  ],
+  [
+   "road test candidate",
+   12
+  ],
+  [
+   "police officer",
+   12
+  ],
+  [
+   "atv driver",
+   12
+  ],
+  [
+   "driver being passed",
+   10
+  ],
+  [
+   "snowmobile owner",
+   10
+  ],
+  [
+   "cyclist",
+   9
+  ],
+  [
+   "new resident",
+   7
+  ],
+  [
+   "vehicle occupant",
+   6
+  ],
+  [
+   "driver involved in a collision",
+   5
+  ],
+  [
+   "visitor",
+   4
+  ],
+  [
+   "passenger",
+   4
+  ],
+  [
+   "g2 driver aged 19 or under",
+   4
+  ],
+  [
+   "young driver",
+   4
+  ],
+  [
+   "driver (including cyclist)",
+   4
+  ],
+  [
+   "bus driver",
+   4
+  ]
+ ],
+ "chapters": [
+  {
+   "chapter": 0,
+   "title": "The Official Ministry of Transportation (MTO) Driver’s Handbook",
+   "n": 21,
+   "rule": 3,
+   "step": 0,
+   "define": 0,
+   "fact": 8,
+   "conseq": 0,
+   "meta": 10,
+   "legal": 0,
+   "imperative": 2,
+   "full": 100.0,
+   "passing": 0
+  },
+  {
+   "chapter": 1,
+   "title": "Getting Your Driver’s Licence",
+   "n": 321,
+   "rule": 200,
+   "step": 0,
+   "define": 7,
+   "fact": 49,
+   "conseq": 5,
+   "meta": 60,
+   "legal": 74,
+   "imperative": 52,
+   "full": 89.6,
+   "passing": 3
+  },
+  {
+   "chapter": 2,
+   "title": "Safe and Responsible Driving",
+   "n": 1449,
+   "rule": 774,
+   "step": 157,
+   "define": 53,
+   "fact": 319,
+   "conseq": 22,
+   "meta": 124,
+   "legal": 115,
+   "imperative": 639,
+   "full": 90.1,
+   "passing": 145
+  },
+  {
+   "chapter": 3,
+   "title": "Traffic Signs and Lights",
+   "n": 313,
+   "rule": 143,
+   "step": 0,
+   "define": 12,
+   "fact": 133,
+   "conseq": 2,
+   "meta": 23,
+   "legal": 50,
+   "imperative": 59,
+   "full": 86.0,
+   "passing": 13
+  },
+  {
+   "chapter": 4,
+   "title": "Keeping Your Driver’s Licence",
+   "n": 304,
+   "rule": 64,
+   "step": 11,
+   "define": 10,
+   "fact": 67,
+   "conseq": 124,
+   "meta": 28,
+   "legal": 29,
+   "imperative": 15,
+   "full": 80.9,
+   "passing": 5
+  },
+  {
+   "chapter": 5,
+   "title": "Your Vehicle",
+   "n": 208,
+   "rule": 127,
+   "step": 8,
+   "define": 6,
+   "fact": 42,
+   "conseq": 2,
+   "meta": 23,
+   "legal": 34,
+   "imperative": 76,
+   "full": 91.6,
+   "passing": 12
+  },
+  {
+   "chapter": 6,
+   "title": "The Level Two Road Test",
+   "n": 353,
+   "rule": 133,
+   "step": 124,
+   "define": 3,
+   "fact": 62,
+   "conseq": 1,
+   "meta": 30,
+   "legal": 5,
+   "imperative": 218,
+   "full": 98.9,
+   "passing": 10
+  },
+  {
+   "chapter": 7,
+   "title": "Off-road Vehicles & Snowmobiles",
+   "n": 475,
+   "rule": 239,
+   "step": 10,
+   "define": 9,
+   "fact": 109,
+   "conseq": 45,
+   "meta": 63,
+   "legal": 83,
+   "imperative": 124,
+   "full": 91.1,
+   "passing": 0
+  }
+ ],
+ "n_pass": 188,
+ "found": [
+  {
+   "id": "getting-your-drivers-licence:194.1",
+   "page": "getting-your-drivers-licence",
+   "page_title": "Getting Your Driver’s Licence",
+   "section": "Could You Pass?",
+   "chapter": 1,
+   "text": "What drivers must do when they meet streetcars and school buses",
+   "t": "META",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "getting-your-drivers-licence:197.1",
+   "page": "getting-your-drivers-licence",
+   "page_title": "Getting Your Driver’s Licence",
+   "section": "Could You Pass?",
+   "chapter": 1,
+   "text": "Passing other vehicles",
+   "t": "META",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "getting-your-drivers-licence:204.1",
+   "page": "getting-your-drivers-licence",
+   "page_title": "Getting Your Driver’s Licence",
+   "section": "Could You Pass?",
+   "chapter": 1,
+   "text": "Passing vehicles, including bicycles, and driving in passing lanes",
+   "t": "META",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "driving-along:012.2",
+   "page": "driving-along",
+   "page_title": "Driving along",
+   "section": "Keep right",
+   "chapter": 2,
+   "text": "This is especially important if you are driving more slowly than other vehicles.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "advice",
+   "v": "a driver SHOULD keep right WHEN the driver is driving more slowly than other vehicles"
+  },
+  {
+   "id": "sharing-road-other-road-users:018.2",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with pedestrians",
+   "chapter": 2,
+   "text": "Pass these safety islands and zones at a reasonable speed.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD pass a streetcar safety island OR zone at a reasonable speed"
+  },
+  {
+   "id": "sharing-road-other-road-users:018.3",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with pedestrians",
+   "chapter": 2,
+   "text": "Always be ready, in case pedestrians make sudden or unexpected moves.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD WATCH FOR pedestrians making sudden OR unexpected moves"
+  },
+  {
+   "id": "sharing-road-other-road-users:024.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with cyclists",
+   "chapter": 2,
+   "text": "Bicycles and mopeds travelling at a lower speed than other traffic are expected to ride about one metre from the curb or parked cars, or as close as practical to the right-hand edge of the road when there is no curb.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "advice",
+   "v": "a cyclist SHOULD ride about 1 m from the curb OR parked cars, OR as close as practical to the right-hand edge of the road WHEN there is no curb, WHEN travelling at a lower speed than other traffic"
+  },
+  {
+   "id": "sharing-road-other-road-users:029.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with cyclists",
+   "chapter": 2,
+   "text": "Cyclists are not required to ride close to the right edge of the road when they are travelling at or faster than the normal speed of traffic at that time and place, or when they are turning left, or getting in position to turn left.",
+   "t": "RULE",
+   "m": "MAY",
+   "b": "legal",
+   "v": "a cyclist MAY ride away from the right edge of the road WHEN travelling at OR faster than the normal speed of traffic at that time AND place OR WHEN turning left OR getting in position to turn left (EXCEPTION TO riding close to the right edge)"
+  },
+  {
+   "id": "sharing-road-other-road-users:050.3",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with large commercial vehicles",
+   "chapter": 2,
+   "text": "If a large vehicle in front of you is making a right turn, do not move up into the space that opens up in the right lane; you are putting yourself into a very dangerous position.",
+   "t": "RULE",
+   "m": "SHOULD_NOT",
+   "b": "imperative",
+   "v": "a driver SHOULD NOT move up into the space that opens up in the right lane WHEN a large vehicle in front is making a right turn BECAUSE this puts the driver in a very dangerous position"
+  },
+  {
+   "id": "sharing-road-other-road-users:050.5",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with large commercial vehicles",
+   "chapter": 2,
+   "text": "If you are in that lane, your vehicle will be squeezed between the trailer and the curb.",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "sharing-road-other-road-users:050.6",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with large commercial vehicles",
+   "chapter": 2,
+   "text": "Stay well back until the truck has completely cleared the lane.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD stay well back WHEN a truck ahead is making a right turn (… UNTIL the truck has completely cleared the lane)"
+  },
+  {
+   "id": "sharing-road-other-road-users:051.2",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with large commercial vehicles",
+   "chapter": 2,
+   "text": "Do not drive up into the left lane when a large vehicle is making a left turn in front of you.",
+   "t": "RULE",
+   "m": "SHOULD_NOT",
+   "b": "imperative",
+   "v": "a driver SHOULD NOT drive up into the left lane WHEN a large vehicle in front is making a left turn"
+  },
+  {
+   "id": "sharing-road-other-road-users:051.3",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with large commercial vehicles",
+   "chapter": 2,
+   "text": "Stay well back until the truck has cleared the left turn, or else you may get squeezed between the truck and the curb.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD stay well back WHEN a truck ahead is turning left BECAUSE otherwise the driver may get squeezed between the truck AND the curb (… UNTIL the truck has cleared the left turn)"
+  },
+  {
+   "id": "sharing-road-other-road-users:072.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "When you see a school bus with its overhead amber lights flashing:",
+   "t": "RULE",
+   "m": "NONE",
+   "b": "none",
+   "v": "WHEN a driver sees a school bus with its overhead amber lights flashing: the listed rules apply"
+  },
+  {
+   "id": "sharing-road-other-road-users:073.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "These signals indicate that the bus is coming to a stop to pick up or drop off passengers",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "sharing-road-other-road-users:074.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "Slow down and prepare to stop whether you are behind or approaching the bus",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD slow down AND be prepared to stop WHEN a school bus ahead OR approaching has its overhead amber lights flashing, whether the driver is behind OR approaching the bus"
+  },
+  {
+   "id": "sharing-road-other-road-users:075.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "If you are on a road with a median strip, only vehicles approach from the rear of the bus should prepare to stop",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "advice",
+   "v": "a driver SHOULD be prepared to stop for a school bus with flashing amber lights WHEN on a road with a median strip ONLY IF the driver is approaching from the rear of the bus (EXCEPTION TO preparing to stop whether behind or approaching)"
+  },
+  {
+   "id": "sharing-road-other-road-users:076.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "When you see a school bus with its overhead red lights flashing or its stop arm activated:",
+   "t": "RULE",
+   "m": "NONE",
+   "b": "none",
+   "v": "WHEN a driver sees a school bus with its overhead red lights flashing OR its stop arm activated: the listed rules apply"
+  },
+  {
+   "id": "sharing-road-other-road-users:077.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "You must stop whether you are behind or approaching the bus",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST stop WHEN a school bus has its overhead red lights flashing OR its stop arm activated, whether the driver is behind OR approaching the bus"
+  },
+  {
+   "id": "sharing-road-other-road-users:078.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "If you are on a roadway with a median strip, only vehicles approaching from the rear of the bus must stop",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST stop for a school bus with flashing red lights OR an activated stop arm WHEN on a roadway with a median strip ONLY IF the driver is approaching from the rear of the bus (EXCEPTION TO stopping whether behind or approaching)"
+  },
+  {
+   "id": "sharing-road-other-road-users:079.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "If you are approaching from the rear of the vehicle, stop at least 20 meters away",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD stop at least 20 m away from a school bus with flashing red lights OR an activated stop arm WHEN approaching it from the rear"
+  },
+  {
+   "id": "sharing-road-other-road-users:080.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "Do not proceed on your route until the bus moves, the overhead red lights have stopped flashing and its stop arm is no longer activated",
+   "t": "RULE",
+   "m": "SHOULD_NOT",
+   "b": "imperative",
+   "v": "a driver SHOULD NOT proceed UNLESS the bus has moved AND the overhead red lights have stopped flashing AND the stop arm is no longer activated"
+  },
+  {
+   "id": "sharing-road-other-road-users:081.1",
+   "page": "sharing-road-other-road-users",
+   "page_title": "Sharing the road with other road users",
+   "section": "Sharing the road with school buses",
+   "chapter": 2,
+   "text": "It is dangerous and illegal to fail to stop for a stopped school bus that has its overhead red lights flashing or its stop arm activated",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST stop WHEN a school bus is stopped AND has its overhead red lights flashing OR its stop arm activated BECAUSE failing to stop is dangerous"
+  },
+  {
+   "id": "stopping:022.1",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST stop WHEN approaching a stopped school bus with its upper alternating red lights flashing, whether the driver is behind the bus OR approaching it from the front"
+  },
+  {
+   "id": "stopping:022.2",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "When approaching the bus from the front, stop at a safe distance for children to get off the bus and cross the road in front of you.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD stop at a safe distance WHEN approaching the school bus from the front BECAUSE children need room to get off the bus AND cross the road in front of the driver"
+  },
+  {
+   "id": "stopping:022.3",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "If you are coming from behind the bus, stop at least 20 metres away.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD stop at least 20 m away from the school bus WHEN coming from behind it"
+  },
+  {
+   "id": "stopping:022.4",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "Do not go until the bus moves or the lights have stopped flashing.",
+   "t": "RULE",
+   "m": "SHOULD_NOT",
+   "b": "imperative",
+   "v": "a driver SHOULD NOT go UNLESS the bus has moved OR the lights have stopped flashing"
+  },
+  {
+   "id": "stopping:023.1",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "If you are on a road with a median strip, only vehicles coming from behind the bus must stop.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST stop for the school bus WHEN on a road with a median strip ONLY IF the driver is coming from behind the bus (EXCEPTION TO stopping whether behind or approaching)"
+  },
+  {
+   "id": "stopping:024.1",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "You must obey the school bus law on any road, no matter how many lanes or what the speed limit.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST obey the school bus law on any road, regardless of the number of lanes OR the speed limit"
+  },
+  {
+   "id": "stopping:024.2",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "Be prepared to stop for a school bus at any time, not just within school hours.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD be prepared to stop for a school bus at any time, not only within school hours"
+  },
+  {
+   "id": "stopping:025.1",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "As well as the upper alternating red flashing lights, school buses use a stop sign arm on the driver’s side of the bus.",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "stopping:025.2",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "This arm, a standard stop sign with alternating flashing red lights at top and bottom, swings out after the upper alternating red lights begin to flash.",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "stopping:025.3",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "Remain stopped until the arm folds away and all lights stop flashing.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD remain stopped WHEN a school bus has its stop arm out OR lights flashing (… UNTIL the arm folds away AND all lights stop flashing)"
+  },
+  {
+   "id": "stopping:026.1",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "Note: It is illegal to fail to stop for a stopped school bus that has its red lights flashing.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST stop WHEN a school bus is stopped AND has its red lights flashing"
+  },
+  {
+   "id": "stopping:026.2",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "If you don't stop, you can be fined heavily and get six demerit points for a first offence.",
+   "t": "CONSEQ",
+   "m": "NONE",
+   "b": "none",
+   "v": "a driver MUST stop for a stopped school bus with red lights flashing IF VIOLATED a heavy fine AND 6 demerit points for a first offence"
+  },
+  {
+   "id": "stopping:026.4",
+   "page": "stopping",
+   "page_title": "Stopping",
+   "section": "Stopping for school buses",
+   "chapter": 2,
+   "text": "If you are the vehicle’s registered owner, these fines, but not demerit points or jail time, may be applied to you.",
+   "t": "CONSEQ",
+   "m": "NONE",
+   "b": "none",
+   "v": "IF VIOLATED (the owner's vehicle illegally passes a school bus) the registered owner may receive the fines but NOT demerit points OR jail time"
+  },
+  {
+   "id": "changing-directions:017.2",
+   "page": "changing-directions",
+   "page_title": "Changing directions",
+   "section": "Left turns",
+   "chapter": 2,
+   "text": "If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time.",
+   "t": "RULE",
+   "m": "SHOULD_NOT",
+   "b": "imperative",
+   "v": "a driver SHOULD NOT pull up beside a motorcycle, bicycle, limited-speed motorcycle OR moped to turn at the same time WHEN the driver is making a left turn behind it"
+  },
+  {
+   "id": "changing-directions:017.3",
+   "page": "changing-directions",
+   "page_title": "Changing directions",
+   "section": "Left turns",
+   "chapter": 2,
+   "text": "Stay behind and turn when the way is clear.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD stay behind the smaller vehicle AND turn WHEN the way is clear"
+  },
+  {
+   "id": "changing-directions:056.2",
+   "page": "changing-directions",
+   "page_title": "Changing directions",
+   "section": "Dealing with particular situations at a roundabout > Pull over for emergency vehicles",
+   "chapter": 2,
+   "text": "If you have not entered the roundabout yet, pull over to the right if possible and wait until the emergency vehicle has passed.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD pull over to the right WHEN an emergency vehicle approaches AND the driver has not yet entered the roundabout (… AND wait UNTIL the emergency vehicle has passed)"
+  },
+  {
+   "id": "changing-positions:003.2",
+   "page": "changing-positions",
+   "page_title": "Changing positions",
+   "section": "Changing lanes",
+   "chapter": 2,
+   "text": "You may have to change lanes to overtake another vehicle, to avoid a parked vehicle or when the vehicle ahead slows to turn at an intersection.",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "changing-positions:011.4",
+   "page": "changing-positions",
+   "page_title": "Changing positions",
+   "section": "Changing lanes",
+   "chapter": 2,
+   "text": "Remember that spending a few seconds behind another vehicle is often safer than going around it.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "advice",
+   "v": "a driver SHOULD spend a few seconds behind another vehicle instead of going around it BECAUSE this is often safer"
+  },
+  {
+   "id": "changing-positions:043.1",
+   "page": "changing-positions",
+   "page_title": "Changing positions",
+   "section": "Summary",
+   "chapter": 2,
+   "text": "The safety considerations and the sequence of steps to follow when changing lanes or passing",
+   "t": "META",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "changing-positions:044.1",
+   "page": "changing-positions",
+   "page_title": "Changing positions",
+   "section": "Summary",
+   "chapter": 2,
+   "text": "How to deal with specific situations when passing (for example, at night, streetcars)",
+   "t": "META",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "dealing-particular-situations:041.3",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Workers on the road",
+   "chapter": 2,
+   "text": "If safe to do so, move over a lane to increase the space between your vehicle and the hazard.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD move over a lane WHEN passing workers OR roadside vehicles ONLY IF it is safe BECAUSE this increases the space between the vehicle and the hazard"
+  },
+  {
+   "id": "dealing-particular-situations:043.3",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Workers on the road",
+   "chapter": 2,
+   "text": "If your lane is blocked and no one is directing traffic, yield to the driver coming from the opposite direction.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD let the driver coming from the opposite direction go first WHEN the driver's lane is blocked AND no one is directing traffic"
+  },
+  {
+   "id": "dealing-particular-situations:043.4",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Workers on the road",
+   "chapter": 2,
+   "text": "When the way is clear, move slowly and carefully around the obstacle.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD move slowly AND carefully around the obstacle WHEN the driver's lane is blocked AND the way is clear"
+  },
+  {
+   "id": "dealing-particular-situations:057.1",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Animals on the road",
+   "chapter": 2,
+   "text": "Don't try to drive around the animal.",
+   "t": "RULE",
+   "m": "SHOULD_NOT",
+   "b": "imperative",
+   "v": "a driver SHOULD NOT try to drive around an animal WHEN the driver sees the animal on the road"
+  },
+  {
+   "id": "dealing-particular-situations:094.2",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Reacting to an approaching emergency vehicle",
+   "chapter": 2,
+   "text": "This will clear the intersection and minimize the possibility of a collision with the emergency vehicle should it be passing you on the side you intended to turn towards.",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "dealing-particular-situations:095.1",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Reacting to an approaching emergency vehicle",
+   "chapter": 2,
+   "text": "When the emergency vehicle has passed, check to make sure the way is clear and signal before merging back into traffic.",
+   "t": "STEP",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "TO rejoin traffic WHEN the emergency vehicle has passed: STEP 1 check that the way is clear; STEP 2 signal; STEP 3 merge back into traffic"
+  },
+  {
+   "id": "dealing-particular-situations:107.4",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Reacting to a stopped emergency vehicle or tow truck",
+   "chapter": 2,
+   "text": "When safe to do so, change lanes well in advance of an emergency vehicle or a stopped tow truck with its flashing amber lights.",
+   "t": "STEP",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "TO slow down AND move over for a stopped emergency vehicle OR tow truck: STEP 5 change lanes well in advance of the emergency vehicle OR stopped tow truck with flashing amber lights ONLY IF it is safe"
+  },
+  {
+   "id": "dealing-particular-situations:116.1",
+   "page": "dealing-particular-situations",
+   "page_title": "Dealing with particular situations",
+   "section": "Reacting to a stopped emergency vehicle or tow truck > Failing to respond to an emergency vehicle",
+   "chapter": 2,
+   "text": "Please note the above law, fines and penalties are also applicable to a tow truck with its lamp producing intermittent flashes of amber light that is stopped on a highway.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST obey the emergency-vehicle law above WHEN approaching a tow truck that is stopped on a highway with its amber lamp flashing IF VIOLATED the same fines AND penalties"
+  },
+  {
+   "id": "signs:029.1",
+   "page": "signs",
+   "page_title": "Signs",
+   "section": "Regulatory signs > Here are some common regulatory signs:",
+   "chapter": 3,
+   "text": "Slow traffic on multi-lane roads must keep right.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST keep right WHEN the driver is driving slower than other traffic on a multi-lane road"
+  },
+  {
+   "id": "signs:032.1",
+   "page": "signs",
+   "page_title": "Signs",
+   "section": "Regulatory signs > Here are some common regulatory signs:",
+   "chapter": 3,
+   "text": "Stop for school bus when signals are flashing.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver MUST stop for a school bus WHEN the school bus's signal lights are flashing"
+  },
+  {
+   "id": "signs:033.2",
+   "page": "signs",
+   "page_title": "Signs",
+   "section": "Regulatory signs > Here are some common regulatory signs:",
+   "chapter": 3,
+   "text": "It informs drivers approaching from both directions that they must stop for a school bus when its signal lights are flashing.",
+   "t": "RULE",
+   "m": "MUST",
+   "b": "legal",
+   "v": "a driver approaching from either direction MUST stop for a school bus WHEN the school bus's signal lights are flashing AND the multi-lane highway has no centre median divider"
+  },
+  {
+   "id": "keeping-your-drivers-licence:104.1",
+   "page": "keeping-your-drivers-licence",
+   "page_title": "Keeping Your Driver’s Licence",
+   "section": "Table of offences > Six points",
+   "chapter": 4,
+   "text": "Failing to stop for a school bus",
+   "t": "CONSEQ",
+   "m": "NONE",
+   "b": "none",
+   "v": "a driver MUST stop for a school bus WHEN the law requires it IF VIOLATED six demerit points"
+  },
+  {
+   "id": "keeping-your-drivers-licence:138.1",
+   "page": "keeping-your-drivers-licence",
+   "page_title": "Keeping Your Driver’s Licence",
+   "section": "Table of offences > Two points",
+   "chapter": 4,
+   "text": "Failing to share the road",
+   "t": "CONSEQ",
+   "m": "NONE",
+   "b": "none",
+   "v": "a driver MUST share the road with other road users IF VIOLATED two demerit points"
+  },
+  {
+   "id": "level-two-road-test:025.1",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Left and right turns > If stopped > Space",
+   "chapter": 6,
+   "text": "When stopped behind another vehicle at an intersection, leave enough space to pull out and pass without having to back up.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD leave enough space to pull out AND pass the vehicle ahead without backing up WHEN the driver is stopped behind another vehicle at an intersection"
+  },
+  {
+   "id": "level-two-road-test:025.2",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Left and right turns > If stopped > Space",
+   "chapter": 6,
+   "text": "Leaving this space protects you in three ways: it lets you pull around the vehicle in front if it stalls; it helps prevent you from being pushed into the vehicle ahead if you are hit from behind; and it reduces the risk of collision if the vehicle ahead rolls backward or backs up.",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "level-two-road-test:029.4",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Left and right turns > If stopped > Wheels",
+   "chapter": 6,
+   "text": "At a large intersection with curved sidewalks where you are turning right, angle your vehicle to follow the curb so that no other vehi­cle can fit between you and the curb.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD angle the vehicle to follow the curb WHEN the driver turns right at a large intersection with curved sidewalks BECAUSE then no other vehicle can fit between the vehicle and the curb"
+  },
+  {
+   "id": "level-two-road-test:033.4",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Left and right turns > Making the turn > Traffic check",
+   "chapter": 6,
+   "text": "If it is possible for another vehicle to overtake you while you are turning, check your blind spot before starting to turn.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD check the blind spot WHEN the driver is about to start a turn AND another vehicle could overtake the driver during the turn"
+  },
+  {
+   "id": "level-two-road-test:064.1",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Stop intersection > The stop > Space",
+   "chapter": 6,
+   "text": "When stopped behind another vehicle at the intersection, leave enough space to pull out and pass without having to back up.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD leave enough space to pull out AND pass the vehicle ahead without backing up WHEN the driver is stopped behind another vehicle at the intersection"
+  },
+  {
+   "id": "level-two-road-test:064.2",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Stop intersection > The stop > Space",
+   "chapter": 6,
+   "text": "Leaving this space protects you in three ways: it lets you pull around the vehicle in front if it stalls; it helps prevent you from being pushed into the ahead if you are hit from behind; and it reduces the risk of collision if the vehicle ahead rolls backward or backs up.",
+   "t": "FACT",
+   "m": "NONE",
+   "b": "none",
+   "v": ""
+  },
+  {
+   "id": "level-two-road-test:091.2",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Through intersection > Driving through > Lane",
+   "chapter": 6,
+   "text": "If your lane is blocked by a vehicle turning left or a vehicle edging into the intersection from the right, slow down or stop instead of pulling out to go around the vehicle.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD slow down OR stop AND SHOULD NOT pull out to go around the vehicle WHEN the driver's lane is blocked by a vehicle turning left OR a vehicle edging into the intersection from the right"
+  },
+  {
+   "id": "level-two-road-test:155.4",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Roadside stop > The approach > Traffic check",
+   "chapter": 6,
+   "text": "If there is a chance of traffic or pedestrians overtaking you on the right, check your right blind spot just before pulling over.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD check the right blind spot WHEN the driver is about to pull over AND traffic OR pedestrians could overtake the driver on the right"
+  },
+  {
+   "id": "level-two-road-test:197.5",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Business section > Space",
+   "chapter": 6,
+   "text": "When you stop behind another vehicle, leave enough space to see its rear wheels or to pull around it without having to back up.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD leave enough space to see the rear wheels of the vehicle ahead OR to pull around it without backing up WHEN the driver stops behind another vehicle"
+  },
+  {
+   "id": "level-two-road-test:209.4",
+   "page": "level-two-road-test",
+   "page_title": "The Level Two Road Test",
+   "section": "Residential section > Space",
+   "chapter": 6,
+   "text": "When you stop behind another vehicle, leave enough space to see its rear wheels or to pull around it without having to back up.",
+   "t": "RULE",
+   "m": "SHOULD",
+   "b": "imperative",
+   "v": "a driver SHOULD leave enough space to see the rear wheels of the vehicle ahead OR to pull around it without backing up WHEN the driver stops behind another vehicle"
+  }
+ ]
+}

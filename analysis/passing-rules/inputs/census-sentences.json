@@ -1,0 +1,85 @@
+[
+ {
+  "m": "c1",
+  "census_id": "stopping:022.1",
+  "part": "census",
+  "kind": "text",
+  "page": "Stopping",
+  "sec": "Stopping for school buses · ¶2",
+  "text": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+ },
+ {
+  "m": "c2",
+  "census_id": "stopping:022.3",
+  "part": "census",
+  "kind": "text",
+  "page": "Stopping",
+  "sec": "Stopping for school buses · ¶2",
+  "text": "If you are coming from behind the bus, stop at least 20 metres away."
+ },
+ {
+  "m": "c3",
+  "census_id": "stopping:022.4",
+  "part": "census",
+  "kind": "text",
+  "page": "Stopping",
+  "sec": "Stopping for school buses · ¶2",
+  "text": "Do not go until the bus moves or the lights have stopped flashing."
+ },
+ {
+  "m": "c4",
+  "census_id": "stopping:023.1",
+  "part": "census",
+  "kind": "text",
+  "page": "Stopping",
+  "sec": "Stopping for school buses · ¶3",
+  "text": "If you are on a road with a median strip, only vehicles coming from behind the bus must stop."
+ },
+ {
+  "m": "c5",
+  "census_id": "stopping:026.2",
+  "part": "census",
+  "kind": "text",
+  "page": "Stopping",
+  "sec": "Stopping for school buses · ¶6",
+  "text": "If you don't stop, you can be fined heavily and get six demerit points for a first offence."
+ },
+ {
+  "m": "c6",
+  "census_id": "changing-directions:017.2",
+  "part": "census",
+  "kind": "text",
+  "page": "Changing directions",
+  "sec": "Left turns · ¶5",
+  "text": "If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time."
+ },
+ {
+  "m": "c7",
+  "census_id": "changing-directions:017.3",
+  "part": "census",
+  "kind": "text",
+  "page": "Changing directions",
+  "sec": "Left turns · ¶5",
+  "text": "Stay behind and turn when the way is clear."
+ },
+ {
+  "m": "c8",
+  "census_id": "signs:029.1",
+  "part": "census",
+  "kind": "text",
+  "page": "Signs",
+  "sec": "Regulatory signs · ¶20",
+  "text": "Slow traffic on multi-lane roads must keep right."
+ },
+ {
+  "m": "c9",
+  "census_id": "signs:029.1 (image)",
+  "part": "census",
+  "kind": "figure",
+  "page": "Signs",
+  "sec": "Regulatory signs · image",
+  "text": "a regulatory sign",
+  "src": "images/3-1-23.jpg",
+  "cap": "Alt text: “a regulatory sign”"
+ }
+]

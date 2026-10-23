@@ -1,0 +1,237 @@
+{
+ "statements": [
+  {
+   "id": "m26a",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (Regulatory signs: \"must be obeyed\")",
+   "text": "a driver MUST NOT pass another vehicle WHEN the driver is on a road where a \"do not pass\" sign is posted",
+   "sources": [
+    {
+     "id": "m26",
+     "quote": "Do not pass on this road."
+    },
+    {
+     "id": "m25",
+     "quote": "a regulatory sign"
+    }
+   ],
+   "see": [
+    {
+     "figure": "the \"do not pass\" sign",
+     "source": "m25"
+    }
+   ],
+   "flags": [
+    {
+     "code": "R",
+     "span": "this road",
+     "note": "Read as the road where the sign is posted; the passage does not say where the prohibition begins or ends."
+    }
+   ],
+   "links": [],
+   "note": "The caption is a plain imperative; the legal force comes from the regulatory signs section, and the sign itself is identified from the image in m25."
+  },
+  {
+   "id": "m31a",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (Regulatory signs: \"must be obeyed\")",
+   "text": "a driver MUST keep to the right-hand lane WHEN the driver is on a [?two-lane section] where a passing lane or climbing lane is provided UNLESS the driver is passing",
+   "sources": [
+    {
+     "id": "m31",
+     "quote": "Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided."
+    },
+    {
+     "id": "m30",
+     "quote": "a regulatory sign"
+    }
+   ],
+   "see": [
+    {
+     "figure": "the passing lane or climbing lane sign",
+     "source": "m30"
+    }
+   ],
+   "flags": [
+    {
+     "code": "R",
+     "span": "two-lane section",
+     "note": "It is unclear whether the two lanes are the driver's lane plus the added lane in one direction, or one lane in each direction."
+    }
+   ],
+   "links": [],
+   "note": "The caption is a plain imperative; the legal force comes from the regulatory signs section. \"On two-lane sections where climbing or passing lanes are provided\" is read as limiting the whole rule rather than only the passing exception, which fits the lane-split arrows in the image (m30)."
+  },
+  {
+   "id": "m75a",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not pass\")",
+   "text": "a driver SHOULD NOT pass a pilot vehicle or pace vehicle WHEN the pilot vehicle or pace vehicle bears a \"when flashing\" sign with the no-passing symbol AND [?the sign is flashing]",
+   "sources": [
+    {
+     "id": "m75",
+     "quote": "Do not pass the pilot vehicle or pace vehicle bearing this sign."
+    },
+    {
+     "id": "m74",
+     "quote": "a temporary condition sign"
+    }
+   ],
+   "see": [
+    {
+     "figure": "the \"when flashing\" no-passing sign",
+     "source": "m74"
+    }
+   ],
+   "flags": [
+    {
+     "code": "R",
+     "span": "this sign",
+     "note": "Resolved to the temporary condition sign shown in figure m74."
+    },
+    {
+     "code": "R",
+     "span": "the sign is flashing",
+     "note": "The sign's legend reads \"WHEN FLASHING\" without saying what flashes, the sign or lights on the vehicle."
+    },
+    {
+     "code": "M",
+     "span": "Do not pass",
+     "note": "The sign carries the same red no-passing symbol as the regulatory \"do not pass\" sign, but the temporary condition signs section gives no legal wording, so the force stays advisory."
+    }
+   ],
+   "links": [],
+   "note": "The flashing condition comes only from the sign's legend in the image (m74), not from the caption text."
+  },
+  {
+   "id": "m68a",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a \"long\" placard indicates a long commercial vehicle",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length. It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+    },
+    {
+     "id": "m67",
+     "quote": "Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)"
+    }
+   ],
+   "see": [
+    {
+     "figure": "the \"long\" LCV placard",
+     "source": "m67"
+    }
+   ],
+   "flags": [
+    {
+     "code": "R",
+     "span": "This placard",
+     "note": "Resolved to the yellow placard reading \"LONG\" shown in figure m67."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "m68b",
+   "type": "DEFINE",
+   "force": null,
+   "force_from": null,
+   "text": "DEFINE a long commercial vehicle IS a double trailer THAT can be up to 40 m in length ALSO CALLED LCV",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length. It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "m68c",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "text (\"It is important to\")",
+   "text": "a driver SHOULD be able to recognize a long commercial vehicle on the highway by the rear signage of the long commercial vehicle",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length. It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+    },
+    {
+     "id": "m67",
+     "quote": "Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)"
+    }
+   ],
+   "see": [
+    {
+     "figure": "the \"long\" LCV placard",
+     "source": "m67"
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "Kept in the topic because the sentence ties recognizing an LCV to preparing to pass one; \"when preparing to pass\" is read as attaching only to \"anticipate\" (m68d)."
+  },
+  {
+   "id": "m68d",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "text (\"It is important to\")",
+   "text": "a driver SHOULD anticipate the extended length and limited speed of a long commercial vehicle WHEN preparing to pass the long commercial vehicle on the highway",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length. It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "\"One\" is read as an LCV."
+  },
+  {
+   "id": "c8a",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"must\")",
+   "text": "a driver on a multi-lane road MUST keep to the right WHEN the driver's vehicle is [?slow traffic]",
+   "sources": [
+    {
+     "id": "c8",
+     "quote": "Slow traffic on multi-lane roads must keep right."
+    },
+    {
+     "id": "c9",
+     "quote": "a regulatory sign"
+    }
+   ],
+   "see": [
+    {
+     "figure": "the \"slower traffic keep right\" sign",
+     "source": "c9"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "slow traffic",
+     "note": "No speed or comparison says when a vehicle counts as slow traffic."
+    },
+    {
+     "code": "V",
+     "span": "SLOWER TRAFFIC KEEP RIGHT",
+     "note": "The sign in the image says \"slower traffic\" where the caption says \"slow traffic\"."
+    }
+   ],
+   "links": [],
+   "note": null
+  }
+ ]
+}

@@ -1,0 +1,2027 @@
+[
+ {
+  "id": "2.1a",
+  "section": "2.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Use\")",
+  "text": "a driver SHOULD use the left lane to pass or to turn left WHEN choosing among traffic lanes",
+  "sources": [
+   {
+    "id": "p8",
+    "quote": "Here are some tips for choosing a lane:",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Choosing a Lane · ¶3"
+   },
+   {
+    "id": "p9",
+    "quote": "Use the left lane to pass or turn left.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Choosing a Lane · item 1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "V",
+    "span": "passing lane (far left lane)",
+    "note": "The handbook calls the lane for passing \"the left lane\" here and \"the passing lane (far left lane)\" under Passing Lanes (3.2.1a).",
+    "zh": "手冊在這裡把超車用的車道叫 \"the left lane\"，在 Passing Lanes（3.2.1a）叫 \"the passing lane (far left lane)\"。"
+   }
+  ],
+  "note": "The lead calls these items \"tips\", so the item stays advice. The condition comes from the heading \"Choosing a Lane\" and its lead.",
+  "note_zh": "引言把這些項目稱為 \"tips\"，所以這一項維持是建議。條件來自標題 \"Choosing a Lane\" 及其引言。",
+  "links": []
+ },
+ {
+  "id": "2.1b",
+  "section": "2.1",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"must judge\")",
+  "text": "a driver MUST judge whether there is [?enough] space to pass WHEN approaching an oncoming vehicle or bicyclist",
+  "sources": [
+   {
+    "id": "p17",
+    "quote": "You must judge whether you have enough space to pass whenever you approach:",
+    "where": "Section 6: Navigating the Roads › Passing · ¶1"
+   },
+   {
+    "id": "p18",
+    "quote": "An oncoming vehicle or bicyclist.",
+    "where": "Section 6: Navigating the Roads › Passing · item 1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "enough",
+    "note": "No measure of space given.",
+    "zh": "沒有給空間的量化標準。"
+   },
+   {
+    "code": "M",
+    "span": "You must judge",
+    "note": "\"Must\" governs a mental judgment that no one can observe; the sentence may be strong advice rather than a legal duty.",
+    "zh": "\"must\" 要求的是一種旁人無法觀察的主觀判斷；這句話可能只是語氣強烈的建議，而不是法律義務。"
+   }
+  ],
+  "note": "The duty is in the list lead; each item is a situation, so each gives its own statement (2.1b, 2.1c).",
+  "note_zh": "義務寫在清單引言裡；每一項是一種情境，所以各自寫成一條敘述（2.1b、2.1c）。",
+  "links": []
+ },
+ {
+  "id": "2.1c",
+  "section": "2.1",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"must judge\")",
+  "text": "a driver MUST judge whether there is [?enough] space to pass WHEN approaching a hill, curve, intersection or road obstruction",
+  "sources": [
+   {
+    "id": "p17",
+    "quote": "You must judge whether you have enough space to pass whenever you approach:",
+    "where": "Section 6: Navigating the Roads › Passing · ¶1"
+   },
+   {
+    "id": "p19",
+    "quote": "A hill, curve, intersection, or road obstruction.",
+    "where": "Section 6: Navigating the Roads › Passing · item 2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "enough",
+    "note": "No measure of space given.",
+    "zh": "沒有給空間的量化標準。"
+   },
+   {
+    "code": "M",
+    "span": "You must judge",
+    "note": "\"Must\" governs a mental judgment that no one can observe; the sentence may be strong advice rather than a legal duty.",
+    "zh": "\"must\" 要求的是一種旁人無法觀察的主觀判斷；這句話可能只是語氣強烈的建議，而不是法律義務。"
+   }
+  ],
+  "note": "The item's second sentence, on how far ahead a hill or curve should be, is 3.1.3a.",
+  "note_zh": "這一項的第二句講坡道或彎道應在前方多遠，是 3.1.3a。",
+  "links": []
+ },
+ {
+  "id": "2.1d",
+  "section": "2.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "caution (\"look ahead for\")",
+  "text": "a driver SHOULD WATCH FOR road conditions ahead that may cause other vehicles to move into the driver's lane WHEN the driver is about to pass",
+  "sources": [
+   {
+    "id": "p20",
+    "quote": "Before you pass, look ahead for road conditions that may cause other vehicles to move into your lane.",
+    "where": "Section 6: Navigating the Roads › Passing · ¶2"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "2.1e",
+  "section": "2.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not pass\")",
+  "text": "a driver SHOULD NOT pass UNLESS the driver has [?enough] space to return to the original lane",
+  "sources": [
+   {
+    "id": "p21",
+    "quote": "Do not pass:",
+    "where": "Section 6: Navigating the Roads › Passing · ¶3"
+   },
+   {
+    "id": "p25",
+    "quote": "Unless you have enough space to return to your lane.",
+    "where": "Section 6: Navigating the Roads › Passing · item 6"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "enough",
+    "note": "No measure of space given.",
+    "zh": "沒有給空間的量化標準。"
+   }
+  ],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "2.2a",
+  "section": "2.2",
+  "type": "PROCEDURE",
+  "force": "ADVISORY",
+  "force_from": "imperative steps",
+  "text": "TO pass a vehicle WHEN on an open highway",
+  "sources": [
+   {
+    "id": "p26",
+    "quote": "When you are going to pass on an open highway:",
+    "where": "Section 6: Navigating the Roads › Passing › How to Pass · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "R",
+    "span": "passing lane",
+    "note": "On an open highway with one lane each way the lane the driver passes in is the oncoming lane, but the handbook defines \"the passing lane\" as the far-left lane of a multilane road (3.2.1a).",
+    "zh": "在雙向各一車道的公路上，超車時開進的是對向車道；但手冊把 \"the passing lane\" 定義為多車道道路最左側的車道（3.2.1a）。"
+   }
+  ],
+  "note": "The steps are a bulleted, unnumbered list; they are written as one PROCEDURE because the lead introduces them as what to do when going to pass and the items run in sequence.",
+  "note_zh": "這些步驟是沒有編號的項目清單；寫成一個 PROCEDURE，是因為引言把它們介紹為準備超車時要做的事，而且各項依序進行。",
+  "links": [],
+  "steps": [
+   {
+    "n": "1",
+    "text": "signal that the driver plans to pass",
+    "sources": [
+     "p27"
+    ]
+   },
+   {
+    "n": "2",
+    "text": "look over the shoulder to check the blind spots",
+    "sources": [
+     "p28"
+    ]
+   },
+   {
+    "n": "3",
+    "text": "drive into the [?passing lane]",
+    "sources": [
+     "p29"
+    ]
+   },
+   {
+    "n": "4",
+    "text": "speed up to pass the vehicle",
+    "sources": [
+     "p30"
+    ]
+   },
+   {
+    "n": "5",
+    "text": "signal AND return to the original lane",
+    "sources": [
+     "p31"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "3.1.2a",
+  "section": "3.1.2",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not pass\")",
+  "text": "a driver SHOULD NOT pass WHEN the driver is within 100 ft of an intersection, bridge, tunnel, railroad crossing or [?other hazardous area]",
+  "sources": [
+   {
+    "id": "p21",
+    "quote": "Do not pass:",
+    "where": "Section 6: Navigating the Roads › Passing · ¶3"
+   },
+   {
+    "id": "p23",
+    "quote": "Within 100 feet of an intersection, bridge, tunnel, railroad crossing, or other hazardous area.",
+    "where": "Section 6: Navigating the Roads › Passing · item 4"
+   }
+  ],
+  "flags": [
+   {
+    "code": "M",
+    "span": "Within 100 feet",
+    "note": "A fixed distance in a bare imperative reads like a legal limit, but the list has no legal wording, so it stays SHOULD NOT.",
+    "zh": "祈使句裡給了固定距離，讀起來像法定限制；但這份清單沒有法律用語，所以維持 SHOULD NOT。"
+   },
+   {
+    "code": "J",
+    "span": "other hazardous area",
+    "note": "Open-ended: the handbook does not say which other areas count as hazardous.",
+    "zh": "開放式說法：手冊沒說還有哪些地方算危險區域。"
+   }
+  ],
+  "note": "One item covers intersections and railroad crossings as well as bridges and tunnels; it is filed under bridges and tunnels (3.1.2) to line up with the Ontario rule.",
+  "note_zh": "同一項同時涵蓋交叉路口、鐵路平交道以及橋樑和隧道；歸在橋樑與隧道（3.1.2）之下，是為了和安大略省的規則對齊。",
+  "links": []
+ },
+ {
+  "id": "3.1.3a",
+  "section": "3.1.3",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "text (\"should\")",
+  "text": "a driver SHOULD pass WHEN approaching a hill or curve ONLY IF the hill or curve is at least 1/3 mi ahead BECAUSE this distance is needed to pass [?safely]",
+  "sources": [
+   {
+    "id": "p19",
+    "quote": "A hill, curve, intersection, or road obstruction. To safely pass, the hill or curve should be at least one-third of a mile ahead.",
+    "where": "Section 6: Navigating the Roads › Passing · item 2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "\"One-third of a mile\" is written 1/3 mi, in the handbook's unit. The purpose \"To safely pass\" is the reason.",
+  "note_zh": "\"One-third of a mile\" 寫成 1/3 mi，沿用手冊的單位。目的句 \"To safely pass\" 當作理由。",
+  "links": []
+ },
+ {
+  "id": "3.1.3b",
+  "section": "3.1.3",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not pass\")",
+  "text": "a driver SHOULD NOT pass WHEN the driver is approaching a hill or curve AND the driver cannot see if other traffic is approaching BECAUSE this is very dangerous on one-lane and two-lane roads",
+  "sources": [
+   {
+    "id": "p21",
+    "quote": "Do not pass:",
+    "where": "Section 6: Navigating the Roads › Passing · ¶3"
+   },
+   {
+    "id": "p22",
+    "quote": "If you are approaching a hill or curve and cannot see if other traffic is approaching. This is very dangerous on one and two lane roads.",
+    "where": "Section 6: Navigating the Roads › Passing · item 3"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.1.4a",
+  "section": "3.1.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "default (stated as a description: \"It is not a regular traffic lane or passing lane\")",
+  "text": "a driver SHOULD NOT use a center left turn lane for passing",
+  "sources": [
+   {
+    "id": "p11",
+    "quote": "Use the center left turn lane to prepare for and make a left turn or U-turn. It is not a regular traffic lane or passing lane.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Center Left Turn Lanes · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "D",
+    "span": "It is not a regular traffic lane or passing lane",
+    "note": "The ban is implied by a description of what the lane is not; the text gives no instruction about passing.",
+    "zh": "這條禁令是從「這條車道不是什麼」的描述推出來的，原文沒有針對超車下指示。"
+   }
+  ],
+  "note": "\"You may only drive for 200 feet in the center left turn lane\" limits any use of the lane and is not about passing, so it gives no statement here.",
+  "note_zh": "\"You may only drive for 200 feet in the center left turn lane\" 限制的是這條車道的所有用途，不是針對超車，所以這裡不寫成敘述。",
+  "links": []
+ },
+ {
+  "id": "3.1.5a",
+  "section": "3.1.5",
+  "type": "FACT",
+  "force": null,
+  "force_from": null,
+  "text": "FACT a single solid yellow line marks the center of a road with two-way traffic",
+  "sources": [
+   {
+    "id": "p1",
+    "quote": "A single solid yellow line marks the center of a road with two-way traffic.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Lane Markings › Single Solid Yellow Line · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.1.5b",
+  "section": "3.1.5",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not pass\")",
+  "text": "a driver SHOULD NOT pass a vehicle in front WHEN there is only one lane of traffic going in the driver's direction AND there is a solid yellow line on the driver's side of the road",
+  "sources": [
+   {
+    "id": "p1",
+    "quote": "Do not pass a vehicle in front of you if there is only one lane of traffic going your direction and a solid yellow line on your side of the road.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Lane Markings › Single Solid Yellow Line · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.1.5c",
+  "section": "3.1.5",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not pass over\", \"Stay\")",
+  "text": "a driver SHOULD NOT [?pass over] double solid yellow lines AND SHOULD stay to the right of them UNLESS the driver is in a high-occupancy vehicle (HOV) carpool lane that has a designated entrance on the left OR construction or other signs instruct the driver to drive on the other side of the road because the driver's side is closed or blocked OR the driver is turning left across a single set of double yellow lines to enter or exit a driveway or private road or to make a U-turn",
+  "sources": [
+   {
+    "id": "p2",
+    "quote": "Do not pass over double solid yellow lines. Stay to the right of these lines unless you are:",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Lane Markings › Double Solid Yellow Lines · ¶1"
+   },
+   {
+    "id": "p3",
+    "quote": "In a high-occupancy vehicle (HOV) carpool lane that has a designated entrance on the left.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Lane Markings › Double Solid Yellow Lines · item 1"
+   },
+   {
+    "id": "p4",
+    "quote": "Instructed by construction or other signs to drive on the other side of the road because your side is closed or blocked.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Lane Markings › Double Solid Yellow Lines · item 2"
+   },
+   {
+    "id": "p5",
+    "quote": "Turning left across a single set of double yellow lines to enter or exit a driveway or private road or make a U-turn.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Lane Markings › Double Solid Yellow Lines · item 3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "G",
+    "span": "pass over",
+    "note": "\"Pass over\" means driving across the lines: the rule bans crossing them, which rules out passing in the opposite lane, but it does not mention passing as such.",
+    "zh": "\"pass over\" 指開越這兩條線：規則禁止的是越線，因此排除了借對向車道超車，但並沒有直接講超車。"
+   }
+  ],
+  "note": "The three items are exceptions to one rule, so they form one UNLESS clause rather than one statement each.",
+  "note_zh": "這三項是同一條規則的例外，所以合成一個 UNLESS 子句，而不是每項各寫一條敘述。",
+  "links": []
+ },
+ {
+  "id": "3.1.6a",
+  "section": "3.1.6",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"may pass\") and imperative (\"Only pass\")",
+  "text": "a driver MAY pass WHEN a broken yellow line is next to the driver's lane ONLY IF it is [?safe]",
+  "sources": [
+   {
+    "id": "p6",
+    "quote": "A broken yellow line indicates you may pass if the broken line is next to your driving lane. Only pass when it is safe.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Lane Markings › Broken Yellow Line · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safe",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "\"Only pass when it is safe\" is a bare imperative that limits the permission in the sentence before, so it becomes the ONLY IF clause rather than a rule of its own.",
+  "note_zh": "\"Only pass when it is safe\" 是祈使句，用來限制前一句的許可，所以寫成 ONLY IF 子句，而不是獨立的規則。",
+  "links": []
+ },
+ {
+  "id": "3.1.7a",
+  "section": "3.1.7",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "context (White Rectangular Sign: \"Communicates many important rules you must obey\")",
+  "text": "a driver MUST NOT pass WHEN a \"do not pass\" sign is posted",
+  "sources": [
+   {
+    "id": "p41",
+    "quote": "Communicates many important rules you must obey.",
+    "where": "Section 7: Laws and Rules of the Road › Traffic Control › Signs › White Rectangular Sign · ¶1"
+   },
+   {
+    "id": "p42",
+    "quote": "Examples of Red and White Regulatory Signs, White Regulatory Signs, Highway Construction and Maintenance Signs, Guide Signs, Hazardous Loads Placards, and Slow Moving Vehicle Placard",
+    "where": "Section 7: Laws and Rules of the Road › Traffic Control › Signs › Warning Signs · image",
+    "image": "images/Sign-Sample-1.png"
+   }
+  ],
+  "flags": [],
+  "note": "The sign appears only inside the sign chart image: a white rectangular sign reading DO NOT PASS, under \"White Regulatory Signs\". The alt text names only the sign groups, and the handbook text never mentions the sign. The legal force comes from the White Rectangular Sign paragraph; the chart itself sits under the \"Warning Signs\" heading.",
+  "note_zh": "這個標誌只出現在標誌總表的圖片裡：在 \"White Regulatory Signs\" 底下，一塊寫著 DO NOT PASS 的白色長方形標誌。替代文字只列出標誌類別，手冊正文也從沒提到這個標誌。法律效力來自 White Rectangular Sign 段落；總表本身則放在 \"Warning Signs\" 標題底下。",
+  "links": [],
+  "see": [
+   {
+    "figure": "the \"do not pass\" sign (sign chart)",
+    "source": "p42"
+   }
+  ]
+ },
+ {
+  "id": "3.1.8a",
+  "section": "3.1.8",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not pass\")",
+  "text": "a driver SHOULD NOT pass WHEN the driver is at a crossroad or driveway",
+  "sources": [
+   {
+    "id": "p21",
+    "quote": "Do not pass:",
+    "where": "Section 6: Navigating the Roads › Passing · ¶3"
+   },
+   {
+    "id": "p24",
+    "quote": "At crossroads and driveways.",
+    "where": "Section 6: Navigating the Roads › Passing · item 5"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.1.9a",
+  "section": "3.1.9",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not … pass\")",
+  "text": "a driver SHOULD NOT pass WHEN the driver is in a roundabout",
+  "sources": [
+   {
+    "id": "p43",
+    "quote": "How to use a roundabout:",
+    "where": "Section 7: Laws and Rules of the Road › Right-of-Way Rules: Who Goes First? › Roundabouts · ¶2"
+   },
+   {
+    "id": "p44",
+    "quote": "Travel in a counter-clockwise direction. Do not stop or pass.",
+    "where": "Section 7: Laws and Rules of the Road › Right-of-Way Rules: Who Goes First? › Roundabouts · item 5"
+   }
+  ],
+  "flags": [],
+  "note": "\"Do not stop or pass\" sits inside a step of the roundabout procedure but holds whatever the step order, so it is its own RULE; the rest of the procedure is not about passing.",
+  "note_zh": "\"Do not stop or pass\" 位在圓環程序的某個步驟裡，但不論步驟順序都成立，所以自成一條 RULE；程序的其他部分與超車無關。",
+  "links": []
+ },
+ {
+  "id": "3.2.1a",
+  "section": "3.2.1",
+  "type": "DEFINE",
+  "force": null,
+  "force_from": null,
+  "text": "DEFINE the passing lane IS the far-left lane of a multilane road THAT is closest to the center divider AND is used to pass other vehicles",
+  "sources": [
+   {
+    "id": "p10",
+    "quote": "On a multilane road, the passing lane (far left lane) is the lane closest to the center divider and is used to pass other vehicles.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Passing Lanes · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": "Here \"the passing lane\" is the far-left lane of any multilane road, not an added lane as in the Ontario passing and climbing lanes.",
+  "note_zh": "這裡的 \"the passing lane\" 指任何多車道道路最左側的車道，不是像安大略省的超車道與爬坡道那樣額外增設的車道。",
+  "links": []
+ },
+ {
+  "id": "3.2.3a",
+  "section": "3.2.3",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"may pass … only when\")",
+  "text": "a driver MAY pass on the right ONLY IF an open highway has 2 or more lanes going in the driver's direction OR (the driver ahead is turning left AND the driver can pass on the right [?safely]) OR the driver is on a one-way street",
+  "sources": [
+   {
+    "id": "p32",
+    "quote": "You may pass on the right only when:",
+    "where": "Section 6: Navigating the Roads › Passing › How to Pass · ¶2"
+   },
+   {
+    "id": "p33",
+    "quote": "An open highway has two or more lanes going in your direction.",
+    "where": "Section 6: Navigating the Roads › Passing › How to Pass · item 6"
+   },
+   {
+    "id": "p34",
+    "quote": "The driver ahead of you is turning left and you can safely pass on the right.",
+    "where": "Section 6: Navigating the Roads › Passing › How to Pass · item 7"
+   },
+   {
+    "id": "p35",
+    "quote": "You are on a one-way street.",
+    "where": "Section 6: Navigating the Roads › Passing › How to Pass · item 8"
+   }
+  ],
+  "flags": [
+   {
+    "code": "D",
+    "span": "only when",
+    "note": "Presupposes that passing on the right is otherwise not allowed; that default is not stated.",
+    "zh": "預設「其他情況不得從右側超車」，但這裡沒有寫出來。"
+   },
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "The three items are alternative conditions of one permission, so they are joined with OR in one ONLY IF clause; one statement per item would give three conflicting ONLY IF conditions.",
+  "note_zh": "這三項是同一項許可的擇一條件，所以用 OR 接在同一個 ONLY IF 子句裡；若每項各寫一條敘述，就會出現三個互相衝突的 ONLY IF 條件。",
+  "links": []
+ },
+ {
+  "id": "3.2.3b",
+  "section": "3.2.3",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Never\")",
+  "text": "a driver SHOULD NOT pass the driver ahead on the left WHEN the driver ahead is signaling a left turn",
+  "sources": [
+   {
+    "id": "p34",
+    "quote": "Never pass on the left if the driver is signaling a left turn.",
+    "where": "Section 6: Navigating the Roads › Passing › How to Pass · item 7"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.2.4a",
+  "section": "3.2.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Never\")",
+  "text": "a driver SHOULD NOT drive off the paved or main-traveled part of the road to pass",
+  "sources": [
+   {
+    "id": "p36",
+    "quote": "Never drive off the paved or main-traveled part of the road to pass.",
+    "where": "Section 6: Navigating the Roads › Passing › How to Pass · ¶3"
+   }
+  ],
+  "flags": [],
+  "note": "Filed under the shoulder (3.2.4): the handbook does not name the shoulder, but leaving the paved or main-traveled part of the road covers it.",
+  "note_zh": "歸在路肩（3.2.4）之下：手冊沒有提到路肩，但「離開道路鋪面或主要行駛部分」涵蓋了路肩。",
+  "links": []
+ },
+ {
+  "id": "3.2.5a",
+  "section": "3.2.5",
+  "type": "FACT",
+  "force": null,
+  "force_from": null,
+  "text": "FACT some two-lane roads have special turnout areas or lanes",
+  "sources": [
+   {
+    "id": "p12",
+    "quote": "Some two-lane roads have special turnout areas or lanes.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Turnout Areas or Lanes · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.2.5b",
+  "section": "3.2.5",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Merge\")",
+  "text": "a driver SHOULD merge into a turnout area or lane to allow the vehicles behind to pass WHEN on a two-lane road that has turnout areas or lanes",
+  "sources": [
+   {
+    "id": "p12",
+    "quote": "Merge into these areas or lanes to allow cars behind you to pass.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Turnout Areas or Lanes · ¶1"
+   },
+   {
+    "id": "p13",
+    "quote": "Slower Traffic Use Turnouts",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Turnout Areas or Lanes · image",
+    "image": "images/Imageofaturnoutsign.png"
+   }
+  ],
+  "flags": [
+   {
+    "code": "X",
+    "span": "five or more vehicles following you",
+    "note": "The next paragraph makes using a turnout a legal duty, but only when the driver is driving slowly, passing is unsafe and five or more vehicles follow (3.2.5c).",
+    "zh": "下一段把使用避車道定為法律義務，但限於開得慢、不宜超車、且後面跟著五輛以上車輛的情況（3.2.5c）。"
+   }
+  ],
+  "note": "The sign beside the paragraph reads SLOWER TRAFFIC USE TURNOUTS; it illustrates this rule and has no text of its own.",
+  "note_zh": "段落旁的標誌寫著 SLOWER TRAFFIC USE TURNOUTS；它是這條規則的圖示，本身沒有另外的說明文字。",
+  "links": [],
+  "see": [
+   {
+    "figure": "the \"slower traffic use turnouts\" sign",
+    "source": "p13"
+   }
+  ]
+ },
+ {
+  "id": "3.2.5c",
+  "section": "3.2.5",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"must use\")",
+  "text": "a driver MUST use a turnout area or lane to let other vehicles pass WHEN the driver is driving [?slowly] on a two-lane road where passing is [?unsafe] AND 5 or more vehicles are following the driver",
+  "sources": [
+   {
+    "id": "p14",
+    "quote": "You must use a turnout area or lane to let other vehicles pass when you are driving slowly on a two-lane road, where passing is unsafe, and there are five or more vehicles following you.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Turnout Areas or Lanes · ¶2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "slowly",
+    "note": "No speed given; slow compared with the traffic behind.",
+    "zh": "沒有給速度；是跟後方車流相比的慢。"
+   },
+   {
+    "code": "J",
+    "span": "unsafe",
+    "note": "Judgment term; the text does not say who judges that passing is unsafe.",
+    "zh": "判斷詞；原文沒說由誰判斷超車不安全。"
+   }
+  ],
+  "note": "A California-only duty of the driver being passed.",
+  "note_zh": "加州獨有的義務，對象是被超車的駕駛人。",
+  "links": []
+ },
+ {
+  "id": "3.3.2a",
+  "section": "3.3.2",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "text (\"Avoid\")",
+  "text": "a driver SHOULD NOT cross lanes or pass traffic WHEN driving in heavy fog or smoke UNLESS it is [?absolutely necessary]",
+  "sources": [
+   {
+    "id": "p97",
+    "quote": "If you must drive in heavy fog or smoke:",
+    "where": "Section 8: Safe Driving › Understand the Road Conditions › Fog or Heavy Smoke · ¶1"
+   },
+   {
+    "id": "p98",
+    "quote": "Avoid crossing lanes or passing traffic unless absolutely necessary.",
+    "where": "Section 8: Safe Driving › Understand the Road Conditions › Fog or Heavy Smoke · item 7"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "absolutely necessary",
+    "note": "No test for when passing becomes necessary.",
+    "zh": "沒有說明什麼情況下超車才算「絕對必要」。"
+   }
+  ],
+  "note": "The condition comes from the list lead, whose \"must\" means \"have to\" and sets no duty. The handbook puts heavy smoke with fog.",
+  "note_zh": "條件來自清單引言；引言裡的 \"must\" 意思是 \"have to\"，並不設定義務。手冊把濃煙和濃霧放在一起講。",
+  "links": []
+ },
+ {
+  "id": "3.4.2a",
+  "section": "3.4.2",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"give\")",
+  "text": "a driver SHOULD give a motorcycle the full lane WHEN [?possible]",
+  "sources": [
+   {
+    "id": "p59",
+    "quote": "To safely share the road with motorcyclists:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · ¶1"
+   },
+   {
+    "id": "p60",
+    "quote": "Whenever possible, give a motorcycle the full lane.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · item 3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "possible",
+    "note": "No test for when it is possible.",
+    "zh": "沒有說明怎樣算「可能」。"
+   }
+  ],
+  "note": "Giving the motorcycle the full lane is what rules out passing it within its lane (3.4.2b). The item's next sentence, on lane splitting, is 3.4.15.",
+  "note_zh": "把整條車道讓給機車，正是排除在同一車道內超越機車的依據（3.4.2b）。這一項的下一句講機車車道分享，是 3.4.15。",
+  "links": []
+ },
+ {
+  "id": "3.4.2b",
+  "section": "3.4.2",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Never try\")",
+  "text": "a driver SHOULD NOT try to pass a motorcycle in the same lane as the driver",
+  "sources": [
+   {
+    "id": "p59",
+    "quote": "To safely share the road with motorcyclists:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · ¶1"
+   },
+   {
+    "id": "p61",
+    "quote": "Never try to pass a motorcycle in the same lane as you.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · item 4"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.4a",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"must be maintained\")",
+  "text": "a driver MUST keep [?3 ft of distance] between the vehicle and a cyclist WHEN the driver and the cyclist share a roadway",
+  "sources": [
+   {
+    "id": "p16",
+    "quote": "Example of shared roadway. Three (3) feet of distance must be maintained between the car and cyclist.",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Bicycle Lanes · ¶2"
+   },
+   {
+    "id": "p15",
+    "quote": "Bicycle Lane",
+    "where": "Section 6: Navigating the Roads › Traffic Lanes › Types of Lanes › Bicycle Lanes · image",
+    "image": "images/Bicycle_Lane.png"
+   }
+  ],
+  "flags": [
+   {
+    "code": "R",
+    "span": "3 ft of distance",
+    "note": "A distance without a direction: the caption does not say whether it is the side gap when passing, as the picture shows, or any gap between car and cyclist.",
+    "zh": "只有距離沒有方向：圖說沒說這是超車時的側向間距（如圖所示），還是車與自行車之間的任何間距。"
+   },
+   {
+    "code": "X",
+    "span": "allow at least three feet",
+    "note": "Passing a Bicyclist (3.4.4h) and Choose Between Hazards (3.4.4o) give at least 3 ft as advice when passing; this caption says 3 ft \"must be maintained\", without \"at least\" and without mentioning passing.",
+    "zh": "Passing a Bicyclist（3.4.4h）和 Choose Between Hazards（3.4.4o）把「至少 3 英尺」當作超車時的建議；這段圖說則寫 \"must be maintained\"，沒有「至少」，也沒提到超車。"
+   }
+  ],
+  "note": "The rule is a caption, a separate paragraph under an image whose alt text says only \"Bicycle Lane\". The image shows a shared lane (sharrow marking), a car behind a cyclist, and \"3 FEET\" marked beside the cyclist: the side gap as the car goes past.",
+  "note_zh": "這條規則是一段圖說，是圖片底下獨立的一段；圖片的替代文字只寫 \"Bicycle Lane\"。圖中是共用車道（sharrow 標線）、自行車騎士後方的一輛汽車，以及標在自行車騎士旁的 \"3 FEET\"：也就是汽車經過時的側向間距。",
+  "links": [],
+  "see": [
+   {
+    "figure": "shared roadway with a 3 ft gap beside a cyclist",
+    "source": "p15"
+   }
+  ]
+ },
+ {
+  "id": "3.4.4b",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"must ride\")",
+  "text": "a cyclist traveling slower than the flow of traffic MUST ride as close as [?possible] to the right curb or edge of the road UNLESS the cyclist is passing a vehicle or another bicycle in the same direction OR the cyclist is preparing to make a left turn OR the cyclist is avoiding a hazard or road condition OR the lane is too narrow for a bicycle and a vehicle to travel side by side in it [?safely] OR the cyclist is approaching a right turn OR the cyclist is on a one-way road with 2 or more lanes",
+  "sources": [
+   {
+    "id": "p65",
+    "quote": "Bicyclists traveling slower than the flow of traffic must ride as close as possible to the right curb or edge of the road, unless :",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · ¶1"
+   },
+   {
+    "id": "p66",
+    "quote": "Passing a vehicle or another bicycle in the same direction.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · item 1"
+   },
+   {
+    "id": "p67",
+    "quote": "Preparing to make a left turn.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · item 2"
+   },
+   {
+    "id": "p68",
+    "quote": "Avoiding a hazard or road condition.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · item 3"
+   },
+   {
+    "id": "p69",
+    "quote": "A lane is too narrow for a bicycle and a vehicle to safely travel side-by-side in the lane.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · item 4"
+   },
+   {
+    "id": "p70",
+    "quote": "Approaching a right turn.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · item 5"
+   },
+   {
+    "id": "p71",
+    "quote": "On a one-way road with two or more lanes.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · item 6"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "possible",
+    "note": "No test for how close is possible.",
+    "zh": "沒有說明靠到多近才算「盡可能」。"
+   },
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "A rule for the cyclist, not the passing driver. It is in scope because passing is one of its exceptions and a lane too narrow to share decides whether a vehicle can pass the cyclist within the lane. The items are exceptions to one rule, so they form one UNLESS clause; item 6's permission to ride near the left curb is not about passing.",
+  "note_zh": "這是給自行車騎士的規則，不是給超車駕駛人的。納入範圍是因為超車是它的例外之一，而且車道窄到無法並行時，決定了車輛能否在同一車道內超越自行車騎士。這些項目是同一條規則的例外，所以合成一個 UNLESS 子句；第 6 項允許靠左側路緣騎乘，與超車無關。",
+  "links": []
+ },
+ {
+  "id": "3.4.4c",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "text (\"should follow\")",
+  "text": "a driver SHOULD follow a cyclist at a [?safe] distance WHEN the cyclist is riding in the travel lane",
+  "sources": [
+   {
+    "id": "p72",
+    "quote": "Drivers should follow at a safe distance.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · ¶2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safe",
+    "note": "No distance given.",
+    "zh": "沒有給距離。"
+   }
+  ],
+  "note": "The sentence does not say whom to follow; the heading \"Bicycling in Travel Lanes\" and the next sentence make it the cyclist, whom the driver follows until the cyclist makes room to pass (3.4.4d).",
+  "note_zh": "原句沒說要跟在誰後面；從標題 \"Bicycling in Travel Lanes\" 和下一句可知是自行車騎士：駕駛人跟在後面，直到自行車騎士讓出空間供超車（3.4.4d）。",
+  "links": []
+ },
+ {
+  "id": "3.4.4d",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "text (\"should move\")",
+  "text": "a cyclist SHOULD move to a position that allows vehicles to pass WHEN it is [?safe]",
+  "sources": [
+   {
+    "id": "p72",
+    "quote": "When it is safe, the bicyclist should move to a position that allows vehicles to pass.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Bicycling in Travel Lanes · ¶2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safe",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "A rule for the cyclist being passed.",
+  "note_zh": "這是給被超車的自行車騎士的規則。",
+  "links": []
+ },
+ {
+  "id": "3.4.4e",
+  "section": "3.4.4",
+  "type": "FACT",
+  "force": null,
+  "force_from": null,
+  "text": "FACT a driver may need to change to another lane to pass a cyclist in the travel lane [?safely]",
+  "sources": [
+   {
+    "id": "p73",
+    "quote": "To safely pass a bicyclist that is in the travel lane, you may need to change to another lane.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "\"May need to\" is a possibility, not a permission, so this is a FACT and not a MAY rule.",
+  "note_zh": "\"May need to\" 是可能性，不是許可，所以這是 FACT，不是 MAY 規則。",
+  "links": []
+ },
+ {
+  "id": "3.4.4f",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"pass safely, then return\")",
+  "text": "a driver SHOULD pass the cyclist [?safely] AND SHOULD then return to the original lane WHEN the driver has changed lanes to pass a cyclist in the travel lane",
+  "sources": [
+   {
+    "id": "p73",
+    "quote": "To safely pass a bicyclist that is in the travel lane, you may need to change to another lane. In this case, pass safely, then return to your original lane.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "\"In this case\" refers to the lane change in the sentence before, which becomes the condition.",
+  "note_zh": "\"In this case\" 指的是前一句的換車道，於是換車道成為條件。",
+  "links": []
+ },
+ {
+  "id": "3.4.4g",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Leave\")",
+  "text": "a driver SHOULD leave [?space] between the vehicle and the cyclist WHILE passing a cyclist",
+  "sources": [
+   {
+    "id": "p73",
+    "quote": "Leave space between your vehicle and the bicyclist.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶1"
+   },
+   {
+    "id": "p74",
+    "quote": "Car passing a cyclist. The car leaves enough space between itself and the bicyclist as it passes.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · image",
+    "image": "images/bike-right.png"
+   },
+   {
+    "id": "p75",
+    "quote": "Right",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶2"
+   },
+   {
+    "id": "p76",
+    "quote": "Car attempting to pass a cyclist without leaving any room. The car hits the cyclist.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · image",
+    "image": "images/Bike-wrong.png"
+   },
+   {
+    "id": "p77",
+    "quote": "Wrong",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "space",
+    "note": "No amount given here; 3.4.4h gives at least 3 ft when the driver cannot change lanes.",
+    "zh": "這裡沒有給間距；3.4.4h 規定無法換車道時至少 3 英尺。"
+   }
+  ],
+  "note": "The condition comes from the heading \"Passing a Bicyclist\". The two pictures, labelled \"Right\" and \"Wrong\" in separate one-word paragraphs, show a car passing in the next lane and a car hitting a cyclist it passes in the same lane.",
+  "note_zh": "條件來自標題 \"Passing a Bicyclist\"。兩張圖分別以單字段落標成 \"Right\" 和 \"Wrong\"，畫的是汽車從隔壁車道超車，以及汽車在同一車道內超車時撞上自行車騎士。",
+  "links": [],
+  "see": [
+   {
+    "figure": "car passing a cyclist with space (Right)",
+    "source": "p74"
+   },
+   {
+    "figure": "car passing a cyclist without room (Wrong)",
+    "source": "p76"
+   }
+  ]
+ },
+ {
+  "id": "3.4.4h",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"allow\")",
+  "text": "a driver SHOULD allow at least 3 ft between the vehicle and the cyclist WHEN the driver cannot change lanes to pass a cyclist WHILE passing the cyclist BECAUSE this helps avoid putting the cyclist in danger",
+  "sources": [
+   {
+    "id": "p78",
+    "quote": "When you cannot change lanes to pass a bicyclist, allow at least three feet between your vehicle and the bicyclist. If you cannot give three feet of space, do not pass the cyclist until three feet of clearance can be given. This will help you avoid putting the bicyclist in danger.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶4"
+   }
+  ],
+  "flags": [
+   {
+    "code": "M",
+    "span": "allow at least three feet",
+    "note": "A fixed distance in a bare imperative stays SHOULD; the caption in 3.4.4a says 3 ft \"must be maintained\", which suggests a legal requirement.",
+    "zh": "祈使句裡的固定距離維持 SHOULD；但 3.4.4a 的圖說寫 3 英尺 \"must be maintained\"，暗示這是法律要求。"
+   },
+   {
+    "code": "X",
+    "span": "Three (3) feet of distance must be maintained",
+    "note": "Also stated as a caption on the Navigating the Roads page (3.4.4a) and in Choose Between Hazards (3.4.4o), in different words.",
+    "zh": "在 Navigating the Roads 頁的圖說（3.4.4a）和 Choose Between Hazards（3.4.4o）也出現，用字不同。"
+   }
+  ],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.4i",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"do not pass … until\")",
+  "text": "a driver SHOULD NOT pass a cyclist WHEN the driver cannot give 3 ft of space UNTIL 3 ft of clearance can be given BECAUSE this helps avoid putting the cyclist in danger",
+  "sources": [
+   {
+    "id": "p78",
+    "quote": "If you cannot give three feet of space, do not pass the cyclist until three feet of clearance can be given. This will help you avoid putting the bicyclist in danger.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶4"
+   }
+  ],
+  "flags": [
+   {
+    "code": "M",
+    "span": "do not pass the cyclist until three feet of clearance can be given",
+    "note": "A bare imperative with a fixed distance stays SHOULD NOT.",
+    "zh": "帶固定距離的祈使句，維持 SHOULD NOT。"
+   },
+   {
+    "code": "V",
+    "span": "bicyclist",
+    "note": "The handbook says \"bicyclist\" and \"cyclist\" for the same road user, even within this paragraph; the statements say cyclist.",
+    "zh": "手冊對同一種用路人混用 \"bicyclist\" 和 \"cyclist\"，連這一段裡都是；規則一律寫 cyclist。"
+   }
+  ],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.4j",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Give\")",
+  "text": "a driver SHOULD give a cyclist [?enough] space WHILE passing the cyclist BECAUSE this keeps the cyclist from being forced into parked vehicles or open vehicle doors",
+  "sources": [
+   {
+    "id": "p78",
+    "quote": "Remember to:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶4"
+   },
+   {
+    "id": "p79",
+    "quote": "Give bicyclists enough space so they are not forced into parked vehicles or open vehicle doors.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · item 1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "enough",
+    "note": "No measure of space given.",
+    "zh": "沒有給空間的量化標準。"
+   }
+  ],
+  "note": "The condition comes from the heading \"Passing a Bicyclist\" and its lead \"Remember to:\".",
+  "note_zh": "條件來自標題 \"Passing a Bicyclist\" 及其引言 \"Remember to:\"。",
+  "links": []
+ },
+ {
+  "id": "3.4.4k",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Merge\")",
+  "text": "a driver SHOULD merge [?safely] behind a cyclist WHEN preparing to make a turn",
+  "sources": [
+   {
+    "id": "p78",
+    "quote": "Remember to:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶4"
+   },
+   {
+    "id": "p81",
+    "quote": "Merge safely behind a bicyclist when preparing to make a turn.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · item 3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "Listed under \"Passing a Bicyclist\": before a turn, merge behind the cyclist rather than pass it. The neighbouring items on merging toward the curb, entering a bike lane and checking blind spots are turning and lane-change rules and give no statement.",
+  "note_zh": "列在 \"Passing a Bicyclist\" 底下：轉彎前要併入自行車騎士後方，而不是超越他。相鄰幾項講往路緣併入、駛入自行車道和檢查盲點，屬於轉彎和變換車道的規則，不寫成敘述。",
+  "links": []
+ },
+ {
+  "id": "3.4.4l",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "caution (\"Be careful\")",
+  "text": "a driver SHOULD approach or pass a cyclist with [?extra care] WHEN on a two-lane road",
+  "sources": [
+   {
+    "id": "p78",
+    "quote": "Remember to:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · ¶4"
+   },
+   {
+    "id": "p84",
+    "quote": "Be careful when approaching or passing a bicyclist on a two-lane road.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Bicycles › Passing a Bicyclist · item 6"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "extra care",
+    "note": "A caution with no named hazard, so WATCH FOR does not fit.",
+    "zh": "提醒小心，但沒有指出具體危險，所以不適用 WATCH FOR。"
+   }
+  ],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.4m",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Instead of driving between …, take one danger at a time\")",
+  "text": "a driver SHOULD NOT drive between the oncoming vehicle and the cyclist AND SHOULD take one danger at a time WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right",
+  "sources": [
+   {
+    "id": "p102",
+    "quote": "Sometimes dangers will be on both sides of the road at the same time.",
+    "where": "Section 8: Safe Driving (Continued) › Choose Between Hazards · ¶1"
+   },
+   {
+    "id": "p103",
+    "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time.",
+    "where": "Section 8: Safe Driving (Continued) › Choose Between Hazards · ¶2"
+   }
+  ],
+  "flags": [],
+  "note": "The scenario after \"Suppose\" is the condition of 3.4.4m to 3.4.4p. \"If one danger is greater than the other, give more space to the most dangerous situation\" is the general principle the example illustrates; it is not about passing and gives no statement.",
+  "note_zh": "\"Suppose\" 後面描述的情境是 3.4.4m 到 3.4.4p 的條件。\"If one danger is greater than the other, give more space to the most dangerous situation\" 是這個例子所說明的一般原則；它與超車無關，不寫成敘述。",
+  "links": []
+ },
+ {
+  "id": "3.4.4n",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Slow down and let\")",
+  "text": "a driver SHOULD slow down AND let the oncoming vehicle go by WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right",
+  "sources": [
+   {
+    "id": "p103",
+    "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass.",
+    "where": "Section 8: Safe Driving (Continued) › Choose Between Hazards · ¶2"
+   }
+  ],
+  "flags": [],
+  "note": "\"Let the oncoming vehicle pass\" means let it go by, so it is written \"go by\" to keep \"pass\" for overtaking; waiting is the first half of passing the cyclist.",
+  "note_zh": "\"Let the oncoming vehicle pass\" 的意思是讓對向車開過去，所以寫成 \"go by\"，把 \"pass\" 保留給超車；先等待，是超越自行車騎士的前半段。",
+  "links": []
+ },
+ {
+  "id": "3.4.4o",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"move to the left\")",
+  "text": "a driver SHOULD move to the left to allow [?plenty of space], at least 3 ft, to pass the cyclist WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right AND the oncoming vehicle has gone by",
+  "sources": [
+   {
+    "id": "p103",
+    "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist.",
+    "where": "Section 8: Safe Driving (Continued) › Choose Between Hazards · ¶2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "plenty of space",
+    "note": "Vague amount; the parenthesis sets a floor of 3 ft but no target.",
+    "zh": "份量含糊；括號只給了 3 英尺的下限，沒有目標值。"
+   },
+   {
+    "code": "M",
+    "span": "at least three feet",
+    "note": "A fixed distance in a bare imperative stays SHOULD.",
+    "zh": "祈使句裡的固定距離，維持 SHOULD。"
+   }
+  ],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.4p",
+  "section": "3.4.4",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"use\")",
+  "text": "a driver SHOULD use as much of the left lane as the driver [?safely] can to pass the cyclist WHEN the driver is on a two-lane road with a cyclist ahead to the right AND there is a steady flow of oncoming vehicles",
+  "sources": [
+   {
+    "id": "p103",
+    "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist. If there is a steady flow of oncoming vehicles, use as much of the left lane as you safely can to pass the bicyclist.",
+    "where": "Section 8: Safe Driving (Continued) › Choose Between Hazards · ¶2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.5a",
+  "section": "3.4.5",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not overtake and pass\")",
+  "text": "a driver SHOULD NOT pass a light rail vehicle or streetcar on the left, whether it is moving or standing, UNLESS the tracks are so close to the right side that the driver's vehicle cannot pass on the right OR the driver is on a one-way street OR a traffic officer directs the driver to pass on the left",
+  "sources": [
+   {
+    "id": "p55",
+    "quote": "Do not overtake and pass a light rail vehicle or streetcar on the left side, whether it is moving or standing, unless:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · ¶4"
+   },
+   {
+    "id": "p56",
+    "quote": "When the tracks are so close to the right side that the passenger vehicle cannot pass on the right.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · item 1"
+   },
+   {
+    "id": "p57",
+    "quote": "You are on a one-way street.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · item 2"
+   },
+   {
+    "id": "p58",
+    "quote": "A traffic officer directs you to pass on the left.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · item 3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "M",
+    "span": "Do not overtake and pass",
+    "note": "Statute-like wording (\"whether it is moving or standing\") with no legal marker; the default gives SHOULD NOT.",
+    "zh": "用字像法條（\"whether it is moving or standing\"），但沒有法律用語；預設規則給 SHOULD NOT。"
+   },
+   {
+    "code": "V",
+    "span": "overtake and pass",
+    "note": "Only here does the handbook say \"overtake and pass\"; elsewhere it says \"pass\", and \"drive past\" for traffic breaks.",
+    "zh": "手冊只有這裡寫 \"overtake and pass\"；其他地方寫 \"pass\"，交通管制段落則寫 \"drive past\"。"
+   }
+  ],
+  "note": "The three items are exceptions to one rule, so they form one UNLESS clause.",
+  "note_zh": "這三項是同一條規則的例外，所以合成一個 UNLESS 子句。",
+  "links": []
+ },
+ {
+  "id": "3.4.6a",
+  "section": "3.4.6",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"look at\")",
+  "text": "a driver SHOULD look at the turn signals of a large vehicle WHEN the driver is following the large vehicle AND the driver is about to start to pass it BECAUSE the large vehicle may appear to be turning one way while it is swinging wide the other way in order to turn",
+  "sources": [
+   {
+    "id": "p48",
+    "quote": "When you follow a large vehicle, look at its turn signals before you start to pass. It may appear to be turning one direction but instead is swinging wide in the opposite direction in order to turn.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Turning · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.6b",
+  "section": "3.4.6",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"do not: Drive next to them\")",
+  "text": "a driver SHOULD NOT drive next to a large vehicle or truck longer than [?the driver needs to] BECAUSE driving alongside a large vehicle makes it hard for its driver to avoid dangers in the road",
+  "sources": [
+   {
+    "id": "p49",
+    "quote": "When driving near large vehicles and trucks, do not:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Maneuvering · ¶1"
+   },
+   {
+    "id": "p50",
+    "quote": "Drive next to them longer than you need to. Always pass a large vehicle on the left side. After you pass the large vehicle or truck, move ahead of it. Driving alongside a large vehicle makes it hard for the driver to avoid dangers in the road.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Maneuvering · item 2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "the driver needs to",
+    "note": "No time or distance given.",
+    "zh": "沒有給時間或距離。"
+   }
+  ],
+  "note": "The lead's \"do not\" applies only to the item's first sentence; the item's other sentences are commands of their own (3.4.6c, 3.4.6d). The lead's opening sentences, on the lanes trucks may use, are not about passing.",
+  "note_zh": "引言的 \"do not\" 只套用在這一項的第一句；這一項的其他句子各自是獨立的指示（3.4.6c、3.4.6d）。引言開頭幾句講卡車可以走哪些車道，與超車無關。",
+  "links": []
+ },
+ {
+  "id": "3.4.6c",
+  "section": "3.4.6",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Always pass\")",
+  "text": "a driver SHOULD pass a large vehicle on the left side",
+  "sources": [
+   {
+    "id": "p50",
+    "quote": "Always pass a large vehicle on the left side.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Maneuvering · item 2"
+   }
+  ],
+  "flags": [],
+  "note": "It narrows the pass-on-the-right permission in 3.2.3a for large vehicles; the handbook does not say which wins.",
+  "note_zh": "它針對大型車縮小了 3.2.3a 從右側超車的許可；手冊沒說哪一條優先。",
+  "links": []
+ },
+ {
+  "id": "3.4.6d",
+  "section": "3.4.6",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"move ahead\")",
+  "text": "a driver SHOULD move ahead of a large vehicle or truck WHEN the driver has passed it",
+  "sources": [
+   {
+    "id": "p50",
+    "quote": "After you pass the large vehicle or truck, move ahead of it.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Maneuvering · item 2"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.10a",
+  "section": "3.4.10",
+  "type": "DEFINE",
+  "force": null,
+  "force_from": null,
+  "text": "DEFINE a traffic break IS a law enforcement maneuver THAT has an officer turn on the emergency lights and slowly weave across lanes",
+  "sources": [
+   {
+    "id": "p99",
+    "quote": "During a traffic break, the officer turns on their emergency lights and slowly weaves across lanes.",
+    "where": "Section 8: Safe Driving › Understand the Road Conditions › Law Enforcement Traffic Breaks · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": "Filed under pilot and pace vehicles (3.4.10): in a traffic break the patrol vehicle paces traffic, and drivers are told not to pass it.",
+  "note_zh": "歸在前導車與領航車（3.4.10）之下：在交通管制中，巡邏車帶領車流控制速度，駕駛人被告知不要超越它。",
+  "links": []
+ },
+ {
+  "id": "3.4.10b",
+  "section": "3.4.10",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "text (\"You should: … Not drive past\")",
+  "text": "a driver SHOULD NOT pass the patrol vehicle WHILE a law enforcement traffic break is under way",
+  "sources": [
+   {
+    "id": "p100",
+    "quote": "You should:",
+    "where": "Section 8: Safe Driving › Understand the Road Conditions › Law Enforcement Traffic Breaks · ¶2"
+   },
+   {
+    "id": "p101",
+    "quote": "Not drive past the patrol vehicle.",
+    "where": "Section 8: Safe Driving › Understand the Road Conditions › Law Enforcement Traffic Breaks · item 6"
+   }
+  ],
+  "flags": [
+   {
+    "code": "V",
+    "span": "drive past",
+    "note": "The handbook says \"drive past\" here for what it calls \"pass\" elsewhere.",
+    "zh": "手冊在這裡用 \"drive past\"，其他地方則叫 \"pass\"。"
+   }
+  ],
+  "note": "The item goes on \"Do not speed up until the officer turns off their emergency lights …\"; that sentence is about speed, not passing, so it gives no statement, though it marks when the traffic break ends.",
+  "note_zh": "這一項接著寫 \"Do not speed up until the officer turns off their emergency lights …\"；那句講的是車速，不是超車，所以不寫成敘述，雖然它標出了交通管制何時結束。",
+  "links": []
+ },
+ {
+  "id": "3.4.11a",
+  "section": "3.4.11",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not pass\")",
+  "text": "a driver SHOULD NOT pass a vehicle WHEN the vehicle is stopped at a crosswalk BECAUSE the driver may not be able to see a pedestrian crossing the street",
+  "sources": [
+   {
+    "id": "p45",
+    "quote": "Other things to keep in mind:",
+    "where": "Section 7: Laws and Rules of the Road › Right-of-Way Rules: Who Goes First? › Pedestrians · ¶5"
+   },
+   {
+    "id": "p46",
+    "quote": "Do not pass a vehicle stopped at a crosswalk. You may not be able to see a pedestrian crossing the street.",
+    "where": "Section 7: Laws and Rules of the Road › Right-of-Way Rules: Who Goes First? › Pedestrians · item 4"
+   }
+  ],
+  "flags": [],
+  "note": "\"May not be able to see\" states a possibility, not a prohibition, so it is the reason.",
+  "note_zh": "\"May not be able to see\" 陳述的是可能性，不是禁令，所以當作理由。",
+  "links": []
+ },
+ {
+  "id": "3.4.12a",
+  "section": "3.4.12",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"you must stop\")",
+  "text": "a driver MUST stop, from either direction, WHEN a school bus flashes its red lights UNTIL the children are [?safely] across the street AND the lights stop flashing IF VIOLATED a fine of up to $1,000 AND a possible suspension of the driving privilege for 1 year",
+  "sources": [
+   {
+    "id": "p92",
+    "quote": "When the bus flashes red lights (located at the top, front, and back of the bus), you must stop from either direction until the children are safely across the street and the lights stop flashing. Remain stopped while the red lights are flashing. If you fail to stop, you may be fined up to $1,000 and your driving privilege could be suspended for one year.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Around Children · item 5"
+   },
+   {
+    "id": "p90",
+    "quote": "All vehicles must stop for school buses.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Around Children · ¶1"
+   },
+   {
+    "id": "p89",
+    "quote": "School bus with red lights flashing and a crossing guard next to it. Students are near the bus. Cars are stopped around the bus.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Around Children · image",
+    "image": "images/Schoolbus-Loading-1.png"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safely",
+    "note": "No test for when the children are safely across.",
+    "zh": "沒有說明孩子怎樣才算「安全」過完馬路。"
+   },
+   {
+    "code": "X",
+    "span": "All vehicles must stop for school buses.",
+    "note": "The paragraph above says all vehicles must stop for school buses, with no mention of red lights, direction or the exception in 3.4.12b.",
+    "zh": "上一段說所有車輛都必須為校車停車，沒提紅燈、方向，也沒提 3.4.12b 的例外。"
+   }
+  ],
+  "note": "This duty to stop is what forbids passing a school bus with flashing red lights. The item sits under the list lead \"When near schools, look for:\", but it is a complete rule that does not depend on being near a school, so that lead's condition is not written. \"Could be suspended\" is a possible sanction.",
+  "note_zh": "正是這條停車義務，禁止了超越閃紅燈的校車。這一項位在清單引言 \"When near schools, look for:\" 底下，但它是完整的規則，不取決於是否靠近學校，所以沒有寫入引言的條件。\"Could be suspended\" 是可能的處罰。",
+  "links": [],
+  "see": [
+   {
+    "figure": "school bus with red lights flashing, traffic stopped both ways",
+    "source": "p89"
+   }
+  ]
+ },
+ {
+  "id": "3.4.12b",
+  "section": "3.4.12",
+  "type": "EXCEPTION",
+  "force": null,
+  "force_from": null,
+  "text": "EXCEPTION TO 3.4.12a WHEN the school bus is on the other side of a divided highway OR the school bus is on the other side of a multilane highway with 2 or more lanes in each direction",
+  "sources": [
+   {
+    "id": "p93",
+    "quote": "If the school bus is on the other side of a divided or multilane highway (two or more lanes in each direction), you do not need to stop.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Around Children · item 6"
+   }
+  ],
+  "flags": [],
+  "note": "A separate item from the duty, so it is its own EXCEPTION. The parenthesis \"(two or more lanes in each direction)\" is read as defining the multilane highway.",
+  "note_zh": "這是和義務分開的另一項，所以自成一條 EXCEPTION。括號 \"(two or more lanes in each direction)\" 讀成是對多車道公路的定義。",
+  "links": [
+   "3.4.12a"
+  ]
+ },
+ {
+  "id": "3.4.13a",
+  "section": "3.4.13",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"must move over and slow down\")",
+  "text": "a driver MUST [?move over] AND slow down WHEN approaching a stationary emergency vehicle or tow truck displaying flashing amber warning lights",
+  "sources": [
+   {
+    "id": "p85",
+    "quote": "Drivers must move over and slow down for emergency and road work vehicles. These include:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Road Workers and Work Zones › Move Over and Slow Down · ¶1"
+   },
+   {
+    "id": "p86",
+    "quote": "Stationary emergency vehicles or tow trucks displaying flashing amber warning lights.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Road Workers and Work Zones › Move Over and Slow Down · item 1"
+   },
+   {
+    "id": "p64",
+    "quote": "When approaching a stationary emergency vehicle with flashing emergency signal lights (hazard lights), move over and slow down.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Emergency Vehicles · ¶3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "move over",
+    "note": "The text does not say whether moving over means changing lanes or moving within the lane, or what to do when it is not possible.",
+    "zh": "原文沒說 \"move over\" 是換車道還是在車道內偏移，也沒說做不到時怎麼辦。"
+   },
+   {
+    "code": "X",
+    "span": "flashing emergency signal lights (hazard lights)",
+    "note": "The Emergency Vehicles paragraph gives the same duty as a bare imperative, for emergency vehicles with \"flashing emergency signal lights (hazard lights)\" rather than amber lights, and without tow trucks.",
+    "zh": "Emergency Vehicles 段落以祈使句講同一項義務，對象是亮著 \"flashing emergency signal lights (hazard lights)\" 的緊急車輛，不是琥珀色燈，也沒提拖吊車。"
+   }
+  ],
+  "note": "Going around a stopped emergency vehicle is passing it, as the topic scope says; the handbook itself never says \"pass\" here. \"For emergency and road work vehicles\" is read as when approaching them, as the Emergency Vehicles paragraph says.",
+  "note_zh": "依主題範圍的說法，繞過停著的緊急車輛就是超越它；手冊本身在這裡從沒說 \"pass\"。\"For emergency and road work vehicles\" 讀成接近這些車輛時，與 Emergency Vehicles 段落的說法一致。",
+  "links": []
+ },
+ {
+  "id": "3.4.13b",
+  "section": "3.4.13",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"must move over and slow down\")",
+  "text": "a driver MUST [?move over] AND slow down WHEN approaching a stopped road work vehicle displaying emergency flashing or amber warning lights",
+  "sources": [
+   {
+    "id": "p85",
+    "quote": "Drivers must move over and slow down for emergency and road work vehicles. These include:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Road Workers and Work Zones › Move Over and Slow Down · ¶1"
+   },
+   {
+    "id": "p87",
+    "quote": "Stopped road work vehicles displaying emergency flashing or amber warning lights.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Road Workers and Work Zones › Move Over and Slow Down · item 2"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "move over",
+    "note": "The text does not say whether moving over means changing lanes or moving within the lane, or what to do when it is not possible.",
+    "zh": "原文沒說 \"move over\" 是換車道還是在車道內偏移，也沒說做不到時怎麼辦。"
+   }
+  ],
+  "note": "Road work vehicles have no section of their own; they share the move-over duty with emergency vehicles, so the statement is filed here.",
+  "note_zh": "道路施工車沒有自己的章節；它們和緊急車輛適用同一項 move over 義務，所以這條敘述歸在這裡。",
+  "links": []
+ },
+ {
+  "id": "3.4.14a",
+  "section": "3.4.14",
+  "type": "DEFINE",
+  "force": null,
+  "force_from": null,
+  "text": "DEFINE a safety zone IS a space THAT is set aside for pedestrians waiting for buses, streetcars and trolleys",
+  "sources": [
+   {
+    "id": "p51",
+    "quote": "Safety zones are spaces set aside for pedestrians waiting for buses, streetcars, and trolleys.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "V",
+    "span": "Safe Zones",
+    "note": "The figure and its caption call them \"safe zone\" and \"Safe Zones\".",
+    "zh": "圖片和圖說把它叫做 \"safe zone\" 和 \"Safe Zones\"。"
+   }
+  ],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.4.14b",
+  "section": "3.4.14",
+  "type": "FACT",
+  "force": null,
+  "force_from": null,
+  "text": "FACT safety zones are marked by raised buttons or markers on a road",
+  "sources": [
+   {
+    "id": "p51",
+    "quote": "Safety zones are marked by raised buttons or markers on a road.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · ¶1"
+   },
+   {
+    "id": "p53",
+    "quote": "Trolley next to demarked safe zone.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · image",
+    "image": "images/Bus-Safety-Zone-1.png"
+   },
+   {
+    "id": "p54",
+    "quote": "Safe Zones are marked by dotted white lines.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · ¶3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "X",
+    "span": "marked by dotted white lines",
+    "note": "The caption under the picture says safe zones are marked by dotted white lines, which is what the picture shows; the paragraph says raised buttons or markers.",
+    "zh": "圖下的說明寫 safe zone 以白色虛線標示，圖片也是這樣畫；但正文說是用凸起的道釘或標記。"
+   }
+  ],
+  "note": null,
+  "links": [],
+  "see": [
+   {
+    "figure": "trolley stopped beside a safety zone",
+    "source": "p53"
+   }
+  ]
+ },
+ {
+  "id": "3.4.14c",
+  "section": "3.4.14",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Do not drive\")",
+  "text": "a driver SHOULD NOT drive through a safety zone",
+  "sources": [
+   {
+    "id": "p51",
+    "quote": "Do not drive through a safety zone under any condition.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "M",
+    "span": "under any condition",
+    "note": "Absolute wording without a legal marker; the default gives SHOULD NOT.",
+    "zh": "用了絕對的說法（\"under any condition\"），但沒有法律用語；預設規則給 SHOULD NOT。"
+   }
+  ],
+  "note": "Included because it limits how a driver may go past a bus, streetcar or trolley stopped at a safety zone (3.4.14d).",
+  "note_zh": "納入是因為它限制了駕駛人怎樣經過停在安全島旁的公車、路面電車或無軌電車（3.4.14d）。",
+  "links": []
+ },
+ {
+  "id": "3.4.14d",
+  "section": "3.4.14",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"may pass\")",
+  "text": "a driver MAY pass a bus, streetcar or trolley at no more than 10 mph WHEN the bus, streetcar or trolley is stopped at a safety zone or traffic light",
+  "sources": [
+   {
+    "id": "p52",
+    "quote": "When a bus, streetcar, or trolley is stopped at a safety zone or traffic light, you may pass at no more than 10 mph.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · ¶2"
+   },
+   {
+    "id": "p53",
+    "quote": "Trolley next to demarked safe zone.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Buses, Streetcars, Trolleys · image",
+    "image": "images/Bus-Safety-Zone-1.png"
+   }
+  ],
+  "flags": [
+   {
+    "code": "D",
+    "span": "may pass at no more than 10 mph",
+    "note": "Presupposes that passing faster than 10 mph is not allowed; the handbook does not state that limit as a ban.",
+    "zh": "預設「超過時速 10 英里就不得超越」，但手冊沒有把這個限制寫成禁令。"
+   }
+  ],
+  "note": "California-only: no Ontario counterpart for buses and trolleys.",
+  "note_zh": "加州獨有：安大略省沒有針對公車和無軌電車的對應規則。",
+  "links": [],
+  "see": [
+   {
+    "figure": "trolley stopped beside a safety zone",
+    "source": "p53"
+   }
+  ]
+ },
+ {
+  "id": "3.4.15a",
+  "section": "3.4.15",
+  "type": "DEFINE",
+  "force": null,
+  "force_from": null,
+  "text": "DEFINE lane splitting IS sharing a lane THAT is done with motorcycles",
+  "sources": [
+   {
+    "id": "p60",
+    "quote": "It is legal to share lanes with motorcycles, this is known as lane splitting.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · item 3"
+   }
+  ],
+  "flags": [],
+  "note": "The handbook does not say who shares the lane; lane splitting usually means a motorcyclist riding between lanes of slower traffic (see 3.4.15b).",
+  "note_zh": "手冊沒說是誰共用車道；機車車道分享通常指機車騎士在較慢車流的車道之間穿行（見 3.4.15b）。",
+  "links": []
+ },
+ {
+  "id": "3.4.15b",
+  "section": "3.4.15",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "text (\"It is legal\")",
+  "text": "[?a driver] MAY share lanes with motorcycles",
+  "sources": [
+   {
+    "id": "p59",
+    "quote": "To safely share the road with motorcyclists:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · ¶1"
+   },
+   {
+    "id": "p60",
+    "quote": "It is legal to share lanes with motorcycles, this is known as lane splitting.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · item 3"
+   }
+  ],
+  "flags": [
+   {
+    "code": "R",
+    "span": "a driver",
+    "note": "The sentence does not say who may share the lane. In a list addressed to drivers it reads as the driver, but lane splitting usually means a motorcyclist riding between lanes of slower vehicles, and the same item tells drivers to give a motorcycle the full lane.",
+    "zh": "原句沒說誰可以共用車道。在寫給汽車駕駛的清單裡讀起來是駕駛人，但 lane splitting 通常指機車騎士在車道之間穿越較慢的車流，而且同一項還要駕駛人把整條車道讓給機車。"
+   }
+  ],
+  "note": "California-only: lane splitting is a way of passing slower traffic within the lanes.",
+  "note_zh": "加州獨有：機車車道分享是在車道內超越較慢車流的一種方式。",
+  "links": []
+ },
+ {
+  "id": "3.4.15c",
+  "section": "3.4.15",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"move\")",
+  "text": "a driver being passed by motorcyclists SHOULD move to one side of the lane to give the motorcyclists [?more room] to pass WHEN [?possible]",
+  "sources": [
+   {
+    "id": "p59",
+    "quote": "To safely share the road with motorcyclists:",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · ¶1"
+   },
+   {
+    "id": "p62",
+    "quote": "When possible, move to one side of your lane to give motorcyclists more room to pass.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Motorcycles · item 6"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "more room",
+    "note": "Comparative with no baseline.",
+    "zh": "比較級，但沒有比較基準。"
+   },
+   {
+    "code": "J",
+    "span": "possible",
+    "note": "No test for when it is possible.",
+    "zh": "沒有說明怎樣算「可能」。"
+   }
+  ],
+  "note": "Read with lane splitting (3.4.15b): the motorcyclists pass within the lanes and the driver makes room. The item itself does not say lane splitting.",
+  "note_zh": "搭配機車車道分享（3.4.15b）來讀：機車騎士在車道內超車，駕駛人讓出空間。這一項本身沒有提到機車車道分享。",
+  "links": []
+ },
+ {
+  "id": "3.6.1a",
+  "section": "3.6.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"allow\", \"Maintain\")",
+  "text": "a driver being passed SHOULD allow the vehicle to pass AND SHOULD keep the lane position and speed WHEN a vehicle is passing the driver OR a vehicle signals that it plans to pass",
+  "sources": [
+   {
+    "id": "p37",
+    "quote": "If a vehicle is passing you or signals that they plan on passing, allow the vehicle to pass. Maintain your lane position and your speed.",
+    "where": "Section 6: Navigating the Roads › Passing › Being Passed · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": null,
+  "links": []
+ },
+ {
+  "id": "3.6.1b",
+  "section": "3.6.1",
+  "type": "RULE",
+  "force": "LEGAL",
+  "force_from": "context (White Rectangular Sign: \"Communicates many important rules you must obey\")",
+  "text": "a driver in [?slower traffic] MUST keep right WHEN a \"slower traffic keep right\" sign is posted",
+  "sources": [
+   {
+    "id": "p41",
+    "quote": "Communicates many important rules you must obey.",
+    "where": "Section 7: Laws and Rules of the Road › Traffic Control › Signs › White Rectangular Sign · ¶1"
+   },
+   {
+    "id": "p42",
+    "quote": "Examples of Red and White Regulatory Signs, White Regulatory Signs, Highway Construction and Maintenance Signs, Guide Signs, Hazardous Loads Placards, and Slow Moving Vehicle Placard",
+    "where": "Section 7: Laws and Rules of the Road › Traffic Control › Signs › Warning Signs · image",
+    "image": "images/Sign-Sample-1.png"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "slower traffic",
+    "note": "No speed given; slower than the traffic around it.",
+    "zh": "沒有給速度；是跟周圍車流相比的慢。"
+   }
+  ],
+  "note": "Like the \"do not pass\" sign (3.1.7a), this sign appears only inside the sign chart image, under \"White Regulatory Signs\"; the alt text and the handbook text do not name it. Keeping right leaves the left lane for passing (2.1a).",
+  "note_zh": "和 \"do not pass\" 標誌（3.1.7a）一樣，這個標誌只出現在標誌總表的圖片裡，位於 \"White Regulatory Signs\" 底下；替代文字和手冊正文都沒提到它。靠右行駛就把左側車道留給超車（2.1a）。",
+  "links": [],
+  "see": [
+   {
+    "figure": "the \"slower traffic keep right\" sign (sign chart)",
+    "source": "p42"
+   }
+  ]
+ },
+ {
+  "id": "3.6.1c",
+  "section": "3.6.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"move to the right\")",
+  "text": "a driver SHOULD move to the right WHEN another driver is [?close behind] AND wishes to drive faster",
+  "sources": [
+   {
+    "id": "p88",
+    "quote": "When another driver is close behind you and wishes to drive faster, move to the right.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Heavy Traffic or Bad Weather · ¶1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "close behind",
+    "note": "No distance given.",
+    "zh": "沒有給距離。"
+   }
+  ],
+  "note": "The paragraph sits under \"Heavy Traffic or Bad Weather\", but this sentence and the next (3.6.1d) are general rules about letting faster traffic by, so the heading is not written as a condition.",
+  "note_zh": "這段位在 \"Heavy Traffic or Bad Weather\" 底下，但這句和下一句（3.6.1d）是讓較快車流通過的一般規則，所以沒有把標題寫成條件。",
+  "links": []
+ },
+ {
+  "id": "3.6.1d",
+  "section": "3.6.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"drive in the right lane\")",
+  "text": "a driver SHOULD drive in the right-hand lane WHEN the driver chooses to drive slower than other traffic",
+  "sources": [
+   {
+    "id": "p88",
+    "quote": "If you choose to drive slower than other traffic, drive in the right lane.",
+    "where": "Section 7: Laws and Rules of the Road (Continued) › Sharing the Road › Heavy Traffic or Bad Weather · ¶1"
+   }
+  ],
+  "flags": [],
+  "note": "Same reading of the heading as 3.6.1c. The paragraph refers to Choosing a Lane (2.1a) for more.",
+  "note_zh": "對標題的解讀與 3.6.1c 相同。這段另外請讀者參考 Choosing a Lane（2.1a）。",
+  "links": []
+ },
+ {
+  "id": "3.6.1e",
+  "section": "3.6.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"Maintain\")",
+  "text": "a driver SHOULD keep the course and speed WHEN a tailgater is behind the driver",
+  "sources": [
+   {
+    "id": "p94",
+    "quote": "Create more space in front of your vehicle when:",
+    "where": "Section 8: Safe Driving › Be Aware of Your Surroundings › Tailgating (Following Too Closely) · ¶3"
+   },
+   {
+    "id": "p95",
+    "quote": "A tailgater is behind you. Maintain your course and speed.",
+    "where": "Section 8: Safe Driving › Be Aware of Your Surroundings › Tailgating (Following Too Closely) · item 1"
+   }
+  ],
+  "flags": [],
+  "note": "The list lead also says to create more space in front when a tailgater is behind; that is following-distance advice, not passing.",
+  "note_zh": "清單引言也說，後方有車跟得太近時要拉開前方的空間；那是跟車距離的建議，與超車無關。",
+  "links": []
+ },
+ {
+  "id": "3.6.1f",
+  "section": "3.6.1",
+  "type": "RULE",
+  "force": "ADVISORY",
+  "force_from": "imperative (\"merge right\", \"allow\")",
+  "text": "a driver SHOULD merge right into another lane AND allow the tailgater to pass WHEN a tailgater is behind the driver AND it is [?safe] to do so",
+  "sources": [
+   {
+    "id": "p95",
+    "quote": "Then, when safe to do so, merge right to change into another lane and allow the tailgater to pass.",
+    "where": "Section 8: Safe Driving › Be Aware of Your Surroundings › Tailgating (Following Too Closely) · item 1"
+   }
+  ],
+  "flags": [
+   {
+    "code": "J",
+    "span": "safe",
+    "note": "Judgment term.",
+    "zh": "判斷詞，沒有可觀察的標準。"
+   }
+  ],
+  "note": "\"Then\" places this after keeping course and speed (3.6.1e); a rule has no keyword for that order.",
+  "note_zh": "\"Then\" 把這一步排在保持方向與車速（3.6.1e）之後；規則沒有表達這種先後順序的關鍵字。",
+  "links": []
+ }
+]

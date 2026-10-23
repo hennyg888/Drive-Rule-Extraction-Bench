@@ -1,0 +1,15 @@
+{
+ "name": "Texas Driver Handbook",
+ "short": "Texas",
+ "zh_name": "德州駕駛手冊",
+ "edition": "DL-7, revised January 2026",
+ "source_url": "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+ "scraped": "2026-10-20",
+ "units": "US customary (ft, mi, mph)",
+ "handbook_dir": "tx_drivers_handbook",
+ "sections": {
+  "2.3": {"en": "Blind spots: not lingering beside another vehicle", "zh": "盲點：不要停留在他車旁邊"},
+  "3.4.16": {"en": "Stopped mail, delivery and trash-collection vehicles", "zh": "停靠中的郵務、送貨與垃圾車"},
+  "3.4.17": {"en": "Distracted drivers", "zh": "分心的駕駛人"}
+ }
+}

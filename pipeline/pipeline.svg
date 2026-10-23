@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1510" height="780" viewBox="0 0 1510 780" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker>
+<style>.t{font-size:17px;font-weight:700} .m{font-size:13px;fill:#333} .o{font-size:13.5px;fill:#111} .n{font-size:13px;fill:#555;font-style:italic} .a{font-size:12.5px;fill:#444} .h{font-size:22px;font-weight:700;fill:#111} .s{font-size:14px;fill:#555}</style></defs>
+<rect width="1510" height="780" fill="#ffffff"/>
+<text x="32" y="40" class="h">Handbook rule extraction pipeline</text>
+<text x="32" y="64" class="s">Drive-Rule-Extraction-Bench · current procedure as of 23 October 2026</text>
+<rect x="32" y="118" width="186" height="176" rx="10" fill="#EAF2FB" stroke="#2F6DB5" stroke-width="1.6"/>
+<text x="46" y="146" class="t" fill="#1F4E86">1  Acquire</text>
+<text x="46" y="175" class="m">scrape_&lt;x&gt;_handbook.py</text>
+<text x="46" y="202" class="o">HTML pages, images</text>
+<text x="46" y="221" class="o">source PDF</text>
+<text x="46" y="240" class="n">Ontario, California,</text>
+<text x="46" y="259" class="n">Texas: one layout</text>
+<rect x="242" y="118" width="186" height="176" rx="10" fill="#EAF2FB" stroke="#2F6DB5" stroke-width="1.6"/>
+<text x="256" y="146" class="t" fill="#1F4E86">2  Parse</text>
+<text x="256" y="175" class="m">segment_handbook.py</text>
+<text x="256" y="202" class="o">block passages with</text>
+<text x="256" y="221" class="o">heading path</text>
+<text x="256" y="240" class="o">analysis/segments/</text>
+<text x="256" y="259" class="n">census: sentences</text>
+<rect x="452" y="118" width="186" height="176" rx="10" fill="#EAF6EE" stroke="#2E8B57" stroke-width="3"/>
+<text x="466" y="146" class="t" fill="#1E6A40">3  Select passages</text>
+<g transform="translate(606,260)" fill="#2E8B57"><circle cx="8" cy="5" r="5"/><path d="M0 22 Q8 8 16 22 Z"/></g>
+<text x="466" y="175" class="m">a person (Ontario)</text>
+<text x="466" y="194" class="m">select-passages.md</text>
+<text x="466" y="221" class="o">passages JSON</text>
+<text x="466" y="240" class="o">topic text</text>
+<text x="466" y="259" class="n">ON 105, CA 105, TX 145</text>
+<rect x="662" y="118" width="186" height="176" rx="10" fill="#EAF6EE" stroke="#2E8B57" stroke-width="1.6"/>
+<text x="676" y="146" class="t" fill="#1E6A40">4  Extract</text>
+<text x="676" y="175" class="m">fixed-v1 prompt</text>
+<text x="676" y="194" class="m">+ any model</text>
+<text x="676" y="221" class="o">statements JSON</text>
+<text x="676" y="240" class="o">raw output, prompt</text>
+<text x="676" y="259" class="o">one folder per run</text>
+<rect x="872" y="118" width="186" height="176" rx="10" fill="#EAF6EE" stroke="#2E8B57" stroke-width="1.6"/>
+<text x="886" y="146" class="t" fill="#1E6A40">5  Validate, score</text>
+<text x="886" y="175" class="m">check_statements.py</text>
+<text x="886" y="194" class="m">score_t2.py</text>
+<text x="886" y="221" class="o">schema and syntax</text>
+<text x="886" y="240" class="o">agreement report</text>
+<text x="886" y="259" class="o">hard cases</text>
+<rect x="1082" y="118" width="186" height="176" rx="10" fill="#EAF6EE" stroke="#2E8B57" stroke-width="3"/>
+<text x="1096" y="146" class="t" fill="#1E6A40">6  Review</text>
+<g transform="translate(1236,260)" fill="#2E8B57"><circle cx="8" cy="5" r="5"/><path d="M0 22 Q8 8 16 22 Z"/></g>
+<text x="1096" y="175" class="m">a person, side by side</text>
+<text x="1096" y="194" class="m">passing-rules-*.html</text>
+<text x="1096" y="221" class="o">accepted statements</text>
+<text x="1096" y="240" class="o">corrections, notes</text>
+<rect x="1292" y="118" width="186" height="176" rx="10" fill="#F1EDF9" stroke="#6A4BB0" stroke-width="1.6"/>
+<text x="1306" y="146" class="t" fill="#4B3285">7  Reference set</text>
+<text x="1306" y="175" class="m">frozen, versioned</text>
+<text x="1306" y="202" class="o">Ontario: 88 statements</text>
+<text x="1306" y="221" class="o">CA 83, TX 104: drafts</text>
+<text x="1306" y="240" class="o">provenance/</text>
+<text x="1306" y="259" class="o">SHA256SUMS</text>
+<path d="M220 206.0 L238 206.0" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<path d="M430 206.0 L448 206.0" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<path d="M640 206.0 L658 206.0" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<path d="M850 206.0 L868 206.0" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<path d="M1060 206.0 L1078 206.0" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<path d="M1270 206.0 L1288 206.0" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="242" y="392" width="340" height="150" rx="10" fill="#EAF2FB" stroke="#2F6DB5" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="256" y="420" class="t" fill="#1F4E86">C  Census (optional per handbook)</text>
+<text x="256" y="449" class="m">segment_sentences.py, make_census_shards.py</text>
+<text x="256" y="468" class="m">8 labellers, census-guidelines.md</text>
+<text x="256" y="495" class="o">Ontario: 3,444 labelled sentences,</text>
+<text x="256" y="514" class="o">type, modal, clauses, vague words</text>
+<rect x="706" y="392" width="352" height="150" rx="10" fill="#F1EDF9" stroke="#6A4BB0" stroke-width="1.6"/>
+<text x="720" y="420" class="t" fill="#4B3285">L  Rule language, prompt and schema</text>
+<text x="720" y="449" class="m">frozen; a change makes a new version</text>
+<text x="720" y="476" class="o">rule-language-v1.md, statements.schema.json</text>
+<text x="720" y="495" class="o">prompt: extract-rules.fixed-v1.md</text>
+<text x="720" y="514" class="o">(chosen 23 October; v2.1 kept as a variant)</text>
+<path d="M335.0 296 L335.0 388" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="343.0" y="347.0" class="a" text-anchor="start">units</text>
+<path d="M545.0 390 L545.0 298" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="553.0" y="347.0" class="a" text-anchor="start">topic sentences</text>
+<path d="M584 467 L702 467" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="644.0" y="453" class="a" text-anchor="middle">fit, force,</text>
+<text x="644.0" y="487" class="a" text-anchor="middle">vague words</text>
+<path d="M755.0 390 L755.0 298" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="763.0" y="347.0" class="a" text-anchor="start">prompt</text>
+<path d="M965.0 390 L965.0 298" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="973.0" y="347.0" class="a" text-anchor="start">schema</text>
+<path d="M1385.0 116 C1385.0 66 965.0 66 965.0 112" fill="none" stroke="#6A4BB0" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="1175.0" y="72" class="a" text-anchor="middle" fill="#4B3285">ground truth for scoring later runs</text>
+<rect x="1082" y="610" width="396" height="112" rx="10" fill="#F4F4F4" stroke="#777777" stroke-width="1.6"/>
+<text x="1096" y="638" class="t" fill="#444444">Downstream</text>
+<text x="1096" y="667" class="o">Qwen trials: T2 runs on the Ontario passages,</text>
+<text x="1096" y="686" class="o">scored against the reference (qwen/)</text>
+<text x="1096" y="705" class="o">Driving VLA: retrieve, ground, check, cite</text>
+<path d="M1385.0 296 L1385.0 606" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ah)"/>
+<text x="1393.0" y="594" class="a" text-anchor="start">rules as context</text>
+<text x="32" y="624" class="t" fill="#333">Key</text>
+<rect x="32" y="640" width="28" height="16" rx="4" fill="#EAF2FB" stroke="#2F6DB5" stroke-width="1.6"/>
+<text x="70" y="653" class="m">Once per handbook</text>
+<rect x="32" y="664" width="28" height="16" rx="4" fill="#EAF6EE" stroke="#2E8B57" stroke-width="1.6"/>
+<text x="70" y="677" class="m">Per topic and run</text>
+<rect x="32" y="688" width="28" height="16" rx="4" fill="#F1EDF9" stroke="#6A4BB0" stroke-width="1.6"/>
+<text x="70" y="701" class="m">Fixed, versioned</text>
+<rect x="32" y="712" width="28" height="16" rx="4" fill="#F4F4F4" stroke="#777777" stroke-width="1.6"/>
+<text x="70" y="725" class="m">Uses the rules</text>
+<rect x="32" y="736" width="28" height="16" rx="4" fill="#fff" stroke="#555" stroke-width="1.4" stroke-dasharray="5 4"/><text x="70" y="749" class="m">Optional</text>
+<g transform="translate(232,638)" fill="#2E8B57"><circle cx="8" cy="5" r="5"/><path d="M0 22 Q8 8 16 22 Z"/></g><text x="256" y="656" class="m">Done by a person</text>
+<text x="232" y="688" class="n">Steps 1, 2 and C repeat for a new handbook;</text>
+<text x="232" y="707" class="n">3 to 6 repeat for each topic and model;</text>
+<text x="232" y="726" class="n">L changes only as a new version.</text>
+</svg>

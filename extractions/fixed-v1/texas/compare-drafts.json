@@ -1,0 +1,1520 @@
+{
+ "n_ref": 65,
+ "n_model": 104,
+ "schema_errors": 0,
+ "duplicate_ids": [],
+ "bad_links": [],
+ "quotes_not_verbatim": 0,
+ "unknown_sources": [],
+ "uses_you": [],
+ "stray_caps": {},
+ "numbers_not_in_sources": {
+  "p102a": [
+   "20"
+  ]
+ },
+ "matched": 63,
+ "agreement": {
+  "type": 63,
+  "force": 62,
+  "modal": 59,
+  "clauses": 45,
+  "sources": 49,
+  "links": 59
+ },
+ "force_on_rules": 49,
+ "n_rule_pairs": 50,
+ "flags": {
+  "tp": 29,
+  "fp": 10,
+  "fn": 15,
+  "precision": 0.744,
+  "recall": 0.659,
+  "f1": 0.699,
+  "code_agreement_on_matched": 29
+ },
+ "passages_missed": [],
+ "passages_extra": [
+  "p117",
+  "p43",
+  "p44",
+  "p57",
+  "p58",
+  "p97"
+ ],
+ "no_rule_passages_cited": [],
+ "hard_cases": {},
+ "unmatched_ref": [
+  "2.2b",
+  "3.4.6f"
+ ],
+ "unmatched_model": [
+  "p6a",
+  "p8a",
+  "p10a",
+  "p10b",
+  "p14a",
+  "p23a",
+  "p25a",
+  "p29a",
+  "p35a",
+  "p44a",
+  "p49a",
+  "p57a",
+  "p57b",
+  "p58a",
+  "p67a",
+  "p68a",
+  "p69a",
+  "p70a",
+  "p75a",
+  "p91a",
+  "p95b",
+  "p95c",
+  "p97a",
+  "p101a",
+  "p103b",
+  "p103d",
+  "p107a",
+  "p110a",
+  "p110b",
+  "p110c",
+  "p116b",
+  "p117a",
+  "p117b",
+  "p117c",
+  "p118b",
+  "p118c",
+  "p119a",
+  "p120a",
+  "p121a",
+  "p122a",
+  "p123a"
+ ],
+ "pairs": [
+  {
+   "ref": "2.3b",
+   "model": "p135a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "DEFINE a blind spot IS an area THAT the mirrors cannot show",
+   "model_text": "DEFINE a blind spot IS an area THAT the mirrors cannot show",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.4.4b",
+   "model": "p123b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a cyclist SHOULD take the full lane, whether riding single file or two abreast, WHEN the lane is of [?substandard width], making it unsafe for a car and a bicycle to share the lane side by side",
+   "model_text": "a cyclist SHOULD take the full lane, whether riding single file or two abreast, WHEN the lane is of substandard width, making it [?unsafe] for a car and a bicycle to share the lane side by side",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.4.6c",
+   "model": "p112a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT it takes 3 to 5 s longer to pass a truck than a car WHEN on a level highway",
+   "model_text": "FACT it takes 3 to 5 s longer to pass a truck than a car WHEN on a level highway",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.4.6a",
+   "model": "p111a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "TO pass a truck",
+   "model_text": "TO pass a truck",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.4.16a",
+   "model": "p103a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT mail, delivery and trash-collection vehicles [?often] make frequent stops in the roadway",
+   "model_text": "FACT mail, delivery and trash-collection vehicles [?often] make frequent stops in the roadway",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.2.4b",
+   "model": "p90a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT pass on the right by driving off the paved portion of the highway",
+   "model_text": "a driver SHOULD NOT pass on the right by driving off the paved portion of the highway",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.1.5c",
+   "model": "p55a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT a solid yellow line on the driver's side of the road marks a no-passing zone",
+   "model_text": "FACT a solid yellow line on the driver's side of the road marks a no-passing zone",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.1.7a",
+   "model": "p20a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT a pennant-shaped sign gives advance warning of a no-passing zone",
+   "model_text": "FACT a pennant-shaped sign gives advance warning of a no-passing zone",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.6.2a",
+   "model": "p93a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver being passed SHOULD move [?as far to the right as the driver can] [?safely] WHEN being passed on the left AND the lanes are not marked",
+   "model_text": "a driver being passed SHOULD [?safely] move [?as far to the right as the driver can] WHEN the driver is being passed on the left AND the lanes are not marked",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.6.1h",
+   "model": "p134a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT intentionally slow down, slam on the brakes or speed up to keep another driver from passing or entering the driver's lane",
+   "model_text": "a driver SHOULD NOT intentionally slow down, slam on the brakes or speed up to keep another road user from passing or from entering the driver's lane",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.4.17a",
+   "model": "p124a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD WATCH FOR the other driver drifting in front of the vehicle WHILE passing a driver who [?seems] to be distracted BECAUSE the distracted driver may not be aware of the passing vehicle",
+   "model_text": "a driver SHOULD WATCH FOR the other driver drifting in front of the passing vehicle WHEN passing a driver who [?seems] to be distracted BECAUSE the other driver may not be aware of the passing driver",
+   "ref_clauses": [
+    "BECAUSE",
+    "WHILE"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.2.2c",
+   "model": "p108a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver on a highway SHOULD use the middle or left lane WHEN the driver is traveling faster than other traffic OR passing other vehicles",
+   "model_text": "a driver SHOULD use the middle lane or the left lane WHEN driving on a highway AND (the driver is traveling faster than other traffic OR the driver is passing other vehicles)",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.4.6d",
+   "model": "p112b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT a truck [?often] loses speed on an upgrade, so it is easier to pass than a car",
+   "model_text": "FACT a truck on an upgrade [?often] loses speed, so the truck is easier to pass than a car",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.6.1i",
+   "model": "p137a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "DEFINE a race IS the use of one or more vehicles THAT includes an attempt to out gain or outdistance another vehicle or to prevent another vehicle from passing",
+   "model_text": "DEFINE a race IS the use of one or more vehicles THAT includes an attempt to outgain or outdistance another vehicle or to prevent another vehicle from passing",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.1.5b",
+   "model": "p53a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT cross the double yellow line to pass WHEN on a multi-lane highway with 4 or more lanes",
+   "model_text": "a driver SHOULD NOT cross the double yellow line to pass WHEN driving on a multi-lane road with 4 or more lanes",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.4.12c",
+   "model": "p14b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": false,
+   "ref_text": "EXCEPTION TO 3.4.12a WHEN the school bus is on a different road OR (the driver is on a controlled-access highway AND the bus is stopped in a loading zone AND pedestrians are not permitted to cross)",
+   "model_text": "EXCEPTION TO p10d WHEN the school bus is on a different road OR (the driver is on a controlled-access highway AND the school bus is stopped in a loading zone AND pedestrians are not permitted to cross)",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.1.4b",
+   "model": "p52a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT use a center left-turn lane for passing or as a through-traffic lane",
+   "model_text": "a driver SHOULD NOT use a two-way left-turn lane for passing or as a through-traffic lane",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "1a",
+   "model": "p75c",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT crashes resulting from improper passing [?often] result in head-on crashes AND can be deadly",
+   "model_text": "FACT crashes resulting from [?improper] passing [?often] are head-on crashes and can be deadly",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.2.3a",
+   "model": "p86a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MAY pass on the right ONLY IF conditions permit the driver to do so [?safely] AND (the road is clear of parked vehicles or other lane obstructions AND the road is wide enough for 2 or more lanes in each direction OR the driver is on a one-way road)",
+   "model_text": "a driver MAY pass on the right ONLY IF the pass can be made [?safely] AND (the road is clear of parked vehicles or other lane obstructions AND the road is wide enough for 2 or more lanes in each direction OR the driver is on a one-way road)",
+   "ref_clauses": [
+    "ONLY IF"
+   ],
+   "model_clauses": [
+    "ONLY IF"
+   ],
+   "ref_modals": [
+    "MAY"
+   ],
+   "model_modals": [
+    "MAY"
+   ]
+  },
+  {
+   "ref": "3.4.12a",
+   "model": "p10c",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MUST stop WHEN approaching a school bus from either direction AND the bus is displaying alternately flashing red lights IF VIOLATED a fine of $500 to $1,250 for a 1st conviction AND a fine of $1000 to $2000 AND a possible license suspension of up to 6 months for a 2nd or later conviction within 5 years",
+   "model_text": "a driver MUST stop WHEN the driver is approaching a school bus from either direction AND the school bus is displaying alternately flashing red lights IF VIOLATED a fine of $500 to $1,250 for a first conviction AND a fine of $1,000 to $2,000 AND a [?possible] licence suspension of up to 6 months for a second or later conviction within 5 years",
+   "ref_clauses": [
+    "IF VIOLATED",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "IF VIOLATED",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST"
+   ],
+   "model_modals": [
+    "MUST"
+   ]
+  },
+  {
+   "ref": "3.4.4c",
+   "model": "p132a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT a shared lane marking may be used to encourage [?safe] passing of cyclists by motorists",
+   "model_text": "FACT a shared lane marking may be used to encourage [?safe] passing of cyclists by drivers of motor vehicles",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.2.4a",
+   "model": "p89a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MAY pass on the right on a paved shoulder WHEN the vehicle being passed is slowing or stopped on the main traveled portion of the highway OR the vehicle being passed is disabled OR the vehicle being passed is preparing to make a left turn ONLY IF conditions permit the driver to do so [?safely]",
+   "model_text": "a driver MAY pass on a paved shoulder WHEN the vehicle being passed is slowing or stopped on the main traveled portion of the highway OR the vehicle being passed is disabled OR the vehicle being passed is preparing to make a left turn ONLY IF the pass can be made [?safely]",
+   "ref_clauses": [
+    "ONLY IF",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "ONLY IF",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MAY"
+   ],
+   "model_modals": [
+    "MAY"
+   ]
+  },
+  {
+   "ref": "2.2a",
+   "model": "p80a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "TO pass a vehicle WHEN on a two-lane road",
+   "model_text": "TO pass on a two-lane road",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.1.7c",
+   "model": "p40a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MUST NOT pass other vehicles WHEN a \"do not pass\" sign is posted",
+   "model_text": "a driver MUST NOT pass other vehicles WHEN a \"do not pass\" sign applies",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.4.12b",
+   "model": "p10d",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver MUST NOT pass the school bus WHEN the driver has stopped for a school bus displaying alternately flashing red lights UNTIL the school bus has resumed motion OR the bus driver signals the driver to proceed OR the red lights are no longer flashing IF VIOLATED a fine of $500 to $1,250 for a 1st conviction AND a fine of $1000 to $2000 AND a possible license suspension of up to 6 months for a 2nd or later conviction within 5 years AND automatic license suspension for a subsequent conviction AND a Class A misdemeanor punishable by a fine of up to $4,000 and/or up to 1 year in jail if the pass causes serious bodily injury to another AND a state jail felony punishable by 180 days to 2 years confinement and a possible fine of up to $10,000 if the driver was previously convicted of passing a school bus and causing serious bodily injury",
+   "model_text": "a driver MUST NOT pass a school bus WHEN the school bus is displaying alternately flashing red lights UNTIL the school bus has resumed motion OR the school bus driver signals the driver to proceed OR the red lights are no longer flashing IF VIOLATED a fine of $500 to $1,250 for a first conviction AND a fine of $1,000 to $2,000 AND a [?possible] licence suspension of up to 6 months for a second or later conviction within 5 years AND an automatic licence suspension for a subsequent conviction AND a Class A misdemeanor punishable by a fine of up to $4,000 and/or up to 1 year in jail if the driver causes serious bodily injury to another person when passing a stopped school bus AND a state jail felony punishable by 180 days to 2 years confinement and a [?possible] fine of up to $10,000 if the driver causes serious bodily injury and has previously been convicted of passing a school bus and causing serious bodily injury",
+   "ref_clauses": [
+    "IF VIOLATED",
+    "UNTIL",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "IF VIOLATED",
+    "UNTIL",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.4.6h",
+   "model": "p114a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver being passed by a truck SHOULD keep to the far side of the lane BECAUSE this helps the truck driver",
+   "model_text": "a driver being passed SHOULD keep to the far side of the driver's lane WHEN a truck is passing the driver BECAUSE this helps the truck driver",
+   "ref_clauses": [
+    "BECAUSE"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "2.1d",
+   "model": "p77a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": false,
+   "ref_text": "a driver SHOULD give the [?proper] signal WHEN about to change lanes to pass",
+   "model_text": "a driver SHOULD give the [?proper] signal WHEN the driver is passing AND the driver is about to change lanes",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.2.2b",
+   "model": "p46b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MUST NOT drive in the far-left lane WHEN on a roadway with more than one lane in the same direction AND a \"left lane for passing only\" sign is posted UNLESS the driver is passing",
+   "model_text": "a driver MUST NOT drive in the far-left lane WHEN a \"left lane for passing only\" sign applies AND the road has more than one lane with vehicles traveling in the same direction UNLESS the driver is passing",
+   "ref_clauses": [
+    "UNLESS",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "UNLESS",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.1.6a",
+   "model": "p49b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MAY cross a broken yellow center line WHEN on a two-lane road with two-way traffic AND (the driver is passing another vehicle OR the right half of the road is closed) ONLY IF it is [?safe]",
+   "model_text": "a driver MAY cross the centreline WHEN driving on a two-lane rural road with two-way traffic AND the centreline is a broken line AND (the driver is passing another vehicle OR the right half of the road is closed)",
+   "ref_clauses": [
+    "ONLY IF",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MAY"
+   ],
+   "model_modals": [
+    "MAY"
+   ]
+  },
+  {
+   "ref": "3.1.5a",
+   "model": "p49c",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT [?cross the yellow center line] WHEN on a two-lane road with two-way traffic AND the center line is a solid yellow line",
+   "model_text": "a driver SHOULD NOT [?cross the centreline] WHEN driving on a two-lane rural road with two-way traffic AND (crossing the centreline is not [?safe] OR the centreline is a solid yellow line)",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.6.1a",
+   "model": "p42a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver who is driving slower than other vehicles on the road MUST stay in the right-hand lane WHEN a \"slower traffic keep right\" sign is posted",
+   "model_text": "a driver MUST keep to the right-hand lane WHEN a \"slower traffic keep right\" sign applies AND the driver is driving slower than other vehicles on the road",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST"
+   ],
+   "model_modals": [
+    "MUST"
+   ]
+  },
+  {
+   "ref": "3.4.6e",
+   "model": "p112c",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT on a downgrade a truck's momentum makes it go faster, so a driver passing it may need to increase speed",
+   "model_text": "FACT the momentum of a truck on a downgrade makes the truck go faster, so the passing driver may need to speed up",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.4.6g",
+   "model": "p113a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "FACT a truck driver who flashes the truck's lights after a driver passes is signaling that it is clear for the driver to pull back in front of the truck",
+   "model_text": "FACT a truck driver who flashes the truck's lights after being passed signals that it is clear for the passing driver to move back in front of the truck",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.4.6m",
+   "model": "p118d",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD either slow down and exit or stay behind the truck WHEN the driver and a truck are approaching a single-lane construction zone BECAUSE trying to beat a truck to a single-lane construction zone is particularly dangerous",
+   "model_text": "a driver SHOULD either slow down and exit or stay behind the truck WHEN the driver is trying to reach an exit ahead of a truck OR the driver is trying to beat a truck to a single-lane construction zone",
+   "ref_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "2.1f",
+   "model": "p79a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": false,
+   "ref_text": "a driver SHOULD NOT cut in [?too quickly] WHEN returning to the original lane after passing",
+   "model_text": "a driver SHOULD NOT cut in [?too quickly] WHEN the driver is passing AND the driver has to return to the original lane",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.6.1e",
+   "model": "p94a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver being passed SHOULD make it as [?safe and easy as possible] for the other driver to pass WHILE another vehicle is passing",
+   "model_text": "a driver being passed SHOULD make the pass [?as safe and easy as possible] for the passing driver",
+   "ref_clauses": [
+    "WHILE"
+   ],
+   "model_clauses": [],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.6.1g",
+   "model": "p109a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver in any lane other than the right-hand lane SHOULD be prepared to move to another lane to allow faster traffic to pass WHEN driving on a highway",
+   "model_text": "a driver in any lane except the right-hand lane used for [?slower traffic] SHOULD be prepared to move to another lane WHEN driving on a highway BECAUSE this allows faster traffic to pass",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.1.4a",
+   "model": "p48a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MUST NOT use the center lane for passing or moving through traffic WHEN a \"center lane only\" sign is posted",
+   "model_text": "a driver MUST NOT use a two-way left-turn lane for passing or for moving through traffic WHEN a \"center lane only\" sign applies",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.4.6b",
+   "model": "p111b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a truck driver being passed SHOULD stay to the far side of the lane BECAUSE this makes it easier for the other driver to pass",
+   "model_text": "a truck driver SHOULD stay to the far side of the lane WHEN another vehicle is passing the truck BECAUSE this makes the pass easier for the passing driver",
+   "ref_clauses": [
+    "BECAUSE"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.4.6j",
+   "model": "p114d",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a truck driver SHOULD signal WHEN about to return to the lane after passing BECAUSE this lets the driver being passed know the truck is returning",
+   "model_text": "a truck driver SHOULD signal WHEN the truck driver has passed another vehicle AND the truck driver is about to return to that vehicle's lane BECAUSE this lets the other driver know the truck is returning",
+   "ref_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.4.16b",
+   "model": "p103c",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MUST proceed with [?caution] AND, [?if possible], change lanes before passing the vehicle [?safely] WHEN approaching a mail, delivery or trash-collection vehicle stopped on the road",
+   "model_text": "a driver MUST proceed [?with caution] WHEN approaching a mail, delivery or trash-collection vehicle that is stopped on the road",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST"
+   ],
+   "model_modals": [
+    "MUST"
+   ]
+  },
+  {
+   "ref": "3.6.1d",
+   "model": "p92a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver being passed SHOULD stay in the driver's lane WHILE another vehicle is passing",
+   "model_text": "a driver being passed SHOULD stay in the driver's own lane",
+   "ref_clauses": [
+    "WHILE"
+   ],
+   "model_clauses": [],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "2.1a",
+   "model": "p71a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver SHOULD keep to the right side of the road UNLESS the driver is passing another vehicle on a two- or three-lane street OR the driver is on a one-way street OR the right side of the road is blocked",
+   "model_text": "a driver SHOULD keep to the right side of the road UNLESS the driver is passing another vehicle on a two-lane or three-lane road OR the driver is on a one-way road OR the right side of the road is blocked",
+   "ref_clauses": [
+    "UNLESS"
+   ],
+   "model_clauses": [
+    "UNLESS"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "2.1b",
+   "model": "p75b",
+   "type": true,
+   "force": true,
+   "modal": false,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD be patient AND wait WHEN the driver is about to pass UNTIL the time is [?right] BECAUSE it is not always [?safe] to pass",
+   "model_text": "a driver SHOULD be patient AND SHOULD NOT pass UNTIL the time is [?right]",
+   "ref_clauses": [
+    "BECAUSE",
+    "UNTIL",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "UNTIL"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD",
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.4.6i",
+   "model": "p114b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver being passed by a truck SHOULD [?slightly] reduce speed BECAUSE this makes it easier for the truck driver",
+   "model_text": "a driver being passed SHOULD slow down [?slightly] WHEN a truck is passing the driver BECAUSE this makes the pass easier for the truck driver",
+   "ref_clauses": [
+    "BECAUSE"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.1.6b",
+   "model": "p55b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MAY pass or change lanes WHEN there are [?broken or dashed lines] ONLY IF it is [?safe]",
+   "model_text": "a driver MAY pass or change lanes across a broken line ONLY IF it is [?safe] to do so",
+   "ref_clauses": [
+    "ONLY IF",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "ONLY IF"
+   ],
+   "ref_modals": [
+    "MAY"
+   ],
+   "model_modals": [
+    "MAY"
+   ]
+  },
+  {
+   "ref": "3.1.7b",
+   "model": "p38a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver MUST NOT pass WHEN a \"do not pass\" sign or a \"no passing zone\" pennant is posted BECAUSE the distance the driver can see ahead is so limited that passing another vehicle is hazardous",
+   "model_text": "a driver MUST NOT pass WHEN a \"do not pass\" sign applies OR a \"no passing zone\" sign applies BECAUSE the distance the driver can see ahead is so limited that passing another vehicle is hazardous",
+   "ref_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.1.3b",
+   "model": "p27a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver MUST NOT pass WHEN a winding road warning sign is posted IF VIOLATED a misdemeanor punishable by a fine of $1 to $200",
+   "model_text": "a driver MUST NOT pass WHEN a warning sign shows that there is a winding road ahead IF VIOLATED a misdemeanor punishable by a fine of $1 to $200, doubled in a construction or maintenance work zone when workers are present anywhere in the zone",
+   "ref_clauses": [
+    "IF VIOLATED",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "IF VIOLATED",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.4.6k",
+   "model": "p116a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT pass a truck on the right WHEN there is a [?possibility] the truck might make a right turn BECAUSE trucks make wide right turns AND [?sometimes] leave an open space to the right just before the turn",
+   "model_text": "a driver SHOULD NOT pass a truck on the right WHEN there is a [?possibility] that the truck might make a right turn BECAUSE this avoids a crash",
+   "ref_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.4.4a",
+   "model": "p125a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": false,
+   "links": true,
+   "ref_text": "a cyclist moving slower than the other traffic MUST ride as near as [?possible] to the right curb or edge of the road UNLESS the cyclist is passing another vehicle proceeding in the same direction OR the cyclist is preparing for a left turn at an intersection or onto a private road or driveway OR there are [?unsafe conditions] in the road, such as fixed or moving objects, parked or moving vehicles, pedestrians, animals, potholes or debris, OR the cyclist is in an outside lane that is less than 14 ft wide and has no designated bicycle lane adjacent to it OR the lane is too narrow for a bicycle and a motor vehicle to travel [?safely] side by side",
+   "model_text": "a cyclist MUST ride as near as [?possible] to the right curb or edge of the road WHEN the cyclist is moving slower than the other traffic on the road UNLESS the cyclist is passing another vehicle going in the same direction OR the cyclist is preparing for a left turn at an intersection or onto a private road or driveway OR there are [?unsafe] conditions in the road such as fixed or moving objects, parked or moving vehicles, pedestrians, animals, potholes or debris OR the cyclist is in an outside lane that is less than 14 ft wide and has no designated bicycle lane adjacent to that lane OR the cyclist is in an outside lane that is too narrow for a bicycle and a motor vehicle to travel [?safely] side by side",
+   "ref_clauses": [
+    "UNLESS"
+   ],
+   "model_clauses": [
+    "UNLESS",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST"
+   ],
+   "model_modals": [
+    "MUST"
+   ]
+  },
+  {
+   "ref": "3.4.13b",
+   "model": "p102a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver MUST reduce speed to 20 mph below the speed limit or move out of the lane closest to the stopped vehicle, if the road has multiple lanes traveling in the same direction, WHEN an emergency medical vehicle, law enforcement vehicle, fire truck, tow truck, utility service vehicle, or TxDOT or other highway construction or maintenance vehicle is stopped on the road with its lights activated",
+   "model_text": "a driver MUST move out of the lane closest to the stopped vehicle WHEN an emergency medical vehicle, law enforcement vehicle, fire truck, tow truck, utility service vehicle, Texas Department of Transportation (TxDOT) vehicle or other highway construction or maintenance vehicle is stopped on the road with its lights on or flashing AND the road has multiple lanes traveling in the same direction UNLESS the driver slows down to 20 mph below the speed limit",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "UNLESS",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST"
+   ],
+   "model_modals": [
+    "MUST"
+   ]
+  },
+  {
+   "ref": "2.1c",
+   "model": "p76a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD pass ONLY IF the way is [?clear]",
+   "model_text": "a driver SHOULD make certain that the way is clear WHEN the driver is passing",
+   "ref_clauses": [
+    "ONLY IF"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.2.2a",
+   "model": "p46a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver in [?slower traffic] MUST travel in a lane other than the far-left lane WHEN on a roadway with more than one lane in the same direction AND a \"left lane for passing only\" sign is posted",
+   "model_text": "a driver MUST travel in a lane other than the far-left lane WHEN a \"left lane for passing only\" sign applies AND the road has more than one lane with vehicles traveling in the same direction AND the driver is part of [?slower traffic]",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST"
+   ],
+   "model_modals": [
+    "MUST"
+   ]
+  },
+  {
+   "ref": "3.4.6l",
+   "model": "p118a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": true,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT cut in front of a truck BECAUSE cutting into the open space in front of a truck or bus removes the truck or bus driver's cushion of safety",
+   "model_text": "a driver SHOULD NOT cut in front of a truck",
+   "ref_clauses": [
+    "BECAUSE"
+   ],
+   "model_clauses": [],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "1b",
+   "model": "p136a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": true,
+   "links": true,
+   "ref_text": "DEFINE overtaking IS passing THAT goes past the vehicle ahead",
+   "model_text": "DEFINE overtake IS to pass a vehicle THAT is ahead",
+   "ref_clauses": [],
+   "model_clauses": [],
+   "ref_modals": [],
+   "model_modals": []
+  },
+  {
+   "ref": "3.6.1f",
+   "model": "p104a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver MUST NOT use the vehicle in an attempt to prevent another vehicle from passing IF VIOLATED a criminal penalty ranging from a Class B misdemeanor to a second-degree felony AND automatic suspension of the driver license",
+   "model_text": "a person MUST NOT participate in a race IF VIOLATED a criminal penalty ranging from a Class B misdemeanor to a second-degree felony AND an automatic licence suspension for racing a motor vehicle on a public highway or street",
+   "ref_clauses": [
+    "IF VIOLATED"
+   ],
+   "model_clauses": [
+    "IF VIOLATED"
+   ],
+   "ref_modals": [
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.4.13a",
+   "model": "p7a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver MUST vacate the lane closest to the emergency vehicle, if the highway has 2 or more lanes traveling in its direction, or slow to a speed not more than 20 mph less than the posted speed limit when the limit is 25 mph or more, or slow to less than 5 mph when the limit is less than 25 mph WHEN approaching a stopped emergency vehicle with its lights activated UNLESS a law enforcement officer directs otherwise",
+   "model_text": "a driver MUST slow down to a speed not more than 20 mph less than the posted speed limit WHEN the driver is approaching a stopped emergency vehicle with its lights activated AND the posted speed limit is 25 mph or more UNLESS a law enforcement officer directs otherwise",
+   "ref_clauses": [
+    "UNLESS",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "UNLESS",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST"
+   ],
+   "model_modals": [
+    "MUST"
+   ]
+  },
+  {
+   "ref": "2.3a",
+   "model": "p95a",
+   "type": true,
+   "force": true,
+   "modal": false,
+   "clauses": false,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT drive or linger in the other driver's blind spot AND SHOULD pass the other driver or slow down WHILE passing BECAUSE the other driver [?likely] cannot see the vehicle in or near the blind spot",
+   "model_text": "a driver SHOULD NOT drive or linger in the other driver's blind spot WHEN the driver is passing",
+   "ref_clauses": [
+    "BECAUSE",
+    "WHILE"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD",
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "3.6.1c",
+   "model": "p114c",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver being passed SHOULD NOT increase speed WHILE another vehicle is passing",
+   "model_text": "a driver being passed SHOULD NOT speed up WHILE a truck is passing the driver",
+   "ref_clauses": [
+    "WHILE"
+   ],
+   "model_clauses": [
+    "WHILE"
+   ],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "SHOULD NOT"
+   ]
+  },
+  {
+   "ref": "2.1e",
+   "model": "p78a",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": false,
+   "sources": false,
+   "links": false,
+   "ref_text": "a driver SHOULD tap the horn WHEN passing AND this is [?necessary] to avoid surprising the driver ahead",
+   "model_text": "a driver SHOULD tap the horn [?when necessary] WHEN the driver is passing BECAUSE this avoids surprising the driver in front",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "BECAUSE",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.6.1b",
+   "model": "p53b",
+   "type": true,
+   "force": true,
+   "modal": true,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver SHOULD keep in the right-hand lane WHEN driving [?slower] than other traffic on a multi-lane highway",
+   "model_text": "a driver SHOULD keep to the right-hand lane WHEN driving on a multi-lane road with 4 or more lanes AND the driver is driving [?slower]",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD"
+   ],
+   "model_modals": [
+    "SHOULD"
+   ]
+  },
+  {
+   "ref": "3.1.3a",
+   "model": "p31a",
+   "type": true,
+   "force": true,
+   "modal": false,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver MUST keep right AND MUST NOT pass WHEN a warning sign for a reverse curve, sharp turn, gradual curve, reverse turn or sharp curve ahead is posted IF VIOLATED a misdemeanor punishable by a fine of $1 to $200",
+   "model_text": "a driver MUST NOT pass WHEN a warning sign shows that the road ahead makes a sharp turn to the right and then a sharp turn to the left IF VIOLATED a misdemeanor punishable by a fine of $1 to $200, doubled in a construction or maintenance work zone when workers are present anywhere in the zone",
+   "ref_clauses": [
+    "IF VIOLATED",
+    "WHEN"
+   ],
+   "model_clauses": [
+    "IF VIOLATED",
+    "WHEN"
+   ],
+   "ref_modals": [
+    "MUST",
+    "MUST NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  },
+  {
+   "ref": "3.1a",
+   "model": "p66a",
+   "type": true,
+   "force": false,
+   "modal": false,
+   "clauses": true,
+   "sources": false,
+   "links": true,
+   "ref_text": "a driver SHOULD NOT drive [?on the left side of the road] WHEN pavement markings or signs prohibit driving on the left, such as a \"no passing zone\" or solid lane lines, OR there are 2 or more traffic lanes in each direction OR the driver is within 100 ft of or crossing an intersection or railroad crossing OR the driver is on a hill, curve or any other place where [?vision is limited] OR the driver is within 100 ft of a bridge, viaduct or tunnel",
+   "model_text": "a driver MUST NOT [?drive on the left side of the road] WHEN pavement markings or signs prohibit driving on the left, such as a no-passing zone or solid lane lines",
+   "ref_clauses": [
+    "WHEN"
+   ],
+   "model_clauses": [
+    "WHEN"
+   ],
+   "ref_modals": [
+    "SHOULD NOT"
+   ],
+   "model_modals": [
+    "MUST NOT"
+   ]
+  }
+ ]
+}
