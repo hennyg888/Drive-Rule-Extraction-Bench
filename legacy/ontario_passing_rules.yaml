@@ -2,7 +2,7 @@ ruleset: Ontario passing rules
 source:
   title: The Official Ministry of Transportation (MTO) Driver's Handbook (ontario.ca)
   edition: online edition, scraped to local HTML by scrape_mto_handbook.py on 2026-10-06
-  base_dir: mto_drivers_handbook
+  base_dir: handbooks/mto
   online_base: https://www.ontario.ca/document/official-mto-drivers-handbook
   citation: href is <page>.html#<section-id>, relative to base_dir. <page> is the page's slug on ontario.ca (online_base/<page>),
     and <section-id> is the id of the nearest h2 heading; lower headings have no ids and appear only in location.

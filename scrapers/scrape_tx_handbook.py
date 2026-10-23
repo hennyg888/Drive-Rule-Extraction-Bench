@@ -1,7 +1,7 @@
 """Download the Texas Driver Handbook (DL-7, Texas DPS) and convert the PDF into local,
 cleanly formatted HTML in the same format as the MTO copy (scrape_mto_handbook.py).
 
-Output: tx_drivers_handbook/
+Output: handbooks/tx/
     source/DL-7.pdf                   the downloaded PDF (the download is skipped if it exists)
     index.html                        cover, front matter and the table of contents
     <chapter-slug>.html ...           one file per chapter / appendix, plus back-cover.html
@@ -26,8 +26,8 @@ How the PDF is read
     block carries data-pdf-page (1-based) and data-page-label (printed page) when they differ.
 
 Usage
-    python scrape_tx_handbook.py              download (if needed) and convert
-    python scrape_tx_handbook.py --verify     convert, then print text-coverage and image checks
+    python scrapers/scrape_tx_handbook.py              download (if needed) and convert
+    python scrapers/scrape_tx_handbook.py --verify     convert, then print text-coverage and image checks
 """
 import argparse
 import datetime
@@ -48,7 +48,7 @@ from scrape_mto_handbook import CSS as MTO_CSS, pager_html, pretty, toc_html  # 
 
 PDF_URL = "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf"
 BOOK_TITLE = "Texas Driver Handbook"
-OUT = os.path.join(HERE, "tx_drivers_handbook")
+OUT = os.path.join(os.path.dirname(HERE), "handbooks", "tx")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128 Safari/537.36"}
 
 FRONT_PAGES = range(1, 7)     # cover, introduction, letter, table of contents (PDF pages 1-6)
@@ -1616,7 +1616,7 @@ def verify(out_dir, pdf_path, min_run=4):
 # ---------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--out", default=OUT, help="output directory (default: tx_drivers_handbook/)")
+    ap.add_argument("--out", default=OUT, help="output directory (default: handbooks/tx/)")
     ap.add_argument("--verify", action="store_true", help="print coverage and image checks after converting")
     args = ap.parse_args()
     out_dir = os.path.abspath(args.out)

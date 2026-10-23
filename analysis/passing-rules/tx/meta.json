@@ -6,7 +6,7 @@
  "source_url": "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
  "scraped": "2026-10-20",
  "units": "US customary (ft, mi, mph)",
- "handbook_dir": "tx_drivers_handbook",
+ "handbook_dir": "handbooks/tx",
  "sections": {
   "2.3": {"en": "Blind spots: not lingering beside another vehicle", "zh": "盲點：不要停留在他車旁邊"},
   "3.4.16": {"en": "Stopped mail, delivery and trash-collection vehicles", "zh": "停靠中的郵務、送貨與垃圾車"},

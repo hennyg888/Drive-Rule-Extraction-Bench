@@ -2,7 +2,7 @@
 
 Same output format as scrape_mto_handbook.py, so one segmenter can read both handbooks.
 
-Output: ca_drivers_handbook/
+Output: handbooks/ca/
     index.html, <page-slug>.html ...   one file per handbook web page, in the handbook's order
     images/                            every image referenced by the content
     style.css                          shared stylesheet
@@ -34,7 +34,7 @@ from scrape_mto_handbook import BLOCK, VOID, CSS as MTO_CSS, _open, pager_html, 
 BASE = "https://www.dmv.ca.gov"
 BOOK = "/portal/handbook/california-driver-handbook"
 HOSTS = {"www.dmv.ca.gov", "dmv.ca.gov"}
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ca_drivers_handbook")
+OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "handbooks", "ca")
 IMG_DIR = os.path.join(OUT, "images")
 DELAY = 1.0  # seconds between requests to the server
 PDF_URL = BASE + "/portal/file/california-driver-handbook-pdf/"

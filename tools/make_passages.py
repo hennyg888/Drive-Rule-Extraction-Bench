@@ -1,12 +1,15 @@
 """Turn a passage selection into the passage file extraction reads.
 
 Usage:
-    python tools/make_passages.py --segments analysis/segments/ca.jsonl --handbook-dir ca_drivers_handbook \
+    python tools/make_passages.py --segments analysis/segments/ca.jsonl --handbook-dir handbooks/ca \
         --selection analysis/passing-rules/ca/inputs/selection.json --out analysis/passing-rules/ca/inputs/passing-passages.json
 
 The selection is a list of {"seg": segment id, "part": intro|general|specific|excluded, "why": ...}
 (see prompts/select-passages.md). Passages are numbered p1, p2, … in handbook order and carry the
 fields of the Ontario passage file plus `href` (a link into the offline handbook) and `seg`.
+The California and Texas passage files were made before the handbooks moved into handbooks/
+(23 Oct 2026), with --handbook-dir ca_drivers_handbook and tx_drivers_handbook; their `href`
+values keep those names, and tools/build_rules_page.py maps them to handbooks/ca and handbooks/tx.
 """
 import argparse
 import json

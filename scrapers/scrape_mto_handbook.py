@@ -1,6 +1,6 @@
 """Download the Official MTO Driver's Handbook (ontario.ca) as local, cleanly formatted HTML.
 
-Output: mto_drivers_handbook/
+Output: handbooks/mto/
     index.html, <chapter-slug>.html ...   one file per handbook page
     images/                               every image referenced by the content
     style.css                             shared stylesheet
@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup, NavigableString, Comment, Tag
 
 BASE = "https://www.ontario.ca"
 BOOK = "/document/official-mto-drivers-handbook"
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mto_drivers_handbook")
+OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "handbooks", "mto")
 IMG_DIR = os.path.join(OUT, "images")
 
 session = requests.Session()

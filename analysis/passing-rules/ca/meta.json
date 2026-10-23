@@ -6,5 +6,5 @@
  "source_url": "https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/",
  "scraped": "2026-10-20",
  "units": "US customary (ft, mi, mph)",
- "handbook_dir": "ca_drivers_handbook"
+ "handbook_dir": "handbooks/ca"
 }

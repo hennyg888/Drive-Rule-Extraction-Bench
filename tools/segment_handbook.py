@@ -11,7 +11,7 @@ one passage per line:
 `sec` follows the passage files in analysis/passing-rules/inputs/: the heading path joined
 with " › ", then the position in that section ("¶3", "item 2", "image", "row 4").
 
-Usage: python tools/segment_handbook.py mto_drivers_handbook > analysis/segments/mto.jsonl
+Usage: python tools/segment_handbook.py handbooks/mto > analysis/segments/mto.jsonl
 """
 import json
 import os

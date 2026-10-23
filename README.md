@@ -10,13 +10,29 @@ Three handbooks, each kept two ways: a human-readable PDF, and a parsed set of l
 
 | Handbook | PDF | Parsed HTML and images | Made by |
 |---|---|---|---|
-| Official MTO Driver's Handbook (Ontario) | `The Official Ministry of Transportation (MTO) Driver’s Handbook _ ontario.ca.pdf` | `mto_drivers_handbook/`: 30 pages, 241 images | `scrape_mto_handbook.py` (from ontario.ca web pages) |
-| California Driver's Handbook, DL 600 (Rev. 6/2025) | `ca_drivers_handbook/source/DL-600.pdf` | `ca_drivers_handbook/`: 23 pages, 74 images | `scrape_ca_handbook.py` (from dmv.ca.gov web pages) |
-| Texas Driver Handbook, DL-7 (revised January 2026) | `tx_drivers_handbook/source/DL-7.pdf` | `tx_drivers_handbook/`: 21 pages, 203 images | `scrape_tx_handbook.py` (from the DPS PDF; Texas publishes no web version) |
+| Official MTO Driver's Handbook (Ontario) | `handbooks/mto/source/MTO-drivers-handbook-ontario.ca.pdf` | `handbooks/mto/`: 30 pages, 241 images | `scrapers/scrape_mto_handbook.py` (from ontario.ca web pages) |
+| California Driver's Handbook, DL 600 (Rev. 6/2025) | `handbooks/ca/source/DL-600.pdf` | `handbooks/ca/`: 23 pages, 74 images | `scrapers/scrape_ca_handbook.py` (from dmv.ca.gov web pages) |
+| Texas Driver Handbook, DL-7 (revised January 2026) | `handbooks/tx/source/DL-7.pdf` | `handbooks/tx/`: 21 pages, 203 images | `scrapers/scrape_tx_handbook.py` (from the DPS PDF; Texas publishes no web version) |
 
 The handbooks are state- and province-wide: San Francisco and Austin drivers use the California and Texas handbooks.
 
 All three HTML copies have the same layout, so one program can read any of them. The handbook text is inside `<article class="content">`, with headings, lists and tables as ordinary HTML and every image in the folder's `images/`. Open `index.html` in each folder to browse it.
+
+## Repository layout
+
+| Folder | What it holds |
+|---|---|
+| `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
+| `scrapers/` | The scripts that made `handbooks/` |
+| `analysis/` | Rule language v1, the Ontario census, the passing rules for each handbook (`analysis/passing-rules/`), handbook passages (`analysis/segments/`) and notes on using the rules in a VLA |
+| `prompts/` | Extraction prompts and their parts: the fixed prompt (`extract-rules.fixed-v1.md`), the principle-based variant (`extract-rules.md`), topics, worked examples and passage selection |
+| `tools/` | Splitting handbooks into passages, making passage files, checking statements, building the review pages |
+| `qwen/` | Running the extraction on open models with vLLM, and scoring it against the reference |
+| `pages/` | Review pages: rules side by side with the handbook text |
+| `pipeline/`, `provenance/` | How the rule set is made, step by step, and how the Ontario reference was made |
+| `extractions/`, `runs/` | Model outputs |
+| `docs/` | The prompts the team gave Claude (`prompt.md`) and other write-ups |
+| `legacy/` | The first Ontario passing rules, extracted from the PDF before the rule language existed |
 
 ## MTO Driver's Handbook – Offline Copy
 
@@ -25,11 +41,12 @@ A local, offline copy of [The Official MTO Driver's Handbook](https://www.ontari
 ### Contents
 
 ```
-scrape_mto_handbook.py      # downloads the handbook
-mto_drivers_handbook/
+scrapers/scrape_mto_handbook.py   # downloads the handbook
+handbooks/mto/
 ├── index.html              # cover page (start here)
 ├── <chapter>.html          # one file per page, 29 in total (e.g. signs.html)
 ├── images/                 # all 241 images used in the content
+├── source/MTO-drivers-handbook-ontario.ca.pdf   # the handbook as a PDF from ontario.ca
 └── style.css               # shared stylesheet
 ```
 
@@ -37,10 +54,10 @@ mto_drivers_handbook/
 
 ```sh
 pip install requests beautifulsoup4
-python scrape_mto_handbook.py
+python scrapers/scrape_mto_handbook.py
 ```
 
-Open `mto_drivers_handbook/index.html` in a browser. Running the script again downloads every page again. Images already in `images/` are skipped.
+Open `handbooks/mto/index.html` in a browser. Running the script again downloads every page again. Images already in `images/` are skipped.
 
 ### Differences from the online version
 
@@ -68,8 +85,8 @@ A local, offline copy of the [California Driver's Handbook](https://www.dmv.ca.g
 ### Contents
 
 ```
-scrape_ca_handbook.py       # downloads the handbook and the PDF
-ca_drivers_handbook/
+scrapers/scrape_ca_handbook.py    # downloads the handbook and the PDF
+handbooks/ca/
 ├── index.html              # cover page with the Secretary's message (start here)
 ├── <page>.html             # one file per web page, 22 in total (e.g. navigating-the-roads.html)
 ├── images/                 # all 74 images used in the content
@@ -83,10 +100,10 @@ The pages follow the site's own order: the front matter (DMV Services, Copyright
 
 ```sh
 pip install requests beautifulsoup4
-python scrape_ca_handbook.py
+python scrapers/scrape_ca_handbook.py
 ```
 
-Open `ca_drivers_handbook/index.html` in a browser. The script waits a second between requests. Running it again downloads every page again; the PDF is downloaded only if `source/DL-600.pdf` is missing.
+Open `handbooks/ca/index.html` in a browser. The script waits a second between requests. Running it again downloads every page again; the PDF is downloaded only if `source/DL-600.pdf` is missing.
 
 ### Differences from the online version
 
@@ -117,8 +134,8 @@ A local copy of the [Texas Driver Handbook](https://www.dps.texas.gov/internetfo
 ### Contents
 
 ```
-scrape_tx_handbook.py       # downloads the PDF and converts it
-tx_drivers_handbook/
+scrapers/scrape_tx_handbook.py    # downloads the PDF and converts it
+handbooks/tx/
 ├── index.html              # cover, introduction, contact details, the Colonel's letter and the contents (start here)
 ├── chapter-<n>-<title>.html   # Chapters 1 to 14 (e.g. chapter-6-signaling-passing-and-turning.html)
 ├── appendix-<x>-<title>.html  # Appendices A to E
@@ -132,10 +149,10 @@ tx_drivers_handbook/
 
 ```sh
 pip install requests beautifulsoup4 pymupdf
-python scrape_tx_handbook.py            # add --verify to print the checks below
+python scrapers/scrape_tx_handbook.py   # add --verify to print the checks below
 ```
 
-Open `tx_drivers_handbook/index.html` in a browser. The PDF is downloaded only if `source/DL-7.pdf` is missing; the conversion runs every time.
+Open `handbooks/tx/index.html` in a browser. The PDF is downloaded only if `source/DL-7.pdf` is missing; the conversion runs every time.
 
 ### How the PDF was converted
 
