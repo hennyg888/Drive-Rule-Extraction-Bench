@@ -1,9 +1,9 @@
-"""Score a model's Rule Language v1 output against the reference ruleset.
+"""Score a model's Rule Language output against the reference ruleset.
 
 Usage (from the repo root):
   python3 provenance/scripts/score_extraction.py --output runs/<run>/output.json \
-      [--ref analysis/passing-rules/passing-rules.v1.json] \
-      [--passages analysis/passing-rules/inputs/passing-passages.json --passages analysis/passing-rules/inputs/census-sentences.json] \
+      [--ref analysis/passing-rules/mto/rules.json] \
+      [--passages analysis/passing-rules/mto/inputs/passing-passages.json --passages analysis/passing-rules/mto/inputs/census-sentences.json] \
       [--report runs/<run>/score.md] [--json runs/<run>/score.json]
 
 Pairing: a model statement and a reference statement are candidates when they cite at least one
@@ -15,15 +15,18 @@ before counting them as errors.
 For a handbook with no reviewed reference, --ref can name another extraction (an earlier draft) to
 compare two extractions; give that handbook's passages with --passages. The hard cases and the
 no-rule passages are Ontario ids, so they are reported only when the reference cites Ontario passages.
+
+Outputs written before the field was renamed say force/force_from with LEGAL/ADVISORY; they are read as
+strength/strength_from with LAW/ADVICE.
 """
 import argparse, json, os, re
 from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))  # this file is in provenance/scripts/
-REF = os.path.join(ROOT, 'analysis/passing-rules/passing-rules.v1.json')
-PASSAGES = [os.path.join(ROOT, 'analysis/passing-rules/inputs/passing-passages.json'),
-            os.path.join(ROOT, 'analysis/passing-rules/inputs/census-sentences.json')]
+REF = os.path.join(ROOT, 'analysis/passing-rules/mto/rules.json')
+PASSAGES = [os.path.join(ROOT, 'analysis/passing-rules/mto/inputs/passing-passages.json'),
+            os.path.join(ROOT, 'analysis/passing-rules/mto/inputs/census-sentences.json')]
 SCHEMA = os.path.join(ROOT, 'analysis/passing-rules/statements.schema.json')
 
 MODAL_RE = re.compile(r'\b(MUST NOT|MUST|MAY|SHOULD NOT|SHOULD)\b')
@@ -39,12 +42,28 @@ NUMBER_WORDS = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 
 HARD = {
     'condition only in a heading': '3.1.7a 3.2.1d 3.2.2a 3.3.1b 3.3.2a 3.3.2b 3.3.3a 3.3.3b 3.4.4a 3.4.4c 3.4.5d 3.4.7a 3.4.8a 3.5.2a 3.6.1d',
     'condition only in a neighbouring passage': '2.2b 3.1.4a',
-    'legal force set only by a heading': '3.1.7a 3.2.1d 3.6.1c',
+    'legal strength set only by a heading': '3.1.7a 3.2.1d 3.6.1c',
     'link between different passages': '2.2b 3.3.1b 3.4.12e',
     'duty written apart from its penalty': '3.4.4b 3.4.12b 3.4.13a 3.4.13b',
     'sources on two pages': '3.1.1a 3.4.13a 3.4.13b 3.6.1a 3.6.3a 3.6.3b',
 }
 NO_RULE_PASSAGES = ['m92', 'm93', 'm94', 'm95', 'm96']
+OLD_STRENGTH = {'LEGAL': 'LAW', 'ADVISORY': 'ADVICE'}
+
+
+def renamed(s):
+    """A statement with the old force/force_from fields read as strength/strength_from."""
+    if 'force' not in s and 'force_from' not in s:
+        return s
+    out = {}
+    for k, v in s.items():
+        if k == 'force':
+            out['strength'] = OLD_STRENGTH.get(v, v)
+        elif k == 'force_from':
+            out['strength_from'] = v
+        else:
+            out[k] = v
+    return out
 
 
 def srcs(s):
@@ -145,8 +164,8 @@ def main():
     a = ap.parse_args()
 
     ref = json.load(open(a.ref, encoding='utf-8'))
-    ref = ref['statements'] if isinstance(ref, dict) else ref
-    model = json.load(open(a.output, encoding='utf-8'))['statements']
+    ref = [renamed(r) for r in (ref['statements'] if isinstance(ref, dict) else ref)]
+    model = [renamed(m) for m in json.load(open(a.output, encoding='utf-8'))['statements']]
     passages = []
     for p in a.passages or PASSAGES:
         passages += json.load(open(p, encoding='utf-8'))
@@ -187,19 +206,19 @@ def main():
     for i, j in pairs:
         m, r = model[i], ref[j]
         a_type = m['type'] == r['type']
-        a_force = m.get('force') == r.get('force')
+        a_strength = m.get('strength') == r.get('strength')
         a_modal = modals(m) == modals(r)
         a_clause = clauses(m) == clauses(r)
         a_src = srcs(m) == srcs(r)
         a_links = sorted(rid_of.get(l, '?') for l in m.get('links', [])) == sorted(r.get('links', []))
-        for k, v in (('type', a_type), ('force', a_force), ('modal', a_modal), ('clauses', a_clause), ('sources', a_src), ('links', a_links)):
+        for k, v in (('type', a_type), ('strength', a_strength), ('modal', a_modal), ('clauses', a_clause), ('sources', a_src), ('links', a_links)):
             agree[k] += v
-        rows.append(dict(ref=r['id'], model=m['id'], type=a_type, force=a_force, modal=a_modal, clauses=a_clause,
+        rows.append(dict(ref=r['id'], model=m['id'], type=a_type, strength=a_strength, modal=a_modal, clauses=a_clause,
                          sources=a_src, links=a_links, ref_text=r['text'], model_text=m['text'],
                          ref_clauses=clauses(r), model_clauses=clauses(m), ref_modals=modals(r), model_modals=modals(m)))
     res['agreement'] = dict(agree)
     rules = [(i, j) for i, j in pairs if ref[j]['type'] in ('RULE', 'PROCEDURE')]
-    res['force_on_rules'] = sum(model[i].get('force') == ref[j].get('force') for i, j in rules)
+    res['strength_on_rules'] = sum(model[i].get('strength') == ref[j].get('strength') for i, j in rules)
     res['n_rule_pairs'] = len(rules)
 
     # flags on matched pairs
@@ -234,8 +253,8 @@ def main():
     for name, idl in (HARD.items() if ontario else []):
         ids_ = idl.split()
         got = [x for x in ids_ if x in matched_ref]
-        full = [x for x in got if matched_ref[x]['clauses'] and matched_ref[x]['modal'] and matched_ref[x]['force']]
-        hard[name] = dict(n=len(ids_), matched=len(got), clauses_modal_force_agree=len(full),
+        full = [x for x in got if matched_ref[x]['clauses'] and matched_ref[x]['modal'] and matched_ref[x]['strength']]
+        hard[name] = dict(n=len(ids_), matched=len(got), clauses_modal_strength_agree=len(full),
                           missing=[x for x in ids_ if x not in matched_ref])
     res['hard_cases'] = hard
 
@@ -250,8 +269,8 @@ def main():
         '## Summary', '',
         f'- Statements: model {len(model)} ({", ".join(f"{k} {v}" for k, v in sorted(tm.items()))}); reference {len(ref)} ({", ".join(f"{k} {v}" for k, v in sorted(tr.items()))}).',
         f'- Paired by shared sources: {len(pairs)}. Reference recall {pct(len(pairs), len(ref))}; model precision {pct(len(pairs), len(model))}.',
-        f'- On paired statements: type {pct(agree["type"], len(pairs))}, force {pct(agree["force"], len(pairs))}, modal {pct(agree["modal"], len(pairs))}, clause keywords {pct(agree["clauses"], len(pairs))}, same sources {pct(agree["sources"], len(pairs))}, links {pct(agree["links"], len(pairs))}.',
-        f'- Law or advice on paired rules and procedures: {pct(res["force_on_rules"], len(rules))}.',
+        f'- On paired statements: type {pct(agree["type"], len(pairs))}, strength {pct(agree["strength"], len(pairs))}, modal {pct(agree["modal"], len(pairs))}, clause keywords {pct(agree["clauses"], len(pairs))}, same sources {pct(agree["sources"], len(pairs))}, links {pct(agree["links"], len(pairs))}.',
+        f'- Law or advice on paired rules and procedures: {pct(res["strength_on_rules"], len(rules))}.',
         f'- Inline flags (J, S, R, G) on paired statements: precision {prec:.2f}, recall {rec:.2f}, F1 {res["flags"]["f1"]:.2f}; same code on {code_ok} of {tp} matched spans.',
         f'- Passages the reference cites and the model does not: {", ".join(res["passages_missed"]) or "none"}.',
         f'- Passages the model cites and the reference does not: {", ".join(res["passages_extra"]) or "none"}.',
@@ -267,14 +286,14 @@ def main():
     ]
     if ontario:
         lines += ['## Hard cases', '',
-                  '| Case | Reference statements | Paired | Clauses, modal and force agree | Not paired |', '|---|---|---|---|---|']
+                  '| Case | Reference statements | Paired | Clauses, modal and strength agree | Not paired |', '|---|---|---|---|---|']
         for name, h in hard.items():
-            lines.append(f'| {name} | {h["n"]} | {h["matched"]} | {h["clauses_modal_force_agree"]} | {" ".join(h["missing"]) or "-"} |')
+            lines.append(f'| {name} | {h["n"]} | {h["matched"]} | {h["clauses_modal_strength_agree"]} | {" ".join(h["missing"]) or "-"} |')
         lines += ['', f'Passages that should give no passing rule (m92 to m96) cited by the model: {", ".join(res["no_rule_passages_cited"]) or "none"}.', '']
     lines += ['## Paired statements that disagree', '',
               '| Reference | Model | Differs in | Reference text | Model text |', '|---|---|---|---|---|']
     for row in rows:
-        diff = [k for k in ('type', 'force', 'modal', 'clauses', 'links') if not row[k]]
+        diff = [k for k in ('type', 'strength', 'modal', 'clauses', 'links') if not row[k]]
         if diff:
             lines.append(f'| {row["ref"]} | {row["model"]} | {", ".join(diff)} | {row["ref_text"]} | {row["model_text"]} |')
     lines += ['', '## Reference statements with no pair', '']

@@ -1,5 +1,7 @@
 # Handbook census
 
+Written on 10 October 2026, while the rule language was being designed: "v0" is its first draft and "v1" the version this census led to, and the field now called strength (`STRENGTH FROM`) was then called force (`FORCE FROM`). The current language is `analysis/rule-language.md`; git keeps the earlier versions.
+
 Every sentence of the MTO Driver's Handbook was labelled against rule language v0 to decide what v1 needs. 3,444 sentences were labelled (paragraphs split into sentences, plus list items, numbered steps and captions; headings and the sample test page were left out, the test page because it is kept for evaluation). The labels are LLM output following `census-guidelines.md`; they have not been checked by a person, so the counts are evidence for design choices, not ground truth.
 
 Files: `census-labels.jsonl` (one line per sentence: id, page, section, text, labels), `census-guidelines.md` (the labelling instructions), `census-summary.json` (all counts below).

@@ -1,12 +1,12 @@
 # Using the passing rules with a driving VLA
 
-michael's question (11 Oct): can the rules be a VLA's input context, so that it reasons over them, stays grounded in them and leaves a trace, much like RAG? And is rule language v1 a good rule and wording template for that, one that makes the VLA's decisions better and more reliable?
+michael's question (11 Oct): can the rules be a VLA's input context, so that it reasons over them, stays grounded in them and leaves a trace, much like RAG? And is the rule language a good rule and wording template for that, one that makes the VLA's decisions better and more reliable?
 
 ## Short answer
 
-- **Keep v1 as the text the VLA reads.** Its modals (MUST vs SHOULD), condition clauses, exceptions, flags and per-line sources are the parts a VLA and a checker need. Nothing below changes the rule text.
+- **Keep the rule language as the text the VLA reads.** Its modals (MUST vs SHOULD), condition clauses, exceptions, flags and per-line sources are the parts a VLA and a checker need. Nothing below changes the rule text.
 - **On its own it is not enough.** Rules in the prompt change what a model says more reliably than what it does. DriveBench found that VLMs often answer from general knowledge or textual cues rather than the image. A rule the model cites can still be ignored by its trajectory, and Alpamayo-R1 added an RL stage to make its actions agree with its reasoning.
-- **What's missing is a grounding layer beside each rule.** It writes the conditions as predicates from one shared scene vocabulary. It records what the rule acts on (motion, signals or attention). For legal duties it adds a check that runs outside the model. v1 already defines a TAGS field for situations, but `passing-rules.v1.json` doesn't fill it yet.
+- **What's missing is a grounding layer beside each rule.** It writes the conditions as predicates from one shared scene vocabulary. It records what the rule acts on (motion, signals or attention). For legal duties it adds a check that runs outside the model. The rule language already defines a TAGS field for situations, but `passing-rules/mto/rules.json` doesn't fill it yet.
 - **With that layer, one rule ID links the prompt, the checker and the training data,** and every decision traces back to a handbook sentence.
 
 ## 1. Three places rules can enter
@@ -20,7 +20,7 @@ michael's question (11 Oct): can the rules be a VLA's input context, so that it 
 Context alone covers only the first row. The closest published system is DriveReg (Cai et al., "Driving with Regulation"):
 
 - It retrieves regulation text, including the Massachusetts driver's manual, by embedding similarity to a scene summary that the VLM writes.
-- Like our LEGAL/ADVISORY split, it separates mandatory rules from safety guidelines.
+- Like our law/advice split, it separates mandatory rules from safety guidelines.
 - An LLM judges a fixed set of candidate actions. There's no check on trajectories and no training step.
 - It was evaluated on 76 hypothetical scenario–action pairs and 35 nuScenes samples, and takes 0.67–2 s per decision.
 
@@ -45,9 +45,9 @@ With this loop, every error has an owner:
 - The same keys scale to the full handbook (the census counted 3,444 sentences).
 - Keep the part that changes per frame small: the facts and the IDs of the active rules.
 
-## 3. What v1 already gives, and what it lacks
+## 3. What the rule language already gives, and what it lacks
 
-First-pass audit of `passing-rules.v1.json`. The per-statement labels are in `vla-audit.csv`, labelled by hand. Its columns:
+First-pass audit of `passing-rules/mto/rules.json`. The per-statement labels are in `vla-audit.csv`, labelled by hand. Its columns:
 
 - `acts_on`: motion, mixed, signals, attention, or another road user;
 - `applies_to`: who the statement binds;
@@ -56,7 +56,7 @@ First-pass audit of `passing-rules.v1.json`. The per-statement labels are in `vl
 - `checkable`: legal duties only.
 
 - **Statement types.** There are 88 statements: 73 rules and procedures, 13 FACT or DEFINE, and 2 EXCEPTION statements that switch another rule off.
-- **Force.** Of the 73, **19 are legal** (8 MUST, 7 MUST NOT, 4 MAY) and **54 are advisory**. For a VLA, most of the passing chapter is a preference, not a constraint.
+- **Strength.** Of the 73, **19 are legal** (8 MUST, 7 MUST NOT, 4 MAY) and **54 are advisory**. For a VLA, most of the passing chapter is a preference, not a constraint.
 - **Checkable duties.** The legal ones include **15 duties** (MUST or MUST NOT). Once their facts are grounded, 10 can be checked on a planned trajectory. Two of those apply only to trucks, and 3.4.4b needs a stated default for "where practical". The other 5 can't be checked yet:
   - 3 rest on a judgment term: "with caution", "if safe to do so" and "slow traffic" (3.4.13a, 3.4.13b, 3.6.1d);
   - 2 rest on another driver's intention: "trying to pass" and "to prevent another vehicle from passing" (3.6.1b, 3.6.1c).
@@ -77,7 +77,7 @@ First-pass audit of `passing-rules.v1.json`. The per-statement labels are in `vl
 - **Distances.** Only 6 statements give one: 1 m, 2 m, 20 m, 30 m (twice) and 60 m.
 
 **Keep:**
-- MUST vs SHOULD as hard constraint vs cost. DriveReg makes the same cut at runtime; v1 fixes it at extraction and records why in FORCE FROM.
+- MUST vs SHOULD as hard constraint vs cost. DriveReg makes the same cut at runtime; the rule language fixes it at extraction and records why in STRENGTH FROM.
 - WHEN, WHILE, UNTIL, ONLY IF and UNLESS, which say when a rule switches on and for how long.
 - EXCEPTION TO and SPECIALIZES, which already give the rules a defeasible structure.
 - Sources on every statement and every step. The handbook end of the trace is already done.
@@ -88,16 +88,16 @@ First-pass audit of `passing-rules.v1.json`. The per-statement labels are in `vl
 | Field | Why | For 3.4.4b |
 |---|---|---|
 | `uid` | IDs follow section numbers. Logs and training data need IDs that survive renumbering. | `ON-PASS-CYCLIST-1M` (shown as 3.4.4b) |
-| `tags` | v1 §5 defines TAGS. Filling them gives the retrieval keys. | other road user: cyclist; phase: passing |
-| `when` | Conditions as predicates from one shared vocabulary. This formalizes v1's "one phrase per concept", in the spirit of Logical English's predicate library. | `passing(ego, c) AND cyclist(c)` |
+| `tags` | The rule language defines TAGS (`analysis/rule-language.md` §6). Filling them gives the retrieval keys. | other road user: cyclist; phase: passing |
+| `when` | Conditions as predicates from one shared vocabulary. This formalizes the language's "one phrase per concept", in the spirit of Logical English's predicate library. | `passing(ego, c) AND cyclist(c)` |
 | `require` | A measurable form of the duty, for the checkable ones | `lateral_gap(ego, c) >= 1.0 m` for the whole pass |
 | `acts_on` | The handbook is written for people. Each duty maps to motion, a vehicle signal, a perception precondition or a prediction. | trajectory, lateral |
 | `observe` | Where each fact comes from: camera, map, ego, V2X, or not observable | cyclist: camera; gap: camera or lidar |
-| `judgment` | For each J term, either a default with its source, or "the model decides and states the value it used". It is kept out of the rule text, so v1's "thresholds are never invented" still holds. | "where practical": treated as never applying until we define when it does |
+| `judgment` | For each J term, either a default with its source, or "the model decides and states the value it used". It is kept out of the rule text, so the language's "thresholds are never invented" still holds. | "where practical": treated as never applying until we define when it does |
 | `scope` | Jurisdiction, vehicle and road type, so a model trained elsewhere doesn't bring its own rules (which side to pass on, school buses) | Ontario; motor vehicles |
-| `priority` | v1 has force per rule and "the more specific wins", but no order across rules (§9: no priority keyword). A checker needs one, for example avoid collision > legal > advisory > progress, as in Rulebooks and ScenicRules. | legal tier |
+| `priority` | The language has a strength per rule and "the more specific wins", but no order across rules (§9: no priority keyword). A checker needs one, for example avoid collision > legal > advisory > progress, as in Rulebooks and ScenicRules. | legal tier |
 
-None of this reverses the decision in `rule-template-plan.md` to stay off the TR2MTL route. The text remains the representation, and the predicates are its vocabulary. A temporal-logic form is compiled only for the 10 checkable duties, and only for the checker.
+None of this reverses the decision in the first template plan (`analysis/rule-template-plan.md`, now in the git history) to stay off the TR2MTL route. The text remains the representation, and the predicates are its vocabulary. A temporal-logic form is compiled only for the 10 checkable duties, and only for the checker.
 
 ## 4. One rule end to end: 3.4.4b
 
@@ -123,7 +123,7 @@ check: always(passing(ego, c) -> lateral_gap(ego, c) >= 1.0)
 margin: min(lateral_gap during the pass) - 1.0 m
 ```
 
-What the VLA reads (the v1 text of the active rules, excerpt):
+What the VLA reads (the rule text of the active rules, excerpt):
 
 ```
 [3.4.4b] a driver of a motor vehicle MUST keep at least 1 m between the vehicle and a cyclist WHILE passing the cyclist
@@ -156,12 +156,12 @@ Use the same model and the same scenes, and change only what the model gets:
 |---|---|
 | A0 | No rules |
 | A1 | Retrieved handbook passages (DriveReg-style) |
-| A2 | v1 rule text |
-| A3 | v1 plus the grounding layer: the active rules and the grounded facts |
+| A2 | Rule text |
+| A3 | Rule text plus the grounding layer: the active rules and the grounded facts |
 | A4 | A3 plus the checker |
 | A5 | A3, fine-tuned on rule-cited traces with rule-margin rewards |
 
-- **A1 vs A2** is the downstream test already planned in `rule-template-plan.md` §6 (original text vs our rules), moved from quiz questions to driving scenes.
+- **A1 vs A2** is the downstream test already planned in §6 of the first template plan (original text vs our rules), moved from quiz questions to driving scenes.
 - **A2 vs A3** tests grounding.
 - **A4 and A5** test reliability.
 

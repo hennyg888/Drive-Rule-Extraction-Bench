@@ -6,12 +6,11 @@ JavaScript, the Rule language panel and the Census panel are copied from it unch
 (`--vendor` copies them into tools/rules_page_assets/; the first build does this by itself).
 Everything else is generated from data, in the markup the page's script expects:
 
-  Ontario     analysis/passing-rules/inputs/passing-passages.json   (m1 ...)
-              analysis/passing-rules/inputs/census-sentences.json   (c1 ..., optional)
-              analysis/passing-rules/passing-rules.v1.json
-  California  <data-root>/ca/meta.json, <data-root>/ca/passing-rules.v1.json,
-              <data-root>/ca/inputs/passing-passages.json
-  Texas       <data-root>/tx/...                (data-root defaults to analysis/passing-rules)
+  each jurisdiction  <data-root>/{mto,ca,tx}/meta.json            name, edition, source, handbook folder
+                     <data-root>/{mto,ca,tx}/rules.json           the statements
+                     <data-root>/{mto,ca,tx}/inputs/passing-passages.json
+                     <data-root>/mto/inputs/census-sentences.json (Ontario's census, optional)
+  (data-root defaults to analysis/passing-rules)
 
 Output: <out-dir>/passing-rules-{ontario,california,texas}.html (out-dir defaults to pages/), each with a
 tab bar linking the three. A jurisdiction whose files are missing gets a disabled "in progress" tab
@@ -25,7 +24,7 @@ Usage:
   python tools/build_rules_page.py                       build every jurisdiction that has data
   python tools/build_rules_page.py --check               also compare the Ontario page with the original
   python tools/build_rules_page.py --vendor              refresh tools/rules_page_assets/ from the original
-  python tools/build_rules_page.py --data-root DIR --out-dir DIR     other CA/TX data, e.g. a test fixture
+  python tools/build_rules_page.py --data-root DIR --out-dir DIR     other data, e.g. a test fixture
 """
 import argparse
 import html
@@ -43,25 +42,12 @@ ASSETS = os.path.join(REPO, "tools", "rules_page_assets")
 RULES_ROOT = os.path.join(REPO, "analysis", "passing-rules")
 SEGMENTS_DIR = os.path.join(REPO, "analysis", "segments")
 
-# The three tabs, in order. Ontario's data sits at the top of analysis/passing-rules/, the others in a folder.
+# The three tabs, in order, each with its folder under analysis/passing-rules/.
 JURISDICTIONS = [
-    {"key": "ontario", "dir": None, "short": "Ontario", "zh_short": "安大略省"},
+    {"key": "ontario", "dir": "mto", "short": "Ontario", "zh_short": "安大略省"},
     {"key": "california", "dir": "ca", "short": "California", "zh_short": "加州"},
     {"key": "texas", "dir": "tx", "short": "Texas", "zh_short": "德州"},
 ]
-
-# Ontario's meta.json equivalent (the other jurisdictions ship a meta.json next to their rules).
-ONTARIO_META = {
-    "name": "Ontario MTO Driver’s Handbook",
-    "zh_name": "安大略省 MTO 駕駛手冊",
-    "short": "Ontario",
-    "edition": "Updated August 26, 2022 · Published November 28, 2016",
-    "source_url": "https://www.ontario.ca/document/official-mto-drivers-handbook",
-    "scraped": "2026-10-06",
-    "units": "metric",
-    "handbook_dir": "handbooks/mto",
-    "segments": "analysis/segments/mto.jsonl",
-}
 
 PAGE_FILE = "passing-rules-{}.html"
 
@@ -95,12 +81,12 @@ FLAG_NAMES = OrderedDict([   # the order of the register and of the rule languag
     ("R", ("指涉不明", "Unclear reference")),
     ("G", ("目標與手段不一致", "Goal vs means")),
     ("D", ("隱含預設", "Implicit default")),
-    ("M", ("法律效力不明", "Unclear legal force")),
+    ("M", ("法律效力不明", "Unclear legal strength")),
     ("V", ("用詞不一致", "Wording drift")),
     ("X", ("跨頁重複", "Repeated elsewhere")),
 ])
 
-FORCE_FROM = {   # the first word of force_from -> the label shown under "Force from"
+STRENGTH_FROM = {   # the first word of strength_from -> the label shown under "Strength from"
     "imperative": ("祈使句，預設為 SHOULD", "Bare imperative, so SHOULD by default"),
     "caution": ("提醒句，預設為 SHOULD", "Caution, so SHOULD by default"),
     "text": ("原文用語", "Wording"),
@@ -109,7 +95,7 @@ FORCE_FROM = {   # the first word of force_from -> the label shown under "Force 
     "implied": ("隱含，未明寫", "Implied, not stated"),
 }
 
-FORCE_CHIP = {"law": ("法規", "Legal"), "adv": ("建議", "Advisory")}
+STRENGTH_CHIP = {"law": ("法規", "Law"), "adv": ("建議", "Advice")}
 
 # section titles used when neither the original page nor meta.json names a section
 FALLBACK_TITLES = {"1": ("主題介紹", "Topic introduction"), "2": ("一般指引", "General guidance"),
@@ -376,7 +362,7 @@ def stmt_kind(st):
         return "exc"
     if st["type"] in ("DEFINE", "FACT"):
         return "desc"
-    return "law" if st.get("force") == "LEGAL" else "adv"
+    return "law" if st.get("strength") == "LAW" else "adv"
 
 
 KIND_RANK = {"law": 0, "adv": 1, "exc": 2, "desc": 3}
@@ -384,28 +370,21 @@ KIND_RANK = {"law": 0, "adv": 1, "exc": 2, "desc": 3}
 
 # ------------------------------------------------------------------------------------------------ the data
 class Jurisdiction:
-    def __init__(self, spec, data_root, ontario_root):
+    def __init__(self, spec, data_root):
         self.key, self.short, self.zh_short = spec["key"], spec["short"], spec["zh_short"]
         self.out_name = PAGE_FILE.format(self.key)
-        self.is_ontario = spec["dir"] is None
+        self.is_ontario = spec["key"] == "ontario"
         self.ok, self.missing = False, []
-        if spec["dir"] is None:
-            root = ontario_root
-            files = {"passages": os.path.join(root, "inputs", "passing-passages.json"),
-                     "rules": os.path.join(root, "passing-rules.v1.json")}
-            self.meta = dict(ONTARIO_META)
-        else:
-            root = os.path.join(data_root, spec["dir"])
-            files = {"passages": os.path.join(root, "inputs", "passing-passages.json"),
-                     "rules": os.path.join(root, "passing-rules.v1.json"),
-                     "meta": os.path.join(root, "meta.json")}
+        root = os.path.join(data_root, spec["dir"])
+        files = {"passages": os.path.join(root, "inputs", "passing-passages.json"),
+                 "rules": os.path.join(root, "rules.json"),
+                 "meta": os.path.join(root, "meta.json")}
         self.root = root
         self.missing = [shown(p) for p in files.values() if not os.path.exists(p)]
         if self.missing:
             return
         try:
-            if "meta" in files:
-                self.meta = json.load(open(files["meta"], encoding="utf-8"))
+            self.meta = json.load(open(files["meta"], encoding="utf-8"))
             self.passages = json.load(open(files["passages"], encoding="utf-8"))
             self.statements = json.load(open(files["rules"], encoding="utf-8"))
             census_file = os.path.join(root, "inputs", "census-sentences.json")
@@ -455,7 +434,7 @@ class Model:
         return dedup([x["id"] for x in st.get("sources") or []] +
                      [m for s in st.get("steps") or [] for m in s.get("sources") or []])
 
-    def force_class(self, m):
+    def strength_class(self, m):
         sts = self.cited_by.get(m)
         if not sts or self.P.get(m, {}).get("part") == "excluded":
             return "excl"
@@ -575,7 +554,7 @@ MODALS = {"MUST NOT": "law", "MUST": "law", "MAY": "law", "SHOULD NOT": "adv", "
 CLAUSES = ["IF VIOLATED", "ONLY IF", "DONE WHEN", "WHEN", "WHILE", "UNLESS", "UNTIL", "BECAUSE"]
 GENERAL_KW = ["IF VIOLATED", "ONLY IF", "DONE WHEN", "MUST NOT", "SHOULD NOT", "WATCH FOR", "ALSO CALLED",
               "EXCEPTION TO", "SPECIALIZES", "MUST", "MAY", "SHOULD", "WHEN", "WHILE", "UNLESS", "UNTIL",
-              "BECAUSE", "AND", "OR", "NOT"]
+              "BECAUSE", "EITHER", "AND", "OR", "NOT"]
 KW_RE = re.compile(r"(?<![A-Za-z])(%s)(?![A-Za-z])" % "|".join(re.escape(k) for k in GENERAL_KW))
 ROW_STARTERS = set(CLAUSES) | {"ALSO CALLED", "SPECIALIZES", "THEN"}
 
@@ -628,7 +607,7 @@ class StatementRenderer:
                     cls = MODALS[w]
                 elif w == "WATCH FOR":
                     cls = None   # set from the modal before it
-                elif w in ("AND", "OR", "NOT"):
+                elif w in ("EITHER", "AND", "OR", "NOT"):
                     cls = "cn"
                 elif w in ("ALSO CALLED", "EXCEPTION TO", "SPECIALIZES", "IS", "THAT"):
                     cls = "st"
@@ -638,7 +617,7 @@ class StatementRenderer:
                 last = end
             if last < len(chunk):
                 out.append(("t", chunk[last:]))
-        modal = "law" if st.get("force") == "LEGAL" else "adv"
+        modal = "law" if st.get("strength") == "LAW" else "adv"
         for i, t in enumerate(out):
             if t[0] == "k" and t[1] in MODALS:
                 modal = t[2]
@@ -749,11 +728,11 @@ class StatementRenderer:
         main_ms = [x["id"] for x in sources if x["id"] not in see_ids] or [x["id"] for x in sources]
         all_ids = m.all_ids(st)
         seen = {}
-        # header: id, type, force, one chip per kind of flag, and "Added" for sentences from the census
+        # header: id, type, strength, one chip per kind of flag, and "Added" for sentences from the census
         chips = [f'<span class="sid">{esc(st["id"])}</span><span class="chip t">{esc(st["type"])}</span>']
-        if st["type"] in ("RULE", "PROCEDURE") and st.get("force"):
-            fc = "law" if st["force"] == "LEGAL" else "adv"
-            chips.append(f'<span class="chip f {fc}">{L(*FORCE_CHIP[fc])}</span>')
+        if st["type"] in ("RULE", "PROCEDURE") and st.get("strength"):
+            fc = "law" if st["strength"] == "LAW" else "adv"
+            chips.append(f'<span class="chip f {fc}">{L(*STRENGTH_CHIP[fc])}</span>')
         for code in dedup(f.get("code") for f in st.get("flags") or []):
             chips.append(f'<span class="chip vgc" title="{esc(FLAG_NAMES.get(code, (code, code))[1])}">{esc(code)}</span>')
         if any(x.get("census_id") for x in sources):
@@ -785,16 +764,16 @@ class StatementRenderer:
             body.append(f'<figure class="see tgt" data-ms="{esc(sid)}" data-f="{kind}"><figcaption><b class="kw st">SEE</b> '
                         f'{esc(x.get("figure"))}</figcaption><span class="frame"><img src="{esc(m.img_src(img))}" '
                         f'alt="{esc(self.figure_alt(sid, info.get(sid)))}"{wh} loading="lazy" decoding="async"></span></figure>')
-        # details: force, flags, note, sources
+        # details: strength, flags, note, sources
         ann = []
-        ff = st.get("force_from")
+        ff = st.get("strength_from")
         if ff:
             cat = ff.split(" ", 1)[0].split("(", 1)[0]
-            label = FORCE_FROM.get(cat)
+            label = STRENGTH_FROM.get(cat)
             rest = ff[ff.index("(") + 1:ff.rindex(")")] if "(" in ff and ")" in ff else ""
             if label is None:
                 label, rest = (ff, ff), ""
-            ann.append('<p class="an-row"><span class="an-k">' + L("效力來源", "Force from") + '</span><span><b class="bk">' +
+            ann.append('<p class="an-row"><span class="an-k">' + L("效力來源", "Strength from") + '</span><span><b class="bk">' +
                        L(*label) + "</b>" + (f" · {esc(rest)}" if rest else "") + "</span></p>")
         for f in st.get("flags") or []:
             code = f.get("code", "?")
@@ -821,10 +800,14 @@ class PageBuilder:
         self.m, self.j, self.a, self.jurs = model, model.j, model.a, jurs
         self.sr = StatementRenderer(model)
         self.census = self.j.is_ontario
+        self.own_titles = {}    # sections numbered here for statements that have none (see section_of)
         self.sections = self.section_tree()
 
     # ---- sections
     def title(self, sec):
+        if sec in self.own_titles:
+            t = self.own_titles[sec]
+            return L(self.a.tm.get(t, esc(t)), esc(t))
         own = (self.m.meta.get("sections") or {}).get(sec)
         if isinstance(own, dict):
             return L(esc(own.get("zh") or own.get("en")), esc(own.get("en")))
@@ -860,8 +843,30 @@ class PageBuilder:
     def section_tree(self):
         by_sec = OrderedDict()
         for st in self.m.S:
-            by_sec.setdefault(str(st.get("section") or st["id"].rstrip("abcdefghijklmnopqrstuvwxyz")), []).append(st)
+            by_sec.setdefault(self.section_of(st), []).append(st)
         return OrderedDict(sorted(by_sec.items(), key=lambda kv: num_key(kv[0])))
+
+    def section_of(self, st):
+        """A statement's section. The extraction prompt numbers statements by passage (p12a) and gives no
+        section; those are grouped by where their first source sits in the handbook: the page (1, 2 ...),
+        its top heading (1.1 ...) and, when there is one, its most specific heading (1.1.1 ...)."""
+        if st.get("section"):
+            return str(st["section"])
+        if not re.fullmatch(r"p\d+[a-z]*", st["id"]):
+            return st["id"].rstrip("abcdefghijklmnopqrstuvwxyz")
+        p = self.m.P.get(((st.get("sources") or [{}])[0]).get("id"), {})
+        heads = [h.strip() for h in (split_sec(p.get("sec"))[0] or "").split(" › ") if h.strip()]
+        path = [re.sub(r"\s*\(Continued\)$", "", p.get("page") or "") or "Other"] + heads[:1] + heads[1:][-1:]
+        sec = ""
+        for name in path:
+            under = [k for k in self.own_titles if k.count(".") == sec.count(".") + (1 if sec else 0) and
+                     (k.startswith(sec + ".") if sec else True)]
+            found = next((k for k in under if self.own_titles[k] == name), None)
+            if found is None:
+                found = (sec + "." if sec else "") + str(len(under) + 1)
+                self.own_titles[found] = name
+            sec = found
+        return sec
 
     @staticmethod
     def kind_counts(sts):
@@ -943,12 +948,12 @@ class PageBuilder:
         return esc(text)
 
     def mark(self, p):
-        f = self.m.force_class(p["m"])
+        f = self.m.strength_class(p["m"])
         w = f' data-w="{esc(p["w"])}"' if p.get("w") not in (None, "") else ""
         return f'<mark class="q {f}" data-f="{f}" data-m="{esc(p["m"])}"{w} tabindex="0">{esc(p.get("text"))}</mark>'
 
     def figure(self, p):
-        f = self.m.force_class(p["m"])
+        f = self.m.strength_class(p["m"])
         w = f' data-w="{esc(p["w"])}"' if p.get("w") not in (None, "") else ""
         img = self.m.image_of(p["m"])
         size = self.m.img_size(img)
@@ -1178,7 +1183,7 @@ class PageBuilder:
         lede_side = L(f"左邊是手冊原文（{zh_whose}{zh_more}），右邊是規則；每條線把原文連到它寫成的規則，滑鼠移到任一邊會標出兩端，點一下就跳到另一端。手冊的圖放在用到它的規則底下。",
                       f"Left: the handbook text ({en_whose}{en_more}). Right: the rules. Each line joins a passage to its rules; hover either side to light up both ends, click to jump to the other end. The handbook’s pictures sit under the rules that use them.")
         lede_rules = L("每條規則附上原句、效力來源與標記；手冊的圖放在用到它的規則底下。",
-                       "Each rule with its source sentence, legal force and flags; the handbook’s pictures sit under the rules that use them.")
+                       "Each rule with its source sentence, strength and flags; the handbook’s pictures sit under the rules that use them.")
         return "\n".join([
             '<section class="doc panel" id="doc" aria-labelledby="doc-h" data-view="side">',
             '  <header class="phead">',
@@ -1194,7 +1199,7 @@ class PageBuilder:
             f'      <button type="button" data-view="rules" aria-pressed="false">{L("只看規則", "Rules only")}</button>',
             "    </div>",
             '    <div class="crumb" aria-label="Current section"></div>',
-            f'    <label class="switch" for="annot"><input type="checkbox" id="annot"><span class="lbl-l">{L("顯示效力來源、標記與出處", "Show force, flags and sources")}</span>'
+            f'    <label class="switch" for="annot"><input type="checkbox" id="annot"><span class="lbl-l">{L("顯示效力來源、標記與出處", "Show strength, flags and sources")}</span>'
             f'<span class="lbl-s">{L("詳細資訊", "Details")}</span></label>',
             "  </div>",
             '  <div class="align-scroll"><div class="align" id="align">',
@@ -1251,8 +1256,8 @@ class PageBuilder:
         cited = [m for m in self.m.cited_by if m in self.m.P]
         return {
             "statements": len(S), "passages": len(cited),
-            "legal": sum(1 for s in S if s.get("force") == "LEGAL"),
-            "advice": sum(1 for s in S if s["type"] == "RULE" and s.get("force") == "ADVISORY"),
+            "legal": sum(1 for s in S if s.get("strength") == "LAW"),
+            "advice": sum(1 for s in S if s["type"] == "RULE" and s.get("strength") == "ADVICE"),
             "flags": sum(len(s.get("flags") or []) for s in S),
         }
 
@@ -1278,7 +1283,7 @@ class PageBuilder:
         if meta.get("units"):
             src.append(L("單位", "Units") + f": {self.m.tr(meta['units'])}")
         types = Counter(s["type"] for s in S)
-        force = Counter(s.get("force") or "none" for s in S)
+        strength = Counter(s.get("strength") or "none" for s in S)
         flags = self.flags_by_code()
         n_src = sum(len(self.m.all_ids(s)) for s in S)
         figs = len([m for m in self.m.cited_by if (self.m.P.get(m) or {}).get("kind") == "figure"])
@@ -1289,9 +1294,9 @@ class PageBuilder:
             return f"<li><h3>{title}</h3><dl>{dl}</dl></li>"
         type_rows = [(f'<span class="chip t">{t}</span>', types[t]) for t in ("RULE", "PROCEDURE", "EXCEPTION", "DEFINE", "FACT") if types[t]]
         type_rows += [(f'<span class="chip t">{esc(t)}</span>', n) for t, n in types.items() if t not in ("RULE", "PROCEDURE", "EXCEPTION", "DEFINE", "FACT")]
-        force_rows = [(f'<span class="chip f law">{L("法規", "Legal")}</span>', force["LEGAL"]),
-                      (f'<span class="chip f adv">{L("建議", "Advisory")}</span>', force["ADVISORY"]),
-                      (L("無（定義、事實、例外）", "None (definitions, facts, exceptions)"), force["none"])]
+        strength_rows = [(f'<span class="chip f law">{L("法規", "Law")}</span>', strength["LAW"]),
+                         (f'<span class="chip f adv">{L("建議", "Advice")}</span>', strength["ADVICE"]),
+                         (L("無（定義、事實、例外）", "None (definitions, facts, exceptions)"), strength["none"])]
         flag_rows = [(f'<span class="chip vgc">{esc(code)}</span>{L(*FLAG_NAMES.get(code, (code, code)))}', len(v)) for code, v in flags.items()]
         src_rows = [(L("手冊段落", "Handbook passages"), len(self.m.P)), (L("被引用的段落", "Passages cited"), c["passages"]),
                     (L("出處連結", "Source links"), n_src), (L("引用的圖", "Pictures cited"), figs)]
@@ -1300,13 +1305,13 @@ class PageBuilder:
         if self.m.left_out:
             src_rows.append((L("未納入", "Left out"), len(self.m.left_out)))
         stats = ('<ul class="ov-stats" aria-label="Counts">' +
-                 card(L("敘述類型", "Statement types"), type_rows) + card(L("效力", "Force"), force_rows) +
+                 card(L("敘述類型", "Statement types"), type_rows) + card(L("效力", "Strength"), strength_rows) +
                  card(L("模糊用字", "Vague wording"), flag_rows or [(L("無", "None"), 0)]) + card(L("出處", "Sources"), src_rows) + "</ul>")
         return "\n".join([
             '<section class="panel ov" id="overview" aria-labelledby="ov-h">',
             '  <header class="hero">',
             f'    <p class="eyebrow">{L("Wise Lab · " + esc(meta.get("zh_name") or name), "Wise Lab · " + esc(name))}</p>',
-            f'    <h1 id="ov-h">Passing<small>{L("超車規則 · v1", "rules · v1")}</small></h1>',
+            f'    <h1 id="ov-h">Passing<small>{L("超車規則", "rules")}</small></h1>',
             f'    <p class="lede">{L("把手冊裡的超車內容寫成形式化規則：一套小而固定、讀起來仍像英文的規則語言，每條都連回它來自的原句。", "The handbook’s passing content as formal rules, in a small rule language that still reads like English. Every rule links back to the sentence it came from.")}</p>',
             '    <p class="ov-src">' + '<span class="sep" aria-hidden="true">·</span>'.join(src) + "</p>" if src else "",
             '    <ul class="facts">',
@@ -1327,8 +1332,8 @@ class PageBuilder:
         root = os.path.abspath(self.j.root)
         rel = (os.path.relpath(root, analysis) if root.startswith(analysis + os.sep)
                else "passing-rules/" + os.path.basename(root.rstrip(os.sep)))
-        rows = [("rule-language-v1.md", "規則語言 v1 的完整定義", "the full definition of rule language v1"),
-                (f"{rel}/passing-rules.v1.json", "本頁的規則（機器可讀）", "the rules on this page, machine-readable"),
+        rows = [("rule-language.md", "規則語言的完整定義", "the full definition of the rule language"),
+                (f"{rel}/rules.json", "本頁的規則（機器可讀）", "the rules on this page, machine-readable"),
                 (f"{rel}/inputs/passing-passages.json", "本頁左邊的手冊段落", "the handbook passages in the left column"),
                 (f"{rel}/meta.json", "手冊名稱、版本與來源", "the handbook’s name, edition and source")]
         lis = "\n".join(f"    <li><code>{esc(p)}</code> · {L(zh, en)}</li>" for p, zh, en in rows)
@@ -1364,7 +1369,7 @@ class PageBuilder:
         return "".join([
             '<nav class="nav" id="nav" aria-label="Pages" tabindex="-1"><div class="nav-top">',
             f'<a class="brand" href="#overview" data-open-tab="overview">{ICONS["logo"]}<span class="brand-t"><b>{L("超車規則", "Passing rules")}</b>'
-            f'<small>{L("規則語言 v1", "Rule language v1")}</small></span></a>',
+            f'<small>{L("規則語言", "Rule language")}</small></span></a>',
             f'<button type="button" class="icon-btn nav-x" aria-controls="nav">{ICONS["panel"]}{ICONS["close"]}<span class="sr">{L("收起導覽", "Hide navigation")}</span></button></div>',
             '<div class="nav-body"><ul class="nv">',
             f'<li class="nv-i" data-for="overview"><a class="nv-a" href="#overview" data-open-tab="overview">{ICONS["overview"]}{nv("總覽", "Overview")}</a></li></ul>',
@@ -1577,8 +1582,7 @@ def compare_with_original(generated_path, original=ORIGINAL):
 # ------------------------------------------------------------------------------------------------ main
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--data-root", default=RULES_ROOT, help="folder holding ca/ and tx/ (default: analysis/passing-rules)")
-    ap.add_argument("--ontario-root", default=RULES_ROOT, help="folder holding Ontario's data (default: analysis/passing-rules)")
+    ap.add_argument("--data-root", default=RULES_ROOT, help="folder holding mto/, ca/ and tx/ (default: analysis/passing-rules)")
     ap.add_argument("--out-dir", default=os.path.join(REPO, "pages"), help="where the pages go (default: pages/)")
     ap.add_argument("--assets", default=ASSETS, help="vendored parts of the original page (default: tools/rules_page_assets)")
     ap.add_argument("--vendor", action="store_true", help="copy the fixed parts of pages/passing-rules.html into --assets first")
@@ -1589,7 +1593,7 @@ def main(argv=None):
     if args.vendor:
         vendor(out=args.assets)
     assets = Assets(args.assets)
-    jurs = [Jurisdiction(spec, os.path.abspath(args.data_root), os.path.abspath(args.ontario_root)) for spec in JURISDICTIONS]
+    jurs = [Jurisdiction(spec, os.path.abspath(args.data_root)) for spec in JURISDICTIONS]
     only = set(args.only.split(",")) if args.only else None
     os.makedirs(args.out_dir, exist_ok=True)
     written = {}

@@ -1,6 +1,6 @@
 # Prior-work search prompt (10 October 2026)
 
-Before the template plan (`analysis/rule-template-plan.md`) was written, a Claude subagent searched for prior designs with the prompt below, from 21:58 to 22:02 UTC on 10 October 2026. Its report fed §5 of the plan. The prompt is copied verbatim.
+Before the template plan (`analysis/rule-template-plan.md`, now in the git history) was written, a Claude subagent searched for prior designs with the prompt below, from 21:58 to 22:02 UTC on 10 October 2026. Its report fed §5 of the plan. The prompt is copied verbatim.
 
 ```
 Research task (do NOT call any mcp__hearthbot__ tools; just return a report to me). Do not install packages.

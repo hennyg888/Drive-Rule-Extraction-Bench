@@ -8,7 +8,7 @@ one passage per line:
      "sec": "Passing · ¶6", "path": ["Passing"], "anchor": "passing", "kind": "para",
      "text": "...", "src": null, "cap": null, "pdf_page": null}
 
-`sec` follows the passage files in analysis/passing-rules/inputs/: the heading path joined
+`sec` follows the passage files in analysis/passing-rules/mto/inputs/: the heading path joined
 with " › ", then the position in that section ("¶3", "item 2", "image", "row 4").
 
 Usage: python tools/segment_handbook.py handbooks/mto > analysis/segments/mto.jsonl

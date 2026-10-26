@@ -2,6 +2,17 @@
 
 Written on 23 October 2026 by the Claude Code session that made the 88 Ontario passing statements (the passing-rules thread of the Wise Lab project on claude.ai), so that every session working in this repo knows exactly what was used. All times are UTC.
 
+The file names below are those of 23 October. On 26 October each file was brought to one current version, with the earlier ones left to the git history:
+
+| Name on 23 October | Now |
+|---|---|
+| `analysis/passing-rules/passing-rules.v1.json` | `analysis/passing-rules/mto/rules.json`, with `force`/`force_from` renamed `strength`/`strength_from` (`LAW`, `ADVICE`) and 3.4.4b's "where practical" written as a `WHEN` clause |
+| `analysis/passing-rules/inputs/` | `analysis/passing-rules/mto/inputs/` (no content changed) |
+| `analysis/rule-language-v1.md`, `analysis/rule-template-plan.md` | `analysis/rule-language.md`; both older files are in the git history |
+| `prompts/extract-rules.fixed-v1.md`, `prompts/topics/passing.fixed-v1.txt` | `prompts/extract-rules.md` (in the current rule language), `prompts/topics/passing.txt` |
+| `provenance/fixed-v1-check/` | `provenance/prompt-check/` |
+| `extractions/fixed-v1/{ontario,california,texas}/` | `extractions/{mto,ca,tx}/` |
+
 ## Summary
 
 | | Output | When | Who | Instructions |

@@ -1,10 +1,10 @@
-"""Fill the fixed extraction prompt with passages and write the chat messages.
+"""Fill the extraction prompt with passages and write the chat messages.
 
 Usage (from the repo root):
-  python3 provenance/scripts/render_prompt.py --passages analysis/passing-rules/inputs/passing-passages.json \
-      --passages analysis/passing-rules/inputs/census-sentences.json \
+  python3 provenance/scripts/render_prompt.py --passages analysis/passing-rules/mto/inputs/passing-passages.json \
+      --passages analysis/passing-rules/mto/inputs/census-sentences.json \
       --handbook "Ontario MTO Driver's Handbook (ontario.ca, offline copy checked 2026-10-06)" \
-      --topic passing --scope-file prompts/topics/passing.fixed-v1.txt \
+      --topic passing --scope-file prompts/topics/passing.txt \
       --out runs/example/messages.json [--page "Signs"] [--preview runs/example/prompt.md]
 
 Writes {"prompt": <prompt file>, "prompt_sha256": ..., "messages": [{"role": "system", ...}, {"role": "user", ...}]}.
@@ -15,7 +15,7 @@ import argparse, hashlib, json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))  # this file is in provenance/scripts/
-DEFAULT_PROMPT = os.path.join(ROOT, 'prompts', 'extract-rules.fixed-v1.md')
+DEFAULT_PROMPT = os.path.join(ROOT, 'prompts', 'extract-rules.md')
 KEEP = ('id', 'page', 'sec', 'kind', 'text', 'cap', 'image')
 
 

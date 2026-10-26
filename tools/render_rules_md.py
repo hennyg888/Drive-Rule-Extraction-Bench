@@ -7,13 +7,15 @@ JSON and run this again, never edit the page by hand.
 
 Usage, from the repo root (Ontario):
     python3 tools/render_rules_md.py \
-        --statements analysis/passing-rules/passing-rules.v1.json \
-        --passages analysis/passing-rules/inputs/passing-passages.json \
-                   analysis/passing-rules/inputs/census-sentences.json \
-        --structure analysis/passing-rules/inputs/passing-structure.json \
+        --statements analysis/passing-rules/mto/rules.json \
+        --passages analysis/passing-rules/mto/inputs/passing-passages.json \
+                   analysis/passing-rules/mto/inputs/census-sentences.json \
+        --structure analysis/passing-rules/mto/inputs/passing-structure.json \
         --handbook-dir handbooks/mto \
         --title "Ontario passing rules" \
-        --out analysis/passing-rules/passing-rules.v1.md
+        --out analysis/passing-rules/mto/rules.md
+
+California and Texas: the same with ca/ or tx/, no --structure, and handbooks/ca or handbooks/tx.
 
 A passage's link is its `href` when it has one (California, Texas). Otherwise the passage
 text is looked up in the pages of --handbook-dir and linked to the nearest h2 above it;
@@ -28,7 +30,7 @@ from html.parser import HTMLParser
 
 MODAL = re.compile(r'\b(MUST NOT|SHOULD NOT|MUST|MAY|SHOULD)\b')
 FLAG = re.compile(r'\[\?([^\]]+)\]')
-STRENGTH = {'LEGAL': 'Law', 'ADVISORY': 'Advice'}
+STRENGTH = {'LAW': 'Law', 'ADVICE': 'Advice'}
 TYPE_WORD = {'FACT': 'Fact', 'DEFINE': 'Definition', 'EXCEPTION': 'Exception'}
 
 
@@ -189,7 +191,7 @@ def main():
            'change the JSON and run the script again.', '']
     counts = {}
     for s in statements:
-        k = STRENGTH.get(s.get('force'), TYPE_WORD.get(s['type'], s['type']))
+        k = STRENGTH.get(s.get('strength'), TYPE_WORD.get(s['type'], s['type']))
         counts[k] = counts.get(k, 0) + 1
     out += [f'{len(statements)} statements: ' + ', '.join(f'{v} {k.lower()}' for k, v in counts.items()) + '.', '',
             'Keywords are in capitals and the modal is in bold. **MUST**, **MUST NOT** and **MAY** are law; '
@@ -227,7 +229,7 @@ def main():
                 text = rule_md(text)
             if s.get('note'):
                 text += f' *Note:* {cell(s["note"])}'
-            kind = STRENGTH.get(s.get('force'), TYPE_WORD.get(s['type'], s['type']))
+            kind = STRENGTH.get(s.get('strength'), TYPE_WORD.get(s['type'], s['type']))
             src, done = [], set()
             for so in s['sources']:
                 where = so.get('where') or passages.get(so['id'], {}).get('sec') or so['id']

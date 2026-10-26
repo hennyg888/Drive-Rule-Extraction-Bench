@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Rule language v1 statements (extraction output, trial task T2)",
+  "title": "Rule language statements (extraction output)",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -15,8 +15,8 @@
         "required": [
           "id",
           "type",
-          "force",
-          "force_from",
+          "strength",
+          "strength_from",
           "text",
           "sources",
           "flags",
@@ -35,14 +35,14 @@
               "EXCEPTION"
             ]
           },
-          "force": {
+          "strength": {
             "enum": [
-              "LEGAL",
-              "ADVISORY",
+              "LAW",
+              "ADVICE",
               null
             ]
           },
-          "force_from": {
+          "strength_from": {
             "type": [
               "string",
               "null"

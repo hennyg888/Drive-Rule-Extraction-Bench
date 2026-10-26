@@ -39,10 +39,10 @@ steps = [
     ('hb', '1', 'Acquire', [('tool', 'scrapers/scrape_<x>_*.py'), ('gap', ''), ('out', 'handbooks/<x>/:'), ('out', 'HTML, images, PDF'), ('note', 'Ontario, California,'), ('note', 'Texas: one layout')], False),
     ('hb', '2', 'Parse', [('tool', 'segment_handbook.py'), ('gap', ''), ('out', 'block passages with'), ('out', 'heading path'), ('out', 'analysis/segments/'), ('note', 'census: sentences')], False),
     ('run', '3', 'Select passages', [('tool', 'a person (Ontario)'), ('tool', 'select-passages.md'), ('gap', ''), ('out', 'passages JSON'), ('out', 'topic text'), ('note', 'ON 105, CA 105, TX 145')], True),
-    ('run', '4', 'Extract', [('tool', 'fixed-v1 prompt'), ('tool', '+ any model'), ('gap', ''), ('out', 'statements JSON'), ('out', 'raw output, prompt'), ('out', 'one folder per run')], False),
+    ('run', '4', 'Extract', [('tool', 'extract-rules.md'), ('tool', '+ any model'), ('gap', ''), ('out', 'statements JSON'), ('out', 'raw output, prompt'), ('out', 'one folder per run')], False),
     ('run', '5', 'Validate, score', [('tool', 'check_statements.py'), ('tool', 'score_t2.py'), ('gap', ''), ('out', 'schema and syntax'), ('out', 'agreement report'), ('out', 'hard cases')], False),
     ('run', '6', 'Review', [('tool', 'a person, side by side'), ('tool', 'passing-rules-*.html'), ('gap', ''), ('out', 'accepted statements'), ('out', 'corrections, notes')], True),
-    ('once', '7', 'Reference set', [('tool', 'frozen, versioned'), ('gap', ''), ('out', 'Ontario: 88 statements'), ('out', 'CA 83, TX 104: drafts'), ('out', 'provenance/'), ('out', 'SHA256SUMS')], False),
+    ('once', '7', 'Reference set', [('tool', 'frozen, history in git'), ('gap', ''), ('out', 'Ontario: 88 statements'), ('out', 'CA 83, TX 104: drafts'), ('out', 'provenance/'), ('out', 'SHA256SUMS')], False),
 ]
 for i, (k, n, t, ls, p) in enumerate(steps):
     box(xs[i], Y1, BW, BH1, k, n, t, ls, person=p)
@@ -54,14 +54,14 @@ Y2, BH2 = 392, 150
 cx, cw = xs[1], BW * 2 + GAP - 56
 box(cx, Y2, cw, BH2, 'hb', 'C', 'Census (optional per handbook)', [('tool', 'segment_sentences.py, make_census_shards.py'), ('tool', '8 labellers, census-guidelines.md'), ('gap', ''), ('out', 'Ontario: 3,444 labelled sentences,'), ('out', 'type, modal, clauses, vague words')], dashed=True)
 lx, lw = xs[3] + 44, BW * 2 + GAP - 44
-box(lx, Y2, lw, BH2, 'once', 'L', 'Rule language, prompt and schema', [('tool', 'frozen; a change makes a new version'), ('gap', ''), ('out', 'rule-language-v1.md, statements.schema.json'), ('out', 'prompt: extract-rules.fixed-v1.md'), ('out', '(chosen 23 October; v2.1 kept as a variant)')])
+box(lx, Y2, lw, BH2, 'once', 'L', 'Rule language, prompt and schema', [('tool', 'fixed between runs; changes are commits'), ('gap', ''), ('out', 'rule-language.md, statements.schema.json'), ('out', 'prompt: extract-rules.md'), ('out', '(one prompt for every handbook)')])
 
 # arrows between rows
 px = xs[1] + BW / 2
 arrow(f'M{px} {Y1 + BH1 + 2} L{px} {Y2 - 4}', 'units', px + 8, (Y1 + BH1 + Y2) / 2 + 4, 'start')
 sx = xs[2] + BW / 2
 arrow(f'M{sx} {Y2 - 2} L{sx} {Y1 + BH1 + 4}', 'topic sentences', sx + 8, (Y1 + BH1 + Y2) / 2 + 4, 'start')
-arrow(f'M{cx + cw + 2} {Y2 + 75} L{lx - 4} {Y2 + 75}', 'fit, force,', (cx + cw + lx) / 2, Y2 + 61)
+arrow(f'M{cx + cw + 2} {Y2 + 75} L{lx - 4} {Y2 + 75}', 'fit, strength,', (cx + cw + lx) / 2, Y2 + 61)
 out.append(f'<text x="{(cx + cw + lx) / 2}" y="{Y2 + 95}" class="a" text-anchor="middle">vague words</text>')
 ex = xs[3] + BW / 2
 arrow(f'M{ex} {Y2 - 2} L{ex} {Y1 + BH1 + 4}', 'prompt', ex + 8, (Y1 + BH1 + Y2) / 2 + 4, 'start')
@@ -80,7 +80,7 @@ box(dx, Y3, BW * 2 + GAP, BH3, 'down', '', 'Downstream', [('out', 'Qwen trials: 
 arrow(f'M{rx} {Y1 + BH1 + 2} L{rx} {Y3 - 4}', 'rules as context', rx + 8, Y3 - 16, 'start')
 
 # legend
-lg = [('hb', 'Once per handbook'), ('run', 'Per topic and run'), ('once', 'Fixed, versioned'), ('down', 'Uses the rules')]
+lg = [('hb', 'Once per handbook'), ('run', 'Per topic and run'), ('once', 'Fixed between runs'), ('down', 'Uses the rules')]
 lx0 = X0
 ly0 = Y3 + 8
 out.append(f'<text x="{lx0}" y="{ly0 + 6}" class="t" fill="#333">Key</text>')
@@ -94,14 +94,14 @@ out.append(f'<rect x="{lx0}" y="{yy}" width="28" height="16" rx="4" fill="#fff" 
 out.append(f'<g transform="translate({lx0 + 200},{ly0 + 20})" fill="#2E8B57"><circle cx="8" cy="5" r="5"/><path d="M0 22 Q8 8 16 22 Z"/></g><text x="{lx0 + 224}" y="{ly0 + 38}" class="m">Done by a person</text>')
 out.append(f'<text x="{lx0 + 200}" y="{ly0 + 70}" class="n">Steps 1, 2 and C repeat for a new handbook;</text>')
 out.append(f'<text x="{lx0 + 200}" y="{ly0 + 89}" class="n">3 to 6 repeat for each topic and model;</text>')
-out.append(f'<text x="{lx0 + 200}" y="{ly0 + 108}" class="n">L changes only as a new version.</text>')
+out.append(f'<text x="{lx0 + 200}" y="{ly0 + 108}" class="n">L changes only by a commit.</text>')
 
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="Helvetica, Arial, sans-serif">
 <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker>
 <style>.t{{font-size:17px;font-weight:700}} .m{{font-size:13px;fill:#333}} .o{{font-size:13.5px;fill:#111}} .n{{font-size:13px;fill:#555;font-style:italic}} .a{{font-size:12.5px;fill:#444}} .h{{font-size:22px;font-weight:700;fill:#111}} .s{{font-size:14px;fill:#555}}</style></defs>
 <rect width="{W}" height="{H}" fill="#ffffff"/>
 <text x="{X0}" y="40" class="h">Handbook rule extraction pipeline</text>
-<text x="{X0}" y="64" class="s">Drive-Rule-Extraction-Bench · current procedure as of 23 October 2026</text>
+<text x="{X0}" y="64" class="s">Drive-Rule-Extraction-Bench · current procedure as of 26 October 2026</text>
 {chr(10).join(out)}
 </svg>
 '''
