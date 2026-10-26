@@ -278,9 +278,9 @@ Each handbook's `rules.json` holds one object per statement, and `passing-rules/
 
 | Page | From |
 |---|---|
-| `analysis/passing-rules/mto/rules.md` | `mto/rules.json` (the 88 reviewed Ontario statements), grouped by `mto/inputs/passing-structure.json`, linked into `handbooks/mto/` |
-| `analysis/passing-rules/ca/rules.md` | `ca/rules.json`, grouped by handbook section, linked into `handbooks/ca/` |
-| `analysis/passing-rules/tx/rules.md` | `tx/rules.json`, grouped by handbook chapter, linked into `handbooks/tx/` |
+| `analysis/passing-rules/mto/passing-rules.md` | `mto/rules.json` (the 88 reviewed Ontario statements), grouped by `mto/inputs/passing-structure.json`, linked into `handbooks/mto/` |
+| `analysis/passing-rules/ca/passing-rules.md` | `ca/rules.json`, grouped by handbook section, linked into `handbooks/ca/` |
+| `analysis/passing-rules/tx/passing-rules.md` | `tx/rules.json`, grouped by handbook chapter, linked into `handbooks/tx/` |
 
 The commands are in the script's docstring.
 

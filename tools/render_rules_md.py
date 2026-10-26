@@ -13,7 +13,7 @@ Usage, from the repo root (Ontario):
         --structure analysis/passing-rules/mto/inputs/passing-structure.json \
         --handbook-dir handbooks/mto \
         --title "Ontario passing rules" \
-        --out analysis/passing-rules/mto/rules.md
+        --out analysis/passing-rules/mto/passing-rules.md
 
 California and Texas: the same with ca/ or tx/, no --structure, and handbooks/ca or handbooks/tx.
 

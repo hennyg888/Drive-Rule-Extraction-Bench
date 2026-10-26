@@ -24,7 +24,7 @@ All three HTML copies have the same layout, so one program can read any of them.
 |---|---|
 | `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
 | `scrapers/` | The scripts that made `handbooks/` |
-| `analysis/` | The rule language (`rule-language.md`), the Ontario census, the passing rules of each handbook (`analysis/passing-rules/{mto,ca,tx}/`: `rules.json`, a readable `rules.md`, `meta.json` and the passages in `inputs/`), handbook passages (`analysis/segments/`) and notes on using the rules in a VLA |
+| `analysis/` | The rule language (`rule-language.md`), the Ontario census, the passing rules of each handbook (`analysis/passing-rules/{mto,ca,tx}/`: `rules.json`, a readable `passing-rules.md`, `meta.json` and the passages in `inputs/`), handbook passages (`analysis/segments/`) and notes on using the rules in a VLA |
 | `prompts/` | The extraction prompt (`extract-rules.md`), its topic files (`topics/`) and how passages are chosen (`select-passages.md`) |
 | `tools/` | Splitting handbooks into passages, making passage files, checking statements, building the review pages |
 | `qwen/` | Running the extraction on open models with vLLM, and scoring it against the reference |
