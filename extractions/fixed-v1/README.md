@@ -67,3 +67,4 @@ Ontario, compared with the fixed-v1 check: 3.4.1a (parked vehicles), 1a and 3.4.
 | `output.json` | The statements, `{"statements": [...]}`, valid against `analysis/passing-rules/statements.schema.json` |
 | `score.md`, `score.json` | Ontario: the score against the reference, every disagreeing pair and the unpaired statements |
 | `compare-drafts.md`, `compare-drafts.json` | California and Texas: the same comparison against the earlier draft |
+| `output.md` | California and Texas: the statements as a readable page, written from `output.json` by `tools/render_rules_md.py` (see `analysis/rule-language-v2.md` §11); do not edit it by hand |
