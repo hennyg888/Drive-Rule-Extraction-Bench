@@ -1,0 +1,116 @@
+{"kind": "abbreviation", "word": "HOV", "meaning": "high-occupancy vehicle", "modality": null, "strength": null, "section": "§7"}
+{"kind": "abbreviation", "word": "LCV", "meaning": "long commercial vehicle", "modality": null, "strength": null, "section": "§7"}
+{"kind": "action", "word": "WATCH FOR", "meaning": "A caution that names a hazard: SHOULD WATCH FOR <hazard>", "modality": null, "strength": null, "section": "§2"}
+{"kind": "clause", "word": "BECAUSE", "meaning": "Why; never changes when the rule applies", "modality": null, "strength": null, "section": "§3"}
+{"kind": "clause", "word": "IF VIOLATED", "meaning": "Fine, demerit points, suspension, impoundment", "modality": null, "strength": null, "section": "§3"}
+{"kind": "clause", "word": "ONLY IF", "meaning": "A condition that must hold; mostly after MAY", "modality": null, "strength": null, "section": "§3"}
+{"kind": "clause", "word": "UNLESS", "meaning": "An exception inside the same sentence", "modality": null, "strength": null, "section": "§3"}
+{"kind": "clause", "word": "UNTIL", "meaning": "When the duty ends", "modality": null, "strength": null, "section": "§3"}
+{"kind": "clause", "word": "WHEN", "meaning": "When the statement applies", "modality": null, "strength": null, "section": "§3"}
+{"kind": "clause", "word": "WHILE", "meaning": "A state that lasts for the whole action", "modality": null, "strength": null, "section": "§3"}
+{"kind": "comparator", "word": "at least", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "comparator", "word": "at most", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "comparator", "word": "less than", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "comparator", "word": "more than", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "comparator", "word": "within", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "connective", "word": "AND", "meaning": "Joins conditions or actions; binds tighter than OR", "modality": null, "strength": null, "section": "§3"}
+{"kind": "connective", "word": "EITHER", "meaning": "A duty that is a choice between actions: EITHER a OR b", "modality": null, "strength": null, "section": "§1"}
+{"kind": "connective", "word": "NOT", "meaning": "Negates a condition part", "modality": null, "strength": null, "section": "§3"}
+{"kind": "connective", "word": "OR", "meaning": "Joins conditions or actions", "modality": null, "strength": null, "section": "§3"}
+{"kind": "define", "word": "IS", "meaning": "DEFINE <term> IS <kind>", "modality": null, "strength": null, "section": "§1"}
+{"kind": "define", "word": "THAT", "meaning": "DEFINE <term> IS <kind> THAT <difference>", "modality": null, "strength": null, "section": "§1"}
+{"kind": "flag", "word": "D", "meaning": "Implicit default: a permission that presupposes an unstated prohibition", "modality": null, "strength": null, "section": "§8"}
+{"kind": "flag", "word": "G", "meaning": "Goal and means differ", "modality": null, "strength": null, "section": "§8"}
+{"kind": "flag", "word": "J", "meaning": "Judgment term: safe, enough, sure, reasonable, as soon as you can", "modality": null, "strength": null, "section": "§8"}
+{"kind": "flag", "word": "M", "meaning": "Unclear legal strength", "modality": null, "strength": null, "section": "§8"}
+{"kind": "flag", "word": "R", "meaning": "Unclear reference or role", "modality": null, "strength": null, "section": "§8"}
+{"kind": "flag", "word": "S", "meaning": "Hedged scope: usually, often, many, most", "modality": null, "strength": null, "section": "§8"}
+{"kind": "flag", "word": "V", "meaning": "Wording drift across passages", "modality": null, "strength": null, "section": "§8"}
+{"kind": "flag", "word": "X", "meaning": "Stated again elsewhere, possibly differently", "modality": null, "strength": null, "section": "§8"}
+{"kind": "link", "word": "ALSO CALLED", "meaning": "A synonym, inside DEFINE", "modality": null, "strength": null, "section": "§4"}
+{"kind": "link", "word": "EXCEPTION TO", "meaning": "Changes another statement where both apply; the more specific wins", "modality": null, "strength": null, "section": "§4"}
+{"kind": "link", "word": "SPECIALIZES", "meaning": "A variant of another statement for a narrower situation", "modality": null, "strength": null, "section": "§4"}
+{"kind": "modal", "word": "MAY", "meaning": "Permission backed by law", "modality": "permission", "strength": "LAW", "section": "§2"}
+{"kind": "modal", "word": "MUST", "meaning": "Obligation backed by law", "modality": "obligation", "strength": "LAW", "section": "§2"}
+{"kind": "modal", "word": "MUST NOT", "meaning": "Prohibition backed by law", "modality": "prohibition", "strength": "LAW", "section": "§2"}
+{"kind": "modal", "word": "SHOULD", "meaning": "Obligation as advice", "modality": "obligation", "strength": "ADVICE", "section": "§2"}
+{"kind": "modal", "word": "SHOULD NOT", "meaning": "Prohibition as advice", "modality": "prohibition", "strength": "ADVICE", "section": "§2"}
+{"kind": "phrase", "word": "lane change", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "oncoming traffic", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "pass", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "the far-left lane", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "the inside mirror", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "the original lane", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "the passing lane", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "the right-hand lane", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "the vehicle being passed", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "phrase", "word": "yield the right-of-way to", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "procedure", "word": "DONE WHEN", "meaning": "The state that ends a procedure", "modality": null, "strength": null, "section": "§1"}
+{"kind": "procedure", "word": "IF", "meaning": "IF <event> THEN <action>: a branch inside a procedure", "modality": null, "strength": null, "section": "§1"}
+{"kind": "procedure", "word": "STEP", "meaning": "STEP n <action>", "modality": null, "strength": null, "section": "§1"}
+{"kind": "procedure", "word": "THEN", "meaning": "IF <event> THEN <action>", "modality": null, "strength": null, "section": "§1"}
+{"kind": "procedure", "word": "TO", "meaning": "TO <goal>: the goal of a procedure", "modality": null, "strength": null, "section": "§1"}
+{"kind": "role", "word": "a cyclist", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "role", "word": "a driver", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "role", "word": "a driver being passed", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "role", "word": "a driver towing a trailer", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "role", "word": "a truck driver", "meaning": null, "modality": null, "strength": null, "section": "§7"}
+{"kind": "type", "word": "DEFINE", "meaning": "A term and what it means", "modality": null, "strength": null, "section": "§1"}
+{"kind": "type", "word": "EXCEPTION", "meaning": "A change to a statement written in another passage", "modality": null, "strength": null, "section": "§1"}
+{"kind": "type", "word": "FACT", "meaning": "Background with no instruction", "modality": null, "strength": null, "section": "§1"}
+{"kind": "type", "word": "PROCEDURE", "meaning": "Ordered steps", "modality": null, "strength": null, "section": "§1"}
+{"kind": "type", "word": "RULE", "meaning": "Obligations, prohibitions, permissions, advice, cautions", "modality": null, "strength": null, "section": "§1"}
+{"kind": "unit", "word": "ft", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "unit", "word": "km", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "unit", "word": "km/h", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "unit", "word": "m", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "unit", "word": "mph", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "unit", "word": "s", "meaning": null, "modality": null, "strength": null, "section": "§1"}
+{"kind": "verb", "word": "allow", "meaning": "Right of way", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "anticipate", "meaning": "Attention", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "approach", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "attempt", "meaning": "Other", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "be prepared to", "meaning": "Attention", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "be ready to", "meaning": "Attention", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "brake", "meaning": "Speed", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "change lanes", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "check", "meaning": "Attention", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "cross", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "cut back", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "cut in", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "drive", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "follow", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "give", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "go", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "judge", "meaning": "Attention", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "keep", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "leave", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "let", "meaning": "Right of way", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "look", "meaning": "Attention", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "maintain", "meaning": "Speed", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "make certain", "meaning": "Attention", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "merge", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "move", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "pass", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "proceed", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "pull out", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "remain", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "return to", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "ride", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "signal", "meaning": "Signals and lights", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "slow down", "meaning": "Speed", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "sound the horn", "meaning": "Signals and lights", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "speed up", "meaning": "Speed", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "start", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "stay", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "steer", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "stop", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "switch", "meaning": "Signals and lights", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "take", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "tap", "meaning": "Speed", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "travel", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "try", "meaning": "Other", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "use", "meaning": "Signals and lights", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "vacate", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "wait", "meaning": "Moving", "modality": null, "strength": null, "section": "§5"}
+{"kind": "verb", "word": "yield the right-of-way to", "meaning": "Right of way", "modality": null, "strength": null, "section": "§5"}

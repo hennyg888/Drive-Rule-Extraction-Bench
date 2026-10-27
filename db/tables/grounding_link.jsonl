@@ -1,0 +1,93 @@
+{"occurrence_id": "mto:1b|V|overtaking", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "mto:1b|V|overtaking", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:1b|V|overtaking", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "mto:2.1a|J|enough", "unit_id": "mto:sent:level-two-road-test:142.1", "role": "handbook"}
+{"occurrence_id": "mto:2.1a|J|enough", "unit_id": "mto:sent:level-two-road-test:142.2", "role": "handbook"}
+{"occurrence_id": "mto:2.1a|J|enough", "unit_id": "on-hta:142(1)", "role": "law"}
+{"occurrence_id": "mto:2.1a|J|enough", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "mto:2.1a|J|safely", "unit_id": "on-hta:142(1)", "role": "law"}
+{"occurrence_id": "mto:2.1a|J|safely", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "mto:2.1b|J|sure", "unit_id": "on-hta:142(1)", "role": "law"}
+{"occurrence_id": "mto:2.1b|J|sure", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "mto:2.2a|V|inside mirror", "unit_id": "mto:sent:changing-positions:018.2", "role": "handbook"}
+{"occurrence_id": "mto:2.2a|V|inside mirror", "unit_id": "mto:sent:changing-positions:029.1", "role": "handbook"}
+{"occurrence_id": "mto:3.1.1a|X|within 30 m", "unit_id": "on-hta:140(3)", "role": "law"}
+{"occurrence_id": "mto:3.1.2a|G|on the left of a centreline", "unit_id": "on-hta:149(1)", "role": "law"}
+{"occurrence_id": "mto:3.1.2a|G|on the left of a centreline", "unit_id": "on-hta:149(2)", "role": "law"}
+{"occurrence_id": "mto:3.1.2a|R|30 m from", "unit_id": "on-hta:149(1)", "role": "law"}
+{"occurrence_id": "mto:3.1.3a|J|enough", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:3.1.3a|J|enough", "unit_id": "on-hta:149(1)", "role": "law"}
+{"occurrence_id": "mto:3.1.3a|J|safely", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:3.1.4a|M|are not to be used", "unit_id": "on-hta:154(1)(b)", "role": "law"}
+{"occurrence_id": "mto:3.1.4a|M|are not to be used", "unit_id": "on-hta:182(2)", "role": "law"}
+{"occurrence_id": "mto:3.1.4a|M|are not to be used", "unit_id": "on-reg-615:34(3)", "role": "law"}
+{"occurrence_id": "mto:3.1.4a|M|are not to be used", "unit_id": "on-reg-615:34(4)", "role": "law"}
+{"occurrence_id": "mto:3.1.6a|J|enough", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:3.1.6a|J|safely", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:3.2.1c|D|merge", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "mto:3.2.1c|J|safely", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "mto:3.2.2c|J|possible", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "mto:3.2.3a|D|pass on the left", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "mto:3.2.3a|S|Most passing", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "mto:3.2.4a|D|right shoulder", "unit_id": "on-hta:150(2)", "role": "law"}
+{"occurrence_id": "mto:3.2.4a|D|right shoulder", "unit_id": "on-hta:150(3)(a)", "role": "law"}
+{"occurrence_id": "mto:3.3.1b|V|rear view mirror", "unit_id": "mto:sent:changing-positions:018.2", "role": "handbook"}
+{"occurrence_id": "mto:3.3.1b|V|rear view mirror", "unit_id": "mto:sent:changing-positions:029.1", "role": "handbook"}
+{"occurrence_id": "mto:3.4.12a|G|illegally passed", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "mto:3.4.12a|G|illegally passed", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "mto:3.4.12b|J|heavy", "unit_id": "on-hta:175(17)", "role": "law"}
+{"occurrence_id": "mto:3.4.12b|J|heavy", "unit_id": "on-reg-339-94:item-14", "role": "law"}
+{"occurrence_id": "mto:3.4.12b|X|stop arm activated", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "mto:3.4.12b|X|stop arm activated", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "mto:3.4.12c|M|stop at least 20 metres away", "unit_id": "on-hta:175(12.2)", "role": "law"}
+{"occurrence_id": "mto:3.4.12d|M|Do not go", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "mto:3.4.12d|M|Do not go", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "mto:3.4.12d|M|Do not go", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "mto:3.4.12d|M|Do not go", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "mto:3.4.12d|X|and its stop arm is no longer activated", "unit_id": "mto:sent:sharing-road-other-road-users:080.1", "role": "handbook"}
+{"occurrence_id": "mto:3.4.12d|X|and its stop arm is no longer activated", "unit_id": "mto:sent:stopping:025.3", "role": "handbook"}
+{"occurrence_id": "mto:3.4.12d|X|and its stop arm is no longer activated", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "mto:3.4.12d|X|and its stop arm is no longer activated", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "mto:3.4.13a|J|caution", "unit_id": "on-hta:159(2)", "role": "law"}
+{"occurrence_id": "mto:3.4.13a|J|caution", "unit_id": "on-hta:159(2)@2027", "role": "law"}
+{"occurrence_id": "mto:3.4.13b|J|if safe to do so", "unit_id": "on-hta:159(3)", "role": "law"}
+{"occurrence_id": "mto:3.4.13b|J|if safe to do so", "unit_id": "on-hta:159(3)@2027", "role": "law"}
+{"occurrence_id": "mto:3.4.13b|X|where possible", "unit_id": "mto:sent:keeping-your-drivers-licence:129.1", "role": "handbook"}
+{"occurrence_id": "mto:3.4.13b|X|where possible", "unit_id": "on-hta:159(3)", "role": "law"}
+{"occurrence_id": "mto:3.4.13b|X|where possible", "unit_id": "on-reg-339-94:item-36.3", "role": "law"}
+{"occurrence_id": "mto:3.4.3a|R|smaller vehicle", "unit_id": "mto:sent:changing-directions:017.1", "role": "handbook"}
+{"occurrence_id": "mto:3.4.3b|R|smaller vehicle", "unit_id": "mto:sent:changing-directions:017.1", "role": "handbook"}
+{"occurrence_id": "mto:3.4.3c|J|clear", "unit_id": "on-hta:142(1)", "role": "law"}
+{"occurrence_id": "mto:3.4.3c|R|smaller vehicle", "unit_id": "mto:sent:changing-directions:017.1", "role": "handbook"}
+{"occurrence_id": "mto:3.4.4a|J|necessary for safety", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "mto:3.4.4a|J|safely", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "mto:3.4.4b|J|practical", "unit_id": "on-hta:148(6.1)", "role": "law"}
+{"occurrence_id": "mto:3.4.4b|J|practical", "unit_id": "on-hta:148(6.2)", "role": "law"}
+{"occurrence_id": "mto:3.4.4d|J|unnecessarily", "unit_id": "on-hta:75(4)", "role": "law"}
+{"occurrence_id": "mto:3.4.5b|M|stay at least two metres", "unit_id": "on-hta:166(1)", "role": "law"}
+{"occurrence_id": "mto:3.4.5d|R|these areas", "unit_id": "mto:sent:changing-positions:040.2", "role": "handbook"}
+{"occurrence_id": "mto:3.4.5d|X|safety islands and zones", "unit_id": "mto:sent:sharing-road-other-road-users:018.2", "role": "handbook"}
+{"occurrence_id": "mto:3.4.5d|X|safety islands and zones", "unit_id": "mto:sent:sharing-road-other-road-users:018.3", "role": "handbook"}
+{"occurrence_id": "mto:3.4.6a|J|closely", "unit_id": "mto:sent:changing-positions:018.2", "role": "handbook"}
+{"occurrence_id": "mto:3.4.7a|J|safe", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:3.4.8a|J|safe", "unit_id": "mto:sent:driving-along:023.2", "role": "handbook"}
+{"occurrence_id": "mto:3.4.8a|J|safe", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:3.4.8a|J|safe", "unit_id": "on-hta:158(1)", "role": "law"}
+{"occurrence_id": "mto:3.4.9a|M|under any conditions", "unit_id": "on-hta:148.1(1)", "role": "law"}
+{"occurrence_id": "mto:3.4.9b|J|enough", "unit_id": "on-hta:148.1(1)", "role": "law"}
+{"occurrence_id": "mto:3.4.9b|J|safely", "unit_id": "on-hta:148.1(1)", "role": "law"}
+{"occurrence_id": "mto:3.5.1b|J|enough", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "mto:3.5.2a|R|If you are holding up a line of traffic", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "mto:3.6.1a|J|in safety", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "mto:3.6.1a|M|move to the right", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-hta:172(1)", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-hta:172(10)", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-hta:172(2)", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-hta:172(3)", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-hta:172(9)", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-reg-339-94:item-3", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-reg-455-07:3", "role": "law"}
+{"occurrence_id": "mto:3.6.1c|R|sanctions for dangerous driving", "unit_id": "on-reg-455-07:3.8.i", "role": "law"}
+{"occurrence_id": "mto:3.6.1d|J|slow traffic", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "mto:3.6.3a|S|many high-speed roads", "unit_id": "on-reg-608:1(1)", "role": "law"}
+{"occurrence_id": "mto:3.6.3a|X|many freeways", "unit_id": "on-reg-608:1(1)", "role": "law"}

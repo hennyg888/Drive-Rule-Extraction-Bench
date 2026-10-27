@@ -1,0 +1,51 @@
+{"statement_id": "ca:p13a", "position": 0, "unit_id": "ca:passage:p13", "figure": "the \"slower traffic use turnouts\" sign"}
+{"statement_id": "ca:p14a", "position": 0, "unit_id": "ca:passage:p13", "figure": "the \"slower traffic use turnouts\" sign"}
+{"statement_id": "ca:p16a", "position": 0, "unit_id": "ca:passage:p15", "figure": "the shared roadway diagram"}
+{"statement_id": "ca:p42a", "position": 0, "unit_id": "ca:passage:p42", "figure": "the \"do not pass\" sign"}
+{"statement_id": "ca:p42b", "position": 0, "unit_id": "ca:passage:p42", "figure": "the \"slower traffic keep right\" sign"}
+{"statement_id": "ca:p52a", "position": 0, "unit_id": "ca:passage:p53", "figure": "the trolley and safety zone diagram"}
+{"statement_id": "ca:p54a", "position": 0, "unit_id": "ca:passage:p53", "figure": "the trolley and safety zone diagram"}
+{"statement_id": "ca:p73c", "position": 0, "unit_id": "ca:passage:p74", "figure": "the \"right\" way to pass a cyclist"}
+{"statement_id": "ca:p73c", "position": 1, "unit_id": "ca:passage:p76", "figure": "the \"wrong\" way to pass a cyclist"}
+{"statement_id": "ca:p90a", "position": 0, "unit_id": "ca:passage:p89", "figure": "the school bus loading diagram"}
+{"statement_id": "ca:p92a", "position": 0, "unit_id": "ca:passage:p89", "figure": "the school bus loading diagram"}
+{"statement_id": "mto:2.2a", "position": 0, "unit_id": "mto:passage:m14", "figure": "Diagram 2-46"}
+{"statement_id": "mto:3.1.5b", "position": 0, "unit_id": "mto:passage:m22", "figure": "Diagram 3-2"}
+{"statement_id": "mto:3.1.6a", "position": 0, "unit_id": "mto:passage:m24", "figure": "Diagram 3-3"}
+{"statement_id": "mto:3.1.7a", "position": 0, "unit_id": "mto:passage:m25", "figure": "the \"do not pass\" sign"}
+{"statement_id": "mto:3.2.1a", "position": 0, "unit_id": "mto:passage:m27", "figure": "Diagram 2-48"}
+{"statement_id": "mto:3.2.1d", "position": 0, "unit_id": "mto:passage:m30", "figure": "the \"keep right except to pass\" sign"}
+{"statement_id": "mto:3.4.10a", "position": 0, "unit_id": "mto:passage:m74", "figure": "the \"do not pass\" pilot vehicle sign"}
+{"statement_id": "mto:3.4.2b", "position": 0, "unit_id": "mto:passage:m52", "figure": "Diagram 2-47"}
+{"statement_id": "mto:3.4.4b", "position": 0, "unit_id": "mto:passage:m59", "figure": "Diagram 2-11"}
+{"statement_id": "mto:3.4.5b", "position": 0, "unit_id": "mto:passage:m61", "figure": "Diagram 2-49"}
+{"statement_id": "mto:3.4.6d", "position": 0, "unit_id": "mto:passage:m67", "figure": "the LCV placard"}
+{"statement_id": "mto:3.6.1d", "position": 0, "unit_id": "mto:passage:c9", "figure": "the \"slower traffic keep right\" sign"}
+{"statement_id": "tx:p10c", "position": 0, "unit_id": "tx:passage:p9", "figure": "the \"Stop · SCHOOL BUS\" diagram"}
+{"statement_id": "tx:p10d", "position": 0, "unit_id": "tx:passage:p9", "figure": "the \"Stop · SCHOOL BUS\" diagram"}
+{"statement_id": "tx:p132a", "position": 0, "unit_id": "tx:passage:p131", "figure": "the shared lane marking"}
+{"statement_id": "tx:p20a", "position": 0, "unit_id": "tx:passage:p19", "figure": "the pennant sign shape"}
+{"statement_id": "tx:p23a", "position": 0, "unit_id": "tx:passage:p22", "figure": "the \"road curves one way and then the other\" warning sign"}
+{"statement_id": "tx:p25a", "position": 0, "unit_id": "tx:passage:p24", "figure": "the \"sharp turn\" warning sign"}
+{"statement_id": "tx:p27a", "position": 0, "unit_id": "tx:passage:p26", "figure": "the \"winding road\" warning sign"}
+{"statement_id": "tx:p29a", "position": 0, "unit_id": "tx:passage:p28", "figure": "the \"gradual curve\" warning sign"}
+{"statement_id": "tx:p31a", "position": 0, "unit_id": "tx:passage:p30", "figure": "the \"sharp turn right then left\" warning sign"}
+{"statement_id": "tx:p35a", "position": 0, "unit_id": "tx:passage:p34", "figure": "the chevron warning sign"}
+{"statement_id": "tx:p38a", "position": 0, "unit_id": "tx:passage:p37", "figure": "the \"do not pass\" and \"no passing zone\" signs"}
+{"statement_id": "tx:p40a", "position": 0, "unit_id": "tx:passage:p39", "figure": "the \"do not pass\" sign"}
+{"statement_id": "tx:p42a", "position": 0, "unit_id": "tx:passage:p41", "figure": "the \"slower traffic keep right\" sign"}
+{"statement_id": "tx:p44a", "position": 0, "unit_id": "tx:passage:p43", "figure": "the \"do not cross double white line\" sign"}
+{"statement_id": "tx:p46a", "position": 0, "unit_id": "tx:passage:p45", "figure": "the \"left lane for passing only\" sign"}
+{"statement_id": "tx:p46b", "position": 0, "unit_id": "tx:passage:p45", "figure": "the \"left lane for passing only\" sign"}
+{"statement_id": "tx:p46b", "position": 1, "unit_id": "tx:passage:p65", "figure": "the \"left lane for passing only\" sign (Chapter 6)"}
+{"statement_id": "tx:p48a", "position": 0, "unit_id": "tx:passage:p47", "figure": "the \"center lane only\" sign"}
+{"statement_id": "tx:p49a", "position": 0, "unit_id": "tx:passage:p50", "figure": "the two-lane road diagram"}
+{"statement_id": "tx:p49b", "position": 0, "unit_id": "tx:passage:p50", "figure": "the two-lane road diagram"}
+{"statement_id": "tx:p52a", "position": 0, "unit_id": "tx:passage:p51", "figure": "the \"Left Turn Lane Only\" diagram"}
+{"statement_id": "tx:p53a", "position": 0, "unit_id": "tx:passage:p54", "figure": "the four-lane highway diagram"}
+{"statement_id": "tx:p55a", "position": 0, "unit_id": "tx:passage:p56", "figure": "the solid and broken centre lines diagram"}
+{"statement_id": "tx:p55b", "position": 0, "unit_id": "tx:passage:p56", "figure": "the solid and broken centre lines diagram"}
+{"statement_id": "tx:p71a", "position": 0, "unit_id": "tx:passage:p65", "figure": "the \"left lane for passing only\" sign"}
+{"statement_id": "tx:p80a", "position": 0, "unit_id": "tx:passage:p85", "figure": "the two-lane passing diagram"}
+{"statement_id": "tx:p95a", "position": 0, "unit_id": "tx:passage:p96", "figure": "the blind spot diagram"}
+{"statement_id": "tx:p95b", "position": 0, "unit_id": "tx:passage:p96", "figure": "the blind spot diagram"}
