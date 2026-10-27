@@ -1,0 +1,18 @@
+{
+ "title": "Highway Traffic Act, R.S.O. 1990, c. H.8",
+ "jurisdiction": "Ontario",
+ "source": "e-Laws (ontario.ca/laws), official consolidation",
+ "page_url": "https://www.ontario.ca/laws/statute/90h08",
+ "word_download_url": "https://www.ontario.ca/laws/docs/90h08_e.doc",
+ "consolidation_period_from": "July 1, 2026",
+ "current_to": "October 22, 2026",
+ "last_amendment": "2026, c. 7, Sched. 5.",
+ "downloaded_utc": "2026-10-27 (19:19-19:25Z)",
+ "how": "Word file: direct download. *.rendered.html: the e-Laws page rendered with headless Chrome (--dump-dom) so the currency date and body are present. *.txt: plain text made from the rendered page, one block element per line. hta.html: the page as first fetched with curl (no JavaScript; same body text).",
+ "files_sha256": {
+  "hta.doc": "ad13e3db1422bcfd230cbf9e495d1031243e2f074b42f5ce0dfe3b9fed435c18",
+  "hta.html": "1eb9462c9c6de5dfedb3adc646c6f8a6fb24d91943dbf96ece770871b5301c92",
+  "hta.rendered.html": "6cbb6005949bf129a8fc580a599e0187d2f84b7aa3c9dbfa82212c2cf629d8fb",
+  "hta.txt": "efc60c30a9681ef567002b143a729c37028026444bfbed36f45691819c0a9145"
+ }
+}

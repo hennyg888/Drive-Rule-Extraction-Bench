@@ -1,0 +1,252 @@
+R.R.O. 1990, Reg. 608 RESTRICTED USE OF LEFT LANES BY COMMERCIAL MOTOR VEHICLES | ontario.ca
+Search within this document
+Search within this document
+Submit
+Use exact search
+How do I build my search term?
+Use these search operators to perform more specific searches and narrow down your results. See how to use e-Laws for more detailed descriptions on search operators.
+| Operator | Example | Function
+| No operator | Human rights | Searches for documents containing all of your specified search terms.
+| AND | Human AND rights | Same as using no operator.
+| “x y z” (quotes) | “Human rights” | Searches for a multi-word phrase that contains all the search terms, in that order.
+| OR | engineer OR architect | Searches for documents containing 1 or more of the specified terms.
+| NOT | insurance NOT funds | Excludes a word from your search.
+| /# | fishing /4 hunting | Specifies how many words are allowed between the 2 search terms. This is called a proximity search.
+| ? | licen?e | Searches for terms with an interchangeable character. Replace the interchangeable character with a question mark.
+| (x, y) | (fishing OR hunting) AND licenses | Combines multiple search operators at once.
+R.R.O. 1990, Reg. 608: RESTRICTED USE OF LEFT LANES BY COMMERCIAL MOTOR VEHICLES
+Under:Highway Traffic Act, R.S.O. 1990, c. H.8
+Download WordPrint
+Versions
+Other regulations under the same Act
+Current
+July 30, 2026 - e-Laws currency date(October 22, 2026)
+June 10, 2025 - July 29, 2026
+Show 23 more
+Sort by: Regulation NumberTitle A-ZTitle Z-AMost recently amendedMost recently filed
+CitationTitleSort by: Regulation NumberTitle A-ZTitle Z-AMost recently amendedMost recently filed
+O. Reg. 327/26BICYCLE LANES
+O. Reg. 182/26ADMINISTRATIVE PENALTIES - ROAD SAFETY
+O. Reg. 136/26PILOT PROJECT - RIDESHARE SERVICES ALONG THE NORTHLANDER CORRIDOR
+O. Reg. 161/25PILOT PROJECT - AUTOMATED COMMERCIAL MOTOR VEHICLES
+O. Reg. 411/22PILOT PROJECT - LARGE QUADRICYCLES
+O. Reg. 355/22ADMINISTRATIVE PENALTIES FOR CONTRAVENTIONS DETECTED USING CAMERA SYSTEMS
+O. Reg. 354/22STREET CAR CAMERAS
+O. Reg. 185/22PORTABLE TRAFFIC CONTROL SYSTEMS
+O. Reg. 174/22CLASSES OF VEHICLES REQUIRING ANNUAL AND SEMI-ANNUAL INSPECTIONS
+O. Reg. 170/22VEHICLE INSPECTION CENTRES
+O. Reg. 169/22VEHICLE EMISSIONS
+O. Reg. 503/21AUTHORIZED REQUESTER PROGRAM
+O. Reg. 418/21PASSENGER TRANSPORTATION VEHICLES
+O. Reg. 407/21PILOT PROJECT - GOLF CARS
+O. Reg. 141/21PILOT PROJECT - CARGO POWER-ASSISTED BICYCLES
+O. Reg. 133/21ELECTRONIC DOCUMENTS
+O. Reg. 757/20SHORT-TERM VEHICLE IMPOUNDMENT UNDER SECTION 172 OF THE ACT
+O. Reg. 424/20SCHOOL BUS CAMERAS
+O. Reg. 389/19PILOT PROJECT - ELECTRIC KICK-SCOOTERS
+O. Reg. 331/18DEFINITION OF APPROVED DRUG SCREENING EQUIPMENT
+O. Reg. 215/18OVER-DIMENSIONAL VEHICLE ESCORTS
+O. Reg. 215/17PILOT PROJECT - LOW-SPEED VEHICLES
+O. Reg. 398/16ROAD-BUILDING MACHINES
+O. Reg. 227/16PILOT PROJECT - HOT LANES
+O. Reg. 194/16REPORTING TO THE REGISTRAR: ADMINISTRATIVE SUSPENSION OF DRIVERS' LICENCES
+O. Reg. 28/16PILOT PROJECT - THREE-WHEELED VEHICLES
+O. Reg. 419/15DEFINITIONS OF COMMERCIAL MOTOR VEHICLE AND TOW TRUCK
+O. Reg. 402/15PEDESTRIAN CROSSOVER SIGNS
+O. Reg. 306/15PILOT PROJECT - AUTOMATED VEHICLES
+O. Reg. 415/10SHORT-TERM VEHICLE IMPOUNDMENT UNDER SECTIONS 48.4 AND 55.2 OF THE ACT
+O. Reg. 369/09POWER-ASSISTED BICYCLES
+O. Reg. 366/09DISPLAY SCREENS AND HAND-HELD DEVICES
+O. Reg. 287/08CONDUCT REVIEW PROGRAMS
+O. Reg. 484/07LAMPS - USE OF FLASHING RED, GREEN OR BLUE LIGHTS
+O. Reg. 473/07LICENCES FOR DRIVING INSTRUCTORS AND DRIVING SCHOOLS
+O. Reg. 455/07RACES, CONTESTS AND STUNTS
+O. Reg. 273/07ADMINISTRATIVE PENALTIES
+O. Reg. 199/07COMMERCIAL MOTOR VEHICLE INSPECTIONS
+O. Reg. 555/06HOURS OF SERVICE
+O. Reg. 94/06BORDER APPROACH LANES
+O. Reg. 34/06PRE-EMPTING TRAFFIC CONTROL SIGNAL DEVICES
+O. Reg. 643/05CARRIAGE OF GOODS
+O. Reg. 620/05HIGH OCCUPANCY VEHICLE LANES
+O. Reg. 618/05DESIGNATION OF BUS BY-PASS SHOULDERS ON KING'S HIGHWAY
+O. Reg. 413/05VEHICLE WEIGHTS AND DIMENSIONS - FOR SAFE, PRODUCTIVE AND INFRASTRUCTURE-FRIENDLY VEHICLES
+O. Reg. 363/04SECURITY OF LOADS
+O. Reg. 11/04INTERNATIONAL REGISTRATION PLAN
+O. Reg. 316/03OPERATION OF OFF-ROAD VEHICLES ON HIGHWAYS
+O. Reg. 8/03LOCAL MUNICIPALITIES WHERE 80 KILOMETRES PER HOUR SPEED LIMIT APPLIES
+O. Reg. 393/02DEFINITIONS AND REQUIREMENTS UNDER SECTION 142.1 OF THE ACT (YIELDING RIGHT OF WAY TO BUSES)
+O. Reg. 381/02TESTING, REPAIR AND COMPLIANCE REQUIREMENTS FOR UNSAFE VEHICLES UNDER SECTION 82 OF THE ACT
+O. Reg. 376/02CLASSIFICATION OF VEHICLES AS IRREPARABLE, SALVAGE AND REBUILT
+O. Reg. 510/99COMMUNITY SAFETY ZONES
+O. Reg. 277/99RED LIGHT CAMERA SYSTEM EVIDENCE
+O. Reg. 631/98LONG-TERM VEHICLE IMPOUNDMENT UNDER SECTION 55.1 OF THE ACT
+O. Reg. 381/98SPECIAL PERMITS
+O. Reg. 512/97CRITICAL DEFECTS OF COMMERCIAL MOTOR VEHICLES
+O. Reg. 424/97COMMERCIAL MOTOR VEHICLE OPERATORS' INFORMATION
+O. Reg. 147/97TOLL DEVICES
+O. Reg. 103/97STANDARDS TO DETERMINE ALLOWABLE GROSS VEHICLE WEIGHT FOR BRIDGES
+O. Reg. 341/94DRIVER LICENCE EXAMINATIONS
+O. Reg. 340/94DRIVERS' LICENCES
+O. Reg. 339/94DEMERIT POINT SYSTEM
+O. Reg. 601/93USED VEHICLE INFORMATION PACKAGE
+R.R.O. 1990, Reg. 631YIELD RIGHT-OF-WAY SIGNS IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 630VEHICLES ON CONTROLLED-ACCESS HIGHWAYS
+R.R.O. 1990, Reg. 629ACCESSIBLE VEHICLES
+R.R.O. 1990, Reg. 628VEHICLE PERMITS
+R.R.O. 1990, Reg. 627USE OF CONTROLLED-ACCESS HIGHWAYS BY PEDESTRIANS
+R.R.O. 1990, Reg. 626TRAFFIC CONTROL SIGNAL SYSTEMS
+R.R.O. 1990, Reg. 625TIRE STANDARDS AND SPECIFICATIONS
+R.R.O. 1990, Reg. 624STOP SIGNS IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 623STOP SIGNS AT INTERSECTIONS
+R.R.O. 1990, Reg. 622STOPPING OF VEHICLES ON PARTS OF THE KING'S HIGHWAY
+R.R.O. 1990, Reg. 621SPEED LIMITS IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 620SPEED LIMITS IN PROVINCIAL PARKS
+R.R.O. 1990, Reg. 619SPEED LIMITS
+R.R.O. 1990, Reg. 618SPECIFICATIONS AND STANDARDS FOR TRAILER COUPLINGS
+R.R.O. 1990, Reg. 616SLOW MOVING VEHICLE SIGN
+R.R.O. 1990, Reg. 615SIGNS
+R.R.O. 1990, Reg. 613SEAT BELT ASSEMBLIES
+R.R.O. 1990, Reg. 612SCHOOL BUSES
+R.R.O. 1990, Reg. 610SAFETY HELMETS
+R.R.O. 1990, Reg. 609RESTRICTED USE OF THE KING'S HIGHWAY AND TOLL HIGHWAYS
+R.R.O. 1990, Reg. 608RESTRICTED USE OF LEFT LANES BY COMMERCIAL MOTOR VEHICLES
+R.R.O. 1990, Reg. 607RECIPROCAL SUSPENSION OF LICENCES
+R.R.O. 1990, Reg. 605PARKING OF VEHICLES IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 604PARKING
+R.R.O. 1990, Reg. 603OVER-DIMENSIONAL FARM VEHICLES
+R.R.O. 1990, Reg. 599HIGHWAY CLOSINGS
+R.R.O. 1990, Reg. 598GROSS WEIGHT ON BRIDGES
+R.R.O. 1990, Reg. 596GENERAL
+R.R.O. 1990, Reg. 595GARAGE LICENCES
+R.R.O. 1990, Reg. 587EQUIPMENT
+R.R.O. 1990, Reg. 581ACCESSIBLE PARKING FOR PERSONS WITH DISABILITIES
+R.R.O. 1990, Reg. 579DESIGNATION OF HIGHWAYS
+R.R.O. 1990, Reg. 577COVERING OF LOADS
+Highway Traffic Act
+R.R.O. 1990, REGULATION 608
+RESTRICTED USE OF LEFT LANES BY COMMERCIAL MOTOR VEHICLES
+Current
+Consolidation period: July 30, 2026 - e-Laws currency date (October 22, 2026)
+Last amendment: 271/26.
+This is the English version of a bilingual regulation.
+Legislative History
+1. (1) Subject to subsection (2), no person shall operate a commercial motor vehicle or any combination of a commercial motor vehicle and a towed vehicle that exceeds 6.5 metres in length in the left lane or, where the left lane has been designated as a high occupancy vehicle lane, in the lane adjacent to the high occupancy vehicle lane of those portions of a highway described in the Schedules. O. Reg. 113/25, s. 1.
+(2) Subsection (1) does not apply to a person operating a commercial motor vehicle if,
+(a) the vehicle is a bus, an ambulance or a fire apparatus;
+(b) the vehicle is engaged in maintenance or construction;
+(c) the vehicle is a tow truck that has been requested to provide towing services or roadside assistance services to a vehicle in or near the left lane, and operating the tow truck in the lane is necessary to access the location of the vehicle; or
+(d) an emergency requires the use of the lane by the vehicle. O. Reg. 113/25, s. 1.
+(3) In this section,
+“towing services” and “roadside assistance services” have the same meanings as in the Towing and Storage Safety and Enforcement Act, 2021. O. Reg. 113/25, s. 1.
+2. (1) A sign indicating that commercial motor vehicles are prohibited in a lane of a highway shall be in the form and dimensions prescribed and illustrated in the following Figure:
+Text alternative: Illustration of an overhead sign containing an image at the top of a truck in a circle with an interdictory stroke “no” symbol. Below that appear the words “OVER 6.5 m” and a black arrow appears at the bottom of the sign pointing down. The sign has a white reflective background with the truck image, arrow and words appearing in black. The circular “no” symbol is in red. The following measurements are written below the sign: (90 x 150) cm. The sign is surrounded by measurements of its different elements. This text alternative is provided for convenience only and does not form part of the official law.
+R.R.O. 1990, Reg. 608, s. 2 (1); O. Reg. 619/05, s. 2 (1); O. Reg. 91/15, s. 1 (1).
+(1.1) Despite subsection (1), in an area designated under the French Language Services Act, a sign indicating that commercial motor vehicles are prohibited in a lane of a highway shall be in the form and dimensions prescribed and illustrated in the following Figure:
+Text alternative: Illustration of an overhead sign containing an image at the top of a truck in a circle with an interdictory stroke “no” symbol. Below that appear the words “OVER/PLUS DE 6.5 m” and a black arrow appears at the bottom of the sign pointing down. The sign has a white reflective background with the truck image, arrow and words appearing in black. The circular “no” symbol is in red. The following measurements are written below the sign: (90 x 150) cm. The sign is surrounded by measurements of its different elements. This text alternative is provided for convenience only and does not form part of the official law.
+O. Reg. 442/93, s. 1 (1); O. Reg. 619/05, s. 2 (2); O. Reg. 91/15, s. 1 (2).
+(2) The sign referred to in subsection (1) or (1.1) shall be erected directly above the lane on those portions of a highway described in the Schedules. O. Reg. 442/93, s. 1 (2); O. Reg. 619/05, s. 2 (3); O. Reg. 201/16, s. 2.
+3. (1) Where the conditions make it impracticable to place a sign in accordance with the requirements of section 2, a sign indicating that commercial motor vehicles are prohibited in a lane of a highway shall be in the form and dimensions illustrated in the following Figure:
+Text alternative: Illustration of a ground mounted sign containing an image at the top of a truck in a circle with an interdictory stroke “no” symbol. Below that appear the words “OVER 6.5 m”. At the bottom of the sign on the left side appear the words “THIS LANE” and on the right side appears a black arrow pointing down and diagonally to the right. The sign has a white reflective background with the truck image, arrow and words appearing in black. The circular “no” symbol is in red. The following measurements are written below the sign: (90 x 150) cm. The sign is surrounded by measurements of its different elements. This text alternative is provided for convenience only and does not form part of the official law.
+R.R.O. 1990, Reg. 608, s. 3 (1); O. Reg. 619/05, s. 3 (1); O. Reg. 91/15, s. 2 (1).
+(1.1) Despite subsection (1), in an area designated under the French Language Services Act, where the conditions make it impracticable to place a sign in accordance with the requirements of section 2, a sign indicating that commercial motor vehicles are prohibited in a lane of a highway shall be in the form and dimensions illustrated in the following Figure:
+Text alternative: Illustration of a ground mounted sign containing an image at the top of a truck in a circle with an interdictory stroke “no” symbol. Below that appear the words “PLUS DE 6.5 m”. At the bottom of the sign on the left side appear the words “CETTE VOIE” and on the right side appears a black arrow pointing down and diagonally to the right. The sign has a white reflective background with the truck image, arrow and words appearing in black. The circular “no” symbol is in red. The following measurements are written below the sign: (90 x 150) cm. The sign is surrounded by measurements of its different elements. This text alternative is provided for convenience only and does not form part of the official law.
+O. Reg. 442/93, s. 2; O. Reg. 619/05, s. 3 (2); O. Reg. 91/15, s. 2 (2).
+(2) The sign referred to in subsection (1) shall be erected not less than 1.5 metres or more than 2.5 metres above the level of a highway described in the Schedules. R.R.O. 1990, Reg. 608, s. 3 (2); O. Reg. 201/16, s. 3 (1).
+(3) The sign referred to in subsection (1.1) shall be erected not less than 1.5 metres or more than 2.5 metres above the level of a highway described in the Schedules and shall be erected in combination with the sign required by subsection (1), below it, to the right of it or up to 100 metres beyond it. O. Reg. 442/93, s. 2; O. Reg. 201/16, s. 3 (2).
+SCHEDULE 1
+HIGHWAY NO. 400
+1. That part of the King’s Highway known as No. 400 lying between a point situate at its intersection with the King’s Highway known as No. 401 in the City of Toronto and a point situate at its intersection with the King’s Highway known as No. 11 in the Township of Springwater.
+O. Reg. 42/08, s. 1.
+SCHEDULE 2
+HIGHWAY NO. 401
+1. That part of the eastbound lanes of the King’s Highway known as No. 401 in the City of Kingston lying between a point situate 1300 metres measured easterly from its intersection with the centre line of the roadway known as Montreal Street and a point situate 750 metres measured westerly from its intersection with the centre line of the roadway known as Gardiner’s Road.
+2. That part of the westbound lanes of the King’s Highway known as No. 401 in the City of Kingston lying between a point situate 1800 metres measured easterly from its intersection with the centre line of the roadway known as Montreal Street and a point situate 3200 metres measured westerly from its intersection with the centre line of the roadway known as Gardiner’s Road.
+3. That part of the eastbound lanes of the King’s Highway known as No. 401 lying between a point situate 2440 metres measured westerly from its intersection with the centre line of the roadway known as Dixie Road in the City of Mississauga and a point situate 1400 metres. measured easterly from its intersection with the centre line of the roadway known as Nagle Road in the County of Northumberland.
+4. That part of the westbound lanes of the King’s Highway known as No. 401 lying between a point situate 2000 metres measured easterly from its intersection with the centre line of the roadway known as Nagle Road in the County of Northumberland and a point situate 1970 metres measured westerly from its intersection with the centre line of the roadway known as Dixie Road in the City of Mississauga.
+5. That part of the eastbound lanes of the King’s Highway known as No. 401 lying in the collector lanes between a point situate 1,860 metres measured westerly from its intersection with the centre line of the roadway known as Mississauga Road in the City of Mississauga and a point situate 2440 metres measured westerly from its intersection with the centre line of the roadway known as Dixie Road in the City of Mississauga.
+6. That part of the westbound lanes of the King’s Highway known as No. 401 lying in the collector lanes between a point situate 1970 metres measured westerly from its intersection with the centre line of the roadway known as Dixie Road in the City of Mississauga and a point situate 900 metres measured easterly from its intersection with the centre line of the roadway known as Winston Churchill Boulevard in the City of Mississauga.
+7. That part of the eastbound lanes of the King’s Highway known as No. 401 lying between a point situate 2,820 metres measured westerly from its intersection with the centre line of the roadway known as Winston Churchill Boulevard in the City of Mississauga and a point situate 1,860 metres measured westerly from its intersection with the centre line of the roadway known as Mississauga Road in the City of Mississauga.
+8. That part of the westbound lanes of the King’s Highway known as No. 401 lying between a point situate 25 metres measured easterly from its intersection with the centre line of the roadway known as Winston Churchill Boulevard in the City of Mississauga and a point situate 2,555 metres measured westerly from its intersection with the centre line of the roadway known as Winston Churchill Boulevard in the City of Mississauga.
+9. That part of the eastbound lanes of the King’s Highway known as No. 401 lying in the collector lanes between a point situate 1,310 metres measured easterly from its intersection with the centre line of the roadway known as James Snow Parkway in the Town of Milton and a point situate 2,820 metres measured westerly from its intersection with the centre line of the roadway known as Winston Churchill Boulevard in the City of Mississauga.
+10. That part of the westbound lanes of the King’s Highway known as No. 401 lying in the collector lanes between a point situate 990 metres measured easterly from its intersection with the centre line of the roadway known as Trafalgar Road in the Town of Milton and a point situate 720 metres measured easterly from its intersection with the centre line of the roadway known as James Snow Parkway in the Town of Milton.
+11. That part of the eastbound lanes of the King’s Highway known as No. 401 lying between a point situate at its intersection with the King’s Highway known as No. 8 in the City of Cambridge and a point situate 990 metres measured easterly at its intersection with the centre line of the roadway known James Snow Parkway in the Town of Milton.
+12. That part of the westbound lanes of the King’s Highway known as No. 401 lying between a point situate 216 metres measured easterly from its intersection with the centre line of the roadway known as James Snow Parkway in the Town of Milton and a point situate at its intersection with the King’s Highway known as No. 8 in the City of Cambridge.
+13. That part of the King’s Highway known as No. 401 lying between a point situate at its intersection with the King’s Highway known as No. 8 in the City of Cambridge and a point situate 1740 metres measured westerly from its intersection with the centre line of the roadway known as Wellington Road in the City of London.
+14. That part of the eastbound lanes of the King’s Highway known as No. 401 lying between a point situate 208 metres measured westerly from its intersection with the centre line of the King’s Highway known as No. 7902 (also known as Ojibway Parkway) in the City of Windsor and a point situate 1,085 metres measured easterly from its intersection with the centre line of the roadway known as Chatham-Kent Road 2 (also known as Queen’s Line) in the Municipality of Chatham-Kent.
+15. That part of the westbound lanes of the King’s Highway known as No. 401 lying between a point situate 1,570 metres measured westerly from its intersection with the centre line of the roadway known as Chatham-Kent Road 7 (also known as Merlin Road) in the Municipality of Chatham-Kent and a point situate 86 metres measured westerly from its intersection with the centre line of the roadway known as Cousineau Road within the Town of LaSalle.
+O. Reg. 524/22, s. 1; O. Reg. 271/26, s. 1.
+SCHEDULE 3
+HIGHWAY NO. 403
+1. That part of the westbound lanes of the King’s Highway known as No. 403 in the City of Mississauga lying between a point situate at its intersection with the roadway known as Cawthra Road and a point situate at its intersection with the roadway known as Glen Erin Drive.
+2. That part of the eastbound lanes of the King’s Highway known as No. 403 in the City of Mississauga lying between a point situate 910 metres measured westerly from its intersection with the centre line of the roadway known as Winston Churchill Boulevard and a point situate at its intersection with the roadway known as Eglinton Avenue East.
+3. That part of the westbound lanes of the King’s Highway known as No. 403 lying between a point situate at its intersection with the roadway known as King Road in the City of Burlington and a point situate at its intersection with the roadway known as Golf Links in the City of Hamilton.
+O. Reg. 42/08, s. 1.
+SCHEDULE 4
+HIGHWAY NO. 404
+1. That part of the King’s Highway known as No. 404 lying between a point situate at its intersection with the roadway known as Van Horne Avenue in the City of Toronto and a point situate 1400 metres measured southerly from its intersection with the centre line of the roadway known as Aurora Road in the Town of Aurora.
+O. Reg. 42/08, s. 1.
+SCHEDULE 5
+HIGHWAY 407
+1. That part of the private toll highway known as Highway 407 lying between a point situate at its intersection with the King’s Highway known as the Queen Elizabeth Way in the City of Burlington and a point situate at the centre line of the underpass structure of the roadway known as Brock Road in the City of Pickering.
+O. Reg. 26/19, s. 1.
+SCHEDULE 5.1
+HIGHWAY 407 east
+1. That part of the King’s Highway known as Highway 407 East lying between a point situate at the centre line of the underpass structure of the roadway known as Brock Road in the City of Pickering and a point situate 750 metres measured easterly from its intersection with the centre line of the roadway known as Lake Ridge Road in the Town of Whitby.
+O. Reg. 201/16, s. 4; O. Reg. 26/19, s. 2.
+SCHEDULE 6
+HIGHWAY NO. 409
+1. That part of the King’s Highway known as No. 409 in the City of Toronto lying between a point situate at its intersection with the King’s Highway known as No. 401 and a point situate at its intersection with the roadway known as Carlingview Drive.
+O. Reg. 42/08, s. 1.
+Schedule 7
+Highway No. 410
+1. That part of the northbound lanes of the King’s Highway known as No. 410 lying between a point situate 520 metres measured northerly from its intersection with the centre line of the roadway known as Courtneypark Drive East in the City of Mississauga in The Regional Municipality of Peel and a point situate at its intersection with the roadway known as Bovaird Drive East in the City of Brampton in The Regional Municipality of Peel.
+2. That part of the southbound lanes of the King’s Highway known as No. 410 lying between a point situate 720 metres measured southerly from its intersection with the centre line of the roadway known as Bovaird Drive East in the City of Brampton in The Regional Municipality of Peel and a point situate at its intersection with the roadway known as Courtneypark Drive East in the City of Mississauga in The Regional Municipality of Peel.
+O. Reg. 108/20, s. 1.
+SCHEDULE 8
+HIGHWAY NO. 417
+1. That part of the westbound lanes of the King’s Highway known as No. 417 in the City of Ottawa lying between a point situate at its intersection with the roadway known as St. Laurent Boulevard and a point situate 850 metres measured easterly from its intersection with the centre line of the roadway known as Richmond Road.
+2. That part of the westbound lanes of the King’s Highway known as No. 417 in the City of Ottawa lying between a point situate 370 metres measured westerly from its intersection with the centre line of the roadway known as Richmond Road and a point situate 265 metres measured easterly from its intersection with the centre line of the roadway known as Moodie Drive.
+3. That part of the westbound lanes of the King’s Highway known as No. 417 in the City of Ottawa lying between a point situate 1105 metres measured westerly from its intersection with the centre line of the roadway known as Moodie Drive and point situate 965 metres measured easterly from its intersection with the centre line of the roadway known as Palladium Drive.
+4. That part of the westbound lanes of the King’s Highway known as No. 417 in the City of Ottawa lying between a point situate 465 metres measured easterly from its intersection with the centre line of the roadway known as Palladium Drive and a point situate 975 metres measured westerly from its intersection with the centre line of the roadway known as Carp Road.
+5. That part of the eastbound lanes of the King’s Highway known as No. 417 in the City of Ottawa lying between a point situate 500 metres measured westerly from its intersection with the centre line of the roadway known as Carp Road and a point situate at its intersection with the roadway known as St. Laurent Boulevard.
+O. Reg. 42/08, s. 1; O. Reg. 366/11, s. 1; O. Reg. 285/12, s. 1; O. Reg. 204/14, s. 1.
+SCHEDULE 9
+HIGHWAY NO. 427
+1. That part of the southbound lanes of the King’s Highway known as No. 427 lying between a point situate at its intersection with the roadway known as Rutherford Road in the City of Vaughan in The Regional Municipality of York and a point situate at its intersection with the roadway known as Airport Road where Airport Road continues as Dixon Road in the City of Toronto.
+2. That part of the northbound lanes of the King’s Highway known as No. 427 lying between a point situate at its intersection with the roadway known as Renforth Drive in the City of Toronto and a point 600 metres measured southerly from its intersection with the centre line of the roadway known as Rutherford Road in the City of Vaughan in The Regional Municipality of York.
+3. That part of the King’s Highway known as No. 427 in the City of Toronto lying between a point situate at its intersection with the roadway known as Rathburn Road and a point situate at its intersection with the roadway known as Dundas Street West.
+O. Reg. 42/08, s. 1; O. Reg. 638/21, s. 1.
+SCHEDULE 10
+QUEEN ELIZABETH WAY
+1. That part of the eastbound lanes of the King’s Highway known as the Queen Elizabeth Way lying between a point situate 1500 metres measured westerly from its intersection with the centre line of the roadway known as Ford Drive in the Town of Oakville and a point situate 25 metres measured westerly from its intersection with the centre line of the roadway known as The East Mall in the City of Toronto.
+2. That part of the westbound lanes of the King’s Highway known as the Queen Elizabeth Way lying between a point situate 25 metres measured westerly from its intersection with the centre line of the roadway known as The East Mall in the City of Toronto and a point situate 500 metres measured westerly from its intersection with the centre line of the roadway known as Ford Drive in the Town of Oakville.
+3. That part of the eastbound lanes of the King’s Highway known as the Queen Elizabeth Way lying between a point situate 500 metres measured northerly from its intersection with the roadway known as North Shore Boulevard in the City of Burlington and a point situate 800 metres measured westerly from its intersection with the roadway known as Glendale Avenue in the Town of Niagara-on-the-Lake.
+4. That part of the westbound lanes of the King’s Highway known as the Queen Elizabeth Way lying between a point situate at its intersection with the centre line of the roadway known as Mountain Road in the City of Niagara Falls and a point situate 500 metres measured northerly from its intersection with the roadway known as North Shore Boulevard in the City of Burlington.
+5. That part of the eastbound lanes of the King’s Highway known as the Queen Elizabeth Way lying between a point situate 1120 metres measured easterly from its intersection with the roadway known as Glendale Avenue in the Town of Niagara-on-the-Lake and a point situate at its intersection with the centre line of the roadway known as Mountain Road in the City of Niagara Falls.
+O. Reg. 42/08, s. 1; O. Reg. 408/11, s. 1.
+SCHEDULE 11
+QUEEN ELIZABETH WAY AND HIGHWAY NO. 403
+1. That part of the eastbound lanes of the King’s Highway known as the Queen Elizabeth Way and No. 403 lying between a point situate 785 metres measured westerly from its intersection with the centre line of the roadway known as Guelph Line in the City of Burlington and a point situate 1500 metres measured westerly from its intersection with the centre line of the roadway known as Ford Drive in the Town of Oakville.
+2. That part of the westbound lanes of the King’s Highway known as the Queen Elizabeth Way and No. 403 lying between a point situate 500 metres measured westerly from its intersection with the centre line of the roadway known as Ford Drive in the Town of Oakville and a point situate 15 metres measured easterly from its intersection with the centre line of the roadway known as Walkers Line in the City of Burlington.
+O. Reg. 42/08, s. 1; O. Reg. 460/11, s. 1.
+schedule 12
+highway No. 7
+1. That part of the eastbound lanes of the King’s Highway known as No. 7 in the City of Kitchener in The Regional Municipality of Waterloo lying between a point situate 230 metres measured westerly from its intersection with the centre line of the roadway known as King Street East and a point situate at its intersection with the centre line of the roadway known as Wedgewood Drive.
+2. That part of the westbound lanes of the King’s Highway known as No. 7 in the City of Kitchener in The Regional Municipality of Waterloo lying between a point situate 45 metres measured westerly from its intersection with the centre line of the roadway known as King Street East and a point situate at its intersection with the centre line of the roadway known as Wedgewood Drive.
+O. Reg. 18/18, s. 2.
+schedule 13
+Highway no. 8
+1. That part of the eastbound lanes of the King’s Highway known as No. 8 in the City of Kitchener in The Regional Municipality of Waterloo lying between a point situate 110 metres measured easterly from its intersection with the centre line of the roadway known as Franklin Street North and a point situate 70 metres measured westerly from its intersection with the centre line of the roadway known as Sportsworld Drive.
+2. That part of the westbound lanes of the King’s Highway known as No. 8 in the City of Kitchener in The Regional Municipality of Waterloo lying between a point situate 275 metres measured westerly from its intersection with the centre line of the roadway known as Fairway Road South and a point situate 330 metres measured westerly from its intersection with the centre line of the roadway known as King Street East.
+O. Reg. 18/18, s. 2.
+schedule 14
+highway no. 7/8
+1. That part of the eastbound lanes of the King’s Highway known as No. 7/8 in the City of Kitchener in The Regional Municipality of Waterloo lying between a point situate 230 metres measured westerly from its intersection with the centre line of the roadway known as King Street East and a point situate 170 metres measured easterly from its intersection with the centre line of the roadway known as Fischer-Hallman Road.
+2. That part of the westbound lanes of the King’s Highway known as No. 7/8 in the City of Kitchener in The Regional Municipality of Waterloo lying between a point situate 45 metres measured westerly from its intersection with the centre line of the roadway known as King Street East and a point situate 170 metres measured easterly from its intersection with the centre line of the roadway known as Fischer-Hallman Road.
+O. Reg. 18/18, s. 2.
+Accessibility
+Privacy
+Contact us
+Terms of use
+© King’s Printer for Ontario, 2012-24
+FrTop

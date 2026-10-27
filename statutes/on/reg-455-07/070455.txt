@@ -1,0 +1,204 @@
+O. Reg. 455/07 RACES, CONTESTS AND STUNTS | ontario.ca
+Search within this document
+Search within this document
+Submit
+Use exact search
+How do I build my search term?
+Use these search operators to perform more specific searches and narrow down your results. See how to use e-Laws for more detailed descriptions on search operators.
+| Operator | Example | Function
+| No operator | Human rights | Searches for documents containing all of your specified search terms.
+| AND | Human AND rights | Same as using no operator.
+| “x y z” (quotes) | “Human rights” | Searches for a multi-word phrase that contains all the search terms, in that order.
+| OR | engineer OR architect | Searches for documents containing 1 or more of the specified terms.
+| NOT | insurance NOT funds | Excludes a word from your search.
+| /# | fishing /4 hunting | Specifies how many words are allowed between the 2 search terms. This is called a proximity search.
+| ? | licen?e | Searches for terms with an interchangeable character. Replace the interchangeable character with a question mark.
+| (x, y) | (fishing OR hunting) AND licenses | Combines multiple search operators at once.
+O. Reg. 455/07: RACES, CONTESTS AND STUNTS
+Under:Highway Traffic Act, R.S.O. 1990, c. H.8
+Download WordPrint
+Versions
+Other regulations under the same Act
+Current
+September 12, 2021 - e-Laws currency date(October 22, 2026)
+August 27, 2021 - September 11, 2021
+Show 8 more
+Sort by: Regulation NumberTitle A-ZTitle Z-AMost recently amendedMost recently filed
+CitationTitleSort by: Regulation NumberTitle A-ZTitle Z-AMost recently amendedMost recently filed
+O. Reg. 327/26BICYCLE LANES
+O. Reg. 182/26ADMINISTRATIVE PENALTIES - ROAD SAFETY
+O. Reg. 136/26PILOT PROJECT - RIDESHARE SERVICES ALONG THE NORTHLANDER CORRIDOR
+O. Reg. 161/25PILOT PROJECT - AUTOMATED COMMERCIAL MOTOR VEHICLES
+O. Reg. 411/22PILOT PROJECT - LARGE QUADRICYCLES
+O. Reg. 355/22ADMINISTRATIVE PENALTIES FOR CONTRAVENTIONS DETECTED USING CAMERA SYSTEMS
+O. Reg. 354/22STREET CAR CAMERAS
+O. Reg. 185/22PORTABLE TRAFFIC CONTROL SYSTEMS
+O. Reg. 174/22CLASSES OF VEHICLES REQUIRING ANNUAL AND SEMI-ANNUAL INSPECTIONS
+O. Reg. 170/22VEHICLE INSPECTION CENTRES
+O. Reg. 169/22VEHICLE EMISSIONS
+O. Reg. 503/21AUTHORIZED REQUESTER PROGRAM
+O. Reg. 418/21PASSENGER TRANSPORTATION VEHICLES
+O. Reg. 407/21PILOT PROJECT - GOLF CARS
+O. Reg. 141/21PILOT PROJECT - CARGO POWER-ASSISTED BICYCLES
+O. Reg. 133/21ELECTRONIC DOCUMENTS
+O. Reg. 757/20SHORT-TERM VEHICLE IMPOUNDMENT UNDER SECTION 172 OF THE ACT
+O. Reg. 424/20SCHOOL BUS CAMERAS
+O. Reg. 389/19PILOT PROJECT - ELECTRIC KICK-SCOOTERS
+O. Reg. 331/18DEFINITION OF APPROVED DRUG SCREENING EQUIPMENT
+O. Reg. 215/18OVER-DIMENSIONAL VEHICLE ESCORTS
+O. Reg. 215/17PILOT PROJECT - LOW-SPEED VEHICLES
+O. Reg. 398/16ROAD-BUILDING MACHINES
+O. Reg. 227/16PILOT PROJECT - HOT LANES
+O. Reg. 194/16REPORTING TO THE REGISTRAR: ADMINISTRATIVE SUSPENSION OF DRIVERS' LICENCES
+O. Reg. 28/16PILOT PROJECT - THREE-WHEELED VEHICLES
+O. Reg. 419/15DEFINITIONS OF COMMERCIAL MOTOR VEHICLE AND TOW TRUCK
+O. Reg. 402/15PEDESTRIAN CROSSOVER SIGNS
+O. Reg. 306/15PILOT PROJECT - AUTOMATED VEHICLES
+O. Reg. 415/10SHORT-TERM VEHICLE IMPOUNDMENT UNDER SECTIONS 48.4 AND 55.2 OF THE ACT
+O. Reg. 369/09POWER-ASSISTED BICYCLES
+O. Reg. 366/09DISPLAY SCREENS AND HAND-HELD DEVICES
+O. Reg. 287/08CONDUCT REVIEW PROGRAMS
+O. Reg. 484/07LAMPS - USE OF FLASHING RED, GREEN OR BLUE LIGHTS
+O. Reg. 473/07LICENCES FOR DRIVING INSTRUCTORS AND DRIVING SCHOOLS
+O. Reg. 455/07RACES, CONTESTS AND STUNTS
+O. Reg. 273/07ADMINISTRATIVE PENALTIES
+O. Reg. 199/07COMMERCIAL MOTOR VEHICLE INSPECTIONS
+O. Reg. 555/06HOURS OF SERVICE
+O. Reg. 94/06BORDER APPROACH LANES
+O. Reg. 34/06PRE-EMPTING TRAFFIC CONTROL SIGNAL DEVICES
+O. Reg. 643/05CARRIAGE OF GOODS
+O. Reg. 620/05HIGH OCCUPANCY VEHICLE LANES
+O. Reg. 618/05DESIGNATION OF BUS BY-PASS SHOULDERS ON KING'S HIGHWAY
+O. Reg. 413/05VEHICLE WEIGHTS AND DIMENSIONS - FOR SAFE, PRODUCTIVE AND INFRASTRUCTURE-FRIENDLY VEHICLES
+O. Reg. 363/04SECURITY OF LOADS
+O. Reg. 11/04INTERNATIONAL REGISTRATION PLAN
+O. Reg. 316/03OPERATION OF OFF-ROAD VEHICLES ON HIGHWAYS
+O. Reg. 8/03LOCAL MUNICIPALITIES WHERE 80 KILOMETRES PER HOUR SPEED LIMIT APPLIES
+O. Reg. 393/02DEFINITIONS AND REQUIREMENTS UNDER SECTION 142.1 OF THE ACT (YIELDING RIGHT OF WAY TO BUSES)
+O. Reg. 381/02TESTING, REPAIR AND COMPLIANCE REQUIREMENTS FOR UNSAFE VEHICLES UNDER SECTION 82 OF THE ACT
+O. Reg. 376/02CLASSIFICATION OF VEHICLES AS IRREPARABLE, SALVAGE AND REBUILT
+O. Reg. 510/99COMMUNITY SAFETY ZONES
+O. Reg. 277/99RED LIGHT CAMERA SYSTEM EVIDENCE
+O. Reg. 631/98LONG-TERM VEHICLE IMPOUNDMENT UNDER SECTION 55.1 OF THE ACT
+O. Reg. 381/98SPECIAL PERMITS
+O. Reg. 512/97CRITICAL DEFECTS OF COMMERCIAL MOTOR VEHICLES
+O. Reg. 424/97COMMERCIAL MOTOR VEHICLE OPERATORS' INFORMATION
+O. Reg. 147/97TOLL DEVICES
+O. Reg. 103/97STANDARDS TO DETERMINE ALLOWABLE GROSS VEHICLE WEIGHT FOR BRIDGES
+O. Reg. 341/94DRIVER LICENCE EXAMINATIONS
+O. Reg. 340/94DRIVERS' LICENCES
+O. Reg. 339/94DEMERIT POINT SYSTEM
+O. Reg. 601/93USED VEHICLE INFORMATION PACKAGE
+R.R.O. 1990, Reg. 631YIELD RIGHT-OF-WAY SIGNS IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 630VEHICLES ON CONTROLLED-ACCESS HIGHWAYS
+R.R.O. 1990, Reg. 629ACCESSIBLE VEHICLES
+R.R.O. 1990, Reg. 628VEHICLE PERMITS
+R.R.O. 1990, Reg. 627USE OF CONTROLLED-ACCESS HIGHWAYS BY PEDESTRIANS
+R.R.O. 1990, Reg. 626TRAFFIC CONTROL SIGNAL SYSTEMS
+R.R.O. 1990, Reg. 625TIRE STANDARDS AND SPECIFICATIONS
+R.R.O. 1990, Reg. 624STOP SIGNS IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 623STOP SIGNS AT INTERSECTIONS
+R.R.O. 1990, Reg. 622STOPPING OF VEHICLES ON PARTS OF THE KING'S HIGHWAY
+R.R.O. 1990, Reg. 621SPEED LIMITS IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 620SPEED LIMITS IN PROVINCIAL PARKS
+R.R.O. 1990, Reg. 619SPEED LIMITS
+R.R.O. 1990, Reg. 618SPECIFICATIONS AND STANDARDS FOR TRAILER COUPLINGS
+R.R.O. 1990, Reg. 616SLOW MOVING VEHICLE SIGN
+R.R.O. 1990, Reg. 615SIGNS
+R.R.O. 1990, Reg. 613SEAT BELT ASSEMBLIES
+R.R.O. 1990, Reg. 612SCHOOL BUSES
+R.R.O. 1990, Reg. 610SAFETY HELMETS
+R.R.O. 1990, Reg. 609RESTRICTED USE OF THE KING'S HIGHWAY AND TOLL HIGHWAYS
+R.R.O. 1990, Reg. 608RESTRICTED USE OF LEFT LANES BY COMMERCIAL MOTOR VEHICLES
+R.R.O. 1990, Reg. 607RECIPROCAL SUSPENSION OF LICENCES
+R.R.O. 1990, Reg. 605PARKING OF VEHICLES IN TERRITORY WITHOUT MUNICIPAL ORGANIZATION
+R.R.O. 1990, Reg. 604PARKING
+R.R.O. 1990, Reg. 603OVER-DIMENSIONAL FARM VEHICLES
+R.R.O. 1990, Reg. 599HIGHWAY CLOSINGS
+R.R.O. 1990, Reg. 598GROSS WEIGHT ON BRIDGES
+R.R.O. 1990, Reg. 596GENERAL
+R.R.O. 1990, Reg. 595GARAGE LICENCES
+R.R.O. 1990, Reg. 587EQUIPMENT
+R.R.O. 1990, Reg. 581ACCESSIBLE PARKING FOR PERSONS WITH DISABILITIES
+R.R.O. 1990, Reg. 579DESIGNATION OF HIGHWAYS
+R.R.O. 1990, Reg. 577COVERING OF LOADS
+Highway Traffic Act
+ONTARIO REGULATION 455/07
+Races, Contests and Stunts
+Current
+Consolidation period: September 12, 2021 - e-Laws currency date (October 22, 2026)
+Last amendment: 598/21.
+This is the English version of a bilingual regulation.
+Legislative History
+1. Revoked: O. Reg. 406/08, s. 1.
+Definition, “race” and “contest”
+2. (1) For the purposes of section 172 of the Act, “race” and “contest” include any activity where one or more persons engage in any of the following driving behaviours:
+1. Driving two or more motor vehicles at a rate of speed that is a marked departure from the lawful rate of speed and in a manner that indicates the drivers of the motor vehicles are engaged in a competition.
+2. Driving a motor vehicle in a manner that indicates an intention to chase another motor vehicle.
+3. Driving a motor vehicle without due care and attention, without reasonable consideration for other persons using the highway or in a manner that may endanger any person by,
+i. driving a motor vehicle at a rate of speed that is a marked departure from the lawful rate of speed,
+ii. outdistancing or attempting to outdistance one or more other motor vehicles while driving at a rate of speed that is a marked departure from the lawful rate of speed, or
+iii. repeatedly changing lanes in close proximity to other vehicles so as to advance through the ordinary flow of traffic while driving at a rate of speed that is a marked departure from the lawful rate of speed. O. Reg. 455/07, s. 2 (1).
+(2) In this section,
+“marked departure from the lawful rate of speed” means a rate of speed that may limit the ability of a driver of a motor vehicle to prudently adjust to changing circumstances on the highway. O. Reg. 455/07, s. 2 (2).
+Definition, “stunt”
+3. For the purposes of section 172 of the Act, “stunt” includes any activity where one or more persons engage in any of the following driving behaviours:
+1. Driving a motor vehicle in a manner that indicates an intention to lift some or all of its tires from the surface of the highway, including driving a motorcycle with only one wheel in contact with the ground, but not including the use of lift axles on commercial motor vehicles.
+2. Driving a motor vehicle in a manner that indicates an intention to cause some or all of its tires to lose traction with the surface of the highway while turning.
+3. Driving a motor vehicle in a manner that indicates an intention to spin it or cause it to circle, without maintaining control over it.
+4. Driving two or more motor vehicles side by side or in proximity to each other, where one of the motor vehicles occupies a lane of traffic or other portion of the highway intended for use by oncoming traffic for a period of time that is longer than is reasonably required to pass another motor vehicle.
+5. Driving a motor vehicle with a person in the trunk of the motor vehicle.
+6. Driving a motor vehicle while the driver is not sitting in the driver’s seat.
+7. Driving a motor vehicle at a rate of speed that is 40 kilometres per hour or more over the speed limit, if the speed limit is less than 80 kilometres per hour.
+7.0.1 Driving a motor vehicle at a rate of speed that is 50 kilometres per hour or more over the speed limit, if the speed limit is 80 kilometres per hour or more.
+7.1 Driving a motor vehicle at a rate of speed that is 150 kilometres per hour or more.
+8. Driving a motor vehicle without due care and attention, without reasonable consideration for other persons using the highway or in a manner that may endanger any person by,
+i. driving a motor vehicle in a manner that indicates an intention to prevent another vehicle from passing,
+ii. stopping or slowing down a motor vehicle in a manner that indicates the driver’s sole intention in stopping or slowing down is to interfere with the movement of another vehicle by cutting off its passage on the highway or to cause another vehicle to stop or slow down in circumstances where the other vehicle would not ordinarily do so,
+iii. driving a motor vehicle in a manner that indicates an intention to drive, without justification, as close as possible to another vehicle, pedestrian or fixed object on or near the highway, or
+iv. making a left turn where,
+(A) the driver is stopped at an intersection controlled by a traffic control signal system in response to a circular red indication;
+(B) at least one vehicle facing the opposite direction is similarly stopped in response to a circular red indication; and
+(C) the driver executes the left turn immediately before or after the system shows only a circular green indication in both directions and in a manner that indicates an intention to complete or attempt to complete the left turn before the vehicle facing the opposite direction is able to proceed straight through the intersection in response to the circular green indication facing that vehicle. O. Reg. 455/07, s. 3; O. Reg. 320/19, s. 1; O. Reg. 410/21, s. 1.
+Exceptions
+4. (1) Despite section 2, “race” and “contest” do not include,
+(a) a rally, navigational rally or similar event that is conducted,
+(i) under the supervision of the Canadian Association of Rally Sport,
+(ii) under the supervision of a club or association approved in writing by the Ministry, or
+(iii) with the written approval of the road authority or road authorities having jurisdiction over the highway or highways used;
+(b) motor vehicle owners engaged in a tour, scenic drive, treasure hunt or other similar motoring event in which the participants drive responsibly and in a manner that indicates an overall intention to comply with the provisions of the Act; or
+(c) an event held on a closed course with the written approval of the road authority having jurisdiction over the highway, including any event lawfully using any of the trademarks “CART”, “Formula One”, “Indy”, “IndyCar”, “IRL” or “NASCAR”. O. Reg. 455/07, s. 4 (1).
+(2) Despite sections 2 and 3, “race”, “contest” and “stunt” do not include any activity required for the lawful operation of motor vehicles described in subsections 62 (15.1) or 128 (13) of the Act, or the lawful operation of an emergency vehicle as defined in subsection 144 (1) of the Act. O. Reg. 455/07, s. 4 (2).
+Application of Act
+5. (1) Pursuant to section 1.1 of the Act, section 172 of the Act applies to a specified place. O. Reg. 598/21, s. 1.
+(2) For greater certainty, a provision in section 172 of the Act that governs the suspension of a driver’s licence or the impoundment of a motor vehicle applies to a specified place. O. Reg. 598/21, s. 1.
+(3) Where section 172 of the Act applies to a specified place, the following provisions of this Regulation also apply in respect of the place:
+1. Paragraph 2 of subsection 2 (1).
+2. Paragraph 1, 2, 3, 5 or 6 of section 3. O. Reg. 598/21, s. 1.
+(4) Where section 172 of the Act applies to a specified place, the following provisions of the Act also apply in respect of the place:
+1. Subsection 7 (5).
+2. Subsection 14 (1).
+3. Section 33.
+4. Subsection 35 (3).
+5. Section 82.
+6. Section 134.
+7. Section 212.
+8. Section 216.
+9. Subsection 217 (2).
+10. Section 221. O. Reg. 598/21, s. 1.
+(5) This section does not apply to,
+(a) a race track, motor speedway or go-cart track that is built specifically for that purpose in a specified place; or
+(b) an event similar to those described in section 4 that is held in a specified place with the written approval of the road authorities having jurisdiction over any highways from which there is road access to the specified place. O. Reg. 598/21, s. 1.
+(6) In this section,
+“driver” includes a person with care, charge or control of a motor vehicle; (“conducteur”)
+“parking lot” includes,
+(a) any parking lot, garage or structure, whether public or private, paved or unpaved, flat or multilevel, above or below grade, including any driveway or road that connects the parking lot to a highway,
+(b) any private, commercial or industrial parking lot or empty lot from which the public would ordinarily be excluded, and
+(c) any parking lot into which drivers are expressly or impliedly invited or permitted to enter, with or without payment, and no matter whether payment is made or whether the driver entered with or without permission; (“parc de stationnement”)
+“specified place” means any parking lot, beach, park, bike path or trail, farm field or sports field. (“endroit précisé”) O. Reg. 598/21, s. 1.
+Accessibility
+Privacy
+Contact us
+Terms of use
+© King’s Printer for Ontario, 2012-24
+FrTop

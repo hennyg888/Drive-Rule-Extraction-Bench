@@ -1,0 +1,17 @@
+{
+ "title": "O. Reg. 339/94, Demerit Point System",
+ "jurisdiction": "Ontario",
+ "source": "e-Laws (ontario.ca/laws), official consolidation",
+ "page_url": "https://www.ontario.ca/laws/regulation/940339",
+ "word_download_url": "https://www.ontario.ca/laws/docs/940339_e.doc",
+ "consolidation_period_from": "October 15, 2026",
+ "current_to": "October 22, 2026",
+ "last_amendment": "329/26.",
+ "downloaded_utc": "2026-10-27T19:28Z",
+ "how": "Word file: direct download. *.rendered.html: the e-Laws page rendered with headless Chrome (--dump-dom) so the currency date and body are present. *.txt: plain text made from the rendered page, one block element per line.",
+ "files_sha256": {
+  "940339.doc": "c436cda6428df81110f80fe283d5fb95d061dd4d47cab593a0b26a5667be4acb",
+  "940339.rendered.html": "42d4f6e09d53d48ac42e1011954c0580d0753eb3710af4250ee11ac7a420259b",
+  "940339.txt": "a73a9f5eb711a8dce01fd81dfaee71ebfd10721586e57abbf12e0016bf7dd59a"
+ }
+}

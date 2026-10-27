@@ -1,0 +1,17 @@
+{
+ "title": "R.R.O. 1990, Reg. 608, Restricted Use of Left Lanes by Commercial Motor Vehicles",
+ "jurisdiction": "Ontario",
+ "source": "e-Laws (ontario.ca/laws), official consolidation",
+ "page_url": "https://www.ontario.ca/laws/regulation/900608",
+ "word_download_url": "https://www.ontario.ca/laws/docs/900608_e.doc",
+ "consolidation_period_from": "July 30, 2026",
+ "current_to": "October 22, 2026",
+ "last_amendment": "271/26.",
+ "downloaded_utc": "2026-10-27T19:28Z",
+ "how": "Word file: direct download. *.rendered.html: the e-Laws page rendered with headless Chrome (--dump-dom) so the currency date and body are present. *.txt: plain text made from the rendered page, one block element per line.",
+ "files_sha256": {
+  "900608.doc": "9b5fc374de9c3d525cb450fb7d59ba679aded9779a6199014840641d24171d2b",
+  "900608.rendered.html": "2507a67ccdc565b4fdca1fe8b3ea07f5bd2f1c9afead70a04ef5c17ee53e2a9f",
+  "900608.txt": "4a6771c9d6be857fd0a7437f91008c82fd3215be3e2dcc5ab64e65e488e7bdc6"
+ }
+}
