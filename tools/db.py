@@ -12,6 +12,9 @@ Usage, from the repo root:
     python3 tools/db.py dump                 # db/rules.sqlite -> db/tables/*.jsonl, then commit
     python3 tools/db.py export --write       # rewrite rules.json and passing-rules-law.md from it
 
+Statements belong to runs (table run). Only the statements of a run with rules_json = 1 are a
+topic's rules.json; an extraction run of the pipeline (pipeline/PIPELINE.md) is kept beside it.
+
 Two tables are derived and never dumped: passage_part (which sentences or paragraphs a topic
 passage covers, matched by text) and statement_part (each statement split at its keywords).
 load and check rebuild them.
@@ -40,9 +43,13 @@ KEY_ORDER['tx'] = KEY_ORDER['ca']
 # Master tables in load order (parents first), each with the columns that order its dump.
 MASTER = [
     ('source', 'id'),
+    ('run', 'id'),
+    ('page', 'source_id, position'),
     ('unit', 'id'),
-    ('sentence_label', 'unit_id'),
-    ('sentence_word', 'unit_id, kind, position'),
+    ('unit_tag', 'unit_id'),
+    ('unit_topic', 'unit_id, topic'),
+    ('unit_vague', 'unit_id, position'),
+    ('selection', 'run_id, position'),
     ('vocabulary', 'kind, word'),
     ('statement', 'id'),
     ('statement_step', 'statement_id, position'),
@@ -62,6 +69,7 @@ DERIVED = ('passage_part', 'statement_part')
 
 KEYWORD = re.compile(r'\b(MUST NOT|SHOULD NOT|MUST|MAY|SHOULD|ONLY IF|IF VIOLATED|DONE WHEN|WHEN|WHILE|UNLESS|UNTIL|'
                      r'BECAUSE|IF|THEN)\b')
+IN_RULES_JSON = 'run_id IN (SELECT id FROM run WHERE rules_json = 1)'
 MODALS = {'MUST': 'LAW', 'MUST NOT': 'LAW', 'MAY': 'LAW', 'SHOULD': 'ADVICE', 'SHOULD NOT': 'ADVICE'}
 INLINE = set('JSRG')
 
@@ -187,7 +195,7 @@ def dump(db, tables=TABLES):
 def export(db, jurisdiction):
     out = []
     q = db.execute
-    for s in q('SELECT * FROM statement WHERE jurisdiction = ? ORDER BY position', (jurisdiction,)):
+    for s in q(f'SELECT * FROM statement WHERE jurisdiction = ? AND {IN_RULES_JSON} ORDER BY position', (jurisdiction,)):
         d = {'id': s['local_id']}
         if s['section'] is not None:
             d['section'] = s['section']
@@ -239,7 +247,7 @@ def outputs(db):
         if rows:
             out[os.path.join(base, 'rules.json')] = rules_json(rows)
         if db.execute('SELECT 1 FROM statement_law g JOIN statement s ON s.id = g.statement_id '
-                      'WHERE s.jurisdiction = ? LIMIT 1', (jur,)).fetchone():
+                      f'WHERE s.jurisdiction = ? AND s.{IN_RULES_JSON} LIMIT 1', (jur,)).fetchone():
             out[os.path.join(base, 'passing-rules-law.md')] = render_law_md.render(db, jur, LAW_PAGE_TITLE[jur], ROOT, base)
     return out
 
@@ -280,14 +288,46 @@ def check(db):
             errors.append(f'unit {u["id"]}: not found word for word in its source')
 
     # Statements and their sources.
-    for r in q("SELECT ss.statement_id, ss.unit_id, ss.quote, u.text, u.kind FROM statement_source ss "
-               "JOIN unit u ON u.id = ss.unit_id"):
-        if r['kind'] != 'passage':
-            errors.append(f'{r["statement_id"]}: source {r["unit_id"]} is not a passage')
+    for r in q("SELECT ss.statement_id, ss.unit_id, ss.quote, u.text, u.kind, s.run_id, "
+               "EXISTS (SELECT 1 FROM run x JOIN selection l ON l.run_id = x.input_run "
+               "        WHERE x.id = s.run_id AND l.unit_id = ss.unit_id) AS selected "
+               "FROM statement_source ss JOIN unit u ON u.id = ss.unit_id JOIN statement s ON s.id = ss.statement_id"):
+        if r['kind'] != 'passage' and not r['selected']:
+            errors.append(f'{r["statement_id"]}: source {r["unit_id"]} is neither a passage nor in its run\'s selection')
         elif r['quote'] and norm(r['quote']) not in norm(r['text']):
             warnings.append(f'{r["statement_id"]}: quote is not word for word in {r["unit_id"]}')
     for r in q("SELECT id FROM unit WHERE kind = 'passage' AND id NOT IN (SELECT passage_id FROM passage_part)"):
         warnings.append(f'{r["id"]}: passage matches no handbook sentence or paragraph')
+    for r in q("SELECT p.id, p.text, p.image, u.id AS uid, u.text AS utext, u.image AS uimage FROM unit p "
+               "JOIN unit u ON u.id = p.parent_id WHERE p.kind = 'passage'"):
+        if (r['image'] or r['uimage']) and r['image'] != r['uimage']:
+            errors.append(f'{r["id"]}: names {r["uid"]}, which is not its figure')
+        elif not r['image'] and norm(r['text']) not in norm(r['utext']) and norm(r['utext']) not in norm(r['text']):
+            errors.append(f'{r["id"]}: names {r["uid"]}, whose text it does not share')
+
+    # Runs read the stage before theirs; tags only describe their unit; a selection holds paragraphs.
+    order = {'tag': None, 'select': 'tag', 'extract': 'select'}
+    for r in q('SELECT r.*, i.stage AS input_stage, i.source_id AS input_source FROM run r '
+               'LEFT JOIN run i ON i.id = r.input_run'):
+        if r['input_run'] and (r['input_stage'] != order[r['stage']] or r['input_source'] != r['source_id']):
+            errors.append(f'run {r["id"]}: a {r["stage"]} run cannot read {r["input_run"]}')
+    for r in q('SELECT s.id, s.run_id FROM statement s JOIN run r ON r.id = s.run_id WHERE r.stage != \'extract\''):
+        errors.append(f'{r["id"]}: its run {r["run_id"]} is not an extraction')
+    for t in q('SELECT t.*, u.kind, u.image, r.stage, r.source_id, u.source_id AS unit_source FROM unit_tag t '
+               'JOIN unit u ON u.id = t.unit_id JOIN run r ON r.id = t.run_id'):
+        if t['stage'] != 'tag' or t['source_id'] != t['unit_source']:
+            errors.append(f'tag {t["unit_id"]}: run {t["run_id"]} is not a tagging run of its handbook')
+        if not (t['kind'] == 'sentence' or (t['kind'] == 'paragraph' and t['image'])):
+            errors.append(f'tag {t["unit_id"]}: only sentences and figures are tagged')
+        if (t['type'] == 'FIGURE') != bool(t['image']):
+            errors.append(f'tag {t["unit_id"]}: type FIGURE is for figures only, and every figure has it')
+    for v in q('SELECT v.*, u.text FROM unit_vague v JOIN unit u ON u.id = v.unit_id'):
+        if v['span'] not in v['text']:
+            errors.append(f'tag {v["unit_id"]}: vague span "{v["span"]}" is not words of the sentence')
+    for r in q("SELECT l.*, u.kind, u.source_id AS unit_source, x.stage, x.source_id FROM selection l "
+               "JOIN unit u ON u.id = l.unit_id JOIN run x ON x.id = l.run_id"):
+        if r['stage'] != 'select' or r['kind'] != 'paragraph' or r['unit_source'] != r['source_id']:
+            errors.append(f'selection {r["run_id"]} {r["local_id"]}: {r["unit_id"]} is not a paragraph of its handbook')
 
     words = {r['word'] for r in q('SELECT word FROM vocabulary')}
     for s in q('SELECT * FROM statement'):
@@ -377,40 +417,47 @@ def check(db):
 
     # Coverage, reported, never an error.
     for jur in FOLDERS:
-        n = q("SELECT COUNT(*) FROM statement WHERE jurisdiction = ?", jur)[0][0]
-        if not n:
-            continue
-        flags = q("SELECT COALESCE(g.status, 'not grounded') AS st, COUNT(*) AS n FROM occurrence o "
-                  "JOIN statement s ON s.id = o.statement_id LEFT JOIN grounding g ON g.occurrence_id = o.id "
-                  "WHERE s.jurisdiction = ? GROUP BY st ORDER BY st", jur)
-        info.append(f'{jur}: {n} statements; flags: ' + ', '.join(f'{r["st"]} {r["n"]}' for r in flags))
-    for jur in FOLDERS:
-        law = q("SELECT COUNT(*) FROM statement WHERE jurisdiction = ? AND strength = 'LAW'", jur)[0][0]
-        if not law or not q("SELECT 1 FROM statement_basis b JOIN statement s ON s.id = b.statement_id "
-                            "WHERE s.jurisdiction = ? LIMIT 1", jur):
-            continue
-        bare = q("SELECT COUNT(*) FROM law_without_basis WHERE jurisdiction = ?", jur)[0][0]
-        advice = q("SELECT COUNT(DISTINCT statement_id) FROM advice_with_law WHERE jurisdiction = ?", jur)[0][0]
-        info.append(f'{jur}: {law - bare} of {law} LAW statements cite a provision (view law_without_basis); '
-                    f'{advice} ADVICE statements have a provision behind them (view advice_with_law)')
-        lines, done = q("SELECT COUNT(*), COUNT(DISTINCT g.statement_id) FROM statement_law g JOIN statement s "
-                        "ON s.id = g.statement_id WHERE s.jurisdiction = ?", jur)[0]
-        left = q("SELECT COUNT(*) FROM law_not_added WHERE jurisdiction = ?", jur)[0][0]
-        info.append(f'{jur}: {lines} law lines added under {done} statements; {left} statements with a provision '
-                    f'behind them have none (view law_not_added)')
-    used = q("SELECT COUNT(DISTINCT u.id) FROM unit u JOIN sentence_label l ON l.unit_id = u.id "
-             "JOIN unit_use x ON x.unit_id = u.id")[0][0]
-    total = q("SELECT COUNT(*) FROM sentence_label")[0][0]
-    passing = q("SELECT COUNT(*) FROM sentence_label WHERE passing = 1")[0][0]
-    unused = q("SELECT COUNT(*) FROM passing_sentence_unused")[0][0]
+        for r in q("SELECT * FROM run WHERE stage = 'extract' AND id IN (SELECT run_id FROM statement WHERE jurisdiction = ?) "
+                   "ORDER BY rules_json DESC, id", jur):
+            info += coverage(q, r)
     for jur, folder in FOLDERS.items():
         idle = q("SELECT COUNT(*) FROM passage_unused WHERE source_id = ?", f'{folder}-handbook')[0][0]
         if idle:
             info.append(f'{jur}: {idle} topic passages are cited by no statement (view passage_unused)')
-    if total:
-        info.append(f'on: {used} of {total} handbook sentences are cited; {passing - unused} of the {passing} the '
-                    f'census marked as about passing are cited, {unused} are not (view passing_sentence_unused)')
+    for r in q("SELECT r.id, COUNT(t.unit_id) AS n FROM run r JOIN unit_tag t ON t.run_id = r.id GROUP BY r.id"):
+        topics = q("SELECT p.topic, COUNT(*) AS n FROM unit_topic p JOIN unit_tag t ON t.unit_id = p.unit_id "
+                   "WHERE t.run_id = ? GROUP BY p.topic", r['id'])
+        info.append(f'{r["id"]}: {r["n"]} sentences and figures tagged' +
+                    ''.join(f'; {x["n"]} about {x["topic"]}' for x in topics))
     return errors, warnings, info
+
+
+def coverage(q, run):
+    """What check reports about one extraction run: its flags, its law, and the tagged text it leaves out."""
+    rid, out = run['id'], []
+    n = q("SELECT COUNT(*) FROM statement WHERE run_id = ?", rid)[0][0]
+    flags = q("SELECT COALESCE(g.status, 'not grounded') AS st, COUNT(*) AS n FROM occurrence o "
+              "JOIN statement s ON s.id = o.statement_id LEFT JOIN grounding g ON g.occurrence_id = o.id "
+              "WHERE s.run_id = ? GROUP BY st ORDER BY st", rid)
+    out.append(f'{rid}: {n} statements; flags: ' + (', '.join(f'{r["st"]} {r["n"]}' for r in flags) or 'none'))
+    law = q("SELECT COUNT(*) FROM statement WHERE run_id = ? AND strength = 'LAW'", rid)[0][0]
+    if law and q("SELECT 1 FROM statement_basis b JOIN statement s ON s.id = b.statement_id WHERE s.run_id = ? LIMIT 1", rid):
+        bare = q("SELECT COUNT(*) FROM law_without_basis WHERE run_id = ?", rid)[0][0]
+        advice = q("SELECT COUNT(DISTINCT statement_id) FROM advice_with_law WHERE run_id = ?", rid)[0][0]
+        out.append(f'{rid}: {law - bare} of {law} LAW statements cite a provision (view law_without_basis); '
+                   f'{advice} ADVICE statements have a provision behind them (view advice_with_law)')
+        lines, done = q("SELECT COUNT(*), COUNT(DISTINCT g.statement_id) FROM statement_law g JOIN statement s "
+                        "ON s.id = g.statement_id WHERE s.run_id = ?", rid)[0]
+        left = q("SELECT COUNT(*) FROM law_not_added WHERE run_id = ?", rid)[0][0]
+        out.append(f'{rid}: {lines} law lines added under {done} statements; {left} statements with a provision '
+                   f'behind them have none (view law_not_added)')
+    tagged = q("SELECT COUNT(*) FROM unit_topic t JOIN unit u ON u.id = t.unit_id WHERE t.topic = ? AND u.source_id = ?",
+               run['topic'], run['source_id'])[0][0]
+    if tagged:
+        unused = q("SELECT COUNT(*) FROM topic_unit_unused WHERE run_id = ?", rid)[0][0]
+        out.append(f'{rid}: {tagged - unused} of the {tagged} sentences and figures tagged {run["topic"]} are cited, '
+                   f'{unused} are not (view topic_unit_unused)')
+    return out
 
 
 def main():

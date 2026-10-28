@@ -1,0 +1,522 @@
+{"id": "mto:sent:towing:001.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:001.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:002.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:002.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:003.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:003.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:003.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:004.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:004.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["M", "you may need a higher class of licence or an oversize vehicle permit"]]}
+{"id": "mto:sent:towing:004.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:005.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:006.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:006.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:006.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:006.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "clearly visible"]]}
+{"id": "mto:sent:towing:006.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:007.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "safe operating condition"]]}
+{"id": "mto:sent:towing:007.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "safe to operate"]]}
+{"id": "mto:sent:towing:008.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "strong enough"]]}
+{"id": "mto:sent:towing:009.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:010.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:011.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:012.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "as far apart as possible"]]}
+{"id": "mto:sent:towing:013.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:014.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "as far apart as possible"]]}
+{"id": "mto:sent:towing:015.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "as far apart as possible"]]}
+{"id": "mto:sent:towing:016.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:017.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:017.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "carefully"]]}
+{"id": "mto:sent:towing:018.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:019.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:019.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:020.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:021.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "good-quality"]]}
+{"id": "mto:sent:towing:021.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:021.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "the right trailer hitch"]]}
+{"id": "mto:sent:towing:021.4", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "securely"]]}
+{"id": "mto:sent:towing:022.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:022.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:022.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "some of the load"]]}
+{"id": "mto:sent:towing:023.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "strong enough"]]}
+{"id": "mto:para:towing:024", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:025.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:025.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:025.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["J", "overload"]]}
+{"id": "mto:sent:towing:025.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Too much weight"]]}
+{"id": "mto:sent:towing:025.5", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:026.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:026.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["S", "Generally"], ["J", "proper hitch weight"]]}
+{"id": "mto:sent:towing:026.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:026.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:026.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "too much weight"]]}
+{"id": "mto:sent:towing:027.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:027.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:027.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:028.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safe"]]}
+{"id": "mto:sent:towing:028.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:028.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "carefully"]]}
+{"id": "mto:sent:towing:028.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "slowly and carefully"]]}
+{"id": "mto:sent:towing:029.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:029.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:029.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:029.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:029.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "sharp"], ["J", "well ahead"]]}
+{"id": "mto:sent:towing:030.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:030.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:030.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "slowly"]]}
+{"id": "mto:sent:towing:030.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "well into the intersection"]]}
+{"id": "mto:sent:towing:031.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:031.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:031.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["R", "the fast lanes"]]}
+{"id": "mto:sent:towing:032.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:towing:032.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:towing:032.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "enough time and room"]]}
+{"id": "mto:sent:towing:032.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "more room"]]}
+{"id": "mto:sent:towing:032.5", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": ["passing"], "vague": [["J", "too soon"]]}
+{"id": "mto:sent:towing:032.6", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:towing:033.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:towing:033.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:towing:033.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:towing:033.4", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:towing:033.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "Carefully"]]}
+{"id": "mto:sent:towing:033.6", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": [["J", "A slight increase in speed"]]}
+{"id": "mto:sent:towing:034.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "very slowly"]]}
+{"id": "mto:sent:towing:034.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:034.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "until you are comfortable with your ability"]]}
+{"id": "mto:sent:towing:035.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:035.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:035.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:035.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:036.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:036.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "securely"]]}
+{"id": "mto:sent:towing:036.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["R", "Someone"]]}
+{"id": "mto:sent:towing:036.4", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:036.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:037.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:038.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:039.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:040.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:041.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:042.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:043.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:044.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:045.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:towing:046.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:001.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:001.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:001.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:002.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:002.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:003.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:004.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:005.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:006.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:007.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:007.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:008.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:009.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:010.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:011.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:012.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:012.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:013.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:014.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:015.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:016.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:017.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:017.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:018.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:019.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:020.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:021.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:022.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:022.2", "type": "META", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:023.1", "type": "META", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:024.1", "type": "META", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:025.1", "type": "META", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:026.1", "type": "META", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:027.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:027.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:028.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:029.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:030.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:031.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:032.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:032.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:033.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:034.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:035.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:036.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:037.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:037.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:038.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:039.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:040.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:041.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:test-yourself-sample-knowledge-test-questions:042.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:002.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:002.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:002.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:002.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "generally"]]}
+{"id": "mto:sent:level-two-road-test:003.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:003.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.10", "type": "CONSEQ", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.11", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "sufficient expressway driving experience"]]}
+{"id": "mto:sent:level-two-road-test:004.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.5", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.6", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.7", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:004.8", "type": "CONSEQ", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "sufficient highway driving experience"]]}
+{"id": "mto:sent:level-two-road-test:004.9", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:005.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:005.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:005.3", "type": "META", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:006.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:007", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:008.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:008.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:009.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:009.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:009.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:010.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "as soon as the way is clear"]]}
+{"id": "mto:sent:level-two-road-test:011.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:011.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:012.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:012.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:012.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:013.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:014.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:014.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:015.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:015.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:015.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "When traffic conditions allow"]]}
+{"id": "mto:sent:level-two-road-test:015.4", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:016.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "enough space"]]}
+{"id": "mto:sent:level-two-road-test:016.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:level-two-road-test:017.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:017.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:017.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:017.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:018.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:018.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:018.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:018.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:019.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:019.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:020.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:020.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:020.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "any doubt"]]}
+{"id": "mto:sent:level-two-road-test:020.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:level-two-road-test:020.5", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:021.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:021.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:021.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:021.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:022.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:022.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["J", "well into the turn"]]}
+{"id": "mto:sent:level-two-road-test:022.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:022.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Generally"]]}
+{"id": "mto:sent:level-two-road-test:023.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safe"]]}
+{"id": "mto:sent:level-two-road-test:023.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:023.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "slowly enough"]]}
+{"id": "mto:sent:level-two-road-test:024.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:025.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:025.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:025.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:026.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:026.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safe"]]}
+{"id": "mto:sent:level-two-road-test:026.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:027.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:028.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:028.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "moderately"]]}
+{"id": "mto:sent:level-two-road-test:028.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:028.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:029", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:030.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:030.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:030.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:031.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:031.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:032.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:032.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:032.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:033.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:034.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:034.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:035.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:035.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:035.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "When traffic conditions allow"]]}
+{"id": "mto:sent:level-two-road-test:035.4", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:036.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "enough space"]]}
+{"id": "mto:sent:level-two-road-test:036.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:level-two-road-test:037.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:037.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:037.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:037.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:038.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:038.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:039.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:039.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:039.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "any doubt"]]}
+{"id": "mto:sent:level-two-road-test:039.4", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:040.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:040.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:040.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:040.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:041.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:041.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["J", "well into the intersection"]]}
+{"id": "mto:sent:level-two-road-test:041.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:041.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Generally"]]}
+{"id": "mto:sent:level-two-road-test:042.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:043.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safe"]]}
+{"id": "mto:sent:level-two-road-test:043.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:043.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "moderately"]]}
+{"id": "mto:sent:level-two-road-test:043.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:043.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:044", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:045.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:045.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:045.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:046.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:046.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:047.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:047.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:047.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:048.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:049.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:049.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:050.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:050.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:level-two-road-test:051.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:051.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:051.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:051.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:052.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:052.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["J", "well into the intersection"]]}
+{"id": "mto:sent:level-two-road-test:052.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:052.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Generally"]]}
+{"id": "mto:sent:level-two-road-test:053.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:054", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:055.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:055.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:056.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:level-two-road-test:056.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "a safe distance"]]}
+{"id": "mto:sent:level-two-road-test:056.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:level-two-road-test:057.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:058.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:058.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:058.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "the best spacing possible"]]}
+{"id": "mto:sent:level-two-road-test:058.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:059.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "slow enough"]]}
+{"id": "mto:sent:level-two-road-test:059.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:059.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:060.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:061.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:062.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:062.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:063.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:064.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "unreasonably slowly"]]}
+{"id": "mto:sent:level-two-road-test:064.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "Whenever possible"]]}
+{"id": "mto:sent:level-two-road-test:064.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:065.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:065.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "too closely"]]}
+{"id": "mto:sent:level-two-road-test:065.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:065.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:065.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:066.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:066.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:066.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:067.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:067.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:068.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:069.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:069.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:069.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:070.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:070.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:070.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "slow enough"]]}
+{"id": "mto:sent:level-two-road-test:070.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:071.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:072.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:073", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:074.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:074.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:075.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:level-two-road-test:075.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:075.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:076.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "enough space"]]}
+{"id": "mto:sent:level-two-road-test:076.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:076.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "soon enough"]]}
+{"id": "mto:sent:level-two-road-test:076.4", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:076.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:077.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:077.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:078.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:079.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:080.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:080.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:080.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:081.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:082", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:083.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:083.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:084.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:084.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:084.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:084.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:level-two-road-test:085.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:085.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:086.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:086.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:086.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:087.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:087.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "as far as possible"]]}
+{"id": "mto:sent:level-two-road-test:087.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:088.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:088.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:089.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:090.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:090.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:090.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:091.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:091.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:092.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:092.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:093.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:094.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:095.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:095.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "moderately"]]}
+{"id": "mto:sent:level-two-road-test:095.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:095.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:096.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:097.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:097.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:098", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:099.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "the safe speed"]]}
+{"id": "mto:sent:level-two-road-test:099.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:099.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "the safe speed"]]}
+{"id": "mto:sent:level-two-road-test:099.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:099.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:099.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "slow enough"]]}
+{"id": "mto:sent:level-two-road-test:099.7", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:099.8", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:099.9", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:100.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:100.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:100.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:101.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:101.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:102", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:level-two-road-test:103.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "many places"]]}
+{"id": "mto:sent:level-two-road-test:103.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:103.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:104.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:104.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:105.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "the safest lane"]]}
+{"id": "mto:sent:level-two-road-test:105.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "usually"]]}
+{"id": "mto:sent:level-two-road-test:105.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["S", "many curbside hazards"]]}
+{"id": "mto:sent:level-two-road-test:105.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:105.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:106.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "unreasonably slowly"]]}
+{"id": "mto:sent:level-two-road-test:106.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "Whenever possible"]]}
+{"id": "mto:sent:level-two-road-test:106.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:107.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:107.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "too closely"]]}
+{"id": "mto:sent:level-two-road-test:107.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:107.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:107.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "enough space"]]}
+{"id": "mto:sent:level-two-road-test:108.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:108.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:109", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:110.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:110.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:110.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:111.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:111.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:112.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:112.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:112.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:112.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:113.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "unreasonably slowly"]]}
+{"id": "mto:sent:level-two-road-test:113.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "Whenever possible"]]}
+{"id": "mto:sent:level-two-road-test:113.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:114.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:114.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "too closely"]]}
+{"id": "mto:sent:level-two-road-test:114.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:114.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "enough space"]]}
+{"id": "mto:para:level-two-road-test:115", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:116.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:116.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:117.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:117.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:118.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:118.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:119.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:119.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:119.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:120.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:120.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:120.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:121.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:121.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:122.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:122.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:123.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:123.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:123.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:123.4", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:123.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:124.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:124.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:124.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:125.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:125.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:126.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:126.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:127.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:128.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:129.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:129.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "moderately"]]}
+{"id": "mto:sent:level-two-road-test:129.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:129.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:130.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:level-two-road-test:131", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:132.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:132.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:132.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:133.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:133.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "If necessary"]]}
+{"id": "mto:sent:level-two-road-test:134.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:134.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:135.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:135.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:135.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:136.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:136.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "as far as possible"]]}
+{"id": "mto:sent:level-two-road-test:136.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:137.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:137.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:138.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:138.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:138.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:139.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:140.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:140.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:140.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:140.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:140.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:140.6", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:141.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:141.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:142.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:143.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:143.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "moderately"]]}
+{"id": "mto:sent:level-two-road-test:143.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:level-two-road-test:143.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}

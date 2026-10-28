@@ -21,6 +21,30 @@
 {"statement_id": "mto:3.4.5b", "position": 0, "unit_id": "mto:passage:m61", "figure": "Diagram 2-49"}
 {"statement_id": "mto:3.4.6d", "position": 0, "unit_id": "mto:passage:m67", "figure": "the LCV placard"}
 {"statement_id": "mto:3.6.1d", "position": 0, "unit_id": "mto:passage:c9", "figure": "the \"slower traffic keep right\" sign"}
+{"statement_id": "on-passing-1:p100a", "position": 0, "unit_id": "mto:para:signs:056", "figure": "the \"stop for school bus when signals flashing\" sign"}
+{"statement_id": "on-passing-1:p102a", "position": 0, "unit_id": "mto:para:signs:058", "figure": "the \"stop for school bus when signals flashing both directions\" sign"}
+{"statement_id": "on-passing-1:p102b", "position": 0, "unit_id": "mto:para:signs:058", "figure": "the \"stop for school bus when signals flashing both directions\" sign"}
+{"statement_id": "on-passing-1:p104a", "position": 0, "unit_id": "mto:para:signs:072", "figure": "the passing lane sign"}
+{"statement_id": "on-passing-1:p106a", "position": 0, "unit_id": "mto:para:signs:074", "figure": "the \"yield\" sign on transit buses"}
+{"statement_id": "on-passing-1:p108a", "position": 0, "unit_id": "mto:para:signs:078", "figure": "the \"school bus loading zone\" sign"}
+{"statement_id": "on-passing-1:p110a", "position": 0, "unit_id": "mto:para:signs:186", "figure": "the \"do not pass when flashing\" sign"}
+{"statement_id": "on-passing-1:p112a", "position": 0, "unit_id": "mto:para:signs:227", "figure": "the \"long\" placard"}
+{"statement_id": "on-passing-1:p112b", "position": 0, "unit_id": "mto:para:signs:227", "figure": "the \"long\" placard"}
+{"statement_id": "on-passing-1:p115a", "position": 0, "unit_id": "mto:para:pavement-markings:005", "figure": "Diagram 3-2"}
+{"statement_id": "on-passing-1:p117a", "position": 0, "unit_id": "mto:para:pavement-markings:007", "figure": "Diagram 3-3"}
+{"statement_id": "on-passing-1:p11b", "position": 0, "unit_id": "mto:para:changing-positions:025", "figure": "Diagram 2-47"}
+{"statement_id": "on-passing-1:p24a", "position": 0, "unit_id": "mto:para:stopping:025", "figure": "Diagram 2-28"}
+{"statement_id": "on-passing-1:p25a", "position": 0, "unit_id": "mto:para:stopping:024", "figure": "Diagram 2-27"}
+{"statement_id": "on-passing-1:p25a", "position": 1, "unit_id": "mto:para:stopping:025", "figure": "Diagram 2-28"}
+{"statement_id": "on-passing-1:p45a", "position": 0, "unit_id": "mto:para:changing-positions:019", "figure": "Diagram 2-46"}
+{"statement_id": "on-passing-1:p53c", "position": 0, "unit_id": "mto:para:changing-positions:025", "figure": "Diagram 2-47"}
+{"statement_id": "on-passing-1:p62b", "position": 0, "unit_id": "mto:para:changing-positions:030", "figure": "Diagram 2-48"}
+{"statement_id": "on-passing-1:p69a", "position": 0, "unit_id": "mto:para:changing-positions:036", "figure": "Diagram 2-49"}
+{"statement_id": "on-passing-1:p69a", "position": 1, "unit_id": "mto:para:level-two-road-test:102", "figure": "Diagram 6-8-1"}
+{"statement_id": "on-passing-1:p78a", "position": 0, "unit_id": "mto:para:dealing-particular-situations:093", "figure": "Diagram 2-56"}
+{"statement_id": "on-passing-1:p83a", "position": 0, "unit_id": "mto:para:dealing-particular-situations:094", "figure": "Diagram 2-57"}
+{"statement_id": "on-passing-1:p96a", "position": 0, "unit_id": "mto:para:signs:048", "figure": "the \"do not pass\" sign"}
+{"statement_id": "on-passing-1:p98a", "position": 0, "unit_id": "mto:para:signs:050", "figure": "the \"slower traffic keep right\" sign"}
 {"statement_id": "tx:p10c", "position": 0, "unit_id": "tx:passage:p9", "figure": "the \"Stop · SCHOOL BUS\" diagram"}
 {"statement_id": "tx:p10d", "position": 0, "unit_id": "tx:passage:p9", "figure": "the \"Stop · SCHOOL BUS\" diagram"}
 {"statement_id": "tx:p132a", "position": 0, "unit_id": "tx:passage:p131", "figure": "the shared lane marking"}

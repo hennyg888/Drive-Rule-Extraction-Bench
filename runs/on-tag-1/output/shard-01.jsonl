@@ -1,0 +1,392 @@
+{"id": "mto:sent:index:001.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:001.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:002.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:003.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:004.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:005.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:005.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:006.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:007.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:007.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:008.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Most collisions"], ["J", "too closely"], ["J", "improper turns"]]}
+{"id": "mto:sent:index:008.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:008.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:009.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:009.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:010.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:010.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:011.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:011.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:011.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:index:012.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:getting-your-drivers-licence:001.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:001.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:002.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:003.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:004.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:005.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:006.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:007.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:008.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:008.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:009.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:010.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:011.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:012.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:013.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:014.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:015.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:016.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:017.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:018", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:019.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:020", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:021.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:022", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:023.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:024.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:025.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:026", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:027.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:028", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:029.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:030", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:031.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:031.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:032", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:033.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:033.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:033.3", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["R", "certain conditions"]]}
+{"id": "mto:sent:getting-your-drivers-licence:034.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:034.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["R", "certain conditions"]]}
+{"id": "mto:sent:getting-your-drivers-licence:035.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:035.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:036", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:037.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:037.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["R", "certain conditions"]]}
+{"id": "mto:sent:getting-your-drivers-licence:038.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:038.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:038.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:039.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:040", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:041.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:042.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:getting-your-drivers-licence:043", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:044.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:045.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:046.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.5", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.6", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.7", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:047.8", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:048.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:048.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:048.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:049.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Some recreational vehicles"]]}
+{"id": "mto:sent:getting-your-drivers-licence:049.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:049.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:049.4", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:050.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:050.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:051.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:051.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:051.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:052.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:052.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:053.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:053.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:054.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:054.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:054.3", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:055.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:055.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:055.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:056.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:056.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:056.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:056.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:057.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:057.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["R", "certain physical or medical conditions"]]}
+{"id": "mto:sent:getting-your-drivers-licence:057.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:058.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:getting-your-drivers-licence:058.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "unsafe"]]}
+{"id": "mto:sent:getting-your-drivers-licence:059.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:060.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:061.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:062.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:063.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:064.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:065.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:066.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:067.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:068.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:069.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:070.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:071.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:072.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:073.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:073.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:074.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:075.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:076.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:077.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:078.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:078.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:079.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:080.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:081.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:081.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:082.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:083.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:084.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:084.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:085.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:086.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:087.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:088.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:089.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:089.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:090.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:091.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:092.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:093.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:094.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:095.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:096.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:097.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:098.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:098.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "proper"]]}
+{"id": "mto:sent:getting-your-drivers-licence:098.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:098.4", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:098.5", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:099.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:099.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:100.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:100.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:100.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:100.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:100.5", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:101.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:102.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:102.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:102.3", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:102.4", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:103.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:104.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:104.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:105.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:106.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:107.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:108.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:109.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:110.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:111.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:112.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "good working order"]]}
+{"id": "mto:sent:getting-your-drivers-licence:113.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:114.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:115.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:116.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:116.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:117.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:118.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:118.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:119.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:120.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:121.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:122.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:123.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:124.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:124.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:125.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:126.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:126.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:126.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:127.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:127.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:128.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safely"], ["J", "confident enough"]]}
+{"id": "mto:sent:getting-your-drivers-licence:128.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:129.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "appropriate vehicle"]]}
+{"id": "mto:sent:getting-your-drivers-licence:129.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "proper working condition"]]}
+{"id": "mto:sent:getting-your-drivers-licence:130.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:130.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:131.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:131.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:132.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:132.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:132.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:132.4", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:132.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:133.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:133.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "proper skills"]]}
+{"id": "mto:sent:getting-your-drivers-licence:134.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:134.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:134.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:134.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:135.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:135.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:135.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:136.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "good working order"]]}
+{"id": "mto:sent:getting-your-drivers-licence:137.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:138.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:139.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:140.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:140.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["R", "certain extenuating circumstances"]]}
+{"id": "mto:sent:getting-your-drivers-licence:141.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:141.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:141.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:141.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:142.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:143.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:143.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:144.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:144.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:145.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:145.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:145.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:146.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:147.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:148.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:148.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:149.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:149.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:150.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:151.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:152.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:153.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:153.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:154.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:154.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:155.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:156.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:156.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:156.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:157.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:157.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:158.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:159.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:160.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:161.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:162.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:163.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:164.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:165.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:166.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:167.1", "type": "META", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:168.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:169.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:170.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:171.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:171.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:172.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:173.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:174.1", "type": "META", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:175.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:176.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:177.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:178.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:179.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:179.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:180.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:getting-your-drivers-licence:181.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:181.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:182.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:182.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Most programs"], ["S", "many driving schools"]]}
+{"id": "mto:sent:getting-your-drivers-licence:183.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:183.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:184.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:184.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:185.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:185.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:186.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:187.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:188.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:189.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:190.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:191.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:191.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:191.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:192.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:193.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:194.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "high-quality"]]}
+{"id": "mto:sent:getting-your-drivers-licence:194.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:194.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:195.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:196.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:197.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:198.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Adequacy"]]}
+{"id": "mto:sent:getting-your-drivers-licence:199.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Low"]]}
+{"id": "mto:sent:getting-your-drivers-licence:200.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:201.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:202.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:203.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:204.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:205.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Regular"]]}
+{"id": "mto:sent:getting-your-drivers-licence:206.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:207.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:208.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Modern"]]}
+{"id": "mto:sent:getting-your-drivers-licence:209.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:210.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:211.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Clear"]]}
+{"id": "mto:sent:getting-your-drivers-licence:212.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "excellent teaching"], ["J", "proper treatment"]]}
+{"id": "mto:sent:getting-your-drivers-licence:213.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:214.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:215.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:216.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:217.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:218.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:219.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:220.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:221.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:222.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:223.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:224.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:225.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:226.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:227.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:228.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-your-drivers-licence:229.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:002.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:safe-and-responsible-driving:002.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:003.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:003.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:004.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "you need to do more than just obey the rules"]]}
+{"id": "mto:sent:safe-and-responsible-driving:004.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "You must care about the safety of others"]]}
+{"id": "mto:sent:safe-and-responsible-driving:004.3", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:004.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:005.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "safely"], ["M", "you must also be predictable"]]}
+{"id": "mto:sent:safe-and-responsible-driving:005.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "you must be courteous"]]}
+{"id": "mto:sent:safe-and-responsible-driving:005.3", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:safe-and-responsible-driving:006.1", "type": "RULE", "modal": "MUST", "caution": 1, "topics": [], "vague": [["M", "You must be able to see dangerous situations before they happen"], ["J", "quickly and effectively"]]}
+{"id": "mto:sent:safe-and-responsible-driving:006.2", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:006.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:007.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:008.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:008.2", "type": "RULE", "modal": "SHOULD", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:008.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["S", "every five seconds or so"]]}
+{"id": "mto:sent:safe-and-responsible-driving:008.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:008.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["D", "as required"]]}
+{"id": "mto:sent:safe-and-responsible-driving:009.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:009.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "a cushion of space"]]}
+{"id": "mto:sent:safe-and-responsible-driving:009.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "well back"]]}
+{"id": "mto:sent:safe-and-responsible-driving:010.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:010.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:010.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:011.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:012.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:013.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:014.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:015.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:016.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:017.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:018.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:019.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:020.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:021.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:022.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:safe-and-responsible-driving:023.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}

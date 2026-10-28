@@ -16,10 +16,20 @@ CREATE TABLE source (
   retrieved    TEXT
 );
 
+-- A handbook's pages in reading order (tools/import_handbook.py).
+CREATE TABLE page (
+  source_id TEXT NOT NULL REFERENCES source(id),
+  id        TEXT NOT NULL,                  -- the page file, without .html
+  position  INTEGER NOT NULL,
+  title     TEXT NOT NULL,
+  PRIMARY KEY (source_id, id),
+  UNIQUE (source_id, position)
+);
+
 -- Every citable piece of a document, verbatim.
 --   paragraph  a handbook paragraph, list item, step or figure (analysis/segments/)
---   sentence   one sentence of a paragraph (Ontario only, from the census)
---   passage    a passage chosen for a topic (inputs/); it covers sentences or paragraphs
+--   sentence   one sentence of a text paragraph, split by tools/import_handbook.py (Ontario only)
+--   passage    a passage chosen by hand for a topic (inputs/); it covers sentences or paragraphs
 --   provision  a subsection or clause of a law or regulation, or a part of a standard
 CREATE TABLE unit (
   id        TEXT PRIMARY KEY,               -- 'mto:para:driving-along:018', 'mto:sent:index:001.1', 'mto:passage:m17', 'on-hta:148(8)'
@@ -28,7 +38,7 @@ CREATE TABLE unit (
   parent_id TEXT REFERENCES unit(id),       -- a sentence's paragraph
   page      TEXT,                           -- handbook page file, without .html
   locator   TEXT NOT NULL,                  -- 'Driving along › Maintaining space · ¶2', 's. 148 (8)'
-  heading   TEXT,                           -- a provision's marginal heading
+  heading   TEXT,                           -- a provision's marginal heading, or a figure's caption
   anchor    TEXT,                           -- the h2 id on the page, for links
   image     TEXT,                           -- a figure's image path
   valid_from TEXT,                          -- a provision in force from this date, when it is not yet
@@ -43,37 +53,86 @@ CREATE TABLE passage_part (
   PRIMARY KEY (passage_id, part_id)
 );
 
--- The census label of each Ontario sentence (analysis/census/census-guidelines.md).
-CREATE TABLE sentence_label (
-  unit_id TEXT PRIMARY KEY REFERENCES unit(id),
-  type    TEXT,                             -- RULE, FACT, DEFINE, STEP, CONSEQ, META
-  role    TEXT,
-  modal   TEXT,
-  basis   TEXT,                             -- where its legal strength comes from
-  caution INTEGER,
-  fit     TEXT,                             -- how well the first grammar draft could write it
-  passing INTEGER,                          -- 1 if it is about passing
-  rewrite TEXT
+-- Runs -----------------------------------------------------------------------------------------
+
+-- One pass of a pipeline stage over one handbook (pipeline/PIPELINE.md): tagging its sentences and
+-- figures, selecting a topic's passages from the tags, or extracting a topic's statements from a
+-- selection. Each stage reads only what an earlier run wrote to the database.
+CREATE TABLE run (
+  id            TEXT PRIMARY KEY,           -- 'on-tag-1', 'on-passing-select-1', 'on-passing-1'
+  stage         TEXT NOT NULL CHECK (stage IN ('tag', 'select', 'extract')),
+  source_id     TEXT NOT NULL REFERENCES source(id),   -- the handbook
+  topic         TEXT,                       -- select and extract: 'passing'
+  input_run     TEXT REFERENCES run(id),    -- the run whose rows it read
+  rules_json    INTEGER NOT NULL DEFAULT 0, -- 1: its statements are the topic's rules.json
+  prompt        TEXT,                       -- the prompt file, from the repo root
+  prompt_sha256 TEXT,
+  model         TEXT,                       -- who did it: a model, or a person for a reviewed set
+  date          TEXT,
+  note          TEXT
 );
 
--- The words the census pulled out of each sentence: action, entities, situation dimensions,
--- vague words, clause keywords, and what the first grammar draft lacked.
-CREATE TABLE sentence_word (
-  unit_id  TEXT NOT NULL REFERENCES unit(id),
-  kind     TEXT NOT NULL CHECK (kind IN ('action', 'entity', 'dimension', 'vague', 'clause', 'need')),
+-- Stage 2, tagging. Labels an LLM gave each handbook sentence and figure with prompts/tag-units.md,
+-- each picked from a fixed list. They describe the text and never rewrite it; writing rules is
+-- stage 4.
+--   type     RULE (an instruction, permission or piece of advice), STEP (one step of a sequence),
+--            DEFINE, FACT, CONSEQ (a penalty or other consequence), META (navigation, a reference,
+--            a question), FIGURE (a figure)
+--   modal    the force the wording itself gives, before any reading of the law: MUST, MUST NOT, MAY,
+--            SHOULD, SHOULD NOT, IMPERATIVE ("Keep right"), IMPERATIVE NOT ("Do not pass", "Never"),
+--            NONE
+--   caution  1 when it tells the driver to watch out for something
+CREATE TABLE unit_tag (
+  unit_id TEXT PRIMARY KEY REFERENCES unit(id),
+  run_id  TEXT NOT NULL REFERENCES run(id),
+  type    TEXT NOT NULL CHECK (type IN ('RULE', 'STEP', 'DEFINE', 'FACT', 'CONSEQ', 'META', 'FIGURE')),
+  modal   TEXT NOT NULL CHECK (modal IN ('MUST', 'MUST NOT', 'MAY', 'SHOULD', 'SHOULD NOT', 'IMPERATIVE',
+                                         'IMPERATIVE NOT', 'NONE')),
+  caution INTEGER NOT NULL CHECK (caution IN (0, 1))
+);
+
+-- The topics a sentence or figure is about, from the tagging prompt's list ('passing').
+CREATE TABLE unit_topic (
+  unit_id TEXT NOT NULL REFERENCES unit_tag(unit_id),
+  topic   TEXT NOT NULL,
+  PRIMARY KEY (unit_id, topic)
+);
+
+-- Vague wording the tagging found in a sentence: its words, verbatim, and a flag code of rule
+-- language §8 (J judgment, M unclear legal force, S hedged scope, R unclear reference, D implicit
+-- default, G goal and means differ).
+CREATE TABLE unit_vague (
+  unit_id  TEXT NOT NULL REFERENCES unit_tag(unit_id),
   position INTEGER NOT NULL,
-  word     TEXT NOT NULL,
-  code     TEXT,                            -- a vague word's flag code (rule language §8)
-  PRIMARY KEY (unit_id, kind, position)
+  code     TEXT NOT NULL CHECK (code IN ('J', 'M', 'S', 'R', 'D', 'G')),
+  span     TEXT NOT NULL,
+  PRIMARY KEY (unit_id, position)
+);
+
+-- Stage 3, selection. The paragraphs (text or figure) a topic's extraction reads, in handbook
+-- order, each with the passage id the extraction prompt shows ('p17').
+--   tag     it holds a sentence tagged with the topic, or is a figure tagged with it
+--   lead    the lead paragraph of a selected list item ("Here are the steps for passing a vehicle:")
+--   manual  added by a person
+CREATE TABLE selection (
+  run_id   TEXT NOT NULL REFERENCES run(id),
+  position INTEGER NOT NULL,
+  unit_id  TEXT NOT NULL REFERENCES unit(id),
+  local_id TEXT NOT NULL,
+  reason   TEXT NOT NULL CHECK (reason IN ('tag', 'lead', 'manual')),
+  PRIMARY KEY (run_id, position),
+  UNIQUE (run_id, local_id),
+  UNIQUE (run_id, unit_id)
 );
 
 -- Statements ---------------------------------------------------------------------------------
 
 CREATE TABLE statement (
-  id            TEXT PRIMARY KEY,           -- 'mto:3.1.2a'
+  id            TEXT PRIMARY KEY,           -- 'mto:3.1.2a'; 'on-passing-1:p17a' for a run that is not a rules.json
+  run_id        TEXT NOT NULL REFERENCES run(id),
   jurisdiction  TEXT NOT NULL,
-  local_id      TEXT NOT NULL,              -- '3.1.2a', as in rules.json
-  position      INTEGER NOT NULL,           -- order in rules.json
+  local_id      TEXT NOT NULL,              -- '3.1.2a', as in rules.json, or as the extraction wrote it
+  position      INTEGER NOT NULL,           -- order in rules.json or in the extraction's output
   topic         TEXT NOT NULL,              -- 'passing'
   section       TEXT,
   type          TEXT NOT NULL,
@@ -103,7 +162,7 @@ CREATE TABLE statement_part (
 CREATE TABLE statement_source (
   statement_id TEXT NOT NULL REFERENCES statement(id),
   position     INTEGER NOT NULL,
-  unit_id      TEXT NOT NULL REFERENCES unit(id),   -- a passage
+  unit_id      TEXT NOT NULL REFERENCES unit(id),   -- a passage, or a paragraph its run's selection holds
   quote        TEXT,
   where_text   TEXT,
   census_id    TEXT,
@@ -234,17 +293,24 @@ CREATE TABLE grounding_link (
 
 -- Views ----------------------------------------------------------------------------------------
 
--- Each handbook sentence (Ontario) or paragraph, with the statements that cite it.
+-- Each handbook sentence (Ontario) or paragraph, with the statements that cite it: through a
+-- passage, or directly as a selected paragraph and the sentences in it.
 CREATE VIEW unit_use AS
-  SELECT pp.part_id AS unit_id, s.statement_id FROM passage_part pp JOIN statement_source s ON s.unit_id = pp.passage_id
+  WITH cited AS (SELECT statement_id, unit_id FROM statement_source UNION SELECT statement_id, unit_id FROM step_source)
+  SELECT pp.part_id AS unit_id, c.statement_id FROM cited c JOIN passage_part pp ON pp.passage_id = c.unit_id
   UNION
-  SELECT pp.part_id, s.statement_id FROM passage_part pp JOIN step_source s ON s.unit_id = pp.passage_id;
+  SELECT u.id, c.statement_id FROM cited c JOIN unit u ON u.id = c.unit_id WHERE u.kind = 'paragraph'
+  UNION
+  SELECT x.id, c.statement_id FROM cited c JOIN unit x ON x.parent_id = c.unit_id WHERE x.kind = 'sentence';
 
--- Ontario sentences the census marked as about passing that no statement cites.
-CREATE VIEW passing_sentence_unused AS
-  SELECT u.id, u.locator, u.text
-  FROM unit u JOIN sentence_label l ON l.unit_id = u.id
-  WHERE l.passing = 1 AND u.id NOT IN (SELECT unit_id FROM unit_use);
+-- For each extraction run, the sentences and figures tagged with its topic that none of its
+-- statements cites.
+CREATE VIEW topic_unit_unused AS
+  SELECT r.id AS run_id, u.id, u.locator, u.text
+  FROM run r JOIN unit u ON u.source_id = r.source_id JOIN unit_topic t ON t.unit_id = u.id AND t.topic = r.topic
+  WHERE r.stage = 'extract'
+    AND NOT EXISTS (SELECT 1 FROM unit_use x JOIN statement s ON s.id = x.statement_id
+                    WHERE x.unit_id = u.id AND s.run_id = r.id);
 
 -- Topic passages that no statement or step cites.
 CREATE VIEW passage_unused AS
@@ -256,20 +322,20 @@ CREATE VIEW passage_unused AS
 
 -- Flags with no grounding yet.
 CREATE VIEW ungrounded_flag AS
-  SELECT o.id, s.jurisdiction, o.code, o.span, s.text
+  SELECT o.id, s.run_id, s.jurisdiction, o.code, o.span, s.text
   FROM occurrence o JOIN statement s ON s.id = o.statement_id
   WHERE o.id NOT IN (SELECT occurrence_id FROM grounding);
 
 -- LAW statements that cite no provision other than a penalty.
 CREATE VIEW law_without_basis AS
-  SELECT s.id, s.jurisdiction, s.text
+  SELECT s.id, s.run_id, s.jurisdiction, s.text
   FROM statement s
   WHERE s.strength = 'LAW'
     AND NOT EXISTS (SELECT 1 FROM statement_basis b WHERE b.statement_id = s.id AND b.relation != 'PENALTY');
 
 -- ADVICE statements with a provision of a statute or regulation behind them: candidates for LAW.
 CREATE VIEW advice_with_law AS
-  SELECT s.id AS statement_id, s.jurisdiction, b.unit_id, b.relation, b.note, s.text
+  SELECT s.id AS statement_id, s.run_id, s.jurisdiction, b.unit_id, b.relation, b.note, s.text
   FROM statement s
   JOIN statement_basis b ON b.statement_id = s.id
   JOIN unit u ON u.id = b.unit_id
@@ -280,7 +346,7 @@ CREATE VIEW advice_with_law AS
 -- Statements with a provision of a statute or regulation behind them (other than a penalty) and
 -- no law line added yet.
 CREATE VIEW law_not_added AS
-  SELECT DISTINCT s.id, s.jurisdiction, s.strength, s.text
+  SELECT DISTINCT s.id, s.run_id, s.jurisdiction, s.strength, s.text
   FROM statement s
   JOIN statement_basis b ON b.statement_id = s.id
   JOIN unit u ON u.id = b.unit_id

@@ -24,6 +24,7 @@
 {"id": "on:clear", "jurisdiction": "on", "phrase": "clear"}
 {"id": "on:closely", "jurisdiction": "on", "phrase": "closely"}
 {"id": "on:enough", "jurisdiction": "on", "phrase": "enough"}
+{"id": "on:excessively", "jurisdiction": "on", "phrase": "excessively"}
 {"id": "on:extra care", "jurisdiction": "on", "phrase": "extra care"}
 {"id": "on:heavy", "jurisdiction": "on", "phrase": "heavy"}
 {"id": "on:if safe to do so", "jurisdiction": "on", "phrase": "if safe to do so"}
@@ -33,15 +34,25 @@
 {"id": "on:necessary for safety", "jurisdiction": "on", "phrase": "necessary for safety"}
 {"id": "on:possible", "jurisdiction": "on", "phrase": "possible"}
 {"id": "on:practical", "jurisdiction": "on", "phrase": "practical"}
+{"id": "on:reasonable", "jurisdiction": "on", "phrase": "reasonable"}
 {"id": "on:reasonable speed", "jurisdiction": "on", "phrase": "reasonable speed"}
 {"id": "on:safe", "jurisdiction": "on", "phrase": "safe"}
+{"id": "on:safe to do so", "jurisdiction": "on", "phrase": "safe to do so"}
 {"id": "on:safely", "jurisdiction": "on", "phrase": "safely"}
+{"id": "on:slight", "jurisdiction": "on", "phrase": "slight"}
 {"id": "on:slow traffic", "jurisdiction": "on", "phrase": "slow traffic"}
 {"id": "on:some distance", "jurisdiction": "on", "phrase": "some distance"}
 {"id": "on:sure", "jurisdiction": "on", "phrase": "sure"}
+{"id": "on:too closely", "jurisdiction": "on", "phrase": "too closely"}
+{"id": "on:too fast", "jurisdiction": "on", "phrase": "too fast"}
+{"id": "on:too narrow to be shared safely", "jurisdiction": "on", "phrase": "too narrow to be shared safely"}
 {"id": "on:too soon", "jurisdiction": "on", "phrase": "too soon"}
 {"id": "on:unnecessarily", "jurisdiction": "on", "phrase": "unnecessarily"}
+{"id": "on:unsafe", "jurisdiction": "on", "phrase": "unsafe"}
 {"id": "on:well back", "jurisdiction": "on", "phrase": "well back"}
+{"id": "on:well in advance", "jurisdiction": "on", "phrase": "well in advance"}
+{"id": "on:where practical", "jurisdiction": "on", "phrase": "where practical"}
+{"id": "on:with caution", "jurisdiction": "on", "phrase": "with caution"}
 {"id": "tx:as far to the right as the driver can", "jurisdiction": "tx", "phrase": "as far to the right as the driver can"}
 {"id": "tx:as quickly as possible", "jurisdiction": "tx", "phrase": "as quickly as possible"}
 {"id": "tx:as safe and easy as possible", "jurisdiction": "tx", "phrase": "as safe and easy as possible"}

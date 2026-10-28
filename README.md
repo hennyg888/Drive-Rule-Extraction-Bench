@@ -25,14 +25,14 @@ All three HTML copies have the same layout, so one program can read any of them.
 | `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
 | `scrapers/` | The scripts that made `handbooks/` |
 | `analysis/` | The rule language (`rule-language.md`), the Ontario census, the passing rules of each handbook (`analysis/passing-rules/{mto,ca,tx}/`: `rules.json`, a readable `passing-rules.md`, `meta.json` and the passages in `inputs/`; for Ontario also `passing-rules-law.md`, the same statements with the law added under them), handbook passages (`analysis/segments/`) and notes on using the rules in a VLA |
-| `prompts/` | The extraction prompt (`extract-rules.md`), its topic files (`topics/`) and how passages are chosen (`select-passages.md`) |
-| `db/` | The rules database: handbook sentences, statements, vocabulary, laws and the grounding of flagged words, one JSONL file per table (`db/README.md`) |
+| `prompts/` | The tagging prompt (`tag-units.md`), the extraction prompt (`extract-rules.md`), its topic files (`topics/`) and how passages are chosen (`select-passages.md`) |
+| `db/` | The rules database: handbook paragraphs and sentences, their tags, topic selections, statements of every extraction run, vocabulary, laws and the grounding of flagged words, one JSONL file per table. `db/README.md` describes the six stages that fill it |
 | `statutes/` | Local copies of the laws the database cites, with where and when each was downloaded |
-| `tools/` | Splitting handbooks into passages, making passage files, the database (`db.py`), building the review pages |
+| `tools/` | Splitting handbooks into passages, making passage files, the database (`db.py`) and its stages (`import_handbook.py`, `tag_units.py`, `select_passages.py`, `extract_rules.py`, `carry_grounding.py`, `compare_runs.py`), building the review pages |
 | `qwen/` | Running the extraction on open models with vLLM, and scoring it against the reference |
 | `pages/` | Review pages: rules side by side with the handbook text |
 | `pipeline/`, `provenance/` | How the rule set is made, step by step, and how the Ontario reference was made |
-| `extractions/`, `runs/` | Model outputs: the 23 October extractions of all three handbooks in `extractions/{mto,ca,tx}/` |
+| `extractions/`, `runs/` | Model outputs: the 23 October extractions of all three handbooks in `extractions/{mto,ca,tx}/`; each stage run of the database (tagging, selection, extraction) in `runs/<run>/`, with its prompt, inputs, answers and brief |
 | `docs/` | The prompts the team gave Claude (`prompt.md`) and other write-ups |
 | `legacy/` | The first Ontario passing rules, extracted from the PDF before the rule language existed |
 

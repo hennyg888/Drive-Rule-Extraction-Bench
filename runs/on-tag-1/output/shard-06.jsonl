@@ -1,0 +1,471 @@
+{"id": "mto:sent:pedestrian-signals:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:001.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:001.3", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pedestrian-signals:002", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:003.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:003.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:004.1", "type": "RULE", "modal": "SHOULD NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:004.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "as quickly as possible"], ["J", "safe area"]]}
+{"id": "mto:sent:pedestrian-signals:004.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pedestrian-signals:005", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:006.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:006.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:007.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:007.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:007.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:007.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:007.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:008.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "safe driving skills"]]}
+{"id": "mto:sent:pedestrian-signals:008.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:009.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:010.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pedestrian-signals:011.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:001.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": [["J", "not safe"]]}
+{"id": "mto:sent:pavement-markings:002.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:002.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pavement-markings:003", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:004.1", "type": "RULE", "modal": "SHOULD NOT", "caution": 0, "topics": ["passing"], "vague": [["J", "unsafe"], ["M", "means it is unsafe to pass"]]}
+{"id": "mto:sent:pavement-markings:004.2", "type": "RULE", "modal": "SHOULD NOT", "caution": 0, "topics": ["passing"], "vague": [["M", "should not pass"]]}
+{"id": "mto:para:pavement-markings:005", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:pavement-markings:006.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": ["passing"], "vague": [["J", "if the way is clear"]]}
+{"id": "mto:sent:pavement-markings:006.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": ["passing"], "vague": [["J", "enough"], ["J", "safely"]]}
+{"id": "mto:para:pavement-markings:007", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:pavement-markings:008.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:008.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["S", "generally"]]}
+{"id": "mto:sent:pavement-markings:008.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pavement-markings:009", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:010.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:010.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:010.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:010.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:010.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pavement-markings:011", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:012.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:012.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "not always"]]}
+{"id": "mto:sent:pavement-markings:012.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:012.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:012.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pavement-markings:013", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:014.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pavement-markings:015", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:016.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:016.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:017.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pavement-markings:018", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:019.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:019.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:pavement-markings:020", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:021.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:022.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:pavement-markings:023.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:001.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:001.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:002.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:003.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:003.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:003.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:003.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:003.6", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:004.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:004.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:004.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:005.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:006.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:006.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:007.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:008.1", "type": "STEP", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:009.1", "type": "STEP", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:010.1", "type": "STEP", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:011.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:012.1", "type": "STEP", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:013.1", "type": "STEP", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:014.1", "type": "STEP", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:015.1", "type": "STEP", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:016.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:017.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:018.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:018.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:019.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:019.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:020.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:020.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:021.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:022.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:023.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:024.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:025.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:026.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:027.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:028.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:029.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:030.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:031.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:031.2", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:032.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:032.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:033.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:034.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:035.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:036.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:036.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:037.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "regularly"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:037.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:038.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:039.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:040.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:041.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:042.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:043.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:044.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:045.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:046.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:047.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:048.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:049.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:050.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:051.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:052.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:052.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:053.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:054.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:054.2", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:054.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:054.4", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:054.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:054.6", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:055.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:056.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:056.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:056.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:056.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:056.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:057.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:057.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:057.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:057.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:057.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:058.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:059.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:keeping-your-drivers-licence:060", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:061.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:062.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:063.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:064.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:065.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:066.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:067.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:068.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:068.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:068.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:068.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:069.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:070.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:071.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:071.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:071.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:071.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:071.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:072.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:073.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:073.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:074.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:075.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:076.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:076.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:076.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:076.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:076.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:077.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:078.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:079.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:080.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:081.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:082.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:083.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:084.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:085.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:086.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:087.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "too closely"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:088.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:089.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:090.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:091.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:092.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:093.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:094.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:095.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:096.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:097.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:098.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:099.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:100.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Improper"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:101.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:102.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:103.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:104.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "proper crossing"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:105.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": [["J", "carefully"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:106.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": [["J", "where possible"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:107.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:108.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Improper"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:109.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Improper"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:110.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:111.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:112.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:113.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:114.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:115.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Improper"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:116.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Improper"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:117.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:118.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Unnecessary"]]}
+{"id": "mto:sent:keeping-your-drivers-licence:119.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:120.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:121.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:122.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:123.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:124.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:keeping-your-drivers-licence:125.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:001.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:002.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:003.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:004.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:005.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:006.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:007.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:008.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:009.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:010.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:011.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:012.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:013.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:014.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:015.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:015.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:015.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:016.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:017.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:018.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:019.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:020.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:021.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:022.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:023.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:024.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:025.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "due care"], ["J", "reasonable consideration"]]}
+{"id": "mto:sent:other-ways-lose-your-licence:025.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:026.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:026.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:026.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:027.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:027.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:027.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:028.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:029.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:030.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:031.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:032.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:033.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:034.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:035.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:035.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:036.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:036.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:037.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:038.1", "type": "CONSEQ", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:039.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:040.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:040.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:040.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:040.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:041.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:042.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:043.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:044.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:045.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:045.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:045.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:046.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:047.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:048.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:049.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:050.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:051.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:052.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:053.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:054.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:054.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:054.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:054.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:055.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:055.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:055.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:055.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:055.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:056.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:056.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:057.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:058.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:059.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:060.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:061.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:061.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:061.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:062.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:062.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:062.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:062.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:063.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:063.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:064.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:065.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:066.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:067.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:068.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:069.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:070.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:070.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:071.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:072.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:072.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:072.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:073.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:073.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:073.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:074.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:074.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:074.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:075.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Some drugs"], ["S", "some over-the-counter drugs"]]}
+{"id": "mto:sent:other-ways-lose-your-licence:075.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:076.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:077.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:078.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:079.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:080.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:080.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:081.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:081.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:081.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:082.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:082.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:082.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:082.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:083.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:084.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:084.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:085.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:086.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:087.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:088.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:089.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:090.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:091.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:092.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:other-ways-lose-your-licence:093.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:your-vehicle:001.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["R", "certain basic safety standards"]]}
+{"id": "mto:sent:your-vehicle:001.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:your-vehicle:001.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["R", "certain responsibilities"]]}
+{"id": "mto:sent:your-vehicle:002.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:your-vehicle:003.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:your-vehicle:004.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:your-vehicle:005.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:your-vehicle:006.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:001.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["J", "dangerous condition"]]}
+{"id": "mto:sent:maintaining-your-vehicle:001.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:001.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:002.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:002.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:maintaining-your-vehicle:004", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:005.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:005.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:005.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:maintaining-your-vehicle:006.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:007.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:008.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:009.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:010.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:011.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:012.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:013.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:014.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:015.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:016.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:017.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:018.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:019.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:020.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:021.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:022.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:022.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:023.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "thoroughly"]]}
+{"id": "mto:sent:maintaining-your-vehicle:024.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:maintaining-your-vehicle:024.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "normally"]]}
+{"id": "mto:sent:maintaining-your-vehicle:024.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:024.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:024.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:025.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "usually"]]}
+{"id": "mto:sent:maintaining-your-vehicle:026.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:026.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:027.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:028.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:029.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:030.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:031.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:032.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "when necessary"]]}
+{"id": "mto:sent:maintaining-your-vehicle:033.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:033.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:maintaining-your-vehicle:034", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:035.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:035.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:036.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:036.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:036.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:036.4", "type": "RULE", "modal": "SHOULD NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:037.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:037.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:038.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:039.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:039.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["J", "affects its safe operation"]]}
+{"id": "mto:sent:maintaining-your-vehicle:040.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "similar"]]}
+{"id": "mto:sent:maintaining-your-vehicle:041.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:042.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:043.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:043.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:maintaining-your-vehicle:043.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "regularly"]]}
+{"id": "mto:sent:vehicle-insurance-and-registration:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:001.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:002.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:002.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:002.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:004.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:004.2", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:004.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:005.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:006.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:007.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:007.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:007.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:008.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:009.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:010.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:011.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:012.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:012.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:013.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:013.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:013.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:013.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:013.5", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:014.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "as much information as possible"]]}
+{"id": "mto:sent:vehicle-insurance-and-registration:014.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:014.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:015.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:015.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:015.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:016.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:vehicle-insurance-and-registration:017.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "carefully"]]}
+{"id": "mto:sent:vehicle-insurance-and-registration:018.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}

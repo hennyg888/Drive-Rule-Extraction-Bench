@@ -71,14 +71,15 @@ def render(db, jurisdiction, title, root, folder):
         u = units.setdefault(unit_id, q('SELECT * FROM unit WHERE id = ?', unit_id)[0])
         return f'[{SHORT.get(u["source_id"], sources[u["source_id"]]["citation"])} {u["locator"].removeprefix("s. ")}](#{anchor(unit_id)})'
 
-    statements = q("SELECT * FROM statement WHERE jurisdiction = ? ORDER BY position", jurisdiction)
-    lines = q("SELECT g.* FROM statement_law g JOIN statement s ON s.id = g.statement_id WHERE s.jurisdiction = ?",
-              jurisdiction)
+    mine = 'run_id IN (SELECT id FROM run WHERE rules_json = 1)'
+    statements = q(f"SELECT * FROM statement WHERE jurisdiction = ? AND {mine} ORDER BY position", jurisdiction)
+    lines = q(f"SELECT g.* FROM statement_law g JOIN statement s ON s.id = g.statement_id WHERE s.jurisdiction = ? "
+              f"AND s.{mine}", jurisdiction)
     duty = {r['statement_id'] for r in lines if LAW_MODAL.search(r['text'])} & \
         {s['id'] for s in statements if s['strength'] == 'ADVICE'}
     flags = collections.Counter(r[0] or 'not grounded' for r in q(
         "SELECT g.status FROM occurrence o JOIN statement s ON s.id = o.statement_id "
-        "LEFT JOIN grounding g ON g.occurrence_id = o.id WHERE s.jurisdiction = ?", jurisdiction))
+        f"LEFT JOIN grounding g ON g.occurrence_id = o.id WHERE s.jurisdiction = ? AND s.{mine}", jurisdiction))
 
     out = [f'# {title}', '',
            'Generated from the rules database (`db/`) by `python3 tools/db.py export --write`. Do not edit by hand.', '',

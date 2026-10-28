@@ -77,7 +77,7 @@ RULE, ADVICE. Handbook: Changing positions page · Chapter 2.
 **Flags**
 
 - J "enough": No measure of space or time.
-  - `LAW_REPEATS`: For a lane change: at least a two- to three-second gap behind the vehicle ahead in the new lane, and not beside another vehicle or in its blind spot (handbook, Level Two road test). Could replace "enough space" for lane changes; no measure for a pass on a two-lane road. The Act asks the driver to "first see that the movement can be made in safety" (142 (1)) and to "first ascertain that it can be done safely" (154 (1) (a)), with no measure. ([HTA 142 (1)](#on-hta-142-1), [HTA 154 (1) (a)](#on-hta-154-1-a), handbook level-two-road-test:142.1, handbook level-two-road-test:142.2)
+  - `LAW_REPEATS`: For a lane change: at least a two- to three-second gap behind the vehicle ahead in the new lane, and not beside another vehicle or in its blind spot (handbook, Level Two road test). Could replace "enough space" for lane changes; no measure for a pass on a two-lane road. The Act asks the driver to "first see that the movement can be made in safety" (142 (1)) and to "first ascertain that it can be done safely" (154 (1) (a)), with no measure. ([HTA 142 (1)](#on-hta-142-1), [HTA 154 (1) (a)](#on-hta-154-1-a), handbook level-two-road-test:077.1, handbook level-two-road-test:077.2)
 - J "safely": Judgment term.
   - `LAW_REPEATS`: The Act uses the same word: 154 (1) (a) "safely", 142 (1) "in safety". ([HTA 142 (1)](#on-hta-142-1), [HTA 154 (1) (a)](#on-hta-154-1-a))
 
@@ -141,7 +141,7 @@ _Steps 1 and 2 restate the lane-change steps on the same page; the order of the 
 **Flags**
 
 - V "inside mirror": Called "rear view mirror" in the night procedure (3.3.1b).
-  - `HANDBOOK`: The inside rear-view mirror. None; both procedures already say inside mirror. The handbook says "inside mirror" in the passing steps and "rear view mirror" in the night steps. (handbook changing-positions:018.2, handbook changing-positions:029.1)
+  - `HANDBOOK`: The inside rear-view mirror. None; both procedures already say inside mirror. The handbook says "inside mirror" in the passing steps and "rear view mirror" in the night steps. (handbook changing-positions:017.2, handbook changing-positions:029.1)
 
 ### 2.2b
 
@@ -492,7 +492,7 @@ PROCEDURE, ADVICE. Handbook: Changing positions page · Chapter 2 › Passing at
 **Flags**
 
 - V "rear view mirror": The handbook calls the mirror "rear view mirror" here and "inside mirror" in 2.2a; both rules say inside mirror.
-  - `HANDBOOK`: The inside rear-view mirror. None; both procedures already say inside mirror. (handbook changing-positions:018.2, handbook changing-positions:029.1)
+  - `HANDBOOK`: The inside rear-view mirror. None; both procedures already say inside mirror. (handbook changing-positions:017.2, handbook changing-positions:029.1)
 
 ### 3.3.1c
 
@@ -564,7 +564,7 @@ RULE, ADVICE. Handbook: Changing directions › Left turns · ¶5.
 **Flags**
 
 - R "smaller vehicle": The motorcycles, bicycles and mopeds turning left, named two sentences earlier.
-  - `HANDBOOK`: Motorcycles, bicycles, limited-speed motorcycles and mopeds. Name the vehicles instead of "smaller vehicle". (handbook changing-directions:017.1)
+  - `HANDBOOK`: Motorcycles, bicycles, limited-speed motorcycles and mopeds. Name the vehicles instead of "smaller vehicle". (handbook changing-directions:014.1)
 
 ### 3.4.3b
 
@@ -577,7 +577,7 @@ _Pulling up beside a turning two-wheeler is the start of a pass._
 **Flags**
 
 - R "smaller vehicle": The source says "one of these vehicles": those named in the sentence before.
-  - `HANDBOOK`: Motorcycles, bicycles, limited-speed motorcycles and mopeds. Name the vehicles instead of "smaller vehicle". (handbook changing-directions:017.1)
+  - `HANDBOOK`: Motorcycles, bicycles, limited-speed motorcycles and mopeds. Name the vehicles instead of "smaller vehicle". (handbook changing-directions:014.1)
 
 ### 3.4.3c
 
@@ -590,7 +590,7 @@ _"… and turn when the way is clear" is written as the end of the wait (UNTIL).
 **Flags**
 
 - R "smaller vehicle": Same vehicles as 3.4.3b; the source only says "Stay behind".
-  - `HANDBOOK`: Motorcycles, bicycles, limited-speed motorcycles and mopeds. Name the vehicles instead of "smaller vehicle". (handbook changing-directions:017.1)
+  - `HANDBOOK`: Motorcycles, bicycles, limited-speed motorcycles and mopeds. Name the vehicles instead of "smaller vehicle". (handbook changing-directions:014.1)
 - J "clear": No test for when the way is clear.
   - `LAW_REPEATS`: The Act asks the driver to "first see that the movement can be made in safety" before turning left (142 (1)), with no test. ([HTA 142 (1)](#on-hta-142-1))
 
@@ -728,9 +728,9 @@ RULE, ADVICE. Handbook: Changing positions page · Chapter 2 › Passing streetc
 - J "reasonable speed": No speed given.
   - `OPEN`: The Act lifts the 2 m rule at a designated safety zone (166 (1)) and sets no speed there.
 - R "these areas": The source says "these areas"; read as the passenger areas in 3.4.5c.
-  - `HANDBOOK`: Streetcar stops with an area set aside for passengers. None; the statement already names the area. (handbook changing-positions:040.2)
+  - `HANDBOOK`: Streetcar stops with an area set aside for passengers. None; the statement already names the area. (handbook changing-positions:038.2)
 - X "safety islands and zones": Repeated on the pedestrians page, with an added caution about sudden moves.
-  - `HANDBOOK`: None; the statement already joins both passages. (handbook sharing-road-other-road-users:018.2, handbook sharing-road-other-road-users:018.3)
+  - `HANDBOOK`: None; the statement already joins both passages. (handbook sharing-road-other-road-users:017.2, handbook sharing-road-other-road-users:017.3)
 
 ### 3.4.6a
 
@@ -743,7 +743,7 @@ _The source also calls it discourteous._
 **Flags**
 
 - J "closely": No gap given.
-  - `HANDBOOK`: Move back only when the entire front of the passed vehicle is visible in the inside mirror. Could cite 2.2a step 5 instead of "closely". (handbook changing-positions:018.2)
+  - `HANDBOOK`: Move back only when the entire front of the passed vehicle is visible in the inside mirror. Could cite 2.2a step 5 instead of "closely". (handbook changing-positions:017.2)
 - J "safely": Judgment term.
   - `OPEN`: Inside the reason; no duty to ground.
 
@@ -798,7 +798,7 @@ RULE, ADVICE. Handbook: Sharing the road › Horse-drawn vehicles · ¶2.
 **Flags**
 
 - J "safe": Judgment term (twice).
-  - `LAW_REPEATS`: Following distance: at least two seconds behind the vehicle in front (handbook, Driving along). Could use two seconds for the following distance; passing stays open. The Act says "more closely than is reasonable and prudent" (158 (1)) and "safely free from approaching traffic" (148 (8)). ([HTA 148 (8)](#on-hta-148-8), [HTA 158 (1)](#on-hta-158-1), handbook driving-along:023.2)
+  - `LAW_REPEATS`: Following distance: at least two seconds behind the vehicle in front (handbook, Driving along). Could use two seconds for the following distance; passing stays open. The Act says "more closely than is reasonable and prudent" (158 (1)) and "safely free from approaching traffic" (148 (8)). ([HTA 148 (8)](#on-hta-148-8), [HTA 158 (1)](#on-hta-158-1), handbook driving-along:018.2)
 
 ### 3.4.8b
 
@@ -935,7 +935,7 @@ RULE, ADVICE. Handbook: Stopping › Stopping for school buses · ¶2.
 - M "Do not go": A bare imperative that ends the duty in 3.4.12b; it reads as part of that law, but the handbook does not say so.
   - `LAW_STATES`: Strength LAW. ([HTA 175 (11)](#on-hta-175-11), [HTA 175 (11.1)](#on-hta-175-11-1), [HTA 175 (12)](#on-hta-175-12), [HTA 175 (12.1)](#on-hta-175-12-1))
 - X "and its stop arm is no longer activated": Elsewhere the stop ends only when every condition holds (bus moves, lights stop, arm folds away); here either one ends it.
-  - `LAW_STATES`: Wait until the bus moves, or until every signal that was on has stopped: the red lights have stopped flashing and the stop arm is no longer actuated. The statement ends the wait when either one stops; with both signals on, the Act ends it only when both have. Each signal is its own duty, each lasting until the bus moves or that signal stops. ([HTA 175 (11)](#on-hta-175-11), [HTA 175 (11.1)](#on-hta-175-11-1), handbook sharing-road-other-road-users:080.1, handbook stopping:025.3)
+  - `LAW_STATES`: Wait until the bus moves, or until every signal that was on has stopped: the red lights have stopped flashing and the stop arm is no longer actuated. The statement ends the wait when either one stops; with both signals on, the Act ends it only when both have. Each signal is its own duty, each lasting until the bus moves or that signal stops. ([HTA 175 (11)](#on-hta-175-11), [HTA 175 (11.1)](#on-hta-175-11-1), handbook sharing-road-other-road-users:081.1, handbook stopping:028.3)
 
 **Law**
 
@@ -993,7 +993,7 @@ RULE, LAW. Handbook: Particular situations › Reacting to a stopped emergency v
 - J "if safe to do so": Judgment term.
   - `LAW_REPEATS`: The Act says "if the movement can be made safely". ([HTA 159 (3)](#on-hta-159-3), [HTA 159 (3), in force January 1, 2027](#on-hta-159-3-2027))
 - X "where possible": The offence table qualifies the same duty with "where possible" instead of "if safe to do so".
-  - `LAW_STATES`: Keep "if safe to do so"; the handbook’s offence table says "where possible", the regulation’s says "if safe to do so". ([HTA 159 (3)](#on-hta-159-3), [O. Reg. 339/94 Table, item 36.3](#on-reg-339-94-item-36-3), handbook keeping-your-drivers-licence:129.1)
+  - `LAW_STATES`: Keep "if safe to do so"; the handbook’s offence table says "where possible", the regulation’s says "if safe to do so". ([HTA 159 (3)](#on-hta-159-3), [O. Reg. 339/94 Table, item 36.3](#on-reg-339-94-item-36-3), handbook keeping-your-drivers-licence:106.1)
 
 **Law**
 

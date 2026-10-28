@@ -2,6 +2,8 @@
 
 The procedure the project uses to turn a driver's handbook into Rule Language statements (`analysis/rule-language.md`). Steps 1, 2 and C run once per handbook. Steps 3 to 6 run for each topic and each model. Step L is fixed between runs; a change to it is a commit, and git keeps every earlier version. The extraction prompt is `prompts/extract-rules.md`, the prompt michael chose on 23 October for every handbook. Ontario's passing topic went through every step, and how each step was done for it is in `provenance/README.md`. California and Texas have been through steps 1 to 5: their passing rules were extracted with that prompt on 23 October (`extractions/{ca,tx}/`) and are drafts that no person has reviewed.
 
+Since 28 October, Ontario also runs through the database in six stages, each reading and writing `db/rules.sqlite` only: import, tag, select, formalize, ground and validate (`db/README.md`). The first run of it is `on-passing-1`, compared with the reviewed set in `runs/on-passing-1/compare.md`. The table below is the file-based procedure that made the reviewed set.
+
 ![Pipeline](pipeline.png)
 
 `pipeline.svg` is the same figure as a vector file, drawn by `make_pipeline_svg.py`.

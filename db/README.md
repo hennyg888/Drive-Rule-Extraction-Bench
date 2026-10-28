@@ -9,7 +9,40 @@ replaces reading documents by eye with fixed queries: the same question always g
 - `db/schema.sql` defines the tables, with a comment on each.
 - `tools/db.py` loads, checks, dumps and exports.
 - `tools/db_import.py` made the first version from the files it replaced (27 October 2026). Do not run
-  it again: it would drop everything added since.
+  it again: it would drop everything added since. The census tables it made were removed on 28
+  October; tagging (stage 2 below) replaces them.
+
+## The stages
+
+Every stage after the first reads the database and writes the database; none reads the handbook's
+HTML again. Each stage has one job, and each pass of a stage is a `run` row saying what it read,
+with which prompt (and its sha256) and by whom.
+
+| Stage | Job | Tool | Writes |
+|---|---|---|---|
+| 1 Import | Put the handbook in, one row per paragraph and per sentence, word for word | `tools/import_handbook.py mto --sentences` | `page`, `unit` |
+| 2 Tag | Label every sentence and figure from fixed lists (type, modal as written, caution, topics, vague words), by an LLM with `prompts/tag-units.md`; never rewrite | `tools/tag_units.py shard`, the model, `check`, `load` | `run`, `unit_tag`, `unit_topic`, `unit_vague` |
+| 3 Select | Choose a topic's paragraphs by a fixed query on the tags; a person confirms, adding or dropping by hand | `tools/select_passages.py` | `run`, `selection` |
+| 4 Formalize | Write the selected paragraphs as rule-language statements with `prompts/extract-rules.md` | `tools/extract_rules.py render`, the model, `check`, `load` | `run`, `statement` and its child tables, `term`, `occurrence` |
+| 5 Ground | Put the law under the statements: how far a source settles each flag, the provisions behind each statement, law lines | `tools/carry_grounding.py` carries what was checked for a paired statement of another run; the rest by hand in SQL, checked by `db.py check` | `grounding`, `grounding_link`, `statement_basis`, `statement_law`, `statement_law_ref` |
+| 6 Validate | Fixed checks on everything above, and comparison of two runs | `tools/db.py check`, `tools/compare_runs.py` | nothing |
+
+```
+python3 tools/import_handbook.py mto --sentences
+python3 tools/tag_units.py shard mto on-tag-1 --shards 8        # then a model answers each shard
+python3 tools/tag_units.py check on-tag-1
+python3 tools/tag_units.py load on-tag-1 --model NAME --date YYYY-MM-DD
+python3 tools/select_passages.py mto passing on-passing-select-1 --tags on-tag-1 [--add ID --drop ID --by NAME]
+python3 tools/extract_rules.py render on-passing-1 --selection on-passing-select-1   # then a model answers
+python3 tools/extract_rules.py check on-passing-1
+python3 tools/extract_rules.py load on-passing-1 --model NAME --date YYYY-MM-DD
+python3 tools/compare_runs.py on-passing-1 on-passing-ref --report runs/on-passing-1/compare.md
+python3 tools/carry_grounding.py on-passing-1 --from on-passing-ref --report runs/on-passing-1/grounding-left.md
+python3 tools/db.py check && python3 tools/db.py dump
+```
+
+A model's inputs and answers stay in `runs/<run>/`: the rendered prompt, the inputs, the answers and
+the brief it was given.
 
 ## Working with it
 
@@ -33,11 +66,13 @@ byte, so a change shows in git as exactly the rows it touched.
 | Table | One row per |
 |---|---|
 | `source` | Document: a handbook, a statute, a regulation, a standard or a safety model, with its version, URL, local copy and sha256 |
-| `unit` | Citable piece of a document, word for word: a handbook paragraph, an Ontario sentence, a topic passage, or a provision of a law |
-| `sentence_label` | Ontario sentence's census label: type, role, modal, where its strength comes from, whether it is about passing |
-| `sentence_word` | Word the census pulled out of a sentence: its action, entities, situation dimensions, vague words (with their flag code), clause keywords |
+| `page` | Handbook page, in reading order, with its title |
+| `unit` | Citable piece of a document, word for word: a handbook paragraph (or figure, with its caption), a sentence of a paragraph, a topic passage of a reviewed set, or a provision of a law |
+| `run` | Pass of a stage: tagging, selection or extraction, with what it read, its prompt and sha256, who did it and when; `rules_json = 1` marks the set `rules.json` holds |
+| `unit_tag`, `unit_topic`, `unit_vague` | Tags of a sentence or figure: type, modal as written, caution; the topics it is about; its vague words, copied exactly, with a flag code |
+| `selection` | Paragraph a selection run chose for a topic, with the passage id the extraction prompt shows (`p17`) and why: tag, lead of a list, or by hand |
 | `vocabulary` | Fixed word of the rule language: types, modals (with their strength), clauses, connectives, links, flags, verbs, roles, units |
-| `statement` | Extracted statement, as in `rules.json` |
+| `statement` | Extracted statement, with the run it came from; the reviewed set is the one in `rules.json` |
 | `statement_step`, `statement_source`, `step_source`, `statement_figure` | A procedure's steps, and the passages and figures a statement or step cites |
 | `statement_link` | EXCEPTION TO, SPECIALIZES or a plain reference between statements |
 | `statement_basis` | Provision behind a statement, and whether the statement says the SAME, is BROADER or NARROWER, DIFFERENT, or the provision is its PENALTY |
@@ -57,9 +92,10 @@ it. Each provision is quoted word for word at the end, with a link to its line i
 e-Laws.
 
 Ids say what they point at: `mto:para:driving-along:018` (a paragraph), `mto:sent:stopping:022.1`
-(a census sentence), `mto:passage:m17` (a topic passage), `on-hta:148(8)` (a provision),
-`on-reg-339-94:item-12` (a row of the demerit point table), `mto:3.1.2a` (a statement),
-`mto:3.1.2a|R|30 m from` (a flag).
+(the first sentence of paragraph `mto:para:stopping:022`), `mto:passage:m17` (a
+passage of the reviewed set), `on-hta:148(8)` (a provision), `on-reg-339-94:item-12` (a row of the
+demerit point table), `mto:3.1.2a` (a reviewed statement), `on-passing-1:p17a` (a statement of
+extraction run `on-passing-1`), `mto:3.1.2a|R|30 m from` (a flag).
 
 ### Grounding statuses
 
@@ -78,7 +114,12 @@ Errors (exit 1):
 - a row refers to a row that does not exist;
 - a law's local copy does not match its sha256, or a provision is not word for word in its local copy
   (spacing and curly quotes aside);
-- a statement cites something that is not a topic passage;
+- a statement cites something that is not a topic passage or a paragraph its run selected;
+- a run reads the wrong kind of run (selection reads tags, extraction reads a selection, same
+  handbook), or statements belong to a run that is not an extraction;
+- a tag is on something other than a sentence or figure, a figure is not tagged FIGURE (or text is),
+  a vague word is not copied exactly from its sentence, or a selected unit is not a paragraph of the
+  run's handbook;
 - a statement's strength does not match its modal, or a DEFINE or FACT has a strength;
 - an EXCEPTION TO or SPECIALIZES link is not in the statement's text;
 - a basis row points at something that is not a provision; a grounding link points at the wrong kind
@@ -95,14 +136,23 @@ is not in the statement, its steps or its sources, a law with no local copy.
 
 Reported each time: flags by grounding status, LAW statements that cite no provision, ADVICE
 statements with a provision behind them, law lines and the statements with a provision behind them
-that have none yet, topic passages no statement cites, and how many handbook sentences are cited.
+that have none yet, topic passages no statement cites, how many sentences and figures each tagging
+run tagged, and for each extraction run how many handbook sentences it cites.
 
 ## Questions it answers
 
-Ontario sentences the census marked as about passing that no statement cites:
+Sentences and figures tagged with an extraction run's topic that none of its statements cites:
 
 ```sql
-SELECT id, locator, text FROM passing_sentence_unused;
+SELECT id, locator, text FROM topic_unit_unused WHERE run_id = 'on-passing-1';
+```
+
+The tags of one paragraph's sentences, and every vague word tagged on a page:
+
+```sql
+SELECT u.id, t.type, t.modal, t.caution, u.text FROM unit u JOIN unit_tag t ON t.unit_id = u.id
+WHERE u.parent_id = 'mto:para:changing-positions:012' ORDER BY u.id;
+SELECT v.code, v.span, u.text FROM unit_vague v JOIN unit u ON u.id = v.unit_id WHERE u.page = 'changing-positions';
 ```
 
 Which statements cite a handbook sentence:

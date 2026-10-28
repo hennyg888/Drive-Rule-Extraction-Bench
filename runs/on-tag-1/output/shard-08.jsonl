@@ -1,0 +1,492 @@
+{"id": "mto:sent:off-road-vehicles-snowmobiles:001.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:001.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:002.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:003.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:004.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:005.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:005.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:006.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:007.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "many people"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:007.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:007.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:007.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "you must know"], ["J", "safely"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:008.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:008.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["S", "in some areas"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:008.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["S", "some highways"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:008.4", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["S", "some provincial highways"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:009.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:009.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:009.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:009.4", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:010.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:010.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:011.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:011.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:012.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:012.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:012.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:013.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:013.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:013.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:014.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:015.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:015.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:016.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:017.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:017.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:017.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:017.4", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:018.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:018.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:019.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:019.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:019.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:020.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:020.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:020.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:021.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:021.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:022.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:022.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["D", "In specific circumstances"], ["S", "some highways"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:022.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:023.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:023.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:024.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:024.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:024.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:025.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:025.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:026.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:026.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:026.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:027.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:027.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:027.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:027.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:027.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:027.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:028.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:028.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:028.3", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:029.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:029.2", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:030.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:030.2", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "if necessary"], ["J", "in doubt"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:031.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:032.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:033.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:033.2", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:034.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:034.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:035.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:035.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:035.3", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["S", "generally"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:035.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:036.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "carefully"]]}
+{"id": "mto:para:off-road-vehicles-snowmobiles:037", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:038.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:038.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:038.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:038.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:038.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "within your abilities"], ["J", "according to conditions"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:039.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:039.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "long trips"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:039.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:040.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:041.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:041.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["D", "In specific circumstances"], ["S", "some highways"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:041.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:042.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["S", "certain high-speed roads"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:042.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:042.3", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:042.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:042.5", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:042.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safe"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:042.7", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:043.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["D", "Except where prohibited"], ["J", "as far away from the road as possible"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:043.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:043.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:044.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:045.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "many snowmobile clubs"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:045.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:045.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Some clubs"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:045.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Some other clubs"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:045.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:045.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "unsure"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:046.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:046.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:046.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Some snowmobile-trail user groups"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:046.4", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:046.5", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:047.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:047.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:047.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:048", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:049.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:049.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:049.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:049.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:050.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:050.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:050.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["D", "Under certain circumstances"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:050.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:050.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:051.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:051.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:051.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:052.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:053.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:053.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:053.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "extra space"], ["J", "safely"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:053.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:053.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:053.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:054.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:054.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:055.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "safe"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:055.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:055.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:055.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:056.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "apparently"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:057.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:057.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:057.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:058.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:059.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:059.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "must be able to concentrate"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:060.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:060.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:060.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:060.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:061.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:061.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:061.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:061.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:062.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:062.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:063.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:064.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:064.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:065.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:065.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:066.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:067.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:067.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:067.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:067.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:067.5", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:068.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:068.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:068.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:069.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:069.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:069.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:069.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:069.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:070.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:071.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:071.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:072.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:072.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:072.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:072.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:072.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Some drugs"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:073.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:074.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:075.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:075.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:075.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:076.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "several days"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:076.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:077.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:077.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "must have complete control"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:077.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:078.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:078.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:078.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:078.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:079.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:079.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "as far as possible"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:079.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:080.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:080.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:081.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:081.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:081.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:081.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:081.5", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:081.6", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:082.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:082.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:082.3", "type": "RULE", "modal": "SHOULD", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:082.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:082.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:082.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:083", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:084.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:084.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:084.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "well before"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:084.4", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:085.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:086.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:087", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:088.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:089.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:090", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:091.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:092.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:093", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:094.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:095.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:095.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:096.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:097.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:098.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:099.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:099.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:100.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:101.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:102.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:102.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:102.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:102.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:103.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:104.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:104.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:105", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:106.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:107.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:108", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:109.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:110.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:110.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:111", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:112.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:113.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:113.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:114", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:115.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:115.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:116", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:117.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "you need to be aware"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:117.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:118.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:119.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:120", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:121.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:122.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:123", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:124.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:125.1", "type": "FACT", "modal": "NONE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:126", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:127.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:128.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:128.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:128.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:129.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "You need to be aware"], ["J", "appropriately"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:129.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:129.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "properly"], ["J", "well protected"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:129.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:129.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "Prolonged"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:130.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:131", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:132.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:133.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "prolonged"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:134.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:134.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:135.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:135.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:136.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:136.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:137.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "usually"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:137.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:137.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:138.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:138.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:138.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:138.4", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:139.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:140.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:140.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:140.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:141.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:141.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:141.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:142.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:143.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:144.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:145.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:146.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:146.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:147.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:148.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:148.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:149.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:150.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:151.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:152.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:153.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:154.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:155.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:156.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:156.2", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:157.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:157.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:158.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "close supervision"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:158.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "close supervision"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:159.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["S", "generally"], ["S", "some exceptions"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:159.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:159.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:160.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:160.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:160.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:161.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:162.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:163.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:163.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:163.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["M", "You should carry the vehicle permit"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:164.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:164.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:165.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:165.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:165.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:165.4", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:166.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:166.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:166.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:167.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:167.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:168.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:168.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:168.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:169.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:169.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:169.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:169.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:169.5", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:169.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:170.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:170.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:170.3", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "thoroughly"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:171.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:171.2", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "if necessary"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:172.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:173.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:174.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:175.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "enough"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:176.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:176.2", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["R", "the is in neutral"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:177.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:178.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:179", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:180.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:180.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:180.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:180.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:180.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "long trips"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:181.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["S", "most public roads"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:181.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:182.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:183.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["S", "some public roads"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:184.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["S", "certain off-road vehicles"], ["S", "some public roads"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:185.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:186.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:187.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:188.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:189.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:190.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:191.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:192.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:192.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:192.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:192.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "as close as safely possible"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:193.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:193.2", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:193.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:194.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:194.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:195.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:196.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:197.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:198.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:199.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": [["S", "In general"], ["S", "most parts of the Trans-Canada Highway"], ["J", "low traffic volumes"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:200.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:off-road-vehicles-snowmobiles:201", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:202.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:202.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:202.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:203.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "reasonable consideration"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:203.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:203.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:204.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "apparently"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:205.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:206.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:207.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:207.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:207.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:207.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:208.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:208.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:208.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:208.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:209.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:209.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:210.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:211.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:211.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:212.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:212.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:213.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:214.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:214.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:214.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:214.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:214.5", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:215.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:215.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:215.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:216.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:216.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:216.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:216.4", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:216.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:217.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:218.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:218.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:219.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:219.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:219.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:220.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:220.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Some drugs"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:220.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:221.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:222.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:222.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:222.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:223.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "several days"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:223.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:224.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["M", "Do not carry passengers"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:224.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:225.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:225.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:226.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:226.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:226.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:226.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:226.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:226.6", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:226.7", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:227.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "extremely careful"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:227.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "fast"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:227.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:227.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "too deep"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:227.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "slowly and carefully"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:228.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:228.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["S", "most hills"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:228.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "extra cautious"]]}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:229.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:230.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:231.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:232.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:233.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:off-road-vehicles-snowmobiles:234.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}

@@ -1,0 +1,441 @@
+{"id": "mto:sent:getting-ready-drive:001.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "comfortable"]]}
+{"id": "mto:sent:getting-ready-drive:001.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["J", "have doubts"]]}
+{"id": "mto:sent:getting-ready-drive:002.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:002.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:002.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "not fit"]]}
+{"id": "mto:sent:getting-ready-drive:003.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "good physical and mental condition"]]}
+{"id": "mto:sent:getting-ready-drive:003.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["M", "Don't drive"]]}
+{"id": "mto:sent:getting-ready-drive:004.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:004.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:004.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:004.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:004.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:005.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:005.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:006.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:007.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:007.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "many types of vehicles"]]}
+{"id": "mto:sent:getting-ready-drive:007.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Many newer vehicles"]]}
+{"id": "mto:sent:getting-ready-drive:007.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:008.1", "type": "RULE", "modal": "MUST", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:009.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:010.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:010.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:010.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:011.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:011.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:012.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:013.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:getting-ready-drive:013.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:013.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:013.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "if needed"]]}
+{"id": "mto:sent:getting-ready-drive:014.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:014.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:014.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:014.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:014.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:015.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "the right height"]]}
+{"id": "mto:sent:getting-ready-drive:015.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:016.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "enough room"], ["J", "properly and safely"]]}
+{"id": "mto:sent:getting-ready-drive:016.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["J", "overcrowd"]]}
+{"id": "mto:sent:getting-ready-drive:017.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:017.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["M", "Do not put anything in your windows"]]}
+{"id": "mto:sent:getting-ready-drive:017.3", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:017.4", "type": "RULE", "modal": "SHOULD NOT", "caution": 0, "topics": [], "vague": [["M", "Neither should"]]}
+{"id": "mto:sent:getting-ready-drive:018.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:019.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:019.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:019.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "On some vehicles"]]}
+{"id": "mto:sent:getting-ready-drive:020.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:020.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "most vehicles"]]}
+{"id": "mto:sent:getting-ready-drive:020.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:020.4", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:020.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:020.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:020.7", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:020.8", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:021.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:021.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:022.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:023.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:023.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:024.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:024.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["R", "must be buckled up"]]}
+{"id": "mto:sent:getting-ready-drive:025.1", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:025.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:025.3", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:025.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:025.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:026.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "snugly enough"]]}
+{"id": "mto:sent:getting-ready-drive:026.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["M", "Never put more than one person into a seatbelt"]]}
+{"id": "mto:sent:getting-ready-drive:026.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:026.4", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:027.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:027.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:027.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:028.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:028.2", "type": "RULE", "modal": "SHOULD NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:028.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:029.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:030.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:031.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:getting-ready-drive:031.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:032.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:getting-ready-drive:032.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "proper"], ["J", "young children"]]}
+{"id": "mto:sent:getting-ready-drive:033.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:033.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:033.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:033.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:034.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:034.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:034.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:034.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:035.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:035.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:035.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:036.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:036.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:036.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:036.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:036.5", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:036.6", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:036.7", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:037.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:037.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:038.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["J", "properly"]]}
+{"id": "mto:sent:getting-ready-drive:039.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:040.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:041.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:042.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:042.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:043.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:044.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:044.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:045.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:046.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:046.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:047.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:048.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:049.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:049.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:050.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:050.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:050.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:050.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:getting-ready-drive:051.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:051.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:052.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:052.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:053.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:053.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:053.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:054.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "where needed"]]}
+{"id": "mto:sent:getting-ready-drive:054.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:055.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:055.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:056.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:057.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:057.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:057.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:057.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:057.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["M", "remember to switch to low beams"]]}
+{"id": "mto:sent:getting-ready-drive:057.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["M", "Use your low beams"]]}
+{"id": "mto:sent:getting-ready-drive:057.7", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["R", "These rules"]]}
+{"id": "mto:sent:getting-ready-drive:058.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:058.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:getting-ready-drive:059.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:059.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:059.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["M", "Don't drive with only one headlight"], ["J", "not aimed properly"]]}
+{"id": "mto:sent:getting-ready-drive:059.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "regularly"], ["J", "as soon as possible"]]}
+{"id": "mto:sent:getting-ready-drive:060.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:060.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:061.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:062.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:062.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:062.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:062.4", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:063.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:063.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:063.3", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:064.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:065.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:066.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:067.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:068.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:getting-ready-drive:069.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:001.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:001.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:001.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["S", "every five seconds or so"]]}
+{"id": "mto:sent:driving-along:001.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:001.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "typically"]]}
+{"id": "mto:sent:driving-along:001.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:002.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "a cushion of space"]]}
+{"id": "mto:sent:driving-along:002.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:002.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": ["passing"], "vague": [["J", "well ahead"]]}
+{"id": "mto:sent:driving-along:002.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:003.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:003.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["S", "most steering"]]}
+{"id": "mto:sent:driving-along:003.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["M", "must be able to steer"]]}
+{"id": "mto:sent:driving-along:004.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:driving-along:005", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:006.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:007.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:007.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "well before"]]}
+{"id": "mto:sent:driving-along:007.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:007.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:008.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:008.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:008.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:009.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safe"]]}
+{"id": "mto:sent:driving-along:010.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:driving-along:010.2", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:driving-along:011.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:driving-along:011.2", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "bad weather"], ["J", "heavy traffic"]]}
+{"id": "mto:sent:driving-along:011.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:driving-along:012.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:013.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:013.2", "type": "RULE", "modal": "SHOULD NOT", "caution": 0, "topics": [], "vague": [["S", "some circumstances"]]}
+{"id": "mto:sent:driving-along:014.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:014.2", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:015.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:016.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:driving-along:016.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:016.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:016.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:016.5", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:017.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["S", "As a general rule"]]}
+{"id": "mto:sent:driving-along:017.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "a cushion of space"]]}
+{"id": "mto:sent:driving-along:018.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "enough space"], ["J", "safely"]]}
+{"id": "mto:sent:driving-along:018.2", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:018.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:019.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["M", "Do not block"], ["J", "normal and reasonable"]]}
+{"id": "mto:para:driving-along:020", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:021.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:022.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:023.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:024.1", "type": "STEP", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:024.2", "type": "STEP", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:025.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:025.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["J", "ideal driving conditions"]]}
+{"id": "mto:sent:driving-along:025.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "extra space"]]}
+{"id": "mto:sent:driving-along:026.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:027.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:028.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-along:029.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:001.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "many road users"]]}
+{"id": "mto:sent:sharing-road-other-road-users:001.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:002.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:002.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:002.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "due diligence"], ["J", "properly"]]}
+{"id": "mto:sent:sharing-road-other-road-users:002.4", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "In most cases"]]}
+{"id": "mto:sent:sharing-road-other-road-users:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:004.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "slowly and cautiously"]]}
+{"id": "mto:sent:sharing-road-other-road-users:004.2", "type": "RULE", "modal": "SHOULD NOT", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:004.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:004.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:005.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:006.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:007.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": ["passing"], "vague": [["M", "Do not pass a vehicle stopped at a crosswalk"]]}
+{"id": "mto:sent:sharing-road-other-road-users:007.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:008.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "nearly all intersections"]]}
+{"id": "mto:sent:sharing-road-other-road-users:009.1", "type": "RULE", "modal": "MUST", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:010.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:sharing-road-other-road-users:011.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:012.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["S", "Many modern urban roads"], ["S", "often"]]}
+{"id": "mto:sent:sharing-road-other-road-users:012.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:013.1", "type": "RULE", "modal": "MUST", "caution": 1, "topics": [], "vague": [["J", "extra caution and courtesy"]]}
+{"id": "mto:sent:sharing-road-other-road-users:014.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:015.1", "type": "RULE", "modal": "SHOULD", "caution": 1, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:sharing-road-other-road-users:015.2", "type": "RULE", "modal": "MUST", "caution": 1, "topics": [], "vague": [["J", "extra caution"]]}
+{"id": "mto:sent:sharing-road-other-road-users:016.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:017.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["S", "Some streetcar stops"]]}
+{"id": "mto:sent:sharing-road-other-road-users:017.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "a reasonable speed"]]}
+{"id": "mto:sent:sharing-road-other-road-users:017.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:018.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:018.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:sharing-road-other-road-users:018.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:sharing-road-other-road-users:019.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:019.2", "type": "RULE", "modal": "MUST", "caution": 1, "topics": [], "vague": [["J", "Extra care"]]}
+{"id": "mto:sent:sharing-road-other-road-users:019.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:sharing-road-other-road-users:020.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:020.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:021.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:021.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:022.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["M", "are expected to"], ["S", "about one metre"], ["J", "as close as practical"]]}
+{"id": "mto:sent:sharing-road-other-road-users:022.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": ["passing"], "vague": [["J", "if necessary for safety"]]}
+{"id": "mto:sent:sharing-road-other-road-users:023.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:024.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:025.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": [["J", "too narrow to be shared safely"]]}
+{"id": "mto:sent:sharing-road-other-road-users:026.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:sharing-road-other-road-users:027", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:028.1", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:028.2", "type": "RULE", "modal": "MAY", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:sharing-road-other-road-users:029", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:030.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": ["passing"], "vague": [["J", "where practical"]]}
+{"id": "mto:sent:sharing-road-other-road-users:030.2", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:030.3", "type": "CONSEQ", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:030.4", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": ["passing"], "vague": [["J", "Whenever possible"]]}
+{"id": "mto:sent:sharing-road-other-road-users:031.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": [["J", "too closely"]]}
+{"id": "mto:sent:sharing-road-other-road-users:031.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:032.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:033.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:034.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:035.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:036.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": ["passing"], "vague": [["J", "unnecessarily"]]}
+{"id": "mto:sent:sharing-road-other-road-users:036.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:036.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "some distance away"]]}
+{"id": "mto:para:sharing-road-other-road-users:037", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:038.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:038.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "typically"]]}
+{"id": "mto:sent:sharing-road-other-road-users:038.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Sometimes"]]}
+{"id": "mto:sent:sharing-road-other-road-users:038.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:038.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:sharing-road-other-road-users:039.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:039.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:040.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "when possible"]]}
+{"id": "mto:para:sharing-road-other-road-users:041", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:042.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:042.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "typically"]]}
+{"id": "mto:sent:sharing-road-other-road-users:042.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:042.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:042.5", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:042.6", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:sharing-road-other-road-users:043", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:044.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:044.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:044.3", "type": "RULE", "modal": "SHOULD", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:044.4", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:045.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:045.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:045.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:045.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:046.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:046.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:046.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:047.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:047.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["S", "many motorcycle turn signals"]]}
+{"id": "mto:sent:sharing-road-other-road-users:047.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:048.1", "type": "RULE", "modal": "SHOULD", "caution": 0, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:sharing-road-other-road-users:048.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:048.3", "type": "RULE", "modal": "MUST", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:049.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:049.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:049.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:049.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:049.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:049.6", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:sharing-road-other-road-users:050", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:051.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:051.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:051.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": ["passing"], "vague": [["J", "closely"]]}
+{"id": "mto:sent:sharing-road-other-road-users:051.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:051.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "more room"]]}
+{"id": "mto:para:sharing-road-other-road-users:052", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:053.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:053.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:053.3", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:053.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:053.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:053.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "well back"]]}
+{"id": "mto:sent:sharing-road-other-road-users:054.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["R", "This situation"]]}
+{"id": "mto:sent:sharing-road-other-road-users:054.2", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:054.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "well back"]]}
+{"id": "mto:sent:sharing-road-other-road-users:055.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:055.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "plenty of room"]]}
+{"id": "mto:sent:sharing-road-other-road-users:055.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:056.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:056.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:057.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:057.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:057.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:058.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Many municipal roadways"]]}
+{"id": "mto:sent:sharing-road-other-road-users:058.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:059.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:060.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:061.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:062.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:sharing-road-other-road-users:063", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:064.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:065.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:066.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:067.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:068.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:068.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "Most tractors and combines"]]}
+{"id": "mto:sent:sharing-road-other-road-users:068.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:sharing-road-other-road-users:068.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:sent:sharing-road-other-road-users:068.5", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:069.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:069.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:069.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:069.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "well back"], ["J", "safe"]]}
+{"id": "mto:sent:sharing-road-other-road-users:070.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:070.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:070.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:070.4", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:071.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:071.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "many buggies"]]}
+{"id": "mto:sent:sharing-road-other-road-users:071.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:071.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:071.5", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "a safe following distance"], ["J", "safe"]]}
+{"id": "mto:sent:sharing-road-other-road-users:071.6", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:071.7", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": [["J", "as much distance between you and them as possible"]]}
+{"id": "mto:sent:sharing-road-other-road-users:071.8", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": [["J", "too closely"]]}
+{"id": "mto:sent:sharing-road-other-road-users:072.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:073.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:074.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:075.1", "type": "RULE", "modal": "SHOULD", "caution": 1, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:076.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:077.1", "type": "RULE", "modal": "NONE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:078.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:079.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:080.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:081.1", "type": "RULE", "modal": "IMPERATIVE NOT", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:082.1", "type": "RULE", "modal": "MUST NOT", "caution": 0, "topics": ["passing"], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:083.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:084.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:085.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:sharing-road-other-road-users:086.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:001.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "carefully"]]}
+{"id": "mto:sent:driving-through-intersections:001.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:001.3", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "often"]]}
+{"id": "mto:para:driving-through-intersections:002", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:003.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:driving-through-intersections:004", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:005.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:006.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "carefully"]]}
+{"id": "mto:sent:driving-through-intersections:006.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "for a while"]]}
+{"id": "mto:sent:driving-through-intersections:006.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": [["J", "safely"]]}
+{"id": "mto:sent:driving-through-intersections:006.4", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:007.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:007.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:008.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": [["J", "if necessary"]]}
+{"id": "mto:sent:driving-through-intersections:009.1", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:009.2", "type": "RULE", "modal": "IMPERATIVE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:010.1", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:010.2", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": [["S", "usually"]]}
+{"id": "mto:sent:driving-through-intersections:010.3", "type": "RULE", "modal": "IMPERATIVE", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:010.4", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:010.5", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:011.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:011.2", "type": "DEFINE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:011.3", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:driving-through-intersections:012", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:013.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:driving-through-intersections:014", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:015.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:015.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:driving-through-intersections:016", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:017.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:017.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:017.3", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:017.4", "type": "RULE", "modal": "SHOULD", "caution": 1, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:017.5", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": [["J", "if necessary"]]}
+{"id": "mto:para:driving-through-intersections:018", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:019.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:para:driving-through-intersections:020", "type": "FIGURE", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:021.1", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:022.1", "type": "FACT", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:022.2", "type": "RULE", "modal": "MUST", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:023.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:024.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
+{"id": "mto:sent:driving-through-intersections:025.1", "type": "META", "modal": "NONE", "caution": 0, "topics": [], "vague": []}
