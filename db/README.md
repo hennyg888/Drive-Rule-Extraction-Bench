@@ -18,11 +18,12 @@ python3 tools/db.py load            # db/tables -> db/rules.sqlite
 sqlite3 db/rules.sqlite             # query and change it (or Python's sqlite3)
 python3 tools/db.py check           # every check below; exit 1 on an error
 python3 tools/db.py dump            # db/rules.sqlite -> db/tables, then commit
-python3 tools/db.py export --write  # rewrite analysis/passing-rules/*/rules.json from it
+python3 tools/db.py export --write  # rewrite rules.json and passing-rules-law.md from it
 ```
 
 After changing statements, run `export --write` and then `tools/render_rules_md.py` so `rules.json`
-and `passing-rules.md` follow. `check` fails while `rules.json` differs from the database.
+and `passing-rules.md` follow. `export --write` also writes `passing-rules-law.md` for a jurisdiction
+with law lines. `check` fails while either file differs from the database.
 
 Load, then dump, gives the same files byte for byte, and export gives the same `rules.json` byte for
 byte, so a change shows in git as exactly the rows it touched.
@@ -43,10 +44,17 @@ byte, so a change shows in git as exactly the rows it touched.
 | `occurrence` | Flag on a statement (rule language §8) |
 | `term` | Flagged judgment word, per jurisdiction (`on:safely`), so every use of one word can be found |
 | `grounding`, `grounding_link` | How far a formal source settles a flag, and the provisions or sentences that do |
+| `statement_law`, `statement_law_ref` | Law added under a statement, which itself stays as extracted: a line in the rule language saying what the law says on the statement's subject (the same duty, the duty the handbook words as advice, the law's definitions, conditions, exceptions or penalty), and the provisions it cites |
 
 Two tables are rebuilt by `load` and `check`, never dumped: `passage_part` (which sentences or
 paragraphs a topic passage covers, matched by text, or by image for a figure) and `statement_part`
 (each statement split at its keywords).
+
+`analysis/passing-rules/mto/passing-rules-law.md` shows every Ontario statement as extracted, with
+its flags and their notes unchanged, and under it what the law adds: how far a source settles each
+flag, the law lines, and each provision behind the statement with how the statement compares with
+it. Each provision is quoted word for word at the end, with a link to its line in `statutes/` and to
+e-Laws.
 
 Ids say what they point at: `mto:para:driving-along:018` (a paragraph), `mto:sent:stopping:022.1`
 (a census sentence), `mto:passage:m17` (a topic passage), `on-hta:148(8)` (a provision),
@@ -75,15 +83,19 @@ Errors (exit 1):
 - an EXCEPTION TO or SPECIALIZES link is not in the statement's text;
 - a basis row points at something that is not a provision; a grounding link points at the wrong kind
   of source for its role; a `LAW_*` grounding has no law provision, or a `STANDARD` one no standard;
-- `rules.json` differs from the database.
+- a law line has an advice modal or no modal; cites a provision that is not a basis row of its
+  statement; cites no statute or regulation provision other than a penalty; states a penalty
+  (`IF VIOLATED`) without citing a PENALTY provision; or marks open (`[?…]`) a word the law settles
+  (`LAW_DEFINES`, `LAW_STATES`);
+- `rules.json` or `passing-rules-law.md` differs from the database.
 
 Warnings: a quote not word for word in its passage, a passage that matches no handbook text, a
-capitalised word not in the vocabulary, a J, S, R or G flag whose span is not in the statement, its
-steps or its sources, a law with no local copy.
+capitalised word not in the vocabulary (in a statement or a law line), a J, S, R or G flag whose span
+is not in the statement, its steps or its sources, a law with no local copy.
 
 Reported each time: flags by grounding status, LAW statements that cite no provision, ADVICE
-statements with a provision behind them, topic passages no statement cites, and how many handbook
-sentences are cited.
+statements with a provision behind them, law lines and the statements with a provision behind them
+that have none yet, topic passages no statement cites, and how many handbook sentences are cited.
 
 ## Questions it answers
 
@@ -127,6 +139,17 @@ Statements the handbook words as advice but a law states, and LAW statements wit
 ```sql
 SELECT statement_id, unit_id, relation, note FROM advice_with_law;
 SELECT * FROM law_without_basis;
+```
+
+Each Ontario statement with the law lines added under it and the provisions they cite, and the
+statements with a provision behind them that have no law line yet:
+
+```sql
+SELECT s.local_id, s.text, l.text, group_concat(r.unit_id, ', ')
+FROM statement s JOIN statement_law l ON l.statement_id = s.id
+JOIN statement_law_ref r ON r.statement_id = l.statement_id AND r.position = l.position
+GROUP BY l.statement_id, l.position ORDER BY s.position, l.position;
+SELECT * FROM law_not_added;
 ```
 
 ## Changing it

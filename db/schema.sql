@@ -151,6 +151,29 @@ CREATE TABLE statement_basis (
   PRIMARY KEY (statement_id, unit_id)
 );
 
+-- The law added under a statement, which itself stays as extracted (its text, strength and
+-- flags are the reference the extraction is scored against). Each line states, in the rule
+-- language, what the law says on the statement's subject: the same duty, the duty the handbook
+-- words as advice, the law's own definitions, conditions and exceptions, or its penalty. A word the
+-- law leaves as open as the handbook keeps its [?…] mark.
+CREATE TABLE statement_law (
+  statement_id  TEXT NOT NULL REFERENCES statement(id),
+  position      INTEGER NOT NULL,
+  text          TEXT NOT NULL,
+  note          TEXT,
+  PRIMARY KEY (statement_id, position)
+);
+
+-- The provisions one added law line cites; each is also a statement_basis row of its statement,
+-- which says how the statement compares with it.
+CREATE TABLE statement_law_ref (
+  statement_id  TEXT NOT NULL,
+  position      INTEGER NOT NULL,
+  unit_id       TEXT NOT NULL REFERENCES unit(id),
+  PRIMARY KEY (statement_id, position, unit_id),
+  FOREIGN KEY (statement_id, position) REFERENCES statement_law(statement_id, position)
+);
+
 -- Rule language ------------------------------------------------------------------------------
 
 -- Every keyword, modal, flag code, verb, role, unit and fixed phrase of analysis/rule-language.md.
@@ -253,3 +276,14 @@ CREATE VIEW advice_with_law AS
   JOIN source src ON src.id = u.source_id
   WHERE s.strength = 'ADVICE' AND b.relation IN ('SAME', 'BROADER', 'NARROWER')
     AND src.kind IN ('statute', 'regulation');
+
+-- Statements with a provision of a statute or regulation behind them (other than a penalty) and
+-- no law line added yet.
+CREATE VIEW law_not_added AS
+  SELECT DISTINCT s.id, s.jurisdiction, s.strength, s.text
+  FROM statement s
+  JOIN statement_basis b ON b.statement_id = s.id
+  JOIN unit u ON u.id = b.unit_id
+  JOIN source src ON src.id = u.source_id
+  WHERE b.relation != 'PENALTY' AND src.kind IN ('statute', 'regulation')
+    AND s.id NOT IN (SELECT statement_id FROM statement_law);

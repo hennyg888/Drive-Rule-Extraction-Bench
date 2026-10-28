@@ -24,7 +24,7 @@ All three HTML copies have the same layout, so one program can read any of them.
 |---|---|
 | `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
 | `scrapers/` | The scripts that made `handbooks/` |
-| `analysis/` | The rule language (`rule-language.md`), the Ontario census, the passing rules of each handbook (`analysis/passing-rules/{mto,ca,tx}/`: `rules.json`, a readable `passing-rules.md`, `meta.json` and the passages in `inputs/`), handbook passages (`analysis/segments/`) and notes on using the rules in a VLA |
+| `analysis/` | The rule language (`rule-language.md`), the Ontario census, the passing rules of each handbook (`analysis/passing-rules/{mto,ca,tx}/`: `rules.json`, a readable `passing-rules.md`, `meta.json` and the passages in `inputs/`; for Ontario also `passing-rules-law.md`, the same statements with the law added under them), handbook passages (`analysis/segments/`) and notes on using the rules in a VLA |
 | `prompts/` | The extraction prompt (`extract-rules.md`), its topic files (`topics/`) and how passages are chosen (`select-passages.md`) |
 | `db/` | The rules database: handbook sentences, statements, vocabulary, laws and the grounding of flagged words, one JSONL file per table (`db/README.md`) |
 | `statutes/` | Local copies of the laws the database cites, with where and when each was downloaded |

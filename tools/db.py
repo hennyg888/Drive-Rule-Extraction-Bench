@@ -10,7 +10,7 @@ Usage, from the repo root:
     sqlite3 db/rules.sqlite                  # or Python's sqlite3: query and edit
     python3 tools/db.py check                # every validation in db/README.md; exit 1 on an error
     python3 tools/db.py dump                 # db/rules.sqlite -> db/tables/*.jsonl, then commit
-    python3 tools/db.py export --write       # rewrite analysis/passing-rules/*/rules.json from it
+    python3 tools/db.py export --write       # rewrite rules.json and passing-rules-law.md from it
 
 Two tables are derived and never dumped: passage_part (which sentences or paragraphs a topic
 passage covers, matched by text) and statement_part (each statement split at its keywords).
@@ -51,6 +51,8 @@ MASTER = [
     ('statement_link', 'from_id, position'),
     ('statement_figure', 'statement_id, position'),
     ('statement_basis', 'statement_id, unit_id'),
+    ('statement_law', 'statement_id, position'),
+    ('statement_law_ref', 'statement_id, position, unit_id'),
     ('term', 'id'),
     ('occurrence', 'id'),
     ('grounding', 'occurrence_id'),
@@ -223,6 +225,25 @@ def rules_json(rows):
     return json.dumps(rows, ensure_ascii=False, indent=1)
 
 
+LAW_PAGE_TITLE = {'on': 'Ontario passing rules, with the law added'}
+
+
+def outputs(db):
+    """Every file made from the database, as {path from the repo root: content}."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import render_law_md
+    out = {}
+    for jur, folder in FOLDERS.items():
+        base = os.path.join('analysis', 'passing-rules', folder)
+        rows = export(db, jur)
+        if rows:
+            out[os.path.join(base, 'rules.json')] = rules_json(rows)
+        if db.execute('SELECT 1 FROM statement_law g JOIN statement s ON s.id = g.statement_id '
+                      'WHERE s.jurisdiction = ? LIMIT 1', (jur,)).fetchone():
+            out[os.path.join(base, 'passing-rules-law.md')] = render_law_md.render(db, jur, LAW_PAGE_TITLE[jur], ROOT, base)
+    return out
+
+
 # Checks ---------------------------------------------------------------------------------------
 
 def unknown(tokens, words):
@@ -315,12 +336,44 @@ def check(db):
                "AND l.role IN ('standard', 'model'))"):
         errors.append(f'grounding {g["occurrence_id"]}: STANDARD needs a standard or model')
 
-    # rules.json must equal the database.
-    for jur, folder in FOLDERS.items():
-        path = os.path.join(ROOT, 'analysis', 'passing-rules', folder, 'rules.json')
-        if os.path.exists(path) and q('SELECT 1 FROM statement WHERE jurisdiction = ? LIMIT 1', jur):
-            if open(path, encoding='utf-8').read() != rules_json(export(db, jur)):
-                errors.append(f'{os.path.relpath(path, ROOT)} differs from the database; run export --write')
+    # The law added under statements. Each line is law: law modals only. It cites at least one
+    # provision of a statute or regulation that is not a penalty, every provision it cites is a
+    # basis row of its statement, a penalty it states cites one, and it does not mark open a word the
+    # law settles.
+    basis = collections.defaultdict(dict)
+    for r in q('SELECT b.*, s.kind AS source_kind FROM statement_basis b JOIN unit u ON u.id = b.unit_id '
+               'JOIN source s ON s.id = u.source_id'):
+        basis[r['statement_id']][r['unit_id']] = r
+    for r in q('SELECT * FROM statement_law'):
+        name = f'{r["statement_id"]} law line {r["position"]}'
+        modals = [k for k, _ in split(r['text']) if k in MODALS]
+        if not modals or any(MODALS[m] != 'LAW' for m in modals):
+            errors.append(f'{name}: needs law modals only (MUST, MUST NOT, MAY), has {modals or "none"}')
+        refs = [x[0] for x in q('SELECT unit_id FROM statement_law_ref WHERE statement_id = ? AND position = ?',
+                                r['statement_id'], r['position'])]
+        mine = basis[r['statement_id']]
+        for u in refs:
+            if u not in mine:
+                errors.append(f'{name}: cites {u}, which is not a basis row of its statement')
+        if not any(u in mine and mine[u]['relation'] != 'PENALTY' and mine[u]['source_kind'] in ('statute', 'regulation')
+                   for u in refs):
+            errors.append(f'{name}: cites no provision of a statute or regulation other than a penalty')
+        if 'IF VIOLATED' in r['text'] and not any(u in mine and mine[u]['relation'] == 'PENALTY' for u in refs):
+            errors.append(f'{name}: states a penalty but cites no PENALTY provision')
+        for cap in re.findall(r'\b[A-Z]{2,}(?: [A-Z]{2,})*\b', re.sub(r'\[\?[^\]]*\]|"[^"]*"', '', r['text'])):
+            for w in unknown(cap.split(), words):
+                warnings.append(f'{name}: "{w}" is not in the vocabulary')
+    for o in q("SELECT o.*, g.status FROM occurrence o JOIN grounding g ON g.occurrence_id = o.id "
+               "WHERE g.status IN ('LAW_DEFINES', 'LAW_STATES') AND o.code IN ('J', 'S', 'R', 'G')"):
+        for r in q('SELECT position, text FROM statement_law WHERE statement_id = ?', o['statement_id']):
+            if f'[?{o["span"]}]' in r['text']:
+                errors.append(f'{o["id"]}: the law settles it ({o["status"]}), but law line {r["position"]} marks it open')
+
+    # The files made from the database must equal it.
+    for path, content in outputs(db).items():
+        full = os.path.join(ROOT, path)
+        if not os.path.exists(full) or open(full, encoding='utf-8').read() != content:
+            errors.append(f'{path} differs from the database; run export --write')
 
     # Coverage, reported, never an error.
     for jur in FOLDERS:
@@ -340,6 +393,11 @@ def check(db):
         advice = q("SELECT COUNT(DISTINCT statement_id) FROM advice_with_law WHERE jurisdiction = ?", jur)[0][0]
         info.append(f'{jur}: {law - bare} of {law} LAW statements cite a provision (view law_without_basis); '
                     f'{advice} ADVICE statements have a provision behind them (view advice_with_law)')
+        lines, done = q("SELECT COUNT(*), COUNT(DISTINCT g.statement_id) FROM statement_law g JOIN statement s "
+                        "ON s.id = g.statement_id WHERE s.jurisdiction = ?", jur)[0]
+        left = q("SELECT COUNT(*) FROM law_not_added WHERE jurisdiction = ?", jur)[0][0]
+        info.append(f'{jur}: {lines} law lines added under {done} statements; {left} statements with a provision '
+                    f'behind them have none (view law_not_added)')
     used = q("SELECT COUNT(DISTINCT u.id) FROM unit u JOIN sentence_label l ON l.unit_id = u.id "
              "JOIN unit_use x ON x.unit_id = u.id")[0][0]
     total = q("SELECT COUNT(*) FROM sentence_label")[0][0]
@@ -359,7 +417,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('command', choices=['load', 'dump', 'check', 'export'])
     ap.add_argument('--db', default=DB)
-    ap.add_argument('--write', action='store_true', help='export: write the rules.json files')
+    ap.add_argument('--write', action='store_true', help='export: write the files made from the database')
     a = ap.parse_args()
 
     if a.command == 'load':
@@ -386,17 +444,13 @@ def main():
         print(f'{len(errors)} errors, {len(warnings)} warnings')
         sys.exit(1 if errors else 0)
     elif a.command == 'export':
-        for jur, folder in FOLDERS.items():
-            rows = export(db, jur)
-            if not rows:
-                continue
-            path = os.path.join(ROOT, 'analysis', 'passing-rules', folder, 'rules.json')
-            same = os.path.exists(path) and open(path, encoding='utf-8').read() == rules_json(rows)
+        for path, content in outputs(db).items():
+            full = os.path.join(ROOT, path)
+            same = os.path.exists(full) and open(full, encoding='utf-8').read() == content
             if a.write and not same:
-                with open(path, 'w', encoding='utf-8') as f:
-                    f.write(rules_json(rows))
-            print(f'{os.path.relpath(path, ROOT)}: {len(rows)} statements, '
-                  + ('same as the database' if same else 'written' if a.write else 'differs from the database'))
+                with open(full, 'w', encoding='utf-8') as f:
+                    f.write(content)
+            print(f'{path}: ' + ('same as the database' if same else 'written' if a.write else 'differs from the database'))
 
 
 if __name__ == '__main__':

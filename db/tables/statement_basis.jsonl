@@ -2,25 +2,33 @@
 {"statement_id": "mto:2.1a", "unit_id": "on-hta:154(1)(a)", "relation": "SAME", "note": "The Act makes it a duty for any move from one lane to another; the handbook words it as advice."}
 {"statement_id": "mto:2.1a", "unit_id": "on-reg-339-94:item-13", "relation": "PENALTY", "note": "3 demerit points for a conviction under s. 154."}
 {"statement_id": "mto:2.1b", "unit_id": "on-hta:154(1)(a)", "relation": "SAME", "note": "For a pass that moves from one lane to another. The Act makes it a duty; the handbook words it as advice."}
+{"statement_id": "mto:2.1b", "unit_id": "on-reg-339-94:item-13", "relation": "PENALTY", "note": "3 demerit points for a conviction under s. 154."}
 {"statement_id": "mto:3.1.1a", "unit_id": "on-hta:140(3)", "relation": "SAME", "note": "The Act states the test: do not let the front of your vehicle pass beyond the front of the other vehicle that is approaching the crossover."}
 {"statement_id": "mto:3.1.1a", "unit_id": "on-reg-339-94:item-21", "relation": "PENALTY", "note": "4 demerit points."}
 {"statement_id": "mto:3.1.2a", "unit_id": "on-hta:149(1)", "relation": "BROADER", "note": "The Act bans driving left of centre within 30 m of a bridge, viaduct or tunnel only where the driver’s view is obstructed within that distance; the statement leaves that condition out."}
 {"statement_id": "mto:3.1.2a", "unit_id": "on-hta:149(2)", "relation": "BROADER", "note": "The statement leaves out the exceptions: more lanes in one direction than the other, road service vehicles, one-way traffic."}
 {"statement_id": "mto:3.1.2a", "unit_id": "on-reg-339-94:item-12", "relation": "PENALTY", "note": "3 demerit points (improper passing)."}
 {"statement_id": "mto:3.1.3a", "unit_id": "on-hta:149(1)", "relation": "SAME", "note": "The Act bans driving left of centre approaching a crest or on a curve where the view is obstructed; the handbook words it as advice."}
+{"statement_id": "mto:3.1.3a", "unit_id": "on-hta:149(2)", "relation": "BROADER", "note": "The Act does not apply where the road has more lanes in one direction than in the other, or is one-way; the statement has no exception."}
 {"statement_id": "mto:3.1.3a", "unit_id": "on-reg-339-94:item-12", "relation": "PENALTY", "note": "3 demerit points (improper passing)."}
 {"statement_id": "mto:3.1.4a", "unit_id": "on-hta:154(1)(b)", "relation": "DIFFERENT", "note": "On a three-lane highway, the Act lets a driver pass in the centre lane when the road is clearly visible and the lane is clear; the statement bars it."}
 {"statement_id": "mto:3.1.4a", "unit_id": "on-hta:182(2)", "relation": "BROADER", "note": "Drivers must obey the sign."}
 {"statement_id": "mto:3.1.4a", "unit_id": "on-reg-615:34(3)", "relation": "BROADER", "note": "Law where the lane carries the Figure 7 sign, which goes directly over a two-way left-turn lane (34 (4) (b)): the lane is for left turns only."}
+{"statement_id": "mto:3.1.4a", "unit_id": "on-reg-615:34(4)", "relation": "BROADER", "note": "The Figure 7 sign goes directly over a two-way left-turn lane."}
 {"statement_id": "mto:3.1.6a", "unit_id": "on-hta:148(8)", "relation": "NARROWER", "note": "The Act asks that the road ahead be safely free of approaching traffic on any road; the statement covers only a broken line."}
+{"statement_id": "mto:3.1.6a", "unit_id": "on-reg-339-94:item-12", "relation": "PENALTY", "note": "3 demerit points (improper passing)."}
 {"statement_id": "mto:3.1.7a", "unit_id": "on-hta:182(2)", "relation": "SAME", "note": "Drivers must obey the instructions on a sign erected under the regulations."}
 {"statement_id": "mto:3.1.7a", "unit_id": "on-reg-615:35", "relation": "SAME", "note": "The Do Not Pass sign the regulations prescribe."}
 {"statement_id": "mto:3.2.1c", "unit_id": "on-hta:154(1)(a)", "relation": "NARROWER", "note": "The Act covers any move from one lane to another; the statement only a lane that is ending. The handbook words it as advice."}
+{"statement_id": "mto:3.2.1c", "unit_id": "on-reg-339-94:item-13", "relation": "PENALTY", "note": "3 demerit points for a conviction under s. 154."}
 {"statement_id": "mto:3.2.2c", "unit_id": "on-hta:147(1)", "relation": "BROADER", "note": "The Act asks only a vehicle slower than the normal speed of traffic to keep to the right-hand lane, where practicable; the statement asks every driver."}
+{"statement_id": "mto:3.2.2c", "unit_id": "on-hta:147(3)", "relation": "PENALTY", "note": "$150 to $1,000."}
 {"statement_id": "mto:3.2.3a", "unit_id": "on-hta:150(1)", "relation": "SAME", "note": "Passing on the right is lawful only in the cases of 150 (1) (a) to (c), so passing on the left is the rule."}
 {"statement_id": "mto:3.2.3b", "unit_id": "on-hta:150(1)", "relation": "BROADER", "note": "The Act adds \"only where the movement can be made in safety\"; its multi-lane case is pavement wide enough for two or more lines of vehicles in each direction. Streetcars are in 166 (2)."}
 {"statement_id": "mto:3.2.3b", "unit_id": "on-hta:166(2)", "relation": "SAME", "note": "The streetcar case: the Act bans passing a streetcar on the left, except on a one-way road."}
 {"statement_id": "mto:3.2.3b", "unit_id": "on-reg-339-94:item-12", "relation": "PENALTY", "note": "3 demerit points (improper passing)."}
+{"statement_id": "mto:3.2.4a", "unit_id": "on-hta:150(1)", "relation": "BROADER", "note": "The Act also requires a pass on the right to be made in safety; the statement leaves the condition out."}
+{"statement_id": "mto:3.2.4a", "unit_id": "on-hta:150(2)", "relation": "NARROWER", "note": "The general rule the permission is an exception to: no passing by driving off the roadway."}
 {"statement_id": "mto:3.2.4a", "unit_id": "on-hta:150(3)(a)", "relation": "NARROWER", "note": "The Act also allows it when the vehicle passed is about to turn left or has signalled a left turn."}
 {"statement_id": "mto:3.2.4a", "unit_id": "on-reg-339-94:item-12", "relation": "PENALTY", "note": "3 demerit points (improper passing)."}
 {"statement_id": "mto:3.2.4b", "unit_id": "on-hta:150(2)", "relation": "NARROWER", "note": "The Act bans passing by driving off the roadway on either side."}
@@ -37,6 +45,8 @@
 {"statement_id": "mto:3.4.12d", "unit_id": "on-hta:175(11.1)", "relation": "NARROWER", "note": "When the stop arm is actuated the driver also waits until the bus moves or the arm is no longer actuated."}
 {"statement_id": "mto:3.4.12d", "unit_id": "on-hta:175(12)", "relation": "SAME", "note": "The Act makes it a duty; the handbook words it as advice."}
 {"statement_id": "mto:3.4.12d", "unit_id": "on-hta:175(12.1)", "relation": "NARROWER", "note": "When the stop arm is actuated the driver also waits until the bus moves or the arm is no longer actuated."}
+{"statement_id": "mto:3.4.12d", "unit_id": "on-hta:175(17)", "relation": "PENALTY", "note": "$400 to $2,000 for a first offence."}
+{"statement_id": "mto:3.4.12d", "unit_id": "on-reg-339-94:item-14", "relation": "PENALTY", "note": "6 demerit points for 175 (11) and (12)."}
 {"statement_id": "mto:3.4.13a", "unit_id": "on-hta:159(2)", "relation": "SAME", "note": "The version in force until December 31, 2026."}
 {"statement_id": "mto:3.4.13a", "unit_id": "on-hta:159(2)@2027", "relation": "NARROWER", "note": "From January 1, 2027 the Act also covers a stopped work-related vehicle with amber flashing lamps."}
 {"statement_id": "mto:3.4.13a", "unit_id": "on-hta:159(6)", "relation": "PENALTY", "note": "$400 to $2,000 for a first offence."}
@@ -56,6 +66,8 @@
 {"statement_id": "mto:3.4.5b", "unit_id": "on-reg-339-94:item-12", "relation": "PENALTY", "note": "3 demerit points (improper passing)."}
 {"statement_id": "mto:3.4.9b", "unit_id": "on-hta:148.1(1)", "relation": "BROADER", "note": "The Act bans it only on highways posted 80 km/h or more with two or more lanes in the driver’s direction, and only unless the overtaking lane is entirely clear of the plows, including their blades. The handbook words it as advice."}
 {"statement_id": "mto:3.5.2a", "unit_id": "on-hta:148(2)", "relation": "NARROWER", "note": "The Act puts this duty on every driver who is overtaken by a faster vehicle, not only drivers towing. The handbook words it as advice."}
+{"statement_id": "mto:3.5.2a", "unit_id": "on-hta:148(2.1)", "relation": "PENALTY", "note": "$150 to $1,000."}
+{"statement_id": "mto:3.5.2a", "unit_id": "on-reg-339-94:item-22", "relation": "PENALTY", "note": "2 demerit points (failing to share road)."}
 {"statement_id": "mto:3.6.1a", "unit_id": "on-hta:148(2)", "relation": "SAME", "note": "The Act makes it a duty; the handbook words it as advice."}
 {"statement_id": "mto:3.6.1a", "unit_id": "on-hta:148(2.1)", "relation": "PENALTY", "note": "$150 to $1,000."}
 {"statement_id": "mto:3.6.1a", "unit_id": "on-reg-339-94:item-22", "relation": "PENALTY", "note": "2 demerit points (failing to share road)."}
@@ -74,3 +86,5 @@
 {"statement_id": "mto:3.6.3a", "unit_id": "on-reg-608:1(1)", "relation": "DIFFERENT", "note": "The regulation covers a commercial motor vehicle, or a combination, over 6.5 m long, not any truck; only on the highway portions in its Schedules, not any high-speed road with three or more lanes; and where the left lane is an HOV lane, the lane next to it."}
 {"statement_id": "mto:3.6.3b", "unit_id": "on-reg-608:1(1)", "relation": "DIFFERENT", "note": "The regulation bars the left lane; using the next lane to pass is the handbook’s reading of it."}
 {"statement_id": "mto:3.6.3c", "unit_id": "on-hta:148(2)", "relation": "SAME", "note": "The Act makes moving right for a faster vehicle a duty; the handbook words it as advice."}
+{"statement_id": "mto:3.6.3c", "unit_id": "on-hta:148(2.1)", "relation": "PENALTY", "note": "$150 to $1,000."}
+{"statement_id": "mto:3.6.3c", "unit_id": "on-reg-339-94:item-22", "relation": "PENALTY", "note": "2 demerit points (failing to share road)."}
