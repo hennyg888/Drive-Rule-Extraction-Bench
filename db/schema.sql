@@ -162,7 +162,7 @@ CREATE TABLE statement_part (
 CREATE TABLE statement_source (
   statement_id TEXT NOT NULL REFERENCES statement(id),
   position     INTEGER NOT NULL,
-  unit_id      TEXT NOT NULL REFERENCES unit(id),   -- a passage, or a paragraph its run's selection holds
+  unit_id      TEXT NOT NULL REFERENCES unit(id),   -- a passage, or a sentence or figure of its run's selection
   quote        TEXT,
   where_text   TEXT,
   census_id    TEXT,
@@ -294,12 +294,14 @@ CREATE TABLE grounding_link (
 -- Views ----------------------------------------------------------------------------------------
 
 -- Each handbook sentence (Ontario) or paragraph, with the statements that cite it: through a
--- passage, or directly as a selected paragraph and the sentences in it.
+-- passage, directly as a sentence (and so its paragraph), or as a whole paragraph (and so its sentences).
 CREATE VIEW unit_use AS
   WITH cited AS (SELECT statement_id, unit_id FROM statement_source UNION SELECT statement_id, unit_id FROM step_source)
   SELECT pp.part_id AS unit_id, c.statement_id FROM cited c JOIN passage_part pp ON pp.passage_id = c.unit_id
   UNION
-  SELECT u.id, c.statement_id FROM cited c JOIN unit u ON u.id = c.unit_id WHERE u.kind = 'paragraph'
+  SELECT u.id, c.statement_id FROM cited c JOIN unit u ON u.id = c.unit_id WHERE u.kind IN ('paragraph', 'sentence')
+  UNION
+  SELECT u.parent_id, c.statement_id FROM cited c JOIN unit u ON u.id = c.unit_id WHERE u.kind = 'sentence'
   UNION
   SELECT x.id, c.statement_id FROM cited c JOIN unit x ON x.parent_id = c.unit_id WHERE x.kind = 'sentence';
 

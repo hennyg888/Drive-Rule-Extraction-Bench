@@ -23,7 +23,7 @@ with which prompt (and its sha256) and by whom.
 | 1 Import | Put the handbook in, one row per paragraph and per sentence, word for word | `tools/import_handbook.py mto --sentences` | `page`, `unit` |
 | 2 Tag | Label every sentence and figure from fixed lists (type, modal as written, caution, topics, vague words), by an LLM with `prompts/tag-units.md`; never rewrite | `tools/tag_units.py shard`, the model, `check`, `load` | `run`, `unit_tag`, `unit_topic`, `unit_vague` |
 | 3 Select | Choose a topic's paragraphs by a fixed query on the tags; a person confirms, adding or dropping by hand | `tools/select_passages.py` | `run`, `selection` |
-| 4 Formalize | Write the selected paragraphs as rule-language statements with `prompts/extract-rules.md` | `tools/extract_rules.py render`, the model, `check`, `load` | `run`, `statement` and its child tables, `term`, `occurrence` |
+| 4 Formalize | Write the selected paragraphs as rule-language statements with `prompts/extract-rules.md`: each paragraph goes in whole, its sentences numbered (`p44.1`), and each statement cites the sentences (or figures) it comes from | `tools/extract_rules.py render`, the model, `check`, `load`; on-passing-1, answered before sentences were numbered, got its sentences from `runs/on-passing-1/cite_sentences.py` | `run`, `statement` and its child tables, `term`, `occurrence` |
 | 5 Ground | Put the law under the statements: how far a source settles each flag, the provisions behind each statement, law lines | `tools/carry_grounding.py` carries what was checked for a paired statement of another run; the rest by hand (for on-passing-1, `runs/on-passing-1/ground_paired.py` and `ground_unpaired.py`), checked by `db.py check` | `grounding`, `grounding_link`, `statement_basis`, `statement_law`, `statement_law_ref` |
 | 6 Validate | Fixed checks on everything above, and comparison of two runs | `tools/db.py check`, `tools/compare_runs.py` | nothing |
 
@@ -73,7 +73,7 @@ byte, so a change shows in git as exactly the rows it touched.
 | `selection` | Paragraph a selection run chose for a topic, with the passage id the extraction prompt shows (`p17`) and why: tag, lead of a list, or by hand |
 | `vocabulary` | Fixed word of the rule language: types, modals (with their strength), clauses, connectives, links, flags, verbs, roles, units |
 | `statement` | Extracted statement, with the run it came from; the reviewed set is the one in `rules.json` |
-| `statement_step`, `statement_source`, `step_source`, `statement_figure` | A procedure's steps, and the passages and figures a statement or step cites |
+| `statement_step`, `statement_source`, `step_source`, `statement_figure` | A procedure's steps, and the passages (reviewed set) or the sentences and figures (pipeline runs) a statement or step cites |
 | `statement_link` | EXCEPTION TO, SPECIALIZES or a plain reference between statements |
 | `statement_basis` | Provision behind a statement, and whether the statement says the SAME, is BROADER or NARROWER, DIFFERENT, or the provision is its PENALTY |
 | `occurrence` | Flag on a statement (rule language §8) |
@@ -114,7 +114,9 @@ Errors (exit 1):
 - a row refers to a row that does not exist;
 - a law's local copy does not match its sha256, or a provision is not word for word in its local copy
   (spacing and curly quotes aside);
-- a statement cites something that is not a topic passage or a paragraph its run selected;
+- a statement cites nothing; a statement or step of a run with no selection (the reviewed set, the
+  California and Texas drafts) cites something that is not a topic passage; one of a pipeline run cites
+  something that is not a sentence or figure of its run's selection (a whole text paragraph is not enough);
 - a run reads the wrong kind of run (selection reads tags, extraction reads a selection, same
   handbook), or statements belong to a run that is not an extraction;
 - a tag is on something other than a sentence or figure, a figure is not tagged FIGURE (or text is),
@@ -131,8 +133,8 @@ Errors (exit 1):
 - `rules.json` or `passing-rules-law.md` differs from the database.
 
 Warnings: a quote not word for word in its passage, a passage that matches no handbook text, a
-capitalised word not in the vocabulary (in a statement or a law line), a J, S, R or G flag whose span
-is not in the statement, its steps or its sources, a law with no local copy.
+capitalised word not in the vocabulary (in a statement or a law line), a J, S, R, G, M or D flag whose
+span is not in the statement, its steps or its sources, a law with no local copy.
 
 Reported each time: flags by grounding status, LAW statements that cite no provision, ADVICE
 statements with a provision behind them, law lines and the statements with a provision behind them

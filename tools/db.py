@@ -287,15 +287,24 @@ def check(db):
         if u['source_id'] in texts and norm(u['text']) not in texts[u['source_id']]:
             errors.append(f'unit {u["id"]}: not found word for word in its source')
 
-    # Statements and their sources.
-    for r in q("SELECT ss.statement_id, ss.unit_id, ss.quote, u.text, u.kind, s.run_id, "
-               "EXISTS (SELECT 1 FROM run x JOIN selection l ON l.run_id = x.input_run "
-               "        WHERE x.id = s.run_id AND l.unit_id = ss.unit_id) AS selected "
-               "FROM statement_source ss JOIN unit u ON u.id = ss.unit_id JOIN statement s ON s.id = ss.statement_id"):
-        if r['kind'] != 'passage' and not r['selected']:
-            errors.append(f'{r["statement_id"]}: source {r["unit_id"]} is neither a passage nor in its run\'s selection')
+    # Statements and their sources. A statement of a run that read a selection cites sentences of the
+    # selected paragraphs, or selected figures; one of an earlier run cites its passages.
+    for r in q("SELECT s.id FROM statement s WHERE s.id NOT IN (SELECT statement_id FROM statement_source)"):
+        errors.append(f'{r["id"]}: cites no source')
+    for r in q("SELECT c.statement_id, c.step, c.unit_id, c.quote, u.text, u.kind, u.image, x.input_run, "
+               "EXISTS (SELECT 1 FROM selection l WHERE l.run_id = x.input_run "
+               "        AND l.unit_id = CASE u.kind WHEN 'sentence' THEN u.parent_id ELSE u.id END) AS selected "
+               "FROM (SELECT statement_id, NULL AS step, unit_id, quote FROM statement_source "
+               "      UNION ALL SELECT statement_id, step, unit_id, NULL FROM step_source) c "
+               "JOIN unit u ON u.id = c.unit_id JOIN statement s ON s.id = c.statement_id "
+               "JOIN run x ON x.id = s.run_id"):
+        where = f'{r["statement_id"]}' + ('' if r['step'] is None else f' step {r["step"]}')
+        if not r['input_run'] and r['kind'] != 'passage':
+            errors.append(f'{where}: source {r["unit_id"]} is not a passage')
+        elif r['input_run'] and not (r['selected'] and (r['kind'] == 'sentence' or r['image'])):
+            errors.append(f'{where}: source {r["unit_id"]} is not a sentence or figure of its run\'s selection')
         elif r['quote'] and norm(r['quote']) not in norm(r['text']):
-            warnings.append(f'{r["statement_id"]}: quote is not word for word in {r["unit_id"]}')
+            warnings.append(f'{where}: quote is not word for word in {r["unit_id"]}')
     for r in q("SELECT id FROM unit WHERE kind = 'passage' AND id NOT IN (SELECT passage_id FROM passage_part)"):
         warnings.append(f'{r["id"]}: passage matches no handbook sentence or paragraph')
     for r in q("SELECT p.id, p.text, p.image, u.id AS uid, u.text AS utext, u.image AS uimage FROM unit p "
@@ -344,7 +353,8 @@ def check(db):
         for cap in re.findall(r'\b[A-Z]{2,}(?: [A-Z]{2,})*\b', re.sub(r'\[\?[^\]]*\]|"[^"]*"', '', s['text'])):
             for w in unknown(cap.split(), words):
                 warnings.append(f'{s["id"]}: "{w}" is not in the vocabulary')
-    # A flag's span must be words of the statement, its steps, or the passages they cite.
+    # A flag's span must be words of the statement, its steps, or the passages they cite. An X or V flag
+    # may quote another passage instead.
     for o in q('SELECT * FROM occurrence'):
         where = [r[0] for r in q("SELECT text FROM statement WHERE id = ?1 UNION ALL "
                                  "SELECT text FROM statement_step WHERE statement_id = ?1 UNION ALL "
@@ -352,7 +362,7 @@ def check(db):
                                  "WHERE x.statement_id = ?1 UNION ALL "
                                  "SELECT u.text FROM step_source x JOIN unit u ON u.id = x.unit_id "
                                  "WHERE x.statement_id = ?1", o['statement_id'])]
-        if o['code'] in INLINE and not any(norm(o['span']) in norm(t) for t in where):
+        if o['code'] in INLINE | {'M', 'D'} and not any(norm(o['span']) in norm(t) for t in where):
             warnings.append(f'{o["id"]}: its span is not in the statement, its steps or its sources')
     for r in q("SELECT l.from_id, l.to_id, l.kind, s.text FROM statement_link l JOIN statement s ON s.id = l.from_id"):
         local = r['to_id'].split(':', 1)[1]

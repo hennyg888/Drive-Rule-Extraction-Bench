@@ -4,7 +4,8 @@
         Writes runs/on-passing-1/messages.json (the prompt's system and user messages, as
         provenance/scripts/render_prompt.py writes them), prompt.md (the same, readable) and
         images.txt (the figure images to show the model), reading the passages from the database.
-        A model answers into runs/on-passing-1/output.json: {"statements": [...]}.
+        A model answers into runs/on-passing-1/output.json: {"statements": [...]}. Statements cite
+        sentences (p44.2) and figures (p29); runs rendered before 28 October cited whole passages.
     python3 tools/extract_rules.py check on-passing-1
         Checks the answer against the prompt's output format and the passages. Exit 1 on a problem.
     python3 tools/extract_rules.py load on-passing-1 --model NAME --date YYYY-MM-DD
@@ -32,6 +33,8 @@ def run_dir(run):
 
 
 def passages(db, selection):
+    """The selection's paragraphs as prompt passages, with the database unit of each. A text passage
+    lists its sentences, numbered after the passage (p44.1, p44.2, ...); a figure keeps its alt text."""
     q = lambda sql, *x: db.execute(sql, x).fetchall()  # noqa: E731
     titles = {r['id']: r['title'] for r in q('SELECT p.* FROM page p JOIN run r ON r.source_id = p.source_id WHERE r.id = ?',
                                                selection)}
@@ -45,8 +48,35 @@ def passages(db, selection):
             if r['heading']:
                 p['cap'] = r['heading']
             p['image'] = r['image']
+        else:
+            sents = sorted(q("SELECT id, text FROM unit WHERE parent_id = ? AND kind = 'sentence'", r['id']),
+                           key=lambda x: int(x['id'].rsplit('.', 1)[1]))
+            if not sents:
+                sys.exit(f'{r["id"]} has no sentences; import the handbook with --sentences')
+            p['sentences'] = [{'id': f'{r["local_id"]}.{i}', 'text': x['text'], 'unit': x['id']}
+                              for i, x in enumerate(sents, 1)]
         out.append((p, r['id']))
     return out
+
+
+def citable(ps, cite):
+    """What a statement may cite, as {id: (unit id, text)}: with cite 'sentence', the sentences of the
+    text passages and the figures; otherwise (runs rendered before 28 October) whole passages."""
+    if cite != 'sentence':
+        return {p['id']: (uid, p['text']) for p, uid in ps}
+    out = {p['id']: (uid, p['text']) for p, uid in ps if p['kind'] == 'figure'}
+    for p, _ in ps:
+        out.update({x['id']: (x['unit'], x['text']) for x in p.get('sentences', [])})
+    return out
+
+
+def shown(p):
+    """A passage as the prompt shows it: a text passage by its sentences, without their units."""
+    if p['kind'] == 'figure':
+        return p
+    d = {k: v for k, v in p.items() if k not in ('text', 'sentences')}
+    d['sentences'] = [{'id': x['id'], 'text': x['text']} for x in p['sentences']]
+    return d
 
 
 def render(a):
@@ -62,14 +92,15 @@ def render(a):
     system, user = rest.split('\n<!-- USER -->\n', 1)
     system, user = system.strip() + '\n', user.strip() + '\n'
     handbook = a.handbook or f'{src["title"]} ({src["version"] or "offline copy"})'
-    lines = '\n'.join(json.dumps(p, ensure_ascii=False) for p, _ in ps)
+    lines = '\n'.join(json.dumps(shown(p), ensure_ascii=False) for p, _ in ps)
     user = (user.replace('{{HANDBOOK}}', handbook).replace('{{TOPIC}}', sel['topic'])
                 .replace('{{TOPIC_SCOPE}}', scope).replace('{{PASSAGES}}', lines))
     assert '{{' not in user, 'unfilled slot in the user message'
     d = run_dir(a.run)
     os.makedirs(d, exist_ok=True)
     msg = {'prompt': PROMPT, 'prompt_sha256': hashlib.sha256(raw.encode('utf-8')).hexdigest(), 'selection': a.selection,
-           'n_passages': len(ps), 'messages': [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]}
+           'n_passages': len(ps), 'cite': 'sentence',
+           'messages': [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]}
     json.dump(msg, open(os.path.join(d, 'messages.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     open(os.path.join(d, 'prompt.md'), 'w', encoding='utf-8').write('# SYSTEM\n\n' + system + '\n# USER\n\n' + user)
     folder = src['path'] or ''
@@ -78,9 +109,9 @@ def render(a):
     print(f'{a.run}: {len(ps)} passages from {a.selection} (prompt sha256 {msg["prompt_sha256"][:12]})')
 
 
-def problems(statements, ps):
+def problems(statements, ps, cite=None):
     errs = []
-    text = {p['id']: p['text'] for p, _ in ps}
+    text = {k: t for k, (_, t) in citable(ps, cite).items()}
     figure = {p['id'] for p, _ in ps if p['kind'] == 'figure'}
     ids = [s.get('id') for s in statements]
     for s in statements:
@@ -94,25 +125,37 @@ def problems(statements, ps):
             errs.append(f'{sid}: type {s["type"]!r}')
         if s['strength'] not in ('LAW', 'ADVICE', None) or (s['strength'] is None) != (s['strength_from'] is None):
             errs.append(f'{sid}: strength {s["strength"]!r} with strength_from {s["strength_from"]!r}')
+        what = 'a sentence or figure of the passages' if cite == 'sentence' else 'a passage'
         if not s['sources']:
             errs.append(f'{sid}: no sources')
         for so in s['sources']:
             if so.get('id') not in text:
-                errs.append(f'{sid}: source {so.get("id")!r} is not a passage')
+                errs.append(f'{sid}: source {so.get("id")!r} is not {what}')
             elif dbtool.norm(so.get('quote')) != dbtool.norm(text[so['id']]):
-                errs.append(f'{sid}: the quote of {so["id"]} is not the passage\'s full text')
+                errs.append(f'{sid}: the quote of {so["id"]} is not its full text')
+        if cite == 'sentence' and s['sources'] and s['sources'][0].get('id') in text:
+            first = s['sources'][0]['id'].split('.')[0]
+            if not re.fullmatch(rf'{re.escape(first)}[a-z]+', str(sid)):
+                errs.append(f'{sid}: the id is not {first} (the passage of its first source) plus a letter')
         for st in s.get('steps', []):
+            if cite == 'sentence' and not st.get('sources'):
+                errs.append(f'{sid}: step {st.get("n")} has no sources')
             for x in st.get('sources', []):
                 if x not in text:
-                    errs.append(f'{sid}: step {st.get("n")} source {x!r} is not a passage')
+                    errs.append(f'{sid}: step {st.get("n")} source {x!r} is not {what}')
         if (s['type'] == 'PROCEDURE') != bool(s.get('steps')):
             errs.append(f'{sid}: steps are for a PROCEDURE, and a PROCEDURE has them')
         for se in s.get('see', []):
             if se.get('source') not in figure:
                 errs.append(f'{sid}: see {se.get("source")!r} is not a figure passage')
+        said = ([s['text']] + [st.get('text', '') for st in s.get('steps', [])]
+                + [so.get('quote') or '' for so in s['sources']])
         for f in s['flags']:
             if f.get('code') not in CODES or not f.get('span') or not f.get('note'):
                 errs.append(f'{sid}: flag {f!r}')
+            elif f['code'] in 'JSRGMD' and not any(dbtool.norm(f['span']) in dbtool.norm(t) for t in said):
+                errs.append(f'{sid}: flag {f["code"]} "{f["span"]}" is not words of the statement, its steps '
+                            'or its sources')
         for to in s['links']:
             if to not in ids:
                 errs.append(f'{sid}: links to {to!r}, which it did not write')
@@ -131,7 +174,7 @@ def answer(run):
 
 def check(a):
     msg, statements = answer(a.run)
-    errs = problems(statements, passages(dbtool.connect(), msg['selection']))
+    errs = problems(statements, passages(dbtool.connect(), msg['selection']), msg.get('cite'))
     for e in errs:
         print(e)
     print(f'{len(statements)} statements, {len(errs)} problems')
@@ -142,10 +185,10 @@ def load(a):
     msg, statements = answer(a.run)
     db = dbtool.connect()
     ps = passages(db, msg['selection'])
-    errs = problems(statements, ps)
+    errs = problems(statements, ps, msg.get('cite'))
     if errs:
         sys.exit(f'{len(errs)} problems; run check')
-    unit = {p['id']: uid for p, uid in ps}
+    unit = {k: uid for k, (uid, _) in citable(ps, msg.get('cite')).items()}
     sel = db.execute('SELECT * FROM run WHERE id = ?', (msg['selection'],)).fetchone()
     jur = JURISDICTION[sel['source_id']]
     sid = lambda local: f'{a.run}:{local}'  # noqa: E731

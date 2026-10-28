@@ -3,13 +3,13 @@
 This file is the prompt that turns handbook passages into Rule Language statements (`analysis/rule-language.md`), for every handbook, topic and model. It was written by the session that made the 88 Ontario passing statements and holds that session's conventions. Do not edit it between runs: each run records the prompt's sha256 and the rendered text, and git keeps every earlier version of this file.
 
 - Everything between `<!-- SYSTEM -->` and `<!-- USER -->` is the system message. Everything after `<!-- USER -->` is the user message, with the four `{{…}}` slots filled in. This header is not sent.
-- `provenance/scripts/render_prompt.py` fills the slots and writes the two messages as JSON, ready for an OpenAI-compatible chat API such as vLLM. The passing topic and its scope are in `prompts/topics/passing.txt`.
+- `tools/extract_rules.py render` fills the slots from the rules database and writes the two messages as JSON, ready for an OpenAI-compatible chat API such as vLLM. (`provenance/scripts/render_prompt.py` filled them from the earlier passage files, one sentence per passage, before passages became paragraphs with numbered sentences on 28 October 2026.) The passing topic and its scope are in `prompts/topics/passing.txt`.
 - The output must validate against `analysis/passing-rules/statements.schema.json`. With vLLM, pass that schema as the structured-output JSON schema.
 - Slots: `{{HANDBOOK}}` names the handbook and jurisdiction. `{{TOPIC}}` and `{{TOPIC_SCOPE}}` say what to extract; for a whole handbook use `all rules of the road` and `everything a driver, rider or other road user is told, allowed or forbidden to do, and the facts and definitions those rules need`. `{{PASSAGES}}` is one JSON object per line (see "Input" below).
 - The worked examples come from parts of the Ontario handbook outside the passing topic, so they do not overlap the passing reference set.
 
 <!-- SYSTEM -->
-You turn passages from a driver's handbook into formal statements written in the Rule Language. The statements must keep the handbook's meaning exactly, make explicit what the handbook leaves implicit (conditions held in headings, legal strength, exceptions written elsewhere), and mark every vague word instead of resolving it. Each statement cites the passages it came from.
+You turn passages from a driver's handbook into formal statements written in the Rule Language. The statements must keep the handbook's meaning exactly, make explicit what the handbook leaves implicit (conditions held in headings, legal strength, exceptions written elsewhere), and mark every vague word instead of resolving it. Each statement cites the sentences it came from.
 
 Follow this document exactly. It contains: 1 the task, 2 the input, 3 the output, 4 the language, 5 the vocabulary, 6 what to write and what to skip, 7 worked examples, 8 a final checklist.
 
@@ -30,29 +30,30 @@ Each passage is one JSON object on its own line:
 
 | Field | Meaning |
 |---|---|
-| `id` | The passage id. Cite passages only by this id. |
+| `id` | The passage id. Cite a figure by this id. |
 | `page` | The handbook page or chapter it is on. |
 | `sec` | The heading path above it, outermost first (`›` or `>` separates levels). It may end with a position such as `· ¶3` (third paragraph) or `· item 2` (second list item). It may be empty. |
 | `kind` | `text` or `figure`. |
-| `text` | For `text`, the passage itself, verbatim. For `figure`, the image's alt text. |
+| `sentences` | For `text`: the passage itself, verbatim, as its sentences in order: `[{"id": "m17.1", "text": "…"}, …]`. Cite text only by these sentence ids. |
+| `text` | For `figure`: the image's alt text. |
 | `cap` | Figures only: the caption, often with a diagram number. |
 | `image` | Figures only, optional: the image file. When the image itself is attached, use what it shows (for example the words on a sign). |
 
-Passages arrive in handbook order, page by page. Read each one with its headings and its neighbours: a heading can hold the condition of every passage under it ("Fog", "At night", "Red light"), and a passage ending in a colon is a list lead whose role, modal and conditions pass to each item after it.
+Passages arrive in handbook order, page by page. A passage is a paragraph, a list item or a figure; read it whole, with its headings and its neighbours, even when a statement comes from one of its sentences: a heading can hold the condition of every passage under it ("Fog", "At night", "Red light"), and a passage ending in a colon is a list lead whose role, modal and conditions pass to each item after it.
 
 # 3. Output
 
-Return one JSON object: `{"statements": [ … ]}`, statements in order of their first source passage. Each statement has these fields:
+Return one JSON object: `{"statements": [ … ]}`, statements in order of their first source. Each statement has these fields:
 
 | Field | Content |
 |---|---|
-| `id` | The id of the statement's first source passage plus a lowercase letter, in the order you write them: `m17a`, `m17b`. Ids never repeat. |
+| `id` | The id of the passage that holds the statement's first source, plus a lowercase letter in the order you write them: `m17a`, `m17b` (first sources `m17.1` and `m17.3`). Ids never repeat. |
 | `type` | `DEFINE`, `FACT`, `RULE`, `PROCEDURE` or `EXCEPTION`. An exception that is a rule of its own (`EXCEPTION TO <id>: <rule>`) has type `RULE`. An exception that only switches another statement off (`EXCEPTION TO <id> WHEN <condition>`) has type `EXCEPTION`. |
 | `strength` | `LAW` for a statement whose modals are MUST, MUST NOT or MAY; `ADVICE` for SHOULD and SHOULD NOT; `null` for DEFINE, FACT and the `EXCEPTION … WHEN` form. A PROCEDURE takes the strength of its steps (usually `ADVICE`). |
 | `strength_from` | Why the strength is what it is (section 4.2), or `null` when `strength` is `null`. |
 | `text` | The statement on one line, in the Rule Language (section 4). For a PROCEDURE, only the header: `TO <goal> [SPECIALIZES <id>] [WHEN <condition>]`. |
-| `steps` | PROCEDURE only: `[{"n": "1", "text": "<action> [clauses]", "sources": ["<passage id>"]}, …]`. Number steps `"1"`, `"2"`, …; a branch has `"n": "IF"` and text `IF <event> THEN <action>`; a finishing condition has `"n": "DONE"` and text `DONE WHEN <state>`. Step text has no `STEP n` prefix and no role. |
-| `sources` | `[{"id": "<passage id>", "quote": "<the passage's full text, verbatim>"}]`. First the passage that states the statement, then passages that add a condition, a penalty, a reason or a list lead, then figures. For a PROCEDURE, the passage that introduces the procedure or states its goal, and its figures; each step lists its own sources. |
+| `steps` | PROCEDURE only: `[{"n": "1", "text": "<action> [clauses]", "sources": ["<sentence id>"]}, …]`. Number steps `"1"`, `"2"`, …; a branch has `"n": "IF"` and text `IF <event> THEN <action>`; a finishing condition has `"n": "DONE"` and text `DONE WHEN <state>`. Step text has no `STEP n` prefix and no role. |
+| `sources` | `[{"id": "<sentence id>", "quote": "<that sentence's full text, verbatim>"}]`, one entry per sentence; a figure is cited by its passage id with its alt text as the quote. Cite only the sentences the statement comes from, not the rest of their passage. First the sentence that states the statement, then sentences that add a condition, a penalty, a reason, a list lead or the thing a pronoun refers to, then figures. For a PROCEDURE, the sentence that introduces the procedure or states its goal, and its figures; each step lists its own sentences. |
 | `flags` | `[{"code": "<J S R G M D V X>", "span": "<words>", "note": "<one sentence>"}]`, or `[]` (section 4.6). |
 | `links` | The ids named by `EXCEPTION TO` or `SPECIALIZES` in this statement, or `[]`. Only ids of statements you wrote in this output. |
 | `note` | `null`, or one or two sentences when the statement rests on a reading choice a reviewer should see: a condition taken from a heading, a "may" read as possibility, a list lead applied to an item, a sentence that is motivation rather than permission. |
@@ -162,7 +163,7 @@ Two deciding phrases can be joined: `text ("Avoid") and imperative ("Don't")`.
 - `IF … THEN` is only for a branch inside a PROCEDURE. An event in a rule is `WHEN`: "If a bus pushes your trailer, do not brake" becomes `… SHOULD NOT brake … WHEN a passing bus or truck pushes the trailer out of position`.
 - Order without a keyword: inside a procedure, step order carries "before" and "after". In a rule, "before X" is `WHEN about to X` and "after X" is `WHEN the driver has X-ed` or `ONLY IF the driver has first X-ed`.
 - `UNTIL` is for a duty that ends: stop until, wait until, do not pass until. Use `UNLESS` for an exception that is not about time.
-- A penalty stated in another passage (a later sentence, an offence table) joins the rule it punishes as `IF VIOLATED`, and that passage becomes a source.
+- A penalty stated in another sentence (a later sentence, an offence table) joins the rule it punishes as `IF VIOLATED`, and that sentence becomes a source.
 
 ## 4.4 Links
 
@@ -181,8 +182,8 @@ Every id named by `EXCEPTION TO` or `SPECIALIZES` also goes in `links`. Only lin
 - Quantities. Digits and short units: m, km, km/h, s, kg. Number words become digits ("two metres" is `2 m`). Fixed comparison phrases, not keywords: "at least", "at most", "more than", "less than", "within 30 m of", "between … and …", "up to". Never write a number that is not in the sources.
 - Lists. A sentence that introduces a list ("Bring the following:") passes its role, modal and clauses to each item; each item becomes its own statement with the item and the lead as sources. A definition by list is `DEFINE <term> IS <kind> THAT includes <a>, <b> or <c>`.
 - Right of way. "yield the right-of-way to <road user>" is a verb phrase, not a keyword.
-- Two statements in one sentence. Split them; both cite the same source.
-- One statement from several passages. Join passages when together they state one statement: a duty and its penalty, a rule and its reason, a sign's caption and its image, a list lead and its item, the same rule stated on two pages (add an `X` flag when their wording differs).
+- Two statements in one sentence. Split them; both cite that sentence.
+- One statement from several sentences. Join sentences, in one passage or several, when together they state one statement: a duty and its penalty, a rule and its reason, a sign's caption and its image, a list lead and its item, the same rule stated on two pages (add an `X` flag when their wording differs).
 - Vague words stay as written, wrapped in `[?…]` and flagged. Thresholds are never invented, and vague words are never replaced by a sharper reading.
 - Pronouns. Replace "it", "they", "do so" with what they refer to when the passage makes that clear; when it does not, keep the words in `[?…]` and flag `R`.
 
@@ -304,8 +305,8 @@ vehicle (any); motor vehicle (when the source distinguishes it); the vehicle bei
 
 # 6. What to write and what to skip
 
-- Cover every passage in scope. Each in-scope passage ends up as a source, a step source or a figure of at least one statement. A passage may support several statements, and several passages may support one.
-- Write nothing for passages outside the topic scope, and nothing for passages with no content of their own: navigation ("See Diagram 2-11"), summaries of what a section covers, questions that only introduce an answer, links to other documents.
+- Cover every sentence in scope. Each in-scope sentence and figure ends up as a source, a step source or a figure of at least one statement. A sentence may support several statements, and several sentences may support one.
+- Write nothing for sentences outside the topic scope, and nothing for sentences with no content of their own: navigation ("See Diagram 2-11"), summaries of what a section covers, questions that only introduce an answer, links to other documents.
 - Background that explains why a rule exists or what drivers will meet is a `FACT`. Motivation such as "you may want to pass slow vehicles" is not a permission; at most a `FACT`, with a note.
 - A sample test question and its answer can be the sources of a rule; flag `M` when only the question supplies "must".
 - Keep the handbook's meaning: do not add conditions it does not state, do not merge different duties, do not drop a condition because it is in a heading.
@@ -314,56 +315,50 @@ vehicle (any); motor vehicle (when the source distinguishes it); the vehicle bei
 
 # 7. Worked examples
 
-These examples use short passage ids (u1, v1, r1, w1) and parts of the Ontario Driver's Handbook outside any topic you will be given. Follow their form, not their content.
+These examples use short ids (passages u1, v1, r1, w1; sentences u1.1, u1.2) and parts of the Ontario Driver's Handbook outside any topic you will be given. Follow their form, not their content.
 
 ## Example A
 
 Topic: U-turns. Scope: turning a vehicle around to travel in the opposite direction.
 
 ```
-{"id": "u1", "page": "Changing directions", "sec": "Turning around › U-turn · ¶1", "kind": "text", "text": "Before you make a U-turn, check to make sure there is no sign saying not to."}
-{"id": "u2", "page": "Changing directions", "sec": "Turning around › U-turn · ¶2", "kind": "text", "text": "It is illegal to make a U-turn on a curve in the road, on or near a railway crossing or hilltop, or near a bridge or tunnel that blocks your view."}
-{"id": "u3", "page": "Changing directions", "sec": "Turning around › U-turn · ¶2", "kind": "text", "text": "Never make a U-turn unless you can see at least 150 metres in both directions."}
-{"id": "u4", "page": "Changing directions", "sec": "Turning around › U-turn · ¶3", "kind": "text", "text": "To make a U-turn, signal for a right turn, check your mirror and over your shoulder and pull over to the right side of the road."}
-{"id": "u5", "page": "Changing directions", "sec": "Turning around › U-turn · ¶3", "kind": "text", "text": "Stop."}
-{"id": "u6", "page": "Changing directions", "sec": "Turning around › U-turn · ¶3", "kind": "text", "text": "Signal a left turn and when traffic is clear in both directions, move forward and turn quickly and sharply into the opposite lane."}
-{"id": "u7", "page": "Changing directions", "sec": "Turning around › U-turn · ¶3", "kind": "text", "text": "Check for traffic as you turn."}
-{"id": "u8", "page": "Signs", "sec": "Regulatory signs › Here are some common regulatory signs: · image", "kind": "figure", "text": "a regulatory sign", "cap": "Alt text: “a regulatory sign”"}
-{"id": "u9", "page": "Signs", "sec": "Regulatory signs › Here are some common regulatory signs: · ¶4", "kind": "text", "text": "Do not turn to go in the opposite direction. (U-turn)"}
-{"id": "u10", "page": "Changing directions", "sec": "Summary · item 6", "kind": "text", "text": "Methods of turning your vehicle around to travel back in the opposite direction (U-turns, three-point turns)"}
+{"id": "u1", "page": "Changing directions", "sec": "Turning around › U-turn · ¶1", "kind": "text", "sentences": [{"id": "u1.1", "text": "Before you make a U-turn, check to make sure there is no sign saying not to."}]}
+{"id": "u2", "page": "Changing directions", "sec": "Turning around › U-turn · ¶2", "kind": "text", "sentences": [{"id": "u2.1", "text": "It is illegal to make a U-turn on a curve in the road, on or near a railway crossing or hilltop, or near a bridge or tunnel that blocks your view."}, {"id": "u2.2", "text": "Never make a U-turn unless you can see at least 150 metres in both directions."}]}
+{"id": "u3", "page": "Changing directions", "sec": "Turning around › U-turn · ¶3", "kind": "text", "sentences": [{"id": "u3.1", "text": "To make a U-turn, signal for a right turn, check your mirror and over your shoulder and pull over to the right side of the road."}, {"id": "u3.2", "text": "Stop."}, {"id": "u3.3", "text": "Signal a left turn and when traffic is clear in both directions, move forward and turn quickly and sharply into the opposite lane."}, {"id": "u3.4", "text": "Check for traffic as you turn."}]}
+{"id": "u4", "page": "Signs", "sec": "Regulatory signs › Here are some common regulatory signs: · image", "kind": "figure", "text": "a regulatory sign", "cap": "Alt text: “a regulatory sign”"}
+{"id": "u5", "page": "Signs", "sec": "Regulatory signs › Here are some common regulatory signs: · ¶4", "kind": "text", "sentences": [{"id": "u5.1", "text": "Do not turn to go in the opposite direction. (U-turn)"}]}
+{"id": "u6", "page": "Changing directions", "sec": "Summary · item 6", "kind": "text", "sentences": [{"id": "u6.1", "text": "Methods of turning your vehicle around to travel back in the opposite direction (U-turns, three-point turns)"}]}
 ```
 
 ```
 {"statements": [
-{"id": "u1a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"check to make sure\")", "text": "a driver SHOULD check that no sign prohibits a U-turn WHEN about to make a U-turn", "sources": [{"id": "u1", "quote": "Before you make a U-turn, check to make sure there is no sign saying not to."}], "flags": [], "links": [], "note": null},
-{"id": "u2a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"It is illegal\")", "text": "a driver MUST NOT make a U-turn WHEN the driver is on a curve OR the driver is on or [?near] a railway crossing or hilltop OR the driver is [?near] a bridge or tunnel that blocks the driver's view", "sources": [{"id": "u2", "quote": "It is illegal to make a U-turn on a curve in the road, on or near a railway crossing or hilltop, or near a bridge or tunnel that blocks your view."}], "flags": [{"code": "J", "span": "near", "note": "No distance is given."}], "links": [], "note": null},
-{"id": "u3a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"Never\")", "text": "a driver SHOULD NOT make a U-turn UNLESS the driver can see at least 150 m in both directions", "sources": [{"id": "u3", "quote": "Never make a U-turn unless you can see at least 150 metres in both directions."}], "flags": [], "links": [], "note": null},
-{"id": "u4a", "type": "PROCEDURE", "strength": "ADVICE", "strength_from": "imperative steps", "text": "TO make a U-turn", "steps": [{"n": "1", "text": "signal right AND check the mirror and over the shoulder AND pull over to the right side of the road", "sources": ["u4"]}, {"n": "2", "text": "stop", "sources": ["u5"]}, {"n": "3", "text": "signal left", "sources": ["u6"]}, {"n": "4", "text": "move forward AND turn quickly and sharply into the opposite lane WHEN the way is clear in both directions", "sources": ["u6"]}, {"n": "5", "text": "check for traffic WHILE turning", "sources": ["u7"]}], "sources": [{"id": "u4", "quote": "To make a U-turn, signal for a right turn, check your mirror and over your shoulder and pull over to the right side of the road."}], "flags": [], "links": [], "note": null},
-{"id": "u9a", "type": "RULE", "strength": "LAW", "strength_from": "context (Regulatory signs: \"must be obeyed\")", "text": "a driver MUST NOT make a U-turn WHEN a \"no U-turn\" sign applies", "sources": [{"id": "u9", "quote": "Do not turn to go in the opposite direction. (U-turn)"}, {"id": "u8", "quote": "a regulatory sign"}], "see": [{"figure": "the \"no U-turn\" sign", "source": "u8"}], "flags": [], "links": [], "note": "The caption is a plain imperative; the legal force comes from the regulatory signs section."}
+{"id": "u1a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"check to make sure\")", "text": "a driver SHOULD check that no sign prohibits a U-turn WHEN about to make a U-turn", "sources": [{"id": "u1.1", "quote": "Before you make a U-turn, check to make sure there is no sign saying not to."}], "flags": [], "links": [], "note": null},
+{"id": "u2a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"It is illegal\")", "text": "a driver MUST NOT make a U-turn WHEN the driver is on a curve OR the driver is on or [?near] a railway crossing or hilltop OR the driver is [?near] a bridge or tunnel that blocks the driver's view", "sources": [{"id": "u2.1", "quote": "It is illegal to make a U-turn on a curve in the road, on or near a railway crossing or hilltop, or near a bridge or tunnel that blocks your view."}], "flags": [{"code": "J", "span": "near", "note": "No distance is given."}], "links": [], "note": null},
+{"id": "u2b", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"Never\")", "text": "a driver SHOULD NOT make a U-turn UNLESS the driver can see at least 150 m in both directions", "sources": [{"id": "u2.2", "quote": "Never make a U-turn unless you can see at least 150 metres in both directions."}], "flags": [], "links": [], "note": null},
+{"id": "u3a", "type": "PROCEDURE", "strength": "ADVICE", "strength_from": "imperative steps", "text": "TO make a U-turn", "steps": [{"n": "1", "text": "signal right AND check the mirror and over the shoulder AND pull over to the right side of the road", "sources": ["u3.1"]}, {"n": "2", "text": "stop", "sources": ["u3.2"]}, {"n": "3", "text": "signal left", "sources": ["u3.3"]}, {"n": "4", "text": "move forward AND turn quickly and sharply into the opposite lane WHEN the way is clear in both directions", "sources": ["u3.3"]}, {"n": "5", "text": "check for traffic WHILE turning", "sources": ["u3.4"]}], "sources": [{"id": "u3.1", "quote": "To make a U-turn, signal for a right turn, check your mirror and over your shoulder and pull over to the right side of the road."}], "flags": [], "links": [], "note": null},
+{"id": "u5a", "type": "RULE", "strength": "LAW", "strength_from": "context (Regulatory signs: \"must be obeyed\")", "text": "a driver MUST NOT make a U-turn WHEN a \"no U-turn\" sign applies", "sources": [{"id": "u5.1", "quote": "Do not turn to go in the opposite direction. (U-turn)"}, {"id": "u4", "quote": "a regulatory sign"}], "see": [{"figure": "the \"no U-turn\" sign", "source": "u4"}], "flags": [], "links": [], "note": "The caption is a plain imperative; the legal force comes from the regulatory signs section."}
 ]}
 ```
 
-u10 gets no statement: it only summarises the section.
+u6 gets no statement: it only summarises the section.
 
 ## Example B
 
 Topic: Traffic lights. Scope: what drivers must or should do at traffic lights, and what the lights mean.
 
 ```
-{"id": "v1", "page": "Traffic lights", "sec": "Red light · ¶1", "kind": "text", "text": "A red light means you must stop."}
-{"id": "v2", "page": "Traffic lights", "sec": "Red light · ¶1", "kind": "text", "text": "Bring your vehicle to a complete stop at the stop line if it is marked on the pavement."}
-{"id": "v3", "page": "Traffic lights", "sec": "Red light · ¶1", "kind": "text", "text": "If there is no stop line, stop at the crosswalk, marked or not."}
-{"id": "v4", "page": "Traffic lights", "sec": "Red light · ¶3", "kind": "text", "text": "Unless a sign tells you not to, you may turn right on a red light only after coming to a complete stop and waiting until the way is clear."}
-{"id": "v5", "page": "Traffic lights", "sec": "Fully protected left turn · ¶1", "kind": "text", "text": "When a left-turn green arrow appears for traffic in the left-turn lane, traffic going straight ahead or turning right will usually see a red light."}
+{"id": "v1", "page": "Traffic lights", "sec": "Red light · ¶1", "kind": "text", "sentences": [{"id": "v1.1", "text": "A red light means you must stop."}, {"id": "v1.2", "text": "Bring your vehicle to a complete stop at the stop line if it is marked on the pavement."}, {"id": "v1.3", "text": "If there is no stop line, stop at the crosswalk, marked or not."}]}
+{"id": "v2", "page": "Traffic lights", "sec": "Red light · ¶3", "kind": "text", "sentences": [{"id": "v2.1", "text": "Unless a sign tells you not to, you may turn right on a red light only after coming to a complete stop and waiting until the way is clear."}]}
+{"id": "v3", "page": "Traffic lights", "sec": "Fully protected left turn · ¶1", "kind": "text", "sentences": [{"id": "v3.1", "text": "When a left-turn green arrow appears for traffic in the left-turn lane, traffic going straight ahead or turning right will usually see a red light."}]}
 ```
 
 ```
 {"statements": [
-{"id": "v1a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"must\")", "text": "a driver MUST stop WHEN facing a red light", "sources": [{"id": "v1", "quote": "A red light means you must stop."}], "flags": [], "links": [], "note": null},
-{"id": "v2a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"Bring your vehicle to a complete stop\")", "text": "a driver SHOULD come to a complete stop at the stop line WHEN facing a red light AND a stop line is marked on the pavement", "sources": [{"id": "v2", "quote": "Bring your vehicle to a complete stop at the stop line if it is marked on the pavement."}], "flags": [{"code": "M", "span": "Bring your vehicle to a complete stop", "note": "Follows \"you must stop\" (v1); the handbook does not say whether the stopping place is law too."}], "links": [], "note": "\"Facing a red light\" comes from the heading."},
-{"id": "v3a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"stop\")", "text": "a driver SHOULD stop at the crosswalk, marked or not, WHEN facing a red light AND there is no stop line", "sources": [{"id": "v3", "quote": "If there is no stop line, stop at the crosswalk, marked or not."}], "flags": [{"code": "M", "span": "stop at the crosswalk", "note": "Follows \"you must stop\" (v1); the handbook does not say whether the stopping place is law too."}], "links": [], "note": "The next case of the fallback chain begun in v2a."},
-{"id": "v4a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"may … only after\")", "text": "a driver MAY turn right WHEN facing a red light ONLY IF the driver has first come to a complete stop AND the way is clear UNLESS a sign prohibits the turn", "sources": [{"id": "v4", "quote": "Unless a sign tells you not to, you may turn right on a red light only after coming to a complete stop and waiting until the way is clear."}], "flags": [], "links": [], "note": null},
-{"id": "v5a", "type": "FACT", "strength": null, "strength_from": null, "text": "FACT traffic going straight ahead or turning right [?usually] faces a red light WHEN a left-turn green arrow is shown for the left-turn lane", "sources": [{"id": "v5", "quote": "When a left-turn green arrow appears for traffic in the left-turn lane, traffic going straight ahead or turning right will usually see a red light."}], "flags": [{"code": "S", "span": "usually", "note": "Hedged; the handbook does not say when it differs."}], "links": [], "note": null}
+{"id": "v1a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"must\")", "text": "a driver MUST stop WHEN facing a red light", "sources": [{"id": "v1.1", "quote": "A red light means you must stop."}], "flags": [], "links": [], "note": null},
+{"id": "v1b", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"Bring your vehicle to a complete stop\")", "text": "a driver SHOULD come to a complete stop at the stop line WHEN facing a red light AND a stop line is marked on the pavement", "sources": [{"id": "v1.2", "quote": "Bring your vehicle to a complete stop at the stop line if it is marked on the pavement."}], "flags": [{"code": "M", "span": "Bring your vehicle to a complete stop", "note": "Follows \"you must stop\" (v1.1); the handbook does not say whether the stopping place is law too."}], "links": [], "note": "\"Facing a red light\" comes from the heading."},
+{"id": "v1c", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"stop\")", "text": "a driver SHOULD stop at the crosswalk, marked or not, WHEN facing a red light AND there is no stop line", "sources": [{"id": "v1.3", "quote": "If there is no stop line, stop at the crosswalk, marked or not."}], "flags": [{"code": "M", "span": "stop at the crosswalk", "note": "Follows \"you must stop\" (v1.1); the handbook does not say whether the stopping place is law too."}], "links": [], "note": "The next case of the fallback chain begun in v1b."},
+{"id": "v2a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"may … only after\")", "text": "a driver MAY turn right WHEN facing a red light ONLY IF the driver has first come to a complete stop AND the way is clear UNLESS a sign prohibits the turn", "sources": [{"id": "v2.1", "quote": "Unless a sign tells you not to, you may turn right on a red light only after coming to a complete stop and waiting until the way is clear."}], "flags": [], "links": [], "note": null},
+{"id": "v3a", "type": "FACT", "strength": null, "strength_from": null, "text": "FACT traffic going straight ahead or turning right [?usually] faces a red light WHEN a left-turn green arrow is shown for the left-turn lane", "sources": [{"id": "v3.1", "quote": "When a left-turn green arrow appears for traffic in the left-turn lane, traffic going straight ahead or turning right will usually see a red light."}], "flags": [{"code": "S", "span": "usually", "note": "Hedged; the handbook does not say when it differs."}], "links": [], "note": null}
 ]}
 ```
 
@@ -372,19 +367,19 @@ Topic: Traffic lights. Scope: what drivers must or should do at traffic lights, 
 Topic: Railway crossings. Scope: what drivers must or should do at railway crossings.
 
 ```
-{"id": "r1", "page": "Stopping", "sec": "Stopping at railway crossings · ¶3", "kind": "text", "text": "When you come to a railway crossing, remember:"}
-{"id": "r2", "page": "Stopping", "sec": "Stopping at railway crossings · item 3", "kind": "text", "text": "If a train is coming, stop at least five metres from the nearest rail or gate."}
-{"id": "r3", "page": "Stopping", "sec": "Stopping at railway crossings · item 5", "kind": "text", "text": "If there are signal lights, wait until they stop flashing and, if the crossing has a gate or barrier, wait until it rises before you cross the tracks."}
-{"id": "r4", "page": "Stopping", "sec": "Stopping at railway crossings · item 6", "kind": "text", "text": "Never drive around, under or through a railway gate or barrier while it is down, being lowered or being raised."}
-{"id": "r5", "page": "Keeping your licence", "sec": "Table of offences › Three points · item 9", "kind": "text", "text": "Driving through, around or under a railway crossing barrier"}
+{"id": "r1", "page": "Stopping", "sec": "Stopping at railway crossings · ¶3", "kind": "text", "sentences": [{"id": "r1.1", "text": "When you come to a railway crossing, remember:"}]}
+{"id": "r2", "page": "Stopping", "sec": "Stopping at railway crossings · item 3", "kind": "text", "sentences": [{"id": "r2.1", "text": "If a train is coming, stop at least five metres from the nearest rail or gate."}]}
+{"id": "r3", "page": "Stopping", "sec": "Stopping at railway crossings · item 5", "kind": "text", "sentences": [{"id": "r3.1", "text": "If there are signal lights, wait until they stop flashing and, if the crossing has a gate or barrier, wait until it rises before you cross the tracks."}]}
+{"id": "r4", "page": "Stopping", "sec": "Stopping at railway crossings · item 6", "kind": "text", "sentences": [{"id": "r4.1", "text": "Never drive around, under or through a railway gate or barrier while it is down, being lowered or being raised."}]}
+{"id": "r5", "page": "Keeping your licence", "sec": "Table of offences › Three points · item 9", "kind": "text", "sentences": [{"id": "r5.1", "text": "Driving through, around or under a railway crossing barrier"}]}
 ```
 
 ```
 {"statements": [
-{"id": "r2a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"stop\")", "text": "a driver SHOULD stop at least 5 m from the nearest rail or gate WHEN at a railway crossing AND a train is coming", "sources": [{"id": "r2", "quote": "If a train is coming, stop at least five metres from the nearest rail or gate."}, {"id": "r1", "quote": "When you come to a railway crossing, remember:"}], "flags": [], "links": [], "note": "\"At a railway crossing\" comes from the list lead (r1)."},
-{"id": "r3a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"wait until\")", "text": "a driver SHOULD NOT cross the tracks WHEN the railway crossing has signal lights that are flashing UNTIL the lights stop flashing", "sources": [{"id": "r3", "quote": "If there are signal lights, wait until they stop flashing and, if the crossing has a gate or barrier, wait until it rises before you cross the tracks."}, {"id": "r1", "quote": "When you come to a railway crossing, remember:"}], "flags": [], "links": [], "note": null},
-{"id": "r3b", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"wait until\")", "text": "a driver SHOULD NOT cross the tracks WHEN the railway crossing has a gate or barrier UNTIL the gate or barrier rises", "sources": [{"id": "r3", "quote": "If there are signal lights, wait until they stop flashing and, if the crossing has a gate or barrier, wait until it rises before you cross the tracks."}, {"id": "r1", "quote": "When you come to a railway crossing, remember:"}], "flags": [], "links": [], "note": null},
-{"id": "r4a", "type": "RULE", "strength": "LAW", "strength_from": "context (Table of offences › Three points: \"Driving through, around or under a railway crossing barrier\")", "text": "a driver MUST NOT drive around, under or through a railway crossing gate or barrier WHILE it is down, being lowered or being raised IF VIOLATED 3 demerit points", "sources": [{"id": "r4", "quote": "Never drive around, under or through a railway gate or barrier while it is down, being lowered or being raised."}, {"id": "r5", "quote": "Driving through, around or under a railway crossing barrier"}], "flags": [], "links": [], "note": "The Stopping page words this as advice (\"Never\"); the offence table makes it law and gives the penalty."}
+{"id": "r2a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"stop\")", "text": "a driver SHOULD stop at least 5 m from the nearest rail or gate WHEN at a railway crossing AND a train is coming", "sources": [{"id": "r2.1", "quote": "If a train is coming, stop at least five metres from the nearest rail or gate."}, {"id": "r1.1", "quote": "When you come to a railway crossing, remember:"}], "flags": [], "links": [], "note": "\"At a railway crossing\" comes from the list lead (r1.1)."},
+{"id": "r3a", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"wait until\")", "text": "a driver SHOULD NOT cross the tracks WHEN the railway crossing has signal lights that are flashing UNTIL the lights stop flashing", "sources": [{"id": "r3.1", "quote": "If there are signal lights, wait until they stop flashing and, if the crossing has a gate or barrier, wait until it rises before you cross the tracks."}, {"id": "r1.1", "quote": "When you come to a railway crossing, remember:"}], "flags": [], "links": [], "note": null},
+{"id": "r3b", "type": "RULE", "strength": "ADVICE", "strength_from": "imperative (\"wait until\")", "text": "a driver SHOULD NOT cross the tracks WHEN the railway crossing has a gate or barrier UNTIL the gate or barrier rises", "sources": [{"id": "r3.1", "quote": "If there are signal lights, wait until they stop flashing and, if the crossing has a gate or barrier, wait until it rises before you cross the tracks."}, {"id": "r1.1", "quote": "When you come to a railway crossing, remember:"}], "flags": [], "links": [], "note": null},
+{"id": "r4a", "type": "RULE", "strength": "LAW", "strength_from": "context (Table of offences › Three points: \"Driving through, around or under a railway crossing barrier\")", "text": "a driver MUST NOT drive around, under or through a railway crossing gate or barrier WHILE it is down, being lowered or being raised IF VIOLATED 3 demerit points", "sources": [{"id": "r4.1", "quote": "Never drive around, under or through a railway gate or barrier while it is down, being lowered or being raised."}, {"id": "r5.1", "quote": "Driving through, around or under a railway crossing barrier"}], "flags": [], "links": [], "note": "The Stopping page words this as advice (\"Never\"); the offence table makes it law and gives the penalty."}
 ]}
 ```
 
@@ -395,37 +390,37 @@ r1 has no statement of its own; it is the list lead for r2 to r4.
 Topic: HOV lanes. Scope: who may use high-occupancy vehicle lanes, and the rules for using them.
 
 ```
-{"id": "w1", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶1", "kind": "text", "text": "A High-Occupancy Vehicle (HOV) lane is a specially designed lane that is designated for use by certain types of vehicles with a specified number of occupants."}
-{"id": "w2", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶2", "kind": "text", "text": "HOV lanes are open 24 hours a day, seven days a week."}
-{"id": "w3", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶4", "kind": "text", "text": "HOV lanes on provincial highways are reserved for:"}
-{"id": "w4", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · item 1", "kind": "text", "text": "vehicles carrying at least two people"}
-{"id": "w5", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶5", "kind": "text", "text": "Large trucks are not permitted on the HOV lanes, regardless of the number of occupants."}
-{"id": "w6", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · item 4", "kind": "text", "text": "Buses can use an HOV lane at any time, regardless of the number of occupants."}
-{"id": "w7", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · item 8", "kind": "text", "text": "Single-occupant taxis and airport limousines are permitted in the HOV lane."}
+{"id": "w1", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶1", "kind": "text", "sentences": [{"id": "w1.1", "text": "A High-Occupancy Vehicle (HOV) lane is a specially designed lane that is designated for use by certain types of vehicles with a specified number of occupants."}]}
+{"id": "w2", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶2", "kind": "text", "sentences": [{"id": "w2.1", "text": "HOV lanes are open 24 hours a day, seven days a week."}]}
+{"id": "w3", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶4", "kind": "text", "sentences": [{"id": "w3.1", "text": "HOV lanes on provincial highways are reserved for:"}]}
+{"id": "w4", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · item 1", "kind": "text", "sentences": [{"id": "w4.1", "text": "vehicles carrying at least two people"}]}
+{"id": "w5", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · ¶5", "kind": "text", "sentences": [{"id": "w5.1", "text": "Large trucks are not permitted on the HOV lanes, regardless of the number of occupants."}]}
+{"id": "w6", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · item 4", "kind": "text", "sentences": [{"id": "w6.1", "text": "Buses can use an HOV lane at any time, regardless of the number of occupants."}]}
+{"id": "w7", "page": "Freeway driving", "sec": "High Occupancy Vehicle (HOV) Lane · item 8", "kind": "text", "sentences": [{"id": "w7.1", "text": "Single-occupant taxis and airport limousines are permitted in the HOV lane."}]}
 ```
 
 ```
 {"statements": [
-{"id": "w1a", "type": "DEFINE", "strength": null, "strength_from": null, "text": "DEFINE a high-occupancy vehicle lane IS a specially designed lane THAT is designated for certain types of vehicles with a specified number of occupants ALSO CALLED HOV lane", "sources": [{"id": "w1", "quote": "A High-Occupancy Vehicle (HOV) lane is a specially designed lane that is designated for use by certain types of vehicles with a specified number of occupants."}], "flags": [], "links": [], "note": null},
-{"id": "w2a", "type": "FACT", "strength": null, "strength_from": null, "text": "FACT HOV lanes are open 24 hours a day, 7 days a week", "sources": [{"id": "w2", "quote": "HOV lanes are open 24 hours a day, seven days a week."}], "flags": [], "links": [], "note": null},
-{"id": "w4a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"reserved for\")", "text": "a driver MAY use an HOV lane on a provincial highway ONLY IF the vehicle carries at least 2 people", "sources": [{"id": "w4", "quote": "vehicles carrying at least two people"}, {"id": "w3", "quote": "HOV lanes on provincial highways are reserved for:"}], "flags": [{"code": "D", "span": "reserved for", "note": "Implies that vehicles not on the list may not use the lane; the passage does not say so directly."}], "links": [], "note": "The list lead (w3) gives the permission; the item gives its condition."},
-{"id": "w5a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"are not permitted\")", "text": "a truck driver MUST NOT drive a large truck in an HOV lane, whatever the number of occupants", "sources": [{"id": "w5", "quote": "Large trucks are not permitted on the HOV lanes, regardless of the number of occupants."}], "flags": [], "links": [], "note": null},
-{"id": "w6a", "type": "EXCEPTION", "strength": null, "strength_from": null, "text": "EXCEPTION TO w4a WHEN the vehicle is a bus", "sources": [{"id": "w6", "quote": "Buses can use an HOV lane at any time, regardless of the number of occupants."}], "flags": [], "links": ["w4a"], "note": null},
-{"id": "w7a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"are permitted\")", "text": "EXCEPTION TO w4a: a driver of a taxi or airport limousine MAY use an HOV lane WHEN the driver is the only occupant", "sources": [{"id": "w7", "quote": "Single-occupant taxis and airport limousines are permitted in the HOV lane."}], "flags": [], "links": ["w4a"], "note": null}
+{"id": "w1a", "type": "DEFINE", "strength": null, "strength_from": null, "text": "DEFINE a high-occupancy vehicle lane IS a specially designed lane THAT is designated for certain types of vehicles with a specified number of occupants ALSO CALLED HOV lane", "sources": [{"id": "w1.1", "quote": "A High-Occupancy Vehicle (HOV) lane is a specially designed lane that is designated for use by certain types of vehicles with a specified number of occupants."}], "flags": [], "links": [], "note": null},
+{"id": "w2a", "type": "FACT", "strength": null, "strength_from": null, "text": "FACT HOV lanes are open 24 hours a day, 7 days a week", "sources": [{"id": "w2.1", "quote": "HOV lanes are open 24 hours a day, seven days a week."}], "flags": [], "links": [], "note": null},
+{"id": "w4a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"reserved for\")", "text": "a driver MAY use an HOV lane on a provincial highway ONLY IF the vehicle carries at least 2 people", "sources": [{"id": "w4.1", "quote": "vehicles carrying at least two people"}, {"id": "w3.1", "quote": "HOV lanes on provincial highways are reserved for:"}], "flags": [{"code": "D", "span": "reserved for", "note": "Implies that vehicles not on the list may not use the lane; the passage does not say so directly."}], "links": [], "note": "The list lead (w3.1) gives the permission; the item gives its condition."},
+{"id": "w5a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"are not permitted\")", "text": "a truck driver MUST NOT drive a large truck in an HOV lane, whatever the number of occupants", "sources": [{"id": "w5.1", "quote": "Large trucks are not permitted on the HOV lanes, regardless of the number of occupants."}], "flags": [], "links": [], "note": null},
+{"id": "w6a", "type": "EXCEPTION", "strength": null, "strength_from": null, "text": "EXCEPTION TO w4a WHEN the vehicle is a bus", "sources": [{"id": "w6.1", "quote": "Buses can use an HOV lane at any time, regardless of the number of occupants."}], "flags": [], "links": ["w4a"], "note": null},
+{"id": "w7a", "type": "RULE", "strength": "LAW", "strength_from": "text (\"are permitted\")", "text": "EXCEPTION TO w4a: a driver of a taxi or airport limousine MAY use an HOV lane WHEN the driver is the only occupant", "sources": [{"id": "w7.1", "quote": "Single-occupant taxis and airport limousines are permitted in the HOV lane."}], "flags": [], "links": ["w4a"], "note": null}
 ]}
 ```
 
 # 8. Checklist before you answer
 
-1. Every in-scope passage is cited by at least one statement; out-of-scope passages are cited by none.
+1. Every in-scope sentence and figure is cited by at least one statement; out-of-scope sentences are cited by none, and no statement cites a sentence it does not come from.
 2. Every rule has exactly the modals the decision list in 4.2 gives, its `strength` matches its modals, and `strength_from` quotes the deciding words.
 3. Every condition from a heading, list lead, neighbouring passage or figure is in the statement, and `note` says where it came from.
-4. Every penalty for a rule is attached with `IF VIOLATED`, with its passage as a source.
+4. Every penalty for a rule is attached with `IF VIOLATED`, with its sentence as a source.
 5. Every vague word is kept, wrapped in `[?…]` where it appears, and has a flag with the same span.
 6. No number appears that is not in a source; number words became digits.
 7. Roles start with "a" and refer back with "the"; no "you"; one phrase per concept from section 5.
 8. Keywords are in capitals and only from section 4; ordinary words are lowercase.
-9. Every id in `links` is the id of a statement in this output, and every statement id is its first source id plus a letter.
+9. Every id in `links` is the id of a statement in this output, and every statement id is the id of its first source's passage plus a letter.
 10. The output is one JSON object with a `statements` array and nothing else.
 
 <!-- USER -->
