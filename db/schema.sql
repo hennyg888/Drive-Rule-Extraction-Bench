@@ -268,22 +268,34 @@ CREATE TABLE occurrence (
   term_id      TEXT REFERENCES term(id)
 );
 
--- How far a formal source settles one flag.
---   LAW_DEFINES  the law gives the definition or the number
---   LAW_STATES   the law states the duty itself, which settles its strength, scope or reference
---   LAW_REPEATS  the law uses the same open word; the vagueness is in the law too
---   STANDARD     the law leaves it open and an engineering standard or safety model gives an
---                operational definition (a proxy, not law)
---   HANDBOOK     another part of the handbook settles it
---   OPEN         no formal source settles it
+-- Resolving one flag (stage 5): the verdict, after searching the rest of the handbook and the law.
+--   RESOLVED  a source settles it for every case the statement covers
+--   PARTIAL   settled only for some cases, or narrowed but not settled
+--   OPEN      nothing settles it
 CREATE TABLE grounding (
   occurrence_id TEXT PRIMARY KEY REFERENCES occurrence(id),
-  status        TEXT NOT NULL CHECK (status IN ('LAW_DEFINES', 'LAW_STATES', 'LAW_REPEATS', 'STANDARD', 'HANDBOOK', 'OPEN')),
-  definition    TEXT,                       -- the measurable reading, when there is one
+  verdict       TEXT NOT NULL CHECK (verdict IN ('RESOLVED', 'PARTIAL', 'OPEN')),
+  definition    TEXT,                       -- the reading that resolves it, for the cases it covers
   effect        TEXT,                       -- what it would change in the statement
   note          TEXT
 );
 
+-- What each kind of source says about the flagged words: the rest of the handbook, the law, and an
+-- engineering standard or safety model where one was consulted (a proxy, not law).
+--   DEFINES   a definition, number, measure or test that makes the words checkable
+--   STATES    settles it without a measure: makes it a duty or not, names the referent, says the
+--             default, shows two words name one thing, or states the same rule in agreeing words
+--   REPEATS   the same open words, or equally open ones
+--   SILENT    nothing on it
+CREATE TABLE grounding_finding (
+  occurrence_id TEXT NOT NULL REFERENCES grounding(occurrence_id),
+  side          TEXT NOT NULL CHECK (side IN ('handbook', 'law', 'standard')),
+  finding       TEXT NOT NULL CHECK (finding IN ('DEFINES', 'STATES', 'REPEATS', 'SILENT')),
+  says          TEXT,                       -- what that side says about the words, in a sentence
+  PRIMARY KEY (occurrence_id, side)
+);
+
+-- The sentences and provisions behind the findings; role 'standard' and 'model' are the standard side.
 CREATE TABLE grounding_link (
   occurrence_id TEXT NOT NULL REFERENCES grounding(occurrence_id),
   unit_id       TEXT NOT NULL REFERENCES unit(id),

@@ -2,7 +2,7 @@
 
 Statements are paired as tools/compare_runs.py pairs them. For each pair:
   - a flag of the new statement with the same code and the same words as a flag of its pair gets
-    that flag's grounding and links;
+    that flag's resolution: its verdict, what the handbook and the law say, and their links;
   - when the two statements agree on type, strength, modals and clause keywords, the new statement
     gets its pair's provisions (statement_basis) and law lines (statement_law, statement_law_ref).
 Every carried row says in its note which statement it came from. Rows already there are kept, so it
@@ -46,7 +46,10 @@ def main():
             if g:
                 g = g[0]
                 db.execute('INSERT INTO grounding VALUES (?, ?, ?, ?, ?)',
-                           (o['id'], g['status'], g['definition'], g['effect'], mark(g['note'], j)))
+                           (o['id'], g['verdict'], g['definition'], g['effect'], mark(g['note'], j)))
+                db.executemany('INSERT INTO grounding_finding VALUES (?, ?, ?, ?)',
+                               [(o['id'], f['side'], f['finding'], f['says'])
+                                for f in q('SELECT * FROM grounding_finding WHERE occurrence_id = ?', src['id'])])
                 db.executemany('INSERT INTO grounding_link VALUES (?, ?, ?)',
                                [(o['id'], l['unit_id'], l['role']) for l in q('SELECT * FROM grounding_link WHERE occurrence_id = ?', src['id'])])
                 flags += 1

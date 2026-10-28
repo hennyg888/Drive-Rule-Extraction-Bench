@@ -1,10 +1,10 @@
 """Write one jurisdiction's statements with the law added under them, from the rules database.
 
-Every statement appears as extracted, with its flags and their notes unchanged. Under it come what
-the law adds: how far a formal source settles each flag, the law lines in the rule language, and
-the provisions behind the statement and how the statement compares with each. Every provision is
-quoted word for word at the end, with a link to its line in the local copy of the law and to the
-official page. tools/db.py export --write writes it to analysis/passing-rules/<folder>/passing-rules-law.md
+Every statement appears as extracted, with its flags and their notes unchanged. Under it come how
+far the rest of the handbook and the law resolve each flag, then what the law adds: the law lines in
+the rule language, and the provisions behind the statement and how the statement compares with each.
+Every provision is quoted word for word at the end, with a link to its line in the local copy of the
+law and to the official page. tools/db.py export --write writes it to analysis/passing-rules/<folder>/passing-rules-law.md
 and tools/db.py check fails while the page differs from the database; never edit it by hand.
 """
 import bisect
@@ -12,13 +12,16 @@ import collections
 import os
 import re
 
-STATUS = [
-    ('LAW_DEFINES', 'the law gives the definition or the number'),
-    ('LAW_STATES', 'the law states the duty itself, which settles its strength, scope or reference'),
-    ('LAW_REPEATS', 'the law uses the same open word, so the vagueness is in the law too'),
-    ('STANDARD', 'an engineering standard or safety model gives an operational definition'),
-    ('HANDBOOK', 'another part of the handbook settles it'),
-    ('OPEN', 'no formal source settles it'),
+VERDICT = [
+    ('RESOLVED', 'the rest of the handbook or the law settles it for every case the statement covers'),
+    ('PARTIAL', 'settled only for some cases, or narrowed but not settled'),
+    ('OPEN', 'nothing settles it'),
+]
+FINDING = [
+    ('DEFINES', 'gives a definition, number, measure or test'),
+    ('STATES', 'settles it without a measure: the duty, the referent, the default, or the same rule in agreeing words'),
+    ('REPEATS', 'uses the same open words'),
+    ('SILENT', 'says nothing on it'),
 ]
 RELATION = [
     ('SAME', 'the provision states the same duty'),
@@ -77,15 +80,19 @@ def render(db, jurisdiction, title, root, folder):
               f"AND s.{mine}", jurisdiction)
     duty = {r['statement_id'] for r in lines if LAW_MODAL.search(r['text'])} & \
         {s['id'] for s in statements if s['strength'] == 'ADVICE'}
-    flags = collections.Counter(r[0] or 'not grounded' for r in q(
-        "SELECT g.status FROM occurrence o JOIN statement s ON s.id = o.statement_id "
+    flags = collections.Counter(r[0] or 'not resolved' for r in q(
+        "SELECT g.verdict FROM occurrence o JOIN statement s ON s.id = o.statement_id "
         f"LEFT JOIN grounding g ON g.occurrence_id = o.id WHERE s.jurisdiction = ? AND s.{mine}", jurisdiction))
+    found = collections.Counter((r[0], r[1]) for r in q(
+        "SELECT f.side, f.finding FROM grounding_finding f JOIN occurrence o ON o.id = f.occurrence_id "
+        f"JOIN statement s ON s.id = o.statement_id WHERE s.jurisdiction = ? AND s.{mine}", jurisdiction))
 
     out = [f'# {title}', '',
            'Generated from the rules database (`db/`) by `python3 tools/db.py export --write`. Do not edit by hand.', '',
            'Each statement is shown as extracted from the handbook, with its flags and their notes unchanged: it is '
            'the reference the extraction is scored against. What the law adds comes under it:', '',
-           '- under each flag, how far a formal source settles it, and the provisions or handbook sentences that do;',
+           '- under each flag, what the rest of the handbook and the law say about it, with the sentences and '
+           'provisions, and whether that resolves it;',
            '- **Law**: what the law says on the statement\'s subject, in the rule language, with the provisions it '
            'cites. A word the law leaves as open as the handbook keeps its `[?…]` mark;',
            '- **Compared with the law**: each provision behind the statement and how the statement compares with it.',
@@ -96,9 +103,11 @@ def render(db, jurisdiction, title, root, folder):
            f'{len(statements)} statements. Law lines are added under {len({r["statement_id"] for r in lines})} of them '
            f'({len(lines)} lines); for {len(duty)}, the handbook words as advice what the law makes a duty.', '',
            '| Flags | | |', '|---|---|---|']
-    out += [f'| `{k}` | {flags[k]} | {meaning} |' for k, meaning in STATUS if flags[k]]
-    if flags['not grounded']:
-        out.append(f'| not grounded | {flags["not grounded"]} | |')
+    out += [f'| `{k}` | {flags[k]} | {meaning} |' for k, meaning in VERDICT if flags[k]]
+    if flags['not resolved']:
+        out.append(f'| not resolved | {flags["not resolved"]} | |')
+    out += ['', '| What each source says about a flag | Handbook | Law | |', '|---|---|---|---|']
+    out += [f'| `{k}` | {found["handbook", k]} | {found["law", k]} | {meaning} |' for k, meaning in FINDING]
     out += ['', '| Compared with the law | |', '|---|---|']
     out += [f'| `{k}` | {meaning} |' for k, meaning in RELATION]
     out += ['', '## Statements', '']
@@ -111,20 +120,27 @@ def render(db, jurisdiction, title, root, folder):
                 (f'. Handbook: {"; ".join(dict.fromkeys(where))}' if where else '') + '.', '']
         if s['note']:
             out += [f'_{s["note"]}_', '']
-        occ = q('SELECT o.*, g.status, g.definition, g.effect, g.note AS gnote FROM occurrence o '
+        occ = q('SELECT o.*, g.verdict, g.definition, g.effect, g.note AS gnote FROM occurrence o '
                 'LEFT JOIN grounding g ON g.occurrence_id = o.id WHERE o.statement_id = ? ORDER BY o.position', s['id'])
         if occ:
             out += ['**Flags**', '']
             for o in occ:
                 out.append(f'- {o["code"]} "{o["span"]}": {o["note"]}')
-                if o['status']:
-                    refs = q("SELECT l.unit_id, l.role FROM grounding_link l WHERE l.occurrence_id = ? ORDER BY l.unit_id",
-                             o['id'])
-                    law = [cite(r['unit_id']) for r in refs if r['role'] != 'handbook']
-                    book = [f'handbook {r["unit_id"].split(":", 2)[2]}' for r in refs if r['role'] == 'handbook']
-                    said = ' '.join(x for x in (o['definition'], o['effect'], o['gnote']) if x)
-                    out.append(f'  - `{o["status"]}`' + (f': {said}' if said else '') +
-                               (f' ({", ".join(law + book)})' if law or book else ''))
+                if not o['verdict']:
+                    continue
+                refs = q("SELECT l.unit_id, l.role FROM grounding_link l WHERE l.occurrence_id = ? ORDER BY l.unit_id",
+                         o['id'])
+                for f in q("SELECT * FROM grounding_finding WHERE occurrence_id = ? ORDER BY side = 'standard', side",
+                           o['id']):
+                    if f['side'] == 'handbook':
+                        where = [f'handbook {r["unit_id"].split(":", 2)[2]}' for r in refs if r['role'] == 'handbook']
+                    else:
+                        where = [cite(r['unit_id']) for r in refs if r['role'] != 'handbook' and
+                                 (r['role'] == 'law') == (f['side'] == 'law')]
+                    out.append(f'  - {f["side"].capitalize()}, `{f["finding"]}`' +
+                               (f': {f["says"]}' if f['says'] else '') + (f' ({", ".join(where)})' if where else ''))
+                said = ' '.join(x for x in (o['definition'], o['effect'], o['gnote']) if x)
+                out.append(f'  - **{o["verdict"]}**' + (f': {said}' if said else ''))
             out.append('')
         rows = q('SELECT * FROM statement_law WHERE statement_id = ? ORDER BY position', s['id'])
         if rows:

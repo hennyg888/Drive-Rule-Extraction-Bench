@@ -63,6 +63,7 @@ MASTER = [
     ('term', 'id'),
     ('occurrence', 'id'),
     ('grounding', 'occurrence_id'),
+    ('grounding_finding', 'occurrence_id, side'),
     ('grounding_link', 'occurrence_id, unit_id'),
 ]
 DERIVED = ('passage_part', 'statement_part')
@@ -378,13 +379,28 @@ def check(db):
                "JOIN unit u ON u.id = l.unit_id JOIN source s ON s.id = u.source_id"):
         if r['source_kind'] not in want[r['role']] or (r['role'] != 'handbook' and r['kind'] != 'provision'):
             errors.append(f'grounding {r["occurrence_id"]}: {r["unit_id"]} is not a {r["role"]} provision')
-    for g in q("SELECT g.* FROM grounding g WHERE g.status LIKE 'LAW_%' AND NOT EXISTS "
-               "(SELECT 1 FROM grounding_link l WHERE l.occurrence_id = g.occurrence_id AND l.role = 'law')"):
-        errors.append(f'grounding {g["occurrence_id"]}: {g["status"]} needs a law provision')
-    for g in q("SELECT g.* FROM grounding g WHERE g.status = 'STANDARD' AND NOT EXISTS "
-               "(SELECT 1 FROM grounding_link l WHERE l.occurrence_id = g.occurrence_id "
-               "AND l.role IN ('standard', 'model'))"):
-        errors.append(f'grounding {g["occurrence_id"]}: STANDARD needs a standard or model')
+    # Each resolved flag says what the handbook and the law say about it; a finding other than SILENT
+    # cites that side's sentences or provisions, SILENT cites none; a verdict other than OPEN rests on
+    # a finding that defines or states, and gives the reading.
+    side_of = {'law': 'law', 'standard': 'standard', 'model': 'standard', 'handbook': 'handbook'}
+    cited = collections.defaultdict(set)
+    for r in q('SELECT occurrence_id, role FROM grounding_link'):
+        cited[r['occurrence_id']].add(side_of[r['role']])
+    found = collections.defaultdict(dict)
+    for r in q('SELECT * FROM grounding_finding'):
+        found[r['occurrence_id']][r['side']] = r['finding']
+    for g in q('SELECT * FROM grounding'):
+        oid, f = g['occurrence_id'], found[g['occurrence_id']]
+        for side in ('handbook', 'law'):
+            if side not in f:
+                errors.append(f'grounding {oid}: no {side} finding')
+        for side in set(f) | cited[oid]:
+            if f.get(side, 'SILENT') == 'SILENT' and side in cited[oid]:
+                errors.append(f'grounding {oid}: cites the {side} but finds it {f.get(side, "missing")}')
+            elif f.get(side, 'SILENT') != 'SILENT' and side not in cited[oid]:
+                errors.append(f'grounding {oid}: {side} {f[side]} cites no {side} source')
+        if g['verdict'] != 'OPEN' and not ({'DEFINES', 'STATES'} & set(f.values()) and g['definition']):
+            errors.append(f'grounding {oid}: {g["verdict"]} needs a finding that defines or states, and a definition')
 
     # The law added under statements. Each line is law: law modals only. It cites at least one
     # provision of a statute or regulation that is not a penalty, every provision it cites is a
@@ -413,11 +429,11 @@ def check(db):
         for cap in re.findall(r'\b[A-Z]{2,}(?: [A-Z]{2,})*\b', re.sub(r'\[\?[^\]]*\]|"[^"]*"', '', r['text'])):
             for w in unknown(cap.split(), words):
                 warnings.append(f'{name}: "{w}" is not in the vocabulary')
-    for o in q("SELECT o.*, g.status FROM occurrence o JOIN grounding g ON g.occurrence_id = o.id "
-               "WHERE g.status IN ('LAW_DEFINES', 'LAW_STATES') AND o.code IN ('J', 'S', 'R', 'G')"):
+    for o in q("SELECT o.*, f.finding FROM occurrence o JOIN grounding_finding f ON f.occurrence_id = o.id "
+               "WHERE f.side = 'law' AND f.finding IN ('DEFINES', 'STATES') AND o.code IN ('J', 'S', 'R', 'G')"):
         for r in q('SELECT position, text FROM statement_law WHERE statement_id = ?', o['statement_id']):
             if f'[?{o["span"]}]' in r['text']:
-                errors.append(f'{o["id"]}: the law settles it ({o["status"]}), but law line {r["position"]} marks it open')
+                errors.append(f'{o["id"]}: the law settles it ({o["finding"]}), but law line {r["position"]} marks it open')
 
     # The files made from the database must equal it.
     for path, content in outputs(db).items():
@@ -446,10 +462,16 @@ def coverage(q, run):
     """What check reports about one extraction run: its flags, its law, and the tagged text it leaves out."""
     rid, out = run['id'], []
     n = q("SELECT COUNT(*) FROM statement WHERE run_id = ?", rid)[0][0]
-    flags = q("SELECT COALESCE(g.status, 'not grounded') AS st, COUNT(*) AS n FROM occurrence o "
+    flags = q("SELECT COALESCE(g.verdict, 'not resolved') AS st, COUNT(*) AS n FROM occurrence o "
               "JOIN statement s ON s.id = o.statement_id LEFT JOIN grounding g ON g.occurrence_id = o.id "
               "WHERE s.run_id = ? GROUP BY st ORDER BY st", rid)
     out.append(f'{rid}: {n} statements; flags: ' + (', '.join(f'{r["st"]} {r["n"]}' for r in flags) or 'none'))
+    for side in ('handbook', 'law'):
+        by = q("SELECT f.finding, COUNT(*) AS n FROM grounding_finding f JOIN occurrence o ON o.id = f.occurrence_id "
+               "JOIN statement s ON s.id = o.statement_id WHERE s.run_id = ? AND f.side = ? GROUP BY f.finding "
+               "ORDER BY f.finding", rid, side)
+        if by:
+            out.append(f'{rid}: what the {side} says about the flags: ' + ', '.join(f'{r["finding"]} {r["n"]}' for r in by))
     law = q("SELECT COUNT(*) FROM statement WHERE run_id = ? AND strength = 'LAW'", rid)[0][0]
     if law and q("SELECT 1 FROM statement_basis b JOIN statement s ON s.id = b.statement_id WHERE s.run_id = ? LIMIT 1", rid):
         bare = q("SELECT COUNT(*) FROM law_without_basis WHERE run_id = ?", rid)[0][0]

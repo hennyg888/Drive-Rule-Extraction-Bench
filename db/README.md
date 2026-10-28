@@ -24,7 +24,7 @@ with which prompt (and its sha256) and by whom.
 | 2 Tag | Label every sentence and figure from fixed lists (type, modal as written, caution, topics, vague words), by an LLM with `prompts/tag-units.md`; never rewrite | `tools/tag_units.py shard`, the model, `check`, `load` | `run`, `unit_tag`, `unit_topic`, `unit_vague` |
 | 3 Select | Choose a topic's paragraphs by a fixed query on the tags; a person confirms, adding or dropping by hand | `tools/select_passages.py` | `run`, `selection` |
 | 4 Formalize | Write the selected paragraphs as rule-language statements with `prompts/extract-rules.md`: each paragraph goes in whole, its sentences numbered (`p44.1`), and each statement cites the sentences (or figures) it comes from | `tools/extract_rules.py render`, the model, `check`, `load`; on-passing-1, answered before sentences were numbered, got its sentences from `runs/on-passing-1/cite_sentences.py` | `run`, `statement` and its child tables, `term`, `occurrence` |
-| 5 Ground | Put the law under the statements: how far a source settles each flag, the provisions behind each statement, law lines | `tools/carry_grounding.py` carries what was checked for a paired statement of another run; the rest by hand (for on-passing-1, `runs/on-passing-1/ground_paired.py` and `ground_unpaired.py`), checked by `db.py check` | `grounding`, `grounding_link`, `statement_basis`, `statement_law`, `statement_law_ref` |
+| 5 Ground | Resolve every flag by searching the rest of the handbook and the law, recording what each side says and a verdict; then put the law under the statements: the provisions behind each statement, law lines | Flags: a model with `runs/resolve-1/brief.md`, loaded by `tools/resolve_flags.py`. Law under the statements: `tools/carry_grounding.py` carries what was checked for a paired statement of another run, the rest by hand (for on-passing-1, `runs/on-passing-1/ground_paired.py` and `ground_unpaired.py`, which also made the first, law-only pass at the flags that `resolve-1` replaced). All checked by `db.py check` | `grounding`, `grounding_finding`, `grounding_link`, `statement_basis`, `statement_law`, `statement_law_ref` |
 | 6 Validate | Fixed checks on everything above, and comparison of two runs | `tools/db.py check`, `tools/compare_runs.py` | nothing |
 
 ```
@@ -38,6 +38,7 @@ python3 tools/extract_rules.py check on-passing-1
 python3 tools/extract_rules.py load on-passing-1 --model NAME --date YYYY-MM-DD
 python3 tools/compare_runs.py on-passing-1 on-passing-ref --report runs/on-passing-1/compare.md
 python3 tools/carry_grounding.py on-passing-1 --from on-passing-ref --report runs/on-passing-1/grounding-left.md
+python3 tools/resolve_flags.py runs/resolve-1/resolved.json      # a model's answers to runs/resolve-1/brief.md
 python3 tools/db.py check && python3 tools/db.py dump
 ```
 
@@ -78,7 +79,9 @@ byte, so a change shows in git as exactly the rows it touched.
 | `statement_basis` | Provision behind a statement, and whether the statement says the SAME, is BROADER or NARROWER, DIFFERENT, or the provision is its PENALTY |
 | `occurrence` | Flag on a statement (rule language §8) |
 | `term` | Flagged judgment word, per jurisdiction (`on:safely`), so every use of one word can be found |
-| `grounding`, `grounding_link` | How far a formal source settles a flag, and the provisions or sentences that do |
+| `grounding` | A flag's verdict (RESOLVED, PARTIAL, OPEN), the reading that resolves it, and its effect on the statement |
+| `grounding_finding` | What the rest of the handbook and what the law (and, rarely, an engineering standard) say about a flag |
+| `grounding_link` | The handbook sentences and the provisions each finding rests on |
 | `statement_law`, `statement_law_ref` | Law added under a statement, which itself stays as extracted: a line in the rule language saying what the law says on the statement's subject (the same duty, the duty the handbook words as advice, the law's definitions, conditions, exceptions or penalty), and the provisions it cites |
 
 Two tables are rebuilt by `load` and `check`, never dumped: `passage_part` (which sentences or
@@ -86,8 +89,8 @@ paragraphs a topic passage covers, matched by text, or by image for a figure) an
 (each statement split at its keywords).
 
 `analysis/passing-rules/mto/passing-rules-law.md` shows every Ontario statement as extracted, with
-its flags and their notes unchanged, and under it what the law adds: how far a source settles each
-flag, the law lines, and each provision behind the statement with how the statement compares with
+its flags and their notes unchanged, and under it what the handbook and the law say about each flag
+and the verdict, the law lines, and each provision behind the statement with how the statement compares with
 it. Each provision is quoted word for word at the end, with a link to its line in `statutes/` and to
 e-Laws.
 
@@ -97,16 +100,20 @@ passage of the reviewed set), `on-hta:148(8)` (a provision), `on-reg-339-94:item
 demerit point table), `mto:3.1.2a` (a reviewed statement), `on-passing-1:p17a` (a statement of
 extraction run `on-passing-1`), `mto:3.1.2a|R|30 m from` (a flag).
 
-### Grounding statuses
+### Resolving flags
 
-| Status | Meaning |
+Each flag gets one finding per side, the handbook (anywhere but the flagged sentence itself) and the
+law:
+
+| Finding | Meaning |
 |---|---|
-| `LAW_DEFINES` | The law gives the definition or the number |
-| `LAW_STATES` | The law states the duty itself, which settles the flag's strength, scope or reference |
-| `LAW_REPEATS` | The law uses the same open word, so the vagueness is in the law too |
-| `STANDARD` | The law leaves it open and an engineering standard or safety model gives an operational definition (a proxy, not law) |
-| `HANDBOOK` | Another part of the handbook settles it |
-| `OPEN` | No formal source settles it |
+| `DEFINES` | Gives a definition, number, measure or test that makes the flagged words checkable (for every case or only some) |
+| `STATES` | Settles the flag without a measure: makes it a legal duty or not, names the referent, says the default outright, shows variant words name the same thing, or states the same rule in agreeing words |
+| `REPEATS` | Uses the same open words, or equally open ones |
+| `SILENT` | Says nothing on it |
+
+and one verdict: `RESOLVED` (settled for every case the statement covers), `PARTIAL` (settled for some
+cases, or narrowed), `OPEN` (nothing settles it).
 
 ## Checks
 
@@ -125,18 +132,20 @@ Errors (exit 1):
 - a statement's strength does not match its modal, or a DEFINE or FACT has a strength;
 - an EXCEPTION TO or SPECIALIZES link is not in the statement's text;
 - a basis row points at something that is not a provision; a grounding link points at the wrong kind
-  of source for its role; a `LAW_*` grounding has no law provision, or a `STANDARD` one no standard;
+  of source for its role; a flag's grounding lacks a handbook or a law finding; a `SILENT` side has
+  links, or another side none; a verdict other than `OPEN` has no `DEFINES` or `STATES` finding or no
+  definition;
 - a law line has an advice modal or no modal; cites a provision that is not a basis row of its
   statement; cites no statute or regulation provision other than a penalty; states a penalty
   (`IF VIOLATED`) without citing a PENALTY provision; or marks open (`[?…]`) a word the law settles
-  (`LAW_DEFINES`, `LAW_STATES`);
+  (law finding `DEFINES` or `STATES`);
 - `rules.json` or `passing-rules-law.md` differs from the database.
 
 Warnings: a quote not word for word in its passage, a passage that matches no handbook text, a
 capitalised word not in the vocabulary (in a statement or a law line), a J, S, R, G, M or D flag whose
 span is not in the statement, its steps or its sources, a law with no local copy.
 
-Reported each time: flags by grounding status, LAW statements that cite no provision, ADVICE
+Reported each time: flags by verdict, what the handbook and the law say about them, LAW statements that cite no provision, ADVICE
 statements with a provision behind them, law lines and the statements with a provision behind them
 that have none yet, topic passages no statement cites, how many sentences and figures each tagging
 run tagged, and for each extraction run how many handbook sentences it cites.
@@ -173,17 +182,18 @@ Every flag still open, and every use of one word:
 
 ```sql
 SELECT * FROM ungrounded_flag WHERE jurisdiction = 'ca';
-SELECT o.statement_id, g.status FROM occurrence o LEFT JOIN grounding g ON g.occurrence_id = o.id
+SELECT o.statement_id, g.verdict, g.definition FROM occurrence o LEFT JOIN grounding g ON g.occurrence_id = o.id
 WHERE o.term_id = 'on:safely';
 ```
 
-The provisions that settle each Ontario flag:
+What the handbook and the law say about each flag of a run, and what each rests on:
 
 ```sql
-SELECT o.id, g.status, u.locator, u.text
-FROM occurrence o JOIN grounding g ON g.occurrence_id = o.id
-JOIN grounding_link l ON l.occurrence_id = o.id JOIN unit u ON u.id = l.unit_id
-WHERE o.statement_id LIKE 'mto:%' AND l.role = 'law';
+SELECT o.id, g.verdict, f.side, f.finding, f.says, group_concat(l.unit_id, ', ')
+FROM occurrence o JOIN statement s ON s.id = o.statement_id
+JOIN grounding g ON g.occurrence_id = o.id JOIN grounding_finding f ON f.occurrence_id = o.id
+LEFT JOIN grounding_link l ON l.occurrence_id = o.id AND (l.role = f.side OR f.side = 'standard' AND l.role = 'model')
+WHERE s.run_id = 'on-passing-1' GROUP BY o.id, f.side;
 ```
 
 Statements the handbook words as advice but a law states, and LAW statements with no provision yet:
@@ -207,15 +217,17 @@ SELECT * FROM law_not_added;
 ## Changing it
 
 ```sql
--- settle a flag
-INSERT INTO grounding (occurrence_id, status, note)
-VALUES ('ca:p103c|J|safely', 'OPEN', 'No source.');
+-- record a flag no source settles
+INSERT INTO grounding (occurrence_id, verdict, note) VALUES ('ca:p103c|J|safely', 'OPEN', 'No source.');
+INSERT INTO grounding_finding VALUES ('ca:p103c|J|safely', 'handbook', 'SILENT', NULL),
+                                     ('ca:p103c|J|safely', 'law', 'SILENT', NULL);
 
 -- correct one
 UPDATE grounding SET note = 'No source found in the Vehicle Code.' WHERE occurrence_id = 'ca:p103c|J|safely';
 
--- remove one, links first
+-- remove one, links and findings first
 DELETE FROM grounding_link WHERE occurrence_id = 'ca:p103c|J|safely';
+DELETE FROM grounding_finding WHERE occurrence_id = 'ca:p103c|J|safely';
 DELETE FROM grounding WHERE occurrence_id = 'ca:p103c|J|safely';
 ```
 
