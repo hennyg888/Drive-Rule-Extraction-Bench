@@ -91,37 +91,205 @@
 {"occurrence_id": "mto:3.6.1d|J|slow traffic", "unit_id": "on-hta:147(1)", "role": "law"}
 {"occurrence_id": "mto:3.6.3a|S|many high-speed roads", "unit_id": "on-reg-608:1(1)", "role": "law"}
 {"occurrence_id": "mto:3.6.3a|X|many freeways", "unit_id": "on-reg-608:1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p100a|X|Stop for school bus when signals are flashing.", "unit_id": "mto:sent:stopping:023.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p100a|X|Stop for school bus when signals are flashing.", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p100a|X|Stop for school bus when signals are flashing.", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p100a|X|Stop for school bus when signals are flashing.", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "on-passing-1:p100a|X|Stop for school bus when signals are flashing.", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p102b|V|centre median divider", "unit_id": "on-hta:1(1)median-strip", "role": "law"}
+{"occurrence_id": "on-passing-1:p102b|V|centre median divider", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p104a|V|right lane", "unit_id": "mto:sent:driving-along:010.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p108a|V|red alternating lights", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p108a|V|red alternating lights", "unit_id": "on-hta:175(12)", "role": "law"}
 {"occurrence_id": "on-passing-1:p10a|J|necessary for safety", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p10a|J|too narrow to be shared safely", "unit_id": "on-hta:147(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p117a|J|enough", "unit_id": "on-hta:148(8)", "role": "law"}
 {"occurrence_id": "on-passing-1:p117a|J|safely", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p11a|J|where practical", "unit_id": "on-hta:148(6.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p11a|J|where practical", "unit_id": "on-hta:148(6.2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p123a|X|driving a motor vehicle to prevent another vehicle from passing", "unit_id": "on-hta:172(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p123a|X|driving a motor vehicle to prevent another vehicle from passing", "unit_id": "on-reg-455-07:3.8.i", "role": "law"}
 {"occurrence_id": "on-passing-1:p124c|J|enough", "unit_id": "on-hta:148(8)", "role": "law"}
 {"occurrence_id": "on-passing-1:p12a|J|unnecessarily", "unit_id": "on-hta:75(4)", "role": "law"}
+{"occurrence_id": "on-passing-1:p12a|V|overtaking", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p12a|V|overtaking", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p12a|V|overtaking", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p130a|M|you must", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p130a|V|overtake and pass", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p130a|V|overtake and pass", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p130a|V|overtake and pass", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p130a|X|Move to the right and allow such vehicle to pass.", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p131a|J|enough", "unit_id": "mto:sent:level-two-road-test:107.5", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p131a|J|enough", "unit_id": "mto:sent:level-two-road-test:114.4", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p131a|X|When stopped behind another vehicle at the intersection, leave enough space to pull out and pass without having to back up.", "unit_id": "mto:sent:level-two-road-test:016.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p131a|X|When stopped behind another vehicle at the intersection, leave enough space to pull out and pass without having to back up.", "unit_id": "mto:sent:level-two-road-test:036.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p132a|J|possible", "unit_id": "on-hta:142(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p132a|V|overtake", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p132a|V|overtake", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p132a|V|overtake", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p134a|V|go around", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p134a|V|go around", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p134a|V|go around", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p135a|V|overtaking", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p135a|V|overtaking", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p135a|V|overtaking", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p137a|J|enough", "unit_id": "mto:sent:level-two-road-test:107.5", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p137a|J|enough", "unit_id": "mto:sent:level-two-road-test:114.4", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p137a|V|pull around it", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p137a|V|pull around it", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p137a|V|pull around it", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p137a|X|leave enough space to see its rear wheels or to pull around it without having to back up", "unit_id": "mto:sent:level-two-road-test:107.5", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p137a|X|leave enough space to see its rear wheels or to pull around it without having to back up", "unit_id": "mto:sent:level-two-road-test:114.4", "role": "handbook"}
 {"occurrence_id": "on-passing-1:p14a|J|closely", "unit_id": "mto:sent:changing-positions:017.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p14a|V|Large commercial vehicles", "unit_id": "mto:sent:sharing-road-other-road-users:051.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p14a|V|Large commercial vehicles", "unit_id": "mto:sent:sharing-road-other-road-users:051.3", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p16a|J|safe to do so", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p17a|J|safe to do so", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p23a|J|heavy", "unit_id": "on-hta:175(17)", "role": "law"}
+{"occurrence_id": "on-passing-1:p23a|J|heavy", "unit_id": "on-reg-339-94:item-14", "role": "law"}
+{"occurrence_id": "on-passing-1:p23a|V|overhead red lights", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p23a|V|overhead red lights", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "on-passing-1:p23a|X|You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing", "unit_id": "mto:sent:stopping:023.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p23a|X|You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing", "unit_id": "mto:sent:stopping:029.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p23a|X|You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p23a|X|You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p24a|X|only vehicles coming from behind the bus must stop", "unit_id": "mto:sent:sharing-road-other-road-users:079.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p24a|X|only vehicles coming from behind the bus must stop", "unit_id": "mto:sent:stopping:026.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p24a|X|only vehicles coming from behind the bus must stop", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p24a|X|only vehicles coming from behind the bus must stop", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p25a|M|stop at least 20 meters away", "unit_id": "on-hta:175(12.2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p25a|V|overhead red lights", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p25a|V|overhead red lights", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "on-passing-1:p25a|X|If you are coming from behind the bus, stop at least 20 metres away.", "unit_id": "on-hta:175(12.2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|M|Do not proceed on your route", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|M|Do not proceed on your route", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|M|Do not proceed on your route", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|M|Do not proceed on your route", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|V|overhead red lights", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|V|overhead red lights", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|X|until the bus moves, the overhead red lights have stopped flashing and its stop arm is no longer activated", "unit_id": "mto:sent:sharing-road-other-road-users:081.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p26a|X|until the bus moves, the overhead red lights have stopped flashing and its stop arm is no longer activated", "unit_id": "mto:sent:stopping:023.4", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p26a|X|until the bus moves, the overhead red lights have stopped flashing and its stop arm is no longer activated", "unit_id": "mto:sent:stopping:028.3", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p26a|X|until the bus moves, the overhead red lights have stopped flashing and its stop arm is no longer activated", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p26a|X|until the bus moves, the overhead red lights have stopped flashing and its stop arm is no longer activated", "unit_id": "on-hta:175(11.1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p28a|M|Do not go", "unit_id": "on-hta:175(11)", "role": "law"}
 {"occurrence_id": "on-passing-1:p28a|M|Do not go", "unit_id": "on-hta:175(11.1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p28a|M|Do not go", "unit_id": "on-hta:175(12)", "role": "law"}
 {"occurrence_id": "on-passing-1:p28a|M|Do not go", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p28a|X|the bus moves or the lights have stopped flashing", "unit_id": "mto:sent:sharing-road-other-road-users:081.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p28a|X|the bus moves or the lights have stopped flashing", "unit_id": "mto:sent:stopping:028.3", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p28a|X|the bus moves or the lights have stopped flashing", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p28a|X|the bus moves or the lights have stopped flashing", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33a|V|stop sign arm", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33a|V|stop sign arm", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33a|V|stop sign arm", "unit_id": "on-hta:175(6)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33b|M|Remain stopped", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33b|M|Remain stopped", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33b|M|Remain stopped", "unit_id": "on-hta:175(12)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33b|M|Remain stopped", "unit_id": "on-hta:175(12.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33b|X|until the arm folds away and all lights stop flashing", "unit_id": "mto:sent:sharing-road-other-road-users:081.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p33b|X|until the arm folds away and all lights stop flashing", "unit_id": "mto:sent:stopping:023.4", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p33b|X|until the arm folds away and all lights stop flashing", "unit_id": "mto:sent:stopping:028.3", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p33b|X|until the arm folds away and all lights stop flashing", "unit_id": "on-hta:175(11)", "role": "law"}
+{"occurrence_id": "on-passing-1:p33b|X|until the arm folds away and all lights stop flashing", "unit_id": "on-hta:175(11.1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p35a|X|Passing within 30 metres of a pedestrian crossover is not permitted.", "unit_id": "on-hta:140(3)", "role": "law"}
 {"occurrence_id": "on-passing-1:p39a|M|are not to be used", "unit_id": "on-hta:154(1)(b)", "role": "law"}
 {"occurrence_id": "on-passing-1:p39a|M|are not to be used", "unit_id": "on-hta:182(2)", "role": "law"}
 {"occurrence_id": "on-passing-1:p39a|M|are not to be used", "unit_id": "on-reg-615:34(3)", "role": "law"}
 {"occurrence_id": "on-passing-1:p39a|M|are not to be used", "unit_id": "on-reg-615:34(4)", "role": "law"}
+{"occurrence_id": "on-passing-1:p39a|R|These left-turn lanes", "unit_id": "mto:sent:changing-directions:031.1", "role": "handbook"}
 {"occurrence_id": "on-passing-1:p40a|J|enough", "unit_id": "mto:sent:level-two-road-test:077.1", "role": "handbook"}
 {"occurrence_id": "on-passing-1:p40a|J|enough", "unit_id": "mto:sent:level-two-road-test:077.2", "role": "handbook"}
 {"occurrence_id": "on-passing-1:p40a|J|enough", "unit_id": "on-hta:142(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p40a|J|enough", "unit_id": "on-hta:154(1)(a)", "role": "law"}
 {"occurrence_id": "on-passing-1:p40a|J|safely", "unit_id": "on-hta:142(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p40a|J|safely", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "on-passing-1:p40a|V|overtaking and passing", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p40a|V|overtaking and passing", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p40a|V|overtaking and passing", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p41b|V|overtake", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p41b|V|overtake", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p41b|V|overtake", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p42a|V|going around it", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p42a|V|going around it", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p42a|V|going around it", "unit_id": "on-hta:150(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p44a|J|sure", "unit_id": "on-hta:142(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p44a|J|sure", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "on-passing-1:p44a|V|overtake and pass", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p44a|V|overtake and pass", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p44a|V|overtake and pass", "unit_id": "on-hta:150(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p44b|M|under any conditions", "unit_id": "on-hta:148.1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p44b|X|Don't pass moving snow plows under any conditions.", "unit_id": "on-hta:148.1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p45a|V|After overtaking", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p45a|V|After overtaking", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p45a|V|After overtaking", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p4a|M|These rules apply to all roads", "unit_id": "on-hta:168", "role": "law"}
 {"occurrence_id": "on-passing-1:p51b|J|enough", "unit_id": "on-hta:148(8)", "role": "law"}
 {"occurrence_id": "on-passing-1:p51b|J|enough", "unit_id": "on-hta:149(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p51b|J|in safety", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p54a|J|in safety", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p54a|X|move to the right and let it pass in safety", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p55a|S|many", "unit_id": "on-reg-608:1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p55a|V|far left-hand lane", "unit_id": "on-reg-608:1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p55a|X|large trucks cannot travel in the far left lane", "unit_id": "on-reg-608:1(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p57b|V|rear view mirror", "unit_id": "mto:sent:changing-positions:017.2", "role": "handbook"}
 {"occurrence_id": "on-passing-1:p57b|V|rear view mirror", "unit_id": "mto:sent:changing-positions:029.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p57b|V|right lane", "unit_id": "mto:sent:driving-along:010.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p57b|X|When you can see all of the front of the vehicle you are passing in your rear view mirror", "unit_id": "mto:sent:changing-positions:017.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p57b|X|When you can see all of the front of the vehicle you are passing in your rear view mirror", "unit_id": "mto:sent:changing-positions:029.1", "role": "handbook"}
 {"occurrence_id": "on-passing-1:p63b|J|safely", "unit_id": "on-hta:154(1)(a)", "role": "law"}
+{"occurrence_id": "on-passing-1:p63b|V|left-hand lane", "unit_id": "mto:sent:changing-positions:031.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p63b|V|left-hand lane", "unit_id": "mto:sent:changing-positions:032.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p65a|S|Most", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p65b|D|You may pass on the right", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p65b|V|overtaking", "unit_id": "on-hta:148(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p65b|V|overtaking", "unit_id": "on-hta:148(8)", "role": "law"}
+{"occurrence_id": "on-passing-1:p65b|V|overtaking", "unit_id": "on-hta:150(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p66b|V|left most lane", "unit_id": "mto:sent:freeway-driving:022.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p69a|M|stay at least two metres behind the rear doors", "unit_id": "on-hta:166(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p6a|X|Keep to the right of the road or in the right-hand lane on multi-lane roads", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p6b|X|especially important if you are driving more slowly than other vehicles", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p73a|X|Traffic should keep to the right, using the left lanes for passing.", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p74b|J|possible", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p74c|S|many", "unit_id": "on-reg-608:1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p74c|X|must use the lane to the right for passing", "unit_id": "mto:sent:changing-positions:024.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p74c|X|must use the lane to the right for passing", "unit_id": "on-reg-608:1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p74d|V|right lane", "unit_id": "mto:sent:driving-along:010.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p75a|J|with caution", "unit_id": "on-hta:159(2)@2027", "role": "law"}
+{"occurrence_id": "on-passing-1:p75b|J|safe to do so", "unit_id": "on-hta:159(3)@2027", "role": "law"}
+{"occurrence_id": "on-passing-1:p76a|J|safe to do so", "unit_id": "on-hta:159(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p77a|X|Check to make sure the way is clear and signal before merging back into traffic.", "unit_id": "mto:sent:dealing-particular-situations:084.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p77a|X|Check to make sure the way is clear and signal before merging back into traffic.", "unit_id": "mto:sent:dealing-particular-situations:091.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p77b|X|watch for other emergency vehicles that may be responding to the same call", "unit_id": "mto:sent:dealing-particular-situations:084.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p77b|X|watch for other emergency vehicles that may be responding to the same call", "unit_id": "mto:sent:dealing-particular-situations:091.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p81a|J|with caution", "unit_id": "on-hta:159(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p81a|J|with caution", "unit_id": "on-hta:159(2)@2027", "role": "law"}
+{"occurrence_id": "on-passing-1:p81a|X|Failing to slow and carefully pass a stopped emergency vehicle", "unit_id": "mto:sent:keeping-your-drivers-licence:105.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p81a|X|Failing to slow and carefully pass a stopped emergency vehicle", "unit_id": "on-hta:159(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p81a|X|Failing to slow and carefully pass a stopped emergency vehicle", "unit_id": "on-reg-339-94:item-36.2", "role": "law"}
+{"occurrence_id": "on-passing-1:p83a|J|safe to do so", "unit_id": "on-hta:159(3)", "role": "law"}
+{"occurrence_id": "on-passing-1:p83a|J|safe to do so", "unit_id": "on-hta:159(3)@2027", "role": "law"}
 {"occurrence_id": "on-passing-1:p83a|X|where possible", "unit_id": "mto:sent:keeping-your-drivers-licence:106.1", "role": "handbook"}
 {"occurrence_id": "on-passing-1:p83a|X|where possible", "unit_id": "on-hta:159(3)", "role": "law"}
 {"occurrence_id": "on-passing-1:p83a|X|where possible", "unit_id": "on-reg-339-94:item-36.3", "role": "law"}
+{"occurrence_id": "on-passing-1:p83b|J|safe to do so", "unit_id": "on-hta:159(3)", "role": "law"}
+{"occurrence_id": "on-passing-1:p83b|J|safe to do so", "unit_id": "on-hta:159(3)@2027", "role": "law"}
+{"occurrence_id": "on-passing-1:p83b|J|well in advance", "unit_id": "on-hta:159(3)", "role": "law"}
+{"occurrence_id": "on-passing-1:p84a|J|excessively", "unit_id": "on-hta:159(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p86a|J|with caution", "unit_id": "on-hta:159(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p86a|J|with caution", "unit_id": "on-hta:159(1)@2027", "role": "law"}
+{"occurrence_id": "on-passing-1:p86a|R|where required", "unit_id": "on-hta:159(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p86a|R|where required", "unit_id": "on-hta:159(1)@2027", "role": "law"}
+{"occurrence_id": "on-passing-1:p87a|R|above law", "unit_id": "on-hta:159(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p87a|R|above law", "unit_id": "on-hta:159(2)", "role": "law"}
+{"occurrence_id": "on-passing-1:p87a|R|above law", "unit_id": "on-hta:159(3)", "role": "law"}
+{"occurrence_id": "on-passing-1:p89a|X|Don't pass other vehicles or speed up suddenly.", "unit_id": "mto:sent:driving-night-and-bad-weather:014.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p89a|X|Don't pass other vehicles or speed up suddenly.", "unit_id": "mto:sent:driving-night-and-bad-weather:028.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p93a|X|Avoid passing", "unit_id": "mto:sent:driving-night-and-bad-weather:052.2", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p93a|X|Avoid passing", "unit_id": "mto:sent:driving-night-and-bad-weather:059.1", "role": "handbook"}
+{"occurrence_id": "on-passing-1:p95c|S|several", "unit_id": "on-hta:148.1(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p95d|J|enough", "unit_id": "on-hta:148.1(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p95d|J|safely", "unit_id": "on-hta:148.1(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p95d|X|Do not try to pass between them.", "unit_id": "on-hta:148.1(1)", "role": "law"}
 {"occurrence_id": "on-passing-1:p98a|J|slow traffic", "unit_id": "on-hta:147(1)", "role": "law"}
+{"occurrence_id": "on-passing-1:p98a|X|Slow traffic on multi-lane roads must keep right.", "unit_id": "on-hta:147(1)", "role": "law"}

@@ -24,7 +24,7 @@ with which prompt (and its sha256) and by whom.
 | 2 Tag | Label every sentence and figure from fixed lists (type, modal as written, caution, topics, vague words), by an LLM with `prompts/tag-units.md`; never rewrite | `tools/tag_units.py shard`, the model, `check`, `load` | `run`, `unit_tag`, `unit_topic`, `unit_vague` |
 | 3 Select | Choose a topic's paragraphs by a fixed query on the tags; a person confirms, adding or dropping by hand | `tools/select_passages.py` | `run`, `selection` |
 | 4 Formalize | Write the selected paragraphs as rule-language statements with `prompts/extract-rules.md` | `tools/extract_rules.py render`, the model, `check`, `load` | `run`, `statement` and its child tables, `term`, `occurrence` |
-| 5 Ground | Put the law under the statements: how far a source settles each flag, the provisions behind each statement, law lines | `tools/carry_grounding.py` carries what was checked for a paired statement of another run; the rest by hand in SQL, checked by `db.py check` | `grounding`, `grounding_link`, `statement_basis`, `statement_law`, `statement_law_ref` |
+| 5 Ground | Put the law under the statements: how far a source settles each flag, the provisions behind each statement, law lines | `tools/carry_grounding.py` carries what was checked for a paired statement of another run; the rest by hand (for on-passing-1, `runs/on-passing-1/ground_paired.py` and `ground_unpaired.py`), checked by `db.py check` | `grounding`, `grounding_link`, `statement_basis`, `statement_law`, `statement_law_ref` |
 | 6 Validate | Fixed checks on everything above, and comparison of two runs | `tools/db.py check`, `tools/compare_runs.py` | nothing |
 
 ```
