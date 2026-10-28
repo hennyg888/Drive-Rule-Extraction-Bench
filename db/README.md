@@ -45,6 +45,14 @@ python3 tools/db.py check && python3 tools/db.py dump
 A model's inputs and answers stay in `runs/<run>/`: the rendered prompt, the inputs, the answers and
 the brief it was given.
 
+The passing topic (`prompts/topics/passing.txt`) covers sentences about passing, not every rule on
+changing lanes, although on a multi-lane road a pass is a lane change. About 30 rule sentences that
+limit or describe lane changes without naming passing are therefore not tagged passing and give no
+statement, such as "Don't change lanes in or near an intersection." (`mto:sent:changing-positions:010.3`,
+which reaches extraction only as context of a selected paragraph), the roundabout and solid-line
+limits, and the Level Two road test's lane-change steps (which step 5 still uses to resolve flags).
+This is a known gap, kept on purpose; a lane-change topic would cover them.
+
 ## Working with it
 
 ```
