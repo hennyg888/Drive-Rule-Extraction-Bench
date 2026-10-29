@@ -5,22 +5,24 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "drbench"
 version = "0.1.0"
-description = "Drive-Rule-Extraction-Bench: driver handbooks as a corpus with an id on every block and sentence"
+description = "Drive-Rule-Extraction-Bench: driver handbooks as a corpus with ids, model messages, model runs and grounded citations"
 requires-python = ">=3.10"
 dependencies = [
     "beautifulsoup4",
     "pyyaml",
     "pillow",
+    "anthropic>=1.0",   # Claude through the Anthropic API
+    "openai>=1.0",      # local vLLM and OpenRouter (OpenAI-compatible APIs)
 ]
 
 [project.optional-dependencies]
 tokens = ["transformers"]   # exact token counts in `build_corpus.py --stats`
 dev = ["pytest"]
 
-# The programs at the top level (build_corpus.py) are run from the repository root and import
-# drbench from there; `pip install -e .` installs the dependencies.
+# The programs at the top level (build_corpus.py, run_extraction.py, ...) are run from the repository
+# root and import drbench from there; `pip install -e .` installs the dependencies.
 [tool.setuptools]
-packages = ["drbench"]
+packages = ["drbench", "drbench.models"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

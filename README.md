@@ -168,21 +168,34 @@ What the numbers show:
 
 ## Programs
 
+The programs you run are at the top level of the repository. Each one starts with its usage. Run them from the repository root (Python 3.10 or later), after installing the dependencies once with `pip install -e '.[dev]'`.
+
 | Program | What it does |
 |---|---|
-| [`build_corpus.py`](build_corpus.py) | Builds `corpus/` from `handbooks/`. `--check` lists the pages whose files would change; `--stats` prints the handbook analysis above |
+| [`build_corpus.py`](build_corpus.py) | Builds `corpus/` from `handbooks/`. `--check` lists the pages whose files would change, `--stats` prints the handbook analysis above |
+| [`build_messages.py`](build_messages.py) | Writes the exact request a model gets to `build/messages/`, to read it before running anything |
+| [`run_extraction.py`](run_extraction.py) | Runs a model on handbook pages with a prompt and saves everything in `runs/`. `--dry-run` only counts tokens |
+| [`models.py`](models.py) | Lists the model presets and whether each one's key is set; `ping` checks one; `serve` starts a local vLLM server |
+| [`models.yaml`](models.yaml) | The model presets |
+| [`prompts/`](prompts/) | The prompts, one folder each |
 
-Run it from the repository root (Python 3.10 or later), after installing the dependencies once with `pip install -e '.[dev]'`. The code behind it is in `drbench/`:
+```bash
+python run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10
+python run_extraction.py --model local/qwen3.8-27b --handbook mto --per-page
+python run_extraction.py --model anthropic/claude-haiku-5-5 --handbook ca --dry-run
+```
 
-| Module | What it does |
+Options of `run_extraction.py`:
+
+| Option | What it does |
 |---|---|
-| `handbooks.py` | The three handbooks: names, folders, page order |
-| `sentences.py` | Where sentences end, and wrapping each in `<span id>` |
-| `corpus.py` | `handbooks/` → `corpus/`: cleaning, figures, block and sentence ids; reading the corpus |
-| `screening.py` | The list of places to check by hand (`screening.md`) |
-| `stats.py` | The handbook analysis table |
-
-**Tests**: `pytest`. They check sentence splitting, and that rebuilding the corpus gives the committed files byte for byte.
+| `--pages 9-11`, or a page file name | Which pages to send (default: the whole handbook) |
+| `--per-page` | One call per page |
+| `--prompt <folder>` | Which prompt to use (default `extract-rules`) |
+| `--no-images`, `--no-toc` | Leave out the images, or the table of contents |
+| `--set key=value` | Change a model setting for this run, e.g. `--set effort=low` or `--set extra_body.chat_template_kwargs.enable_thinking=false` |
+| `--label` | Add a name to the run folder |
+| `--reground runs/<run>` | Resolve a finished run's citations again |
 
 ## Prompts
 
@@ -192,24 +205,123 @@ A prompt is a folder in `prompts/` with three files:
 |---|---|
 | `system.md` | The system prompt: what the rules are for, what to extract, how to write and cite each rule |
 | `task.md` | The request, placed at the end of the user message, after the handbook pages |
-| `schema.json` | The JSON format of the answer |
+| `schema.json` | The JSON format of the answer. Claude and vLLM enforce it; other servers are only asked for it |
 
-[`prompts/extract-rules/`](prompts/extract-rules/) is the rule extraction prompt. It is a first draft, to be adjusted: the rule format in `schema.json` (a rule sentence, its strength, and evidence given as a block id and a quote) is a starting point. [`prompts/smoke-test/`](prompts/smoke-test/) is a short prompt for checking that a model and the pipeline work.
+[`prompts/extract-rules/`](prompts/extract-rules/) is the rule extraction prompt and the default. It is a first draft, to be adjusted: the rule format in `schema.json` (a rule sentence, its strength, and evidence) is a starting point. [`prompts/smoke-test/`](prompts/smoke-test/) is a short prompt for checking that a model and the pipeline work. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
 
-The pipeline that sends these prompts to models (building the input message, calling Claude, OpenRouter or a local vLLM model, saving runs, and mapping quotes to sentence ids) is on the branch [`extraction-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/extraction-pipeline).
+## What a model is sent
+
+One request per call:
+
+- **System**: `prompts/<prompt>/system.md`.
+- **User message**: the table of contents, then the pages as HTML, then `prompts/<prompt>/task.md`. The handbook comes first and the request last, the order models handle best for long documents.
+
+The pages come from the corpus. Each page is an `<article data-page="10">` that keeps its HTML tags and block ids. The sentence `<span>`s are taken out, because they add about half as many tokens again. Every image is sent right after its `<img>` tag, so the model sees it where a reader would. This is Ontario page 10, as written by `python build_messages.py mto --pages 10` (shortened):
+
+```html
+<nav>
+<h1>Contents: Official MTO Driver's Handbook (Ontario)</h1>
+<ol>
+<li data-page="2">Getting Your Driver’s Licence<ul><li data-ref="2.4">Requirements for driving in Ontario</li> …</ul></li>
+…
+</ol>
+</nav>
+
+<article data-page="10">
+<h1 id="10.0">Changing positions</h1>
+<p id="10.1">Changing your position on the road involves changing lanes or overtaking and passing another vehicle. Before beginning, be sure you have enough space and time to complete the move safely.</p>
+<h2 id="10.2">Changing lanes</h2>
+<p id="10.4">Never change lanes without giving the proper signal and looking to make sure the move can be made safely.</p>
+<p id="10.5">Here are the steps for making a lane change:</p>
+<ol>
+<li id="10.6">Check your mirrors for a space in traffic where you can enter safely.</li>
+…
+<figure id="10.12"><img alt="how to make a lane change" src="images/2-35.jpg"/>
+[the image 2-35.jpg itself]
+<figcaption>Diagram 2-45</figcaption></figure>
+…
+</article>
+
+Extract the rules of the road from the handbook pages above, as described in your instructions.
+Answer with JSON only, in this form:
+{"rules": [{"rule": "...", "strength": "must", "evidence": [{"block": "10.22", "quote": "..."}]}]}
+```
+
+Ontario page 10 alone comes to about 9,800 input tokens with its 5 images; a whole handbook fits in one request (see the analysis above).
+
+## Grounding
+
+A model cites the handbook with a block id and a quote copied from that block: `{"block": "10.22", "quote": "Passing left of a centreline is not permitted ..."}`. The grounding step finds the quote in the block and adds the ids of the sentences it covers (`10.22.2`), and how it was found:
+
+| Match | Meaning |
+|---|---|
+| `exact` | Word for word, ignoring case, spacing, curly quotes and dashes. A quote with "..." is matched piece by piece |
+| `fuzzy` | Most of the quote is in a sentence, or most of a sentence is in the quote |
+| `other-block` | The quote is on the same page but in another block (`found_in` gives which) |
+| `heading` | The quote is the cited heading |
+| `not-found` | The quote is not on the page |
+| `no-block` | The page or block does not exist |
+
+## Models
+
+Every model is a preset in [`models.yaml`](models.yaml), and a run names one. Changing the model means changing the preset name. There are two kinds of API:
+
+- `anthropic`: Claude through the Anthropic API, using the official SDK. Requests are streamed. Thinking is on, and `effort` sets how much. Opus and Sonnet use `fallbacks: default`: if Claude's safety classifiers decline a request, the API reruns it on a fallback model.
+- `openai`: any OpenAI-compatible server. This covers the local vLLM server (`local/...` presets) and OpenRouter (`openrouter/...`), which serves Qwen, Gemini, GPT and Claude under one key.
+
+Adding a model on one of these APIs takes only a new preset: copy one and change `model` (and `base_url` for another server). Another kind of API needs a new class in `drbench/models/`, next to `claude.py`.
+
+**Keys** go in `.env` at the repository root, one `NAME=value` per line. Git ignores the file. `ANTHROPIC_API_KEY` is needed for Claude, `OPENROUTER_API_KEY` for OpenRouter; local presets need no key. Instead of an Anthropic key, `ant auth login` also works.
+
+**Local models.** Start the server with `python models.py serve local/qwen3.8-27b`, wait until it reports `Application startup complete`, then run with that preset. The `serve` line of each local preset shows how many GPUs it uses. Stop the server (Ctrl-C) when you are done, because the GPUs are shared. With thinking on, Qwen3.8-27B used 23K to 29K thinking tokens on one page, so its presets allow 64K output tokens.
+
+## Runs
+
+A run writes `runs/<time>-<preset>-<handbook>/`:
+
+| File | What it holds |
+|---|---|
+| `meta.json` | The run settings (preset, model settings, handbook, pages, prompt name and hash, git commit) and the results: tokens, seconds, estimated cost, stop reason, and citation matches |
+| `prompt/` | A copy of the prompt folder used |
+| `request.md` | The user message as text, with `[image: src]` where each image was |
+| `response.json`, `output.txt`, `reasoning.txt` | The whole API response, the answer, and the model's reasoning when the API returns it |
+| `output.json`, `grounded.json` | The answer as JSON, and the same with the sentence ids and match added to every citation |
+
+Runs are not committed (`runs/` is in `.gitignore`). To keep a run, copy it somewhere tracked, or add it with `git add -f`.
+
+## Core code
+
+The programs at the top level are short. The work is done in the package `drbench/`:
+
+| Module | What it does | Main functions |
+|---|---|---|
+| `handbooks.py` | The three handbooks: names, folders, page order | `get`, `page_order`, `read_page` |
+| `sentences.py` | Where sentences end, and wrapping each in `<span id>` | `split`, `wrap` |
+| `corpus.py` | `handbooks/` → `corpus/`: cleaning, figures, block and sentence ids; reading the corpus | `build`, `load_pages`, `page_soup`, `parse_pages` |
+| `screening.py` | The list of places to check by hand (`screening.md`) | `screening` |
+| `stats.py` | The handbook analysis table | `report` |
+| `prompts.py` | Loads a prompt folder | `load` |
+| `messages.py` | Corpus pages → the user message: table of contents, pages as HTML, images after their `<img>`, the task | `build`, `page_html`, `contents_html`, `preview` |
+| `models/` | One interface for every model: `get_model(preset).complete(content, system, json_schema)` returns the answer, reasoning, tokens and time. `claude.py` is the Anthropic API; `openai_compat.py` is vLLM and OpenRouter | `get_model`, `ModelResponse` |
+| `run.py` | One run: build the messages, call the model, save everything, resolve the citations | `run`, `reground` |
+| `grounding.py` | A citation (block id + quote) → sentence ids | `resolve`, `resolve_output` |
+
+**Tests**: `pytest`. They check sentence splitting, grounding, the message, the prompts, the model requests (no API is called), and that rebuilding the corpus gives the committed files byte for byte.
 
 ## Repository layout
 
 | Path | What it holds |
 |---|---|
-| `build_corpus.py` | The program that builds the corpus (see [Programs](#programs)) |
+| `build_corpus.py`, `build_messages.py`, `run_extraction.py`, `models.py` | The programs (see [Programs](#programs)) |
+| `models.yaml` | The model presets |
 | `prompts/` | The prompts, one folder each |
 | `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
 | `corpus/` | The handbooks with an id on every block and sentence, with each handbook's manual decisions and screening list |
-| `drbench/` | The code behind `build_corpus.py` |
+| `drbench/` | The code behind the programs (see [Core code](#core-code)) |
 | `scrapers/` | The scripts that made `handbooks/` |
 | `tests/` | Tests for `pytest` |
 | `docs/` | The prompts the team gave Claude (`prompt.md`) |
+| `runs/`, `build/` | Run results and built messages; not committed |
 
 The earlier rule pipeline (rule language, census, rules database, extraction prompts and runs, the Qwen trial, review pages, and the first PDF-based Ontario rules) is kept on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).
 
