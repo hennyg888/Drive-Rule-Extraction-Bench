@@ -1,0 +1,142 @@
+{
+ "batch": "Pavement markings",
+ "passages": [
+  "m20",
+  "m21",
+  "m22",
+  "m23",
+  "m24"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 5 passages from the page \"Pavement markings\": m20, m21, m22, m23, m24.\n\n[m20] page: Pavement markings | heading: Intro · ¶1 | text\nPavement markings divide traffic lanes, show turning lanes, mark pedestrian crossings, indicate obstacles and tell you when it is not safe to pass.\n\n[m21] page: Pavement markings | heading: Intro · ¶3 | text\nA solid line at the left of your lane means it is unsafe to pass. ('A' should not pass.)\n\n[m22] page: Pavement markings | heading: Intro · Diagram 3-2 | figure\nFigure: Diagram 3-2 | Alt text: “vehicles travelling beside a solid yellow line”\n\n[m23] page: Pavement markings | heading: Intro · ¶4 | text\nA broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)\n\n[m24] page: Pavement markings | heading: Intro · Diagram 3-3 | figure\nFigure: Diagram 3-3 | Alt text: “vehicles travelling beside broken yellow lines”\n\nWrite the reading notes for all 5 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 980,
+  "prompt_tokens": 11562,
+  "total_tokens": 12542,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 17.2,
+ "raw": "{\n  \"passages\": [\n    {\n     \"id\": \"m20\",\n     \"about_topic\": true,\n     \"says\": \"fact: pavement markings indicate when it is not safe to pass\"\n    },\n    {\n     \"id\": \"m21\",\n     \"about_topic\": true,\n     \"says\": \"rule: do not pass when a solid line is at the left of the driver's lane (unsafe)\"\n    },\n    {\n     \"id\": \"m22\",\n     \"about_topic\": true,\n     \"says\": \"figure: illustrates vehicles beside a solid yellow line\"\n    },\n    {\n     \"id\": \"m23\",\n     \"about_topic\": true,\n     \"says\": \"rule: may pass when a broken line is at the left of the driver's lane if the way is clear and there are enough broken lines to complete the pass safely\"\n    },\n    {\n     \"id\": \"m24\",\n     \"about_topic\": true,\n     \"says\": \"figure: illustrates vehicles beside broken yellow lines\"\n    }\n  ],\n  \"statements\": [\n    {\n     \"id\": \"s1\",\n     \"type\": \"FACT\",\n     \"force\": null,\n     \"force_from\": null,\n     \"text\": \"FACT pavement markings tell a driver when it is not safe to pass\",\n     \"sources\": [\n      {\n       \"id\": \"m20\",\n       \"quote\": \"Pavement markings divide traffic lanes, show turning lanes, mark pedestrian crossings, indicate obstacles and tell you when it is not safe to pass.\"\n      }\n     ],\n     \"flags\": [],\n     \"links\": [],\n     \"note\": null\n    },\n    {\n     \"id\": \"s2\",\n     \"type\": \"RULE\",\n     \"force\": \"ADVISORY\",\n     \"force_from\": \"text (\\\"means it is unsafe to pass\\\")\",\n     \"text\": \"a driver SHOULD NOT pass WHEN a solid line is at the left of the driver's lane BECAUSE it is unsafe to pass\",\n     \"sources\": [\n      {\n       \"id\": \"m21\",\n       \"quote\": \"A solid line at the left of your lane means it is unsafe to pass.\"\n      },\n      {\n       \"id\": \"m22\",\n       \"quote\": \"vehicles travelling beside a solid yellow line\"\n      }\n     ],\n     \"flags\": [\n      {\n       \"code\": \"M\",\n       \"span\": \"unsafe\",\n       \"note\": \"The handbook states the condition is unsafe, which implies a prohibition, but does not explicitly state a legal penalty or use 'must not'.\"\n      }\n     ],\n     \"links\": [],\n     \"note\": \"The phrase 'means it is unsafe' is treated as advice (SHOULD NOT) because the handbook does not explicitly label it as a legal prohibition with a penalty in this passage, though it is a strong safety warning.\"\n    },\n    {\n     \"id\": \"s3\",\n     \"type\": \"RULE\",\n     \"force\": \"LEGAL\",\n     \"force_from\": \"text (\\\"means you may pass\\\")\",\n     \"text\": \"a driver MAY pass WHEN a broken line is at the left of the driver's lane AND the way is clear AND there are enough broken lines ahead to complete the pass safely\",\n     \"sources\": [\n      {\n       \"id\": \"m23\",\n       \"quote\": \"A broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)\"\n      },\n      {\n       \"id\": \"m24\",\n       \"quote\": \"vehicles travelling beside broken yellow lines\"\n      }\n     ],\n     \"flags\": [\n      {\n       \"code\": \"J\",\n       \"span\": \"clear\",\n       \"note\": \"The driver must judge whether the way is clear.\"\n      },\n      {\n       \"code\": \"J\",\n       \"span\": \"enough\",\n       \"note\": \"The driver must judge if there are enough broken lines to complete the pass safely.\"\n      }\n     ],\n     \"links\": [],\n     \"note\": \"The permission 'may pass' is explicit in the text.\"\n    }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m20",
+    "about_topic": true,
+    "says": "fact: pavement markings indicate when it is not safe to pass"
+   },
+   {
+    "id": "m21",
+    "about_topic": true,
+    "says": "rule: do not pass when a solid line is at the left of the driver's lane (unsafe)"
+   },
+   {
+    "id": "m22",
+    "about_topic": true,
+    "says": "figure: illustrates vehicles beside a solid yellow line"
+   },
+   {
+    "id": "m23",
+    "about_topic": true,
+    "says": "rule: may pass when a broken line is at the left of the driver's lane if the way is clear and there are enough broken lines to complete the pass safely"
+   },
+   {
+    "id": "m24",
+    "about_topic": true,
+    "says": "figure: illustrates vehicles beside broken yellow lines"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT pavement markings tell a driver when it is not safe to pass",
+    "sources": [
+     {
+      "id": "m20",
+      "quote": "Pavement markings divide traffic lanes, show turning lanes, mark pedestrian crossings, indicate obstacles and tell you when it is not safe to pass."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "s2",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"means it is unsafe to pass\")",
+    "text": "a driver SHOULD NOT pass WHEN a solid line is at the left of the driver's lane BECAUSE it is unsafe to pass",
+    "sources": [
+     {
+      "id": "m21",
+      "quote": "A solid line at the left of your lane means it is unsafe to pass."
+     },
+     {
+      "id": "m22",
+      "quote": "vehicles travelling beside a solid yellow line"
+     }
+    ],
+    "flags": [
+     {
+      "code": "M",
+      "span": "unsafe",
+      "note": "The handbook states the condition is unsafe, which implies a prohibition, but does not explicitly state a legal penalty or use 'must not'."
+     }
+    ],
+    "links": [],
+    "note": "The phrase 'means it is unsafe' is treated as advice (SHOULD NOT) because the handbook does not explicitly label it as a legal prohibition with a penalty in this passage, though it is a strong safety warning."
+   },
+   {
+    "id": "s3",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"means you may pass\")",
+    "text": "a driver MAY pass WHEN a broken line is at the left of the driver's lane AND the way is clear AND there are enough broken lines ahead to complete the pass safely",
+    "sources": [
+     {
+      "id": "m23",
+      "quote": "A broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)"
+     },
+     {
+      "id": "m24",
+      "quote": "vehicles travelling beside broken yellow lines"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "clear",
+      "note": "The driver must judge whether the way is clear."
+     },
+     {
+      "code": "J",
+      "span": "enough",
+      "note": "The driver must judge if there are enough broken lines to complete the pass safely."
+     }
+    ],
+    "links": [],
+    "note": "The permission 'may pass' is explicit in the text."
+   }
+  ]
+ },
+ "parse_error": null
+}

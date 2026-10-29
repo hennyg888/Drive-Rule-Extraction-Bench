@@ -1,0 +1,68 @@
+{
+ "batch": "Particular situations",
+ "passages": [
+  "m92",
+  "m93",
+  "m95",
+  "m78",
+  "m79"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 5 passages from the page \"Particular situations\": m92, m93, m95, m78, m79.\n\n[m92] page: Particular situations | heading: Workers on the road · ¶3 | text\nAlways slow down and pass with caution to prevent a collision.\n\n[m93] page: Particular situations | heading: Animals on the road · ¶2 | text\nIf you see an animal on or near the road, slow down and pass carefully as they may suddenly bolt onto the road.\n\n[m95] page: Particular situations | heading: Reacting to an approaching emergency vehicle · item 3 | text\nWait for the emergency vehicle to pass and watch for other emergency vehicles that may be responding to the same call.\n\n[m78] page: Particular situations | heading: Reacting to a stopped emergency vehicle or tow truck · ¶1 | text\nWhen approaching any emergency vehicle that is stopped with its red, or red and blue, lights flashing or a tow truck with its amber lights flashing in the same direction of your travel, you are required to reduce the speed of your vehicle and proceed with caution.\n\n[m79] page: Particular situations | heading: Reacting to a stopped emergency vehicle or tow truck · ¶3 | text\nWhen the roadway has two or more lanes of traffic in the same direction of your travel, you are required to move into a lane away from the emergency vehicle or tow truck, if safe to do so, in addition to reducing the speed of your vehicle and proceeding with caution.\n\nWrite the reading notes for all 5 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 290,
+  "prompt_tokens": 11623,
+  "total_tokens": 11913,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 5.3,
+ "raw": "{\n  \"passages\": [\n   {\n    \"id\": \"m92\",\n    \"about_topic\": false,\n    \"says\": \"about slowing down for workers on the road; \\\"pass\\\" here means going by people, not overtaking a vehicle\"\n   },\n   {\n    \"id\": \"m93\",\n    \"about_topic\": false,\n    \"says\": \"about slowing down for animals on the road; \\\"pass\\\" here means going by animals, not overtaking a vehicle\"\n   },\n   {\n    \"id\": \"m95\",\n    \"about_topic\": false,\n    \"says\": \"about waiting for an oncoming emergency vehicle to go by; \\\"pass\\\" means the vehicle goes by, not overtaking\"\n   },\n   {\n    \"id\": \"m78\",\n    \"about_topic\": false,\n    \"says\": \"about slowing down and proceeding with caution near a stopped emergency vehicle or tow truck; no mention of passing or overtaking\"\n   },\n   {\n    \"id\": \"m79\",\n    \"about_topic\": false,\n    \"says\": \"about moving into a lane away from a stopped emergency vehicle or tow truck; no mention of passing or overtaking\"\n   }\n  ],\n  \"statements\": []\n }",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m92",
+    "about_topic": false,
+    "says": "about slowing down for workers on the road; \"pass\" here means going by people, not overtaking a vehicle"
+   },
+   {
+    "id": "m93",
+    "about_topic": false,
+    "says": "about slowing down for animals on the road; \"pass\" here means going by animals, not overtaking a vehicle"
+   },
+   {
+    "id": "m95",
+    "about_topic": false,
+    "says": "about waiting for an oncoming emergency vehicle to go by; \"pass\" means the vehicle goes by, not overtaking"
+   },
+   {
+    "id": "m78",
+    "about_topic": false,
+    "says": "about slowing down and proceeding with caution near a stopped emergency vehicle or tow truck; no mention of passing or overtaking"
+   },
+   {
+    "id": "m79",
+    "about_topic": false,
+    "says": "about moving into a lane away from a stopped emergency vehicle or tow truck; no mention of passing or overtaking"
+   }
+  ],
+  "statements": []
+ },
+ "parse_error": null
+}

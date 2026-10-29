@@ -1,0 +1,31 @@
+{
+ "batch": "Section 14: Glossary",
+ "passages": [
+  "p105"
+ ],
+ "user": "Handbook: California Driver's Handbook (California DMV, United States)\nUnits: US customary (ft, mi, mph)\nTopic: passing\nBatch: the 1 selected passages from the page \"Section 14: Glossary\".\n\n[p105] page: Section 14: Glossary | heading: Intro · row 6 | table\nThree-second rule | A driving rule that helps you estimate how closely you should follow other vehicles. When the vehicle in front of you passes a certain point, such as a sign, count three seconds. If you pass the same point before you finish counting, you are following too closely.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"statements\": []}",
+ "reasoning": null,
+ "parsed": {
+  "statements": []
+ },
+ "parse_error": null
+}

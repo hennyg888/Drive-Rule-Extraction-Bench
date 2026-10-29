@@ -1,0 +1,164 @@
+{
+ "batch": "Signs",
+ "passages": [
+  "m25",
+  "m26",
+  "c8",
+  "c9",
+  "m30",
+  "m31",
+  "m94",
+  "m74",
+  "m75",
+  "m68",
+  "m67"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 11 selected passages from the page \"Signs\".\n\n[m25] page: Signs | heading: Regulatory signs · image | figure\nFigure: Alt text: “a regulatory sign”\n\n[m26] page: Signs | heading: Regulatory signs · ¶19 | text\nDo not pass on this road.\n\n[c8] page: Signs | heading: Regulatory signs · ¶20 | text\nSlow traffic on multi-lane roads must keep right.\n\n[c9] page: Signs | heading: Regulatory signs · image | figure\nFigure: Alt text: “a regulatory sign”\n\n[m30] page: Signs | heading: Regulatory signs · image | figure\nFigure: Alt text: “a regulatory sign”\n\n[m31] page: Signs | heading: Regulatory signs · ¶31 | text\nKeep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided.\n\n[m94] page: Signs | heading: Warning signs · ¶20 | text\nThe downward lines show the side on which you may safely pass.\n\n[m74] page: Signs | heading: Temporary condition signs · image | figure\nFigure: Alt text: “a temporary condition sign”\n\n[m75] page: Signs | heading: Temporary condition signs · ¶12 | text\nDo not pass the pilot vehicle or pace vehicle bearing this sign.\n\n[m68] page: Signs | heading: Other signs › Long commercial vehicle (LCV) · ¶3 | text\nThis placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length. It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway.\n\n[m67] page: Signs | heading: Other signs › Long commercial vehicle (LCV) · image | figure\nFigure: Alt text: “Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)”\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1227,
+  "prompt_tokens": 16138,
+  "total_tokens": 17365,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 33.9,
+ "raw": "{\n \"statements\": [\n  {\n   \"id\": \"3.1.7a\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"context (Regulatory signs: \\\"These signs give a direction that must be obeyed\\\")\",\n   \"text\": \"a driver MUST NOT pass on the road WHEN a \\\"do not pass\\\" sign is posted for the road\",\n   \"sources\": [\n    {\n     \"id\": \"m26\",\n     \"quote\": \"Do not pass on this road.\"\n    },\n    {\n     \"id\": \"m25\",\n     \"quote\": \"a regulatory sign\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The legal force comes from the section introduction for Regulatory signs. The figure is included as the visual reference for the sign.\"\n  },\n  {\n   \"id\": \"3.2.2a\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"text (\\\"must keep right\\\")\",\n   \"text\": \"a driver of slow traffic MUST keep right WHEN driving on a multi-lane road AND a \\\"slow traffic keep right\\\" sign is posted\",\n   \"sources\": [\n    {\n     \"id\": \"c8\",\n     \"quote\": \"Slow traffic on multi-lane roads must keep right.\"\n    },\n    {\n     \"id\": \"c9\",\n     \"quote\": \"a regulatory sign\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The sign caption specifies the condition (multi-lane roads) and the duty (keep right). The role is specified as a driver of slow traffic.\"\n  },\n  {\n   \"id\": \"3.2.1a\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"context (Regulatory signs: \\\"These signs give a direction that must be obeyed\\\")\",\n   \"text\": \"a driver MUST keep to the right lane WHEN driving on a two-lane section where climbing or passing lanes are provided UNLESS the driver is passing\",\n   \"sources\": [\n    {\n     \"id\": \"m31\",\n     \"quote\": \"Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided.\"\n    },\n    {\n     \"id\": \"m30\",\n     \"quote\": \"a regulatory sign\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The legal force comes from the section introduction for Regulatory signs. The exception for passing is written as an UNLESS clause.\"\n  },\n  {\n   \"id\": \"3.1.7b\",\n   \"type\": \"FACT\",\n   \"force\": null,\n   \"force_from\": null,\n   \"text\": \"FACT the downward lines on a warning sign show the side on which a driver may safely pass\",\n   \"sources\": [\n    {\n     \"id\": \"m94\",\n     \"quote\": \"The downward lines show the side on which you may safely pass.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"This is a description of what the sign indicates, not a direct instruction or prohibition, so it is a FACT.\"\n  },\n  {\n   \"id\": \"3.4.10a\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"context (Temporary condition signs: implied legal force for temporary traffic control)\",\n   \"text\": \"a driver MUST NOT pass a pilot vehicle or pace vehicle WHEN the vehicle is bearing a \\\"do not pass\\\" sign\",\n   \"sources\": [\n    {\n     \"id\": \"m75\",\n     \"quote\": \"Do not pass the pilot vehicle or pace vehicle bearing this sign.\"\n    },\n    {\n     \"id\": \"m74\",\n     \"quote\": \"a temporary condition sign\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"Temporary condition signs are regulatory in nature. The figure is included as the visual reference for the sign.\"\n  },\n  {\n   \"id\": \"3.4.6a\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"text (\\\"It is important to\\\")\",\n   \"text\": \"a driver SHOULD recognize a long commercial vehicle on the highway based on rear signage AND anticipate the extended length and limited speed WHEN the driver is preparing to pass the long commercial vehicle on the highway\",\n   \"sources\": [\n    {\n     \"id\": \"m68\",\n     \"quote\": \"It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway.\"\n    },\n    {\n     \"id\": \"m67\",\n     \"quote\": \"Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The phrase 'It is important to' indicates advice. The definition of LCV is not included as a separate statement because the focus here is on the passing behavior.\"\n  }\n ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.1.7a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Regulatory signs: \"These signs give a direction that must be obeyed\")",
+    "text": "a driver MUST NOT pass on the road WHEN a \"do not pass\" sign is posted for the road",
+    "sources": [
+     {
+      "id": "m26",
+      "quote": "Do not pass on this road."
+     },
+     {
+      "id": "m25",
+      "quote": "a regulatory sign"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The legal force comes from the section introduction for Regulatory signs. The figure is included as the visual reference for the sign."
+   },
+   {
+    "id": "3.2.2a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must keep right\")",
+    "text": "a driver of slow traffic MUST keep right WHEN driving on a multi-lane road AND a \"slow traffic keep right\" sign is posted",
+    "sources": [
+     {
+      "id": "c8",
+      "quote": "Slow traffic on multi-lane roads must keep right."
+     },
+     {
+      "id": "c9",
+      "quote": "a regulatory sign"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The sign caption specifies the condition (multi-lane roads) and the duty (keep right). The role is specified as a driver of slow traffic."
+   },
+   {
+    "id": "3.2.1a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Regulatory signs: \"These signs give a direction that must be obeyed\")",
+    "text": "a driver MUST keep to the right lane WHEN driving on a two-lane section where climbing or passing lanes are provided UNLESS the driver is passing",
+    "sources": [
+     {
+      "id": "m31",
+      "quote": "Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided."
+     },
+     {
+      "id": "m30",
+      "quote": "a regulatory sign"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The legal force comes from the section introduction for Regulatory signs. The exception for passing is written as an UNLESS clause."
+   },
+   {
+    "id": "3.1.7b",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT the downward lines on a warning sign show the side on which a driver may safely pass",
+    "sources": [
+     {
+      "id": "m94",
+      "quote": "The downward lines show the side on which you may safely pass."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "This is a description of what the sign indicates, not a direct instruction or prohibition, so it is a FACT."
+   },
+   {
+    "id": "3.4.10a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Temporary condition signs: implied legal force for temporary traffic control)",
+    "text": "a driver MUST NOT pass a pilot vehicle or pace vehicle WHEN the vehicle is bearing a \"do not pass\" sign",
+    "sources": [
+     {
+      "id": "m75",
+      "quote": "Do not pass the pilot vehicle or pace vehicle bearing this sign."
+     },
+     {
+      "id": "m74",
+      "quote": "a temporary condition sign"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "Temporary condition signs are regulatory in nature. The figure is included as the visual reference for the sign."
+   },
+   {
+    "id": "3.4.6a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"It is important to\")",
+    "text": "a driver SHOULD recognize a long commercial vehicle on the highway based on rear signage AND anticipate the extended length and limited speed WHEN the driver is preparing to pass the long commercial vehicle on the highway",
+    "sources": [
+     {
+      "id": "m68",
+      "quote": "It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+     },
+     {
+      "id": "m67",
+      "quote": "Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The phrase 'It is important to' indicates advice. The definition of LCV is not included as a separate statement because the focus here is on the passing behavior."
+   }
+  ]
+ },
+ "parse_error": null
+}

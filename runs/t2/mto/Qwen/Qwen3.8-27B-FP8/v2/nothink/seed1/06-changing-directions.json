@@ -1,0 +1,133 @@
+{
+ "batch": "Changing directions",
+ "passages": [
+  "m53",
+  "c6",
+  "c7",
+  "m19"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 4 passages from the page \"Changing directions\": m53, c6, c7, m19.\n\n[m53] page: Changing directions | heading: Left turns · ¶5 | text\nWait for the smaller vehicle to move right before you pass.\n\n[c6] page: Changing directions | heading: Left turns · ¶5 | text\nIf you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time.\n\n[c7] page: Changing directions | heading: Left turns · ¶5 | text\nStay behind and turn when the way is clear.\n\n[m19] page: Changing directions | heading: Left-turn lanes · ¶3 | text\nThese left-turn lanes are not to be used for passing.\n\nWrite the reading notes for all 4 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 940,
+  "prompt_tokens": 11208,
+  "total_tokens": 12148,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 74.3,
+ "raw": "{\n  \"passages\": [\n   {\n    \"id\": \"m53\",\n    \"about_topic\": true,\n    \"says\": \"rule: wait for a smaller vehicle to move right before passing it when making a left turn\"\n   },\n   {\n    \"id\": \"c6\",\n    \"about_topic\": true,\n    \"says\": \"rule: do not pull up beside a larger vehicle to make a left turn at the same time\"\n   },\n   {\n    \"id\": \"c7\",\n    \"about_topic\": true,\n    \"says\": \"rule: stay behind the vehicle and turn when the way is clear\"\n   },\n   {\n    \"id\": \"m19\",\n    \"about_topic\": true,\n    \"says\": \"rule: left-turn lanes are not to be used for passing\"\n   }\n  ],\n  \"statements\": [\n   {\n    \"id\": \"s1\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"Wait\\\")\",\n    \"text\": \"a driver SHOULD wait for the smaller vehicle to move right WHEN the driver is making a left turn AND the driver is behind a smaller vehicle UNTIL the smaller vehicle moves right\",\n    \"sources\": [\n     {\n      \"id\": \"m53\",\n      \"quote\": \"Wait for the smaller vehicle to move right before you pass.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"The context of 'making a left turn' is inferred from the heading 'Left turns' and the surrounding context of c6/c7 which discuss turning behind vehicles.\"\n   },\n   {\n    \"id\": \"s2\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"do not pull up\\\")\",\n    \"text\": \"a driver SHOULD NOT pull up beside a vehicle to make a left turn at the same time WHEN the driver is making a left turn behind the vehicle\",\n    \"sources\": [\n     {\n      \"id\": \"c6\",\n      \"quote\": \"If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"The phrase 'one of these vehicles' refers to vehicles discussed in the preceding context (likely larger or slower vehicles), but the rule applies to any vehicle ahead in the lane when turning left.\"\n   },\n   {\n    \"id\": \"s3\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"Stay\\\", \\\"turn\\\")\",\n    \"text\": \"a driver SHOULD stay behind the vehicle AND turn WHEN the driver is making a left turn behind the vehicle UNTIL the way is clear\",\n    \"sources\": [\n     {\n      \"id\": \"c7\",\n      \"quote\": \"Stay behind and turn when the way is clear.\"\n     }\n    ],\n    \"flags\": [\n     {\n      \"code\": \"J\",\n      \"span\": \"the way is clear\",\n      \"note\": \"Subjective judgment of safety/clearance; no specific measure given.\"\n     }\n    ],\n    \"links\": [],\n    \"note\": \"This is the positive action corresponding to the prohibition in s2.\"\n   },\n   {\n    \"id\": \"s4\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"text (\\\"not to be used\\\")\",\n    \"text\": \"a driver MUST NOT use a left-turn lane for passing\",\n    \"sources\": [\n     {\n      \"id\": \"m19\",\n      \"quote\": \"These left-turn lanes are not to be used for passing.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"The phrase 'not to be used' indicates a prohibition, which is treated as a legal duty in this context.\"\n   }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m53",
+    "about_topic": true,
+    "says": "rule: wait for a smaller vehicle to move right before passing it when making a left turn"
+   },
+   {
+    "id": "c6",
+    "about_topic": true,
+    "says": "rule: do not pull up beside a larger vehicle to make a left turn at the same time"
+   },
+   {
+    "id": "c7",
+    "about_topic": true,
+    "says": "rule: stay behind the vehicle and turn when the way is clear"
+   },
+   {
+    "id": "m19",
+    "about_topic": true,
+    "says": "rule: left-turn lanes are not to be used for passing"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Wait\")",
+    "text": "a driver SHOULD wait for the smaller vehicle to move right WHEN the driver is making a left turn AND the driver is behind a smaller vehicle UNTIL the smaller vehicle moves right",
+    "sources": [
+     {
+      "id": "m53",
+      "quote": "Wait for the smaller vehicle to move right before you pass."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The context of 'making a left turn' is inferred from the heading 'Left turns' and the surrounding context of c6/c7 which discuss turning behind vehicles."
+   },
+   {
+    "id": "s2",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"do not pull up\")",
+    "text": "a driver SHOULD NOT pull up beside a vehicle to make a left turn at the same time WHEN the driver is making a left turn behind the vehicle",
+    "sources": [
+     {
+      "id": "c6",
+      "quote": "If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The phrase 'one of these vehicles' refers to vehicles discussed in the preceding context (likely larger or slower vehicles), but the rule applies to any vehicle ahead in the lane when turning left."
+   },
+   {
+    "id": "s3",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Stay\", \"turn\")",
+    "text": "a driver SHOULD stay behind the vehicle AND turn WHEN the driver is making a left turn behind the vehicle UNTIL the way is clear",
+    "sources": [
+     {
+      "id": "c7",
+      "quote": "Stay behind and turn when the way is clear."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "the way is clear",
+      "note": "Subjective judgment of safety/clearance; no specific measure given."
+     }
+    ],
+    "links": [],
+    "note": "This is the positive action corresponding to the prohibition in s2."
+   },
+   {
+    "id": "s4",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"not to be used\")",
+    "text": "a driver MUST NOT use a left-turn lane for passing",
+    "sources": [
+     {
+      "id": "m19",
+      "quote": "These left-turn lanes are not to be used for passing."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The phrase 'not to be used' indicates a prohibition, which is treated as a legal duty in this context."
+   }
+  ]
+ },
+ "parse_error": null
+}

@@ -1,0 +1,4 @@
+quote-normalised p03:3.4.4b m57: quote not found verbatim: '(See Diagram 2-11.) Failure to do so may result in a fine and an additional two '
+numbers          p05:3.6.3a number 1 not in its sources
+flags            p05:3.6.3c vague span 'as soon as the driver can' is in the text without a [?…] mark
+102 statements, 3 problems: flags 1, numbers 1, quote-normalised 1

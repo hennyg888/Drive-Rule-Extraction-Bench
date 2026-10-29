@@ -1,0 +1,27 @@
+flags            p03:s2     vague span 'too narrow to be shared safely' is in the text without a [?…] mark
+keywords         p03:s3     unknown capitalised word 'PRACTICAL'
+keywords         p03:s4     unknown capitalised word 'WHENEVER'
+keywords         p03:s4     unknown capitalised word 'POSSIBLE'
+flags            p03:s5     vague span 'unnecessarily' is in the text without a [?…] mark
+flags            p03:s6     vague span 'some distance' is in the text without a [?…] mark
+flags            p03:s8     vague span 'closely' is in the text without a [?…] mark
+flags            p03:s9     vague span 'more room' is in the text without a [?…] mark
+shape            p05:s1     DEFINE does not match 'DEFINE term IS kind THAT …'
+keywords         p05:s8     unknown capitalised word 'BEFORE'
+flags            p05:s11    vague span 'in doubt' is in the text without a [?…] mark
+flags            p05:s20    vague span 'in safety' is in the text without a [?…] mark
+flags            p05:s24    vague span 'as soon as the driver can' is in the text without a [?…] mark
+flags            p05:s25    vague span 'very careful' is in the text without a [?…] mark
+flags            p06:s3     vague span 'the way is clear' is in the text without a [?…] mark
+flags            p07:s6     vague span 'many' is in the text without a [?…] mark
+flags            p08:s1     vague span 'caution' is in the text without a [?…] mark
+flags            p08:s2     vague span 'carefully' is in the text without a [?…] mark
+flags            p10:s2     vague span 'slow traffic' is in the text without a [?…] mark
+flags            p10:s4     vague span 'safely' is in the text without a [?…] mark
+flags            p10:s7     vague span 'limited speed' is in the text without a [?…] mark
+flags            p11:s3     vague span 'enough' is in the text without a [?…] mark
+flags            p11:s3     vague span 'safely' is in the text without a [?…] mark
+flags            p12:s1     vague span 'carefully' is in the text without a [?…] mark
+flags            p12:s2     vague span 'possible' is in the text without a [?…] mark
+force            p14:s9     force ADVISORY but modal(s) ['MAY']
+103 statements, 26 problems: flags 20, force 1, keywords 4, shape 1

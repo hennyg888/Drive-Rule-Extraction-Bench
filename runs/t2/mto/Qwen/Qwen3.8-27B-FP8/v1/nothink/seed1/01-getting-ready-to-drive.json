@@ -1,0 +1,54 @@
+{
+ "batch": "Getting ready to drive",
+ "passages": [
+  "m44"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 1 selected passages from the page \"Getting ready to drive\".\n\n[m44] page: Getting ready to drive | heading: Turn on headlights at night and in poor conditions · ¶1 | text\nUse your low beams when you are less than 60 metres behind another vehicle unless you are passing it.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 208,
+  "prompt_tokens": 15770,
+  "total_tokens": 15978,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 13.3,
+ "raw": "{\n  \"statements\": [\n    {\n     \"id\": \"3.4.6a\",\n     \"type\": \"RULE\",\n     \"force\": \"ADVISORY\",\n     \"force_from\": \"imperative (\\\"Use\\\")\",\n     \"text\": \"a driver SHOULD use low beams WHEN the driver is less than 60 m behind another vehicle UNLESS the driver is passing the vehicle\",\n     \"sources\": [\n         {\n             \"id\": \"m44\",\n             \"quote\": \"Use your low beams when you are less than 60 metres behind another vehicle unless you are passing it.\"\n         }\n     ],\n     \"flags\": [],\n     \"links\": [],\n     \"note\": \"The rule is about headlight usage, but the condition 'passing it' is in scope for the passing topic. The force is advisory because the source uses a bare imperative without legal markers.\"\n    }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.4.6a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Use\")",
+    "text": "a driver SHOULD use low beams WHEN the driver is less than 60 m behind another vehicle UNLESS the driver is passing the vehicle",
+    "sources": [
+     {
+      "id": "m44",
+      "quote": "Use your low beams when you are less than 60 metres behind another vehicle unless you are passing it."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The rule is about headlight usage, but the condition 'passing it' is in scope for the passing topic. The force is advisory because the source uses a bare imperative without legal markers."
+   }
+  ]
+ },
+ "parse_error": null
+}

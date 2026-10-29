@@ -1,0 +1,6 @@
+flags            p04:s1     vague span 'heavy' is in the text without a [?…] mark
+shape            p05:s1     DEFINE does not match 'DEFINE term IS kind THAT …'
+force            p05:s31    FACT should have force and force_from null
+numbers          p07:s5     number 1 not in its sources
+flags            p12:s1     vague span 'carefully' is in the text without a [?…] mark
+109 statements, 5 problems: flags 2, force 1, numbers 1, shape 1

@@ -1,0 +1,245 @@
+{
+ "batch": "Towing",
+ "passages": [
+  "m82",
+  "m83"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 2 selected passages from the page \"Towing\".\n\n[m82] page: Towing | heading: Passing · ¶1 | text\nYou cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control.\n\n[m83] page: Towing | heading: Being passed · ¶1 | text\nIf you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1946,
+  "prompt_tokens": 15935,
+  "total_tokens": 17881,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 34.4,
+ "raw": "{\n \"statements\": [\n  {\n   \"id\": \"3.5.1a\",\n   \"type\": \"FACT\",\n   \"force\": null,\n   \"force_from\": null,\n   \"text\": \"FACT a driver towing a trailer cannot accelerate as quickly as a driver without a trailer\",\n   \"sources\": [\n    {\n     \"id\": \"m82\",\n     \"quote\": \"You cannot accelerate as quickly when you are towing a trailer.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.1b\",\n   \"type\": \"FACT\",\n   \"force\": null,\n   \"force_from\": null,\n   \"text\": \"FACT a driver towing a trailer needs more space than a driver without a trailer BECAUSE the length of the vehicle is much longer with a trailer attached\",\n   \"sources\": [\n    {\n     \"id\": \"m82\",\n     \"quote\": \"You also need more space because the length of your vehicle is much longer with a trailer attached.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.1c\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"make sure\\\")\",\n   \"text\": \"a driver towing a trailer SHOULD make sure the driver has [?enough] time and room to complete the pass WHEN the driver is about to pass a vehicle\",\n   \"sources\": [\n    {\n     \"id\": \"m82\",\n     \"quote\": \"Before you pass, make sure you have enough time and room to complete the pass.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"J\",\n     \"span\": \"enough\",\n     \"note\": \"No measure of time or space is given.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.1d\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"allow\\\")\",\n   \"text\": \"a driver towing a trailer SHOULD allow [?more] room WHEN the driver has passed a vehicle UNTIL the driver moves back to the original lane\",\n   \"sources\": [\n    {\n     \"id\": \"m82\",\n     \"quote\": \"Once you have passed, allow more room before you move back to your lane.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"J\",\n     \"span\": \"more\",\n     \"note\": \"No specific distance is given for how much more room is needed.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.1e\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"Do not\\\")\",\n   \"text\": \"a driver towing a trailer SHOULD NOT cut back into the original lane [?too soon] WHEN the driver has passed a vehicle BECAUSE it can cause the trailer to sway and make it difficult to control\",\n   \"sources\": [\n    {\n     \"id\": \"m82\",\n     \"quote\": \"Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"J\",\n     \"span\": \"too soon\",\n     \"note\": \"No time or distance threshold is given for when cutting back is too soon.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.2a\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"signal\\\", \\\"pull over\\\")\",\n   \"text\": \"a driver towing a trailer SHOULD signal AND pull over WHEN the driver is holding up a line of traffic\",\n   \"sources\": [\n    {\n     \"id\": \"m83\",\n     \"quote\": \"If you are holding up a line of traffic, signal, pull over and let the other vehicles pass.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.2b\",\n   \"type\": \"FACT\",\n   \"force\": null,\n   \"force_from\": null,\n   \"text\": \"FACT fast-moving trucks and buses create a strong air disturbance behind them\",\n   \"sources\": [\n    {\n     \"id\": \"m83\",\n     \"quote\": \"Fast-moving trucks and buses create a strong air disturbance behind them.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.2c\",\n   \"type\": \"FACT\",\n   \"force\": null,\n   \"force_from\": null,\n   \"text\": \"FACT the wall of wind behind a large bus or truck that passes a driver towing a trailer may whip the trailer to the side, pushing it out of control\",\n   \"sources\": [\n    {\n     \"id\": \"m83\",\n     \"quote\": \"If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.2d\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"do not brake\\\")\",\n   \"text\": \"a driver towing a trailer SHOULD NOT brake WHEN the trailer is whipped to the side by the wind behind a passing large bus or truck\",\n   \"sources\": [\n    {\n     \"id\": \"m83\",\n     \"quote\": \"When you experience this, do not brake.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The condition 'When you experience this' refers to the trailer being whipped to the side by the wind, as described in the previous sentence.\"\n  },\n  {\n   \"id\": \"3.5.2e\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"steer\\\")\",\n   \"text\": \"a driver towing a trailer SHOULD [?carefully] steer the vehicle and trailer back into position WHEN the trailer is whipped to the side by the wind behind a passing large bus or truck\",\n   \"sources\": [\n    {\n     \"id\": \"m83\",\n     \"quote\": \"Carefully steer your vehicle and trailer back into position.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"J\",\n     \"span\": \"carefully\",\n     \"note\": \"No specific steering technique or speed is defined.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.5.2f\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"text (\\\"may help\\\")\",\n   \"text\": \"a driver towing a trailer MAY increase speed slightly WHEN the trailer is whipped to the side by the wind behind a passing large bus or truck\",\n   \"sources\": [\n    {\n     \"id\": \"m83\",\n     \"quote\": \"A slight increase in speed may help.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"M\",\n     \"span\": \"may help\",\n     \"note\": \"The wording 'may help' is suggestive of advice rather than a legal permission, but 'may' is the only modal available for a non-prohibitive action option.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": \"The handbook suggests this as a helpful action, not a strict obligation or permission. 'MAY' is used to represent the option, with an M flag to note the advisory nature.\"\n  }\n ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.5.1a",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT a driver towing a trailer cannot accelerate as quickly as a driver without a trailer",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "You cannot accelerate as quickly when you are towing a trailer."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.1b",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT a driver towing a trailer needs more space than a driver without a trailer BECAUSE the length of the vehicle is much longer with a trailer attached",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "You also need more space because the length of your vehicle is much longer with a trailer attached."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.1c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"make sure\")",
+    "text": "a driver towing a trailer SHOULD make sure the driver has [?enough] time and room to complete the pass WHEN the driver is about to pass a vehicle",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "Before you pass, make sure you have enough time and room to complete the pass."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "enough",
+      "note": "No measure of time or space is given."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.1d",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"allow\")",
+    "text": "a driver towing a trailer SHOULD allow [?more] room WHEN the driver has passed a vehicle UNTIL the driver moves back to the original lane",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "Once you have passed, allow more room before you move back to your lane."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "more",
+      "note": "No specific distance is given for how much more room is needed."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.1e",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Do not\")",
+    "text": "a driver towing a trailer SHOULD NOT cut back into the original lane [?too soon] WHEN the driver has passed a vehicle BECAUSE it can cause the trailer to sway and make it difficult to control",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "too soon",
+      "note": "No time or distance threshold is given for when cutting back is too soon."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.2a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"signal\", \"pull over\")",
+    "text": "a driver towing a trailer SHOULD signal AND pull over WHEN the driver is holding up a line of traffic",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "If you are holding up a line of traffic, signal, pull over and let the other vehicles pass."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.2b",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT fast-moving trucks and buses create a strong air disturbance behind them",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "Fast-moving trucks and buses create a strong air disturbance behind them."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.2c",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT the wall of wind behind a large bus or truck that passes a driver towing a trailer may whip the trailer to the side, pushing it out of control",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.2d",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"do not brake\")",
+    "text": "a driver towing a trailer SHOULD NOT brake WHEN the trailer is whipped to the side by the wind behind a passing large bus or truck",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "When you experience this, do not brake."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The condition 'When you experience this' refers to the trailer being whipped to the side by the wind, as described in the previous sentence."
+   },
+   {
+    "id": "3.5.2e",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"steer\")",
+    "text": "a driver towing a trailer SHOULD [?carefully] steer the vehicle and trailer back into position WHEN the trailer is whipped to the side by the wind behind a passing large bus or truck",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "Carefully steer your vehicle and trailer back into position."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "carefully",
+      "note": "No specific steering technique or speed is defined."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.5.2f",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"may help\")",
+    "text": "a driver towing a trailer MAY increase speed slightly WHEN the trailer is whipped to the side by the wind behind a passing large bus or truck",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "A slight increase in speed may help."
+     }
+    ],
+    "flags": [
+     {
+      "code": "M",
+      "span": "may help",
+      "note": "The wording 'may help' is suggestive of advice rather than a legal permission, but 'may' is the only modal available for a non-prohibitive action option."
+     }
+    ],
+    "links": [],
+    "note": "The handbook suggests this as a helpful action, not a strict obligation or permission. 'MAY' is used to represent the option, with an M flag to note the advisory nature."
+   }
+  ]
+ },
+ "parse_error": null
+}

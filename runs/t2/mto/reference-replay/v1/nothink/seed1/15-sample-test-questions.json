@@ -1,0 +1,32 @@
+{
+ "batch": "Sample test questions",
+ "passages": [
+  "m87",
+  "m88"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 2 selected passages from the page \"Sample test questions\".\n\n[m87] page: Sample test questions | heading: Intro · ¶6 | text\n5. When the driver of another vehicle is about to overtake and pass your vehicle, you must:\n\n[m88] page: Sample test questions | heading: Intro · item 4 | text\nMove to the right and allow such vehicle to pass.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"statements\": []}",
+ "reasoning": null,
+ "parsed": {
+  "statements": []
+ },
+ "parse_error": null
+}

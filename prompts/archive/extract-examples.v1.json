@@ -1,0 +1,195 @@
+{
+ "about": "Worked examples for prompts/extract-rules.md. All passages come from parts of the Ontario MTO handbook outside the passing topic, so none of them is scored. Each example has its own topic; the statements cover everything in the passages that is in scope for that topic, and nothing else.",
+ "examples": [
+  {
+   "title": "A definition and a fact in one passage",
+   "topic": "driving in fog",
+   "teaches": "Split a passage into one statement per proposition. 'Can' that describes what something does is not a permission, so it gives a FACT, not a MAY rule.",
+   "passages": [
+    {"id": "e1", "page": "Driving at night and in bad weather", "sec": "Fog · ¶1", "kind": "para", "text": "Fog is a thin layer of cloud resting on the ground. Fog can reduce visibility for drivers, resulting in difficult driving conditions."}
+   ],
+   "statements": [
+    {"id": "ex1a", "type": "DEFINE", "force": null, "force_from": null,
+     "text": "DEFINE fog IS a thin layer of cloud THAT rests on the ground",
+     "sources": [{"id": "e1", "quote": "Fog is a thin layer of cloud resting on the ground."}],
+     "flags": [], "links": [], "note": null},
+    {"id": "ex1b", "type": "FACT", "force": null, "force_from": null,
+     "text": "FACT fog can reduce visibility for drivers, resulting in difficult driving conditions",
+     "sources": [{"id": "e1", "quote": "Fog can reduce visibility for drivers, resulting in difficult driving conditions."}],
+     "flags": [], "links": [],
+     "note": "\"Can\" describes what fog does, not something a driver is allowed to do, so this is a FACT and not a MAY rule."}
+   ]
+  },
+  {
+   "title": "A condition held in the heading and a list lead",
+   "topic": "driving in fog",
+   "teaches": "The list item never mentions fog. The heading and the lead sentence do, so the condition goes into the statement and both passages are cited. The lead sentence also holds rules of its own.",
+   "passages": [
+    {"id": "e2", "page": "Driving at night and in bad weather", "sec": "Fog › Tips for driving safely in fog · ¶1", "kind": "para", "text": "Before you drive - and during your trip - check weather forecasts. If there is a fog warning, delay your trip until it clears. If you are caught driving in fog, follow these safe-driving tips:"},
+    {"id": "e3", "page": "Driving at night and in bad weather", "sec": "Fog › Tips for driving safely in fog › DO: · item 3", "kind": "item", "text": "Use your low-beam headlights. High beams reflect off the moisture droplets in the fog, making it harder to see."}
+   ],
+   "statements": [
+    {"id": "ex2a", "type": "RULE", "force": "ADVISORY", "force_from": "imperative (\"check\")",
+     "text": "a driver SHOULD check weather forecasts WHEN the driver is about to drive OR the driver is on a trip",
+     "sources": [{"id": "e2", "quote": "Before you drive - and during your trip - check weather forecasts."}],
+     "flags": [], "links": [], "note": null},
+    {"id": "ex2b", "type": "RULE", "force": "ADVISORY", "force_from": "imperative (\"delay\")",
+     "text": "a driver SHOULD delay the trip WHEN there is a fog warning UNTIL the fog clears",
+     "sources": [{"id": "e2", "quote": "If there is a fog warning, delay your trip until it clears."}],
+     "flags": [], "links": [], "note": null},
+    {"id": "ex2c", "type": "RULE", "force": "ADVISORY", "force_from": "imperative (\"Use\")",
+     "text": "a driver SHOULD use low-beam headlights WHEN driving in fog BECAUSE high beams reflect off the moisture droplets in the fog, making it harder to see",
+     "sources": [
+      {"id": "e2", "quote": "If you are caught driving in fog, follow these safe-driving tips:"},
+      {"id": "e3", "quote": "Use your low-beam headlights. High beams reflect off the moisture droplets in the fog, making it harder to see."}],
+     "flags": [], "links": [],
+     "note": "The item does not mention fog; the condition comes from the heading and the lead sentence, so it is written as WHEN driving in fog."}
+   ]
+  },
+  {
+   "title": "Legal force from the section, and a sign caption",
+   "topic": "regulatory signs that tell drivers where they may not go or stop",
+   "teaches": "A sign caption is a bare imperative, which gives SHOULD by default. The section introduction says these signs must be obeyed, so the force is legal, and force_from names the section. The sentence about sign shapes is out of this topic and gives nothing.",
+   "passages": [
+    {"id": "e4", "page": "Signs", "sec": "Regulatory signs · ¶1", "kind": "para", "text": "These signs give a direction that must be obeyed. They are usually rectangular or square with a white or black background and black, white or coloured letters. A sign with a green circle means you may or must do the activity shown inside the ring. A red circle with a line through it means the activity shown is not allowed."},
+    {"id": "e5", "page": "Signs", "sec": "Regulatory signs › Here are some common regulatory signs: · ¶4", "kind": "para", "text": "Do not enter this road."},
+    {"id": "e6", "page": "Signs", "sec": "Regulatory signs › Here are some common regulatory signs: · image", "kind": "figure", "text": "a regulatory sign", "cap": "Alt text: “a regulatory sign”"},
+    {"id": "e7", "page": "Signs", "sec": "Regulatory signs › Here are some common regulatory signs: · ¶5", "kind": "para", "text": "Do not stop in the area between the signs. This means you may not stop your vehicle in this area, even for a moment. (Used in pairs or groups.)"}
+   ],
+   "statements": [
+    {"id": "ex3a", "type": "FACT", "force": null, "force_from": null,
+     "text": "FACT a red circle with a line through it on a regulatory sign means the activity shown is not allowed",
+     "sources": [{"id": "e4", "quote": "A red circle with a line through it means the activity shown is not allowed."}],
+     "flags": [], "links": [], "note": null},
+    {"id": "ex3b", "type": "RULE", "force": "LEGAL", "force_from": "context (Regulatory signs: \"These signs give a direction that must be obeyed\")",
+     "text": "a driver MUST NOT enter a road WHEN a \"do not enter\" sign is posted for the road",
+     "sources": [
+      {"id": "e4", "quote": "These signs give a direction that must be obeyed."},
+      {"id": "e5", "quote": "Do not enter this road."},
+      {"id": "e6", "quote": "a regulatory sign"}],
+     "flags": [], "links": [],
+     "note": "The caption alone is a bare imperative; the legal force comes from the section introduction."},
+    {"id": "ex3c", "type": "RULE", "force": "LEGAL", "force_from": "text (\"may not\")",
+     "text": "a driver MUST NOT stop the vehicle, even for a moment, WHEN the vehicle is in the area between \"do not stop\" signs",
+     "sources": [
+      {"id": "e4", "quote": "These signs give a direction that must be obeyed."},
+      {"id": "e7", "quote": "Do not stop in the area between the signs. This means you may not stop your vehicle in this area, even for a moment."}],
+     "flags": [], "links": [], "note": null}
+   ]
+  },
+  {
+   "title": "Imperatives, a legal marker in the next sentence, UNTIL, and vague words",
+   "topic": "railway crossings",
+   "teaches": "\"Never\" alone gives SHOULD NOT; \"It is illegal\" in the next sentence makes it MUST NOT. A fixed distance in a bare imperative stays SHOULD with an M flag. \"Until you are sure\" is UNTIL with a J flag. Numbers become digits with the handbook's unit.",
+   "passages": [
+    {"id": "e8", "page": "Stopping", "sec": "Stopping at railway crossings · ¶2", "kind": "para", "text": "When you come to a railway crossing, remember:"},
+    {"id": "e9", "page": "Stopping", "sec": "Stopping at railway crossings · item 2", "kind": "item", "text": "If a train is coming, stop at least five metres from the nearest rail or gate. Do not cross the track until you are sure the train or trains have passed."},
+    {"id": "e10", "page": "Stopping", "sec": "Stopping at railway crossings · item 5", "kind": "item", "text": "Never drive around, under or through a railway gate or barrier while it is down, being lowered or being raised. It is illegal and dangerous."}
+   ],
+   "statements": [
+    {"id": "ex4a", "type": "RULE", "force": "ADVISORY", "force_from": "imperative (\"stop\")",
+     "text": "a driver SHOULD stop at least 5 m from the nearest rail or gate WHEN the driver comes to a railway crossing AND a train is coming",
+     "sources": [
+      {"id": "e8", "quote": "When you come to a railway crossing, remember:"},
+      {"id": "e9", "quote": "If a train is coming, stop at least five metres from the nearest rail or gate."}],
+     "flags": [{"code": "M", "span": "stop at least five metres", "note": "A fixed distance reads like a legal duty, but the sentence has no legal wording, so it stays SHOULD."}],
+     "links": [], "note": null},
+    {"id": "ex4b", "type": "RULE", "force": "ADVISORY", "force_from": "imperative (\"Do not cross\")",
+     "text": "a driver SHOULD NOT cross the track WHEN the driver comes to a railway crossing AND a train is coming UNTIL the driver is [?sure] the train or trains have passed",
+     "sources": [
+      {"id": "e8", "quote": "When you come to a railway crossing, remember:"},
+      {"id": "e9", "quote": "Do not cross the track until you are sure the train or trains have passed."}],
+     "flags": [{"code": "J", "span": "sure", "note": "Subjective certainty; no observable test."}],
+     "links": [], "note": null},
+    {"id": "ex4c", "type": "RULE", "force": "LEGAL", "force_from": "text (\"It is illegal\")",
+     "text": "a driver MUST NOT drive around, under or through a railway gate or barrier WHILE the gate or barrier is down, being lowered or being raised BECAUSE it is dangerous",
+     "sources": [{"id": "e10", "quote": "Never drive around, under or through a railway gate or barrier while it is down, being lowered or being raised. It is illegal and dangerous."}],
+     "flags": [], "links": [],
+     "note": "\"Never\" alone would give SHOULD NOT; the next sentence, \"It is illegal\", gives legal force."}
+   ]
+  },
+  {
+   "title": "An exception in the same passage is UNLESS",
+   "topic": "intersections",
+   "teaches": "\"This does not apply if …\" sits in the same passage as its rule, so it becomes an UNLESS clause. Clauses follow the fixed order WHEN, WHILE, ONLY IF, UNLESS, UNTIL, BECAUSE, IF VIOLATED.",
+   "passages": [
+    {"id": "e11", "page": "Driving through intersections", "sec": "Controlled intersections · ¶3", "kind": "para", "text": "When you approach an intersection on a main road, and the intersection is blocked with traffic, stop before entering the intersection and wait until the traffic ahead moves on. This does not apply if you are turning left or right."}
+   ],
+   "statements": [
+    {"id": "ex5a", "type": "RULE", "force": "ADVISORY", "force_from": "imperative (\"stop\", \"wait\")",
+     "text": "a driver SHOULD stop before entering the intersection AND wait WHEN the driver approaches an intersection on a main road AND the intersection is blocked with traffic UNLESS the driver is turning left OR the driver is turning right UNTIL the traffic ahead moves on",
+     "sources": [{"id": "e11", "quote": "When you approach an intersection on a main road, and the intersection is blocked with traffic, stop before entering the intersection and wait until the traffic ahead moves on. This does not apply if you are turning left or right."}],
+     "flags": [], "links": [],
+     "note": "The exception is in the same passage, so it is an UNLESS clause. In a different passage it would be its own statement: EXCEPTION TO ex5a WHEN the driver is turning left OR the driver is turning right."}
+   ]
+  },
+  {
+   "title": "A procedure, with a step that holds on its own",
+   "topic": "making a roadside stop",
+   "teaches": "Numbered steps make one PROCEDURE. The lead sentence gives its goal and condition. Each step cites its own passage. A conditional detour inside a step becomes an IF … THEN branch. A prohibition that holds whatever the step order is also written as its own RULE, linked to the procedure.",
+   "passages": [
+    {"id": "e12", "page": "Parking along roadways", "sec": "Roadside stop · ¶1", "kind": "para", "text": "When you need to stop by the side of the road for a short time to check something outside your vehicle, or to look for directions on a map, for example, follow these directions:"},
+    {"id": "e13", "page": "Parking along roadways", "sec": "Roadside stop · item 1", "kind": "step", "text": "Before slowing down, check your mirrors and blind spot to see when the way is clear."},
+    {"id": "e14", "page": "Parking along roadways", "sec": "Roadside stop · item 2", "kind": "step", "text": "Turn on your signal before slowing down unless there are vehicles waiting to enter the road from side roads or driveways between you and the point where you intend to stop. Wait until you have passed these entrances so that drivers will not think you are turning before the stopping point."},
+    {"id": "e15", "page": "Parking along roadways", "sec": "Roadside stop · item 3", "kind": "step", "text": "Steer to the side of the road, steadily reducing speed, and stop parallel to the curb or edge of the road. You should not be more than about 30 centimetres away from it. Do not stop where you will block an entrance or other traffic."},
+    {"id": "e16", "page": "Parking along roadways", "sec": "Roadside stop · item 4", "kind": "step", "text": "Turn off your signal and turn on your hazard lights."}
+   ],
+   "statements": [
+    {"id": "ex6a", "type": "PROCEDURE", "force": "ADVISORY", "force_from": "imperative steps",
+     "text": "TO make a roadside stop WHEN the driver needs to stop by the side of the road for a short time",
+     "steps": [
+      {"n": "1", "text": "check the mirrors and blind spot to see when the way is clear WHEN the driver is about to slow down", "sources": ["e13"]},
+      {"n": "2", "text": "turn on the signal WHEN the driver is about to slow down UNLESS vehicles are waiting to enter the road from side roads or driveways between the driver and the stopping point", "sources": ["e14"]},
+      {"n": "3", "text": "steer to the side of the road, steadily reducing speed, AND stop parallel to the curb or edge of the road, at most [?about] 30 cm from it", "sources": ["e15"]},
+      {"n": "4", "text": "turn off the signal AND turn on the hazard lights", "sources": ["e16"]},
+      {"n": "IF", "text": "IF vehicles are waiting to enter the road between the driver and the stopping point THEN turn on the signal only after passing these entrances", "sources": ["e14"]}],
+     "sources": [{"id": "e12", "quote": "When you need to stop by the side of the road for a short time to check something outside your vehicle, or to look for directions on a map, for example, follow these directions:"}],
+     "flags": [{"code": "J", "span": "about", "note": "Approximate distance with no stated tolerance."}],
+     "links": [],
+     "note": "The IF branch exists so that waiting drivers do not think the driver is turning before the stopping point."},
+    {"id": "ex6b", "type": "RULE", "force": "ADVISORY", "force_from": "imperative (\"Do not stop\")",
+     "text": "a driver SHOULD NOT stop where the vehicle will block an entrance or other traffic WHEN making a roadside stop",
+     "sources": [{"id": "e15", "quote": "Do not stop where you will block an entrance or other traffic."}],
+     "flags": [], "links": ["ex6a"],
+     "note": "This prohibition holds whatever the step order, so it is its own RULE as well as part of step 3's situation."}
+   ]
+  },
+  {
+   "title": "A duty and its penalty in different passages, and choosing the role",
+   "topic": "seatbelts",
+   "teaches": "A duty and its penalty make one statement with IF VIOLATED, citing both passages. \"You\" can cover more than one role; use the role each sentence supports. A penalty with no separate duty sentence still makes a legal rule, with force from the penalty.",
+   "passages": [
+    {"id": "e17", "page": "Getting ready to drive", "sec": "Fasten your seatbelt · ¶3", "kind": "para", "text": "You must use your seatbelt every time you travel in any vehicle equipped with seatbelts. All passengers must be buckled up in their own seatbelt, child car seat or booster seat."},
+    {"id": "e18", "page": "Getting ready to drive", "sec": "Fasten your seatbelt · ¶4 (first two sentences)", "kind": "para", "text": "Drivers who do not buckle up can be fined and will be given two demerit points. Drivers may also be fined and receive demerit points if they fail to ensure that all passengers under 16 years of age are properly buckled in a seatbelt, child car seat or booster seat."}
+   ],
+   "statements": [
+    {"id": "ex7a", "type": "RULE", "force": "LEGAL", "force_from": "text (\"must use\")",
+     "text": "a driver MUST use a seatbelt WHILE travelling in a vehicle equipped with seatbelts IF VIOLATED a fine AND 2 demerit points",
+     "sources": [
+      {"id": "e17", "quote": "You must use your seatbelt every time you travel in any vehicle equipped with seatbelts."},
+      {"id": "e18", "quote": "Drivers who do not buckle up can be fined and will be given two demerit points."}],
+     "flags": [], "links": [],
+     "note": "The duty and its penalty are in different paragraphs, so they make one statement. \"You\" also covers passengers, but the penalty names drivers; the passenger duty is ex7b."},
+    {"id": "ex7b", "type": "RULE", "force": "LEGAL", "force_from": "text (\"must be buckled up\")",
+     "text": "a passenger MUST be buckled up in the passenger's own seatbelt, child car seat or booster seat",
+     "sources": [{"id": "e17", "quote": "All passengers must be buckled up in their own seatbelt, child car seat or booster seat."}],
+     "flags": [], "links": [], "note": null},
+    {"id": "ex7c", "type": "RULE", "force": "LEGAL", "force_from": "context (penalty: \"may also be fined and receive demerit points\")",
+     "text": "a driver MUST ensure that every passenger under 16 years of age is [?properly] buckled in a seatbelt, child car seat or booster seat IF VIOLATED a fine AND demerit points",
+     "sources": [{"id": "e18", "quote": "Drivers may also be fined and receive demerit points if they fail to ensure that all passengers under 16 years of age are properly buckled in a seatbelt, child car seat or booster seat."}],
+     "flags": [{"code": "J", "span": "properly", "note": "The handbook does not say what proper buckling requires."}],
+     "links": [],
+     "note": "Only the penalty is stated; a penalty for failing to do something makes doing it a legal duty. The number of demerit points is not given, so none is written."}
+   ]
+  },
+  {
+   "title": "\"Pass\" that does not mean overtaking",
+   "topic": "passing",
+   "teaches": "Here \"pass\" means that oncoming bicycles go by; nobody overtakes anyone. The sentence is a left-turn rule, which is outside the passing topic, so a passing extraction writes no statement for it. Writing nothing is the right answer for such passages.",
+   "passages": [
+    {"id": "e19", "page": "Sharing the road with other road users", "sec": "Sharing the road with cyclists · item 6", "kind": "item", "text": "When turning left, you must stop and wait for oncoming bicycles to pass before turning."}
+   ],
+   "statements": []
+  }
+ ]
+}

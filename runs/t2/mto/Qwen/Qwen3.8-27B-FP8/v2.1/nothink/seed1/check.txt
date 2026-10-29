@@ -1,0 +1,29 @@
+flags            p03:s5     vague span 'some distance' is in the text without a [?…] mark
+flags            p03:s6     vague span 'closely' is in the text without a [?…] mark
+flags            p03:s7     vague span 'more room' is in the text without a [?…] mark
+shape            p05:s1     DEFINE does not match 'DEFINE term IS kind THAT …'
+flags            p05:s2     vague span 'often' is in the text without a [?…] mark
+keywords         p05:s5     unknown capitalised word 'BEFORE'
+flags            p05:s5     vague span 'enough space and time' is in the text without a [?…] mark
+flags            p05:s8     vague span 'in doubt' is in the text without a [?…] mark
+keywords         p05:s9     unknown capitalised word 'BEFORE'
+flags            p05:s15    vague span 'enough clear distance' is in the text without a [?…] mark
+flags            p05:s19    vague span 'many' is in the text without a [?…] mark
+flags            p05:s20    vague span 'as soon as the driver can' is in the text without a [?…] mark
+keywords         p06:s1     unknown capitalised word 'BEFORE'
+flags            p09:s6     vague span 'enough' is in the text without a [?…] mark
+flags            p10:s4     vague span 'safely' is in the text without a [?…] mark
+flags            p11:s3     vague span 'clear' is in the text without a [?…] mark
+flags            p11:s3     vague span 'enough' is in the text without a [?…] mark
+flags            p12:s1     vague span 'carefully' is in the text without a [?…] mark
+flags            p12:s2     vague span 'possible' is in the text without a [?…] mark
+keywords         p14:s2     unknown capitalised word 'BEFORE'
+flags            p14:s4     vague span 'too soon' is in the text without a [?…] mark
+force            p14:s9     force ADVISORY but modal(s) ['MAY']
+coverage         m1         noted as about the topic but cited by no statement: fact: changing position involves changing lanes or overtaking/passing
+coverage         m3         noted as about the topic but cited by no statement: fact: not all vehicles travel at the same speed; examples of slower vehicles; fa
+coverage         m14        noted as about the topic but cited by no statement: figure: diagram of how to pass another vehicle
+coverage         m52        noted as about the topic but cited by no statement: figure: diagram of how to pass another vehicle
+coverage         m27        noted as about the topic but cited by no statement: figure: diagram of a passing or climbing lane
+coverage         m61        noted as about the topic but cited by no statement: figure: diagram of a vehicle stopped 2 m behind rear doors of a stopped streetca
+94 statements, 28 problems: coverage 6, flags 16, force 1, keywords 4, shape 1

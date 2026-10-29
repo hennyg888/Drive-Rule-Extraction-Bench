@@ -1,0 +1,31 @@
+{
+ "batch": "Section 6: Navigating the Roads (Continued)",
+ "passages": [
+  "p38"
+ ],
+ "user": "Handbook: California Driver's Handbook (California DMV, United States)\nUnits: US customary (ft, mi, mph)\nTopic: passing\nBatch: the 1 selected passages from the page \"Section 6: Navigating the Roads (Continued)\".\n\n[p38] page: Section 6: Navigating the Roads (Continued) | heading: Parking › Parallel Parking · ¶7 | para\nTurn off your vehicle and set the parking brake. Before you exit your vehicle, look carefully for passing vehicles, bicycles, and motorcycles. Exit when safe.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"statements\": []}",
+ "reasoning": null,
+ "parsed": {
+  "statements": []
+ },
+ "parse_error": null
+}

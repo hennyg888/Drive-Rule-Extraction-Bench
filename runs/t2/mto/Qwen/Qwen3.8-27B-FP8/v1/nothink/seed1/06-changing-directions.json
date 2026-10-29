@@ -1,0 +1,129 @@
+{
+ "batch": "Changing directions",
+ "passages": [
+  "m53",
+  "c6",
+  "c7",
+  "m19"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 4 selected passages from the page \"Changing directions\".\n\n[m53] page: Changing directions | heading: Left turns · ¶5 | text\nWait for the smaller vehicle to move right before you pass.\n\n[c6] page: Changing directions | heading: Left turns · ¶5 | text\nIf you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time.\n\n[c7] page: Changing directions | heading: Left turns · ¶5 | text\nStay behind and turn when the way is clear.\n\n[m19] page: Changing directions | heading: Left-turn lanes · ¶3 | text\nThese left-turn lanes are not to be used for passing.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 936,
+  "prompt_tokens": 15858,
+  "total_tokens": 16794,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 164.0,
+ "raw": "{\n \"statements\": [\n  {\n   \"id\": \"3.4.3a\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"Wait\\\")\",\n   \"text\": \"a driver SHOULD NOT pass a smaller vehicle that is turning left ahead UNTIL the smaller vehicle has moved to the right\",\n   \"sources\": [\n    {\n     \"id\": \"m53\",\n     \"quote\": \"Wait for the smaller vehicle to move right before you pass.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"R\",\n     \"span\": \"the smaller vehicle\",\n     \"note\": \"The heading 'Left turns' implies the vehicle is turning left, but the specific reference to 'smaller' is not defined in the cited text.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": \"The condition that the vehicle is turning left is inferred from the heading 'Left turns' and the context of the other passages in the batch.\"\n  },\n  {\n   \"id\": \"3.4.3b\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"do not pull up\\\")\",\n   \"text\": \"a driver SHOULD NOT pull up beside a vehicle turning left WHEN the driver is making a left turn behind the vehicle\",\n   \"sources\": [\n    {\n     \"id\": \"c6\",\n     \"quote\": \"If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"R\",\n     \"span\": \"one of these vehicles\",\n     \"note\": \"Refers to vehicles turning left, as established by the heading and surrounding context.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": \"This is a rule about positioning relative to a turning vehicle, which falls under 'particular road users' or general passing/turning safety. It prevents a dangerous simultaneous maneuver.\"\n  },\n  {\n   \"id\": \"3.4.3c\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"Stay\\\", \\\"turn\\\")\",\n   \"text\": \"a driver SHOULD stay behind a vehicle turning left AND turn WHEN the way is clear WHEN the driver is making a left turn behind the vehicle\",\n   \"sources\": [\n    {\n     \"id\": \"c7\",\n     \"quote\": \"Stay behind and turn when the way is clear.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"J\",\n     \"span\": \"clear\",\n     \"note\": \"Subjective judgment of visibility and safety; no objective threshold defined.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": \"The condition 'making a left turn behind the vehicle' is inferred from the previous passage c6 in the same paragraph.\"\n  },\n  {\n   \"id\": \"3.1.4a\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"default (\\\"not to be used for\\\")\",\n   \"text\": \"a driver SHOULD NOT use a left-turn lane to pass\",\n   \"sources\": [\n    {\n     \"id\": \"m19\",\n     \"quote\": \"These left-turn lanes are not to be used for passing.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"M\",\n     \"span\": \"not to be used for passing\",\n     \"note\": \"The phrasing 'not to be used' is a strong prohibition, but without explicit legal wording like 'illegal' or 'must not', it is treated as strong advice with unclear legal force.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": \"This is a restriction on the use of a specific lane type, fitting section 3.1.4 (Turn lanes).\"\n  }\n ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.4.3a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Wait\")",
+    "text": "a driver SHOULD NOT pass a smaller vehicle that is turning left ahead UNTIL the smaller vehicle has moved to the right",
+    "sources": [
+     {
+      "id": "m53",
+      "quote": "Wait for the smaller vehicle to move right before you pass."
+     }
+    ],
+    "flags": [
+     {
+      "code": "R",
+      "span": "the smaller vehicle",
+      "note": "The heading 'Left turns' implies the vehicle is turning left, but the specific reference to 'smaller' is not defined in the cited text."
+     }
+    ],
+    "links": [],
+    "note": "The condition that the vehicle is turning left is inferred from the heading 'Left turns' and the context of the other passages in the batch."
+   },
+   {
+    "id": "3.4.3b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"do not pull up\")",
+    "text": "a driver SHOULD NOT pull up beside a vehicle turning left WHEN the driver is making a left turn behind the vehicle",
+    "sources": [
+     {
+      "id": "c6",
+      "quote": "If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time."
+     }
+    ],
+    "flags": [
+     {
+      "code": "R",
+      "span": "one of these vehicles",
+      "note": "Refers to vehicles turning left, as established by the heading and surrounding context."
+     }
+    ],
+    "links": [],
+    "note": "This is a rule about positioning relative to a turning vehicle, which falls under 'particular road users' or general passing/turning safety. It prevents a dangerous simultaneous maneuver."
+   },
+   {
+    "id": "3.4.3c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Stay\", \"turn\")",
+    "text": "a driver SHOULD stay behind a vehicle turning left AND turn WHEN the way is clear WHEN the driver is making a left turn behind the vehicle",
+    "sources": [
+     {
+      "id": "c7",
+      "quote": "Stay behind and turn when the way is clear."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "clear",
+      "note": "Subjective judgment of visibility and safety; no objective threshold defined."
+     }
+    ],
+    "links": [],
+    "note": "The condition 'making a left turn behind the vehicle' is inferred from the previous passage c6 in the same paragraph."
+   },
+   {
+    "id": "3.1.4a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "default (\"not to be used for\")",
+    "text": "a driver SHOULD NOT use a left-turn lane to pass",
+    "sources": [
+     {
+      "id": "m19",
+      "quote": "These left-turn lanes are not to be used for passing."
+     }
+    ],
+    "flags": [
+     {
+      "code": "M",
+      "span": "not to be used for passing",
+      "note": "The phrasing 'not to be used' is a strong prohibition, but without explicit legal wording like 'illegal' or 'must not', it is treated as strong advice with unclear legal force."
+     }
+    ],
+    "links": [],
+    "note": "This is a restriction on the use of a specific lane type, fitting section 3.1.4 (Turn lanes)."
+   }
+  ]
+ },
+ "parse_error": null
+}

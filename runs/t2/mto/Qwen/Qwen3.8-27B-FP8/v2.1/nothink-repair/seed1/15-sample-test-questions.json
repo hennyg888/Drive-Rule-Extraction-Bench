@@ -1,0 +1,71 @@
+{
+ "batch": "Sample test questions",
+ "passages": [
+  "m87",
+  "m88"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 2 passages from the page \"Sample test questions\": m87, m88.\n\n[m87] page: Sample test questions | heading: Intro · ¶6 | text\n5. When the driver of another vehicle is about to overtake and pass your vehicle, you must:\n\n[m88] page: Sample test questions | heading: Intro · item 4 | text\nMove to the right and allow such vehicle to pass.\n\nWrite the reading notes for all 2 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 350,
+  "prompt_tokens": 11388,
+  "total_tokens": 11738,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 6.1,
+ "raw": "{\n  \"passages\": [\n   {\n    \"id\": \"m87\",\n    \"about_topic\": true,\n    \"says\": \"rule: when another driver is about to overtake and pass, the driver must move right and allow the pass (condition and force from this lead)\"\n   },\n   {\n    \"id\": \"m88\",\n    \"about_topic\": true,\n    \"says\": \"rule: move to the right and allow the vehicle to pass (action for the situation in m87)\"\n   }\n  ],\n  \"statements\": [\n   {\n    \"id\": \"s1\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"text (\\\"must\\\")\",\n    \"text\": \"a driver MUST move to the right AND allow the other vehicle to pass WHEN the driver of another vehicle is about to overtake and pass the driver's vehicle\",\n    \"sources\": [\n     {\n      \"id\": \"m87\",\n      \"quote\": \"When the driver of another vehicle is about to overtake and pass your vehicle, you must:\"\n     },\n     {\n      \"id\": \"m88\",\n      \"quote\": \"Move to the right and allow such vehicle to pass.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"The lead sentence (m87) provides the condition and the legal force (\\\"must\\\"); the item (m88) provides the specific action.\"\n   }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m87",
+    "about_topic": true,
+    "says": "rule: when another driver is about to overtake and pass, the driver must move right and allow the pass (condition and force from this lead)"
+   },
+   {
+    "id": "m88",
+    "about_topic": true,
+    "says": "rule: move to the right and allow the vehicle to pass (action for the situation in m87)"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must\")",
+    "text": "a driver MUST move to the right AND allow the other vehicle to pass WHEN the driver of another vehicle is about to overtake and pass the driver's vehicle",
+    "sources": [
+     {
+      "id": "m87",
+      "quote": "When the driver of another vehicle is about to overtake and pass your vehicle, you must:"
+     },
+     {
+      "id": "m88",
+      "quote": "Move to the right and allow such vehicle to pass."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The lead sentence (m87) provides the condition and the legal force (\"must\"); the item (m88) provides the specific action."
+   }
+  ]
+ },
+ "parse_error": null
+}

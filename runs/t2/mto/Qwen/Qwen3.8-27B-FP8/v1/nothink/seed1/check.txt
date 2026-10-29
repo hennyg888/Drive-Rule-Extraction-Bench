@@ -1,0 +1,20 @@
+force            p03:3.4.4a force ADVISORY but modal(s) ['MAY']
+flags            p03:3.4.4b vague span 'too narrow to be shared safely' is in the text without a [?…] mark
+flags            p03:3.4.4c vague span 'practical' is in the text without a [?…] mark
+flags            p03:3.4.4d vague span 'possible' is in the text without a [?…] mark
+flags            p03:3.4.4e vague span 'unnecessarily' is in the text without a [?…] mark
+clauses          p03:3.4.4f clause order ['WHILE', 'WHEN']
+flags            p03:3.4.4f vague span 'some distance' is in the text without a [?…] mark
+flags            p03:3.4.6a vague span 'closely' is in the text without a [?…] mark
+flags            p03:3.4.6b vague span 'more room' is in the text without a [?…] mark
+flags            p03:3.4.7a vague span 'well back' is in the text without a [?…] mark
+flags            p05:2.1c   vague span 'in doubt' is in the text without a [?…] mark
+flags            p06:3.4.3a vague span 'the smaller vehicle' is in the text without a [?…] mark
+clauses          p06:3.4.3c clause WHEN used 2 times
+flags            p06:3.4.3c vague span 'clear' is in the text without a [?…] mark
+flags            p07:3.2.2c vague span 'possible' is in the text without a [?…] mark
+flags            p11:3.1.6a vague span 'enough broken lines ahead to complete the pass safely' is in the text without a [?…] mark
+flags            p12:3.4.13a vague span 'carefully' is in the text without a [?…] mark
+flags            p12:3.4.13b vague span 'possible' is in the text without a [?…] mark
+force            p14:3.5.2f force ADVISORY but modal(s) ['MAY']
+95 statements, 19 problems: clauses 2, flags 15, force 2

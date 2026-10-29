@@ -1,0 +1,118 @@
+{
+ "batch": "Section 8: Safe Driving (Continued)",
+ "passages": [
+  "p102",
+  "p103"
+ ],
+ "user": "Handbook: California Driver's Handbook (California DMV, United States)\nUnits: US customary (ft, mi, mph)\nTopic: passing\nBatch: the 2 selected passages from the page \"Section 8: Safe Driving (Continued)\".\n\n[p102] page: Section 8: Safe Driving (Continued) | heading: Choose Between Hazards · ¶1 | para\nSometimes dangers will be on both sides of the road at the same time. For example, parked cars to the right and oncoming cars to the left.\n\n[p103] page: Section 8: Safe Driving (Continued) | heading: Choose Between Hazards · ¶2 | para\nIf one danger is greater than the other, give more space to the most dangerous situation. Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist. If there is a steady flow of oncoming vehicles, use as much of the left lane as you safely can to pass the bicyclist.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"statements\": [{\"id\": \"3.4.4m\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Instead of driving between \\u2026, take one danger at a time\\\")\", \"text\": \"a driver SHOULD NOT drive between the oncoming vehicle and the cyclist AND SHOULD take one danger at a time WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right\", \"sources\": [{\"id\": \"p102\", \"quote\": \"Sometimes dangers will be on both sides of the road at the same time.\"}, {\"id\": \"p103\", \"quote\": \"Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time.\"}], \"flags\": [], \"note\": \"The scenario after \\\"Suppose\\\" is the condition of 3.4.4m to 3.4.4p. \\\"If one danger is greater than the other, give more space to the most dangerous situation\\\" is the general principle the example illustrates; it is not about passing and gives no statement.\", \"links\": []}, {\"id\": \"3.4.4n\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Slow down and let\\\")\", \"text\": \"a driver SHOULD slow down AND let the oncoming vehicle go by WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right\", \"sources\": [{\"id\": \"p103\", \"quote\": \"Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass.\"}], \"flags\": [], \"note\": \"\\\"Let the oncoming vehicle pass\\\" means let it go by, so it is written \\\"go by\\\" to keep \\\"pass\\\" for overtaking; waiting is the first half of passing the cyclist.\", \"links\": []}, {\"id\": \"3.4.4o\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"move to the left\\\")\", \"text\": \"a driver SHOULD move to the left to allow [?plenty of space], at least 3 ft, to pass the cyclist WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right AND the oncoming vehicle has gone by\", \"sources\": [{\"id\": \"p103\", \"quote\": \"Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"plenty of space\", \"note\": \"Vague amount; the parenthesis sets a floor of 3 ft but no target.\"}, {\"code\": \"M\", \"span\": \"at least three feet\", \"note\": \"A fixed distance in a bare imperative stays SHOULD.\"}], \"note\": null, \"links\": []}, {\"id\": \"3.4.4p\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"use\\\")\", \"text\": \"a driver SHOULD use as much of the left lane as the driver [?safely] can to pass the cyclist WHEN the driver is on a two-lane road with a cyclist ahead to the right AND there is a steady flow of oncoming vehicles\", \"sources\": [{\"id\": \"p103\", \"quote\": \"Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist. If there is a steady flow of oncoming vehicles, use as much of the left lane as you safely can to pass the bicyclist.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"safely\", \"note\": \"Judgment term.\"}], \"note\": null, \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.4.4m",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Instead of driving between …, take one danger at a time\")",
+    "text": "a driver SHOULD NOT drive between the oncoming vehicle and the cyclist AND SHOULD take one danger at a time WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right",
+    "sources": [
+     {
+      "id": "p102",
+      "quote": "Sometimes dangers will be on both sides of the road at the same time."
+     },
+     {
+      "id": "p103",
+      "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time."
+     }
+    ],
+    "flags": [],
+    "note": "The scenario after \"Suppose\" is the condition of 3.4.4m to 3.4.4p. \"If one danger is greater than the other, give more space to the most dangerous situation\" is the general principle the example illustrates; it is not about passing and gives no statement.",
+    "links": []
+   },
+   {
+    "id": "3.4.4n",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Slow down and let\")",
+    "text": "a driver SHOULD slow down AND let the oncoming vehicle go by WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right",
+    "sources": [
+     {
+      "id": "p103",
+      "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass."
+     }
+    ],
+    "flags": [],
+    "note": "\"Let the oncoming vehicle pass\" means let it go by, so it is written \"go by\" to keep \"pass\" for overtaking; waiting is the first half of passing the cyclist.",
+    "links": []
+   },
+   {
+    "id": "3.4.4o",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"move to the left\")",
+    "text": "a driver SHOULD move to the left to allow [?plenty of space], at least 3 ft, to pass the cyclist WHEN the driver is on a two-lane road with an oncoming vehicle to the left AND a cyclist ahead to the right AND the oncoming vehicle has gone by",
+    "sources": [
+     {
+      "id": "p103",
+      "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "plenty of space",
+      "note": "Vague amount; the parenthesis sets a floor of 3 ft but no target."
+     },
+     {
+      "code": "M",
+      "span": "at least three feet",
+      "note": "A fixed distance in a bare imperative stays SHOULD."
+     }
+    ],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.4.4p",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"use\")",
+    "text": "a driver SHOULD use as much of the left lane as the driver [?safely] can to pass the cyclist WHEN the driver is on a two-lane road with a cyclist ahead to the right AND there is a steady flow of oncoming vehicles",
+    "sources": [
+     {
+      "id": "p103",
+      "quote": "Suppose you are on a two-lane road with an oncoming vehicle to the left and a bicyclist ahead to your right. Instead of driving between the vehicle and the bicyclist, take one danger at a time. Slow down and let the oncoming vehicle pass. When the vehicle has passed, move to the left to allow plenty of space (at least three feet) to pass the bicyclist. If there is a steady flow of oncoming vehicles, use as much of the left lane as you safely can to pass the bicyclist."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "safely",
+      "note": "Judgment term."
+     }
+    ],
+    "note": null,
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

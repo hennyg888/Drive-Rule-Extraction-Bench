@@ -1,0 +1,170 @@
+{
+ "batch": "Stopping",
+ "passages": [
+  "c1",
+  "c2",
+  "c3",
+  "c4",
+  "m77",
+  "c5",
+  "m16"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 7 selected passages from the page \"Stopping\".\n\n[c1] page: Stopping | heading: Stopping for school buses · ¶2 | text\nYou must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\n\n[c2] page: Stopping | heading: Stopping for school buses · ¶2 | text\nIf you are coming from behind the bus, stop at least 20 metres away.\n\n[c3] page: Stopping | heading: Stopping for school buses · ¶2 | text\nDo not go until the bus moves or the lights have stopped flashing.\n\n[c4] page: Stopping | heading: Stopping for school buses · ¶3 | text\nIf you are on a road with a median strip, only vehicles coming from behind the bus must stop.\n\n[m77] page: Stopping | heading: Stopping for school buses · ¶6 | text\nIn Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus.\n\n[c5] page: Stopping | heading: Stopping for school buses · ¶6 | text\nIf you don't stop, you can be fined heavily and get six demerit points for a first offence.\n\n[m16] page: Stopping | heading: Stopping for pedestrian crossovers · ¶2 | text\nYou must not pass any vehicle within 30 metres of a pedestrian crossover.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1463,
+  "prompt_tokens": 16019,
+  "total_tokens": 17482,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 112.4,
+ "raw": "{\n \"statements\": [\n  {\n   \"id\": \"3.1.1a\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"text (\\\"must not pass\\\")\",\n   \"text\": \"a driver MUST NOT pass any vehicle WHEN the driver is within 30 m of a pedestrian crossover\",\n   \"sources\": [\n    {\n     \"id\": \"m16\",\n     \"quote\": \"You must not pass any vehicle within 30 metres of a pedestrian crossover.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.4.12a\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"text (\\\"must stop\\\")\",\n   \"text\": \"a driver MUST stop WHEN the driver approaches a stopped school bus with its upper alternating red lights flashing\",\n   \"sources\": [\n    {\n     \"id\": \"c1\",\n     \"quote\": \"You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The condition 'regardless of whether you are behind the bus or approaching it from the front' is a clarification that the rule applies to both directions, not a restriction, so it is not written as a clause.\"\n  },\n  {\n   \"id\": \"3.4.12b\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"text (\\\"must stop\\\" from c1, \\\"stop\\\" imperative in c2)\",\n   \"text\": \"a driver MUST stop at least 20 m from the school bus WHEN the driver is approaching a stopped school bus with its upper alternating red lights flashing AND the driver is coming from behind the bus\",\n   \"sources\": [\n    {\n     \"id\": \"c1\",\n     \"quote\": \"You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\"\n    },\n    {\n     \"id\": \"c2\",\n     \"quote\": \"If you are coming from behind the bus, stop at least 20 metres away.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The legal force comes from the lead sentence in c1 ('must stop'); c2 specifies the distance for drivers approaching from behind.\"\n  },\n  {\n   \"id\": \"3.4.12c\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"text (\\\"must stop\\\" from c1, \\\"Do not go\\\" imperative in c3)\",\n   \"text\": \"a driver MUST NOT move the vehicle WHEN the driver is stopped for a school bus with its upper alternating red lights flashing UNTIL the bus moves OR the lights have stopped flashing\",\n   \"sources\": [\n    {\n     \"id\": \"c1\",\n     \"quote\": \"You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\"\n    },\n    {\n     \"id\": \"c3\",\n     \"quote\": \"Do not go until the bus moves or the lights have stopped flashing.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The legal force is derived from the context of the mandatory stop in c1; c3 specifies the condition for resuming movement.\"\n  },\n  {\n   \"id\": \"3.4.12d\",\n   \"type\": \"EXCEPTION\",\n   \"force\": null,\n   \"force_from\": null,\n   \"text\": \"EXCEPTION TO 3.4.12a WHEN the driver is on a road with a median strip AND the driver is approaching the school bus from the front\",\n   \"sources\": [\n    {\n     \"id\": \"c4\",\n     \"quote\": \"If you are on a road with a median strip, only vehicles coming from behind the bus must stop.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [\n    \"3.4.12a\"\n   ],\n   \"note\": \"This exception switches off the duty to stop for drivers approaching from the front on roads with a median strip, as they are not required to stop in this specific configuration.\"\n  },\n  {\n   \"id\": \"3.4.12e\",\n   \"type\": \"FACT\",\n   \"force\": null,\n   \"force_from\": null,\n   \"text\": \"FACT school bus drivers and other witnesses can report vehicles that have illegally passed a school bus IN Ontario\",\n   \"sources\": [\n    {\n     \"id\": \"m77\",\n     \"quote\": \"In Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.4.12f\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"context (penalty: \\\"can be fined heavily and get six demerit points\\\")\",\n   \"text\": \"a driver MUST stop WHEN the driver approaches a stopped school bus with its upper alternating red lights flashing IF VIOLATED a fine AND 6 demerit points\",\n   \"sources\": [\n    {\n     \"id\": \"c1\",\n     \"quote\": \"You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\"\n    },\n    {\n     \"id\": \"c5\",\n     \"quote\": \"If you don't stop, you can be fined heavily and get six demerit points for a first offence.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"This statement links the duty in c1 with the penalty in c5. It is distinct from 3.4.12a to explicitly record the penalty clause as required by the method for joining duties and penalties from different passages.\"\n  }\n ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.1.1a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must not pass\")",
+    "text": "a driver MUST NOT pass any vehicle WHEN the driver is within 30 m of a pedestrian crossover",
+    "sources": [
+     {
+      "id": "m16",
+      "quote": "You must not pass any vehicle within 30 metres of a pedestrian crossover."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.12a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must stop\")",
+    "text": "a driver MUST stop WHEN the driver approaches a stopped school bus with its upper alternating red lights flashing",
+    "sources": [
+     {
+      "id": "c1",
+      "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The condition 'regardless of whether you are behind the bus or approaching it from the front' is a clarification that the rule applies to both directions, not a restriction, so it is not written as a clause."
+   },
+   {
+    "id": "3.4.12b",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must stop\" from c1, \"stop\" imperative in c2)",
+    "text": "a driver MUST stop at least 20 m from the school bus WHEN the driver is approaching a stopped school bus with its upper alternating red lights flashing AND the driver is coming from behind the bus",
+    "sources": [
+     {
+      "id": "c1",
+      "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+     },
+     {
+      "id": "c2",
+      "quote": "If you are coming from behind the bus, stop at least 20 metres away."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The legal force comes from the lead sentence in c1 ('must stop'); c2 specifies the distance for drivers approaching from behind."
+   },
+   {
+    "id": "3.4.12c",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must stop\" from c1, \"Do not go\" imperative in c3)",
+    "text": "a driver MUST NOT move the vehicle WHEN the driver is stopped for a school bus with its upper alternating red lights flashing UNTIL the bus moves OR the lights have stopped flashing",
+    "sources": [
+     {
+      "id": "c1",
+      "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+     },
+     {
+      "id": "c3",
+      "quote": "Do not go until the bus moves or the lights have stopped flashing."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The legal force is derived from the context of the mandatory stop in c1; c3 specifies the condition for resuming movement."
+   },
+   {
+    "id": "3.4.12d",
+    "type": "EXCEPTION",
+    "force": null,
+    "force_from": null,
+    "text": "EXCEPTION TO 3.4.12a WHEN the driver is on a road with a median strip AND the driver is approaching the school bus from the front",
+    "sources": [
+     {
+      "id": "c4",
+      "quote": "If you are on a road with a median strip, only vehicles coming from behind the bus must stop."
+     }
+    ],
+    "flags": [],
+    "links": [
+     "3.4.12a"
+    ],
+    "note": "This exception switches off the duty to stop for drivers approaching from the front on roads with a median strip, as they are not required to stop in this specific configuration."
+   },
+   {
+    "id": "3.4.12e",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT school bus drivers and other witnesses can report vehicles that have illegally passed a school bus IN Ontario",
+    "sources": [
+     {
+      "id": "m77",
+      "quote": "In Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.12f",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (penalty: \"can be fined heavily and get six demerit points\")",
+    "text": "a driver MUST stop WHEN the driver approaches a stopped school bus with its upper alternating red lights flashing IF VIOLATED a fine AND 6 demerit points",
+    "sources": [
+     {
+      "id": "c1",
+      "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+     },
+     {
+      "id": "c5",
+      "quote": "If you don't stop, you can be fined heavily and get six demerit points for a first offence."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "This statement links the duty in c1 with the penalty in c5. It is distinct from 3.4.12a to explicitly record the penalty clause as required by the method for joining duties and penalties from different passages."
+   }
+  ]
+ },
+ "parse_error": null
+}

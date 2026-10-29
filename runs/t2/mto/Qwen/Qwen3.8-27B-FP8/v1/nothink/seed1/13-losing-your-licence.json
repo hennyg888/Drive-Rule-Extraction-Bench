@@ -1,0 +1,54 @@
+{
+ "batch": "Losing your licence",
+ "passages": [
+  "m86"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 1 selected passages from the page \"Losing your licence\".\n\n[m86] page: Losing your licence | heading: Sanctions – dangerous behaviours · item 3 | text\ndriving a motor vehicle to prevent another vehicle from passing\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 165,
+  "prompt_tokens": 15755,
+  "total_tokens": 15920,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 4.1,
+ "raw": "{\n \"statements\": [\n  {\n   \"id\": \"2.1a\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"context (listed under \\\"Sanctions – dangerous behaviours\\\")\",\n   \"text\": \"a driver MUST NOT drive a motor vehicle to prevent another vehicle from passing\",\n   \"sources\": [\n    {\n     \"id\": \"m86\",\n     \"quote\": \"driving a motor vehicle to prevent another vehicle from passing\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": \"The passage is a list item under a sanctions heading, which implies legal force for the behaviour listed.\"\n  }\n ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "2.1a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (listed under \"Sanctions – dangerous behaviours\")",
+    "text": "a driver MUST NOT drive a motor vehicle to prevent another vehicle from passing",
+    "sources": [
+     {
+      "id": "m86",
+      "quote": "driving a motor vehicle to prevent another vehicle from passing"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The passage is a list item under a sanctions heading, which implies legal force for the behaviour listed."
+   }
+  ]
+ },
+ "parse_error": null
+}

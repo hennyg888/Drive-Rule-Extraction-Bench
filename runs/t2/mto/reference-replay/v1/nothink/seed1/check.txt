@@ -1,0 +1,9 @@
+numbers          p04:3.4.12e number 4 not in its sources
+links            p04:3.4.12e EXCEPTION TO p04 not listed in links
+numbers          p05:3.2.3b number 5 not in its sources
+links            p05:3.2.3b EXCEPTION TO p05 not listed in links
+numbers          p05:3.3.1b number 5 not in its sources
+links            p05:3.3.1b SPECIALIZES p05 not listed in links
+numbers          p05:3.4.5c number 5 not in its sources
+links            p05:3.4.5c EXCEPTION TO p05 not listed in links
+82 statements, 8 problems: links 4, numbers 4

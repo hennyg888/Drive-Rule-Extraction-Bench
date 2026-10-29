@@ -1,0 +1,48 @@
+{
+ "batch": "Getting ready to drive",
+ "passages": [
+  "m44"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 1 selected passages from the page \"Getting ready to drive\".\n\n[m44] page: Getting ready to drive | heading: Turn on headlights at night and in poor conditions · ¶1 | text\nUse your low beams when you are less than 60 metres behind another vehicle unless you are passing it.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.1,
+ "raw": "{\"statements\": [{\"id\": \"3.3.1c\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Use\\\")\", \"text\": \"a driver SHOULD use low beams WHEN the driver is less than 60 m behind another vehicle UNLESS the driver is passing it\", \"sources\": [{\"id\": \"m44\", \"quote\": \"Use your low beams when you are less than 60 metres behind another vehicle unless you are passing it.\"}], \"flags\": [], \"note\": null, \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.3.1c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Use\")",
+    "text": "a driver SHOULD use low beams WHEN the driver is less than 60 m behind another vehicle UNLESS the driver is passing it",
+    "sources": [
+     {
+      "id": "m44",
+      "quote": "Use your low beams when you are less than 60 metres behind another vehicle unless you are passing it."
+     }
+    ],
+    "flags": [],
+    "note": null,
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

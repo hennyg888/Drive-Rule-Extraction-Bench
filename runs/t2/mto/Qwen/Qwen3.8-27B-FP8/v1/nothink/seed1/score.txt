@@ -1,0 +1,30 @@
+reference                          88
+model                              95
+matched                            78
+recall                             0.886
+precision                          0.821
+type_agreement                     0.962
+force_agreement                    0.91
+modal_agreement                    0.808
+force_basis_agreement              0.859
+text_similarity_mean               0.768
+vague_span_f1                      0.327
+vague_code_accuracy                1.0
+statements_from_excluded_passages  2
+passage_recall                     0.98
+sentence_recall                    0.97
+check_problems                     {'force': 2, 'flags': 15, 'clauses': 2}
+subset heading condition           15/15 matched
+subset neighbour condition         2/2 matched
+subset heading force               3/3 matched
+subset cross-passage link          3/3 matched
+subset duty apart from penalty     4/4 matched
+subset sources on two pages        6/6 matched
+subset seen in the spec            10/10 matched
+unmatched reference: 1a 1d 3.1.5a 3.2.1b 3.2.3c 3.4.2a 3.4.2b 3.4.5c 3.4.6d 3.6.2b
+passages the reference cites but the model does not: m78 m79
+sentences the reference quotes but the model does not:
+    m47: remain calm and patient.
+    m68: this placard indicates a long commercial vehicle, which is a double tr
+    m78: when approaching any emergency vehicle that is stopped with its red, o
+    m79: when the roadway has two or more lanes of traffic in the same directio

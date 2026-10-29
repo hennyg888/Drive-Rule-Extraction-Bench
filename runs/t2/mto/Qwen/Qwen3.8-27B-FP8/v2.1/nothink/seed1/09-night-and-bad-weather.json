@@ -1,0 +1,187 @@
+{
+ "batch": "Night and bad weather",
+ "passages": [
+  "m45",
+  "m48",
+  "m46",
+  "m47",
+  "m49",
+  "m73"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 6 passages from the page \"Night and bad weather\": m45, m48, m46, m47, m49, m73.\n\n[m45] page: Night and bad weather | heading: Fog › DO · item 5 | text\nBe patient. Avoid passing, changing lanes and crossing traffic.\n\n[m48] page: Night and bad weather | heading: Whiteouts › DO · item 4 | text\nBe patient. Avoid passing, changing lanes and crossing traffic.\n\n[m46] page: Night and bad weather | heading: Fog › Don’t · item 3 | text\nDon't speed up to pass a vehicle moving slowly or to get away from a vehicle that is following too closely.\n\n[m47] page: Night and bad weather | heading: Fog › REMEMBER · item 3 | text\nRemain calm and patient. Don't pass other vehicles or speed up suddenly.\n\n[m49] page: Night and bad weather | heading: Whiteouts › DON'T · item 2 | text\nDon't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely.\n\n[m73] page: Night and bad weather | heading: Snow plows · ¶2 | text\nOn freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow. Do not try to pass between them. This is extremely dangerous because there is not enough room to pass safely, and the ridge of wet snow can throw your vehicle out of control.\n\nWrite the reading notes for all 6 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1498,
+  "prompt_tokens": 11639,
+  "total_tokens": 13137,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 26.3,
+ "raw": "{\n  \"passages\": [\n   {\n    \"id\": \"m45\",\n    \"about_topic\": true,\n    \"says\": \"rule: avoid passing when driving in fog\"\n   },\n   {\n    \"id\": \"m48\",\n    \"about_topic\": true,\n    \"says\": \"rule: avoid passing when driving in a whiteout\"\n   },\n   {\n    \"id\": \"m46\",\n    \"about_topic\": true,\n    \"says\": \"rule: do not speed up to pass a slow vehicle or get away from a close follower when driving in fog\"\n   },\n   {\n    \"id\": \"m47\",\n    \"about_topic\": true,\n    \"says\": \"rule: do not pass other vehicles when driving in fog\"\n   },\n   {\n    \"id\": \"m49\",\n    \"about_topic\": true,\n    \"says\": \"rule: do not attempt to pass a slow vehicle or speed up to get away from a close follower when driving in a whiteout\"\n   },\n   {\n    \"id\": \"m73\",\n    \"about_topic\": true,\n    \"says\": \"fact: snow plows on freeways may be staggered across the road passing a ridge of snow; rule: do not try to pass between them because it is dangerous\"\n   }\n  ],\n  \"statements\": [\n   {\n    \"id\": \"s1\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"Avoid\\\")\",\n    \"text\": \"a driver SHOULD NOT pass another vehicle WHEN driving in fog\",\n    \"sources\": [\n     {\n      \"id\": \"m45\",\n      \"quote\": \"Avoid passing, changing lanes and crossing traffic.\"\n     },\n     {\n      \"id\": \"m47\",\n      \"quote\": \"Don't pass other vehicles or speed up suddenly.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"m45 and m47 both advise against passing in fog. m47 also advises against speeding up suddenly, which is not part of the passing topic.\"\n   },\n   {\n    \"id\": \"s2\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"Avoid\\\")\",\n    \"text\": \"a driver SHOULD NOT pass another vehicle WHEN driving in a whiteout\",\n    \"sources\": [\n     {\n      \"id\": \"m48\",\n      \"quote\": \"Avoid passing, changing lanes and crossing traffic.\"\n     },\n     {\n      \"id\": \"m49\",\n      \"quote\": \"Don't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"m48 and m49 both advise against passing in a whiteout. m49 also advises against speeding up to get away from a close follower, which is not part of the passing topic.\"\n   },\n   {\n    \"id\": \"s3\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"Don't speed up\\\")\",\n    \"text\": \"a driver SHOULD NOT speed up to pass a vehicle moving slowly WHEN driving in fog\",\n    \"sources\": [\n     {\n      \"id\": \"m46\",\n      \"quote\": \"Don't speed up to pass a vehicle moving slowly or to get away from a vehicle that is following too closely.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"This is a specific instance of passing (speeding up to overtake). The alternative purpose (getting away from a close follower) is not passing.\"\n   },\n   {\n    \"id\": \"s4\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"Don't attempt\\\")\",\n    \"text\": \"a driver SHOULD NOT speed up to pass a vehicle moving slowly WHEN driving in a whiteout\",\n    \"sources\": [\n     {\n      \"id\": \"m49\",\n      \"quote\": \"Don't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"This is a specific instance of passing (speeding up to overtake). The alternative purpose (getting away from a close follower) is not passing.\"\n   },\n   {\n    \"id\": \"s5\",\n    \"type\": \"FACT\",\n    \"force\": null,\n    \"force_from\": null,\n    \"text\": \"FACT on freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow\",\n    \"sources\": [\n     {\n      \"id\": \"m73\",\n      \"quote\": \"On freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": null\n   },\n   {\n    \"id\": \"s6\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"imperative (\\\"Do not try\\\")\",\n    \"text\": \"a driver SHOULD NOT pass between snow plows WHEN the snow plows are staggered across the road on a freeway BECAUSE there is not enough room to pass safely AND the ridge of wet snow can throw the vehicle out of control\",\n    \"sources\": [\n     {\n      \"id\": \"m73\",\n      \"quote\": \"Do not try to pass between them. This is extremely dangerous because there is not enough room to pass safely, and the ridge of wet snow can throw your vehicle out of control.\"\n     }\n    ],\n    \"flags\": [\n     {\n      \"code\": \"J\",\n      \"span\": \"enough\",\n      \"note\": \"No measure of room is given.\"\n     }\n    ],\n    \"links\": [\n     \"s5\"\n    ],\n    \"note\": \"The condition 'staggered across the road on a freeway' comes from the preceding sentence describing the plow configuration.\"\n   }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m45",
+    "about_topic": true,
+    "says": "rule: avoid passing when driving in fog"
+   },
+   {
+    "id": "m48",
+    "about_topic": true,
+    "says": "rule: avoid passing when driving in a whiteout"
+   },
+   {
+    "id": "m46",
+    "about_topic": true,
+    "says": "rule: do not speed up to pass a slow vehicle or get away from a close follower when driving in fog"
+   },
+   {
+    "id": "m47",
+    "about_topic": true,
+    "says": "rule: do not pass other vehicles when driving in fog"
+   },
+   {
+    "id": "m49",
+    "about_topic": true,
+    "says": "rule: do not attempt to pass a slow vehicle or speed up to get away from a close follower when driving in a whiteout"
+   },
+   {
+    "id": "m73",
+    "about_topic": true,
+    "says": "fact: snow plows on freeways may be staggered across the road passing a ridge of snow; rule: do not try to pass between them because it is dangerous"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Avoid\")",
+    "text": "a driver SHOULD NOT pass another vehicle WHEN driving in fog",
+    "sources": [
+     {
+      "id": "m45",
+      "quote": "Avoid passing, changing lanes and crossing traffic."
+     },
+     {
+      "id": "m47",
+      "quote": "Don't pass other vehicles or speed up suddenly."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "m45 and m47 both advise against passing in fog. m47 also advises against speeding up suddenly, which is not part of the passing topic."
+   },
+   {
+    "id": "s2",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Avoid\")",
+    "text": "a driver SHOULD NOT pass another vehicle WHEN driving in a whiteout",
+    "sources": [
+     {
+      "id": "m48",
+      "quote": "Avoid passing, changing lanes and crossing traffic."
+     },
+     {
+      "id": "m49",
+      "quote": "Don't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "m48 and m49 both advise against passing in a whiteout. m49 also advises against speeding up to get away from a close follower, which is not part of the passing topic."
+   },
+   {
+    "id": "s3",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Don't speed up\")",
+    "text": "a driver SHOULD NOT speed up to pass a vehicle moving slowly WHEN driving in fog",
+    "sources": [
+     {
+      "id": "m46",
+      "quote": "Don't speed up to pass a vehicle moving slowly or to get away from a vehicle that is following too closely."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "This is a specific instance of passing (speeding up to overtake). The alternative purpose (getting away from a close follower) is not passing."
+   },
+   {
+    "id": "s4",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Don't attempt\")",
+    "text": "a driver SHOULD NOT speed up to pass a vehicle moving slowly WHEN driving in a whiteout",
+    "sources": [
+     {
+      "id": "m49",
+      "quote": "Don't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "This is a specific instance of passing (speeding up to overtake). The alternative purpose (getting away from a close follower) is not passing."
+   },
+   {
+    "id": "s5",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT on freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow",
+    "sources": [
+     {
+      "id": "m73",
+      "quote": "On freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "s6",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Do not try\")",
+    "text": "a driver SHOULD NOT pass between snow plows WHEN the snow plows are staggered across the road on a freeway BECAUSE there is not enough room to pass safely AND the ridge of wet snow can throw the vehicle out of control",
+    "sources": [
+     {
+      "id": "m73",
+      "quote": "Do not try to pass between them. This is extremely dangerous because there is not enough room to pass safely, and the ridge of wet snow can throw your vehicle out of control."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "enough",
+      "note": "No measure of room is given."
+     }
+    ],
+    "links": [
+     "s5"
+    ],
+    "note": "The condition 'staggered across the road on a freeway' comes from the preceding sentence describing the plow configuration."
+   }
+  ]
+ },
+ "parse_error": null
+}

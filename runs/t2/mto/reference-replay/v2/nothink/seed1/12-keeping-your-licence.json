@@ -1,0 +1,44 @@
+{
+ "batch": "Keeping your licence",
+ "passages": [
+  "m80",
+  "m81"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 2 passages from the page \"Keeping your licence\": m80, m81.\n\n[m80] page: Keeping your licence | heading: Table of offences › Three points · item 17 | text\nFailing to slow and carefully pass a stopped emergency vehicle\n\n[m81] page: Keeping your licence | heading: Table of offences › Three points · item 18 | text\nFailing to move, where possible, into another lane when passing a stopped emergency vehicle\n\nWrite the reading notes for all 2 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"passages\": [{\"id\": \"m80\", \"about_topic\": false, \"says\": \"-\"}, {\"id\": \"m81\", \"about_topic\": false, \"says\": \"-\"}], \"statements\": []}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m80",
+    "about_topic": false,
+    "says": "-"
+   },
+   {
+    "id": "m81",
+    "about_topic": false,
+    "says": "-"
+   }
+  ],
+  "statements": []
+ },
+ "parse_error": null
+}

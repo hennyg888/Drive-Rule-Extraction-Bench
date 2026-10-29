@@ -1,0 +1,133 @@
+{
+ "batch": "Freeway driving",
+ "passages": [
+  "m32",
+  "m33",
+  "m91",
+  "m34"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 4 selected passages from the page \"Freeway driving\".\n\n[m32] page: Freeway driving | heading: Driving along a freeway · ¶1 | text\nTraffic should keep to the right, using the left lanes for passing.\n\n[m33] page: Freeway driving | heading: Driving along a freeway · ¶5 | text\nUse the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit, but don't stay there. Drive in the right-hand lane when possible.\n\n[m91] page: Freeway driving | heading: Driving along a freeway · ¶5 | text\nOn many freeways with three or more lanes in each direction, large trucks cannot travel in the far left lane and must use the lane to the right for passing.\n\n[m34] page: Freeway driving | heading: Driving along a freeway · ¶5 | text\nGet into the habit of driving in the right lane, leaving the other lanes clear for passing.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 917,
+  "prompt_tokens": 15912,
+  "total_tokens": 16829,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 113.2,
+ "raw": "{\n \"statements\": [\n  {\n   \"id\": \"3.2.2a\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"text (\\\"should keep\\\")\",\n   \"text\": \"a driver SHOULD keep to the right AND use the left lanes for passing WHILE driving on a freeway\",\n   \"sources\": [\n    {\n     \"id\": \"m32\",\n     \"quote\": \"Traffic should keep to the right, using the left lanes for passing.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.2.2b\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"Use\\\")\",\n   \"text\": \"a driver SHOULD use the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit AND SHOULD NOT stay in the far left lane WHILE driving on a multi-lane freeway\",\n   \"sources\": [\n    {\n     \"id\": \"m33\",\n     \"quote\": \"Use the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit, but don't stay there.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.2.2c\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"Drive\\\")\",\n   \"text\": \"a driver SHOULD drive in the right-hand lane WHEN possible WHILE driving on a freeway\",\n   \"sources\": [\n    {\n     \"id\": \"m33\",\n     \"quote\": \"Drive in the right-hand lane when possible.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"J\",\n     \"span\": \"possible\",\n     \"note\": \"No definition of what makes driving in the right-hand lane possible or impossible.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": null\n  },\n  {\n   \"id\": \"3.2.2d\",\n   \"type\": \"RULE\",\n   \"force\": \"LEGAL\",\n   \"force_from\": \"text (\\\"must use\\\")\",\n   \"text\": \"a truck driver MUST use the lane to the right of the far left lane for passing WHEN the freeway has three or more lanes in each direction AND the driver is in a large truck\",\n   \"sources\": [\n    {\n     \"id\": \"m91\",\n     \"quote\": \"On many freeways with three or more lanes in each direction, large trucks cannot travel in the far left lane and must use the lane to the right for passing.\"\n    }\n   ],\n   \"flags\": [\n    {\n     \"code\": \"S\",\n     \"span\": \"many\",\n     \"note\": \"The rule is stated to apply to 'many' freeways, not all, but no criteria are given for which ones.\"\n    }\n   ],\n   \"links\": [],\n   \"note\": \"The prohibition on traveling in the far left lane is combined with the duty to use the lane to the right, as they describe the same lane usage requirement.\"\n  },\n  {\n   \"id\": \"3.2.2e\",\n   \"type\": \"RULE\",\n   \"force\": \"ADVISORY\",\n   \"force_from\": \"imperative (\\\"Get into the habit\\\")\",\n   \"text\": \"a driver SHOULD drive in the right lane WHILE driving on a freeway BECAUSE this leaves the other lanes clear for passing\",\n   \"sources\": [\n    {\n     \"id\": \"m34\",\n     \"quote\": \"Get into the habit of driving in the right lane, leaving the other lanes clear for passing.\"\n    }\n   ],\n   \"flags\": [],\n   \"links\": [],\n   \"note\": null\n  }\n ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.2.2a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"should keep\")",
+    "text": "a driver SHOULD keep to the right AND use the left lanes for passing WHILE driving on a freeway",
+    "sources": [
+     {
+      "id": "m32",
+      "quote": "Traffic should keep to the right, using the left lanes for passing."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.2.2b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Use\")",
+    "text": "a driver SHOULD use the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit AND SHOULD NOT stay in the far left lane WHILE driving on a multi-lane freeway",
+    "sources": [
+     {
+      "id": "m33",
+      "quote": "Use the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit, but don't stay there."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.2.2c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Drive\")",
+    "text": "a driver SHOULD drive in the right-hand lane WHEN possible WHILE driving on a freeway",
+    "sources": [
+     {
+      "id": "m33",
+      "quote": "Drive in the right-hand lane when possible."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "possible",
+      "note": "No definition of what makes driving in the right-hand lane possible or impossible."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.2.2d",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must use\")",
+    "text": "a truck driver MUST use the lane to the right of the far left lane for passing WHEN the freeway has three or more lanes in each direction AND the driver is in a large truck",
+    "sources": [
+     {
+      "id": "m91",
+      "quote": "On many freeways with three or more lanes in each direction, large trucks cannot travel in the far left lane and must use the lane to the right for passing."
+     }
+    ],
+    "flags": [
+     {
+      "code": "S",
+      "span": "many",
+      "note": "The rule is stated to apply to 'many' freeways, not all, but no criteria are given for which ones."
+     }
+    ],
+    "links": [],
+    "note": "The prohibition on traveling in the far left lane is combined with the duty to use the lane to the right, as they describe the same lane usage requirement."
+   },
+   {
+    "id": "3.2.2e",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Get into the habit\")",
+    "text": "a driver SHOULD drive in the right lane WHILE driving on a freeway BECAUSE this leaves the other lanes clear for passing",
+    "sources": [
+     {
+      "id": "m34",
+      "quote": "Get into the habit of driving in the right lane, leaving the other lanes clear for passing."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   }
+  ]
+ },
+ "parse_error": null
+}

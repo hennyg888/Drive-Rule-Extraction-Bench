@@ -1,0 +1,132 @@
+{
+ "batch": "Night and bad weather",
+ "passages": [
+  "m45",
+  "m48",
+  "m46",
+  "m47",
+  "m49",
+  "m73"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 6 selected passages from the page \"Night and bad weather\".\n\n[m45] page: Night and bad weather | heading: Fog › DO · item 5 | text\nBe patient. Avoid passing, changing lanes and crossing traffic.\n\n[m48] page: Night and bad weather | heading: Whiteouts › DO · item 4 | text\nBe patient. Avoid passing, changing lanes and crossing traffic.\n\n[m46] page: Night and bad weather | heading: Fog › Don’t · item 3 | text\nDon't speed up to pass a vehicle moving slowly or to get away from a vehicle that is following too closely.\n\n[m47] page: Night and bad weather | heading: Fog › REMEMBER · item 3 | text\nRemain calm and patient. Don't pass other vehicles or speed up suddenly.\n\n[m49] page: Night and bad weather | heading: Whiteouts › DON'T · item 2 | text\nDon't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely.\n\n[m73] page: Night and bad weather | heading: Snow plows · ¶2 | text\nOn freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow. Do not try to pass between them. This is extremely dangerous because there is not enough room to pass safely, and the ridge of wet snow can throw your vehicle out of control.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"statements\": [{\"id\": \"3.3.2a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"text (\\\"Avoid\\\") and imperative (\\\"Don't\\\")\", \"text\": \"a driver SHOULD NOT pass WHEN driving in fog\", \"sources\": [{\"id\": \"m45\", \"quote\": \"Be patient. Avoid passing, changing lanes and crossing traffic.\"}, {\"id\": \"m47\", \"quote\": \"Remain calm and patient. Don't pass other vehicles or speed up suddenly.\"}], \"flags\": [], \"note\": \"The fog advice says \\\"Avoid passing\\\" in one list and \\\"Don't pass\\\" in another; both map to SHOULD NOT.\", \"links\": []}, {\"id\": \"3.3.2b\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Don't\\\")\", \"text\": \"a driver SHOULD NOT speed up to pass a slow-moving vehicle WHEN driving in fog\", \"sources\": [{\"id\": \"m46\", \"quote\": \"Don't speed up to pass a vehicle moving slowly or to get away from a vehicle that is following too closely.\"}], \"flags\": [], \"note\": null, \"links\": []}, {\"id\": \"3.3.3a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"text (\\\"Avoid\\\")\", \"text\": \"a driver SHOULD NOT pass WHEN driving in blowing snow or a whiteout\", \"sources\": [{\"id\": \"m48\", \"quote\": \"Be patient. Avoid passing, changing lanes and crossing traffic.\"}], \"flags\": [], \"note\": null, \"links\": []}, {\"id\": \"3.3.3b\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Don't\\\")\", \"text\": \"a driver SHOULD NOT attempt to pass a slow-moving vehicle WHEN driving in blowing snow or a whiteout\", \"sources\": [{\"id\": \"m49\", \"quote\": \"Don't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely.\"}], \"flags\": [], \"note\": null, \"links\": []}, {\"id\": \"3.4.9b\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Do not try\\\")\", \"text\": \"a driver SHOULD NOT pass between snow plows WHEN several snow plows are staggered across a freeway BECAUSE there is not [?enough] room to pass [?safely] AND the ridge of wet snow can throw the vehicle out of control\", \"sources\": [{\"id\": \"m73\", \"quote\": \"On freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow. Do not try to pass between them. This is extremely dangerous because there is not enough room to pass safely, and the ridge of wet snow can throw your vehicle out of control.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"enough\", \"note\": \"Judgment term.\"}, {\"code\": \"J\", \"span\": \"safely\", \"note\": \"Judgment term.\"}], \"note\": null, \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.3.2a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"Avoid\") and imperative (\"Don't\")",
+    "text": "a driver SHOULD NOT pass WHEN driving in fog",
+    "sources": [
+     {
+      "id": "m45",
+      "quote": "Be patient. Avoid passing, changing lanes and crossing traffic."
+     },
+     {
+      "id": "m47",
+      "quote": "Remain calm and patient. Don't pass other vehicles or speed up suddenly."
+     }
+    ],
+    "flags": [],
+    "note": "The fog advice says \"Avoid passing\" in one list and \"Don't pass\" in another; both map to SHOULD NOT.",
+    "links": []
+   },
+   {
+    "id": "3.3.2b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Don't\")",
+    "text": "a driver SHOULD NOT speed up to pass a slow-moving vehicle WHEN driving in fog",
+    "sources": [
+     {
+      "id": "m46",
+      "quote": "Don't speed up to pass a vehicle moving slowly or to get away from a vehicle that is following too closely."
+     }
+    ],
+    "flags": [],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.3.3a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"Avoid\")",
+    "text": "a driver SHOULD NOT pass WHEN driving in blowing snow or a whiteout",
+    "sources": [
+     {
+      "id": "m48",
+      "quote": "Be patient. Avoid passing, changing lanes and crossing traffic."
+     }
+    ],
+    "flags": [],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.3.3b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Don't\")",
+    "text": "a driver SHOULD NOT attempt to pass a slow-moving vehicle WHEN driving in blowing snow or a whiteout",
+    "sources": [
+     {
+      "id": "m49",
+      "quote": "Don't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely."
+     }
+    ],
+    "flags": [],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.4.9b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Do not try\")",
+    "text": "a driver SHOULD NOT pass between snow plows WHEN several snow plows are staggered across a freeway BECAUSE there is not [?enough] room to pass [?safely] AND the ridge of wet snow can throw the vehicle out of control",
+    "sources": [
+     {
+      "id": "m73",
+      "quote": "On freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow. Do not try to pass between them. This is extremely dangerous because there is not enough room to pass safely, and the ridge of wet snow can throw your vehicle out of control."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "enough",
+      "note": "Judgment term."
+     },
+     {
+      "code": "J",
+      "span": "safely",
+      "note": "Judgment term."
+     }
+    ],
+    "note": null,
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

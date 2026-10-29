@@ -1,0 +1,7 @@
+numbers          p05:s21    number 1 not in its sources
+quote            p08:s1     m78: quote not found verbatim: 'Reacting to a stopped emergency vehicle or tow truck'
+quote            p08:s2     m79: quote not found verbatim: 'Reacting to a stopped emergency vehicle or tow truck'
+quote            p08:s2     m78: quote not found verbatim: 'Reacting to a stopped emergency vehicle or tow truck'
+quote            p09:s4     m49: quote not found verbatim: "Don't attempt to pass a vehicle moving slowly or to get away from a vehicle that"
+flags            p12:s1     vague span 'carefully' is in the text without a [?…] mark
+104 statements, 6 problems: flags 1, numbers 1, quote 4

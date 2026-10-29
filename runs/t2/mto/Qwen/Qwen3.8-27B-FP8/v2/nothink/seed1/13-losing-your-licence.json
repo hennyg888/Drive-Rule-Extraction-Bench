@@ -1,0 +1,61 @@
+{
+ "batch": "Losing your licence",
+ "passages": [
+  "m86"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 1 passages from the page \"Losing your licence\": m86.\n\n[m86] page: Losing your licence | heading: Sanctions – dangerous behaviours · item 3 | text\ndriving a motor vehicle to prevent another vehicle from passing\n\nWrite the reading notes for all 1 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 255,
+  "prompt_tokens": 11095,
+  "total_tokens": 11350,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 302.1,
+ "raw": "{\n  \"passages\": [\n    {\n     \"id\": \"m86\",\n     \"about_topic\": true,\n     \"says\": \"penalty context: driving to prevent another vehicle from passing is a dangerous behaviour subject to sanctions\"\n    }\n  ],\n  \"statements\": [\n    {\n     \"id\": \"s1\",\n     \"type\": \"RULE\",\n     \"force\": \"LEGAL\",\n     \"force_from\": \"context (\\\"Sanctions – dangerous behaviours\\\")\",\n     \"text\": \"a driver MUST NOT drive a motor vehicle to prevent another vehicle from passing\",\n     \"sources\": [\n         {\n             \"id\": \"m86\",\n             \"quote\": \"driving a motor vehicle to prevent another vehicle from passing\"\n         }\n     ],\n     \"flags\": [],\n     \"links\": [],\n     \"note\": \"The passage lists this behaviour under 'Sanctions – dangerous behaviours', implying it is a prohibited act subject to legal penalties. The specific penalty (fine, demerits, suspension) is not stated in this passage, so no IF VIOLATED clause is added.\"\n    }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m86",
+    "about_topic": true,
+    "says": "penalty context: driving to prevent another vehicle from passing is a dangerous behaviour subject to sanctions"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (\"Sanctions – dangerous behaviours\")",
+    "text": "a driver MUST NOT drive a motor vehicle to prevent another vehicle from passing",
+    "sources": [
+     {
+      "id": "m86",
+      "quote": "driving a motor vehicle to prevent another vehicle from passing"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The passage lists this behaviour under 'Sanctions – dangerous behaviours', implying it is a prohibited act subject to legal penalties. The specific penalty (fine, demerits, suspension) is not stated in this passage, so no IF VIOLATED clause is added."
+   }
+  ]
+ },
+ "parse_error": null
+}

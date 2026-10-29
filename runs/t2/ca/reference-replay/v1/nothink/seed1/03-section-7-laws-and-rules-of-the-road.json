@@ -1,0 +1,126 @@
+{
+ "batch": "Section 7: Laws and Rules of the Road",
+ "passages": [
+  "p39",
+  "p40",
+  "p41",
+  "p42",
+  "p43",
+  "p44",
+  "p45",
+  "p46",
+  "p47"
+ ],
+ "user": "Handbook: California Driver's Handbook (California DMV, United States)\nUnits: US customary (ft, mi, mph)\nTopic: passing\nBatch: the 9 selected passages from the page \"Section 7: Laws and Rules of the Road\".\n\n[p39] page: Section 7: Laws and Rules of the Road | heading: Traffic Control › Signs › Red YIELD Sign · ¶1 | para\nSlow down and be ready to stop to let any vehicle, bicyclist, or pedestrian pass before you proceed.\n\n[p40] page: Section 7: Laws and Rules of the Road | heading: Traffic Control › Signs › Yellow and Black Circular Sign or X-shaped Sign · ¶1 | para\nYou are approaching a railroad crossing. Look, listen, slow down, and prepare to stop. Let any trains pass before you proceed.\n\n[p41] page: Section 7: Laws and Rules of the Road | heading: Traffic Control › Signs › White Rectangular Sign · ¶1 | para\nCommunicates many important rules you must obey.\n\n[p42] page: Section 7: Laws and Rules of the Road | heading: Traffic Control › Signs › Warning Signs · image | figure\nFigure: Alt text: “Examples of Red and White Regulatory Signs, White Regulatory Signs, Highway Construction and Maintenance Signs, Guide Signs, Hazardous Loads Placards, and Slow Moving Vehicle Placard”\n\n[p43] page: Section 7: Laws and Rules of the Road | heading: Right-of-Way Rules: Who Goes First? › Roundabouts · ¶2 | para\nHow to use a roundabout:\n\n[p44] page: Section 7: Laws and Rules of the Road | heading: Right-of-Way Rules: Who Goes First? › Roundabouts · item 5 | step\nTravel in a counter-clockwise direction. Do not stop or pass.\n\n[p45] page: Section 7: Laws and Rules of the Road | heading: Right-of-Way Rules: Who Goes First? › Pedestrians · ¶5 | para\nOther things to keep in mind:\n\n[p46] page: Section 7: Laws and Rules of the Road | heading: Right-of-Way Rules: Who Goes First? › Pedestrians · item 4 | item\nDo not pass a vehicle stopped at a crosswalk. You may not be able to see a pedestrian crossing the street.\n\n[p47] page: Section 7: Laws and Rules of the Road | heading: Right-of-Way Rules: Who Goes First? › Mountain Roads · ¶1 | para\nIf two vehicles meet on a steep narrow road and neither vehicle can pass, the vehicle facing uphill has the right-of-way. The vehicle facing downhill has more control when backing up the hill. The vehicle facing downhill should back up until the vehicle going uphill can pass.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"statements\": [{\"id\": \"3.1.7a\", \"type\": \"RULE\", \"force\": \"LEGAL\", \"force_from\": \"context (White Rectangular Sign: \\\"Communicates many important rules you must obey\\\")\", \"text\": \"a driver MUST NOT pass WHEN a \\\"do not pass\\\" sign is posted\", \"sources\": [{\"id\": \"p41\", \"quote\": \"Communicates many important rules you must obey.\"}, {\"id\": \"p42\", \"quote\": \"Examples of Red and White Regulatory Signs, White Regulatory Signs, Highway Construction and Maintenance Signs, Guide Signs, Hazardous Loads Placards, and Slow Moving Vehicle Placard\"}], \"flags\": [], \"note\": \"The sign appears only inside the sign chart image: a white rectangular sign reading DO NOT PASS, under \\\"White Regulatory Signs\\\". The alt text names only the sign groups, and the handbook text never mentions the sign. The legal force comes from the White Rectangular Sign paragraph; the chart itself sits under the \\\"Warning Signs\\\" heading.\", \"links\": []}, {\"id\": \"3.1.9a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Do not \\u2026 pass\\\")\", \"text\": \"a driver SHOULD NOT pass WHEN the driver is in a roundabout\", \"sources\": [{\"id\": \"p43\", \"quote\": \"How to use a roundabout:\"}, {\"id\": \"p44\", \"quote\": \"Travel in a counter-clockwise direction. Do not stop or pass.\"}], \"flags\": [], \"note\": \"\\\"Do not stop or pass\\\" sits inside a step of the roundabout procedure but holds whatever the step order, so it is its own RULE; the rest of the procedure is not about passing.\", \"links\": []}, {\"id\": \"3.4.11a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Do not pass\\\")\", \"text\": \"a driver SHOULD NOT pass a vehicle WHEN the vehicle is stopped at a crosswalk BECAUSE the driver may not be able to see a pedestrian crossing the street\", \"sources\": [{\"id\": \"p45\", \"quote\": \"Other things to keep in mind:\"}, {\"id\": \"p46\", \"quote\": \"Do not pass a vehicle stopped at a crosswalk. You may not be able to see a pedestrian crossing the street.\"}], \"flags\": [], \"note\": \"\\\"May not be able to see\\\" states a possibility, not a prohibition, so it is the reason.\", \"links\": []}, {\"id\": \"3.6.1b\", \"type\": \"RULE\", \"force\": \"LEGAL\", \"force_from\": \"context (White Rectangular Sign: \\\"Communicates many important rules you must obey\\\")\", \"text\": \"a driver in [?slower traffic] MUST keep right WHEN a \\\"slower traffic keep right\\\" sign is posted\", \"sources\": [{\"id\": \"p41\", \"quote\": \"Communicates many important rules you must obey.\"}, {\"id\": \"p42\", \"quote\": \"Examples of Red and White Regulatory Signs, White Regulatory Signs, Highway Construction and Maintenance Signs, Guide Signs, Hazardous Loads Placards, and Slow Moving Vehicle Placard\"}], \"flags\": [{\"code\": \"J\", \"span\": \"slower traffic\", \"note\": \"No speed given; slower than the traffic around it.\"}], \"note\": \"Like the \\\"do not pass\\\" sign (3.1.7a), this sign appears only inside the sign chart image, under \\\"White Regulatory Signs\\\"; the alt text and the handbook text do not name it. Keeping right leaves the left lane for passing (2.1a).\", \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.1.7a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (White Rectangular Sign: \"Communicates many important rules you must obey\")",
+    "text": "a driver MUST NOT pass WHEN a \"do not pass\" sign is posted",
+    "sources": [
+     {
+      "id": "p41",
+      "quote": "Communicates many important rules you must obey."
+     },
+     {
+      "id": "p42",
+      "quote": "Examples of Red and White Regulatory Signs, White Regulatory Signs, Highway Construction and Maintenance Signs, Guide Signs, Hazardous Loads Placards, and Slow Moving Vehicle Placard"
+     }
+    ],
+    "flags": [],
+    "note": "The sign appears only inside the sign chart image: a white rectangular sign reading DO NOT PASS, under \"White Regulatory Signs\". The alt text names only the sign groups, and the handbook text never mentions the sign. The legal force comes from the White Rectangular Sign paragraph; the chart itself sits under the \"Warning Signs\" heading.",
+    "links": []
+   },
+   {
+    "id": "3.1.9a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Do not … pass\")",
+    "text": "a driver SHOULD NOT pass WHEN the driver is in a roundabout",
+    "sources": [
+     {
+      "id": "p43",
+      "quote": "How to use a roundabout:"
+     },
+     {
+      "id": "p44",
+      "quote": "Travel in a counter-clockwise direction. Do not stop or pass."
+     }
+    ],
+    "flags": [],
+    "note": "\"Do not stop or pass\" sits inside a step of the roundabout procedure but holds whatever the step order, so it is its own RULE; the rest of the procedure is not about passing.",
+    "links": []
+   },
+   {
+    "id": "3.4.11a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Do not pass\")",
+    "text": "a driver SHOULD NOT pass a vehicle WHEN the vehicle is stopped at a crosswalk BECAUSE the driver may not be able to see a pedestrian crossing the street",
+    "sources": [
+     {
+      "id": "p45",
+      "quote": "Other things to keep in mind:"
+     },
+     {
+      "id": "p46",
+      "quote": "Do not pass a vehicle stopped at a crosswalk. You may not be able to see a pedestrian crossing the street."
+     }
+    ],
+    "flags": [],
+    "note": "\"May not be able to see\" states a possibility, not a prohibition, so it is the reason.",
+    "links": []
+   },
+   {
+    "id": "3.6.1b",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (White Rectangular Sign: \"Communicates many important rules you must obey\")",
+    "text": "a driver in [?slower traffic] MUST keep right WHEN a \"slower traffic keep right\" sign is posted",
+    "sources": [
+     {
+      "id": "p41",
+      "quote": "Communicates many important rules you must obey."
+     },
+     {
+      "id": "p42",
+      "quote": "Examples of Red and White Regulatory Signs, White Regulatory Signs, Highway Construction and Maintenance Signs, Guide Signs, Hazardous Loads Placards, and Slow Moving Vehicle Placard"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "slower traffic",
+      "note": "No speed given; slower than the traffic around it."
+     }
+    ],
+    "note": "Like the \"do not pass\" sign (3.1.7a), this sign appears only inside the sign chart image, under \"White Regulatory Signs\"; the alt text and the handbook text do not name it. Keeping right leaves the left lane for passing (2.1a).",
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

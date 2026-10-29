@@ -1,0 +1,2913 @@
+{
+ "passages": [
+  {
+   "id": "m44",
+   "about_topic": true,
+   "says": "rule: use low beams when less than 60 m behind another vehicle unless passing (passing-relevant: the low-beam requirement is lifted while passing)"
+  },
+  {
+   "id": "m7",
+   "about_topic": true,
+   "says": "rule: keep to the right of the road or in the right-hand lane on multi-lane roads, unless turning left or passing another vehicle (the UNLESS clause gives the passing exception that allows leaving the right position)"
+  },
+  {
+   "id": "m76",
+   "about_topic": true,
+   "says": "rule: do not pass a vehicle stopped at a crosswalk, with reason"
+  },
+  {
+   "id": "m54",
+   "about_topic": true,
+   "says": "fact: cyclists can use any part of the lane if necessary for safety, introducing a list of purposes"
+  },
+  {
+   "id": "m55",
+   "about_topic": true,
+   "says": "fact item: a purpose is to discourage passing where the lane is too narrow to be shared safely"
+  },
+  {
+   "id": "m59",
+   "about_topic": true,
+   "says": "figure: Diagram 2-11 referenced by the 1 m cyclist-passing rule"
+  },
+  {
+   "id": "m56",
+   "about_topic": true,
+   "says": "legal rule: maintain a minimum distance of 1 m when passing a cyclist where practical"
+  },
+  {
+   "id": "m57",
+   "about_topic": true,
+   "says": "penalty: failure to maintain the 1 m distance may result in a fine and 2 demerit points"
+  },
+  {
+   "id": "m58",
+   "about_topic": true,
+   "says": "advice: change lanes to pass a cyclist whenever possible"
+  },
+  {
+   "id": "m60",
+   "about_topic": true,
+   "says": "advice: do not sound the horn unnecessarily when passing a cyclist; if using the horn is felt necessary, tap it quickly and lightly from some distance"
+  },
+  {
+   "id": "m96",
+   "about_topic": true,
+   "says": "advice: check for a passing cyclist before opening a door of a parked vehicle"
+  },
+  {
+   "id": "m65",
+   "about_topic": true,
+   "says": "advice: do not cut in front closely of a large vehicle; allow more room when passing a large vehicle"
+  },
+  {
+   "id": "m66",
+   "about_topic": true,
+   "says": "fact: a large vehicle can create turbulence that may affect control when passing"
+  },
+  {
+   "id": "m69",
+   "about_topic": true,
+   "says": "advice: stay well back from farm machinery; do not pass until safe"
+  },
+  {
+   "id": "m70",
+   "about_topic": true,
+   "says": "advice: maintain a safe following distance from a horse-drawn vehicle; only pass when safe"
+  },
+  {
+   "id": "m71",
+   "about_topic": true,
+   "says": "advice: give as much distance as possible when passing a horse-drawn vehicle, with reason"
+  },
+  {
+   "id": "c1",
+   "about_topic": true,
+   "says": "rule: must stop when approaching a stopped school bus with upper alternating red lights flashing, from either direction (passing is prohibited); penalty from c5 attached"
+  },
+  {
+   "id": "c2",
+   "about_topic": true,
+   "says": "rule: when coming from behind the bus, stop at least 20 m from the bus"
+  },
+  {
+   "id": "c3",
+   "about_topic": true,
+   "says": "rule: do not go (pass) until the bus moves or the lights stop flashing"
+  },
+  {
+   "id": "c4",
+   "about_topic": true,
+   "says": "exception: with a median strip, only vehicles from behind the bus must stop (front-approaching vehicles are exempt)"
+  },
+  {
+   "id": "m77",
+   "about_topic": true,
+   "says": "fact: school bus drivers and other witnesses can report vehicles that have illegally passed a school bus"
+  },
+  {
+   "id": "c5",
+   "about_topic": true,
+   "says": "penalty for not stopping (illegally passing) a school bus: heavy fine and 6 demerit points for a first offence"
+  },
+  {
+   "id": "m16",
+   "about_topic": true,
+   "says": "rule: must not pass any vehicle within 30 m of a pedestrian crossover"
+  },
+  {
+   "id": "m51",
+   "about_topic": true,
+   "says": "fact: motorcycles, bicycles, limited-speed motorcycles and mopeds often pull to the side of the lane; rule: do not pass in the same lane; rule: pass these vehicles by changing lanes"
+  },
+  {
+   "id": "m1",
+   "about_topic": true,
+   "says": "fact: changing position on the road involves changing lanes or overtaking and passing another vehicle"
+  },
+  {
+   "id": "m4",
+   "about_topic": true,
+   "says": "rule: be sure there is enough space and time to complete the move safely before beginning a change of position"
+  },
+  {
+   "id": "m2",
+   "about_topic": true,
+   "says": "definition: passing is changing lanes to move past a slower vehicle"
+  },
+  {
+   "id": "m3",
+   "about_topic": true,
+   "says": "fact: not all vehicles travel at the same speed; cyclists, road service vehicles and drivers preparing to turn are usually slower than through traffic"
+  },
+  {
+   "id": "m5",
+   "about_topic": true,
+   "says": "rule: never overtake and pass unless sure it can be done without danger to self or others"
+  },
+  {
+   "id": "m72",
+   "about_topic": true,
+   "says": "rule: do not pass moving snow plows under any conditions"
+  },
+  {
+   "id": "m6",
+   "about_topic": true,
+   "says": "rule: if in doubt, do not pass"
+  },
+  {
+   "id": "m8",
+   "about_topic": true,
+   "says": "lead: introduces the steps for passing a vehicle"
+  },
+  {
+   "id": "m9",
+   "about_topic": true,
+   "says": "procedure step: use left-turn signal and check that the way is clear ahead and before moving into the passing lane"
+  },
+  {
+   "id": "m10",
+   "about_topic": true,
+   "says": "procedure step: watch for hidden bicycles and small vehicles, vehicles turning left, and vehicles or pedestrians entering the road"
+  },
+  {
+   "id": "m11",
+   "about_topic": true,
+   "says": "procedure step: change lanes only after signalling; after overtaking, signal to move back and change lanes when the entire front is visible in the inside mirror"
+  },
+  {
+   "id": "m12",
+   "about_topic": true,
+   "says": "rule: be careful not to cut off a vehicle by suddenly moving in front of it"
+  },
+  {
+   "id": "m13",
+   "about_topic": true,
+   "says": "rule: if the vehicle being passed speeds up, do not race; go back to the original lane"
+  },
+  {
+   "id": "m85",
+   "about_topic": true,
+   "says": "rule (law): do not speed up when another driver is trying to pass; it is unlawful and dangerous"
+  },
+  {
+   "id": "m14",
+   "about_topic": true,
+   "says": "figure: diagram showing how to pass another vehicle"
+  },
+  {
+   "id": "m15",
+   "about_topic": true,
+   "says": "rule (law): passing within 30 m of a pedestrian crossover is not permitted"
+  },
+  {
+   "id": "m17",
+   "about_topic": true,
+   "says": "rule (law): passing left of a centreline is not permitted within 30 m of a bridge, viaduct or tunnel"
+  },
+  {
+   "id": "m18",
+   "about_topic": true,
+   "says": "rule: do not pass when approaching the crest of a hill or on a curve with obstructed vision and insufficient clear distance"
+  },
+  {
+   "id": "m50",
+   "about_topic": true,
+   "says": "rule: when passing parked vehicles, watch for people suddenly opening doors or doors opened to load and unload"
+  },
+  {
+   "id": "m84",
+   "about_topic": true,
+   "says": "rule: when faster traffic wants to pass, move to the right and let it pass in safety"
+  },
+  {
+   "id": "m89",
+   "about_topic": true,
+   "says": "rule: when being passed on an undivided road, pay attention to oncoming traffic and move closer to the right side; be prepared to slow down to prevent a collision"
+  },
+  {
+   "id": "m90",
+   "about_topic": true,
+   "says": "fact: on many 3+ lane high-speed roads trucks are not allowed in the far left lane, making the next lane the truck passing lane; rule: move right when a truck wants to pass"
+  },
+  {
+   "id": "m52",
+   "about_topic": true,
+   "says": "figure: diagram showing how to pass another vehicle at night"
+  },
+  {
+   "id": "m39",
+   "about_topic": true,
+   "says": "rule: be very careful when passing at night"
+  },
+  {
+   "id": "m40",
+   "about_topic": true,
+   "says": "lead: introduces steps for passing at night when the way is clear"
+  },
+  {
+   "id": "m41",
+   "about_topic": true,
+   "says": "procedure step: switch headlights to low beams as you approach from behind"
+  },
+  {
+   "id": "m42",
+   "about_topic": true,
+   "says": "procedure step: signal, check mirrors and blind spot, pull out to pass; switch on high beams alongside the vehicle"
+  },
+  {
+   "id": "m43",
+   "about_topic": true,
+   "says": "procedure step: when the front of the vehicle is visible in the rear view mirror, pull back into the right lane and signal"
+  },
+  {
+   "id": "m27",
+   "about_topic": true,
+   "says": "figure: diagram of a passing or climbing lane"
+  },
+  {
+   "id": "m28",
+   "about_topic": true,
+   "says": "fact: some roads have special passing or climbing lanes that let slower vehicles move right so faster ones can pass in the left lane"
+  },
+  {
+   "id": "m29",
+   "about_topic": true,
+   "says": "fact: an advance sign warns of an upcoming passing lane; another sign warns when the lane is ending so drivers can merge"
+  },
+  {
+   "id": "m38",
+   "about_topic": true,
+   "says": "rule (law): may drive on the right shoulder only to pass a left-turning vehicle and only if paved; rule (law): may not pass on the left shoulder, paved or not"
+  },
+  {
+   "id": "m35",
+   "about_topic": true,
+   "says": "fact: most passing is done on the left; rule (law): may pass on the right on multi-lane or one-way roads and when overtaking a streetcar or a left-turning vehicle"
+  },
+  {
+   "id": "m36",
+   "about_topic": true,
+   "says": "fact: passing on the right can be more dangerous than passing on the left"
+  },
+  {
+   "id": "m37",
+   "about_topic": true,
+   "says": "rule: if in the left most lane with a slower vehicle ahead, wait for it to move right; rule: do not suddenly change lanes and pass on the right"
+  },
+  {
+   "id": "m61",
+   "about_topic": true,
+   "says": "figure: vehicle stopped the required 2 m behind the rear doors of a stopped streetcar"
+  },
+  {
+   "id": "m62",
+   "about_topic": true,
+   "says": "rule (law): must pass streetcars on the right unless on a one-way road"
+  },
+  {
+   "id": "m63",
+   "about_topic": true,
+   "says": "rule (law): stay at least 2 m behind the rear doors at streetcar stops where passengers get on/off; does not apply where an area is set aside for streetcar passengers"
+  },
+  {
+   "id": "m64",
+   "about_topic": true,
+   "says": "rule: always pass streetcar stop areas at a reasonable speed and be prepared for pedestrians to make sudden or unexpected moves"
+  },
+  {
+   "id": "m53",
+   "about_topic": true,
+   "says": "rule: wait for a smaller vehicle to move right before passing it when making a left turn"
+  },
+  {
+   "id": "c6",
+   "about_topic": true,
+   "says": "rule: when making a left turn behind one of these vehicles, do not pull up beside it to make the turn at the same time"
+  },
+  {
+   "id": "c7",
+   "about_topic": true,
+   "says": "rule: stay behind the vehicle and turn when the way is clear"
+  },
+  {
+   "id": "m19",
+   "about_topic": true,
+   "says": "rule: left-turn lanes must not be used for passing"
+  },
+  {
+   "id": "m32",
+   "about_topic": true,
+   "says": "rule: keep to the right and use left lanes for passing when driving along a freeway"
+  },
+  {
+   "id": "m33",
+   "about_topic": true,
+   "says": "rule: use the far left lane of a multi-lane freeway to pass traffic slower than the speed limit; rule: do not stay in the far left lane; rule: drive in the right lane when possible"
+  },
+  {
+   "id": "m91",
+   "about_topic": true,
+   "says": "rule (law): large trucks cannot travel in the far left lane on many freeways with 3 or more lanes in each direction; rule (law): they must use the lane to the right of the far left lane for passing"
+  },
+  {
+   "id": "m34",
+   "about_topic": true,
+   "says": "rule: drive in the right lane and leave the other lanes clear for passing when driving along a freeway"
+  },
+  {
+   "id": "m92",
+   "about_topic": true,
+   "says": "rule: slow down and pass with caution when workers are on the road, to prevent a collision"
+  },
+  {
+   "id": "m93",
+   "about_topic": true,
+   "says": "rule: slow down and pass carefully when seeing an animal on or near the road, because it may bolt onto the road"
+  },
+  {
+   "id": "m95",
+   "about_topic": true,
+   "says": "rule: wait for an approaching emergency vehicle to pass; watch for other emergency vehicles responding to the same call"
+  },
+  {
+   "id": "m78",
+   "about_topic": true,
+   "says": "rule (law): reduce speed and proceed with caution when approaching a stopped emergency vehicle with red or red-and-blue lights flashing or a tow truck with amber lights flashing in the same direction of travel"
+  },
+  {
+   "id": "m79",
+   "about_topic": true,
+   "says": "rule (law): move into a lane away from the stopped vehicle when the road has 2 or more lanes in the same direction, if safe, in addition to the m78 duty"
+  },
+  {
+   "id": "m45",
+   "about_topic": true,
+   "says": "rule (advice): avoid passing WHEN driving in fog (condition from the Fog heading); 'Be patient', 'changing lanes' and 'crossing traffic' are general fog advice, not about passing"
+  },
+  {
+   "id": "m48",
+   "about_topic": true,
+   "says": "rule (advice): avoid passing WHEN driving in a whiteout (condition from the Whiteouts heading); 'Be patient', 'changing lanes' and 'crossing traffic' are general whiteout advice, not about passing"
+  },
+  {
+   "id": "m46",
+   "about_topic": true,
+   "says": "rule (advice): don't speed up to pass a vehicle moving slowly WHEN driving in fog; 'to get away from a vehicle that is following too closely' is about tailgating, not passing"
+  },
+  {
+   "id": "m47",
+   "about_topic": true,
+   "says": "rule (advice): don't pass other vehicles WHEN driving in fog (same content as m45's 'avoid passing', so merged); 'Remain calm and patient' and 'speed up suddenly' are general fog advice, not about passing"
+  },
+  {
+   "id": "m49",
+   "about_topic": true,
+   "says": "rule (advice): don't attempt to pass a vehicle moving slowly WHEN driving in a whiteout; 'speed up to get away from a vehicle that is following too closely' is about tailgating, not passing"
+  },
+  {
+   "id": "m73",
+   "about_topic": true,
+   "says": "fact: snow plows on freeways may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow; rule (advice): do not try to pass between snow plows WHEN they are staggered on a freeway, because there is not enough room and the ridge of wet snow can throw the vehicle out of control"
+  },
+  {
+   "id": "m25",
+   "about_topic": true,
+   "says": "figure: the regulatory sign that m26's 'do not pass' caption describes"
+  },
+  {
+   "id": "m26",
+   "about_topic": true,
+   "says": "rule (law, regulatory sign): do not pass on the road where this sign is posted"
+  },
+  {
+   "id": "c8",
+   "about_topic": true,
+   "says": "rule (law, 'must'): slow traffic on multi-lane roads must keep right, keeping the left clear for passing"
+  },
+  {
+   "id": "c9",
+   "about_topic": true,
+   "says": "figure: the regulatory sign that c8's 'slow traffic keep right' caption describes"
+  },
+  {
+   "id": "m30",
+   "about_topic": true,
+   "says": "figure: the regulatory sign that m31's 'keep to the right lane' caption describes"
+  },
+  {
+   "id": "m31",
+   "about_topic": true,
+   "says": "rule (law, regulatory sign): keep to the right lane, except when passing on two-lane sections where climbing or passing lanes are provided"
+  },
+  {
+   "id": "m94",
+   "about_topic": true,
+   "says": "fact: the downward lines on a warning sign show the side on which a driver may safely pass"
+  },
+  {
+   "id": "m74",
+   "about_topic": true,
+   "says": "figure: the temporary condition sign that m75's pilot/pace vehicle caption describes"
+  },
+  {
+   "id": "m75",
+   "about_topic": true,
+   "says": "rule: do not pass a pilot vehicle or pace vehicle bearing this sign"
+  },
+  {
+   "id": "m68",
+   "about_topic": true,
+   "says": "definition: an LCV is a double trailer, up to 40 m long; fact: the placard indicates an LCV; advice: recognize an LCV by rear signage on the highway; advice: anticipate the extended length and limited speed when preparing to pass one on the highway"
+  },
+  {
+   "id": "m67",
+   "about_topic": true,
+   "says": "figure: the long commercial vehicle (LCV) placard"
+  },
+  {
+   "id": "m20",
+   "about_topic": true,
+   "says": "fact: pavement markings tell a driver when it is not safe to pass (other purposes listed are not about the topic)"
+  },
+  {
+   "id": "m21",
+   "about_topic": true,
+   "says": "rule: a solid line at the left of the lane means it is unsafe to pass; should not pass"
+  },
+  {
+   "id": "m22",
+   "about_topic": true,
+   "says": "figure: vehicles travelling beside a solid yellow line (illustrates the solid line rule)"
+  },
+  {
+   "id": "m23",
+   "about_topic": true,
+   "says": "rule: a broken line at the left of the lane means you may pass if the way is clear; enough broken lines ahead to complete the pass safely"
+  },
+  {
+   "id": "m24",
+   "about_topic": true,
+   "says": "figure: vehicles travelling beside broken yellow lines (illustrates the broken line rule)"
+  },
+  {
+   "id": "m80",
+   "about_topic": true,
+   "says": "offence (3 points): failing to slow and carefully pass a stopped emergency vehicle → rule: a driver must slow down and pass carefully when passing a stopped emergency vehicle"
+  },
+  {
+   "id": "m81",
+   "about_topic": true,
+   "says": "offence (3 points): failing to move, where possible, into another lane when passing a stopped emergency vehicle → rule: a driver must move into another lane when passing a stopped emergency vehicle, where possible"
+  },
+  {
+   "id": "m86",
+   "about_topic": true,
+   "says": "sanction item: driving a motor vehicle to prevent another vehicle from passing is listed as a dangerous behaviour"
+  },
+  {
+   "id": "m82",
+   "about_topic": true,
+   "says": "facts: towing a trailer reduces acceleration and requires more space; rules: check enough time and room before passing, allow more room before returning to the lane, do not cut back too soon"
+  },
+  {
+   "id": "m83",
+   "about_topic": true,
+   "says": "procedure: signal, pull over, and let other vehicles pass when holding up a line; facts: fast trucks/buses create wind, a passing large bus/truck may whip the trailer; rules: do not brake, steer carefully back into position; fact: a slight speed increase may help"
+  },
+  {
+   "id": "m87",
+   "about_topic": true,
+   "says": "condition: another driver is about to overtake and pass the driver's vehicle; force: \"you must\" makes it a legal duty"
+  },
+  {
+   "id": "m88",
+   "about_topic": true,
+   "says": "rule (action): move to the right and allow the other vehicle to pass"
+  }
+ ],
+ "statements": [
+  {
+   "id": "p01:s1",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Use\")",
+   "text": "a driver SHOULD use low-beam headlights WHEN the driver is less than 60 m behind another vehicle UNLESS the driver is passing the vehicle",
+   "sources": [
+    {
+     "id": "m44",
+     "quote": "Use your low beams when you are less than 60 metres behind another vehicle unless you are passing it."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The passage is a low-beam rule with a passing exception in the same sentence, so the exception is an UNLESS clause. The passing-relevant content is that the low-beam requirement does not apply while the driver is passing another vehicle."
+  },
+  {
+   "id": "p02:s1",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Keep\")",
+   "text": "a driver SHOULD keep to the right of the road or in the right-hand lane on multi-lane roads UNLESS the driver wants to turn left OR the driver wants to pass another vehicle",
+   "sources": [
+    {
+     "id": "m7",
+     "quote": "Keep to the right of the road or in the right-hand lane on multi-lane roads unless you want to turn left or pass another vehicle."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The lower-case \"or\" in the action is part of the phrase describing the right-hand position (road vs. lane), not a logical OR. The UNLESS clause is the passing-relevant content: it tells a driver the right-hand rule does not constrain them when they intend to pass."
+  },
+  {
+   "id": "p03:s1",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not\")",
+   "text": "a driver SHOULD NOT pass a vehicle stopped at a crosswalk BECAUSE a stopped vehicle may be a clue that a pedestrian is crossing",
+   "sources": [
+    {
+     "id": "m76",
+     "quote": "Do not pass a vehicle stopped at a crosswalk. A stopped vehicle may be a clue that a pedestrian is crossing."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p03:s2",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a cyclist can use any part of the lane if [?necessary for safety], such as to discourage passing where the lane is [?too narrow] to be shared [?safely]",
+   "sources": [
+    {
+     "id": "m54",
+     "quote": "However, they can use any part of the lane if necessary for safety, such as to:"
+    },
+    {
+     "id": "m55",
+     "quote": "Discourage passing where the lane is too narrow to be shared safely"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "necessary for safety",
+     "note": "No test is given for when using any part of the lane is necessary for safety."
+    },
+    {
+     "code": "J",
+     "span": "too narrow",
+     "note": "No width measure is given for when a lane is too narrow to be shared."
+    },
+    {
+     "code": "J",
+     "span": "safely",
+     "note": "No measure is given for safe lane sharing."
+    }
+   ],
+   "links": [],
+   "note": "Combined the lead sentence and its list item; \"can\" is treated as a description of what a cyclist can do, not as a driver rule."
+  },
+  {
+   "id": "p03:s3",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"must\")",
+   "text": "a driver of a motor vehicle MUST maintain a minimum distance of 1 m between the driver's vehicle and the cyclist WHEN the driver is passing a cyclist AND maintaining the distance is [?practical] IF VIOLATED a fine and 2 additional demerit points may result",
+   "sources": [
+    {
+     "id": "m56",
+     "quote": "When passing a cyclist, drivers of motor vehicles must maintain a minimum distance of one metre, where practical between their vehicle and the cyclist."
+    },
+    {
+     "id": "m57",
+     "quote": "(See Diagram 2-11.) Failure to do so may result in a fine and an additional two demerit points on the driver’s record."
+    },
+    {
+     "id": "m59",
+     "quote": "bike lane adjacent to parking bays"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "practical",
+     "note": "The handbook does not define when maintaining 1 m is practical."
+    }
+   ],
+   "links": [],
+   "note": "The penalty is kept as a possible consequence with \"may result\". The figure is cited because the passage refers to Diagram 2-11."
+  },
+  {
+   "id": "p03:s4",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "text (\"should\")",
+   "text": "a driver SHOULD change lanes to pass a cyclist WHEN the driver is passing a cyclist AND changing lanes is [?possible]",
+   "sources": [
+    {
+     "id": "m58",
+     "quote": "Whenever possible, you should change lanes to pass."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "possible",
+     "note": "No measure is given for when changing lanes is possible."
+    }
+   ],
+   "links": [],
+   "note": "The cyclist is supplied from the heading \"Cyclists\"."
+  },
+  {
+   "id": "p03:s5",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not\")",
+   "text": "a driver SHOULD NOT sound the horn [?unnecessarily] WHEN the driver is passing a cyclist BECAUSE it may frighten the cyclist and cause the cyclist to lose control",
+   "sources": [
+    {
+     "id": "m60",
+     "quote": "Do not sound your horn unnecessarily when you are overtaking a cyclist. It may frighten them and cause them to lose control."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "unnecessarily",
+     "note": "No measure is given for when sounding the horn is necessary."
+    },
+    {
+     "code": "V",
+     "span": "overtaking",
+     "note": "The handbook says overtaking; the statement uses passing for consistency."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p03:s6",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"tap\")",
+   "text": "a driver SHOULD tap the horn [?quickly and lightly] WHEN the driver is passing a cyclist AND the driver [?feels] that the driver must use the horn WHILE the driver is still [?some distance] away from the cyclist",
+   "sources": [
+    {
+     "id": "m60",
+     "quote": "Do not sound your horn unnecessarily when you are overtaking a cyclist. It may frighten them and cause them to lose control. If you feel that you must use your horn, tap it quickly and lightly while you are still some distance away from the cyclist."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "quickly and lightly",
+     "note": "No measure is given for how quick or light the horn tap must be."
+    },
+    {
+     "code": "J",
+     "span": "feels",
+     "note": "The condition depends on the driver's subjective feeling."
+    },
+    {
+     "code": "J",
+     "span": "some distance",
+     "note": "No distance measure is given."
+    },
+    {
+     "code": "V",
+     "span": "overtaking",
+     "note": "The handbook says overtaking; the statement uses passing for consistency."
+    }
+   ],
+   "links": [],
+   "note": "The lower-case must in the condition is part of the driver's feeling, not a legal modal; the force comes from the imperative tap."
+  },
+  {
+   "id": "p03:s7",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"look\", \"check\")",
+   "text": "a driver SHOULD look behind AND check the mirrors and blind spots for a passing cyclist WHEN the driver is parked on the side of the roadway AND the driver is about to open a door",
+   "sources": [
+    {
+     "id": "m96",
+     "quote": "When parked on the side of the roadway, look behind you and check your mirrors and blind spots for a passing cyclist before opening a door."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "\"before opening a door\" is written as \"about to open a door\" because the clause set has no BEFORE."
+  },
+  {
+   "id": "p03:s8",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"do not\")",
+   "text": "a driver SHOULD NOT cut in front of a large vehicle [?closely] WHEN the driver is passing a large vehicle BECAUSE it is discourteous, dangerous, and it reduces the space cushion large vehicles require in order to stop [?safely]",
+   "sources": [
+    {
+     "id": "m65",
+     "quote": "When passing a large vehicle, do not cut in front closely. Not only is this discourteous, it is dangerous; it reduces the space cushion large vehicles require in order to stop safely."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "closely",
+     "note": "No distance measure is given for how close is too close."
+    },
+    {
+     "code": "J",
+     "span": "safely",
+     "note": "No stopping-distance measure is given."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p03:s9",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Allow\")",
+   "text": "a driver SHOULD allow [?more room] WHEN the driver is passing a large vehicle",
+   "sources": [
+    {
+     "id": "m65",
+     "quote": "Allow more room when passing a large vehicle."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "more room",
+     "note": "No measure is given for how much extra room is needed."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p03:s10",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a large vehicle can create heavy air turbulence due to factors such as air pressure and airflow, and this may affect the driver's ability to control the driver's vehicle WHEN the driver is passing a large vehicle",
+   "sources": [
+    {
+     "id": "m66",
+     "quote": "6. Turbulence - Due to various factors such as air pressure and airflow, a large vehicle can create heavy air turbulence. This may affect your ability to control your vehicle when passing a large one."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "\"may\" states a possible effect, not a permission."
+  },
+  {
+   "id": "p03:s11",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Stay\")",
+   "text": "a driver SHOULD stay [?well back] from farm machinery WHEN the driver is behind farm machinery",
+   "sources": [
+    {
+     "id": "m69",
+     "quote": "Stay well back and do not pass until it is safe to do so."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "well back",
+     "note": "No distance measure is given."
+    },
+    {
+     "code": "D",
+     "span": "behind farm machinery",
+     "note": "The situation is not explicitly stated in the sentence; it is inferred from the heading \"Farm machinery\" and the instruction to stay back before passing."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p03:s12",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"do not\")",
+   "text": "a driver SHOULD NOT pass farm machinery WHEN the driver is behind farm machinery UNTIL it is [?safe] to pass",
+   "sources": [
+    {
+     "id": "m69",
+     "quote": "Stay well back and do not pass until it is safe to do so."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "safe",
+     "note": "No test is given for when passing farm machinery is safe."
+    },
+    {
+     "code": "D",
+     "span": "behind farm machinery",
+     "note": "The situation is not explicitly stated in the sentence; it is inferred from the heading \"Farm machinery\" and the need to pass."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p03:s13",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Maintain\")",
+   "text": "a driver SHOULD maintain a [?safe] following distance from a horse-drawn vehicle WHEN the driver is following a horse-drawn vehicle",
+   "sources": [
+    {
+     "id": "m70",
+     "quote": "Maintain a safe following distance and only pass when it is safe to do so."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "safe",
+     "note": "No distance measure is given."
+    }
+   ],
+   "links": [],
+   "note": "The object \"horse-drawn vehicle\" comes from the passage heading."
+  },
+  {
+   "id": "p03:s14",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"only pass\")",
+   "text": "a driver SHOULD NOT pass a horse-drawn vehicle UNLESS it is [?safe] to pass",
+   "sources": [
+    {
+     "id": "m70",
+     "quote": "Maintain a safe following distance and only pass when it is safe to do so."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "safe",
+     "note": "No test is given for when passing is safe."
+    }
+   ],
+   "links": [],
+   "note": "\"only pass when safe\" is written as SHOULD NOT ... UNLESS; the object comes from the passage heading."
+  },
+  {
+   "id": "p03:s15",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"give\")",
+   "text": "a driver SHOULD give [?as much distance between the driver's vehicle and the horse-drawn vehicle as possible] WHEN the driver is passing a horse-drawn vehicle BECAUSE passing [?too closely] could scare or startle the horse, causing it to change direction suddenly on the roadway",
+   "sources": [
+    {
+     "id": "m71",
+     "quote": "When passing, give as much distance between you and them as possible. Passing too closely could scare or startle the horse, causing it to change direction suddenly on the roadway."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "as much distance between the driver's vehicle and the horse-drawn vehicle as possible",
+     "note": "No maximum distance or measure is given."
+    },
+    {
+     "code": "J",
+     "span": "too closely",
+     "note": "No distance measure is given for close passing."
+    }
+   ],
+   "links": [],
+   "note": "\"them\" is interpreted as the horse-drawn vehicle from the heading, and \"the horse\" is the animal in it."
+  },
+  {
+   "id": "p04:s1",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"must stop\")",
+   "text": "a driver MUST stop WHEN the driver approaches a stopped school bus with its upper alternating red lights flashing from behind OR from the front IF VIOLATED a heavy fine AND 6 demerit points for a first offence",
+   "sources": [
+    {
+     "id": "c1",
+     "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+    },
+    {
+     "id": "c5",
+     "quote": "If you don't stop, you can be fined heavily and get six demerit points for a first offence."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "heavy",
+     "note": "No fine amount is given; \"heavily\" leaves the size of the fine to judgment."
+    }
+   ],
+   "links": [],
+   "note": "The penalty from c5 is attached to this main stop rule. \"regardless of whether\" is written as \"from behind OR from the front\"."
+  },
+  {
+   "id": "p04:s2",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (c1: \"You must stop\"; c2 specifies the stopping distance for that duty)",
+   "text": "a driver MUST stop at least 20 m from the bus WHEN the driver approaches a stopped school bus with its upper alternating red lights flashing from behind",
+   "sources": [
+    {
+     "id": "c1",
+     "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+    },
+    {
+     "id": "c2",
+     "quote": "If you are coming from behind the bus, stop at least 20 metres away."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The 20 m distance applies specifically to the from-behind approach. The general condition (stopped school bus, red lights) comes from c1."
+  },
+  {
+   "id": "p04:s3",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (c1: \"You must stop\"; c3's \"Do not go\" is the continuation of that stop)",
+   "text": "a driver MUST NOT pass the school bus WHEN the school bus is stopped with its upper alternating red lights flashing UNTIL the bus moves OR the lights stop flashing",
+   "sources": [
+    {
+     "id": "c1",
+     "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+    },
+    {
+     "id": "c3",
+     "quote": "Do not go until the bus moves or the lights have stopped flashing."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The handbook says \"Do not go\"; written as \"pass the school bus\" because the prohibition in context is against passing the bus."
+  },
+  {
+   "id": "p04:s4",
+   "type": "EXCEPTION",
+   "force": null,
+   "force_from": null,
+   "text": "EXCEPTION TO p04:s1 WHEN the road has a median strip AND the driver is approaching the bus from the front",
+   "sources": [
+    {
+     "id": "c4",
+     "quote": "If you are on a road with a median strip, only vehicles coming from behind the bus must stop."
+    }
+   ],
+   "flags": [],
+   "links": [
+    "p04:s1"
+   ],
+   "note": "With a median strip, s1's \"from behind OR from the front\" no longer applies to front-approaching vehicles; they are not required to stop and may pass."
+  },
+  {
+   "id": "p04:s5",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT in Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus",
+   "sources": [
+    {
+     "id": "m77",
+     "quote": "In Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p04:s6",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"must not\")",
+   "text": "a driver MUST NOT pass any vehicle WHEN the driver is within 30 m of a pedestrian crossover",
+   "sources": [
+    {
+     "id": "m16",
+     "quote": "You must not pass any vehicle within 30 metres of a pedestrian crossover."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s1",
+   "type": "DEFINE",
+   "force": null,
+   "force_from": null,
+   "text": "DEFINE passing IS changing lanes to move past a slower vehicle",
+   "sources": [
+    {
+     "id": "m2",
+     "quote": "Passing is changing lanes to move past a slower vehicle."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s2",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT changing position on the road involves changing lanes or overtaking and passing another vehicle",
+   "sources": [
+    {
+     "id": "m1",
+     "quote": "Changing your position on the road involves changing lanes or overtaking and passing another vehicle."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s3",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT not all vehicles travel at the same speed; cyclists, road service vehicles and drivers preparing to turn are [?usually] slower than through traffic",
+   "sources": [
+    {
+     "id": "m3",
+     "quote": "While all public roads have speed limits, not all vehicles travel at the same speed. For example, cyclists, road service vehicles and drivers ahead that are preparing to turn are usually slower than the through traffic."
+    }
+   ],
+   "flags": [
+    {
+     "code": "S",
+     "span": "usually",
+     "note": "Not all such vehicles are slower; the handbook hedges with 'usually'."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s4",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"be sure\")",
+   "text": "a driver SHOULD be sure there is [?enough] space and time to complete the move [?safely] WHEN the driver is about to change position on the road",
+   "sources": [
+    {
+     "id": "m4",
+     "quote": "Before beginning, be sure you have enough space and time to complete the move safely."
+    },
+    {
+     "id": "m1",
+     "quote": "Changing your position on the road involves changing lanes or overtaking and passing another vehicle."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "enough",
+     "note": "No measure of space or time is given."
+    },
+    {
+     "code": "J",
+     "span": "safely",
+     "note": "No objective test for safe completion of the move."
+    }
+   ],
+   "links": [],
+   "note": "The rule applies to all changes of position, including passing, as established by m1."
+  },
+  {
+   "id": "p05:s5",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Never\")",
+   "text": "a driver SHOULD NOT overtake and pass another vehicle UNLESS the driver is [?sure] the driver can do so without [?danger] to the driver or others",
+   "sources": [
+    {
+     "id": "m5",
+     "quote": "Never overtake and pass another vehicle unless you are sure you can do so without danger to yourself or others."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "sure",
+     "note": "Subjective certainty; no observable test."
+    },
+    {
+     "code": "J",
+     "span": "danger",
+     "note": "No objective measure of what constitutes danger."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s6",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"do not pass\")",
+   "text": "a driver SHOULD NOT pass WHEN [?in doubt]",
+   "sources": [
+    {
+     "id": "m6",
+     "quote": "If in doubt, do not pass."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "in doubt",
+     "note": "No objective test for when a driver is in doubt."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s7",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Don't pass\")",
+   "text": "a driver SHOULD NOT pass a moving snow plow under any conditions",
+   "sources": [
+    {
+     "id": "m72",
+     "quote": "Don't pass moving snow plows under any conditions."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s8",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"It is unlawful\")",
+   "text": "a driver MUST NOT speed up WHEN another driver is trying to pass the driver BECAUSE it is dangerous",
+   "sources": [
+    {
+     "id": "m85",
+     "quote": "And do not speed up when another driver is trying to pass you. It is unlawful and dangerous."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "\"It is unlawful\" gives legal force to the prohibition."
+  },
+  {
+   "id": "p05:s9",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"is not permitted\")",
+   "text": "a driver MUST NOT pass within 30 m of a pedestrian crossover",
+   "sources": [
+    {
+     "id": "m15",
+     "quote": "Passing within 30 metres of a pedestrian crossover is not permitted."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s10",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"is not permitted\")",
+   "text": "a driver MUST NOT pass to the left of a centreline within 30 m of a bridge, viaduct or tunnel",
+   "sources": [
+    {
+     "id": "m17",
+     "quote": "Passing left of a centreline is not permitted 30 metres from a bridge, viaduct or tunnel."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s11",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Don't attempt\")",
+   "text": "a driver SHOULD NOT attempt to pass WHEN approaching the crest of a hill OR on a curve AND the driver's vision of oncoming traffic is obstructed AND there is not [?enough] clear distance ahead to pass in [?safety]",
+   "sources": [
+    {
+     "id": "m18",
+     "quote": "Don't attempt to pass when approaching the crest of a hill or on a curve where your vision of oncoming traffic is obstructed and there is not enough clear distance ahead to pass in safety."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "enough",
+     "note": "No measure of clear distance is given."
+    },
+    {
+     "code": "J",
+     "span": "safety",
+     "note": "No objective test for passing in safety."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s12",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "caution (\"watch carefully\")",
+   "text": "a driver SHOULD WATCH FOR people suddenly opening doors or doors opened to load and unload WHEN passing parked vehicles",
+   "sources": [
+    {
+     "id": "m50",
+     "quote": "When passing parked vehicles, watch carefully for people suddenly opening doors or for doors opened to load and unload."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s13",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT motorcycles, bicycles, limited-speed motorcycles and mopeds [?often] need to pull to the left or right side of their lane to avoid dangerous road conditions or to be seen by other drivers",
+   "sources": [
+    {
+     "id": "m51",
+     "quote": "Motorcycles, bicycles, limited-speed motorcycles and mopeds often need to pull to the left or right side of their lane to avoid dangerous road conditions or to be seen by other drivers."
+    }
+   ],
+   "flags": [
+    {
+     "code": "S",
+     "span": "often",
+     "note": "Not always; the frequency is hedged."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s14",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not take\")",
+   "text": "a driver SHOULD NOT pass a motorcycle, bicycle, limited-speed motorcycle or moped in the same lane WHEN the vehicle pulls to the side of the lane",
+   "sources": [
+    {
+     "id": "m51",
+     "quote": "Do not take this as an invitation to pass in the same lane."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "\"This\" refers to the vehicle pulling to the side of the lane, as described in the preceding sentence."
+  },
+  {
+   "id": "p05:s15",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"do so by changing lanes\")",
+   "text": "a driver SHOULD pass a motorcycle, bicycle, limited-speed motorcycle or moped by changing lanes WHEN the driver wants to pass the vehicle",
+   "sources": [
+    {
+     "id": "m51",
+     "quote": "If you do want to pass these vehicles, do so by changing lanes."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s16",
+   "type": "PROCEDURE",
+   "force": "ADVISORY",
+   "force_from": "imperative steps",
+   "text": "TO pass a vehicle",
+   "steps": [
+    {
+     "n": "1",
+     "text": "use the left-turn signal to show that the driver wants to pass AND check that the way is clear ahead and behind",
+     "sources": [
+      "m9"
+     ]
+    },
+    {
+     "n": "2",
+     "text": "watch for bicycles and small vehicles that may be hidden from view in front of the vehicle, vehicles that may be turning left, and vehicles or pedestrians entering the road from another road or driveway",
+     "sources": [
+      "m10"
+     ]
+    },
+    {
+     "n": "3",
+     "text": "change lanes into the passing lane only after signalling",
+     "sources": [
+      "m11"
+     ]
+    },
+    {
+     "n": "4",
+     "text": "after overtaking, signal that the driver wants to move back into the starting lane",
+     "sources": [
+      "m11"
+     ]
+    },
+    {
+     "n": "5",
+     "text": "when the driver can see the entire front of the vehicle in the inside mirror, make the lane change back",
+     "sources": [
+      "m11"
+     ]
+    },
+    {
+     "n": "6",
+     "text": "do not cut off a vehicle by suddenly moving in front of it",
+     "sources": [
+      "m12"
+     ]
+    },
+    {
+     "n": "IF",
+     "text": "IF the vehicle being passed speeds up THEN do not race AND go back to the original lane",
+     "sources": [
+      "m13"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "m8",
+     "quote": "Here are the steps for passing a vehicle:"
+    },
+    {
+     "id": "m14",
+     "quote": "how to pass another vehicle"
+    }
+   ],
+   "flags": [],
+   "links": [
+    "p05:s17",
+    "p05:s18"
+   ],
+   "note": "Steps 6 and the IF branch are also standalone rules (s17, s18)."
+  },
+  {
+   "id": "p05:s17",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "caution (\"Be careful not to\")",
+   "text": "a driver SHOULD NOT cut off a vehicle by suddenly moving in front of it WHEN passing",
+   "sources": [
+    {
+     "id": "m12",
+     "quote": "Be careful not to cut off a vehicle by suddenly moving in front of it."
+    }
+   ],
+   "flags": [],
+   "links": [
+    "p05:s16"
+   ],
+   "note": "Also step 6 of the passing procedure."
+  },
+  {
+   "id": "p05:s18",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"do not race\", \"Go back\")",
+   "text": "a driver SHOULD NOT race AND SHOULD go back to the original lane WHEN the vehicle being passed speeds up",
+   "sources": [
+    {
+     "id": "m13",
+     "quote": "If the vehicle you are passing speeds up, do not race. Go back to your original lane."
+    }
+   ],
+   "flags": [],
+   "links": [
+    "p05:s16"
+   ],
+   "note": "Also the IF branch of the passing procedure."
+  },
+  {
+   "id": "p05:s19",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"move\", \"let\")",
+   "text": "a driver SHOULD move to the right AND let faster traffic pass in [?safety] WHEN faster traffic wants to pass the driver",
+   "sources": [
+    {
+     "id": "m84",
+     "quote": "When faster traffic wants to pass you, move to the right and let it pass in safety."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "safety",
+     "note": "No objective test for passing in safety."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s20",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"pay attention\", \"move\")",
+   "text": "a driver SHOULD pay attention to oncoming traffic AND move closer to the right side of the lane WHEN being passed on an undivided road AND the passing driver has pulled into the opposite lane",
+   "sources": [
+    {
+     "id": "m89",
+     "quote": "When being passed on an undivided road where the passing driver has pulled into the opposite lane, pay attention to oncoming traffic and move closer to the right side of the lane."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s21",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "caution (\"Be prepared\")",
+   "text": "a driver SHOULD be prepared to slow down WHEN being passed on an undivided road AND the passing driver has pulled into the opposite lane BECAUSE it lets the passing driver get in front more quickly to prevent a collision",
+   "sources": [
+    {
+     "id": "m89",
+     "quote": "Be prepared to slow down to let the passing driver get in front of you more quickly to prevent a collision."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s22",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT on [?many] high-speed roads with 3 or more lanes in each direction, trucks are not allowed to drive in the far left-hand lane, and the lane next to it is the truck passing lane",
+   "sources": [
+    {
+     "id": "m90",
+     "quote": "On many high-speed roads with three or more lanes in each direction, trucks are not allowed to drive in the far left-hand lane. This means that the lane next to it is the truck passing lane."
+    }
+   ],
+   "flags": [
+    {
+     "code": "S",
+     "span": "many",
+     "note": "Not all such roads; the scope is hedged."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s23",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"move\")",
+   "text": "a driver SHOULD move into the right-hand lane [?as soon as the driver can] WHEN in the truck passing lane on a high-speed road with 3 or more lanes in each direction AND a truck wants to pass the driver",
+   "sources": [
+    {
+     "id": "m90",
+     "quote": "If you are in this lane and a truck wants to pass, move into the right-hand lane as soon as you can."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "as soon as the driver can",
+     "note": "No measure of how quickly the lane change must be made."
+    }
+   ],
+   "links": [
+    "p05:s22"
+   ],
+   "note": "\"This lane\" in the handbook refers to the truck passing lane defined in the preceding sentence."
+  },
+  {
+   "id": "p05:s24",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "caution (\"Be very careful\")",
+   "text": "a driver SHOULD be very careful WHEN passing at night",
+   "sources": [
+    {
+     "id": "m39",
+     "quote": "Be very careful when you pass other vehicles at night."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s25",
+   "type": "PROCEDURE",
+   "force": "ADVISORY",
+   "force_from": "imperative steps",
+   "text": "TO pass a vehicle at night WHEN the way is clear",
+   "steps": [
+    {
+     "n": "1",
+     "text": "switch the headlights to low beams as the driver approaches a vehicle from behind",
+     "sources": [
+      "m41"
+     ]
+    },
+    {
+     "n": "2",
+     "text": "signal AND check the mirrors and blind spot AND pull out to pass",
+     "sources": [
+      "m42"
+     ]
+    },
+    {
+     "n": "3",
+     "text": "switch on the high beams WHILE moving alongside the vehicle BECAUSE it lets the driver see more of the road ahead",
+     "sources": [
+      "m42"
+     ]
+    },
+    {
+     "n": "4",
+     "text": "when the driver can see all of the front of the vehicle in the rear view mirror, pull back into the right lane AND signal",
+     "sources": [
+      "m43"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "m40",
+     "quote": "If you have to pass and the way is clear, follow these steps:"
+    },
+    {
+     "id": "m52",
+     "quote": "how to pass another vehicle"
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The at-night condition comes from the heading 'Passing at night'; the way-is-clear condition comes from m40."
+  },
+  {
+   "id": "p05:s26",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT [?some] roads have special passing or climbing lanes that let slower vehicles move into the right-hand lane so faster vehicles can pass in the left lane",
+   "sources": [
+    {
+     "id": "m28",
+     "quote": "Some roads have special passing or climbing lanes. These lanes let slower vehicles move into the right-hand lane so that faster ones can pass safely in the left lane."
+    },
+    {
+     "id": "m27",
+     "quote": "a passing or climbing lane"
+    }
+   ],
+   "flags": [
+    {
+     "code": "S",
+     "span": "some",
+     "note": "Not all roads; the scope is hedged."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s27",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT an advance sign tells drivers they will soon have a chance to pass on a road with a passing or climbing lane",
+   "sources": [
+    {
+     "id": "m29",
+     "quote": "An advance sign tells drivers they will soon have a chance to pass."
+    },
+    {
+     "id": "m28",
+     "quote": "Some roads have special passing or climbing lanes."
+    }
+   ],
+   "flags": [],
+   "links": [
+    "p05:s26"
+   ],
+   "note": "The sign is in the context of roads with passing or climbing lanes (m28)."
+  },
+  {
+   "id": "p05:s28",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a sign warns when a passing or climbing lane is ending so drivers in the right-hand lane can begin to merge with traffic in the left-hand lane",
+   "sources": [
+    {
+     "id": "m29",
+     "quote": "Another sign warns when the lane is ending so drivers in the right-hand lane can begin to merge safely with traffic in the left-hand lane."
+    },
+    {
+     "id": "m28",
+     "quote": "Some roads have special passing or climbing lanes."
+    }
+   ],
+   "flags": [],
+   "links": [
+    "p05:s26"
+   ],
+   "note": null
+  },
+  {
+   "id": "p05:s29",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"You may drive\")",
+   "text": "a driver MAY drive on the right shoulder ONLY IF passing a vehicle turning left AND the shoulder is paved",
+   "sources": [
+    {
+     "id": "m38",
+     "quote": "You may drive on the right shoulder only to pass a vehicle turning left and only if the shoulder is paved."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s30",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"You may not pass\")",
+   "text": "a driver MUST NOT pass on the left shoulder, paved or not",
+   "sources": [
+    {
+     "id": "m38",
+     "quote": "You may not pass on the left shoulder, paved or not."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s31",
+   "type": "FACT",
+   "force": null,
+   "force_from": "default",
+   "text": "FACT [?Most] passing is done on the left",
+   "sources": [
+    {
+     "id": "m35",
+     "quote": "Most passing is done on the left."
+    }
+   ],
+   "flags": [
+    {
+     "code": "S",
+     "span": "Most",
+     "note": "Not all passing; the scope is hedged."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s32",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"You may pass\")",
+   "text": "a driver MAY pass on the right WHEN on a multi-lane road OR on a one-way road OR when overtaking a streetcar OR when overtaking a left-turning vehicle",
+   "sources": [
+    {
+     "id": "m35",
+     "quote": "You may pass on the right on multi-lane or one-way roads and when overtaking a streetcar or a left-turning vehicle."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s33",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT passing on the right can be more dangerous than passing on the left",
+   "sources": [
+    {
+     "id": "m36",
+     "quote": "Passing on the right can be more dangerous than passing on the left."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s34",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"wait\")",
+   "text": "a driver SHOULD wait for the vehicle to move to the right WHEN driving in the left most lane with a slower vehicle in front",
+   "sources": [
+    {
+     "id": "m37",
+     "quote": "If you are driving in the left most lane with a slower vehicle in front of you, wait for the vehicle to move to the right."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s35",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not suddenly change lanes\")",
+   "text": "a driver SHOULD NOT suddenly change lanes and pass on the right WHEN driving in the left most lane with a slower vehicle in front BECAUSE the driver in front may realize the driver wants to pass and move to the right at the same time",
+   "sources": [
+    {
+     "id": "m37",
+     "quote": "Do not suddenly change lanes and pass on the right; the driver in front may realize you want to pass and move to the right at the same time you do."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s36",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"You must pass\")",
+   "text": "a driver MUST pass a streetcar on the right UNLESS the driver is driving on a one-way road",
+   "sources": [
+    {
+     "id": "m62",
+     "quote": "You must pass streetcars on the right unless you are driving on a one-way road."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p05:s37",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"This rule\")",
+   "text": "a driver MUST stay at least 2 m behind the rear doors at a streetcar stop WHERE passengers are getting off or on UNLESS an area has been set aside for streetcar passengers at the stop",
+   "sources": [
+    {
+     "id": "m63",
+     "quote": "At streetcar stops, stay at least two metres behind the rear doors where passengers are getting off or on. This rule does not apply at stops where an area has been set aside for streetcar passengers."
+    },
+    {
+     "id": "m61",
+     "quote": "a vehicle stopped the required two metres behind the rear doors of a stopped streetcar"
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "\"This rule\" in the handbook signals that the requirement is a legal rule. The exception is in the same passage, so it is written as UNLESS."
+  },
+  {
+   "id": "p05:s38",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Always pass\", \"be prepared\")",
+   "text": "a driver SHOULD pass a streetcar stop area at a [?reasonable] speed AND be prepared for pedestrians to make sudden or unexpected moves WHEN passing a streetcar stop area",
+   "sources": [
+    {
+     "id": "m64",
+     "quote": "Always pass these areas at a reasonable speed and be prepared for pedestrians to make sudden or unexpected moves."
+    },
+    {
+     "id": "m63",
+     "quote": "At streetcar stops, stay at least two metres behind the rear doors where passengers are getting off or on."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "reasonable",
+     "note": "No measure of a reasonable speed is given."
+    }
+   ],
+   "links": [
+    "p05:s37"
+   ],
+   "note": "\"These areas\" in m64 refers to streetcar stop areas from m63."
+  },
+  {
+   "id": "p06:s1",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Wait\")",
+   "text": "a driver SHOULD NOT pass a [?smaller] vehicle WHEN the driver is making a left turn UNTIL the vehicle has moved right",
+   "sources": [
+    {
+     "id": "m53",
+     "quote": "Wait for the smaller vehicle to move right before you pass."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "smaller",
+     "note": "No size threshold is given; the driver must judge which vehicle is smaller."
+    }
+   ],
+   "links": [],
+   "note": "The command to wait before passing is written as a SHOULD NOT rule with UNTIL."
+  },
+  {
+   "id": "p06:s2",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"do not\")",
+   "text": "a driver SHOULD NOT pull up beside the vehicle to make the left turn at the same time WHEN the driver is making a left turn behind the vehicle AND the vehicle is one of [?these vehicles]",
+   "sources": [
+    {
+     "id": "c6",
+     "quote": "If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time."
+    }
+   ],
+   "flags": [
+    {
+     "code": "R",
+     "span": "these vehicles",
+     "note": "The antecedent of 'these vehicles' is not supplied in this batch."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p06:s3",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Stay\")",
+   "text": "a driver SHOULD stay behind the vehicle AND make the left turn WHEN the driver is making a left turn behind the vehicle AND the vehicle is one of [?these vehicles] AND the way is [?clear]",
+   "sources": [
+    {
+     "id": "c6",
+     "quote": "If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time."
+    },
+    {
+     "id": "c7",
+     "quote": "Stay behind and turn when the way is clear."
+    }
+   ],
+   "flags": [
+    {
+     "code": "R",
+     "span": "these vehicles",
+     "note": "The antecedent of 'these vehicles' is not supplied in this batch."
+    },
+    {
+     "code": "J",
+     "span": "clear",
+     "note": "No test for the way being clear is given."
+    }
+   ],
+   "links": [],
+   "note": "The condition about the vehicle is taken from the neighbouring passage c6."
+  },
+  {
+   "id": "p06:s4",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"not to be used\")",
+   "text": "a driver MUST NOT use a left-turn lane to pass another vehicle",
+   "sources": [
+    {
+     "id": "m19",
+     "quote": "These left-turn lanes are not to be used for passing."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p07:s1",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "text (\"should\")",
+   "text": "a driver SHOULD keep to the right AND use the left lanes for passing WHEN driving along a freeway",
+   "sources": [
+    {
+     "id": "m32",
+     "quote": "Traffic should keep to the right, using the left lanes for passing."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The passage's subject 'traffic' is written as 'a driver'."
+  },
+  {
+   "id": "p07:s2",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Use\")",
+   "text": "a driver SHOULD use the far left lane to pass traffic moving slower than the speed limit WHEN driving along a multi-lane freeway",
+   "sources": [
+    {
+     "id": "m33",
+     "quote": "Use the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit, but don't stay there."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p07:s3",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"don't stay\")",
+   "text": "a driver SHOULD NOT stay in the far left lane WHEN driving along a multi-lane freeway",
+   "sources": [
+    {
+     "id": "m33",
+     "quote": "Use the far left lane of a multi-lane freeway to pass traffic moving slower than the speed limit, but don't stay there."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "'there' is made explicit as the far left lane."
+  },
+  {
+   "id": "p07:s4",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Drive\")",
+   "text": "a driver SHOULD drive in the right lane WHEN driving along a multi-lane freeway AND driving in the right lane is [?possible]",
+   "sources": [
+    {
+     "id": "m33",
+     "quote": "Drive in the right-hand lane when possible."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "possible",
+     "note": "No measure is given for when driving in the right lane is possible."
+    },
+    {
+     "code": "V",
+     "span": "right lane",
+     "note": "The passage says 'right-hand lane'; 'right lane' is used consistently."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p07:s5",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"cannot\", \"must\")",
+   "text": "EXCEPTION TO p07:s2: a driver of a large truck MUST NOT travel in the far left lane AND MUST use the lane to the right of the far left lane for passing WHEN the freeway is one of [?many] freeways with 3 or more lanes in each direction",
+   "sources": [
+    {
+     "id": "m91",
+     "quote": "On many freeways with three or more lanes in each direction, large trucks cannot travel in the far left lane and must use the lane to the right for passing."
+    }
+   ],
+   "flags": [
+    {
+     "code": "S",
+     "span": "many",
+     "note": "The handbook applies this to many, not necessarily all, freeways with 3 or more lanes in each direction."
+    }
+   ],
+   "links": [
+    "p07:s2"
+   ],
+   "note": "The passage regulates large trucks, so the role is the driver of a large truck. It is written as an exception to the general far-left passing advice in s2."
+  },
+  {
+   "id": "p07:s6",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Get into the habit\")",
+   "text": "a driver SHOULD drive in the right lane AND leave the other lanes clear for passing WHEN driving along a freeway",
+   "sources": [
+    {
+     "id": "m34",
+     "quote": "Get into the habit of driving in the right lane, leaving the other lanes clear for passing."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The advice to get into a habit is expressed as SHOULD."
+  },
+  {
+   "id": "p08:s1",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Always slow down and pass\")",
+   "text": "a driver SHOULD slow down AND pass with caution WHEN workers are on the road BECAUSE it prevents a collision",
+   "sources": [
+    {
+     "id": "m92",
+     "quote": "Always slow down and pass with caution to prevent a collision."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The condition 'workers are on the road' comes from the heading 'Workers on the road.'"
+  },
+  {
+   "id": "p08:s2",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"slow down and pass carefully\")",
+   "text": "a driver SHOULD slow down AND pass carefully WHEN the driver sees an animal on or near the road BECAUSE the animal may suddenly bolt onto the road",
+   "sources": [
+    {
+     "id": "m93",
+     "quote": "If you see an animal on or near the road, slow down and pass carefully as they may suddenly bolt onto the road."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p08:s3",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Wait\", \"watch\")",
+   "text": "a driver SHOULD wait for the emergency vehicle to pass AND watch for other emergency vehicles that may be responding to the same call WHEN an emergency vehicle is approaching",
+   "sources": [
+    {
+     "id": "m95",
+     "quote": "Wait for the emergency vehicle to pass and watch for other emergency vehicles that may be responding to the same call."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The condition 'an emergency vehicle is approaching' comes from the heading 'Reacting to an approaching emergency vehicle.'"
+  },
+  {
+   "id": "p08:s4",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"you are required to\")",
+   "text": "a driver MUST reduce the speed of the vehicle AND proceed with caution WHEN approaching an emergency vehicle that is stopped with red lights or red and blue lights flashing OR a tow truck that is stopped with amber lights flashing in the same direction of the driver's travel",
+   "sources": [
+    {
+     "id": "m78",
+     "quote": "When approaching any emergency vehicle that is stopped with its red, or red and blue, lights flashing or a tow truck with its amber lights flashing in the same direction of your travel, you are required to reduce the speed of your vehicle and proceed with caution."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p08:s5",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"you are required to\")",
+   "text": "a driver MUST move into a lane away from the emergency vehicle or tow truck WHEN the driver is approaching an emergency vehicle that is stopped with red lights or red and blue lights flashing OR a tow truck that is stopped with amber lights flashing in the same direction of the driver's travel AND the roadway has 2 or more lanes of traffic in the same direction of the driver's travel ONLY IF it is [?safe] to do so",
+   "sources": [
+    {
+     "id": "m78",
+     "quote": "When approaching any emergency vehicle that is stopped with its red, or red and blue, lights flashing or a tow truck with its amber lights flashing in the same direction of your travel, you are required to reduce the speed of your vehicle and proceed with caution."
+    },
+    {
+     "id": "m79",
+     "quote": "When the roadway has two or more lanes of traffic in the same direction of your travel, you are required to move into a lane away from the emergency vehicle or tow truck, if safe to do so, in addition to reducing the speed of your vehicle and proceeding with caution."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "safe",
+     "note": "No standard for 'safe' is given; the driver must judge whether changing lanes is safe."
+    }
+   ],
+   "links": [
+    "p08:s4"
+   ],
+   "note": "The condition about the stopped vehicle and its lights is inherited from m78 (same section). The 'in addition to reducing the speed of your vehicle and proceeding with caution' clause references the duty in s4."
+  },
+  {
+   "id": "p09:s1",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "text (\"Avoid\")",
+   "text": "a driver SHOULD NOT pass WHEN driving in fog",
+   "sources": [
+    {
+     "id": "m45",
+     "quote": "Avoid passing, changing lanes and crossing traffic."
+    },
+    {
+     "id": "m47",
+     "quote": "Don't pass other vehicles or speed up suddenly."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "Merged m45 ('Avoid passing') and m47 ('Don't pass other vehicles'), both saying don't pass in fog. The other items in those lists are general fog advice, not about passing."
+  },
+  {
+   "id": "p09:s2",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "text (\"Avoid\")",
+   "text": "a driver SHOULD NOT pass WHEN driving in a whiteout",
+   "sources": [
+    {
+     "id": "m48",
+     "quote": "Avoid passing, changing lanes and crossing traffic."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "m48 also mentions changing lanes and crossing traffic, which are general whiteout advice, not about passing."
+  },
+  {
+   "id": "p09:s3",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Don't\")",
+   "text": "a driver SHOULD NOT speed up to pass a vehicle moving slowly WHEN driving in fog",
+   "sources": [
+    {
+     "id": "m46",
+     "quote": "Don't speed up to pass a vehicle moving slowly or to get away from a vehicle that is following too closely."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "m46 also says don't speed up to get away from a vehicle following too closely, which is about tailgating, not passing."
+  },
+  {
+   "id": "p09:s4",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Don't\")",
+   "text": "a driver SHOULD NOT attempt to pass a vehicle moving slowly WHEN driving in a whiteout",
+   "sources": [
+    {
+     "id": "m49",
+     "quote": "Don't attempt to pass a vehicle moving slowly or speed up to get away from a vehicle that is following too closely."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "m49 also says don't speed up to get away from a vehicle following too closely, which is about tailgating, not passing."
+  },
+  {
+   "id": "p09:s5",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT snow plows on freeways may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow",
+   "sources": [
+    {
+     "id": "m73",
+     "quote": "On freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "\"passing a ridge of snow from plow to plow\" means the plows pass the snow to each other, not overtaking."
+  },
+  {
+   "id": "p09:s6",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not try to pass\")",
+   "text": "a driver SHOULD NOT try to pass between snow plows WHEN snow plows are staggered across the road on a freeway BECAUSE there is not [?enough] room to pass [?safely] AND the ridge of wet snow can throw the vehicle out of control",
+   "sources": [
+    {
+     "id": "m73",
+     "quote": "On freeways, several snow plows may be staggered across the road, clearing all lanes at the same time by passing a ridge of snow from plow to plow. Do not try to pass between them. This is extremely dangerous because there is not enough room to pass safely, and the ridge of wet snow can throw your vehicle out of control."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "enough",
+     "note": "No measure of how much room is enough to pass."
+    },
+    {
+     "code": "J",
+     "span": "safely",
+     "note": "No measure of what passing safely requires."
+    }
+   ],
+   "links": [],
+   "note": "\"them\" in the handbook refers to the snow plows, so the action is written as 'pass between snow plows'."
+  },
+  {
+   "id": "p10:s1",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (heading \"Regulatory signs\")",
+   "text": "a driver MUST NOT pass on the road WHEN a \"do not pass\" sign is posted for the road",
+   "sources": [
+    {
+     "id": "m25",
+     "quote": "a regulatory sign"
+    },
+    {
+     "id": "m26",
+     "quote": "Do not pass on this road."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The section introduction stating that regulatory signs must be obeyed is not in this batch, so the legal force is taken from the handbook's own classification of the sign under the 'Regulatory signs' heading."
+  },
+  {
+   "id": "p10:s2",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"must keep right\")",
+   "text": "a driver MUST keep right WHEN the driver is in [?slow traffic] on a multi-lane road",
+   "sources": [
+    {
+     "id": "c8",
+     "quote": "Slow traffic on multi-lane roads must keep right."
+    },
+    {
+     "id": "c9",
+     "quote": "a regulatory sign"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "slow traffic",
+     "note": "No speed threshold is given for what counts as slow traffic."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p10:s3",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (heading \"Regulatory signs\")",
+   "text": "a driver MUST keep to the right lane WHEN a \"keep to the right lane\" sign is posted UNLESS the driver is passing on a two-lane section where climbing or passing lanes are provided",
+   "sources": [
+    {
+     "id": "m30",
+     "quote": "a regulatory sign"
+    },
+    {
+     "id": "m31",
+     "quote": "Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The caption contains no legal word, so the force comes from the 'Regulatory signs' heading. The exception is in the same passage as the rule, so it is an UNLESS clause."
+  },
+  {
+   "id": "p10:s4",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT the downward lines on a warning sign show the side on which a driver may [?safely] pass",
+   "sources": [
+    {
+     "id": "m94",
+     "quote": "The downward lines show the side on which you may safely pass."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "safely",
+     "note": "No measure of safety is given; the driver must judge the side."
+    }
+   ],
+   "links": [],
+   "note": "The caption describes what the sign's markings mean, so it is a FACT; the embedded 'may' (permission to pass on that side) is kept inside the fact."
+  },
+  {
+   "id": "p10:s5",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not pass\")",
+   "text": "a driver SHOULD NOT pass a pilot vehicle or pace vehicle WHEN the pilot vehicle or pace vehicle bears a \"do not pass\" sign",
+   "sources": [
+    {
+     "id": "m74",
+     "quote": "a temporary condition sign"
+    },
+    {
+     "id": "m75",
+     "quote": "Do not pass the pilot vehicle or pace vehicle bearing this sign."
+    }
+   ],
+   "flags": [
+    {
+     "code": "M",
+     "span": "Do not pass",
+     "note": "A plain 'do not pass' command reads like a legal prohibition, but the temporary condition signs section gives no legal wording in this batch, so it stays SHOULD NOT."
+    }
+   ],
+   "links": [],
+   "note": "The sign's own wording is not in the batch (the figure alt text is generic), so the condition names the sign by its instruction."
+  },
+  {
+   "id": "p10:s6",
+   "type": "DEFINE",
+   "force": null,
+   "force_from": null,
+   "text": "DEFINE long commercial vehicle IS a double trailer THAT can be up to 40 m in length ALSO CALLED LCV",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length."
+    },
+    {
+     "id": "m67",
+     "quote": "Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)"
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p10:s7",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a long commercial vehicle placard indicates a long commercial vehicle",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length."
+    },
+    {
+     "id": "m67",
+     "quote": "Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)"
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p10:s8",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"It is important to\")",
+   "text": "a driver SHOULD recognize a long commercial vehicle based on its rear signage WHEN the driver is on the highway",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+    },
+    {
+     "id": "m67",
+     "quote": "Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)"
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The handbook's one sentence is split here: recognition applies on the highway in general, while anticipating length and speed applies only when preparing to pass, so each gets its own statement."
+  },
+  {
+   "id": "p10:s9",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"It is important to\")",
+   "text": "a driver SHOULD anticipate the extended length AND the [?limited speed] of a long commercial vehicle WHEN preparing to pass it on the highway",
+   "sources": [
+    {
+     "id": "m68",
+     "quote": "It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "limited speed",
+     "note": "No measure is given for the LCV's limited speed."
+    }
+   ],
+   "links": [],
+   "note": "The extended length is the up-to-40-m length defined in s6."
+  },
+  {
+   "id": "p11:s1",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT pavement markings tell a driver when it is not [?safe] to pass",
+   "sources": [
+    {
+     "id": "m20",
+     "quote": "Pavement markings divide traffic lanes, show turning lanes, mark pedestrian crossings, indicate obstacles and tell you when it is not safe to pass."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "safe",
+     "note": "No measure of safety is given; the driver must judge whether passing is safe."
+    }
+   ],
+   "links": [],
+   "note": "Only the passing-related purpose is extracted; the other purposes (dividing lanes, showing turning lanes, marking crossings, indicating obstacles) are not about the topic."
+  },
+  {
+   "id": "p11:s2",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "text (\"should not\")",
+   "text": "a driver SHOULD NOT pass WHEN there is a solid line at the left of the driver's lane BECAUSE it is [?unsafe] to pass",
+   "sources": [
+    {
+     "id": "m21",
+     "quote": "A solid line at the left of your lane means it is unsafe to pass. ('A' should not pass.)"
+    },
+    {
+     "id": "m22",
+     "quote": "vehicles travelling beside a solid yellow line"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "unsafe",
+     "note": "No measure of safety is given; the driver must judge whether passing is unsafe."
+    }
+   ],
+   "links": [],
+   "note": "The main sentence describes the line's meaning ('it is unsafe to pass'); the parenthetical gives the advisory instruction ('should not pass'). The force is advisory from 'should not', not legal, because the handbook does not use legal wording for this marking."
+  },
+  {
+   "id": "p11:s3",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"may pass\")",
+   "text": "a driver MAY pass WHEN there is a broken line at the left of the driver's lane AND the way is [?clear] AND there are [?enough] broken lines ahead to complete the pass [?safely]",
+   "sources": [
+    {
+     "id": "m23",
+     "quote": "A broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)"
+    },
+    {
+     "id": "m24",
+     "quote": "vehicles travelling beside broken yellow lines"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "clear",
+     "note": "The driver must judge whether the way is clear of oncoming traffic."
+    },
+    {
+     "code": "J",
+     "span": "enough",
+     "note": "No number of broken lines is given; the driver must judge how many are enough."
+    },
+    {
+     "code": "J",
+     "span": "safely",
+     "note": "No measure of safety is given; the driver must judge whether the pass can be completed safely."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p12:s1",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (Table of offences, \"Three points\")",
+   "text": "a driver MUST slow down AND pass carefully WHEN the driver is passing a stopped emergency vehicle IF VIOLATED 3 demerit points",
+   "sources": [
+    {
+     "id": "m80",
+     "quote": "Failing to slow and carefully pass a stopped emergency vehicle"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "carefully",
+     "note": "The handbook does not define what passing carefully requires (speed, distance, time of day, etc.)."
+    }
+   ],
+   "links": [],
+   "note": "The heading \"Table of offences › Three points\" gives both the legal force (it is an offence) and the penalty (3 demerit points). \"Slow\" is expanded to \"slow down\" as the natural verb phrase."
+  },
+  {
+   "id": "p12:s2",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (Table of offences, \"Three points\")",
+   "text": "a driver MUST move into another lane WHEN the driver is passing a stopped emergency vehicle AND moving into another lane is [?possible] IF VIOLATED 3 demerit points",
+   "sources": [
+    {
+     "id": "m81",
+     "quote": "Failing to move, where possible, into another lane when passing a stopped emergency vehicle"
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "possible",
+     "note": "The driver must judge whether moving into another lane is possible; the handbook gives no test for possibility."
+    }
+   ],
+   "links": [],
+   "note": "The heading \"Table of offences › Three points\" gives both the legal force and the penalty. \"Where possible\" is written as a WHEN condition on the duty."
+  },
+  {
+   "id": "p13:s1",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "context (\"Sanctions – dangerous behaviours\")",
+   "text": "a driver MUST NOT drive a motor vehicle to prevent another vehicle from passing",
+   "sources": [
+    {
+     "id": "m86",
+     "quote": "driving a motor vehicle to prevent another vehicle from passing"
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The item is a noun phrase under a sanctions heading, so the prohibition is read from the context that the behaviour is subject to sanctions."
+  },
+  {
+   "id": "p14:s1",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a driver cannot accelerate the vehicle [?as quickly] WHEN the driver is towing a trailer",
+   "sources": [
+    {
+     "id": "m82",
+     "quote": "You cannot accelerate as quickly when you are towing a trailer."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "as quickly",
+     "note": "No acceleration measure is given."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s2",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a driver needs [?more] space WHEN the driver is towing a trailer BECAUSE the length of the vehicle is [?much] longer with a trailer attached",
+   "sources": [
+    {
+     "id": "m82",
+     "quote": "You also need more space because the length of your vehicle is much longer with a trailer attached."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "more",
+     "note": "No amount of extra space is given."
+    },
+    {
+     "code": "J",
+     "span": "much",
+     "note": "No measure of how much longer is given."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s3",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"make sure\")",
+   "text": "a driver towing a trailer SHOULD make sure the driver has [?enough] time and room to complete the pass WHEN the driver is about to pass another vehicle",
+   "sources": [
+    {
+     "id": "m82",
+     "quote": "Before you pass, make sure you have enough time and room to complete the pass."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "enough",
+     "note": "No measure of time or room is given."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s4",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"allow\")",
+   "text": "a driver towing a trailer SHOULD allow [?more] room before moving back to the lane WHEN the driver has passed another vehicle",
+   "sources": [
+    {
+     "id": "m82",
+     "quote": "Once you have passed, allow more room before you move back to your lane."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "more",
+     "note": "No amount of extra room is given."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s5",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"Do not\")",
+   "text": "a driver towing a trailer SHOULD NOT cut back into the lane [?too soon] WHEN the driver has passed another vehicle BECAUSE it can cause the trailer to sway and make it [?difficult] to control",
+   "sources": [
+    {
+     "id": "m82",
+     "quote": "Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "too soon",
+     "note": "No timing or distance measure is given."
+    },
+    {
+     "code": "J",
+     "span": "difficult",
+     "note": "No measure of control difficulty is given."
+    }
+   ],
+   "links": [],
+   "note": "The first 'it' in the reason refers to cutting back into the lane too soon."
+  },
+  {
+   "id": "p14:s6",
+   "type": "PROCEDURE",
+   "force": "ADVISORY",
+   "force_from": "imperative steps",
+   "text": "TO let the other vehicles pass WHEN the driver is [?holding up a line of traffic] AND the driver is towing a trailer",
+   "steps": [
+    {
+     "n": "1",
+     "text": "signal",
+     "sources": [
+      "m83"
+     ]
+    },
+    {
+     "n": "2",
+     "text": "pull over",
+     "sources": [
+      "m83"
+     ]
+    },
+    {
+     "n": "3",
+     "text": "let the other vehicles pass",
+     "sources": [
+      "m83"
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "m83",
+     "quote": "If you are holding up a line of traffic, signal, pull over and let the other vehicles pass."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "holding up a line of traffic",
+     "note": "No objective measure of when traffic is being held up is given."
+    }
+   ],
+   "links": [],
+   "note": "The towing condition comes from the page Towing; the sentence itself does not mention a trailer."
+  },
+  {
+   "id": "p14:s7",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT [?fast-moving] trucks and buses create a strong air disturbance behind them",
+   "sources": [
+    {
+     "id": "m83",
+     "quote": "Fast-moving trucks and buses create a strong air disturbance behind them."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "fast-moving",
+     "note": "No speed threshold is given."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s8",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT the wall of wind behind a large bus or truck may whip a trailer to the side, pushing it out of control WHEN a large bus or truck passes a driver towing a trailer",
+   "sources": [
+    {
+     "id": "m83",
+     "quote": "If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s9",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"do not brake\")",
+   "text": "a driver towing a trailer SHOULD NOT brake WHEN a large bus or truck passes the driver AND the wall of wind behind it whips the trailer to the side",
+   "sources": [
+    {
+     "id": "m83",
+     "quote": "If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s10",
+   "type": "RULE",
+   "force": "ADVISORY",
+   "force_from": "imperative (\"steer\")",
+   "text": "a driver towing a trailer SHOULD [?carefully] steer the vehicle and trailer back into [?position] WHEN a large bus or truck passes the driver AND the wall of wind behind it whips the trailer to the side",
+   "sources": [
+    {
+     "id": "m83",
+     "quote": "If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "carefully",
+     "note": "No standard for careful steering is given."
+    },
+    {
+     "code": "R",
+     "span": "position",
+     "note": "The exact lane position is not stated."
+    }
+   ],
+   "links": [],
+   "note": null
+  },
+  {
+   "id": "p14:s11",
+   "type": "FACT",
+   "force": null,
+   "force_from": null,
+   "text": "FACT a [?slight] increase in speed may help WHEN a large bus or truck passes the driver AND the wall of wind behind it whips the trailer to the side",
+   "sources": [
+    {
+     "id": "m83",
+     "quote": "If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help."
+    }
+   ],
+   "flags": [
+    {
+     "code": "J",
+     "span": "slight",
+     "note": "No amount of speed increase is given."
+    }
+   ],
+   "links": [],
+   "note": "\"may help\" states a possibility, not a permission or duty."
+  },
+  {
+   "id": "p15:s1",
+   "type": "RULE",
+   "force": "LEGAL",
+   "force_from": "text (\"you must\")",
+   "text": "a driver MUST move to the right AND allow the other vehicle to pass WHEN the driver of another vehicle is about to overtake and pass the driver's vehicle",
+   "sources": [
+    {
+     "id": "m87",
+     "quote": "When the driver of another vehicle is about to overtake and pass your vehicle, you must:"
+    },
+    {
+     "id": "m88",
+     "quote": "Move to the right and allow such vehicle to pass."
+    }
+   ],
+   "flags": [],
+   "links": [],
+   "note": "The question stem (m87) supplies the condition and the legal force; the answer (m88) supplies the action. Together they form one rule about behaviour while being passed."
+  }
+ ]
+}

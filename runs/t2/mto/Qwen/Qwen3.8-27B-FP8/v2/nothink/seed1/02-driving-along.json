@@ -1,0 +1,61 @@
+{
+ "batch": "Driving along",
+ "passages": [
+  "m7"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 1 passages from the page \"Driving along\": m7.\n\n[m7] page: Driving along | heading: Keep right · ¶1 | text\nKeep to the right of the road or in the right-hand lane on multi-lane roads unless you want to turn left or pass another vehicle.\n\nWrite the reading notes for all 1 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 551,
+  "prompt_tokens": 11104,
+  "total_tokens": 11655,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 22.6,
+ "raw": "{\n  \"passages\": [\n    {\n     \"id\": \"m7\",\n     \"about_topic\": true,\n     \"says\": \"rule: keep right unless turning left or passing; establishes passing as a valid reason to leave the right-hand lane\"\n    }\n  ],\n  \"statements\": [\n    {\n     \"id\": \"s1\",\n     \"type\": \"RULE\",\n     \"force\": \"ADVISORY\",\n     \"force_from\": \"imperative (\\\"Keep\\\")\",\n     \"text\": \"a driver SHOULD keep to the right of the road OR the right-hand lane on multi-lane roads UNLESS the driver wants to turn left OR the driver wants to pass another vehicle\",\n     \"sources\": [\n      {\n       \"id\": \"m7\",\n       \"quote\": \"Keep to the right of the road or in the right-hand lane on multi-lane roads unless you want to turn left or pass another vehicle.\"\n      }\n     ],\n     \"flags\": [],\n     \"links\": [],\n     \"note\": \"The handbook uses 'unless you want to', which is advisory in tone (preference/intent) rather than a legal prohibition against being in the left lane for other reasons, though standard driving practice treats this as a strong rule. The M flag is not used because 'Keep' is a standard imperative in this context, but the force is kept as SHOULD to reflect the 'want to' phrasing which implies permission rather than strict legal mandate in this specific sentence structure, although 'Keep right' is generally a legal requirement. However, looking at the strict definition: 'Keep' is a plain command. In many handbooks, 'Keep right' is law. But the 'unless you want to' phrasing is unusual. Let's re-evaluate force. If it's a general instruction, it's often law. But 'want to' suggests it's about intent. Let's look at similar examples. Example 4 used 'Never' as advice until 'illegal' was stated. Here, there is no 'illegal'. 'Keep' is an imperative. I will mark it as SHOULD to be safe, as 'want to' softens the obligation. Actually, in Ontario, keeping right is a legal requirement (Highway Traffic Act). However, the prompt says 'Force belongs to the sentence that has it... When you are unsure, keep the weaker force'. The sentence says 'unless you want to'. This phrasing makes it sound like a guideline for when you *should* move over. I will use SHOULD.\"\n     }\n    ]\n  }",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m7",
+    "about_topic": true,
+    "says": "rule: keep right unless turning left or passing; establishes passing as a valid reason to leave the right-hand lane"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Keep\")",
+    "text": "a driver SHOULD keep to the right of the road OR the right-hand lane on multi-lane roads UNLESS the driver wants to turn left OR the driver wants to pass another vehicle",
+    "sources": [
+     {
+      "id": "m7",
+      "quote": "Keep to the right of the road or in the right-hand lane on multi-lane roads unless you want to turn left or pass another vehicle."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The handbook uses 'unless you want to', which is advisory in tone (preference/intent) rather than a legal prohibition against being in the left lane for other reasons, though standard driving practice treats this as a strong rule. The M flag is not used because 'Keep' is a standard imperative in this context, but the force is kept as SHOULD to reflect the 'want to' phrasing which implies permission rather than strict legal mandate in this specific sentence structure, although 'Keep right' is generally a legal requirement. However, looking at the strict definition: 'Keep' is a plain command. In many handbooks, 'Keep right' is law. But the 'unless you want to' phrasing is unusual. Let's re-evaluate force. If it's a general instruction, it's often law. But 'want to' suggests it's about intent. Let's look at similar examples. Example 4 used 'Never' as advice until 'illegal' was stated. Here, there is no 'illegal'. 'Keep' is an imperative. I will mark it as SHOULD to be safe, as 'want to' softens the obligation. Actually, in Ontario, keeping right is a legal requirement (Highway Traffic Act). However, the prompt says 'Force belongs to the sentence that has it... When you are unsure, keep the weaker force'. The sentence says 'unless you want to'. This phrasing makes it sound like a guideline for when you *should* move over. I will use SHOULD."
+   }
+  ]
+ },
+ "parse_error": null
+}

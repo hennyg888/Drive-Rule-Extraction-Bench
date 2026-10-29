@@ -1,0 +1,136 @@
+{
+ "batch": "Pavement markings",
+ "passages": [
+  "m20",
+  "m21",
+  "m22",
+  "m23",
+  "m24"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 5 passages from the page \"Pavement markings\": m20, m21, m22, m23, m24.\n\n[m20] page: Pavement markings | heading: Intro · ¶1 | text\nPavement markings divide traffic lanes, show turning lanes, mark pedestrian crossings, indicate obstacles and tell you when it is not safe to pass.\n\n[m21] page: Pavement markings | heading: Intro · ¶3 | text\nA solid line at the left of your lane means it is unsafe to pass. ('A' should not pass.)\n\n[m22] page: Pavement markings | heading: Intro · Diagram 3-2 | figure\nFigure: Diagram 3-2 | Alt text: “vehicles travelling beside a solid yellow line”\n\n[m23] page: Pavement markings | heading: Intro · ¶4 | text\nA broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)\n\n[m24] page: Pavement markings | heading: Intro · Diagram 3-3 | figure\nFigure: Diagram 3-3 | Alt text: “vehicles travelling beside broken yellow lines”\n\nWrite the reading notes for all 5 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"passages\": [{\"id\": \"m20\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"m21\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"m22\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"m23\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"m24\", \"about_topic\": true, \"says\": \"-\"}], \"statements\": [{\"id\": \"3.1.5a\", \"type\": \"FACT\", \"force\": null, \"force_from\": null, \"text\": \"FACT pavement markings show, among other things, where it is not [?safe] to pass\", \"sources\": [{\"id\": \"m20\", \"quote\": \"Pavement markings divide traffic lanes, show turning lanes, mark pedestrian crossings, indicate obstacles and tell you when it is not safe to pass.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"safe\", \"note\": \"Judgment term inside a description.\"}], \"note\": null, \"links\": []}, {\"id\": \"3.1.5b\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"text (\\\"should not\\\")\", \"text\": \"a driver SHOULD NOT pass WHEN there is a solid line at the left of the driver's lane BECAUSE a solid line there means it is unsafe to pass\", \"sources\": [{\"id\": \"m21\", \"quote\": \"A solid line at the left of your lane means it is unsafe to pass. ('A' should not pass.)\"}, {\"id\": \"m22\", \"quote\": \"vehicles travelling beside a solid yellow line\"}], \"flags\": [], \"note\": null, \"links\": []}, {\"id\": \"3.1.6a\", \"type\": \"RULE\", \"force\": \"LEGAL\", \"force_from\": \"text (\\\"may\\\")\", \"text\": \"a driver MAY pass WHEN there is a broken line at the left of the driver's lane ONLY IF the way is clear AND there are [?enough] broken lines ahead to complete the pass [?safely]\", \"sources\": [{\"id\": \"m23\", \"quote\": \"A broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)\"}, {\"id\": \"m24\", \"quote\": \"vehicles travelling beside broken yellow lines\"}], \"flags\": [{\"code\": \"J\", \"span\": \"enough\", \"note\": \"No distance given.\"}, {\"code\": \"J\", \"span\": \"safely\", \"note\": \"Judgment term.\"}], \"note\": null, \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m20",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "m21",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "m22",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "m23",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "m24",
+    "about_topic": true,
+    "says": "-"
+   }
+  ],
+  "statements": [
+   {
+    "id": "3.1.5a",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT pavement markings show, among other things, where it is not [?safe] to pass",
+    "sources": [
+     {
+      "id": "m20",
+      "quote": "Pavement markings divide traffic lanes, show turning lanes, mark pedestrian crossings, indicate obstacles and tell you when it is not safe to pass."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "safe",
+      "note": "Judgment term inside a description."
+     }
+    ],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.1.5b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"should not\")",
+    "text": "a driver SHOULD NOT pass WHEN there is a solid line at the left of the driver's lane BECAUSE a solid line there means it is unsafe to pass",
+    "sources": [
+     {
+      "id": "m21",
+      "quote": "A solid line at the left of your lane means it is unsafe to pass. ('A' should not pass.)"
+     },
+     {
+      "id": "m22",
+      "quote": "vehicles travelling beside a solid yellow line"
+     }
+    ],
+    "flags": [],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.1.6a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"may\")",
+    "text": "a driver MAY pass WHEN there is a broken line at the left of the driver's lane ONLY IF the way is clear AND there are [?enough] broken lines ahead to complete the pass [?safely]",
+    "sources": [
+     {
+      "id": "m23",
+      "quote": "A broken line at the left of your lane means you may pass if the way is clear. ('A' may pass if there are enough broken lines ahead to complete the pass safely.)"
+     },
+     {
+      "id": "m24",
+      "quote": "vehicles travelling beside broken yellow lines"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "enough",
+      "note": "No distance given."
+     },
+     {
+      "code": "J",
+      "span": "safely",
+      "note": "Judgment term."
+     }
+    ],
+    "note": null,
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

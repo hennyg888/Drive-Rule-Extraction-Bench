@@ -1,0 +1,29 @@
+reference                          88
+model                              104
+matched                            85
+recall                             0.966
+precision                          0.817
+type_agreement                     0.929
+force_agreement                    0.882
+modal_agreement                    0.824
+force_basis_agreement              0.824
+text_similarity_mean               0.718
+vague_span_f1                      0.515
+vague_code_accuracy                1.0
+statements_from_excluded_passages  1
+passage_recall                     1.0
+sentence_recall                    0.977
+check_problems                     {'numbers': 1, 'quote': 4, 'flags': 1}
+subset heading condition           15/15 matched
+subset neighbour condition         1/2 matched  missing 2.2b
+subset heading force               3/3 matched
+subset cross-passage link          2/3 matched  missing 2.2b
+subset duty apart from penalty     4/4 matched
+subset sources on two pages        6/6 matched
+subset seen in the spec            10/10 matched
+unmatched reference: 2.2b 3.4.5c 3.6.2a
+passages the reference cites but the model does not: -
+sentences the reference quotes but the model does not:
+    m12: be careful not to cut off a vehicle by suddenly moving in front of it.
+    m47: remain calm and patient.
+    m49: don't attempt to pass a vehicle moving slowly or speed up to get away 

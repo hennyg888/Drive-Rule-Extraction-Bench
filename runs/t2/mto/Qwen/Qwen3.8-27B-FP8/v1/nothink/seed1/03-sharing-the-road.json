@@ -1,0 +1,398 @@
+{
+ "batch": "Sharing the road",
+ "passages": [
+  "m76",
+  "m54",
+  "m55",
+  "m59",
+  "m56",
+  "m57",
+  "m58",
+  "m60",
+  "m96",
+  "m65",
+  "m66",
+  "m69",
+  "m70",
+  "m71"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 14 selected passages from the page \"Sharing the road\".\n\n[m76] page: Sharing the road | heading: Pedestrians · item 2 | text\nDo not pass a vehicle stopped at a crosswalk. A stopped vehicle may be a clue that a pedestrian is crossing.\n\n[m54] page: Sharing the road | heading: Cyclists · ¶1 | text\nHowever, they can use any part of the lane if necessary for safety, such as to:\n\n[m55] page: Sharing the road | heading: Cyclists · item 3 | text\nDiscourage passing where the lane is too narrow to be shared safely\n\n[m59] page: Sharing the road | heading: Cyclists · Diagram 2-11 | figure\nFigure: Diagram 2-11 | Alt text: “bike lane adjacent to parking bays”\n\n[m56] page: Sharing the road | heading: Cyclists · ¶3 | text\nWhen passing a cyclist, drivers of motor vehicles must maintain a minimum distance of one metre, where practical between their vehicle and the cyclist.\n\n[m57] page: Sharing the road | heading: Cyclists · ¶3 | text\n(See Diagram 2-11.) Failure to do so may result in a fine and an additional two demerit points on the driver’s record.\n\n[m58] page: Sharing the road | heading: Cyclists · ¶3 | text\nWhenever possible, you should change lanes to pass.\n\n[m60] page: Sharing the road | heading: Cyclists · ¶6 | text\nDo not sound your horn unnecessarily when you are overtaking a cyclist. It may frighten them and cause them to lose control. If you feel that you must use your horn, tap it quickly and lightly while you are still some distance away from the cyclist.\n\n[m96] page: Sharing the road | heading: Cyclists · ¶12 | text\nWhen parked on the side of the roadway, look behind you and check your mirrors and blind spots for a passing cyclist before opening a door.\n\n[m65] page: Sharing the road | heading: Large commercial vehicles · ¶3 | text\nWhen passing a large vehicle, do not cut in front closely. Not only is this discourteous, it is dangerous; it reduces the space cushion large vehicles require in order to stop safely. Allow more room when passing a large vehicle.\n\n[m66] page: Sharing the road | heading: Large commercial vehicles · ¶8 | text\n6. Turbulence - Due to various factors such as air pressure and airflow, a large vehicle can create heavy air turbulence. This may affect your ability to control your vehicle when passing a large one.\n\n[m69] page: Sharing the road | heading: Farm machinery · ¶2 | text\nStay well back and do not pass until it is safe to do so.\n\n[m70] page: Sharing the road | heading: Horse-drawn vehicles · ¶2 | text\nMaintain a safe following distance and only pass when it is safe to do so.\n\n[m71] page: Sharing the road | heading: Horse-drawn vehicles · ¶2 | text\nWhen passing, give as much distance between you and them as possible. Passing too closely could scare or startle the horse, causing it to change direction suddenly on the roadway.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 3218,
+  "prompt_tokens": 16409,
+  "total_tokens": 19627,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 85.2,
+ "raw": "{\n  \"statements\": [\n    {\n      \"id\": \"3.4.11a\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"Do not pass\\\")\",\n      \"text\": \"a driver SHOULD NOT pass a vehicle WHEN the vehicle is stopped at a crosswalk BECAUSE a stopped vehicle may be a clue that a pedestrian is crossing\",\n      \"sources\": [\n        {\n          \"id\": \"m76\",\n          \"quote\": \"Do not pass a vehicle stopped at a crosswalk. A stopped vehicle may be a clue that a pedestrian is crossing.\"\n        }\n      ],\n      \"flags\": [],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.4a\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"text (\\\"can use\\\")\",\n      \"text\": \"a cyclist MAY use any part of the lane WHEN necessary for safety\",\n      \"sources\": [\n        {\n          \"id\": \"m54\",\n          \"quote\": \"However, they can use any part of the lane if necessary for safety, such as to:\"\n        }\n      ],\n      \"flags\": [],\n      \"links\": [],\n      \"note\": \"The lead sentence ends with a colon and lists reasons; the permission itself is in the lead. The specific reason in m55 is handled in 3.4.4b.\"\n    },\n    {\n      \"id\": \"3.4.4b\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"implied (\\\"Discourage passing\\\")\",\n      \"text\": \"a cyclist SHOULD position the bicycle in the lane to discourage passing WHEN the lane is too narrow to be shared safely\",\n      \"sources\": [\n        {\n          \"id\": \"m54\",\n          \"quote\": \"However, they can use any part of the lane if necessary for safety, such as to:\"\n        },\n        {\n          \"id\": \"m55\",\n          \"quote\": \"Discourage passing where the lane is too narrow to be shared safely\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"too narrow to be shared safely\",\n          \"note\": \"Subjective judgment of lane width and safety.\"\n        }\n      ],\n      \"links\": [\n        \"3.4.4a\"\n      ],\n      \"note\": \"The item is an infinitive phrase explaining the purpose of using the lane. It is treated as advice for the cyclist to discourage passing.\"\n    },\n    {\n      \"id\": \"3.4.4c\",\n      \"type\": \"RULE\",\n      \"force\": \"LEGAL\",\n      \"force_from\": \"text (\\\"must maintain\\\")\",\n      \"text\": \"a driver MUST maintain a minimum distance of 1 m between the vehicle and the cyclist WHILE passing a cyclist ONLY IF practical IF VIOLATED a fine AND 2 demerit points\",\n      \"sources\": [\n        {\n          \"id\": \"m56\",\n          \"quote\": \"When passing a cyclist, drivers of motor vehicles must maintain a minimum distance of one metre, where practical between their vehicle and the cyclist.\"\n        },\n        {\n          \"id\": \"m57\",\n          \"quote\": \"(See Diagram 2-11.) Failure to do so may result in a fine and an additional two demerit points on the driver’s record.\"\n        },\n        {\n          \"id\": \"m59\",\n          \"quote\": \"bike lane adjacent to parking bays\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"practical\",\n          \"note\": \"Subjective judgment of what is practical.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": \"The penalty is in m57. The figure m59 is cited as it is referenced in the penalty sentence.\"\n    },\n    {\n      \"id\": \"3.4.4d\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"text (\\\"should change lanes\\\")\",\n      \"text\": \"a driver SHOULD change lanes to pass a cyclist WHEN possible\",\n      \"sources\": [\n        {\n          \"id\": \"m58\",\n          \"quote\": \"Whenever possible, you should change lanes to pass.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"possible\",\n          \"note\": \"Subjective judgment of possibility.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.4e\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"Do not sound\\\")\",\n      \"text\": \"a driver SHOULD NOT sound the horn unnecessarily WHILE passing a cyclist BECAUSE it may frighten the cyclist and cause the cyclist to lose control\",\n      \"sources\": [\n        {\n          \"id\": \"m60\",\n          \"quote\": \"Do not sound your horn unnecessarily when you are overtaking a cyclist. It may frighten them and cause them to lose control.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"unnecessarily\",\n          \"note\": \"Subjective judgment of necessity.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.4f\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"tap it quickly\\\")\",\n      \"text\": \"a driver SHOULD tap the horn quickly and lightly WHILE passing a cyclist WHEN the driver is still some distance away from the cyclist\",\n      \"sources\": [\n        {\n          \"id\": \"m60\",\n          \"quote\": \"If you feel that you must use your horn, tap it quickly and lightly while you are still some distance away from the cyclist.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"some distance\",\n          \"note\": \"Vague distance.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.1a\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"look behind you\\\")\",\n      \"text\": \"a driver SHOULD look behind the vehicle AND check the mirrors and blind spots for a passing cyclist WHEN the vehicle is parked on the side of the roadway AND the driver is about to open a door\",\n      \"sources\": [\n        {\n          \"id\": \"m96\",\n          \"quote\": \"When parked on the side of the roadway, look behind you and check your mirrors and blind spots for a passing cyclist before opening a door.\"\n        }\n      ],\n      \"flags\": [],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.6a\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"do not cut in front\\\")\",\n      \"text\": \"a driver SHOULD NOT cut in front closely of a large vehicle WHILE passing a large vehicle BECAUSE it reduces the space cushion large vehicles require in order to stop safely\",\n      \"sources\": [\n        {\n          \"id\": \"m65\",\n          \"quote\": \"When passing a large vehicle, do not cut in front closely. Not only is this discourteous, it is dangerous; it reduces the space cushion large vehicles require in order to stop safely.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"closely\",\n          \"note\": \"Vague degree of closeness.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.6b\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"Allow more room\\\")\",\n      \"text\": \"a driver SHOULD allow more room WHILE passing a large vehicle\",\n      \"sources\": [\n        {\n          \"id\": \"m65\",\n          \"quote\": \"Allow more room when passing a large vehicle.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"more room\",\n          \"note\": \"Vague amount of room.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.6c\",\n      \"type\": \"FACT\",\n      \"force\": null,\n      \"force_from\": null,\n      \"text\": \"FACT a large vehicle can create heavy air turbulence that may affect the driver's ability to control the vehicle WHILE passing a large vehicle\",\n      \"sources\": [\n        {\n          \"id\": \"m66\",\n          \"quote\": \"6. Turbulence - Due to various factors such as air pressure and airflow, a large vehicle can create heavy air turbulence. This may affect your ability to control your vehicle when passing a large one.\"\n        }\n      ],\n      \"flags\": [],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.7a\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"Stay well back\\\")\",\n      \"text\": \"a driver SHOULD stay well back from farm machinery UNTIL it is [?safe] to pass\",\n      \"sources\": [\n        {\n          \"id\": \"m69\",\n          \"quote\": \"Stay well back and do not pass until it is safe to do so.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"well back\",\n          \"note\": \"Vague distance.\"\n        },\n        {\n          \"code\": \"J\",\n          \"span\": \"safe\",\n          \"note\": \"Subjective judgment of safety.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.7b\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"do not pass\\\")\",\n      \"text\": \"a driver SHOULD NOT pass farm machinery UNTIL it is [?safe] to do so\",\n      \"sources\": [\n        {\n          \"id\": \"m69\",\n          \"quote\": \"Stay well back and do not pass until it is safe to do so.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"safe\",\n          \"note\": \"Subjective judgment of safety.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.8a\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"Maintain\\\")\",\n      \"text\": \"a driver SHOULD maintain a [?safe] following distance from a horse-drawn vehicle\",\n      \"sources\": [\n        {\n          \"id\": \"m70\",\n          \"quote\": \"Maintain a safe following distance and only pass when it is safe to do so.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"safe\",\n          \"note\": \"Subjective judgment of safety.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.8b\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"pass\\\")\",\n      \"text\": \"a driver SHOULD pass a horse-drawn vehicle ONLY IF it is [?safe] to do so\",\n      \"sources\": [\n        {\n          \"id\": \"m70\",\n          \"quote\": \"Maintain a safe following distance and only pass when it is safe to do so.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"safe\",\n          \"note\": \"Subjective judgment of safety.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    },\n    {\n      \"id\": \"3.4.8c\",\n      \"type\": \"RULE\",\n      \"force\": \"ADVISORY\",\n      \"force_from\": \"imperative (\\\"give as much distance\\\")\",\n      \"text\": \"a driver SHOULD give as much distance between the vehicle and the horse-drawn vehicle as possible WHILE passing a horse-drawn vehicle BECAUSE passing too closely could scare or startle the horse, causing it to change direction suddenly on the roadway\",\n      \"sources\": [\n        {\n          \"id\": \"m71\",\n          \"quote\": \"When passing, give as much distance between you and them as possible. Passing too closely could scare or startle the horse, causing it to change direction suddenly on the roadway.\"\n        }\n      ],\n      \"flags\": [\n        {\n          \"code\": \"J\",\n          \"span\": \"as much distance ... as possible\",\n          \"note\": \"Vague amount of distance.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": null\n    }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.4.11a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Do not pass\")",
+    "text": "a driver SHOULD NOT pass a vehicle WHEN the vehicle is stopped at a crosswalk BECAUSE a stopped vehicle may be a clue that a pedestrian is crossing",
+    "sources": [
+     {
+      "id": "m76",
+      "quote": "Do not pass a vehicle stopped at a crosswalk. A stopped vehicle may be a clue that a pedestrian is crossing."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.4a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"can use\")",
+    "text": "a cyclist MAY use any part of the lane WHEN necessary for safety",
+    "sources": [
+     {
+      "id": "m54",
+      "quote": "However, they can use any part of the lane if necessary for safety, such as to:"
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The lead sentence ends with a colon and lists reasons; the permission itself is in the lead. The specific reason in m55 is handled in 3.4.4b."
+   },
+   {
+    "id": "3.4.4b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "implied (\"Discourage passing\")",
+    "text": "a cyclist SHOULD position the bicycle in the lane to discourage passing WHEN the lane is too narrow to be shared safely",
+    "sources": [
+     {
+      "id": "m54",
+      "quote": "However, they can use any part of the lane if necessary for safety, such as to:"
+     },
+     {
+      "id": "m55",
+      "quote": "Discourage passing where the lane is too narrow to be shared safely"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "too narrow to be shared safely",
+      "note": "Subjective judgment of lane width and safety."
+     }
+    ],
+    "links": [
+     "3.4.4a"
+    ],
+    "note": "The item is an infinitive phrase explaining the purpose of using the lane. It is treated as advice for the cyclist to discourage passing."
+   },
+   {
+    "id": "3.4.4c",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must maintain\")",
+    "text": "a driver MUST maintain a minimum distance of 1 m between the vehicle and the cyclist WHILE passing a cyclist ONLY IF practical IF VIOLATED a fine AND 2 demerit points",
+    "sources": [
+     {
+      "id": "m56",
+      "quote": "When passing a cyclist, drivers of motor vehicles must maintain a minimum distance of one metre, where practical between their vehicle and the cyclist."
+     },
+     {
+      "id": "m57",
+      "quote": "(See Diagram 2-11.) Failure to do so may result in a fine and an additional two demerit points on the driver’s record."
+     },
+     {
+      "id": "m59",
+      "quote": "bike lane adjacent to parking bays"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "practical",
+      "note": "Subjective judgment of what is practical."
+     }
+    ],
+    "links": [],
+    "note": "The penalty is in m57. The figure m59 is cited as it is referenced in the penalty sentence."
+   },
+   {
+    "id": "3.4.4d",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"should change lanes\")",
+    "text": "a driver SHOULD change lanes to pass a cyclist WHEN possible",
+    "sources": [
+     {
+      "id": "m58",
+      "quote": "Whenever possible, you should change lanes to pass."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "possible",
+      "note": "Subjective judgment of possibility."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.4e",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Do not sound\")",
+    "text": "a driver SHOULD NOT sound the horn unnecessarily WHILE passing a cyclist BECAUSE it may frighten the cyclist and cause the cyclist to lose control",
+    "sources": [
+     {
+      "id": "m60",
+      "quote": "Do not sound your horn unnecessarily when you are overtaking a cyclist. It may frighten them and cause them to lose control."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "unnecessarily",
+      "note": "Subjective judgment of necessity."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.4f",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"tap it quickly\")",
+    "text": "a driver SHOULD tap the horn quickly and lightly WHILE passing a cyclist WHEN the driver is still some distance away from the cyclist",
+    "sources": [
+     {
+      "id": "m60",
+      "quote": "If you feel that you must use your horn, tap it quickly and lightly while you are still some distance away from the cyclist."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "some distance",
+      "note": "Vague distance."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.1a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"look behind you\")",
+    "text": "a driver SHOULD look behind the vehicle AND check the mirrors and blind spots for a passing cyclist WHEN the vehicle is parked on the side of the roadway AND the driver is about to open a door",
+    "sources": [
+     {
+      "id": "m96",
+      "quote": "When parked on the side of the roadway, look behind you and check your mirrors and blind spots for a passing cyclist before opening a door."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.6a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"do not cut in front\")",
+    "text": "a driver SHOULD NOT cut in front closely of a large vehicle WHILE passing a large vehicle BECAUSE it reduces the space cushion large vehicles require in order to stop safely",
+    "sources": [
+     {
+      "id": "m65",
+      "quote": "When passing a large vehicle, do not cut in front closely. Not only is this discourteous, it is dangerous; it reduces the space cushion large vehicles require in order to stop safely."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "closely",
+      "note": "Vague degree of closeness."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.6b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Allow more room\")",
+    "text": "a driver SHOULD allow more room WHILE passing a large vehicle",
+    "sources": [
+     {
+      "id": "m65",
+      "quote": "Allow more room when passing a large vehicle."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "more room",
+      "note": "Vague amount of room."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.6c",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT a large vehicle can create heavy air turbulence that may affect the driver's ability to control the vehicle WHILE passing a large vehicle",
+    "sources": [
+     {
+      "id": "m66",
+      "quote": "6. Turbulence - Due to various factors such as air pressure and airflow, a large vehicle can create heavy air turbulence. This may affect your ability to control your vehicle when passing a large one."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.7a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Stay well back\")",
+    "text": "a driver SHOULD stay well back from farm machinery UNTIL it is [?safe] to pass",
+    "sources": [
+     {
+      "id": "m69",
+      "quote": "Stay well back and do not pass until it is safe to do so."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "well back",
+      "note": "Vague distance."
+     },
+     {
+      "code": "J",
+      "span": "safe",
+      "note": "Subjective judgment of safety."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.7b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"do not pass\")",
+    "text": "a driver SHOULD NOT pass farm machinery UNTIL it is [?safe] to do so",
+    "sources": [
+     {
+      "id": "m69",
+      "quote": "Stay well back and do not pass until it is safe to do so."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "safe",
+      "note": "Subjective judgment of safety."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.8a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Maintain\")",
+    "text": "a driver SHOULD maintain a [?safe] following distance from a horse-drawn vehicle",
+    "sources": [
+     {
+      "id": "m70",
+      "quote": "Maintain a safe following distance and only pass when it is safe to do so."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "safe",
+      "note": "Subjective judgment of safety."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.8b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"pass\")",
+    "text": "a driver SHOULD pass a horse-drawn vehicle ONLY IF it is [?safe] to do so",
+    "sources": [
+     {
+      "id": "m70",
+      "quote": "Maintain a safe following distance and only pass when it is safe to do so."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "safe",
+      "note": "Subjective judgment of safety."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "3.4.8c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"give as much distance\")",
+    "text": "a driver SHOULD give as much distance between the vehicle and the horse-drawn vehicle as possible WHILE passing a horse-drawn vehicle BECAUSE passing too closely could scare or startle the horse, causing it to change direction suddenly on the roadway",
+    "sources": [
+     {
+      "id": "m71",
+      "quote": "When passing, give as much distance between you and them as possible. Passing too closely could scare or startle the horse, causing it to change direction suddenly on the roadway."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "as much distance ... as possible",
+      "note": "Vague amount of distance."
+     }
+    ],
+    "links": [],
+    "note": null
+   }
+  ]
+ },
+ "parse_error": null
+}

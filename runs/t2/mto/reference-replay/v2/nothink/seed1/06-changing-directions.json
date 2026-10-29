@@ -1,0 +1,150 @@
+{
+ "batch": "Changing directions",
+ "passages": [
+  "m53",
+  "c6",
+  "c7",
+  "m19"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 4 passages from the page \"Changing directions\": m53, c6, c7, m19.\n\n[m53] page: Changing directions | heading: Left turns · ¶5 | text\nWait for the smaller vehicle to move right before you pass.\n\n[c6] page: Changing directions | heading: Left turns · ¶5 | text\nIf you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time.\n\n[c7] page: Changing directions | heading: Left turns · ¶5 | text\nStay behind and turn when the way is clear.\n\n[m19] page: Changing directions | heading: Left-turn lanes · ¶3 | text\nThese left-turn lanes are not to be used for passing.\n\nWrite the reading notes for all 4 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"passages\": [{\"id\": \"c6\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"c7\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"m19\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"m53\", \"about_topic\": true, \"says\": \"-\"}], \"statements\": [{\"id\": \"3.1.4a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"default (prescriptive passive \\\"are not to be used\\\")\", \"text\": \"a driver SHOULD NOT use a two-way left-turn lane for passing\", \"sources\": [{\"id\": \"m19\", \"quote\": \"These left-turn lanes are not to be used for passing.\"}], \"flags\": [{\"code\": \"M\", \"span\": \"are not to be used\", \"note\": \"Not an imperative and no legal marker; the default puts it at SHOULD NOT, but the wording reads like a prohibition.\"}], \"note\": null, \"links\": []}, {\"id\": \"3.4.3a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Wait \\u2026 before you pass\\\")\", \"text\": \"a driver SHOULD NOT pass a [?smaller vehicle] that is turning left ahead UNTIL it has moved to the right\", \"sources\": [{\"id\": \"m53\", \"quote\": \"Wait for the smaller vehicle to move right before you pass.\"}], \"flags\": [{\"code\": \"R\", \"span\": \"smaller vehicle\", \"note\": \"The motorcycles, bicycles and mopeds turning left, named two sentences earlier.\"}], \"note\": null, \"links\": []}, {\"id\": \"3.4.3b\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"do not pull up beside it\\\")\", \"text\": \"a driver SHOULD NOT pull up beside a [?smaller vehicle] that is turning left ahead to make the turn at the same time WHEN the driver is also turning left, behind it\", \"sources\": [{\"id\": \"c6\", \"quote\": \"If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time.\"}], \"flags\": [{\"code\": \"R\", \"span\": \"smaller vehicle\", \"note\": \"The source says \\\"one of these vehicles\\\": those named in the sentence before.\"}], \"note\": \"Pulling up beside a turning two-wheeler is the start of a pass.\", \"links\": []}, {\"id\": \"3.4.3c\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Stay behind\\\")\", \"text\": \"a driver SHOULD stay behind a [?smaller vehicle] that is turning left ahead WHEN the driver is also turning left, behind it UNTIL the way is [?clear]\", \"sources\": [{\"id\": \"c7\", \"quote\": \"Stay behind and turn when the way is clear.\"}], \"flags\": [{\"code\": \"R\", \"span\": \"smaller vehicle\", \"note\": \"Same vehicles as 3.4.3b; the source only says \\\"Stay behind\\\".\"}, {\"code\": \"J\", \"span\": \"clear\", \"note\": \"No test for when the way is clear.\"}], \"note\": \"\\\"\\u2026 and turn when the way is clear\\\" is written as the end of the wait (UNTIL).\", \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "c6",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "c7",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "m19",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "m53",
+    "about_topic": true,
+    "says": "-"
+   }
+  ],
+  "statements": [
+   {
+    "id": "3.1.4a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "default (prescriptive passive \"are not to be used\")",
+    "text": "a driver SHOULD NOT use a two-way left-turn lane for passing",
+    "sources": [
+     {
+      "id": "m19",
+      "quote": "These left-turn lanes are not to be used for passing."
+     }
+    ],
+    "flags": [
+     {
+      "code": "M",
+      "span": "are not to be used",
+      "note": "Not an imperative and no legal marker; the default puts it at SHOULD NOT, but the wording reads like a prohibition."
+     }
+    ],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.4.3a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Wait … before you pass\")",
+    "text": "a driver SHOULD NOT pass a [?smaller vehicle] that is turning left ahead UNTIL it has moved to the right",
+    "sources": [
+     {
+      "id": "m53",
+      "quote": "Wait for the smaller vehicle to move right before you pass."
+     }
+    ],
+    "flags": [
+     {
+      "code": "R",
+      "span": "smaller vehicle",
+      "note": "The motorcycles, bicycles and mopeds turning left, named two sentences earlier."
+     }
+    ],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.4.3b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"do not pull up beside it\")",
+    "text": "a driver SHOULD NOT pull up beside a [?smaller vehicle] that is turning left ahead to make the turn at the same time WHEN the driver is also turning left, behind it",
+    "sources": [
+     {
+      "id": "c6",
+      "quote": "If you are making a left turn behind one of these vehicles, do not pull up beside it to make your turn at the same time."
+     }
+    ],
+    "flags": [
+     {
+      "code": "R",
+      "span": "smaller vehicle",
+      "note": "The source says \"one of these vehicles\": those named in the sentence before."
+     }
+    ],
+    "note": "Pulling up beside a turning two-wheeler is the start of a pass.",
+    "links": []
+   },
+   {
+    "id": "3.4.3c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Stay behind\")",
+    "text": "a driver SHOULD stay behind a [?smaller vehicle] that is turning left ahead WHEN the driver is also turning left, behind it UNTIL the way is [?clear]",
+    "sources": [
+     {
+      "id": "c7",
+      "quote": "Stay behind and turn when the way is clear."
+     }
+    ],
+    "flags": [
+     {
+      "code": "R",
+      "span": "smaller vehicle",
+      "note": "Same vehicles as 3.4.3b; the source only says \"Stay behind\"."
+     },
+     {
+      "code": "J",
+      "span": "clear",
+      "note": "No test for when the way is clear."
+     }
+    ],
+    "note": "\"… and turn when the way is clear\" is written as the end of the wait (UNTIL).",
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

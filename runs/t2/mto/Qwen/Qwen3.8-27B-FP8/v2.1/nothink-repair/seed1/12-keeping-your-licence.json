@@ -1,0 +1,95 @@
+{
+ "batch": "Keeping your licence",
+ "passages": [
+  "m80",
+  "m81"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 2 passages from the page \"Keeping your licence\": m80, m81.\n\n[m80] page: Keeping your licence | heading: Table of offences › Three points · item 17 | text\nFailing to slow and carefully pass a stopped emergency vehicle\n\n[m81] page: Keeping your licence | heading: Table of offences › Three points · item 18 | text\nFailing to move, where possible, into another lane when passing a stopped emergency vehicle\n\nWrite the reading notes for all 2 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 529,
+  "prompt_tokens": 11397,
+  "total_tokens": 11926,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 9.1,
+ "raw": "{\n  \"passages\": [\n    {\n     \"id\": \"m80\",\n     \"about_topic\": true,\n     \"says\": \"penalty: 3 demerit points for failing to slow and carefully pass a stopped emergency vehicle\"\n    },\n    {\n     \"id\": \"m81\",\n     \"about_topic\": true,\n     \"says\": \"penalty: 3 demerit points for failing to move into another lane when passing a stopped emergency vehicle, where possible\"\n    }\n  ],\n  \"statements\": [\n    {\n     \"id\": \"s1\",\n     \"type\": \"RULE\",\n     \"force\": \"LEGAL\",\n     \"force_from\": \"context (Table of offences: \\\"Three points\\\")\",\n     \"text\": \"a driver MUST slow down AND carefully pass a stopped emergency vehicle IF VIOLATED 3 demerit points\",\n     \"sources\": [\n        {\n         \"id\": \"m80\",\n         \"quote\": \"Failing to slow and carefully pass a stopped emergency vehicle\"\n        }\n      ],\n      \"flags\": [\n        {\n         \"code\": \"J\",\n         \"span\": \"carefully\",\n         \"note\": \"No specific measure for careful passing is given.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": \"The penalty for failing to do this makes the action a legal duty.\"\n    },\n    {\n     \"id\": \"s2\",\n     \"type\": \"RULE\",\n     \"force\": \"LEGAL\",\n      \"force_from\": \"context (Table of offences: \\\"Three points\\\")\",\n      \"text\": \"a driver MUST move into another lane WHEN passing a stopped emergency vehicle ONLY IF it is possible IF VIOLATED 3 demerit points\",\n      \"sources\": [\n        {\n         \"id\": \"m81\",\n         \"quote\": \"Failing to move, where possible, into another lane when passing a stopped emergency vehicle\"\n        }\n      ],\n      \"flags\": [\n        {\n         \"code\": \"J\",\n         \"span\": \"possible\",\n         \"note\": \"The driver must judge whether moving is possible.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": \"The penalty for failing to do this makes the action a legal duty.\"\n    }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m80",
+    "about_topic": true,
+    "says": "penalty: 3 demerit points for failing to slow and carefully pass a stopped emergency vehicle"
+   },
+   {
+    "id": "m81",
+    "about_topic": true,
+    "says": "penalty: 3 demerit points for failing to move into another lane when passing a stopped emergency vehicle, where possible"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Table of offences: \"Three points\")",
+    "text": "a driver MUST slow down AND carefully pass a stopped emergency vehicle IF VIOLATED 3 demerit points",
+    "sources": [
+     {
+      "id": "m80",
+      "quote": "Failing to slow and carefully pass a stopped emergency vehicle"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "carefully",
+      "note": "No specific measure for careful passing is given."
+     }
+    ],
+    "links": [],
+    "note": "The penalty for failing to do this makes the action a legal duty."
+   },
+   {
+    "id": "s2",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Table of offences: \"Three points\")",
+    "text": "a driver MUST move into another lane WHEN passing a stopped emergency vehicle ONLY IF it is possible IF VIOLATED 3 demerit points",
+    "sources": [
+     {
+      "id": "m81",
+      "quote": "Failing to move, where possible, into another lane when passing a stopped emergency vehicle"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "possible",
+      "note": "The driver must judge whether moving is possible."
+     }
+    ],
+    "links": [],
+    "note": "The penalty for failing to do this makes the action a legal duty."
+   }
+  ]
+ },
+ "parse_error": null
+}

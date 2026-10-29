@@ -1,0 +1,71 @@
+{
+ "batch": "Sample test questions",
+ "passages": [
+  "m87",
+  "m88"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 2 passages from the page \"Sample test questions\": m87, m88.\n\n[m87] page: Sample test questions | heading: Intro · ¶6 | text\n5. When the driver of another vehicle is about to overtake and pass your vehicle, you must:\n\n[m88] page: Sample test questions | heading: Intro · item 4 | text\nMove to the right and allow such vehicle to pass.\n\nWrite the reading notes for all 2 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 81920,
+  "seed": 1,
+  "thinking": true
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1547,
+  "prompt_tokens": 11171,
+  "total_tokens": 12718,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 1312,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 26.5,
+ "raw": "{\"passages\":[{\"id\":\"m87\",\"about_topic\":true,\"says\":\"condition: another driver is about to overtake and pass the driver's vehicle; force: \\\"you must\\\" makes it a legal duty\"},{\"id\":\"m88\",\"about_topic\":true,\"says\":\"rule (action): move to the right and allow the other vehicle to pass\"}],\"statements\":[{\"id\":\"s1\",\"type\":\"RULE\",\"force\":\"LEGAL\",\"force_from\":\"text (\\\"you must\\\")\",\"text\":\"a driver MUST move to the right AND allow the other vehicle to pass WHEN the driver of another vehicle is about to overtake and pass the driver's vehicle\",\"sources\":[{\"id\":\"m87\",\"quote\":\"When the driver of another vehicle is about to overtake and pass your vehicle, you must:\"},{\"id\":\"m88\",\"quote\":\"Move to the right and allow such vehicle to pass.\"}],\"flags\":[],\"links\":[],\"note\":\"The question stem (m87) supplies the condition and the legal force; the answer (m88) supplies the action. Together they form one rule about behaviour while being passed.\"}]}",
+ "reasoning": "Let me analyze these two passages about passing (overtaking) from the Ontario MTO Driver's Handbook.\n\n**Passage m87:**\n\"5. When the driver of another vehicle is about to overtake and pass your vehicle, you must:\"\n\nThis is a lead sentence for a question. It sets up the condition: when another driver is about to overtake and pass your vehicle. The \"you must\" indicates a legal duty. This is a sample test question, but it states a legal requirement.\n\n**Passage m88:**\n\"Move to the right and allow such vehicle to pass.\"\n\nThis is the answer to the question in m87. It tells the driver to move to the right and allow the other vehicle to pass.\n\nTogether, these two passages form one complete rule: When the driver of another vehicle is about to overtake and pass your vehicle, you must move to the right and allow such vehicle to pass.\n\nLet me think about this carefully:\n\n1. **Type**: RULE - it tells someone what they must do.\n2. **Role**: \"a driver\" (the driver being passed)\n3. **Modal**: MUST - \"you must\" is clearly a legal duty\n4. **Action**: move to the right AND allow the other vehicle to pass\n5. **Conditions**: WHEN the driver of another vehicle is about to overtake and pass the driver's vehicle\n\nWait, let me think about the force. This is from a \"Sample test questions\" section. The question says \"you must\" - this is a legal requirement being tested. The force comes from the word \"must\" in the text. So it's LEGAL, force_from: text (\"must\").\n\nActually, let me reconsider. This is a sample test question. The \"must\" here is part of the question stem, stating what the law requires. The answer confirms it. The force is clearly legal - \"you must\" is a legal duty statement.\n\nLet me think about whether m87 and m88 should be one statement or two. They form one complete rule:\n- m87: the condition and the \"you must\" (the role and modal)\n- m88: the action\n\nThey only make sense together. So they should be joined into one RULE statement.\n\nNow, is there anything else to extract? Let me think...\n\nThe topic is \"passing (overtaking)\" - everything a driver needs to know to decide whether, where, when and how to pass another vehicle or road user, and how to behave while being passed.\n\nThis passage is about how to behave while being passed. It says: when someone is about to overtake you, you must move to the right and allow them to pass.\n\nIs there a separate statement needed? Let me think:\n- \"Move to the right\" - this is the action\n- \"allow such vehicle to pass\" - this is also part of the action\n\nThese two are really one combined duty: move to the right AND allow the vehicle to pass. They're so closely linked that they form one action.\n\nActually, could \"move to the right\" and \"allow the vehicle to pass\" be two separate rules? Let me think... \"Allow the vehicle to pass\" is a bit vague - what does that mean exactly? In context, it means not doing anything to prevent the pass (not speeding up, not moving left). \"Move to the right\" is the specific action. They're really two aspects of the same duty. I think they should be one statement with \"AND\" connecting the two actions.\n\nLet me write the statement:\n\n`a driver MUST move to the right AND allow the other vehicle to pass WHEN the driver of the other vehicle is about to overtake and pass the driver's vehicle`\n\nWait, let me reconsider the role. The \"you\" in the handbook refers to the driver being passed. So the role is \"a driver\" (the one being overtaken).\n\nLet me also consider: is \"the driver of another vehicle\" the same as \"another driver\"? I'll use the handbook's wording as closely as possible.\n\nLet me finalize:\n\n- **Statement s1**: RULE, LEGAL, text (\"must\"), \"a driver MUST move to the right AND allow the other vehicle to pass WHEN the driver of another vehicle is about to overtake and pass the driver's vehicle\"\n\nSources: both m87 and m88.\n\nFor m87: quote \"5. When the driver of another vehicle is about to overtake and pass your vehicle, you must:\"\nFor m88: quote \"Move to the right and allow such vehicle to pass.\"\n\nNow for the passages notes:\n\nm87: about_topic: true. Says: condition (another driver about to overtake) and legal force (\"you must\") for the rule in m88.\n\nm88: about_topic: true. Says: rule (action): move to the right and allow the vehicle to pass.\n\nLet me check for vague words, flags, etc.:\n- No vague words that need J flags.\n- No numbers.\n- No uncertainty about force.\n- No unclear references.\n\nActually, wait - \"allow such vehicle to pass\" - is \"such vehicle\" clear? In context, it refers to the vehicle that is about to overtake. I'll write \"the other vehicle\" to be clear, but the handbook says \"such vehicle.\" Let me keep it faithful: \"allow the other vehicle to pass\" is fine since the condition already specifies \"the driver of another vehicle.\"\n\nLet me also think: should I flag anything? The \"move to the right\" - is this always to the right? In Ontario, yes, you drive on the right side. The handbook says \"move to the right\" which is specific. No flag needed.\n\nI think one statement is sufficient here. Let me write it out.\n\nActually, I want to reconsider whether \"move to the right\" and \"allow the vehicle to pass\" are truly one proposition or two. The handbook presents them as a single answer to a single question. They are two actions that together constitute the required behavior. I'll keep them as one statement with AND.\n\nLet me finalize my answer.\n",
+ "parsed": {
+  "passages": [
+   {
+    "id": "m87",
+    "about_topic": true,
+    "says": "condition: another driver is about to overtake and pass the driver's vehicle; force: \"you must\" makes it a legal duty"
+   },
+   {
+    "id": "m88",
+    "about_topic": true,
+    "says": "rule (action): move to the right and allow the other vehicle to pass"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"you must\")",
+    "text": "a driver MUST move to the right AND allow the other vehicle to pass WHEN the driver of another vehicle is about to overtake and pass the driver's vehicle",
+    "sources": [
+     {
+      "id": "m87",
+      "quote": "When the driver of another vehicle is about to overtake and pass your vehicle, you must:"
+     },
+     {
+      "id": "m88",
+      "quote": "Move to the right and allow such vehicle to pass."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The question stem (m87) supplies the condition and the legal force; the answer (m88) supplies the action. Together they form one rule about behaviour while being passed."
+   }
+  ]
+ },
+ "parse_error": null
+}

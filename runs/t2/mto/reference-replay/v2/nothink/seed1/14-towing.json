@@ -1,0 +1,170 @@
+{
+ "batch": "Towing",
+ "passages": [
+  "m82",
+  "m83"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 2 passages from the page \"Towing\": m82, m83.\n\n[m82] page: Towing | heading: Passing · ¶1 | text\nYou cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control.\n\n[m83] page: Towing | heading: Being passed · ¶1 | text\nIf you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help.\n\nWrite the reading notes for all 2 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"passages\": [{\"id\": \"m82\", \"about_topic\": true, \"says\": \"-\"}, {\"id\": \"m83\", \"about_topic\": true, \"says\": \"-\"}], \"statements\": [{\"id\": \"3.5.1a\", \"type\": \"FACT\", \"force\": null, \"force_from\": null, \"text\": \"FACT a vehicle towing a trailer cannot accelerate as quickly AND needs more space BECAUSE it is much longer\", \"sources\": [{\"id\": \"m82\", \"quote\": \"You cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control.\"}], \"flags\": [], \"note\": null, \"links\": []}, {\"id\": \"3.5.1b\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"make sure\\\")\", \"text\": \"a driver towing a trailer SHOULD pass ONLY IF the driver has [?enough] time and room to complete the pass\", \"sources\": [{\"id\": \"m82\", \"quote\": \"You cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"enough\", \"note\": \"Judgment term.\"}], \"note\": null, \"links\": []}, {\"id\": \"3.5.1c\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"allow\\\", \\\"Do not cut back\\\")\", \"text\": \"a driver towing a trailer SHOULD allow [?more room] before moving back into the lane AND SHOULD NOT cut back in [?too soon] WHEN returning to the lane after passing BECAUSE this can make the trailer sway and become hard to control\", \"sources\": [{\"id\": \"m82\", \"quote\": \"You cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"more room\", \"note\": \"Comparative with no baseline.\"}, {\"code\": \"J\", \"span\": \"too soon\", \"note\": \"No gap given.\"}], \"note\": null, \"links\": []}, {\"id\": \"3.5.2a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"signal, pull over and let\\\")\", \"text\": \"a driver towing a trailer SHOULD signal, pull over AND let the other vehicles pass WHEN the driver is holding up a line of traffic\", \"sources\": [{\"id\": \"m83\", \"quote\": \"If you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help.\"}], \"flags\": [{\"code\": \"R\", \"span\": \"If you are holding up a line of traffic\", \"note\": \"Worded for any driver, but placed in the towing section; scoped here to towing.\"}], \"note\": null, \"links\": []}, {\"id\": \"3.5.2b\", \"type\": \"FACT\", \"force\": null, \"force_from\": null, \"text\": \"FACT fast-moving trucks and buses create a strong air disturbance behind them that can whip a trailer to the side WHEN they pass\", \"sources\": [{\"id\": \"m83\", \"quote\": \"If you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help.\"}], \"flags\": [], \"note\": null, \"links\": []}, {\"id\": \"3.5.2c\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"do not brake\\\", \\\"steer\\\")\", \"text\": \"a driver towing a trailer SHOULD NOT brake AND SHOULD steer the vehicle and trailer [?carefully] back into position WHEN a passing bus or truck pushes the trailer out of position\", \"sources\": [{\"id\": \"m83\", \"quote\": \"If you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"carefully\", \"note\": \"Judgment term.\"}], \"note\": \"\\\"A slight increase in speed may help\\\" is a possibility, not a permission, so it stays as a note.\", \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m82",
+    "about_topic": true,
+    "says": "-"
+   },
+   {
+    "id": "m83",
+    "about_topic": true,
+    "says": "-"
+   }
+  ],
+  "statements": [
+   {
+    "id": "3.5.1a",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT a vehicle towing a trailer cannot accelerate as quickly AND needs more space BECAUSE it is much longer",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "You cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control."
+     }
+    ],
+    "flags": [],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.5.1b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"make sure\")",
+    "text": "a driver towing a trailer SHOULD pass ONLY IF the driver has [?enough] time and room to complete the pass",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "You cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "enough",
+      "note": "Judgment term."
+     }
+    ],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.5.1c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"allow\", \"Do not cut back\")",
+    "text": "a driver towing a trailer SHOULD allow [?more room] before moving back into the lane AND SHOULD NOT cut back in [?too soon] WHEN returning to the lane after passing BECAUSE this can make the trailer sway and become hard to control",
+    "sources": [
+     {
+      "id": "m82",
+      "quote": "You cannot accelerate as quickly when you are towing a trailer. You also need more space because the length of your vehicle is much longer with a trailer attached. Before you pass, make sure you have enough time and room to complete the pass. Once you have passed, allow more room before you move back to your lane. Do not cut back into the lane too soon. This can cause your trailer to sway and make it difficult to control."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "more room",
+      "note": "Comparative with no baseline."
+     },
+     {
+      "code": "J",
+      "span": "too soon",
+      "note": "No gap given."
+     }
+    ],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.5.2a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"signal, pull over and let\")",
+    "text": "a driver towing a trailer SHOULD signal, pull over AND let the other vehicles pass WHEN the driver is holding up a line of traffic",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "If you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help."
+     }
+    ],
+    "flags": [
+     {
+      "code": "R",
+      "span": "If you are holding up a line of traffic",
+      "note": "Worded for any driver, but placed in the towing section; scoped here to towing."
+     }
+    ],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.5.2b",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT fast-moving trucks and buses create a strong air disturbance behind them that can whip a trailer to the side WHEN they pass",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "If you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help."
+     }
+    ],
+    "flags": [],
+    "note": null,
+    "links": []
+   },
+   {
+    "id": "3.5.2c",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"do not brake\", \"steer\")",
+    "text": "a driver towing a trailer SHOULD NOT brake AND SHOULD steer the vehicle and trailer [?carefully] back into position WHEN a passing bus or truck pushes the trailer out of position",
+    "sources": [
+     {
+      "id": "m83",
+      "quote": "If you are holding up a line of traffic, signal, pull over and let the other vehicles pass. Fast-moving trucks and buses create a strong air disturbance behind them. If a large bus or truck passes you, the wall of wind behind it may whip your trailer to the side, pushing it out of control. When you experience this, do not brake. Carefully steer your vehicle and trailer back into position. A slight increase in speed may help."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "carefully",
+      "note": "Judgment term."
+     }
+    ],
+    "note": "\"A slight increase in speed may help\" is a possibility, not a permission, so it stays as a note.",
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

@@ -1,0 +1,255 @@
+{
+ "batch": "Signs",
+ "passages": [
+  "m25",
+  "m26",
+  "c8",
+  "c9",
+  "m30",
+  "m31",
+  "m94",
+  "m74",
+  "m75",
+  "m68",
+  "m67"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 11 passages from the page \"Signs\": m25, m26, c8, c9, m30, m31, m94, m74, m75, m68, m67.\n\n[m25] page: Signs | heading: Regulatory signs · image | figure\nFigure: Alt text: “a regulatory sign”\n\n[m26] page: Signs | heading: Regulatory signs · ¶19 | text\nDo not pass on this road.\n\n[c8] page: Signs | heading: Regulatory signs · ¶20 | text\nSlow traffic on multi-lane roads must keep right.\n\n[c9] page: Signs | heading: Regulatory signs · image | figure\nFigure: Alt text: “a regulatory sign”\n\n[m30] page: Signs | heading: Regulatory signs · image | figure\nFigure: Alt text: “a regulatory sign”\n\n[m31] page: Signs | heading: Regulatory signs · ¶31 | text\nKeep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided.\n\n[m94] page: Signs | heading: Warning signs · ¶20 | text\nThe downward lines show the side on which you may safely pass.\n\n[m74] page: Signs | heading: Temporary condition signs · image | figure\nFigure: Alt text: “a temporary condition sign”\n\n[m75] page: Signs | heading: Temporary condition signs · ¶12 | text\nDo not pass the pilot vehicle or pace vehicle bearing this sign.\n\n[m68] page: Signs | heading: Other signs › Long commercial vehicle (LCV) · ¶3 | text\nThis placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length. It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway.\n\n[m67] page: Signs | heading: Other signs › Long commercial vehicle (LCV) · image | figure\nFigure: Alt text: “Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)”\n\nWrite the reading notes for all 11 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1913,
+  "prompt_tokens": 11517,
+  "total_tokens": 13430,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 166.7,
+ "raw": "{\n  \"passages\": [\n   {\n    \"id\": \"m25\",\n    \"about_topic\": true,\n    \"says\": \"figure: the sign described in m26\"\n   },\n   {\n    \"id\": \"m26\",\n    \"about_topic\": true,\n    \"says\": \"rule: do not pass on the road where this sign is posted\"\n   },\n   {\n    \"id\": \"c8\",\n    \"about_topic\": true,\n    \"says\": \"rule: slow traffic on multi-lane roads must keep right\"\n   },\n   {\n    \"id\": \"c9\",\n    \"about_topic\": true,\n    \"says\": \"figure: the sign described in c8\"\n   },\n   {\n    \"id\": \"m30\",\n    \"about_topic\": true,\n    \"says\": \"figure: the sign described in m31\"\n   },\n   {\n    \"id\": \"m31\",\n    \"about_topic\": true,\n    \"says\": \"rule: keep to the right lane except when passing on two-lane sections with climbing or passing lanes\"\n   },\n   {\n    \"id\": \"m94\",\n    \"about_topic\": true,\n    \"says\": \"fact: on this warning sign, downward lines show the side on which it is safe to pass\"\n   },\n   {\n    \"id\": \"m74\",\n    \"about_topic\": true,\n    \"says\": \"figure: the sign described in m75\"\n   },\n   {\n    \"id\": \"m75\",\n    \"about_topic\": true,\n    \"says\": \"rule: do not pass the pilot vehicle or pace vehicle bearing this sign\"\n   },\n   {\n    \"id\": \"m68\",\n    \"about_topic\": true,\n    \"says\": \"fact: LCV placard indicates a double trailer up to 40 m long; advice: recognize LCVs and anticipate length and limited speed when preparing to pass\"\n   },\n   {\n    \"id\": \"m67\",\n    \"about_topic\": true,\n    \"says\": \"figure: the LCV placard described in m68\"\n   }\n  ],\n  \"statements\": [\n   {\n    \"id\": \"s1\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"context (Regulatory signs: \\\"These signs give a direction that must be obeyed\\\")\",\n    \"text\": \"a driver MUST NOT pass another vehicle WHEN a \\\"do not pass\\\" sign is posted for the road\",\n    \"sources\": [\n     {\n      \"id\": \"m25\",\n      \"quote\": \"a regulatory sign\"\n     },\n     {\n      \"id\": \"m26\",\n      \"quote\": \"Do not pass on this road.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"The caption is a bare imperative; legal force comes from the Regulatory signs section introduction, which is not in this batch but is the standard source for this page type.\"\n   },\n   {\n    \"id\": \"s2\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"text (\\\"must keep right\\\")\",\n    \"text\": \"a driver MUST keep right WHEN the vehicle is slow traffic on a multi-lane road\",\n    \"sources\": [\n     {\n      \"id\": \"c8\",\n      \"quote\": \"Slow traffic on multi-lane roads must keep right.\"\n     },\n     {\n      \"id\": \"c9\",\n      \"quote\": \"a regulatory sign\"\n     }\n    ],\n    \"flags\": [\n     {\n      \"code\": \"J\",\n      \"span\": \"slow traffic\",\n      \"note\": \"The handbook does not define a speed threshold for 'slow traffic'.\"\n     }\n    ],\n    \"links\": [],\n    \"note\": null\n   },\n   {\n    \"id\": \"s3\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"context (Regulatory signs: \\\"These signs give a direction that must be obeyed\\\")\",\n    \"text\": \"a driver MUST keep to the right lane WHEN driving on a road where a \\\"keep right\\\" sign is posted UNLESS the driver is passing on a two-lane section where climbing or passing lanes are provided\",\n    \"sources\": [\n     {\n      \"id\": \"m30\",\n      \"quote\": \"a regulatory sign\"\n     },\n     {\n      \"id\": \"m31\",\n      \"quote\": \"Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": null\n   },\n   {\n    \"id\": \"s4\",\n    \"type\": \"FACT\",\n    \"force\": null,\n    \"force_from\": null,\n    \"text\": \"FACT on a warning sign with downward lines, the downward lines show the side on which a driver may safely pass\",\n    \"sources\": [\n     {\n      \"id\": \"m94\",\n      \"quote\": \"The downward lines show the side on which you may safely pass.\"\n     }\n    ],\n    \"flags\": [\n     {\n      \"code\": \"J\",\n      \"span\": \"safely\",\n      \"note\": \"The sign indicates the permitted side, but 'safely' implies a judgment of conditions beyond the sign's indication.\"\n     }\n    ],\n    \"links\": [],\n    \"note\": null\n   },\n   {\n    \"id\": \"s5\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"context (Temporary condition signs are regulatory in force; \\\"Do not pass\\\" is a prohibition)\",\n    \"text\": \"a driver MUST NOT pass a pilot vehicle or pace vehicle WHEN the pilot vehicle or pace vehicle bears a \\\"do not pass\\\" sign\",\n    \"sources\": [\n     {\n      \"id\": \"m74\",\n      \"quote\": \"a temporary condition sign\"\n     },\n     {\n      \"id\": \"m75\",\n      \"quote\": \"Do not pass the pilot vehicle or pace vehicle bearing this sign.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"Temporary condition signs are regulatory; the prohibition is explicit.\"\n   },\n   {\n    \"id\": \"s6\",\n    \"type\": \"FACT\",\n    \"force\": null,\n    \"force_from\": null,\n    \"text\": \"FACT a long commercial vehicle (LCV) is a double trailer and can be up to 40 m in length\",\n    \"sources\": [\n     {\n      \"id\": \"m68\",\n      \"quote\": \"This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": null\n   },\n   {\n    \"id\": \"s7\",\n    \"type\": \"RULE\",\n    \"force\": \"ADVISORY\",\n    \"force_from\": \"text (\\\"It is important to be able to recognize\\\")\",\n    \"text\": \"a driver SHOULD recognize a long commercial vehicle on the highway based on rear signage AND anticipate the extended length and limited speed WHEN preparing to pass a long commercial vehicle on the highway\",\n    \"sources\": [\n     {\n      \"id\": \"m68\",\n      \"quote\": \"It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway.\"\n     },\n     {\n      \"id\": \"m67\",\n      \"quote\": \"Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)\"\n     }\n    ],\n    \"flags\": [\n     {\n      \"code\": \"J\",\n      \"span\": \"limited speed\",\n      \"note\": \"The handbook does not state a specific speed limit for LCVs; 'limited' is vague.\"\n     }\n    ],\n    \"links\": [],\n    \"note\": null\n   }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "m25",
+    "about_topic": true,
+    "says": "figure: the sign described in m26"
+   },
+   {
+    "id": "m26",
+    "about_topic": true,
+    "says": "rule: do not pass on the road where this sign is posted"
+   },
+   {
+    "id": "c8",
+    "about_topic": true,
+    "says": "rule: slow traffic on multi-lane roads must keep right"
+   },
+   {
+    "id": "c9",
+    "about_topic": true,
+    "says": "figure: the sign described in c8"
+   },
+   {
+    "id": "m30",
+    "about_topic": true,
+    "says": "figure: the sign described in m31"
+   },
+   {
+    "id": "m31",
+    "about_topic": true,
+    "says": "rule: keep to the right lane except when passing on two-lane sections with climbing or passing lanes"
+   },
+   {
+    "id": "m94",
+    "about_topic": true,
+    "says": "fact: on this warning sign, downward lines show the side on which it is safe to pass"
+   },
+   {
+    "id": "m74",
+    "about_topic": true,
+    "says": "figure: the sign described in m75"
+   },
+   {
+    "id": "m75",
+    "about_topic": true,
+    "says": "rule: do not pass the pilot vehicle or pace vehicle bearing this sign"
+   },
+   {
+    "id": "m68",
+    "about_topic": true,
+    "says": "fact: LCV placard indicates a double trailer up to 40 m long; advice: recognize LCVs and anticipate length and limited speed when preparing to pass"
+   },
+   {
+    "id": "m67",
+    "about_topic": true,
+    "says": "figure: the LCV placard described in m68"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Regulatory signs: \"These signs give a direction that must be obeyed\")",
+    "text": "a driver MUST NOT pass another vehicle WHEN a \"do not pass\" sign is posted for the road",
+    "sources": [
+     {
+      "id": "m25",
+      "quote": "a regulatory sign"
+     },
+     {
+      "id": "m26",
+      "quote": "Do not pass on this road."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The caption is a bare imperative; legal force comes from the Regulatory signs section introduction, which is not in this batch but is the standard source for this page type."
+   },
+   {
+    "id": "s2",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must keep right\")",
+    "text": "a driver MUST keep right WHEN the vehicle is slow traffic on a multi-lane road",
+    "sources": [
+     {
+      "id": "c8",
+      "quote": "Slow traffic on multi-lane roads must keep right."
+     },
+     {
+      "id": "c9",
+      "quote": "a regulatory sign"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "slow traffic",
+      "note": "The handbook does not define a speed threshold for 'slow traffic'."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "s3",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Regulatory signs: \"These signs give a direction that must be obeyed\")",
+    "text": "a driver MUST keep to the right lane WHEN driving on a road where a \"keep right\" sign is posted UNLESS the driver is passing on a two-lane section where climbing or passing lanes are provided",
+    "sources": [
+     {
+      "id": "m30",
+      "quote": "a regulatory sign"
+     },
+     {
+      "id": "m31",
+      "quote": "Keep to the right lane except when passing on two-lane sections where climbing or passing lanes are provided."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "s4",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT on a warning sign with downward lines, the downward lines show the side on which a driver may safely pass",
+    "sources": [
+     {
+      "id": "m94",
+      "quote": "The downward lines show the side on which you may safely pass."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "safely",
+      "note": "The sign indicates the permitted side, but 'safely' implies a judgment of conditions beyond the sign's indication."
+     }
+    ],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "s5",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (Temporary condition signs are regulatory in force; \"Do not pass\" is a prohibition)",
+    "text": "a driver MUST NOT pass a pilot vehicle or pace vehicle WHEN the pilot vehicle or pace vehicle bears a \"do not pass\" sign",
+    "sources": [
+     {
+      "id": "m74",
+      "quote": "a temporary condition sign"
+     },
+     {
+      "id": "m75",
+      "quote": "Do not pass the pilot vehicle or pace vehicle bearing this sign."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "Temporary condition signs are regulatory; the prohibition is explicit."
+   },
+   {
+    "id": "s6",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT a long commercial vehicle (LCV) is a double trailer and can be up to 40 m in length",
+    "sources": [
+     {
+      "id": "m68",
+      "quote": "This placard indicates a long commercial vehicle, which is a double trailer and can be up to 40 metres in length."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "s7",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"It is important to be able to recognize\")",
+    "text": "a driver SHOULD recognize a long commercial vehicle on the highway based on rear signage AND anticipate the extended length and limited speed WHEN preparing to pass a long commercial vehicle on the highway",
+    "sources": [
+     {
+      "id": "m68",
+      "quote": "It is important to be able to recognize an LCV on the highway, based on rear signage, and anticipate both the extended length and limited speed when preparing to pass one on the highway."
+     },
+     {
+      "id": "m67",
+      "quote": "Title: Long commercial vehicle (LCV) - Description: Long commercial vehicle (LCV)"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "limited speed",
+      "note": "The handbook does not state a specific speed limit for LCVs; 'limited' is vague."
+     }
+    ],
+    "links": [],
+    "note": null
+   }
+  ]
+ },
+ "parse_error": null
+}

@@ -1,0 +1,149 @@
+{
+ "batch": "Section 8: Safe Driving",
+ "passages": [
+  "p94",
+  "p95",
+  "p96",
+  "p97",
+  "p98",
+  "p99",
+  "p100",
+  "p101"
+ ],
+ "user": "Handbook: California Driver's Handbook (California DMV, United States)\nUnits: US customary (ft, mi, mph)\nTopic: passing\nBatch: the 8 selected passages from the page \"Section 8: Safe Driving\".\n\n[p94] page: Section 8: Safe Driving | heading: Be Aware of Your Surroundings › Tailgating (Following Too Closely) · ¶3 | para\nCreate more space in front of your vehicle when:\n\n[p95] page: Section 8: Safe Driving | heading: Be Aware of Your Surroundings › Tailgating (Following Too Closely) · item 1 | item\nA tailgater is behind you. Maintain your course and speed. Then, when safe to do so, merge right to change into another lane and allow the tailgater to pass.\n\n[p96] page: Section 8: Safe Driving | heading: Understand the Road Conditions › High Winds · item 5 | item\nBe proactive. It may be safer to pull over and wait for the storm to pass.\n\n[p97] page: Section 8: Safe Driving | heading: Understand the Road Conditions › Fog or Heavy Smoke · ¶1 | para\nIt is best to avoid driving in heavy fog or smoke. Consider postponing your trip until the fog clears. If you must drive in heavy fog or smoke:\n\n[p98] page: Section 8: Safe Driving | heading: Understand the Road Conditions › Fog or Heavy Smoke · item 7 | item\nAvoid crossing lanes or passing traffic unless absolutely necessary.\n\n[p99] page: Section 8: Safe Driving | heading: Understand the Road Conditions › Law Enforcement Traffic Breaks · ¶1 | para\nDuring a traffic break, the officer turns on their emergency lights and slowly weaves across lanes. Law enforcement uses traffic breaks to:\n\n[p100] page: Section 8: Safe Driving | heading: Understand the Road Conditions › Law Enforcement Traffic Breaks · ¶2 | para\nYou should:\n\n[p101] page: Section 8: Safe Driving | heading: Understand the Road Conditions › Law Enforcement Traffic Breaks · item 6 | item\nNot drive past the patrol vehicle. Do not speed up until the officer turns off their emergency lights and traffic conditions allow you to return to your normal speed.\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 16384,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1,
+  "prompt_tokens": 1,
+  "total_tokens": 2,
+  "completion_tokens_details": null,
+  "prompt_tokens_details": null
+ },
+ "seconds": 0.0,
+ "raw": "{\"statements\": [{\"id\": \"3.3.2a\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"text (\\\"Avoid\\\")\", \"text\": \"a driver SHOULD NOT cross lanes or pass traffic WHEN driving in heavy fog or smoke UNLESS it is [?absolutely necessary]\", \"sources\": [{\"id\": \"p97\", \"quote\": \"If you must drive in heavy fog or smoke:\"}, {\"id\": \"p98\", \"quote\": \"Avoid crossing lanes or passing traffic unless absolutely necessary.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"absolutely necessary\", \"note\": \"No test for when passing becomes necessary.\"}], \"note\": \"The condition comes from the list lead, whose \\\"must\\\" means \\\"have to\\\" and sets no duty. The handbook puts heavy smoke with fog.\", \"links\": []}, {\"id\": \"3.4.10a\", \"type\": \"DEFINE\", \"force\": null, \"force_from\": null, \"text\": \"DEFINE a traffic break IS a law enforcement maneuver THAT has an officer turn on the emergency lights and slowly weave across lanes\", \"sources\": [{\"id\": \"p99\", \"quote\": \"During a traffic break, the officer turns on their emergency lights and slowly weaves across lanes.\"}], \"flags\": [], \"note\": \"Filed under pilot and pace vehicles (3.4.10): in a traffic break the patrol vehicle paces traffic, and drivers are told not to pass it.\", \"links\": []}, {\"id\": \"3.4.10b\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"text (\\\"You should: \\u2026 Not drive past\\\")\", \"text\": \"a driver SHOULD NOT pass the patrol vehicle WHILE a law enforcement traffic break is under way\", \"sources\": [{\"id\": \"p100\", \"quote\": \"You should:\"}, {\"id\": \"p101\", \"quote\": \"Not drive past the patrol vehicle.\"}], \"flags\": [{\"code\": \"V\", \"span\": \"drive past\", \"note\": \"The handbook says \\\"drive past\\\" here for what it calls \\\"pass\\\" elsewhere.\"}], \"note\": \"The item goes on \\\"Do not speed up until the officer turns off their emergency lights \\u2026\\\"; that sentence is about speed, not passing, so it gives no statement, though it marks when the traffic break ends.\", \"links\": []}, {\"id\": \"3.6.1e\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"Maintain\\\")\", \"text\": \"a driver SHOULD keep the course and speed WHEN a tailgater is behind the driver\", \"sources\": [{\"id\": \"p94\", \"quote\": \"Create more space in front of your vehicle when:\"}, {\"id\": \"p95\", \"quote\": \"A tailgater is behind you. Maintain your course and speed.\"}], \"flags\": [], \"note\": \"The list lead also says to create more space in front when a tailgater is behind; that is following-distance advice, not passing.\", \"links\": []}, {\"id\": \"3.6.1f\", \"type\": \"RULE\", \"force\": \"ADVISORY\", \"force_from\": \"imperative (\\\"merge right\\\", \\\"allow\\\")\", \"text\": \"a driver SHOULD merge right into another lane AND allow the tailgater to pass WHEN a tailgater is behind the driver AND it is [?safe] to do so\", \"sources\": [{\"id\": \"p95\", \"quote\": \"Then, when safe to do so, merge right to change into another lane and allow the tailgater to pass.\"}], \"flags\": [{\"code\": \"J\", \"span\": \"safe\", \"note\": \"Judgment term.\"}], \"note\": \"\\\"Then\\\" places this after keeping course and speed (3.6.1e); a rule has no keyword for that order.\", \"links\": []}]}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.3.2a",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"Avoid\")",
+    "text": "a driver SHOULD NOT cross lanes or pass traffic WHEN driving in heavy fog or smoke UNLESS it is [?absolutely necessary]",
+    "sources": [
+     {
+      "id": "p97",
+      "quote": "If you must drive in heavy fog or smoke:"
+     },
+     {
+      "id": "p98",
+      "quote": "Avoid crossing lanes or passing traffic unless absolutely necessary."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "absolutely necessary",
+      "note": "No test for when passing becomes necessary."
+     }
+    ],
+    "note": "The condition comes from the list lead, whose \"must\" means \"have to\" and sets no duty. The handbook puts heavy smoke with fog.",
+    "links": []
+   },
+   {
+    "id": "3.4.10a",
+    "type": "DEFINE",
+    "force": null,
+    "force_from": null,
+    "text": "DEFINE a traffic break IS a law enforcement maneuver THAT has an officer turn on the emergency lights and slowly weave across lanes",
+    "sources": [
+     {
+      "id": "p99",
+      "quote": "During a traffic break, the officer turns on their emergency lights and slowly weaves across lanes."
+     }
+    ],
+    "flags": [],
+    "note": "Filed under pilot and pace vehicles (3.4.10): in a traffic break the patrol vehicle paces traffic, and drivers are told not to pass it.",
+    "links": []
+   },
+   {
+    "id": "3.4.10b",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "text (\"You should: … Not drive past\")",
+    "text": "a driver SHOULD NOT pass the patrol vehicle WHILE a law enforcement traffic break is under way",
+    "sources": [
+     {
+      "id": "p100",
+      "quote": "You should:"
+     },
+     {
+      "id": "p101",
+      "quote": "Not drive past the patrol vehicle."
+     }
+    ],
+    "flags": [
+     {
+      "code": "V",
+      "span": "drive past",
+      "note": "The handbook says \"drive past\" here for what it calls \"pass\" elsewhere."
+     }
+    ],
+    "note": "The item goes on \"Do not speed up until the officer turns off their emergency lights …\"; that sentence is about speed, not passing, so it gives no statement, though it marks when the traffic break ends.",
+    "links": []
+   },
+   {
+    "id": "3.6.1e",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"Maintain\")",
+    "text": "a driver SHOULD keep the course and speed WHEN a tailgater is behind the driver",
+    "sources": [
+     {
+      "id": "p94",
+      "quote": "Create more space in front of your vehicle when:"
+     },
+     {
+      "id": "p95",
+      "quote": "A tailgater is behind you. Maintain your course and speed."
+     }
+    ],
+    "flags": [],
+    "note": "The list lead also says to create more space in front when a tailgater is behind; that is following-distance advice, not passing.",
+    "links": []
+   },
+   {
+    "id": "3.6.1f",
+    "type": "RULE",
+    "force": "ADVISORY",
+    "force_from": "imperative (\"merge right\", \"allow\")",
+    "text": "a driver SHOULD merge right into another lane AND allow the tailgater to pass WHEN a tailgater is behind the driver AND it is [?safe] to do so",
+    "sources": [
+     {
+      "id": "p95",
+      "quote": "Then, when safe to do so, merge right to change into another lane and allow the tailgater to pass."
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "safe",
+      "note": "Judgment term."
+     }
+    ],
+    "note": "\"Then\" places this after keeping course and speed (3.6.1e); a rule has no keyword for that order.",
+    "links": []
+   }
+  ]
+ },
+ "parse_error": null
+}

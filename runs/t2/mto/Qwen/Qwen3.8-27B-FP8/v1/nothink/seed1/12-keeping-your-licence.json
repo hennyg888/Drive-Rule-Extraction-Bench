@@ -1,0 +1,83 @@
+{
+ "batch": "Keeping your licence",
+ "passages": [
+  "m80",
+  "m81"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: the 2 selected passages from the page \"Keeping your licence\".\n\n[m80] page: Keeping your licence | heading: Table of offences › Three points · item 17 | text\nFailing to slow and carefully pass a stopped emergency vehicle\n\n[m81] page: Keeping your licence | heading: Table of offences › Three points · item 18 | text\nFailing to move, where possible, into another lane when passing a stopped emergency vehicle\n\nWrite every in-scope passage as rule language v1 statements, following the method. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 447,
+  "prompt_tokens": 15800,
+  "total_tokens": 16247,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 19.3,
+ "raw": "{\n  \"statements\": [\n    {\n     \"id\": \"3.4.13a\",\n     \"type\": \"RULE\",\n     \"force\": \"LEGAL\",\n     \"force_from\": \"context (listed under \\\"Table of offences\\\")\",\n     \"text\": \"a driver MUST slow AND carefully pass a stopped emergency vehicle IF VIOLATED 3 demerit points\",\n     \"sources\": [\n        {\n         \"id\": \"m80\",\n         \"quote\": \"Failing to slow and carefully pass a stopped emergency vehicle\"\n        }\n      ],\n      \"flags\": [\n        {\n         \"code\": \"J\",\n         \"span\": \"carefully\",\n         \"note\": \"No measure of care is given.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": \"The legal force comes from the section context, which lists this as an offence. The action is split into two parts joined by AND.\"\n    },\n    {\n     \"id\": \"3.4.13b\",\n     \"type\": \"RULE\",\n     \"force\": \"LEGAL\",\n     \"force_from\": \"context (listed under \\\"Table of offences\\\")\",\n     \"text\": \"a driver MUST move into another lane WHEN passing a stopped emergency vehicle ONLY IF moving is possible IF VIOLATED 3 demerit points\",\n     \"sources\": [\n        {\n         \"id\": \"m81\",\n         \"quote\": \"Failing to move, where possible, into another lane when passing a stopped emergency vehicle\"\n        }\n      ],\n      \"flags\": [\n        {\n         \"code\": \"J\",\n         \"span\": \"possible\",\n         \"note\": \"No objective test for when moving is possible.\"\n        }\n      ],\n      \"links\": [],\n      \"note\": \"The legal force comes from the section context, which lists this as an offence. The condition 'where possible' is rendered as ONLY IF moving is possible.\"\n    }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "statements": [
+   {
+    "id": "3.4.13a",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (listed under \"Table of offences\")",
+    "text": "a driver MUST slow AND carefully pass a stopped emergency vehicle IF VIOLATED 3 demerit points",
+    "sources": [
+     {
+      "id": "m80",
+      "quote": "Failing to slow and carefully pass a stopped emergency vehicle"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "carefully",
+      "note": "No measure of care is given."
+     }
+    ],
+    "links": [],
+    "note": "The legal force comes from the section context, which lists this as an offence. The action is split into two parts joined by AND."
+   },
+   {
+    "id": "3.4.13b",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (listed under \"Table of offences\")",
+    "text": "a driver MUST move into another lane WHEN passing a stopped emergency vehicle ONLY IF moving is possible IF VIOLATED 3 demerit points",
+    "sources": [
+     {
+      "id": "m81",
+      "quote": "Failing to move, where possible, into another lane when passing a stopped emergency vehicle"
+     }
+    ],
+    "flags": [
+     {
+      "code": "J",
+      "span": "possible",
+      "note": "No objective test for when moving is possible."
+     }
+    ],
+    "links": [],
+    "note": "The legal force comes from the section context, which lists this as an offence. The condition 'where possible' is rendered as ONLY IF moving is possible."
+   }
+  ]
+ },
+ "parse_error": null
+}

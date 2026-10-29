@@ -1,0 +1,167 @@
+{
+ "batch": "Stopping",
+ "passages": [
+  "c1",
+  "c2",
+  "c3",
+  "c4",
+  "m77",
+  "c5",
+  "m16"
+ ],
+ "user": "Handbook: Official MTO Driver's Handbook (Ontario, Canada)\nUnits: metric (m, km, km/h)\nTopic: passing\nBatch: 7 passages from the page \"Stopping\": c1, c2, c3, c4, m77, c5, m16.\n\n[c1] page: Stopping | heading: Stopping for school buses · ¶2 | text\nYou must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\n\n[c2] page: Stopping | heading: Stopping for school buses · ¶2 | text\nIf you are coming from behind the bus, stop at least 20 metres away.\n\n[c3] page: Stopping | heading: Stopping for school buses · ¶2 | text\nDo not go until the bus moves or the lights have stopped flashing.\n\n[c4] page: Stopping | heading: Stopping for school buses · ¶3 | text\nIf you are on a road with a median strip, only vehicles coming from behind the bus must stop.\n\n[m77] page: Stopping | heading: Stopping for school buses · ¶6 | text\nIn Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus.\n\n[c5] page: Stopping | heading: Stopping for school buses · ¶6 | text\nIf you don't stop, you can be fined heavily and get six demerit points for a first offence.\n\n[m16] page: Stopping | heading: Stopping for pedestrian crossovers · ¶2 | text\nYou must not pass any vehicle within 30 metres of a pedestrian crossover.\n\nWrite the reading notes for all 7 passages, then the statements, following sections 4 and 5. Return only the JSON object.",
+ "sampling": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "presence_penalty": 0.0,
+  "max_tokens": 32768,
+  "seed": 1,
+  "thinking": false
+ },
+ "finish_reason": "stop",
+ "usage": {
+  "completion_tokens": 1316,
+  "prompt_tokens": 11378,
+  "total_tokens": 12694,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 0,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": null
+ },
+ "seconds": 35.5,
+ "raw": "{\n  \"passages\": [\n   {\n    \"id\": \"c1\",\n    \"about_topic\": true,\n    \"says\": \"rule: must stop when approaching a stopped school bus with flashing red lights, whether behind or from the front\"\n   },\n   {\n    \"id\": \"c2\",\n    \"about_topic\": true,\n    \"says\": \"rule: if coming from behind the bus, stop at least 20 m away\"\n   },\n   {\n    \"id\": \"c3\",\n    \"about_topic\": true,\n    \"says\": \"rule: do not go (pass) until the bus moves or lights stop flashing\"\n   },\n   {\n    \"id\": \"c4\",\n    \"about_topic\": true,\n    \"says\": \"exception: on a road with a median strip, only vehicles coming from behind must stop (vehicles from the front are exempt)\"\n   },\n   {\n    \"id\": \"m77\",\n    \"about_topic\": true,\n    \"says\": \"fact: school bus drivers and witnesses can report vehicles that illegally passed a school bus\"\n   },\n   {\n    \"id\": \"c5\",\n    \"about_topic\": true,\n    \"says\": \"penalty: heavy fine and 6 demerit points for a first offence of not stopping\"\n   },\n   {\n    \"id\": \"m16\",\n    \"about_topic\": true,\n    \"says\": \"rule: must not pass any vehicle within 30 m of a pedestrian crossover\"\n   }\n  ],\n  \"statements\": [\n   {\n    \"id\": \"s1\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"text (\\\"must stop\\\")\",\n    \"text\": \"a driver MUST stop WHEN approaching a stopped school bus with its upper alternating red lights flashing AND the driver is behind the bus OR the driver is approaching the bus from the front UNLESS the road has a median strip AND the driver is approaching the bus from the front UNTIL the bus moves OR the lights have stopped flashing IF VIOLATED a heavy fine AND 6 demerit points for a first offence\",\n    \"sources\": [\n     {\n      \"id\": \"c1\",\n      \"quote\": \"You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\"\n     },\n     {\n      \"id\": \"c4\",\n      \"quote\": \"If you are on a road with a median strip, only vehicles coming from behind the bus must stop.\"\n     },\n     {\n      \"id\": \"c3\",\n      \"quote\": \"Do not go until the bus moves or the lights have stopped flashing.\"\n     },\n     {\n      \"id\": \"c5\",\n      \"quote\": \"If you don't stop, you can be fined heavily and get six demerit points for a first offence.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": \"The exception for median strips is written as an UNLESS clause because it is in the same section. The penalty is attached to the failure to stop.\"\n   },\n   {\n    \"id\": \"s2\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"context (section \\\"Stopping for school buses\\\" and c1 \\\"must stop\\\")\",\n    \"text\": \"a driver MUST stop at least 20 m from the school bus WHEN approaching a stopped school bus with its upper alternating red lights flashing AND the driver is behind the bus\",\n    \"sources\": [\n     {\n      \"id\": \"c2\",\n      \"quote\": \"If you are coming from behind the bus, stop at least 20 metres away.\"\n     },\n     {\n      \"id\": \"c1\",\n      \"quote\": \"You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front.\"\n     }\n    ],\n    \"flags\": [\n     {\n      \"code\": \"M\",\n      \"span\": \"stop at least 20 metres\",\n      \"note\": \"The sentence is an imperative without explicit legal wording, but it specifies a precise distance for a legal duty (stopping for a bus), so it is treated as part of the legal requirement.\"\n     }\n    ],\n    \"links\": [],\n    \"note\": \"The condition 'approaching a stopped school bus with flashing lights' is added from c1 to make the statement self-contained.\"\n   },\n   {\n    \"id\": \"s3\",\n    \"type\": \"FACT\",\n    \"force\": null,\n    \"force_from\": null,\n    \"text\": \"FACT school bus drivers and other witnesses can report vehicles that have illegally passed a school bus IN Ontario\",\n    \"sources\": [\n     {\n      \"id\": \"m77\",\n      \"quote\": \"In Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": null\n   },\n   {\n    \"id\": \"s4\",\n    \"type\": \"RULE\",\n    \"force\": \"LEGAL\",\n    \"force_from\": \"text (\\\"must not pass\\\")\",\n    \"text\": \"a driver MUST NOT pass any vehicle WHEN the driver is within 30 m of a pedestrian crossover\",\n    \"sources\": [\n     {\n      \"id\": \"m16\",\n      \"quote\": \"You must not pass any vehicle within 30 metres of a pedestrian crossover.\"\n     }\n    ],\n    \"flags\": [],\n    \"links\": [],\n    \"note\": null\n   }\n  ]\n}",
+ "reasoning": null,
+ "parsed": {
+  "passages": [
+   {
+    "id": "c1",
+    "about_topic": true,
+    "says": "rule: must stop when approaching a stopped school bus with flashing red lights, whether behind or from the front"
+   },
+   {
+    "id": "c2",
+    "about_topic": true,
+    "says": "rule: if coming from behind the bus, stop at least 20 m away"
+   },
+   {
+    "id": "c3",
+    "about_topic": true,
+    "says": "rule: do not go (pass) until the bus moves or lights stop flashing"
+   },
+   {
+    "id": "c4",
+    "about_topic": true,
+    "says": "exception: on a road with a median strip, only vehicles coming from behind must stop (vehicles from the front are exempt)"
+   },
+   {
+    "id": "m77",
+    "about_topic": true,
+    "says": "fact: school bus drivers and witnesses can report vehicles that illegally passed a school bus"
+   },
+   {
+    "id": "c5",
+    "about_topic": true,
+    "says": "penalty: heavy fine and 6 demerit points for a first offence of not stopping"
+   },
+   {
+    "id": "m16",
+    "about_topic": true,
+    "says": "rule: must not pass any vehicle within 30 m of a pedestrian crossover"
+   }
+  ],
+  "statements": [
+   {
+    "id": "s1",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must stop\")",
+    "text": "a driver MUST stop WHEN approaching a stopped school bus with its upper alternating red lights flashing AND the driver is behind the bus OR the driver is approaching the bus from the front UNLESS the road has a median strip AND the driver is approaching the bus from the front UNTIL the bus moves OR the lights have stopped flashing IF VIOLATED a heavy fine AND 6 demerit points for a first offence",
+    "sources": [
+     {
+      "id": "c1",
+      "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+     },
+     {
+      "id": "c4",
+      "quote": "If you are on a road with a median strip, only vehicles coming from behind the bus must stop."
+     },
+     {
+      "id": "c3",
+      "quote": "Do not go until the bus moves or the lights have stopped flashing."
+     },
+     {
+      "id": "c5",
+      "quote": "If you don't stop, you can be fined heavily and get six demerit points for a first offence."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": "The exception for median strips is written as an UNLESS clause because it is in the same section. The penalty is attached to the failure to stop."
+   },
+   {
+    "id": "s2",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "context (section \"Stopping for school buses\" and c1 \"must stop\")",
+    "text": "a driver MUST stop at least 20 m from the school bus WHEN approaching a stopped school bus with its upper alternating red lights flashing AND the driver is behind the bus",
+    "sources": [
+     {
+      "id": "c2",
+      "quote": "If you are coming from behind the bus, stop at least 20 metres away."
+     },
+     {
+      "id": "c1",
+      "quote": "You must stop whenever you approach a stopped school bus with its upper alternating red lights flashing, regardless of whether you are behind the bus or approaching it from the front."
+     }
+    ],
+    "flags": [
+     {
+      "code": "M",
+      "span": "stop at least 20 metres",
+      "note": "The sentence is an imperative without explicit legal wording, but it specifies a precise distance for a legal duty (stopping for a bus), so it is treated as part of the legal requirement."
+     }
+    ],
+    "links": [],
+    "note": "The condition 'approaching a stopped school bus with flashing lights' is added from c1 to make the statement self-contained."
+   },
+   {
+    "id": "s3",
+    "type": "FACT",
+    "force": null,
+    "force_from": null,
+    "text": "FACT school bus drivers and other witnesses can report vehicles that have illegally passed a school bus IN Ontario",
+    "sources": [
+     {
+      "id": "m77",
+      "quote": "In Ontario, school bus drivers and other witnesses can report vehicles that have illegally passed a school bus."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   },
+   {
+    "id": "s4",
+    "type": "RULE",
+    "force": "LEGAL",
+    "force_from": "text (\"must not pass\")",
+    "text": "a driver MUST NOT pass any vehicle WHEN the driver is within 30 m of a pedestrian crossover",
+    "sources": [
+     {
+      "id": "m16",
+      "quote": "You must not pass any vehicle within 30 metres of a pedestrian crossover."
+     }
+    ],
+    "flags": [],
+    "links": [],
+    "note": null
+   }
+  ]
+ },
+ "parse_error": null
+}
