@@ -142,13 +142,38 @@ What the numbers show:
 - Each handbook fits in one long-context request: about 28k to 67k text tokens, and 7k to 13k more for the images.
 - Most blocks are short (median 14 to 18 words), but 4 to 11% have more than 3 sentences, up to about 200 words. Citing such a block points to much more text than a rule usually comes from.
 
+## Corpus: the handbooks with ids
+
+`corpus/{mto,ca,tx}/` holds the same pages as `handbooks/`, reduced to the handbook content and given an id on every block and sentence, so that an extracted rule can point to the exact sentence it came from. Build it with `python scripts/build_corpus.py`; `--check` rebuilds in memory and lists the pages whose files would change.
+
+| | Ontario | California | Texas |
+|---|---:|---:|---:|
+| Pages | 30 | 23 | 21 |
+| Blocks (headings, paragraphs, list items, table rows, figures) | 2,421 | 1,326 | 2,231 |
+| Sentences | 3,568 | 1,681 | 3,024 |
+
+**Ids.** Pages are numbered in table-of-contents order, starting at 1 for the cover page. Every block of a page is numbered in document order: `10.22` is block 22 of page 10 (Ontario's "Changing positions"). In a block of more than one sentence, each sentence is wrapped in `<span id="10.22.2">`; a one-sentence block is its own sentence 1. Table cells are always wrapped, so each cell can be cited. The corpus files are committed, so the ids stay fixed; rebuilding is done only on purpose.
+
+```html
+<h2 id="10.13">Passing</h2>
+<p id="10.22"><span id="10.22.1">Passing within 30 metres of a pedestrian crossover is not permitted.</span> <span id="10.22.2">Passing left of a centreline is not permitted 30 metres from a bridge, viaduct or tunnel.</span> …</p>
+<figure id="10.21"><img alt="how to pass another vehicle" src="images/2-36.jpg"/><figcaption>Diagram 2-46</figcaption></figure>
+```
+
+**What the build changes, and what it keeps.** It keeps the text exactly; the script stops if a page's text differs from `handbooks/`. It keeps headings, paragraphs, lists, tables, images, and bold and italic text. It removes the page frame (table of contents, previous and next links, "On this page", dates), links (their text stays), wrappers, and every attribute except `id`, image `src` and `alt`, list `start` and `type`, and cell spans. An image alone in a paragraph becomes a `<figure>`, and a caption paragraph right after it ("Diagram 2-46", or a Texas caption) becomes its `<figcaption>`. Image paths stay relative to the handbook folder; each corpus page has a `<base>` pointing there, so it shows its images in a browser.
+
+**Manual decisions** go into `corpus/<handbook>/manual.yaml`, which the build reads. For now there is one: on Ontario's Signs page each sign is described in the paragraph before its image, and the image's alt text names no sign ("a regulatory sign"). So each image is put in one `<figure>` with that paragraph as its caption, written first as in the handbook. This was checked by looking at the images.
+
+**Screening.** The build writes `corpus/<handbook>/screening.md`, a list of places for a person to check: figures with neither a caption nor a useful alt text, blocks of more than 3 sentences or 80 words, very short sentences (possible split errors), and paragraphs that start with a typed number. Content that is not about driving (licences, insurance, fees) is kept and not marked; it can be handled by hand later.
+
 ## Repository layout
 
 | Folder | What it holds |
 |---|---|
 | `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
 | `scrapers/` | The scripts that made `handbooks/` |
-| `scripts/` | `handbook_stats.py`, which computes the analysis above |
+| `corpus/` | The handbooks with an id on every block and sentence, built from `handbooks/`, with each handbook's manual decisions and screening list |
+| `scripts/` | `handbook_stats.py` (the analysis above) and `build_corpus.py` (the corpus) |
 | `docs/` | The prompts the team gave Claude (`prompt.md`) |
 
 The earlier rule pipeline (rule language, census, rules database, extraction prompts and runs, the Qwen trial, review pages, and the first PDF-based Ontario rules) is kept on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).

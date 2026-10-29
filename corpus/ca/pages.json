@@ -1,0 +1,186 @@
+[
+ {
+  "page": 1,
+  "file": "index",
+  "title": "California Driver’s Handbook",
+  "blocks": 12,
+  "sentences": 17,
+  "images": 2
+ },
+ {
+  "page": 2,
+  "file": "dmv-services",
+  "title": "DMV Services",
+  "blocks": 16,
+  "sentences": 11,
+  "images": 0
+ },
+ {
+  "page": 3,
+  "file": "copyright",
+  "title": "Copyright",
+  "blocks": 4,
+  "sentences": 6,
+  "images": 0
+ },
+ {
+  "page": 4,
+  "file": "disclaimer",
+  "title": "Disclaimer",
+  "blocks": 4,
+  "sentences": 3,
+  "images": 0
+ },
+ {
+  "page": 5,
+  "file": "the-california-driver-license",
+  "title": "Section 1: The California Driver’s License",
+  "blocks": 20,
+  "sentences": 19,
+  "images": 0
+ },
+ {
+  "page": 6,
+  "file": "getting-an-instruction-permit-and-drivers-license",
+  "title": "Section 2: Getting an Instruction Permit and Driver’s License",
+  "blocks": 48,
+  "sentences": 53,
+  "images": 0
+ },
+ {
+  "page": 7,
+  "file": "the-testing-process",
+  "title": "Section 3: The Testing Process",
+  "blocks": 34,
+  "sentences": 43,
+  "images": 0
+ },
+ {
+  "page": 8,
+  "file": "changing-replacing-and-renewing-your-drivers-license",
+  "title": "Section 4: Changing, Replacing, and Renewing Your Driver’s License",
+  "blocks": 11,
+  "sentences": 18,
+  "images": 0
+ },
+ {
+  "page": 9,
+  "file": "introduction-to-driving",
+  "title": "Section 5: An Introduction to Driving",
+  "blocks": 65,
+  "sentences": 71,
+  "images": 3
+ },
+ {
+  "page": 10,
+  "file": "navigating-the-roads",
+  "title": "Section 6: Navigating the Roads",
+  "blocks": 206,
+  "sentences": 250,
+  "images": 18
+ },
+ {
+  "page": 11,
+  "file": "navigating-the-roads-cont1",
+  "title": "Section 6: Navigating the Roads (Continued)",
+  "blocks": 81,
+  "sentences": 119,
+  "images": 8
+ },
+ {
+  "page": 12,
+  "file": "laws-and-rules-of-the-road",
+  "title": "Section 7: Laws and Rules of the Road",
+  "blocks": 144,
+  "sentences": 144,
+  "images": 26
+ },
+ {
+  "page": 13,
+  "file": "laws-and-rules-of-the-road-cont1",
+  "title": "Section 7: Laws and Rules of the Road (Continued)",
+  "blocks": 175,
+  "sentences": 220,
+  "images": 11
+ },
+ {
+  "page": 14,
+  "file": "laws-and-rules-of-the-road-cont2",
+  "title": "Section 7: Laws and Rules of the Road (Continued)",
+  "blocks": 64,
+  "sentences": 88,
+  "images": 0
+ },
+ {
+  "page": 15,
+  "file": "safe-driving",
+  "title": "Section 8: Safe Driving",
+  "blocks": 154,
+  "sentences": 214,
+  "images": 2
+ },
+ {
+  "page": 16,
+  "file": "safe-driving-cont1",
+  "title": "Section 8: Safe Driving (Continued)",
+  "blocks": 33,
+  "sentences": 52,
+  "images": 1
+ },
+ {
+  "page": 17,
+  "file": "safe-driving-cont2",
+  "title": "Section 8: Safe Driving (Continued)",
+  "blocks": 98,
+  "sentences": 120,
+  "images": 1
+ },
+ {
+  "page": 18,
+  "file": "alcohol-and-drugs",
+  "title": "Section 9: Alcohol and Drugs",
+  "blocks": 48,
+  "sentences": 69,
+  "images": 1
+ },
+ {
+  "page": 19,
+  "file": "financial-responsibility-insurance-requirements-and-collisions",
+  "title": "Section 10: Financial Responsibility, Insurance Requirements, and Collisions",
+  "blocks": 43,
+  "sentences": 58,
+  "images": 0
+ },
+ {
+  "page": 20,
+  "file": "vehicle-registration-requirements",
+  "title": "Section 11: Vehicle Registration Requirements",
+  "blocks": 7,
+  "sentences": 8,
+  "images": 0
+ },
+ {
+  "page": 21,
+  "file": "driver-safety",
+  "title": "Section 12: Driver Safety",
+  "blocks": 23,
+  "sentences": 32,
+  "images": 1
+ },
+ {
+  "page": 22,
+  "file": "seniors-and-driving",
+  "title": "Section 13: Seniors and Driving",
+  "blocks": 26,
+  "sentences": 43,
+  "images": 0
+ },
+ {
+  "page": 23,
+  "file": "glossary",
+  "title": "Section 14: Glossary",
+  "blocks": 10,
+  "sentences": 23,
+  "images": 0
+ }
+]

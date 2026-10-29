@@ -1,0 +1,242 @@
+[
+ {
+  "page": 1,
+  "file": "index",
+  "title": "The Official Ministry of Transportation (MTO) Driver’s Handbook",
+  "blocks": 13,
+  "sentences": 21,
+  "images": 0
+ },
+ {
+  "page": 2,
+  "file": "getting-your-drivers-licence",
+  "title": "Getting Your Driver’s Licence",
+  "blocks": 272,
+  "sentences": 330,
+  "images": 10
+ },
+ {
+  "page": 3,
+  "file": "safe-and-responsible-driving",
+  "title": "Safe and Responsible Driving",
+  "blocks": 23,
+  "sentences": 41,
+  "images": 0
+ },
+ {
+  "page": 4,
+  "file": "getting-ready-drive",
+  "title": "Getting ready to drive",
+  "blocks": 85,
+  "sentences": 165,
+  "images": 7
+ },
+ {
+  "page": 5,
+  "file": "driving-along",
+  "title": "Driving along",
+  "blocks": 36,
+  "sentences": 59,
+  "images": 2
+ },
+ {
+  "page": 6,
+  "file": "sharing-road-other-road-users",
+  "title": "Sharing the road with other road users",
+  "blocks": 97,
+  "sentences": 167,
+  "images": 10
+ },
+ {
+  "page": 7,
+  "file": "driving-through-intersections",
+  "title": "Driving through intersections",
+  "blocks": 29,
+  "sentences": 44,
+  "images": 7
+ },
+ {
+  "page": 8,
+  "file": "stopping",
+  "title": "Stopping",
+  "blocks": 44,
+  "sentences": 82,
+  "images": 7
+ },
+ {
+  "page": 9,
+  "file": "changing-directions",
+  "title": "Changing directions",
+  "blocks": 93,
+  "sentences": 155,
+  "images": 15
+ },
+ {
+  "page": 10,
+  "file": "changing-positions",
+  "title": "Changing positions",
+  "blocks": 49,
+  "sentences": 82,
+  "images": 5
+ },
+ {
+  "page": 11,
+  "file": "parking-along-roadways",
+  "title": "Parking along roadways",
+  "blocks": 62,
+  "sentences": 98,
+  "images": 4
+ },
+ {
+  "page": 12,
+  "file": "freeway-driving",
+  "title": "Freeway driving",
+  "blocks": 53,
+  "sentences": 88,
+  "images": 2
+ },
+ {
+  "page": 13,
+  "file": "dealing-particular-situations",
+  "title": "Dealing with particular situations",
+  "blocks": 124,
+  "sentences": 197,
+  "images": 2
+ },
+ {
+  "page": 14,
+  "file": "driving-night-and-bad-weather",
+  "title": "Driving at night and in bad weather",
+  "blocks": 95,
+  "sentences": 177,
+  "images": 2
+ },
+ {
+  "page": 15,
+  "file": "dealing-emergencies",
+  "title": "Dealing with emergencies",
+  "blocks": 41,
+  "sentences": 78,
+  "images": 0
+ },
+ {
+  "page": 16,
+  "file": "driving-efficiently",
+  "title": "Driving efficiently",
+  "blocks": 46,
+  "sentences": 66,
+  "images": 0
+ },
+ {
+  "page": 17,
+  "file": "traffic-signs-and-lights",
+  "title": "Traffic Signs and Lights",
+  "blocks": 5,
+  "sentences": 6,
+  "images": 0
+ },
+ {
+  "page": 18,
+  "file": "signs",
+  "title": "Signs",
+  "blocks": 137,
+  "sentences": 198,
+  "images": 112
+ },
+ {
+  "page": 19,
+  "file": "traffic-lights",
+  "title": "Traffic lights",
+  "blocks": 62,
+  "sentences": 54,
+  "images": 17
+ },
+ {
+  "page": 20,
+  "file": "pedestrian-signals",
+  "title": "Pedestrian signals",
+  "blocks": 13,
+  "sentences": 20,
+  "images": 2
+ },
+ {
+  "page": 21,
+  "file": "pavement-markings",
+  "title": "Pavement markings",
+  "blocks": 24,
+  "sentences": 37,
+  "images": 9
+ },
+ {
+  "page": 22,
+  "file": "keeping-your-drivers-licence",
+  "title": "Keeping Your Driver’s Licence",
+  "blocks": 150,
+  "sentences": 166,
+  "images": 1
+ },
+ {
+  "page": 23,
+  "file": "other-ways-lose-your-licence",
+  "title": "Other ways to lose your licence",
+  "blocks": 115,
+  "sentences": 137,
+  "images": 0
+ },
+ {
+  "page": 24,
+  "file": "your-vehicle",
+  "title": "Your Vehicle",
+  "blocks": 6,
+  "sentences": 8,
+  "images": 0
+ },
+ {
+  "page": 25,
+  "file": "maintaining-your-vehicle",
+  "title": "Maintaining your vehicle",
+  "blocks": 51,
+  "sentences": 63,
+  "images": 2
+ },
+ {
+  "page": 26,
+  "file": "vehicle-insurance-and-registration",
+  "title": "Vehicle insurance and registration",
+  "blocks": 24,
+  "sentences": 34,
+  "images": 0
+ },
+ {
+  "page": 27,
+  "file": "towing",
+  "title": "Towing",
+  "blocks": 63,
+  "sentences": 106,
+  "images": 1
+ },
+ {
+  "page": 28,
+  "file": "test-yourself-sample-knowledge-test-questions",
+  "title": "Test yourself - Sample knowledge test questions",
+  "blocks": 42,
+  "sentences": 44,
+  "images": 0
+ },
+ {
+  "page": 29,
+  "file": "level-two-road-test",
+  "title": "The Level Two Road Test",
+  "blocks": 286,
+  "sentences": 372,
+  "images": 11
+ },
+ {
+  "page": 30,
+  "file": "off-road-vehicles-snowmobiles",
+  "title": "Off-road Vehicles & Snowmobiles",
+  "blocks": 281,
+  "sentences": 473,
+  "images": 17
+ }
+]

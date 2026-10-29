@@ -1,0 +1,8 @@
+# Manual decisions for the Ontario corpus. scripts/build_corpus.py reads this file.
+
+# Pages where a sign's description is written right before its image, and the image's alt text
+# names no sign ("a regulatory sign"). On these pages each image is paired with the paragraph
+# right before it: both go into one <figure>, the description first as its <figcaption>.
+# Checked by looking at the images (3-1-4, 3-1-5, 3-1-7): each description is the sign after it.
+caption_before_image:
+  - signs
