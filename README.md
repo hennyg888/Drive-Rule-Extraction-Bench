@@ -37,8 +37,6 @@ What each handbook gives a model: the text and images inside the pages' `<articl
 | Image median size (px) | 170 x 104 | 228 x 198 | 138 x 138 |
 | Image pixels (millions) | 7.4 | 5.7 | 10.3 |
 | Image tokens (estimate) | 9,310 | 7,213 | 13,254 |
-| Images whose alt text says nothing specific | 87 | 9 | 0 |
-| Text share of all tokens | 88% | 79% | 80% |
 
 Text tokens counted with the Qwen/Qwen3.8-27B-FP8 tokenizer. Image tokens estimated as one per 28 x 28 pixel patch, as Qwen-VL models encode images; other models differ (Claude: about width x height / 750).
 
@@ -142,9 +140,7 @@ Regenerate with `python scripts/handbook_stats.py` (needs `beautifulsoup4` and `
 What the numbers show:
 
 - Each handbook fits in one long-context request: about 28k to 67k text tokens, and 7k to 13k more for the images.
-- Text carries 79 to 88% of the tokens. The images are small (most are signs and diagrams under 250 px), but there are many of them, so dropping or keeping images changes a request by 12 to 21%.
-- Most blocks are short (median 14 to 18 words), but 4 to 11% have more than 3 sentences, up to about 200 words. Citing such a block points to much more text than the rule came from, so sources need sentence-level ids.
-- In the Ontario handbook, 87 of 245 images have alt text that names only the kind of sign ("a regulatory sign"). Without the image, a model has only the caption beside it.
+- Most blocks are short (median 14 to 18 words), but 4 to 11% have more than 3 sentences, up to about 200 words. Citing such a block points to much more text than a rule usually comes from.
 
 ## Repository layout
 

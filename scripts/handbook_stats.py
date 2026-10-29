@@ -155,8 +155,6 @@ def markdown(stats, tokenizer_note):
         ("Blocks with more than 80 words", "blocks_over_80_words"),
         ("Images (distinct files)", None), ("Image median size (px)", "image_median_size"),
         ("Image pixels (millions)", "image_megapixels"), ("Image tokens (estimate)", "image_tokens"),
-        ("Images whose alt text says nothing specific", "images_generic_alt"),
-        ("Text share of all tokens", None),
     ]
     out = ["| | " + " | ".join(label for _, label in HANDBOOKS) + " |", "|---|" + "---:|" * len(names)]
     for label, key in rows:
@@ -164,10 +162,8 @@ def markdown(stats, tokenizer_note):
             cells = [fmt(stats[n][key]) for n in names]
         elif label.startswith("Words per block"):
             cells = [f"{fmt(stats[n]['block_words_median'])} / {stats[n]['block_words_p90']} / {stats[n]['block_words_max']}" for n in names]
-        elif label.startswith("Images ("):
+        else:  # Images (distinct files)
             cells = [f"{stats[n]['images']} ({stats[n]['image_files']})" for n in names]
-        else:
-            cells = [f"{stats[n]['text_share_of_tokens'] * 100:.0f}%" for n in names]
         out.append(f"| {label} | " + " | ".join(cells) + " |")
     out.append("")
     out.append(tokenizer_note)
