@@ -82,7 +82,7 @@ local/qwen3.8-27b:
   provider: openai
   base_url: http://localhost:8000/v1
   model: qwen3.8-27b
-  params: {max_tokens: 32000, temperature: 0.6, top_p: 0.95}
+  params: {max_tokens: 64000, temperature: 0.6, top_p: 0.95}   # thinking needs room: a page took 23K-29K thinking tokens
   serve: >-
     CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf vllm serve Qwen/Qwen3.8-27B-FP8 --served-model-name qwen3.8-27b
     --tensor-parallel-size 4 --reasoning-parser qwen3 --max-model-len 131072
@@ -102,7 +102,7 @@ local/qwen3.5-9b:
   provider: openai
   base_url: http://localhost:8000/v1
   model: qwen3.5-9b
-  params: {max_tokens: 32000, temperature: 0.6, top_p: 0.95}
+  params: {max_tokens: 64000, temperature: 0.6, top_p: 0.95}   # thinking needs room: a page took 23K-29K thinking tokens
   serve: >-
     CUDA_VISIBLE_DEVICES=0,1 HF_HOME=~/hf vllm serve Qwen/Qwen3.5-9B --served-model-name qwen3.5-9b
     --tensor-parallel-size 2 --reasoning-parser qwen3 --max-model-len 131072
