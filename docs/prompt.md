@@ -1,4 +1,4 @@
-Records of the prompts the team gave Claude, kept as written at the time. Paths in them are the paths of that time: since 23 October 2026 the handbooks are in `handbooks/{mto,ca,tx}/`, the scrapers in `scrapers/`, and the first PDF-based Ontario drafts in `legacy/`.
+Records of the prompts the team gave Claude, kept as written at the time. Paths in them are the paths of that time: since 23 October 2026 the handbooks are in `handbooks/{mto,ca,tx}/`, the scrapers in `scrapers/`, and the first PDF-based Ontario drafts in `legacy/` on the branch `archive/rule-pipeline`.
 
 Used on Claude Opus 5.5 medium web view to generate Ontario passing rules.md and ontario_passing_rules.yaml:
 ```
