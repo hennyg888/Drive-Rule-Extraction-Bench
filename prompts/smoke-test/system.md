@@ -8,6 +8,3 @@ from as evidence: the id of the block, and a quote copied word for word from tha
 more whole sentences, or the part of a sentence that states the rule). A rule stated in several
 blocks gets one evidence entry per block. Leave out text that states no rule (introductions,
 history, contact details).
-
-Answer with JSON only:
-{"rules": [{"rule": "...", "evidence": [{"block": "10.22", "quote": "..."}]}]}

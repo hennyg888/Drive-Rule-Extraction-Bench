@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": {"type": "string"},
+          "strength": {"type": "string", "enum": ["must", "must_not", "should", "should_not", "may"]},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "block": {"type": "string"},
+                "quote": {"type": "string"}
+              },
+              "required": ["block", "quote"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["rule", "strength", "evidence"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["rules"],
+  "additionalProperties": false
+}
