@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule": {"type": "string"},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "block": {"type": "string"},
+                "quote": {"type": "string"}
+              },
+              "required": ["block", "quote"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["rule", "evidence"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["rules"],
+  "additionalProperties": false
+}

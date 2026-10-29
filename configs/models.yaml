@@ -1,0 +1,119 @@
+# Model presets. A run names one of these: drbench run --model anthropic/claude-opus-5-5 ...
+#
+# Each preset:
+#   provider     anthropic (the Anthropic API, drbench/models/claude.py) or
+#                openai (any OpenAI-compatible server: local vLLM, OpenRouter; drbench/models/openai_compat.py)
+#   model        the model id that API knows
+#   base_url     openai provider: where the server is
+#   api_key_env  openai provider: the environment variable holding the key (leave out for a local server)
+#   vision       false if the model takes no images (default true)
+#   price        [input, output] in USD per million tokens, for the cost estimate in each run's meta.json
+#   timeout      seconds before a request is given up (default 3600)
+#   params       sent with every request; see the provider's file for what each API takes.
+#                Override one for a run with --set, e.g. --set effort=low
+#   serve        local presets: the command that starts the server (drbench serve <preset> runs it)
+#
+# Keys go in .env at the repository root (ignored by git):
+#   ANTHROPIC_API_KEY=...      OPENROUTER_API_KEY=...
+
+# ------------------------------------------------------------------ Anthropic API (Claude)
+# Thinking is always on for these models; effort sets how much.
+# fallbacks: default -> a request declined by Claude's safety classifiers is rerun server-side on a
+# fallback model Anthropic picks (Opus and Sonnet only). Remove the line to get the refusal instead.
+anthropic/claude-opus-5-5:
+  provider: anthropic
+  model: claude-opus-5-5
+  price: [4.00, 20.00]
+  params: {max_tokens: 64000, effort: high, fallbacks: default}
+
+anthropic/claude-sonnet-5-5:
+  provider: anthropic
+  model: claude-sonnet-5-5
+  price: [2.00, 10.00]
+  params: {max_tokens: 64000, effort: high, fallbacks: default}
+
+anthropic/claude-haiku-5-5:            # prompts over 100K tokens cost $0.50 / $2.50 per million
+  provider: anthropic
+  model: claude-haiku-5-5
+  price: [0.10, 0.50]
+  params: {max_tokens: 64000, effort: medium}
+
+# ------------------------------------------------------------------ OpenRouter (one key, many models)
+openrouter/qwen3.8-27b:
+  provider: openai
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  model: qwen/qwen3.8-27b
+  params: {max_tokens: 32000, temperature: 0.7, top_p: 0.8}
+
+openrouter/qwen3.5-122b-a10b:
+  provider: openai
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  model: qwen/qwen3.5-122b-a10b
+  params: {max_tokens: 32000, temperature: 0.7, top_p: 0.8}
+
+openrouter/gemini-3.8-flash:
+  provider: openai
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  model: google/gemini-3.8-flash
+  params: {max_tokens: 32000}
+
+openrouter/gpt-5.6-luna:
+  provider: openai
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  model: openai/gpt-5.6-luna
+  params: {max_tokens: 32000}
+
+openrouter/claude-haiku-5.5:           # the same Claude model through OpenRouter, for comparison
+  provider: openai
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  model: anthropic/claude-haiku-5.5
+  params: {max_tokens: 32000}
+
+# ------------------------------------------------------------------ local vLLM (this server's GPUs)
+# Start the server first (drbench serve <preset>, or the command below), one model at a time.
+# Weights are in ~/hf; vLLM is in ~/qwen-trial/.venv. Thinking is on by default for Qwen; the
+# -nothink presets turn it off. Qwen's recommended sampling: thinking 0.6/0.95, no thinking 0.7/0.8.
+local/qwen3.8-27b:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: qwen3.8-27b
+  params: {max_tokens: 32000, temperature: 0.6, top_p: 0.95}
+  serve: >-
+    CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf vllm serve Qwen/Qwen3.8-27B-FP8 --served-model-name qwen3.8-27b
+    --tensor-parallel-size 4 --reasoning-parser qwen3 --max-model-len 131072
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.90 --port 8000
+
+local/qwen3.8-27b-nothink:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: qwen3.8-27b
+  params:
+    max_tokens: 32000
+    temperature: 0.7
+    top_p: 0.8
+    extra_body: {chat_template_kwargs: {enable_thinking: false}}
+
+local/qwen3.5-9b:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: qwen3.5-9b
+  params: {max_tokens: 32000, temperature: 0.6, top_p: 0.95}
+  serve: >-
+    CUDA_VISIBLE_DEVICES=0,1 HF_HOME=~/hf vllm serve Qwen/Qwen3.5-9B --served-model-name qwen3.5-9b
+    --tensor-parallel-size 2 --reasoning-parser qwen3 --max-model-len 131072
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.90 --port 8000
+
+local/qwen3.5-0.8b:                    # for testing the plumbing; starts in a minute
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: qwen3.5-0.8b
+  params: {max_tokens: 8000, temperature: 0.7, top_p: 0.8, extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+  serve: >-
+    CUDA_VISIBLE_DEVICES=0 HF_HOME=~/hf vllm serve Qwen/Qwen3.5-0.8B --served-model-name qwen3.5-0.8b
+    --reasoning-parser qwen3 --max-model-len 65536
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.90 --port 8000

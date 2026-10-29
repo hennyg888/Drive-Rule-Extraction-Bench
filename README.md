@@ -135,7 +135,7 @@ Text tokens counted with the Qwen/Qwen3.8-27B-FP8 tokenizer. Image tokens estima
 
 </details>
 
-Regenerate with `python scripts/handbook_stats.py` (needs `beautifulsoup4` and `pillow`; `transformers` and the Qwen tokenizer for exact text tokens, otherwise 1.3 tokens per word).
+Regenerate with `drbench stats` (see [Code](#code); `transformers` and the Qwen tokenizer give exact text tokens, otherwise 1.3 tokens per word).
 
 What the numbers show:
 
@@ -144,7 +144,7 @@ What the numbers show:
 
 ## Corpus: the handbooks with ids
 
-`corpus/{mto,ca,tx}/` holds the same pages as `handbooks/`, reduced to the handbook content and given an id on every block and sentence, so that an extracted rule can point to the exact sentence it came from. Build it with `python scripts/build_corpus.py`; `--check` rebuilds in memory and lists the pages whose files would change.
+`corpus/{mto,ca,tx}/` holds the same pages as `handbooks/`, reduced to the handbook content and given an id on every block and sentence, so that an extracted rule can point to the exact sentence it came from. Build it with `drbench corpus build`; `drbench corpus check` rebuilds in memory and lists the pages whose files would change.
 
 | | Ontario | California | Texas |
 |---|---:|---:|---:|
@@ -160,11 +160,74 @@ What the numbers show:
 <figure id="10.21"><img alt="how to pass another vehicle" src="images/2-36.jpg"/><figcaption>Diagram 2-46</figcaption></figure>
 ```
 
-**What the build changes, and what it keeps.** It keeps the text exactly; the script stops if a page's text differs from `handbooks/`. It keeps headings, paragraphs, lists, tables, images, and bold and italic text. It removes the page frame (table of contents, previous and next links, "On this page", dates), links (their text stays), wrappers, and every attribute except `id`, image `src` and `alt`, list `start` and `type`, and cell spans. An image alone in a paragraph becomes a `<figure>`, and a caption paragraph right after it ("Diagram 2-46", or a Texas caption) becomes its `<figcaption>`. Image paths stay relative to the handbook folder; each corpus page has a `<base>` pointing there, so it shows its images in a browser.
+**What the build changes, and what it keeps.** It keeps the text exactly; the build stops if a page's text differs from `handbooks/`. It keeps headings, paragraphs, lists, tables, images, and bold and italic text. It removes the page frame (table of contents, previous and next links, "On this page", dates), links (their text stays), wrappers, and every attribute except `id`, image `src` and `alt`, list `start` and `type`, and cell spans. An image alone in a paragraph becomes a `<figure>`, and a caption paragraph right after it ("Diagram 2-46", or a Texas caption) becomes its `<figcaption>`. Image paths stay relative to the handbook folder; each corpus page has a `<base>` pointing there, so it shows its images in a browser.
 
 **Manual decisions** go into `corpus/<handbook>/manual.yaml`, which the build reads. For now there is one: on Ontario's Signs page each sign is described in the paragraph before its image, and the image's alt text names no sign ("a regulatory sign"). So each image is put in one `<figure>` with that paragraph as its caption, written first as in the handbook. This was checked by looking at the images.
 
 **Screening.** The build writes `corpus/<handbook>/screening.md`, a list of places for a person to check: figures with neither a caption nor a useful alt text, blocks of more than 3 sentences or 80 words, very short sentences (possible split errors), and paragraphs that start with a typed number. Content that is not about driving (licences, insurance, fees) is kept and not marked; it can be handled by hand later.
+
+## What a model is sent
+
+A model gets the handbook as one user message, made from the corpus. The message starts with a table of contents (every page and its sections, with their ids), followed by the pages in order as HTML, each page in an `<article data-page="10">`. Every image is sent right after its `<img>` tag, so the model sees it where the reader would. The HTML tags and the block ids stay in the message. The sentence `<span>`s are taken out, because they add about half as many tokens again.
+
+A model cites the handbook with a block id and a quote copied from that block: `{"block": "10.22", "quote": "Passing left of a centreline is not permitted ..."}`. The grounding step then finds the quote in the block and adds the ids of the sentences it covers (`10.22.2`). It also records how the quote was found:
+
+| Match | Meaning |
+|---|---|
+| `exact` | Word for word, ignoring case, spacing, curly quotes and dashes. A quote with "..." is matched piece by piece |
+| `fuzzy` | Most of the quote is in a sentence, or most of a sentence is in the quote |
+| `other-block` | The quote is on the same page but in another block (`found_in` gives which) |
+| `heading` | The quote is the cited heading |
+| `not-found` | The quote is not on the page |
+| `no-block` | The page or block does not exist |
+
+The extraction prompt and the rule format are still to be written. `prompts/smoke-test.md` is only a short prompt for checking that a model and the pipeline work: it asks for a list of rules, each with its block ids and quotes.
+
+## Code
+
+The code is the Python package `drbench/`, used through the `drbench` command. Install it once, editable, from the repository root (Python 3.10 or later):
+
+```bash
+pip install -e '.[dev]'          # add ,tokens for exact token counts in `drbench stats`
+```
+
+| Command | What it does |
+|---|---|
+| `drbench stats` | The handbook analysis above, as Markdown |
+| `drbench corpus build` / `check` | Builds `corpus/` from `handbooks/`, or checks that it is up to date |
+| `drbench messages mto --pages 10` | Writes the message for some pages to `build/messages/` (`.md` to read, `.json` with the images) |
+| `drbench models` | Lists the model presets and whether each one's key is set |
+| `drbench ping <preset>` | Sends a one-line message, to check a key or a server |
+| `drbench run --model <preset> --handbook mto --pages 10 --prompt prompts/smoke-test.md --schema prompts/smoke-test.schema.json` | Runs a model and saves everything in `runs/` |
+| `drbench run ... --dry-run` | Builds the message and counts its tokens (Claude: exact and free), without running the model |
+| `drbench ground --run runs/<run>` | Resolves the citations of a run again |
+| `drbench serve <local preset>` | Starts the vLLM server of a local preset |
+
+Options of `run`: `--pages 9-11` or a page file name (default: the whole handbook), `--per-page` (one call per page), `--no-images`, `--no-toc`, `--set key=value` to change a model setting for one run (`--set effort=low`, `--set extra_body.chat_template_kwargs.enable_thinking=false`), and `--label` to name the run folder.
+
+**Models.** Every model is a preset in [`configs/models.yaml`](configs/models.yaml), and a run names one. Changing the model means changing the preset name. There are two kinds of API:
+
+- `anthropic`: Claude through the Anthropic API, using the official SDK (`drbench/models/claude.py`). Requests are streamed. Thinking is on, and `effort` sets how much. Opus and Sonnet use `fallbacks: default`: if Claude's safety classifiers decline a request, the API reruns it on a fallback model.
+- `openai`: any OpenAI-compatible server (`drbench/models/openai_compat.py`). This covers the local vLLM server (`local/...` presets) and OpenRouter (`openrouter/...`), which serves Qwen, Gemini, GPT and Claude under one key.
+
+Adding a model on one of these APIs takes only a new preset: copy one and change `model` (and `base_url` for another server). Another kind of API needs a new class in `drbench/models/`, next to `claude.py`.
+
+**Keys** go in `.env` at the repository root, one `NAME=value` per line. Git ignores the file. `ANTHROPIC_API_KEY` is needed for Claude, `OPENROUTER_API_KEY` for OpenRouter; local presets need no key. Instead of an Anthropic key, `ant auth login` also works.
+
+**Local models.** Start the server with `drbench serve local/qwen3.8-27b`, wait until it reports `Application startup complete`, then run with that preset. The `serve` line of each local preset shows how many GPUs it uses. Stop the server when you are done, because the GPUs are shared.
+
+**A run** writes `runs/<time>-<preset>-<handbook>/`:
+
+| File | What it holds |
+|---|---|
+| `meta.json` | The run settings (preset, model settings, handbook, pages, prompt and its sha256, git commit) and the results: tokens, seconds, estimated cost, stop reason, and citation matches |
+| `system.md`, `request.md` | The system prompt, and the user message as text with `[image: src]` where each image was |
+| `response.json`, `output.txt`, `reasoning.txt` | The whole API response, the answer, and the model's reasoning when the API returns it |
+| `output.json`, `grounded.json` | The answer as JSON, and the same with the sentence ids and match added to every citation |
+
+Runs are not committed (`runs/` is in `.gitignore`). To keep a run, copy it somewhere tracked, or add it with `git add -f`.
+
+**Tests**: `pytest`. They check sentence splitting, grounding, the model requests (no API is called), and that rebuilding the corpus gives the committed files byte for byte.
 
 ## Repository layout
 
@@ -173,7 +236,10 @@ What the numbers show:
 | `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
 | `scrapers/` | The scripts that made `handbooks/` |
 | `corpus/` | The handbooks with an id on every block and sentence, built from `handbooks/`, with each handbook's manual decisions and screening list |
-| `scripts/` | `handbook_stats.py` (the analysis above) and `build_corpus.py` (the corpus) |
+| `drbench/` | The code (see [Code](#code)): `corpus`, `screening`, `stats`, `messages`, `grounding`, `run`, `cli`, and `models/` |
+| `configs/` | `models.yaml`, the model presets |
+| `prompts/` | Prompts and the JSON schemas their answers follow |
+| `tests/` | Tests for `pytest` |
 | `docs/` | The prompts the team gave Claude (`prompt.md`) |
 
 The earlier rule pipeline (rule language, census, rules database, extraction prompts and runs, the Qwen trial, review pages, and the first PDF-based Ontario rules) is kept on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).

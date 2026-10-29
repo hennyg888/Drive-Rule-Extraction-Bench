@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drbench"
+version = "0.1.0"
+description = "Drive-Rule-Extraction-Bench: driver handbooks as a corpus with ids, model messages, model runs and grounded citations"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4",
+    "pyyaml",
+    "pillow",
+    "anthropic>=1.0",   # Claude through the Anthropic API
+    "openai>=1.0",      # local vLLM and OpenRouter (OpenAI-compatible APIs)
+]
+
+[project.optional-dependencies]
+tokens = ["transformers"]   # exact token counts in `drbench stats`
+dev = ["pytest"]
+
+[project.scripts]
+drbench = "drbench.cli:main"
+
+# Install editable (pip install -e .): drbench finds handbooks/, corpus/ and configs/ next to the package.
+[tool.setuptools]
+packages = ["drbench", "drbench.models"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
