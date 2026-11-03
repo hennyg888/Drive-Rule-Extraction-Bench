@@ -207,7 +207,7 @@ A prompt is a folder in `prompts/` with three files:
 | `task.md` | The request, placed at the end of the user message, after the handbook pages |
 | `schema.json` | The JSON format of the answer. Claude and vLLM enforce it; other servers are only asked for it |
 
-[`prompts/extract-rules/`](prompts/extract-rules/) is the rule extraction prompt and the default. It is a first draft, to be adjusted: the rule format in `schema.json` (a rule sentence, its strength, and evidence) is a starting point. [`prompts/smoke-test/`](prompts/smoke-test/) is a short prompt for checking that a model and the pipeline work. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
+[`prompts/extract-rules/`](prompts/extract-rules/) is the rule extraction prompt and the default. It is a first draft, to be adjusted: the rule format in `schema.json` (a rule sentence, its strength, and evidence) is a starting point. [`prompts/formal-rules/`](prompts/formal-rules/) writes rules in the formal grammar of the legacy Ontario passing rules (ids, force and modal, a vocabulary of defined terms, flagged vague words, cited blocks and diagrams), for one topic named in the last line of its `task.md` (overtaking by default). [`prompts/smoke-test/`](prompts/smoke-test/) is a short prompt for checking that a model and the pipeline work. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
 
 ## What a model is sent
 
