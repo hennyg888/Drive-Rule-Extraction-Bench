@@ -32,8 +32,11 @@ python run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --page
 
 ## Checked so far
 
-- The prompt loads, and the three examples in `task.md` fit `schema.json`.
-- All six example quotes match the MTO corpus exactly (blocks 10.22, 8.37, 21.6, 21.7, 6.32).
+- The prompt loads, and the example answer in `task.md` (two vocabulary entries, three rules) fits
+  `schema.json` once its `...` placeholders are removed.
+- Each example rule's `statement` is exactly its fields filled into the grammar.
+- All seven example quotes match the MTO corpus exactly (blocks 10.14, 10.22, 8.37, 21.6, 21.7,
+  6.32).
 - **Not yet tried on a model.**
 
 ## Things to know

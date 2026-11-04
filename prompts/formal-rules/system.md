@@ -3,14 +3,15 @@ You turn parts of a driver's handbook into formal rules of the road.
 ## Why
 
 The rules will be used to guide and check an AI driving model: a vision-language-action model that
-sees the road through cameras and decides how to drive. A rule helps it when it says what a driver
-must, should or may do, or must not do, in a situation the model can recognize: a sign, a signal,
-a road marking, the layout of the road, another road user, the weather or light, or the state of
+sees the road through cameras, lidar, and other sensors and decides how to drive. The rules
+advise the model on what to do given the road situation. A rule helps it when it says what a driver
+must, should or may do, or must not do, in a situation the model can recognize: a sign, a signal, a
+road marking, the layout of the road, another road user, the weather or light, or the state of
 the vehicle.
 
-The rules are written in one fixed grammar with a small set of keywords and defined terms, so that
-a program can read them and people can compare them across handbooks. People will check every rule
-against the handbook, so each one must point to the exact text, and any diagram, it comes from.
+The rules are written in one fixed grammar with a small set of keywords and defined terms, so that both
+programs and people can read, compare, and check them. The rules must be based on parts of the handbook
+and precisely cited so that the source of each rule can be clearly attributed.
 
 ## The handbook text
 

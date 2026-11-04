@@ -1,4 +1,5 @@
 Write the formal rules that the handbook pages above state about the topic named in the last line.
+The rules are to be output in JSON format.
 
 ## What counts as a rule
 
@@ -10,8 +11,8 @@ add rules the handbook does not state, even ones that are true elsewhere.
 
 ## Rule grammar
 
-Every rule's `statement` is one sentence in this grammar. Words in CAPITALS are keywords or terms
-from your vocabulary.
+Every rule's `statement` is one sentence in this grammar. Words in CAPITALS are terms from your 
+vocabulary or predefined keywords.
 
 ```
 RULE      := "WHEN" CONDITION "," "the" ACTOR MODAL ACTION ["," "UNLESS" EXCEPTION] "."
@@ -22,11 +23,12 @@ ACTOR     := a defined term for who acts, e.g. DRIVER, PASSER, CYCLIST; may be q
 MODAL     := MUST | MUST NOT | SHOULD | SHOULD NOT | MAY | MAY ONLY
 ```
 
-The fields `actor`, `when`, `action` and `unless` hold the same parts of the sentence, so the
-statement can be rebuilt from them. Use `""` for `unless` when there is no exception.
+The fields `when`, `actor`, `modal`, `action` and `unless` are the parts of `statement`: filling
+them into the grammar gives the statement word for word. Use `""` for `unless` when there is no
+exception.
 
 - Write one rule per entry. Keep apart rules that apply to different situations, but do not split
-  one rule into pieces. Leave each rule's conditions and exceptions with it.
+  one rule into pieces. Include each rule's conditions and exceptions with it as one entry.
 - Make each rule stand on its own: name the situation instead of writing "in this case" or "as
   above".
 
@@ -103,55 +105,60 @@ a diagram alone, a reason the handbook gives, or wording that could be read two 
 
 ## Examples
 
-Three rules from the Ontario handbook, for the topic "overtaking". Follow their form, not their
-content:
+An abridged answer from the Ontario handbook, for the topic "overtaking": two vocabulary entries
+(one the handbook defines, one defined for the rule set) and three rules. `...` marks entries left
+out. Follow its form, not its content:
 
 ```json
-{"id": "PASS-LOC-01", "group": "LOC", "title": "No passing near a pedestrian crossover",
- "force": "REQUIREMENT", "modal": "MUST NOT", "actor": "PASSER",
- "when": "within 30 metres of a PEDESTRIAN CROSSOVER", "action": "pass any vehicle", "unless": "",
- "statement": "WHEN within 30 metres of a PEDESTRIAN CROSSOVER, the PASSER MUST NOT pass any vehicle.",
- "penalty": "", "vague_terms": [],
- "note": "Stated on two pages, both times as a prohibition.",
- "evidence": [
-   {"block": "10.22", "quote": "Passing within 30 metres of a pedestrian crossover is not permitted.", "diagram": ""},
-   {"block": "8.37", "quote": "You must not pass any vehicle within 30 metres of a pedestrian crossover.", "diagram": ""}]}
-```
-
-```json
-{"id": "PASS-MARK-02", "group": "MARK", "title": "Broken line: passing allowed",
- "force": "PERMISSION", "modal": "MAY", "actor": "PASSER",
- "when": "there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS",
- "action": "pass", "unless": "",
- "statement": "WHEN there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS, the PASSER MAY pass.",
- "penalty": "",
- "vague_terms": [
-   {"term": "the way is clear", "kind": "JUDGEMENT", "note": "no gap or sight distance given"},
-   {"term": "enough broken line remains ahead", "kind": "DISTANCE", "note": "length not given"}],
- "note": "",
- "evidence": [
-   {"block": "21.6", "quote": "A broken line at the left of your lane means you may pass if the way is clear.", "diagram": ""},
-   {"block": "21.7", "quote": "Diagram 3-3", "diagram": "Car A behind a truck, with a broken yellow line at the left of A's lane."}]}
-```
-
-```json
-{"id": "PASS-USER-01", "group": "USER", "title": "Cyclists: one metre",
- "force": "REQUIREMENT", "modal": "MUST", "actor": "DRIVER of a motor vehicle",
- "when": "passing a CYCLIST", "action": "keep at least 1 metre between the vehicle and the CYCLIST, where practical", "unless": "",
- "statement": "WHEN passing a CYCLIST, the DRIVER of a motor vehicle MUST keep at least 1 metre between the vehicle and the CYCLIST, where practical.",
- "penalty": "A fine and two demerit points.",
- "vague_terms": [{"term": "where practical", "kind": "HEDGE", "note": "does not say when 1 metre is impractical"}],
- "note": "The same block advises changing lanes to pass whenever possible; that is a separate ADVICE rule.",
- "evidence": [
-   {"block": "6.32", "quote": "When passing a cyclist, drivers of motor vehicles must maintain a minimum distance of one metre, where practical between their vehicle and the cyclist.", "diagram": ""},
-   {"block": "6.32", "quote": "Failure to do so may result in a fine and an additional two demerit points", "diagram": ""}]}
+{"scope": "overtaking (passing another vehicle, and being passed)",
+ "vocabulary": [
+   {"term": "PASS", "definition": "Changing lanes to move past a slower vehicle, then returning to the original lane.",
+    "evidence": [{"block": "10.14", "quote": "Passing is changing lanes to move past a slower vehicle.", "diagram": ""}]},
+   {"term": "PASSER", "definition": "The driver making a PASS.", "evidence": []},
+   ...],
+ "rules": [
+   {"id": "PASS-LOC-01", "group": "LOC", "title": "No passing near a pedestrian crossover",
+    "force": "REQUIREMENT", "modal": "MUST NOT", "actor": "PASSER",
+    "when": "within 30 metres of a PEDESTRIAN CROSSOVER", "action": "pass any vehicle", "unless": "",
+    "statement": "WHEN within 30 metres of a PEDESTRIAN CROSSOVER, the PASSER MUST NOT pass any vehicle.",
+    "penalty": "", "vague_terms": [],
+    "note": "Stated on two pages, both times as a prohibition.",
+    "evidence": [
+      {"block": "10.22", "quote": "Passing within 30 metres of a pedestrian crossover is not permitted.", "diagram": ""},
+      {"block": "8.37", "quote": "You must not pass any vehicle within 30 metres of a pedestrian crossover.", "diagram": ""}]},
+   ...,
+   {"id": "PASS-MARK-02", "group": "MARK", "title": "Broken line: passing allowed",
+    "force": "PERMISSION", "modal": "MAY", "actor": "PASSER",
+    "when": "there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS",
+    "action": "pass", "unless": "",
+    "statement": "WHEN there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS, the PASSER MAY pass.",
+    "penalty": "",
+    "vague_terms": [
+      {"term": "the way is clear", "kind": "JUDGEMENT", "note": "no gap or sight distance given"},
+      {"term": "enough broken line remains ahead", "kind": "DISTANCE", "note": "length not given"}],
+    "note": "",
+    "evidence": [
+      {"block": "21.6", "quote": "A broken line at the left of your lane means you may pass if the way is clear.", "diagram": ""},
+      {"block": "21.7", "quote": "Diagram 3-3", "diagram": "Car A behind a truck, with a broken yellow line at the left of A's lane."}]},
+   ...,
+   {"id": "PASS-USER-01", "group": "USER", "title": "Cyclists: one metre",
+    "force": "REQUIREMENT", "modal": "MUST", "actor": "DRIVER of a motor vehicle",
+    "when": "passing a CYCLIST", "action": "keep at least 1 metre between the vehicle and the CYCLIST, where practical", "unless": "",
+    "statement": "WHEN passing a CYCLIST, the DRIVER of a motor vehicle MUST keep at least 1 metre between the vehicle and the CYCLIST, where practical.",
+    "penalty": "A fine and two demerit points.",
+    "vague_terms": [{"term": "where practical", "kind": "HEDGE", "note": "does not say when 1 metre is impractical"}],
+    "note": "The same block advises changing lanes to pass whenever possible; that is a separate ADVICE rule.",
+    "evidence": [
+      {"block": "6.32", "quote": "When passing a cyclist, drivers of motor vehicles must maintain a minimum distance of one metre, where practical between their vehicle and the cyclist.", "diagram": ""},
+      {"block": "6.32", "quote": "Failure to do so may result in a fine and an additional two demerit points", "diagram": ""}]},
+   ...]}
 ```
 
 ## Answer
 
-Answer with JSON only: `{"scope": "...", "vocabulary": [...], "rules": [...]}`, where `scope` is
-the topic in the last line, `vocabulary` entries are `{"term", "definition", "evidence"}`, and
-`rules` entries are as in the examples.
+Answer with JSON only, in the form of the example: `scope` is the topic in the last line,
+`vocabulary` lists every defined term, and `rules` lists every rule. Write out every entry; do not
+use `...`.
 
 Before you answer, go through the pages again, block by block, and check that every rule they
 state about the topic is in your list. Leaving out a rule is worse than writing one rule twice.
