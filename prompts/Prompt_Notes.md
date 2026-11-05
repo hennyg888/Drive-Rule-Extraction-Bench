@@ -4,6 +4,14 @@ How Anthropic recommends laying out prompts for Claude, and what to watch for wh
 prompts in this folder. Checked against the Claude API guidance in November 2026, for the current
 models (Opus 5.5, Sonnet 5.5, Haiku 5.5).
 
+## The prompts in this folder
+
+| Folder | What it is |
+|---|---|
+| `formal-rules/` | The current draft of the prompt that writes the gold set: the ground-truth rules, extracted with Claude. It is the default prompt. `formal-rules/Note.md` explains how it is built. |
+| `smoke-test/` | A small, cheap prompt (at most three rules, cited by block id) for checking that a model and the pipeline work. Its output is not meant to be used. |
+| `archive/` | Earlier prompts (`extract-rules`), kept for reference. Not used, and not kept up to date with the corpus or the citation format. |
+
 ## System prompt vs. user message
 
 - **System prompt (`system.md`):** sets the role and background: who the model is working for,

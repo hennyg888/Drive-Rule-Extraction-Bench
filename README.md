@@ -218,7 +218,15 @@ A prompt is a folder in `prompts/` with three files:
 | `task.md` | The request, placed at the end of the user message, after the handbook pages |
 | `schema.json` | The JSON format of the answer. Claude and vLLM enforce it; other servers are only asked for it |
 
-[`prompts/formal-rules/`](prompts/formal-rules/) is the rule extraction prompt and the default. It writes rules in the formal grammar of the legacy Ontario passing rules: ids, force and modal, a vocabulary of defined terms, flagged vague words, and evidence given as block ids of text, figures and captions. It covers one topic, named in the last line of its `task.md` (overtaking by default). [`prompts/Prompt_Notes.md`](prompts/Prompt_Notes.md) sums up Anthropic's advice on laying out prompts. [`prompts/smoke-test/`](prompts/smoke-test/) is a small, cheap prompt (at most three rules, cited by block id) for checking that a model and the pipeline work. The earlier `extract-rules` prompt is kept in [`prompts/archive/`](prompts/archive/) and is no longer used. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
+The prompts in `prompts/`:
+
+| Folder | What it is |
+|---|---|
+| [`formal-rules/`](prompts/formal-rules/) | The current draft of the prompt for the gold set: the ground-truth rules, extracted with Claude. It is the default prompt. It writes rules in the formal grammar of the legacy Ontario passing rules: ids, force and modal, a vocabulary of defined terms, vague words with explanations, and evidence given as block ids of text, figures and captions. It covers one topic, named in the last line of its `task.md` (overtaking for now). [`Note.md`](prompts/formal-rules/Note.md) explains how it is built. |
+| [`smoke-test/`](prompts/smoke-test/) | A small, cheap prompt (at most three rules, cited by block id) for checking that a model and the pipeline work. Its output is not meant to be used. |
+| [`archive/`](prompts/archive/) | Earlier prompts (`extract-rules`), kept for reference. Not used, and not kept up to date with the corpus or the citation format. |
+
+[`prompts/Prompt_Notes.md`](prompts/Prompt_Notes.md) sums up Anthropic's advice on laying out prompts for Claude. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
 
 ## What a model is sent
 
