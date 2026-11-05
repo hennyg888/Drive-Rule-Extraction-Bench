@@ -22,9 +22,13 @@ The handbook is given as HTML, in the order a reader meets it:
 - `<article data-page="10">`: one page, starting with its `<h1>` title.
 - Every heading, paragraph, list item, table row and figure has an `id` such as `"10.22"`: block
   22 of page 10. These ids are how you cite the handbook.
-- A `<figure>` holds an `<img>` and usually a `<figcaption>` such as "Diagram 2-45". The image
-  itself comes right after its `<img>` tag. The `alt` text is often a short description, and is
-  empty when it only repeated the caption.
+- Every image is in a `<figure>` of its own, so each image can be cited. A figure among the
+  paragraphs has an id like `"21.7"`; a figure inside a table row or paragraph takes that block's
+  id with `-f1`, `-f2`, ... added, such as `"6.35-f1"`.
+- A figure's caption, such as "Diagram 3-3", is a `<figcaption>` inside the figure, with the
+  figure's id followed by `-c`: `"21.7-c"`. A caption can come before or after its image.
+- The image itself comes right after its `<img>` tag. The `alt` text is often a short
+  description, and is empty when it only repeated the caption.
 
 Read images together with the text around them. A sign, a road marking or a diagram is often part
 of a rule, and sometimes the only place a detail is shown.

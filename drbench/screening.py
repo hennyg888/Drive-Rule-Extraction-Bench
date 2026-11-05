@@ -18,8 +18,8 @@ def screening(hb, pages):
         blocks = list(blocks_of(art))
         for i, b in enumerate(blocks):
             words = len(b.get_text(" ").split())
-            spans = b.find_all("span", id=True)
-            if b.name != "figure" and (len(spans) > 3 or words > 80):
+            spans = [] if b.name == "figure" else b.find_all("span", id=True)   # a caption is its own block
+            if b.name not in ("figure", "figcaption") and (len(spans) > 3 or words > 80):
                 long_blocks.append((b["id"], len(spans) or 1, words, norm(b.get_text(" "))[:90]))
             if b.name == "figure" and not b.find("figcaption"):
                 for img in b.find_all("img"):

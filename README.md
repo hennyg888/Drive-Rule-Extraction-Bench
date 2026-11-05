@@ -149,18 +149,29 @@ What the numbers show:
 | | Ontario | California | Texas |
 |---|---:|---:|---:|
 | Pages | 30 | 23 | 21 |
-| Blocks (headings, paragraphs, list items, table rows, figures) | 2,421 | 1,326 | 2,231 |
+| Blocks (headings, paragraphs, list items, table rows, figures) | 2,412 | 1,326 | 2,231 |
 | Sentences | 3,568 | 1,681 | 3,024 |
 
 **Ids.** Pages are numbered in table-of-contents order, starting at 1 for the cover page. Every block of a page is numbered in document order: `10.22` is block 22 of page 10 (Ontario's "Changing positions"). In a block of more than one sentence, each sentence is wrapped in `<span id="10.22.2">`; a one-sentence block is its own sentence 1. Table cells are always wrapped, so each cell can be cited. The corpus files are committed, so the ids stay fixed; rebuilding is done only on purpose.
 
+Every image is in a `<figure>` of its own, and figures and captions are blocks with their own ids, so a rule can cite an image directly:
+
+| Id | Block |
+|---|---|
+| `10.21` | A figure among the other blocks (one image), numbered like them |
+| `10.21-c` | Its caption, the `<figcaption>` inside it (its sentences are `10.21-c.1`, …), whether written before or after the image |
+| `6.35-f1` | An image inside a table row or a paragraph, wrapped in a figure that takes the block's id; `-f2`, `-f3` for more images in the same block |
+
 ```html
 <h2 id="10.13">Passing</h2>
+<figure id="10.21"><img alt="how to pass another vehicle" src="images/2-36.jpg"/><figcaption id="10.21-c">Diagram 2-46</figcaption></figure>
 <p id="10.22"><span id="10.22.1">Passing within 30 metres of a pedestrian crossover is not permitted.</span> <span id="10.22.2">Passing left of a centreline is not permitted 30 metres from a bridge, viaduct or tunnel.</span> …</p>
-<figure id="10.21"><img alt="how to pass another vehicle" src="images/2-36.jpg"/><figcaption>Diagram 2-46</figcaption></figure>
+<tr id="6.35"><td><figure id="6.35-f1"><img alt="Color: Red: …" src="images/p032-01.png"/></figure></td><td>Red: Stop, yield, or do what is posted on the sign</td></tr>
 ```
 
-**What the build changes, and what it keeps.** It keeps the text exactly; the build stops if a page's text differs from `handbooks/`. It keeps headings, paragraphs, lists, tables, images, and bold and italic text. It removes the page frame (table of contents, previous and next links, "On this page", dates), links (their text stays), wrappers, and every attribute except `id`, image `src` and `alt`, list `start` and `type`, and cell spans. An image alone in a paragraph becomes a `<figure>`, and a caption paragraph right after it ("Diagram 2-46", or a Texas caption) becomes its `<figcaption>`. Image paths stay relative to the handbook folder; each corpus page has a `<base>` pointing there, so it shows its images in a browser.
+The ca handbook has no captions. mto has 207 and tx has 26. All 522 images have a figure: 399 among the other blocks and 123 inside table rows or a paragraph.
+
+**What the build changes, and what it keeps.** It keeps the text exactly; the build stops if a page's text differs from `handbooks/`. It keeps headings, paragraphs, lists, tables, images, and bold and italic text. It removes the page frame (table of contents, previous and next links, "On this page", dates), links (their text stays), wrappers, and every attribute except `id`, image `src` and `alt`, list `start` and `type`, and cell spans. An image alone in a paragraph becomes a `<figure>`, and a caption paragraph right after it ("Diagram 2-46", or a Texas caption) becomes its `<figcaption>`. An image that is already in one of the handbook's own figures stays in that figure. An image inside a table cell or a paragraph with text gets a `<figure>` of its own in place. Image paths stay relative to the handbook folder; each corpus page has a `<base>` pointing there, so it shows its images in a browser.
 
 **Manual decisions** go into `corpus/<handbook>/manual.yaml`, which the build reads. For now there is one: on Ontario's Signs page each sign is described in the paragraph before its image, and the image's alt text names no sign ("a regulatory sign"). So each image is put in one `<figure>` with that paragraph as its caption, written first as in the handbook. This was checked by looking at the images.
 
@@ -191,7 +202,7 @@ Options of `run_extraction.py`:
 |---|---|
 | `--pages 9-11`, or a page file name | Which pages to send (default: the whole handbook) |
 | `--per-page` | One call per page |
-| `--prompt <folder>` | Which prompt to use (default `extract-rules`) |
+| `--prompt <folder>` | Which prompt to use (default `formal-rules`) |
 | `--no-images`, `--no-toc` | Leave out the images, or the table of contents |
 | `--set key=value` | Change a model setting for this run, e.g. `--set effort=low` or `--set extra_body.chat_template_kwargs.enable_thinking=false` |
 | `--label` | Add a name to the run folder |
@@ -207,7 +218,7 @@ A prompt is a folder in `prompts/` with three files:
 | `task.md` | The request, placed at the end of the user message, after the handbook pages |
 | `schema.json` | The JSON format of the answer. Claude and vLLM enforce it; other servers are only asked for it |
 
-[`prompts/extract-rules/`](prompts/extract-rules/) is the rule extraction prompt and the default. It is a first draft, to be adjusted: the rule format in `schema.json` (a rule sentence, its strength, and evidence) is a starting point. [`prompts/formal-rules/`](prompts/formal-rules/) writes rules in the formal grammar of the legacy Ontario passing rules (ids, force and modal, a vocabulary of defined terms, flagged vague words, cited blocks and diagrams), for one topic named in the last line of its `task.md` (overtaking by default). [`prompts/smoke-test/`](prompts/smoke-test/) is a short prompt for checking that a model and the pipeline work. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
+[`prompts/formal-rules/`](prompts/formal-rules/) is the rule extraction prompt and the default. It writes rules in the formal grammar of the legacy Ontario passing rules: ids, force and modal, a vocabulary of defined terms, flagged vague words, and evidence given as block ids of text, figures and captions. It covers one topic, named in the last line of its `task.md` (overtaking by default). [`prompts/Prompt_Notes.md`](prompts/Prompt_Notes.md) sums up Anthropic's advice on laying out prompts. [`prompts/smoke-test/`](prompts/smoke-test/) is a small, cheap prompt (at most three rules, cited by block id) for checking that a model and the pipeline work. The earlier `extract-rules` prompt is kept in [`prompts/archive/`](prompts/archive/) and is no longer used. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
 
 ## What a model is sent
 
@@ -238,20 +249,30 @@ The pages come from the corpus. Each page is an `<article data-page="10">` that 
 …
 <figure id="10.12"><img alt="how to make a lane change" src="images/2-35.jpg"/>
 [the image 2-35.jpg itself]
-<figcaption>Diagram 2-45</figcaption></figure>
+<figcaption id="10.12-c">Diagram 2-45</figcaption></figure>
 …
 </article>
 
-Extract the rules of the road from the handbook pages above, as described in your instructions.
-Answer with JSON only, in this form:
-{"rules": [{"rule": "...", "strength": "must", "evidence": [{"block": "10.22", "quote": "..."}]}]}
+Write the formal rules that the handbook pages above state about the topic named in the last line.
+…
+Topic: extract formal rules about overtaking (passing another vehicle, and being passed) only.
 ```
 
 Ontario page 10 alone comes to about 9,800 input tokens with its 5 images; a whole handbook fits in one request (see the analysis above).
 
 ## Grounding
 
-A model cites the handbook with a block id and a quote copied from that block: `{"block": "10.22", "quote": "Passing left of a centreline is not permitted ..."}`. The grounding step finds the quote in the block and adds the ids of the sentences it covers (`10.22.2`), and how it was found:
+The `formal-rules` prompt cites by block id alone: `"evidence": ["21.6", "21.7"]`. The grounding step replaces each id with `{"block", "kind", "sentences"}`:
+
+| Kind | Meaning |
+|---|---|
+| `text` | A paragraph, list item, table row or table caption; `sentences` lists its sentence ids |
+| `figure` | A figure, one image (`21.7`, `6.35-f1`) |
+| `caption` | A figure's caption (`21.7-c`); `sentences` lists its sentence ids |
+| `heading` | A heading |
+| `no-block` | The page or block does not exist |
+
+The archived prompts cited with a block id and a quote copied from that block, and grounding still handles that form: `{"block": "10.22", "quote": "Passing left of a centreline is not permitted ..."}`. The grounding step finds the quote in the block and adds the ids of the sentences it covers (`10.22.2`), and how it was found:
 
 | Match | Meaning |
 |---|---|
@@ -304,9 +325,9 @@ The programs at the top level are short. The work is done in the package `drbenc
 | `messages.py` | Corpus pages → the user message: table of contents, pages as HTML, images after their `<img>`, the task | `build`, `page_html`, `contents_html`, `preview` |
 | `models/` | One interface for every model: `get_model(preset).complete(content, system, json_schema)` returns the answer, reasoning, tokens and time. `claude.py` is the Anthropic API; `openai_compat.py` is vLLM and OpenRouter | `get_model`, `ModelResponse` |
 | `run.py` | One run: build the messages, call the model, save everything, resolve the citations | `run`, `reground` |
-| `grounding.py` | A citation (block id + quote) → sentence ids | `resolve`, `resolve_output` |
+| `grounding.py` | A citation (a block id, or a block id + quote) → what it points to and its sentence ids | `cite`, `resolve`, `resolve_output` |
 
-**Tests**: `pytest`. They check sentence splitting, grounding, the message, the prompts, the model requests (no API is called), and that rebuilding the corpus gives the committed files byte for byte.
+**Tests**: `pytest`. They check sentence splitting; that rebuilding the corpus gives the committed files byte for byte; that every image is a figure of its own with figure, caption and `-f<n>` ids as described above; citations by block id; the message; the prompts; and the model requests (no API is called).
 
 ## Repository layout
 

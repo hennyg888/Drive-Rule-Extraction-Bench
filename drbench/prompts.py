@@ -17,7 +17,7 @@ from dataclasses import dataclass
 from .handbooks import ROOT
 
 PROMPTS = os.path.join(ROOT, "prompts")
-DEFAULT = "extract-rules"
+DEFAULT = "formal-rules"
 
 
 @dataclass(frozen=True)

@@ -15,6 +15,15 @@ it covers, with how it was found:
     no-block      the page or the block does not exist
 `resolve_output` does this for every {"block", "quote"} object in a model's answer, whatever the
 rest of the answer looks like.
+
+A model can also cite by block id alone, as a list of ids: {"evidence": ["10.22", "10.21"]}.
+`cite` checks such an id and says what it points to:
+    text          a paragraph, list item, table row or table caption (with its sentence ids)
+    figure        a figure: one image ("10.21", or "6.35-f1" inside a table row or paragraph)
+    caption       a figure's caption ("10.21-c", with its sentence ids)
+    heading       a heading
+    no-block      the page or the block does not exist
+`resolve_output` replaces each id in an "evidence" list with {"block", "kind", "sentences"}.
 """
 import difflib
 import re
@@ -117,9 +126,26 @@ def resolve(handbook_id, block, quote):
     return {"sentences": [], "match": "not-found"}
 
 
+KINDS = {"h2": "heading", "h3": "heading", "h4": "heading", "figure": "figure", "figcaption": "caption"}
+
+
+def cite(handbook_id, block):
+    """{"kind", "sentences"} for a citation by block id alone."""
+    try:
+        page_no = int(str(block).split(".")[0])
+    except ValueError:
+        return {"kind": "no-block", "sentences": []}
+    page = page_blocks(handbook_id, page_no)
+    if not page or block not in page:
+        return {"kind": "no-block", "sentences": []}
+    b = page[block]
+    return {"kind": KINDS.get(b["tag"], "text"), "sentences": [sid for sid, _ in b["sentences"]]}
+
+
 def resolve_output(handbook_id, data):
-    """Add "sentences" and "match" to every {"block", "quote"} object in `data` (changed in place);
-    return the count of each kind of match."""
+    """Add "sentences" and "match" to every {"block", "quote"} object in `data`, and replace every
+    block id in an "evidence" list with {"block", "kind", "sentences"} (changed in place); return
+    the count of each kind of match and of each kind of cited block."""
     counts = Counter()
 
     def walk(x):
@@ -127,6 +153,12 @@ def resolve_output(handbook_id, data):
             if isinstance(x.get("block"), str) and isinstance(x.get("quote"), str):
                 x.update(resolve(handbook_id, x["block"], x["quote"]))
                 counts[x["match"]] += 1
+            ev = x.get("evidence")
+            if isinstance(ev, list):
+                for i, item in enumerate(ev):
+                    if isinstance(item, str):
+                        ev[i] = {"block": item, **cite(handbook_id, item)}
+                        counts[ev[i]["kind"]] += 1
             for v in x.values():
                 walk(v)
         elif isinstance(x, list):

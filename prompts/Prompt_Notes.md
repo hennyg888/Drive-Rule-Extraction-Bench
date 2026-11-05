@@ -42,7 +42,7 @@ models (Opus 5.5, Sonnet 5.5, Haiku 5.5).
 ## Structured output (`schema.json`)
 
 - **Claude** enforces the schema (`output_config.format`). The schema needs `required` and
-  `"additionalProperties": false` on every object, as `extract-rules/schema.json` already has.
+  `"additionalProperties": false` on every object, as `formal-rules/schema.json` already has.
 - **vLLM** enforces it through `response_format`. Other OpenRouter models may only treat it as a
   request, so keep the JSON shape in `task.md` too.
 - **Citations:** structured outputs cannot be combined with Claude's built-in document citations
@@ -79,7 +79,7 @@ models (Opus 5.5, Sonnet 5.5, Haiku 5.5).
 
 ## Comparing prompt versions
 
-- To test a different wording, copy the folder (e.g. `prompts/extract-rules-v2/`), edit it, and
-  run it with `--prompt extract-rules-v2`. Each run saves a copy of the prompt folder and
+- To test a different wording, copy the folder (e.g. `prompts/formal-rules-v2/`), edit it, and
+  run it with `--prompt formal-rules-v2`. Each run saves a copy of the prompt folder and
   `prompt_sha256` in `meta.json`, so results from different versions stay apart.
 - Change one thing at a time, and run each version on the same pages and model.

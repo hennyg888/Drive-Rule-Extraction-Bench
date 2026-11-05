@@ -24,22 +24,22 @@ Blocks of more than 3 sentences or more than 80 words. Their sentences have ids,
 | `3.4` | 4 | 52 | But you need to do more than just obey the rules. You must care about the safety of others |
 | `3.8` | 5 | 77 | Visibility is about seeing and being seen. You should always be aware of traffic in front, |
 | `4.5` | 5 | 60 | Don't drive when you are tired. You might fall asleep at the wheel, risking the lives of o |
-| `4.10` | 4 | 94 | Get to know your vehicle before you drive it. There are many types of vehicles available t |
-| `4.18` | 4 | 46 | Make sure you sit properly behind the wheel. You should sit high enough in the driver’s se |
-| `4.19` | 5 | 71 | Be sure that you are sitting straight upright in the seat with your elbows slightly bent.  |
-| `4.23` | 4 | 57 | Keep a clear view when driving. Do not put anything in your windows that will block your v |
-| `4.28` | 8 | 166 | Adjust your mirrors so that there are as few blind spots as possible. Blind spots in most  |
-| `4.35` | 5 | 108 | Drivers who do not buckle up can be fined and will be given two demerit points. Drivers ma |
-| `4.36` | 4 | 64 | Seatbelts should be worn snugly enough to keep you in your seat during a collision. Never  |
-| `4.45` | 4 | 57 | Child car seats must meet Canadian Motor Vehicle Safety Standards. Buckles and straps must |
-| `4.46` | 4 | 69 | Infants who weigh less than 9 kilograms (20 lbs .) must be buckled into a rear-facing chil |
-| `4.47` | 3 | 84 | Toddlers 9 to 18 kilograms (20 to 40 lbs .) must be buckled into a child car seat attached |
-| `4.48` | 7 | 176 | Booster seats provide 60 per cent more protection than seatbelts alone. These must be used |
-| `4.62` | 4 | 62 | Seatbelts keep your head and body from hitting the inside of the vehicle or another person |
-| `4.65` | 3 | 103 | When using a child car seat, make sure that the seat is tightly secured by the vehicle sea |
-| `4.71` | 7 | 167 | Headlights enable you to see the roadway in front of your vehicle when visibility is poor, |
-| `4.73` | 4 | 94 | When driving your vehicle, headlights are required to be turned on between one-half hour b |
-| `4.77` | 4 | 78 | Your daytime running lights are not to be used as headlights during poor lighting conditio |
+| `4.9` | 4 | 94 | Get to know your vehicle before you drive it. There are many types of vehicles available t |
+| `4.16` | 4 | 46 | Make sure you sit properly behind the wheel. You should sit high enough in the driver’s se |
+| `4.17` | 5 | 71 | Be sure that you are sitting straight upright in the seat with your elbows slightly bent.  |
+| `4.21` | 4 | 57 | Keep a clear view when driving. Do not put anything in your windows that will block your v |
+| `4.25` | 8 | 166 | Adjust your mirrors so that there are as few blind spots as possible. Blind spots in most  |
+| `4.31` | 5 | 108 | Drivers who do not buckle up can be fined and will be given two demerit points. Drivers ma |
+| `4.32` | 4 | 64 | Seatbelts should be worn snugly enough to keep you in your seat during a collision. Never  |
+| `4.40` | 4 | 57 | Child car seats must meet Canadian Motor Vehicle Safety Standards. Buckles and straps must |
+| `4.41` | 4 | 69 | Infants who weigh less than 9 kilograms (20 lbs .) must be buckled into a rear-facing chil |
+| `4.42` | 3 | 84 | Toddlers 9 to 18 kilograms (20 to 40 lbs .) must be buckled into a child car seat attached |
+| `4.43` | 7 | 176 | Booster seats provide 60 per cent more protection than seatbelts alone. These must be used |
+| `4.57` | 4 | 62 | Seatbelts keep your head and body from hitting the inside of the vehicle or another person |
+| `4.60` | 3 | 103 | When using a child car seat, make sure that the seat is tightly secured by the vehicle sea |
+| `4.65` | 7 | 167 | Headlights enable you to see the roadway in front of your vehicle when visibility is poor, |
+| `4.67` | 4 | 94 | When driving your vehicle, headlights are required to be turned on between one-half hour b |
+| `4.70` | 4 | 78 | Your daytime running lights are not to be used as headlights during poor lighting conditio |
 | `5.1` | 6 | 102 | Always be aware of traffic around you as you drive. Develop a routine for looking ahead, b |
 | `5.2` | 4 | 58 | Keep a cushion of space around your vehicle and be prepared for the unexpected. Anticipate |
 | `5.9` | 4 | 77 | Use your turn signals and brake lights to signal before stopping, slowing down, turning, c |
@@ -251,13 +251,13 @@ Sentences of one or two words outside tables: usually a short command ("Stop."),
 | `14.70.1` | Stay alert. |
 | `15.14.1` | Don't panic. |
 | `16.7.1` | Plan ahead. |
-| `18.52.1` | Intersection ahead. |
-| `18.53.1` | Roundabout Ahead. |
-| `18.53.2` | Reduce Speed. |
-| `18.64.2` | Slow down. |
-| `18.71.2` | Slow down. |
-| `18.76.1` | Underpass ahead. |
-| `18.102.1` | Closed lane. |
+| `18.52-c.1` | Intersection ahead. |
+| `18.53-c.1` | Roundabout Ahead. |
+| `18.53-c.2` | Reduce Speed. |
+| `18.64-c.2` | Slow down. |
+| `18.71-c.2` | Slow down. |
+| `18.76-c.1` | Underpass ahead. |
+| `18.102-c.1` | Closed lane. |
 | `27.41.2` | Signal. |
 | `27.41.3` | Proceed slowly. |
 

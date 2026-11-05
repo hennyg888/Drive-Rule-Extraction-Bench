@@ -1,17 +1,32 @@
 {
   "type": "object",
   "properties": {
-    "scope": {"type": "string"},
+    "scope": {
+      "type": "string"
+    },
     "vocabulary": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "term": {"type": "string"},
-          "definition": {"type": "string"},
-          "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+          "term": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         },
-        "required": ["term", "definition", "evidence"],
+        "required": [
+          "term",
+          "definition",
+          "evidence"
+        ],
         "additionalProperties": false
       }
     },
@@ -20,51 +35,114 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": {"type": "string"},
-          "group": {"type": "string"},
-          "title": {"type": "string"},
-          "force": {"type": "string", "enum": ["REQUIREMENT", "INSTRUCTION", "ADVICE", "PERMISSION"]},
-          "modal": {"type": "string", "enum": ["MUST", "MUST NOT", "SHOULD", "SHOULD NOT", "MAY", "MAY ONLY"]},
-          "actor": {"type": "string"},
-          "when": {"type": "string"},
-          "action": {"type": "string"},
-          "unless": {"type": "string"},
-          "statement": {"type": "string"},
-          "penalty": {"type": "string"},
+          "id": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "force": {
+            "type": "string",
+            "enum": [
+              "REQUIREMENT",
+              "INSTRUCTION",
+              "ADVICE",
+              "PERMISSION"
+            ]
+          },
+          "modal": {
+            "type": "string",
+            "enum": [
+              "MUST",
+              "MUST NOT",
+              "SHOULD",
+              "SHOULD NOT",
+              "MAY",
+              "MAY ONLY"
+            ]
+          },
+          "actor": {
+            "type": "string"
+          },
+          "when": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "unless": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "penalty": {
+            "type": "string"
+          },
           "vague_terms": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "term": {"type": "string"},
-                "kind": {"type": "string", "enum": ["DISTANCE", "TIME", "SPEED", "QUANTITY", "JUDGEMENT", "HEDGE"]},
-                "note": {"type": "string"}
+                "term": {
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                }
               },
-              "required": ["term", "kind", "note"],
+              "required": [
+                "term",
+                "explanation"
+              ],
               "additionalProperties": false
             }
           },
-          "note": {"type": "string"},
-          "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+          "note": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         },
-        "required": ["id", "group", "title", "force", "modal", "actor", "when", "action", "unless",
-                     "statement", "penalty", "vague_terms", "note", "evidence"],
+        "required": [
+          "id",
+          "topic",
+          "group",
+          "number",
+          "title",
+          "force",
+          "modal",
+          "actor",
+          "when",
+          "action",
+          "unless",
+          "statement",
+          "penalty",
+          "vague_terms",
+          "note",
+          "evidence"
+        ],
         "additionalProperties": false
       }
     }
   },
-  "required": ["scope", "vocabulary", "rules"],
-  "additionalProperties": false,
-  "$defs": {
-    "evidence": {
-      "type": "object",
-      "properties": {
-        "block": {"type": "string"},
-        "quote": {"type": "string"},
-        "diagram": {"type": "string"}
-      },
-      "required": ["block", "quote", "diagram"],
-      "additionalProperties": false
-    }
-  }
+  "required": [
+    "scope",
+    "vocabulary",
+    "rules"
+  ],
+  "additionalProperties": false
 }

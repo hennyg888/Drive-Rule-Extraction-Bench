@@ -7,18 +7,7 @@
         "type": "object",
         "properties": {
           "rule": {"type": "string"},
-          "evidence": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "block": {"type": "string"},
-                "quote": {"type": "string"}
-              },
-              "required": ["block", "quote"],
-              "additionalProperties": false
-            }
-          }
+          "evidence": {"type": "array", "items": {"type": "string"}}
         },
         "required": ["rule", "evidence"],
         "additionalProperties": false

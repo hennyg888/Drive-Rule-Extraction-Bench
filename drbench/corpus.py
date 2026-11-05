@@ -8,10 +8,16 @@ corpus/<id>/manual.yaml holds the manual decisions (see the README).
 
 Ids. Pages are numbered in the order of the handbook's table of contents, starting at 1 for the
 cover page. Inside a page every block (heading, paragraph, list item, table row, table caption,
-figure) is numbered in document order: "10.22" is block 22 of page 10. A block of more than one
-sentence has each sentence wrapped in <span id="10.22.2">; a one-sentence block is its own first
-sentence. The ids are written into the corpus files, which are committed: rebuilding is only
-done on purpose, and `check` shows which ids would move.
+figure) is numbered in document order: "10.22" is block 22 of page 10. Figures and their captions
+are blocks of their own, with ids taken from the block they belong to:
+    10.21      a figure (one image)
+    10.21-c    its caption (<figcaption>), whether written before or after the image
+    6.35-f1    an image inside a text block (a table row or a paragraph), wrapped in a <figure>;
+               -f2, -f3 ... when the block holds more images
+A block of more than one sentence has each sentence wrapped in <span id="10.22.2"> (a caption's
+sentences are 10.21-c.1, ...); a one-sentence block is its own first sentence. The ids are written
+into the corpus files, which are committed: rebuilding is only done on purpose, and `check` shows
+which ids would move.
 
 Nothing is added, dropped or reordered in the text: every page's text is checked against
 handbooks/, and the sentences of every block add up to the block.
@@ -34,6 +40,7 @@ KEEP_TAGS = {"h1", "h2", "h3", "h4", "p", "ul", "ol", "li", "table", "caption", 
 KEEP_ATTRS = {"img": {"src", "alt"}, "ol": {"start", "type"}, "td": {"colspan", "rowspan"},
               "th": {"colspan", "rowspan"}}
 BLOCK_TAGS = ("h2", "h3", "h4", "p", "li", "tr", "caption", "figure")
+TEXT_BLOCKS = ("p", "li", "td", "th", "caption")    # an image inside one of these is a figure inside a block
 CAPTION_TEXT = re.compile(r"^(Diagram|Figure|Fig\.)\s+[\w.-]+")
 
 
@@ -66,6 +73,9 @@ def make_figures(art, caption_before_image):
     for p in list(art.find_all("p")):
         if not is_image_paragraph(p):
             continue
+        if p.find_parent("figure") is not None:      # already in a figure of the handbook's own
+            p.unwrap()
+            continue
         fig = new_tag("figure")
         prev = p.find_previous_sibling()
         nxt = p.find_next_sibling()
@@ -87,6 +97,14 @@ def make_figures(art, caption_before_image):
         p.replace_with(fig)
 
 
+def wrap_inline_images(art):
+    """An image left inside a text block (a table cell, or a paragraph with text) gets a <figure>
+    of its own, so it can be cited apart from the text around it."""
+    for img in list(art.find_all("img")):
+        if img.find_parent("figure") is None:
+            img.wrap(new_tag("figure"))
+
+
 def clean(art):
     """Keep only content tags and the attributes a reader of the text needs."""
     for el in list(art.find_all(True)):
@@ -99,21 +117,32 @@ def clean(art):
 
 # ------------------------------------------------------------------------------------- numbering
 def text_containers(block):
-    """The containers whose sentences belong to `block`, in order."""
-    if block.name in ("p", "li", "caption"):
+    """The containers whose sentences belong to `block`, in order. A figure has none: its caption
+    is a block of its own."""
+    if block.name in ("p", "li", "caption", "figcaption"):
         return [block]
-    if block.name == "figure":
-        return block.find_all("figcaption")
     if block.name == "tr":
         return block.find_all(["td", "th"], recursive=False)
     return []
 
 
-def blocks_of(art):
+def numbered_blocks(art):
+    """The blocks numbered in sequence: everything but captions and figures inside text blocks,
+    which take ids from their block."""
     for el in art.find_all(BLOCK_TAGS):
         if el.name == "p" and el.find_parent(["li", "td", "th", "figure", "caption"]):
             continue
+        if el.name == "figure" and el.find_parent(TEXT_BLOCKS):
+            continue
         yield el
+
+
+def blocks_of(art):
+    """Every block of a numbered page, in document order: the numbered blocks, captions and
+    figures inside text blocks."""
+    for el in art.find_all(BLOCK_TAGS + ("figcaption",)):
+        if el.get("id"):
+            yield el
 
 
 def own_sentences(block):
@@ -132,14 +161,24 @@ def sentence_count(block):
 
 
 def number_page(art, page_no):
-    blocks = list(blocks_of(art))
-    for n, block in enumerate(blocks, 1):
+    """Give every block its id and wrap its sentences; return (numbered blocks, sentences)."""
+    numbered = list(numbered_blocks(art))
+    for n, block in enumerate(numbered, 1):
         bid = f"{page_no}.{n}"
         block["id"] = bid
+        if block.name == "figure":
+            cap = block.find("figcaption")
+            if cap is not None:
+                cap["id"] = f"{bid}-c"
+        else:
+            for k, fig in enumerate(block.find_all("figure"), 1):
+                fig["id"] = f"{bid}-f{k}"
+    blocks = list(blocks_of(art))
+    for block in blocks:
         counter = 0
         for c in text_containers(block):
-            counter = sentences.wrap(c, bid, counter, always=c.name in ("td", "th"))
-    return len(blocks), sum(sentence_count(b) for b in blocks)
+            counter = sentences.wrap(c, block["id"], counter, always=c.name in ("td", "th"))
+    return len(numbered), sum(sentence_count(b) for b in blocks)
 
 
 # -------------------------------------------------------------------------------------- building
@@ -161,6 +200,7 @@ def build_page(hb, slug, page_no, manual):
     title, art = handbooks.read_page(hb, slug)
     before = norm(art.get_text(" "))
     make_figures(art, slug in (manual.get("caption_before_image") or []))
+    wrap_inline_images(art)
     clean(art)
     art.name = "article"
     art.attrs = {"data-handbook": hb.id, "data-page": str(page_no), "data-file": slug}

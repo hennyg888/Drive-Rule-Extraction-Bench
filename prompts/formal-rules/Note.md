@@ -10,7 +10,7 @@ This prompt writes rules in the grammar of the legacy Ontario passing rules
 |---|---|
 | `system.md` | Background only: what the rules are for, and how the corpus HTML is laid out (table of contents, `<article data-page>`, block ids, figures). |
 | `task.md` | All the instructions, placed after the handbook pages: rule grammar, numbering, force and modal, citations, vocabulary, vague words, three examples, and the topic line at the end. |
-| `schema.json` | The answer: `{scope, vocabulary, rules}`. Evidence entries keep the `{block, quote}` shape, so `grounding.py` checks them unchanged. |
+| `schema.json` | The answer: `{scope, vocabulary, rules}`. Evidence is a list of block ids (text, figure or caption blocks), which `grounding.py` checks. |
 
 ## Changing the topic
 
@@ -35,8 +35,8 @@ python run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --page
 - The prompt loads, and the example answer in `task.md` (two vocabulary entries, three rules) fits
   `schema.json` once its `...` placeholders are removed.
 - Each example rule's `statement` is exactly its fields filled into the grammar.
-- All seven example quotes match the MTO corpus exactly (blocks 10.14, 10.22, 8.37, 21.6, 21.7,
-  6.32).
+- Every block id cited in the example exists in the MTO corpus (10.14, 10.22, 8.37, 21.6, 21.7,
+  6.32), and 21.7 is a figure.
 - **Not yet tried on a model.**
 
 ## Things to know
@@ -44,9 +44,11 @@ python run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --page
 - **Changing the topic line changes the prompt hash.** Runs on different topics are recorded as
   different prompt versions. If topics will be switched often, the topic could become a
   `--topic` flag instead.
-- **The six vague-word labels are new.** DISTANCE, TIME, SPEED, QUANTITY, JUDGEMENT and HEDGE were
-  added for this prompt. The legacy rules only noted vague wording in free text.
-- **The schema uses `$ref`.** One evidence definition is shared through `$ref`/`$defs`. Claude
-  handles this. If a local vLLM model rejects it, write the definition out in both places instead.
+- **Vague words** are listed per rule as `{term, explanation}`: the words as they appear in the
+  statement, and why they are vague.
+- **Citations are block ids only.** There are no quotes, and no image descriptions in the evidence.
+  A rule resting on a diagram alone says what the diagram shows in its `note`.
+- **Figures and captions have their own ids:** `21.7` is the figure and `21.7-c` its caption. An
+  image inside a table row or paragraph is `6.35-f1`. See `drbench/corpus.py`.
 - **This file is copied into each run folder** along with the prompt, but it isn't part of
   the prompt hash and doesn't change what the model sees.

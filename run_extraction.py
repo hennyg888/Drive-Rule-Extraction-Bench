@@ -7,7 +7,7 @@
     python run_extraction.py --reground runs/<run>                                        # resolve citations again
 
 --model     a preset in models.yaml (python models.py lists them)
---prompt    a folder in prompts/ (default extract-rules): system.md, task.md, schema.json
+--prompt    a folder in prompts/ (default formal-rules): system.md, task.md, schema.json
 --set       changes a model setting for this run: --set effort=low,
             --set extra_body.chat_template_kwargs.enable_thinking=false
 Each run writes runs/<time>-<preset>-<handbook>/: meta.json (settings, tokens, time, cost, citation
