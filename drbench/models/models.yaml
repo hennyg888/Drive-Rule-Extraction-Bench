@@ -1,4 +1,4 @@
-# Model presets. A run names one of these: python run_extraction.py --model anthropic/claude-opus-5-5 ...
+# Model presets. A run names one of these: python tools/run_extraction.py --model anthropic/claude-opus-5-5 ...
 #
 # Each preset:
 #   provider     anthropic (the Anthropic API, drbench/models/claude.py) or
@@ -11,7 +11,7 @@
 #   timeout      seconds before a request is given up (default 3600)
 #   params       sent with every request; see the provider's file for what each API takes.
 #                Override one for a run with --set, e.g. --set effort=low
-#   serve        local presets: the command that starts the server (python models.py serve <preset> runs it)
+#   serve        local presets: the command that starts the server (python tools/models.py serve <preset> runs it)
 #
 # Keys go in .env at the repository root (ignored by git):
 #   ANTHROPIC_API_KEY=...      OPENROUTER_API_KEY=...
@@ -20,11 +20,11 @@
 # Thinking is always on for these models; effort sets how much.
 # fallbacks: default -> a request declined by Claude's safety classifiers is rerun server-side on a
 # fallback model Anthropic picks (Opus and Sonnet only). Remove the line to get the refusal instead.
-anthropic/claude-opus-5-5:
+anthropic/claude-opus-5-5:            # 128K output: room for the thinking and the rules of a whole handbook
   provider: anthropic
   model: claude-opus-5-5
   price: [4.00, 20.00]
-  params: {max_tokens: 64000, effort: high, fallbacks: default}
+  params: {max_tokens: 128000, effort: medium, fallbacks: default}
 
 anthropic/claude-sonnet-5-5:
   provider: anthropic
@@ -75,7 +75,7 @@ openrouter/claude-haiku-5.5:           # the same Claude model through OpenRoute
   params: {max_tokens: 32000}
 
 # ------------------------------------------------------------------ local vLLM (this server's GPUs)
-# Start the server first (python models.py serve <preset>, or the command below), one model at a time.
+# Start the server first (python tools/models.py serve <preset>, or the command below), one model at a time.
 # Weights are in ~/hf; vLLM is in ~/qwen-trial/.venv. Thinking is on by default for Qwen; the
 # -nothink presets turn it off. Qwen's recommended sampling: thinking 0.6/0.95, no thinking 0.7/0.8.
 local/qwen3.8-27b:

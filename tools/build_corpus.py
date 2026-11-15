@@ -1,9 +1,9 @@
 """Build corpus/ from handbooks/: the handbook pages as clean HTML with an id on every block and sentence.
 
-    python build_corpus.py              # build all three handbooks into corpus/<id>/
-    python build_corpus.py --check      # rebuild in memory and list the pages whose files would change
-    python build_corpus.py --only mto   # one handbook
-    python build_corpus.py --stats      # the handbook statistics table in the README
+    python tools/build_corpus.py              # build all three handbooks into corpus/<id>/
+    python tools/build_corpus.py --check      # rebuild in memory and list the pages whose files would change
+    python tools/build_corpus.py --only mto   # one handbook
+    python tools/build_corpus.py --stats      # the handbook statistics table in the README
 
 The corpus files are committed, so their ids stay fixed: run --check before committing a change
 that could move them. Manual decisions go in corpus/<id>/manual.yaml; the build writes the places
@@ -12,7 +12,10 @@ Code: drbench/corpus.py, drbench/sentences.py, drbench/screening.py, drbench/sta
 """
 import argparse
 import json
+import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # the repository root, for drbench
 
 from drbench import corpus, handbooks, stats
 

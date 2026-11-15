@@ -1,8 +1,8 @@
 """Write out the exact request a model gets, to read it before running anything.
 
-    python build_messages.py mto --pages 10                          # with the default prompt (formal-rules)
-    python build_messages.py mto --pages 10 --prompt smoke-test
-    python build_messages.py ca --per-page --no-images               # one message per page, text only
+    python tools/build_messages.py mto --pages 10                          # with the default prompt (formal-rules)
+    python tools/build_messages.py mto --pages 10 --prompt smoke-test
+    python tools/build_messages.py ca --per-page --no-images               # one message per page, text only
 
 The request is:
     system   prompts/<prompt>/system.md
@@ -15,6 +15,9 @@ Code: drbench/messages.py (the user message), drbench/prompts.py (the prompt fol
 import argparse
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # the repository root, for drbench
 
 from drbench import corpus, handbooks, messages, prompts
 from drbench.handbooks import ROOT

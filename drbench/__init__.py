@@ -8,7 +8,7 @@ Modules, in the order data flows through them:
     screening   places in the corpus a person should check
     prompts     the prompt folders in prompts/ (system.md, task.md, schema.json)
     messages    corpus -> the user message (HTML text with the images in place, then the task)
-    models      calling a model: one interface, presets in models.yaml (Anthropic API, local vLLM, OpenRouter)
+    models      calling a model: one interface, presets in models/models.yaml (Anthropic API, local vLLM, OpenRouter)
     run         one extraction run: build the message, call the model, save everything
     grounding   a model's citation (block id + quoted sentence) -> sentence ids in the corpus
 

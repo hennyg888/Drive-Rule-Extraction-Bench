@@ -64,7 +64,7 @@ models (Opus 5.5, Sonnet 5.5, Haiku 5.5).
   default.
 - **Effort is the main control** (`output_config.effort`: low, medium, high, xhigh, max).
   **Opus 5.5 and Haiku 5.5 default to `medium`**, so set it explicitly. The presets in
-  `models.yaml` do (`effort: high` for Opus and Sonnet).
+  `drbench/models/models.yaml` do (`effort: medium` for Opus, `high` for Sonnet).
 - **Fewer rules:** prompts written for older models are often too prescriptive for current ones.
   Long lists of "always / never / IMPORTANT" rules can lower quality. Explain the goal and the
   reason (as the "Why" section does) rather than adding more rules.

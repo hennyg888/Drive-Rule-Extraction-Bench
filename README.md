@@ -4,6 +4,9 @@ This is a dataset and framework for benchmarking how well visual language models
 
 Project for VLM CS886 F26 by Michael Lee and Henry Guo.
 
+TODO:
+simplify README
+
 ## Handbooks
 
 The three handbooks are kept as local HTML pages with their images. These HTML copies are the source of truth: everything given to a model is built from them, in their page order with the images where they appear. Each handbook folder also keeps the published PDF, for people to read; the PDFs are not used as model input for now.
@@ -135,7 +138,7 @@ Text tokens counted with the Qwen/Qwen3.8-27B-FP8 tokenizer. Image tokens estima
 
 </details>
 
-Regenerate with `python build_corpus.py --stats` (`transformers` and the Qwen tokenizer give exact text tokens, otherwise 1.3 tokens per word).
+Regenerate with `python tools/build_corpus.py --stats` (`transformers` and the Qwen tokenizer give exact text tokens, otherwise 1.3 tokens per word).
 
 What the numbers show:
 
@@ -144,7 +147,7 @@ What the numbers show:
 
 ## Corpus: the handbooks with ids
 
-`corpus/{mto,ca,tx}/` holds the same pages as `handbooks/`, reduced to the handbook content and given an id on every block and sentence, so that an extracted rule can point to the exact sentence it came from. Build it with `python build_corpus.py`; `--check` rebuilds in memory and lists the pages whose files would change.
+`corpus/{mto,ca,tx}/` holds the same pages as `handbooks/`, reduced to the handbook content and given an id on every block and sentence, so that an extracted rule can point to the exact sentence it came from. Build it with `python tools/build_corpus.py`; `--check` rebuilds in memory and lists the pages whose files would change.
 
 | | Ontario | California | Texas |
 |---|---:|---:|---:|
@@ -179,34 +182,32 @@ The ca handbook has no captions. mto has 207 and tx has 26. All 522 images have 
 
 ## Programs
 
-The programs you run are at the top level of the repository. Each one starts with its usage. Run them from the repository root (Python 3.10 or later), after installing the dependencies once with `pip install -e '.[dev]'`.
+The programs you run are in `tools/`. Each one starts with its usage. They can be run from any folder (Python 3.10 or later); install the dependencies once with `pip install -e '.[dev]'`.
 
 | Program | What it does |
 |---|---|
-| [`build_corpus.py`](build_corpus.py) | Builds `corpus/` from `handbooks/`. `--check` lists the pages whose files would change, `--stats` prints the handbook analysis above |
-| [`build_messages.py`](build_messages.py) | Writes the exact request a model gets to `build/messages/`, to read it before running anything |
-| [`run_extraction.py`](run_extraction.py) | Runs a model on handbook pages with a prompt and saves everything in `runs/`. `--dry-run` only counts tokens |
-| [`models.py`](models.py) | Lists the model presets and whether each one's key is set; `ping` checks one; `serve` starts a local vLLM server |
-| [`models.yaml`](models.yaml) | The model presets |
+| [`tools/build_corpus.py`](tools/build_corpus.py) | Builds `corpus/` from `handbooks/`. `--check` lists the pages whose files would change, `--stats` prints the handbook analysis above |
+| [`tools/build_messages.py`](tools/build_messages.py) | Writes the exact request a model gets to `build/messages/`, to read it before running anything |
+| [`tools/run_extraction.py`](tools/run_extraction.py) | Runs a model on handbook pages with a prompt and saves everything in `runs/`. `--dry-run` only counts tokens |
+| [`tools/extract.sh`](tools/extract.sh) | The draft gold-set extraction in one command: `tools/extract.sh [handbook]` (default `mto`) runs `run_extraction.py` with Claude Opus 5.5, the `formal-rules` prompt and the whole handbook, and saves the answer to `extraction_outputs/<model>/<handbook>_<YYYY_MM_DD>.json`. Options after the handbook are passed on, e.g. `tools/extract.sh mto --dry-run` |
+| [`tools/models.py`](tools/models.py) | Lists the model presets and whether each one's key is set; `ping` checks one; `serve` starts a local vLLM server |
+| [`drbench/models/models.yaml`](drbench/models/models.yaml) | The model presets |
 | [`prompts/`](prompts/) | The prompts, one folder each |
 
 ```bash
-python run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10
-python run_extraction.py --model local/qwen3.8-27b --handbook mto --per-page
-python run_extraction.py --model anthropic/claude-haiku-5-5 --handbook ca --dry-run
+python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10
+python tools/run_extraction.py --model anthropic/claude-haiku-5-5 --handbook ca --dry-run
 ```
 
 Options of `run_extraction.py`:
 
 | Option | What it does |
 |---|---|
-| `--pages 9-11`, or a page file name | Which pages to send (default: the whole handbook) |
-| `--per-page` | One call per page |
+| `--pages 9-11`, or a page file name | Which pages to send (default: the whole handbook). They go in one request, with their images and the table of contents |
 | `--prompt <folder>` | Which prompt to use (default `formal-rules`) |
-| `--no-images`, `--no-toc` | Leave out the images, or the table of contents |
 | `--set key=value` | Change a model setting for this run, e.g. `--set effort=low` or `--set extra_body.chat_template_kwargs.enable_thinking=false` |
 | `--label` | Add a name to the run folder |
-| `--reground runs/<run>` | Resolve a finished run's citations again |
+| `--save-to <dir>` | Also copy the answer to `<dir>/<model>/<handbook>_<YYYY_MM_DD>.json` (`_2`, `_3` … if that file exists) |
 
 ## Prompts
 
@@ -293,7 +294,7 @@ The archived prompts cited with a block id and a quote copied from that block, a
 
 ## Models
 
-Every model is a preset in [`models.yaml`](models.yaml), and a run names one. Changing the model means changing the preset name. There are two kinds of API:
+Every model is a preset in [`drbench/models/models.yaml`](drbench/models/models.yaml), and a run names one. Changing the model means changing the preset name. There are two kinds of API:
 
 - `anthropic`: Claude through the Anthropic API, using the official SDK. Requests are streamed. Thinking is on, and `effort` sets how much. Opus and Sonnet use `fallbacks: default`: if Claude's safety classifiers decline a request, the API reruns it on a fallback model.
 - `openai`: any OpenAI-compatible server. This covers the local vLLM server (`local/...` presets) and OpenRouter (`openrouter/...`), which serves Qwen, Gemini, GPT and Claude under one key.
@@ -302,7 +303,7 @@ Adding a model on one of these APIs takes only a new preset: copy one and change
 
 **Keys** go in `.env` at the repository root, one `NAME=value` per line. Git ignores the file. `ANTHROPIC_API_KEY` is needed for Claude, `OPENROUTER_API_KEY` for OpenRouter; local presets need no key. Instead of an Anthropic key, `ant auth login` also works.
 
-**Local models.** Start the server with `python models.py serve local/qwen3.8-27b`, wait until it reports `Application startup complete`, then run with that preset. The `serve` line of each local preset shows how many GPUs it uses. Stop the server (Ctrl-C) when you are done, because the GPUs are shared. With thinking on, Qwen3.8-27B used 23K to 29K thinking tokens on one page, so its presets allow 64K output tokens.
+**Local models.** Start the server with `python tools/models.py serve local/qwen3.8-27b`, wait until it reports `Application startup complete`, then run with that preset. The `serve` line of each local preset shows how many GPUs it uses. Stop the server (Ctrl-C) when you are done, because the GPUs are shared. With thinking on, Qwen3.8-27B used 23K to 29K thinking tokens on one page, so its presets allow 64K output tokens.
 
 ## Runs
 
@@ -341,15 +342,14 @@ The programs at the top level are short. The work is done in the package `drbenc
 
 | Path | What it holds |
 |---|---|
-| `build_corpus.py`, `build_messages.py`, `run_extraction.py`, `models.py` | The programs (see [Programs](#programs)) |
-| `models.yaml` | The model presets |
+| `tools/` | The programs: `build_corpus.py`, `build_messages.py`, `run_extraction.py`, `extract.sh`, `models.py` (see [Programs](#programs)) |
 | `prompts/` | The prompts, one folder each |
 | `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
 | `corpus/` | The handbooks with an id on every block and sentence, with each handbook's manual decisions and screening list |
 | `drbench/` | The code behind the programs (see [Core code](#core-code)) |
 | `scrapers/` | The scripts that made `handbooks/` |
 | `tests/` | Tests for `pytest` |
-| `docs/` | The prompts the team gave Claude (`prompt.md`) |
+| `legacy/` | Earlier material: the first Ontario passing rules (`ontario_passing_rules.yaml`, `Ontario passing rules.md`) that `formal-rules` follows, and the prompts the team gave Claude (`prompt.md`) |
 | `runs/`, `build/` | Run results and built messages; not committed |
 
 The earlier rule pipeline (rule language, census, rules database, extraction prompts and runs, the Qwen trial, review pages, and the first PDF-based Ontario rules) is kept on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).

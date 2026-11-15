@@ -1,9 +1,9 @@
-"""The model presets in models.yaml: list them, check one, or start a local one.
+"""The model presets in drbench/models/models.yaml: list them, check one, or start a local one.
 
-    python models.py                                   # list the presets and whether each one's key is set
-    python models.py ping anthropic/claude-haiku-5-5   # a one-line call, to check a key or a server
-    python models.py serve local/qwen3.8-27b           # start that preset's local vLLM server
-    python models.py serve local/qwen3.8-27b --print   # only print the command
+    python tools/models.py                                   # list the presets and whether each one's key is set
+    python tools/models.py ping anthropic/claude-haiku-5-5   # a one-line call, to check a key or a server
+    python tools/models.py serve local/qwen3.8-27b           # start that preset's local vLLM server
+    python tools/models.py serve local/qwen3.8-27b --print   # only print the command
 
 Keys go in .env (ANTHROPIC_API_KEY=..., OPENROUTER_API_KEY=...). The GPUs are shared: stop a local
 server (Ctrl-C) when you are done.
@@ -11,6 +11,9 @@ Code: drbench/models/ (claude.py for the Anthropic API, openai_compat.py for vLL
 """
 import argparse
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # the repository root, for drbench
 
 from drbench.models import ModelError, credential_status, get_model, presets
 

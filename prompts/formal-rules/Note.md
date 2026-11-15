@@ -27,7 +27,7 @@ the prompt asks for a topic code rather than hard-coding PASS.
 ## Running it
 
 ```
-python run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10 --prompt formal-rules
+python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10 --prompt formal-rules
 ```
 
 ## Checked so far

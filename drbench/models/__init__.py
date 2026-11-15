@@ -1,4 +1,4 @@
-"""Calling a model. Every model is a preset in models.yaml (repository root); code asks for it by name:
+"""Calling a model. Every model is a preset in models.yaml (in this folder); code asks for it by name:
 
     from drbench.models import get_model
     model = get_model("anthropic/claude-opus-5-5", effort="low")    # keyword arguments override params
@@ -18,7 +18,7 @@ import yaml
 from ..handbooks import ROOT
 from .base import ChatModel, ModelError, ModelResponse
 
-PRESETS_FILE = os.path.join(ROOT, "models.yaml")
+PRESETS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models.yaml")
 ENV_FILE = os.path.join(ROOT, ".env")
 SETTINGS = ("base_url", "api_key_env", "timeout", "max_retries")
 
@@ -62,7 +62,7 @@ def get_model(name, **overrides):
     load_env()
     table = presets()
     if name not in table:
-        raise ModelError(f"no preset {name!r} in models.yaml; `python models.py` lists them")
+        raise ModelError(f"no preset {name!r} in drbench/models/models.yaml; `python tools/models.py` lists them")
     p = table[name]
     params = yaml.safe_load(yaml.safe_dump(p.get("params") or {}))   # a deep copy
     for k, v in overrides.items():
