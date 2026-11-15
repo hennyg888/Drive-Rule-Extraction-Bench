@@ -4,3 +4,7 @@ build/
 .env
 runs/
 *.egg-info/
+.env.*
+*api_key*
+*apikey*
+*.key

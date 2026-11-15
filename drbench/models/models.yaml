@@ -67,6 +67,14 @@ openrouter/gpt-5.6-luna:
   model: openai/gpt-5.6-luna
   params: {max_tokens: 32000}
 
+openrouter/claude-opus-5.5:            # Claude Opus 5.5 through OpenRouter, set like anthropic/claude-opus-5-5
+  provider: openai
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  model: anthropic/claude-opus-5.5
+  price: [4.00, 20.00]
+  params: {max_tokens: 128000, extra_body: {reasoning: {effort: medium}}}
+
 openrouter/claude-haiku-5.5:           # the same Claude model through OpenRouter, for comparison
   provider: openai
   base_url: https://openrouter.ai/api/v1
