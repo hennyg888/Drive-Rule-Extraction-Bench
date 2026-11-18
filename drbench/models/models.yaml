@@ -7,7 +7,9 @@
 #   base_url     openai provider: where the server is
 #   api_key_env  openai provider: the environment variable holding the key (leave out for a local server)
 #   vision       false if the model takes no images (default true)
-#   price        [input, output] in USD per million tokens, for the cost estimate in each run's meta.json
+#   price        [input, output] or [input, output, cache read] in USD per million tokens, for the cost
+#                estimate in each run's meta.json (cache writes are priced at 1.25x input; cache reads
+#                at the third value, else 0.1x input)
 #   timeout      seconds before a request is given up (default 3600)
 #   params       sent with every request; see the provider's file for what each API takes.
 #                Override one for a run with --set, e.g. --set effort=low
@@ -23,13 +25,13 @@
 anthropic/claude-opus-5-5:            # 128K output: room for the thinking and the rules of a whole handbook
   provider: anthropic
   model: claude-opus-5-5
-  price: [4.00, 20.00]
+  price: [4.00, 20.00, 0.20]
   params: {max_tokens: 128000, effort: medium, fallbacks: default}
 
 anthropic/claude-sonnet-5-5:
   provider: anthropic
   model: claude-sonnet-5-5
-  price: [2.00, 10.00]
+  price: [2.00, 10.00, 0.20]
   params: {max_tokens: 64000, effort: high, fallbacks: default}
 
 anthropic/claude-haiku-5-5:            # prompts over 100K tokens cost $0.50 / $2.50 per million

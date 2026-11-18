@@ -19,7 +19,9 @@ class ModelResponse:
     stop_reason: str = ""           # why it stopped: end_turn / stop, max_tokens / length, refusal, ...
     model: str = ""                 # the model that answered, as the API reports it
     usage: dict = field(default_factory=dict)   # token counts as the API reports them
-    input_tokens: int = 0
+    input_tokens: int = 0           # all input, including the cached parts below
+    cache_write_tokens: int = 0     # of input_tokens: written to the prompt cache (billed at 1.25x)
+    cache_read_tokens: int = 0      # of input_tokens: read from the prompt cache
     output_tokens: int = 0          # including reasoning
     reasoning_tokens: int = 0
     seconds: float = 0.0
@@ -36,7 +38,7 @@ class ChatModel:
         self.model = model
         self.params = dict(params or {})
         self.vision = vision
-        self.price = price          # (input, output) in USD per million tokens, for estimates
+        self.price = price          # (input, output[, cache read]) in USD per million tokens, for estimates
         self.settings = settings    # base_url, api_key_env, timeout, max_retries, ...
 
     def complete(self, content, system=None, json_schema=None):
@@ -44,10 +46,16 @@ class ChatModel:
         raise NotImplementedError
 
     def cost(self, response):
-        """Estimated cost in USD of a response, from the preset's price; None without a price."""
+        """Estimated cost in USD of a response, from the preset's price; None without a price.
+        Cache writes cost 1.25x the input price; cache reads cost the price's third value, or 0.1x
+        the input price when it has none."""
         if not self.price:
             return None
-        return round((response.input_tokens * self.price[0] + response.output_tokens * self.price[1]) / 1e6, 4)
+        inp, out = self.price[0], self.price[1]
+        read = self.price[2] if len(self.price) > 2 else inp * 0.1
+        w, r = response.cache_write_tokens, response.cache_read_tokens
+        uncached = response.input_tokens - w - r
+        return round((uncached * inp + w * inp * 1.25 + r * read + response.output_tokens * out) / 1e6, 4)
 
     def _check(self, content):
         if isinstance(content, str):

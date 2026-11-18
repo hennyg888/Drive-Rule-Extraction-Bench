@@ -22,12 +22,16 @@ FALLBACK_BETA = "server-side-fallback-2026-07-01"
 
 
 def to_blocks(parts):
+    """A part with "cache": True becomes a cache breakpoint: everything up to and including it
+    (system prompt first) is cached and read back by later requests with the same prefix."""
     out = []
     for p in parts:
         if p["type"] == "text":
             out.append({"type": "text", "text": p["text"]})
         else:
             out.append({"type": "image", "source": {"type": "base64", "media_type": p["media_type"], "data": p["data"]}})
+        if p.get("cache"):
+            out[-1]["cache_control"] = {"type": "ephemeral"}
     return out
 
 
@@ -108,6 +112,8 @@ class ClaudeModel(ChatModel):
             usage=usage,
             input_tokens=(usage.get("input_tokens") or 0) + (usage.get("cache_creation_input_tokens") or 0)
             + (usage.get("cache_read_input_tokens") or 0),
+            cache_write_tokens=usage.get("cache_creation_input_tokens") or 0,
+            cache_read_tokens=usage.get("cache_read_input_tokens") or 0,
             output_tokens=usage.get("output_tokens") or 0,
             reasoning_tokens=(usage.get("output_tokens_details") or {}).get("thinking_tokens") or 0,
             seconds=round(time.time() - start, 1),

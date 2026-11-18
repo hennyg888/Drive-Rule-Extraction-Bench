@@ -1,0 +1,22 @@
+Format check (stage 1): gold_set\mto\overtaking\a0_freeform.json
+72 rules, 20 vocab terms, corpus: mto
+
+FAIL  8. Lowercase vocab terms (3)
+    - PASS-PROC-01: 'passing lane' is the vocab term PASSING LANE in lowercase: "WHEN about to move into the passing lane, the PASSER MUST use the left…"
+      Triage: fixed by rewording. Here "passing lane" means only the lane the PASSER moves into to pass, not the
+      special passing lane that PASSING LANE defines, so the phrase was removed rather than capitalized.
+      "when" and statement: "about to move into the passing lane" -> "about to change lanes to pass".
+      Statement now: "WHEN about to change lanes to pass, the PASSER MUST use the left-turn signal, check the
+      mirrors and BLIND SPOT and check that the way is clear ahead and behind."
+    - PASS-MARK-02: 'broken line' is the vocab term BROKEN LINE in lowercase: "…D the way is clear AND enough broken line remains ahead to complete the…"
+      Triage: fixed. It means the vocab term, so it is capitalized in "when", the statement and the vague term:
+      "enough broken line remains ahead" -> "enough BROKEN LINE remains ahead".
+    - PASS-BEING-02: 'driver' is the vocab term DRIVER in lowercase: "WHEN another driver is trying to pass, the DRIVER…"
+      Triage: fixed. Capitalized in "when" and the statement: "another driver is trying to pass" -> "another DRIVER
+      is trying to pass".
+ok    1. Schema; 2. Statement matches fields; 3. Ids and numbering; 4. Force and modal; 5. Evidence; 6. Vague terms; 7. Vocabulary
+
+3 error(s)
+
+Fixes applied to a1_format.json (started as an exact copy of a0_freeform.json).
+Re-run on a1_format.json: all 8 checks pass, no format errors (72 rules, 20 vocab terms).

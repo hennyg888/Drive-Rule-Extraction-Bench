@@ -6,7 +6,6 @@ Project for VLM CS886 F26 by Michael Lee and Henry Guo.
 
 TODO:
 simplify README
-check and fix draft goldset, BLIND SPOT(S) undefined vocab term
 
 ## Handbooks
 
