@@ -19,7 +19,7 @@ HANDBOOK="${1:-mto}"
 shift || true
 
 python tools/run_extraction.py \
-    --model openrouter/claude-opus-5.5 \
+    --model anthropic/claude-opus-5-5 \
     --handbook "$HANDBOOK" \
     --prompt formal-rules \
     --label draft-gold \

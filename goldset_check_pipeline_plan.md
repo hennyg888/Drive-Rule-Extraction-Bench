@@ -132,6 +132,23 @@ The names sort in order of progression: `00_` first, then `a0` â€¦ `a3`, `b0` â€
 - **The step id is used everywhere** a check or fix is named: report headers, triage records (`a0 M2`, `b2 S2-038`), run folders (`runs\<time>-check-atomic-<scope>-b2\`).
 - **Finding ids** repeat across rounds (each atomic report starts at S2-001), so the triage records cite them with the step (`b2 S2-028`).
 
+### The raw draft (`00_raw_rules.json`)
+
+Comes before round a. `tools/extract.sh` sends one handbook's whole corpus (`corpus\<handbook>\`, every page and image) with the `formal-rules` prompt to Opus 5.5 (medium effort, 128K output tokens) in a single request. It can be run from any folder:
+
+```
+tools/extract.sh ca --dry-run     # build the message and show its size and input cost, call nothing
+tools/extract.sh ca               # the real call; handbook: mto, ca or tx (default mto)
+```
+
+Anything after the handbook is passed on to `tools/run_extraction.py` (e.g. `--set extra_body.reasoning.effort=high`). The topic comes from the extraction prompt (`prompts\formal-rules\task.md`), so the overtaking topic is the default.
+
+- The answer is saved as `extraction_outputs\claude-opus-5-5\<handbook>_<YYYY_MM_DD>.json`, and the whole call goes to `runs\<time>-anthropic_claude-opus-5-5-<handbook>-draft-gold\`. (The script's header comment names `extraction_outputs\anthropic\claude-opus-5.5\`, where the MTO draft is, but the current `--model anthropic/claude-opus-5-5` saves it to the folder above.)
+- Copy the answer unchanged into the scope folder as `gold_set\<handbook>\<scope>\00_raw_rules.json`. It is never edited; round a0 works on a copy.
+- Optionally, run the format check on it at once (`check_format.py ... --handbook <handbook>`) for an early view of its mechanical errors. The format check that counts is still a1.
+
+Measured: CA, 23 pages and 74 images, 80.6k input and 17.5k output tokens, 133 s, $0.67 (42 rules, 14 vocabulary terms).
+
 ### Stage 0: freeform (Claude Code)
 
 Opens every round. A Claude Code session reads the whole rule set against the handbook, with in its context:
@@ -339,6 +356,8 @@ Built:
 - `error_check_pipelines\goldset\error_taxonomy.md` (categories and conventions; not given to judges).
 
 Overtaking (`gold_set\mto\overtaking\`): done. Rounds a and b ran all four checks; the final freeform check `c0_freeform_report.md` found no major errors, and its 4 minor findings were ignored. The gold set is frozen as `gold_set.json` (75 rules, 20 vocabulary terms), a copy of `b3_aggregate.json`. The triage records are `allow_list.md` and `error_set.md`. Superseded test files are in `archive\`.
+
+California overtaking (`gold_set\ca\overtaking\`): the raw draft `00_raw_rules.json` was extracted on 2026-11-18 (42 rules, 14 vocabulary terms). A first format check found 5 errors: one cited id that isn't in the corpus, `HOV` with no vocabulary entry, and "driver" in lowercase three times. Round a is next.
 
 Next:
 
