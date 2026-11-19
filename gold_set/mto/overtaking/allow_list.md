@@ -175,7 +175,8 @@ The companion list of confirmed error types is `error_set.md`.
 - **General lane-use advice** not directly about overtaking.
   - a0 M9.5 (12.24, "Drive in the right-hand lane when possible").
 - **Stopping rules phrased with "pass".**
-  - a0 M9.6, S3-005 (stopped school bus, 8.32: "illegally passed a school bus").
+  - a0 M9.6, S3-005 (stopped school bus, 8.32: "illegally passed a school bus"). **Reversed
+    2026-11-19:** the stopped school bus rule is now in scope and was added as PASS-USER-25.
 - **Moving alongside a vehicle without overtaking it.**
   - S3-004 (6.57/6.58, not moving up beside a large vehicle that is turning wide). Raised again in
     b3 S3-002.

@@ -139,6 +139,20 @@
    "evidence": [
     "4.24"
    ]
+  },
+  {
+   "term": "SCHOOL BUS",
+   "definition": "A chrome-yellow bus that displays the words 'School Bus'.",
+   "evidence": [
+    "8.25"
+   ]
+  },
+  {
+   "term": "MEDIAN STRIP",
+   "definition": "A physical barrier, such as a raised, lowered, earth or paved strip, built to separate traffic travelling in different directions, which vehicles cannot cross.",
+   "evidence": [
+    "8.29"
+   ]
   }
  ],
  "rules": [
@@ -797,7 +811,7 @@
    "statement": "WHEN there is a SOLID LINE at the left of the DRIVER's lane, the DRIVER SHOULD NOT pass.",
    "penalty": "",
    "vague_terms": [],
-   "note": "The handbook says the line means it is unsafe to pass and 'A' should not pass; Diagram 3-2 shows vehicles beside solid yellow lines.",
+   "note": "The handbook says the line means it is unsafe to pass and 'A' should not pass; Diagram 3-2 shows vehicles beside solid yellow lines. The handbook gives no exception for moving over a lane to pass roadside workers or vehicles (PASS-USER-22) or a stopped EMERGENCY VEHICLE or tow truck (PASS-USER-20); both apply only when moving over is safe, and this line marks it as unsafe.",
    "evidence": [
     "21.4",
     "21.5"
@@ -962,7 +976,7 @@
    "statement": "WHEN on a multi-lane road OR on a one-way road OR overtaking a STREETCAR OR overtaking a left-turning vehicle, the DRIVER MAY pass on the right.",
    "penalty": "",
    "vague_terms": [],
-   "note": "The handbook adds that most passing is done on the left and that passing on the right can be more dangerous. PASS-SIDE-02 and PASS-LOC-07 restrict this permission. Changing lanes to pass in or near an intersection is banned by PASS-LOC-08; going around a vehicle that blocks the lane in an intersection is PASS-SIDE-04. On a multi-lane FREEWAY, 12.24 tells the DRIVER to use the far left lane to pass traffic moving slower than the speed limit (PASS-GEN-05).",
+   "note": "The handbook adds that most passing is done on the left (PASS-SIDE-05, which advises the left even where this rule permits the right) and that passing on the right can be more dangerous. PASS-SIDE-02 and PASS-LOC-07 restrict this permission. Changing lanes to pass in or near an intersection is banned by PASS-LOC-08; going around a vehicle that blocks the lane in an intersection is PASS-SIDE-04. On a multi-lane FREEWAY, 12.24 tells the DRIVER to use the far left lane to pass traffic moving slower than the speed limit (PASS-GEN-05).",
    "evidence": [
     "10.40"
    ]
@@ -1044,6 +1058,27 @@
    "evidence": [
     "10.11",
     "29.104"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-05",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "05",
+   "title": "Pass on the left",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "passing another vehicle",
+   "action": "pass on the left of the vehicle being passed",
+   "unless": "passing a STREETCAR AND not driving on a one-way road",
+   "statement": "WHEN passing another vehicle, the DRIVER SHOULD pass on the left of the vehicle being passed, UNLESS passing a STREETCAR AND not driving on a one-way road.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "10.40 says that most passing is done on the left. The same block permits passing on the right on multi-lane or one-way roads and when overtaking a STREETCAR or a left-turning vehicle (PASS-SIDE-01), and 10.41 adds that passing on the right can be more dangerous. The exception is the streetcar requirement of 10.44 (PASS-SIDE-03). The right shoulder may be used to pass a vehicle turning left (PASS-LOC-07); never the left shoulder (PASS-LOC-06). Where a stopped EMERGENCY VEHICLE, tow truck or roadside hazard is on the left, moving over a lane away from it (PASS-USER-20, PASS-USER-22) may mean passing it on the right; those rules apply. This rule says which side to pass on, not whether to pass.",
+   "evidence": [
+    "10.40",
+    "10.44"
    ]
   },
   {
@@ -1552,7 +1587,7 @@
      "explanation": "does not say what makes moving over unsafe"
     }
    ],
-   "note": "Diagram 2-57 shows a car moving over a lane away from a stopped ambulance. Penalty: the three demerit points are listed for failing to move, where possible, into another lane when passing a stopped emergency vehicle (22.130); the higher fines and jail term for further offences come from 13.117 (under 'Failing to respond to an emergency vehicle'), which 13.118 extends to a stopped tow truck.",
+   "note": "Diagram 2-57 shows a car moving over a lane away from a stopped ambulance. Penalty: the three demerit points are listed for failing to move, where possible, into another lane when passing a stopped emergency vehicle (22.130); the higher fines and jail term for further offences come from 13.117 (under 'Failing to respond to an emergency vehicle'), which 13.118 extends to a stopped tow truck. Moving over across a SOLID LINE at the left of the DRIVER's lane is unsafe in the handbook's terms (21.4, PASS-MARK-01), so the exception applies there, as for PASS-USER-22.",
    "evidence": [
     "13.107",
     "13.109",
@@ -1588,7 +1623,7 @@
      "explanation": "no amount or target speed given"
     }
    ],
-   "note": "",
+   "note": "A stopped SCHOOL BUS with its overhead red lights flashing or its stop arm activated is covered by PASS-USER-25 (stop), not by this rule.",
    "evidence": [
     "13.41"
    ]
@@ -1613,7 +1648,7 @@
      "explanation": "no criteria given"
     }
    ],
-   "note": "",
+   "note": "The handbook says a SOLID LINE at the left of the lane means it is unsafe to pass (21.4, PASS-MARK-01) and gives no exception for passing a hazard. So where moving over a lane means crossing a SOLID LINE at the left of the DRIVER's lane, the condition 'it is safe to do so' is not met: the DRIVER stays in the lane, slowing down and passing with caution (PASS-USER-21). A stopped SCHOOL BUS with its overhead red lights flashing or its stop arm activated is covered by PASS-USER-25 (stop), not by this rule.",
    "evidence": [
     "13.41"
    ]
@@ -1675,6 +1710,51 @@
    "evidence": [
     "6.32",
     "10.27"
+   ]
+  },
+  {
+   "id": "PASS-USER-25",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "25",
+   "title": "Stopped school bus: stop and do not proceed",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a stopped SCHOOL BUS that has its overhead red lights flashing or its stop arm activated AND the DRIVER is coming from behind the bus or the road has no MEDIAN STRIP",
+   "action": "stop, at least 20 metres away when coming from behind the bus or at a safe distance for children to get off the bus and cross the road when approaching from the front, and not proceed until the bus moves or the red lights have stopped flashing and the stop arm has folded away",
+   "unless": "",
+   "statement": "WHEN approaching a stopped SCHOOL BUS that has its overhead red lights flashing or its stop arm activated AND the DRIVER is coming from behind the bus or the road has no MEDIAN STRIP, the DRIVER MUST stop, at least 20 metres away when coming from behind the bus or at a safe distance for children to get off the bus and cross the road when approaching from the front, and not proceed until the bus moves or the red lights have stopped flashing and the stop arm has folded away.",
+   "penalty": "A heavy fine and six demerit points for a first offence.",
+   "vague_terms": [
+    {
+     "term": "a safe distance",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "On a road with a MEDIAN STRIP only vehicles coming from behind the bus must stop (8.29, 6.87). The rule applies on any road, however many lanes and whatever the speed limit (8.30), so the permissions to pass in PASS-SIDE-01 and PASS-MARK-02 do not apply. The release point is worded three ways: 'until the bus moves or the lights have stopped flashing' (8.26), 'until the arm folds away and all lights stop flashing' (8.31), and 'until the bus moves, the overhead red lights have stopped flashing and its stop arm is no longer activated' (6.89); the rule reads them together. 8.32 calls failing to stop having 'illegally passed a school bus'. Penalty: 8.32 and the six-point list (22.105); the registered owner may be given the fines but not the demerit points (8.32). Diagrams 2-27 and 2-28 show the stopping distance behind the bus on a two-way road and on a road with a median strip; Diagram 2-19 shows cars stopped 20 metres from a stopped bus. Signs 18.32 and 18.33 state the same duty; 18.33 is used on multi-lane highways with no centre median and binds drivers from both directions. A stopped SCHOOL BUS is covered by this rule, not by PASS-USER-21 or PASS-USER-22. School buses stopped at railway crossings do not use the red lights (8.33) and are not covered.",
+   "evidence": [
+    "8.26",
+    "8.27",
+    "8.28",
+    "8.29",
+    "8.30",
+    "8.31",
+    "8.32",
+    "6.85",
+    "6.86",
+    "6.87",
+    "6.88",
+    "6.89",
+    "6.90",
+    "6.91",
+    "18.32",
+    "18.32-c",
+    "18.33",
+    "18.33-c",
+    "22.96",
+    "22.100",
+    "22.105"
    ]
   },
   {
