@@ -95,7 +95,9 @@ def page_of(block_id):
 
 
 def cited_block(handbook, block_id):
-    """The cited element alone, wrapped with where it sits: <block id page section>. A figure brings
+    """The cited element alone, wrapped with where it sits: <block id page section>. The section is
+    the path of headings above it, from its h2 down to the nearest heading (e.g. "Passing > How to
+    Pass on a Two-Lane Road"), since a lower heading can carry the block's condition. A figure brings
     its image and caption; a caption id (-c) brings the caption only; a text block brings any image
     inside it. None if the block is not found."""
     meta, kids = page_blocks(handbook, page_of(block_id))
@@ -103,9 +105,18 @@ def cited_block(handbook, block_id):
     if i is None:
         return None
     el = kids[i] if kids[i].get("id") == block_id else kids[i].find(id=block_id)
-    head = next((kids[j] for j in range(i, -1, -1) if kids[j].name in ("h1", "h2")), None)
+    heads, level = [], 7
+    for j in range(i, -1, -1):
+        name = kids[j].name
+        if name in ("h1", "h2", "h3", "h4", "h5", "h6") and int(name[1]) < level:
+            if name == "h1":
+                break
+            heads.insert(0, kids[j].get_text(" ", strip=True))
+            level = int(name[1])
+            if level == 2:
+                break
     page_title = kids[0].get_text(" ", strip=True) if kids[0].name == "h1" else meta.get("title", "")
-    section = head.get_text(" ", strip=True) if head is not None and head.name == "h2" else ""
+    section = " > ".join(heads)
     attrs = f'id="{block_id}" page="{meta["page"]}: {page_title}"' + (f' section="{section}"' if section else "")
     return f"<block {attrs}>\n{el}\n</block>"
 

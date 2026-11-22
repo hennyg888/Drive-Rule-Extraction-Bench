@@ -1,0 +1,40 @@
+Format check (stage 1): gold_set/tx/overtaking/a0_freeform.json
+57 rules, 16 vocab terms, corpus: tx
+
+FAIL  8. Lowercase vocab terms (10)
+    - PASS-GEN-04: 'driver' is the vocab term DRIVER in lowercase: "…id surprising or to alert the driver ahead, the PASSER MUST tap th…"
+      Triage: fixed. It means the vocab term (the person driving the vehicle ahead), so it is capitalized in
+      "when" and the statement: "to alert the driver ahead" -> "to alert the DRIVER ahead".
+    - PASS-PROC-03: 'drivers' is the vocab term DRIVER in lowercase: "…the left turn signal to alert drivers behind."
+      Triage: fixed. Capitalized in "action" and the statement: "to alert drivers behind" -> "to alert DRIVERS
+      behind".
+    - PASS-MARK-03: 'highway' is the vocab term HIGHWAY in lowercase: "WHEN on a multi-lane highway with a DOUBLE YELLOW LINE, th…"
+      Triage: fixed. Capitalized in "when" and the statement: "multi-lane highway" -> "multi-lane HIGHWAY".
+      6.196 and 6.197 are under Pavement Markings, not the freeway section, so the term is HIGHWAY, not FREEWAY.
+    - PASS-USER-02: 'driver' is the vocab term DRIVER in lowercase: "…has resumed motion OR the bus driver signals the DRIVER to proceed…"
+      Triage: fixed by rewording. "unless" and the statement: "the bus driver signals the DRIVER to proceed" ->
+      "the DRIVER of the school bus signals the DRIVER to proceed".
+    - PASS-USER-05: 'driver' is the vocab term DRIVER in lowercase: "…the PASSER MUST let the truck driver know of the PASS by flashing …"
+      Triage: fixed by rewording, with the next finding. "action" and the statement: "let the truck driver know
+      of the PASS" -> "let the DRIVER of the TRUCK know of the PASS".
+    - PASS-USER-05: 'truck' is the vocab term TRUCK in lowercase: "…RUCK, the PASSER MUST let the truck driver know of the PASS by fl…"
+      Triage: fixed with the previous finding.
+    - PASS-USER-12: 'driver' is the vocab term DRIVER in lowercase: "WHEN passing a driver who seems to be distracted, t…"
+      Triage: fixed by rewording. It is the DRIVER's vehicle that is passed (a0 G7). "when" and the statement:
+      "passing a driver who seems to be distracted" -> "passing the vehicle of a DRIVER who seems to be
+      distracted".
+    - PASS-BEING-04: 'driver' is the vocab term DRIVER in lowercase: "…asy as possible for the other driver to pass."
+      Triage: fixed by rewording. The other driver is the one making the pass, as PASSER defines. "action" and
+      the statement: "for the other driver to pass" -> "for the PASSER to pass".
+    - PASS-BEING-08: 'driver' is the vocab term DRIVER in lowercase: "WHEN another driver is trying to pass or enter th…"
+      Triage: fixed, with the next finding. Capitalized in "when", "action" and the statement: "another driver
+      is trying to pass" -> "another DRIVER is trying to pass"; "keep that driver from passing" -> "keep that
+      DRIVER from passing".
+    - PASS-BEING-08: 'driver' is the vocab term DRIVER in lowercase: "…kes, or speed up to keep that driver from passing or entering."
+      Triage: fixed with the previous finding.
+ok    1. Schema; 2. Statement matches fields; 3. Ids and numbering; 4. Force and modal; 5. Evidence; 6. Vague terms; 7. Vocabulary
+
+10 error(s)
+
+Fixes applied to a1_format.json (started as an exact copy of a0_freeform.json).
+Re-run on a1_format.json: all 8 checks pass, no format errors (57 rules, 16 vocab terms).

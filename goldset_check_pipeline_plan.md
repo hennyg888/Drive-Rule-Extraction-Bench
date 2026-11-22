@@ -357,11 +357,19 @@ Built:
 
 Overtaking (`gold_set\mto\overtaking\`): done. Rounds a and b ran all four checks; the final freeform check `c0_freeform_report.md` found no major errors, and its 4 minor findings were ignored. The gold set is frozen as `gold_set.json` (75 rules, 20 vocabulary terms), a copy of `b3_aggregate.json`. The triage records are `allow_list.md` and `error_set.md`. Superseded test files are in `archive\`.
 
+Texas overtaking (`gold_set\tx\overtaking\`): done, by the same procedure. The raw draft `00_raw_rules.json` (52 rules, 14 vocabulary terms) is `extraction_outputs\anthropic\claude-opus-5.5\tx_2026_11_21.json`, extracted on 2026-11-21. Rounds a and b ran all four checks; the final freeform check `c0_freeform_report.md` found no major errors and 3 minor ones. One of them (GEN-06's note wording) was fixed in `c0_freeform.json`, and the other two were ignored. The gold set is frozen as `gold_set.json` (58 rules, 16 vocabulary terms), a copy of `c0_freeform.json`. The triage records are `allow_list.md` and `error_set.md`. Rounds b2 and b3 ran with the fix to `check_atomic.py` that labels each cited block with its full heading path, so their run folders record git `484bdd3+changes`; the fix is committed with this gold set.
+
+Record (§A4), 2026-11-22:
+
+- `gold_set.json` sha256 `25f63ad69d05d2c28e2fb4835bac8a0142eedc455d5a80327daaf0029a4400a2`.
+- Prompts, as hashed in the runs' `meta.json`: extraction `prompts\formal-rules` `3e330fa2b145f5efff320e6fc6c4782e5c1ff3ef61a5d92a109c98d466db9a00`; atomic judge `591c44868d535d78f26669cfaf535ac9ffb47c1484ef6967ac971ec24e4e76b0`; aggregate judge `e96627bec01a86798e2efb91a1fb8bd24f1b358e0c3c73ef5941e623bc746522`. Extractor and judges: `anthropic/claude-opus-5-5`, effort medium.
+- Findings per step: a0 6 major and 17 minor (plus a list of vague terms not listed); a1 10 format errors; a2 87 (20 major, 67 minor); a3 10 (2 major, 8 minor); b0 5 (all minor); b1 none; b2 64 (7 major, 57 minor); b3 8 (2 major, 6 minor); c0 3 (all minor).
+
 California overtaking (`gold_set\ca\overtaking\`): the raw draft `00_raw_rules.json` was extracted on 2026-11-18 (42 rules, 14 vocabulary terms). A first format check found 5 errors: one cited id that isn't in the corpus, `HOV` with no vocabulary entry, and "driver" in lowercase three times. Round a is next.
 
 Next:
 
-1. Record `gold_set.json`'s hash, the prompt versions and the date (§A4).
+1. Record the MTO overtaking `gold_set.json`'s hash, the prompt versions and the date (§A4), as done for Texas above.
 2. Measure the new atomic check's cost on a few rules (`--rules`), and confirm cache reads in `meta.json`.
 3. Optional: add `scope.yaml` and have the scripts read it (topic, allowlist) in place of the hard-coded `pass` default; have `check_format.py` name its output by step as the judge scripts do (today it writes only with `-o`); backfill `corrections.jsonl` and `id_map.json` from the reports.
 4. All rules: extract, compare against the overtaking gold set (reuse matched rules), then Part A on the rest (freeform → format → atomic → aggregate, repeated until §A4 holds), seeding its `allow_list.md` and `error_set.md` with the general overtaking rulings; consistency check → `gold_set\mto\all\gold_set.json`.
