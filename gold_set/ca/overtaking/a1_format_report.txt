@@ -1,0 +1,6 @@
+Format check (stage 1): gold_set\ca\overtaking\a0_freeform.json
+44 rules, 14 vocab terms, corpus: ca
+
+ok    1. Schema; 2. Statement matches fields; 3. Ids and numbering; 4. Force and modal; 5. Evidence; 6. Vague terms; 7. Vocabulary; 8. Lowercase vocab terms
+
+No format errors.
