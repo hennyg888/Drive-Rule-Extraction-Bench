@@ -1,0 +1,85 @@
+{
+ "run": "20261122-183817-local_qwen3.8-27b-mto-overtaking",
+ "started": "2026-11-22 18:38:17",
+ "git": "8da1b05+changes",
+ "preset": "local/qwen3.8-27b",
+ "provider": "openai",
+ "model": "qwen/qwen3.8-27b",
+ "params": {
+  "max_tokens": 100000,
+  "temperature": 0
+ },
+ "vision": true,
+ "price_per_million": null,
+ "base_url": "http://localhost:8000/v1",
+ "serve": "CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve Qwen/Qwen3.8-27B --revision 37561816e66b5b9153b1b64c10968c18c1e6f4a0 --served-model-name qwen/qwen3.8-27b --tensor-parallel-size 4 --reasoning-parser qwen3 --max-model-len 262144 --limit-mm-per-prompt '{\"image\": 300}' --gpu-memory-utilization 0.95 --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000",
+ "reset": [
+  "reset_encoder_cache"
+ ],
+ "handbook": "mto",
+ "pages": "all",
+ "images": true,
+ "toc": true,
+ "per_page": false,
+ "prompt": "formal-rules",
+ "prompt_sha256": "3e330fa2b145f5efff320e6fc6c4782e5c1ff3ef61a5d92a109c98d466db9a00",
+ "calls": [
+  {
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "model": "qwen/qwen3.8-27b",
+   "stop_reason": "stop",
+   "input_tokens": 132489,
+   "output_tokens": 45948,
+   "reasoning_tokens": 32928,
+   "seconds": 1057.4,
+   "cost_usd": null,
+   "request_id": "chatcmpl-8dfc34012236ec68",
+   "json": true,
+   "citations": {
+    "text": 77,
+    "figure": 10,
+    "caption": 5
+   }
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 132489,
+  "output_tokens": 45948,
+  "reasoning_tokens": 32928,
+  "seconds": 1057.4,
+  "cost_usd": null
+ }
+}

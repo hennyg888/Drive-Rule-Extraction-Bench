@@ -1,0 +1,2052 @@
+{
+ "scope": "Ontario MTO handbook rules about overtaking another vehicle and being overtaken, including passing stopped vehicles, selecting a passing lane, and responding to road users or conditions that restrict passing.",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "The person operating the vehicle to which the rule applies.",
+   "evidence": []
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person riding a bicycle.",
+   "evidence": []
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "A portion of the roadway that connects opposite sidewalks into a continuous path or is designated for pedestrian crossing by signs, lines or other markings.",
+   "evidence": [
+    "6.6",
+    "6.7",
+    "6.8",
+    "6.9",
+    "21.12"
+   ]
+  },
+  {
+   "term": "PEDESTRIAN CROSSOVER",
+   "definition": "A designated pedestrian crossing where there are no traffic lights, identified by specific signs and pavement markings and, where provided, overhead yellow lights.",
+   "evidence": [
+    "8.35",
+    "8.36",
+    "8.37",
+    "21.16",
+    "21.18"
+   ]
+  },
+  {
+   "term": "FREEWAY",
+   "definition": "A high-speed, multi-lane road with opposing traffic on separated roadways and ramps for entry and exit.",
+   "evidence": [
+    "12.1"
+   ]
+  },
+  {
+   "term": "TWO-WAY LEFT-TURN LANE",
+   "definition": "A marked centre lane used by left-turning vehicles from both directions to wait for a chance to turn.",
+   "evidence": [
+    "9.31",
+    "9.32",
+    "18.37",
+    "18.37-c"
+   ]
+  },
+  {
+   "term": "MEDIAN",
+   "definition": "A physical barrier, such as a raised, lowered, earth or paved strip, constructed to separate traffic travelling in opposite directions and not crossable by vehicles.",
+   "evidence": [
+    "8.29"
+   ]
+  },
+  {
+   "term": "SCHOOL BUS",
+   "definition": "A chrome-yellow bus displaying the words “School Bus.”",
+   "evidence": [
+    "8.25"
+   ]
+  },
+  {
+   "term": "BUS BAY",
+   "definition": "A designated stopping area for municipal buses, either in a roadside indentation or between designated parking areas.",
+   "evidence": [
+    "6.63",
+    "6.64",
+    "6.65",
+    "6.66",
+    "6.68",
+    "6.69",
+    "6.70",
+    "6.71",
+    "6.72"
+   ]
+  },
+  {
+   "term": "SLOW-MOVING VEHICLE SIGN",
+   "definition": "An orange triangle with a red border identifying a vehicle travelling at 40 km/h or less.",
+   "evidence": [
+    "18.126",
+    "18.126-c"
+   ]
+  },
+  {
+   "term": "LONG COMMERCIAL VEHICLE",
+   "definition": "A double-trailer commercial vehicle, up to 40 metres long, identified by a rear placard.",
+   "evidence": [
+    "18.129",
+    "18.129-c"
+   ]
+  },
+  {
+   "term": "WHITEOUT",
+   "definition": "A condition in which blowing snow completely blocks the driver's view of the road.",
+   "evidence": [
+    "14.61"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "PASS-LANE-01",
+   "topic": "PASS",
+   "group": "LANE",
+   "number": "01",
+   "title": "Keep right except to turn left or pass",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "driving along a road",
+   "action": "keep to the right of the road or in the right-hand lane on a multi-lane road",
+   "unless": "preparing to turn left OR passing another vehicle",
+   "statement": "WHEN driving along a road, the DRIVER MUST keep to the right of the road or in the right-hand lane on a multi-lane road, UNLESS preparing to turn left OR passing another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook emphasizes keeping right when travelling more slowly than other traffic; a posted slower-traffic-keep-right sign is regulatory.",
+   "evidence": [
+    "5.12",
+    "5.13",
+    "18.29",
+    "18.29-c"
+   ]
+  },
+  {
+   "id": "PASS-LANE-02",
+   "topic": "PASS",
+   "group": "LANE",
+   "number": "02",
+   "title": "Clear the truck passing lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "on a high-speed road with three or more lanes in the same direction AND large trucks are barred from the far left lane AND a truck wants to pass from behind in the lane immediately to the right of the far left lane occupied by the DRIVER",
+   "action": "move into the lane to the right as soon as possible",
+   "unless": "",
+   "statement": "WHEN on a high-speed road with three or more lanes in the same direction AND large trucks are barred from the far left lane AND a truck wants to pass from behind in the lane immediately to the right of the far left lane occupied by the DRIVER, the DRIVER MUST move into the lane to the right as soon as possible.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as soon as possible",
+     "explanation": "no time or gap is specified"
+    }
+   ],
+   "note": "The handbook says this truck restriction applies on many, not all, such roads.",
+   "evidence": [
+    "10.26",
+    "12.24"
+   ]
+  },
+  {
+   "id": "PASS-LANE-03",
+   "topic": "PASS",
+   "group": "LANE",
+   "number": "03",
+   "title": "Keep right in a signed climbing or passing section",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "travelling in a signed two-lane section with a climbing or passing lane",
+   "action": "keep in the right lane",
+   "unless": "passing another vehicle",
+   "statement": "WHEN travelling in a signed two-lane section with a climbing or passing lane, the DRIVER MUST keep in the right lane, UNLESS passing another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The sign makes explicit the keep-right rule described in the passing-lane text.",
+   "evidence": [
+    "10.34",
+    "10.35",
+    "18.40",
+    "18.40-c"
+   ]
+  },
+  {
+   "id": "PASS-LANE-04",
+   "topic": "PASS",
+   "group": "LANE",
+   "number": "04",
+   "title": "Merge as the climbing or passing lane ends",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "travelling in the right-hand lane of a climbing or passing section AND a sign warns that the right-hand lane is ending",
+   "action": "merge safely into the lane to the left",
+   "unless": "",
+   "statement": "WHEN travelling in the right-hand lane of a climbing or passing section AND a sign warns that the right-hand lane is ending, the DRIVER MUST merge safely into the lane to the left.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "safely",
+     "explanation": "no minimum merge gap is specified"
+    }
+   ],
+   "note": "The passing-lane text describes the merge; the right-lane-ends sign states it as a direction.",
+   "evidence": [
+    "10.34",
+    "10.36",
+    "18.70",
+    "18.70-c"
+   ]
+  },
+  {
+   "id": "PASS-LANE-05",
+   "topic": "PASS",
+   "group": "LANE",
+   "number": "05",
+   "title": "Use freeway left lanes for passing",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "driving on a multi-lane FREEWAY",
+   "action": "keep right when possible, use the left lanes for passing, and leave the far left lane after passing traffic moving slower than the speed limit",
+   "unless": "",
+   "statement": "WHEN driving on a multi-lane FREEWAY, the DRIVER MUST keep right when possible, use the left lanes for passing, and leave the far left lane after passing traffic moving slower than the speed limit.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "when possible",
+     "explanation": "no criteria for keeping right are specified"
+    }
+   ],
+   "note": "The general freeway passage says traffic should keep right; the more specific passage directs drivers not to stay in the far left lane.",
+   "evidence": [
+    "12.20",
+    "12.24"
+   ]
+  },
+  {
+   "id": "PASS-PROC-01",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "01",
+   "title": "Dim headlights for nearby traffic",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "using high beams AND an oncoming vehicle is within 150 metres OR using high beams AND following another vehicle less than 60 metres away",
+   "action": "switch to low beams on any road, including a divided road",
+   "unless": "passing the vehicle ahead AND no oncoming vehicle is within 150 metres",
+   "statement": "WHEN using high beams AND an oncoming vehicle is within 150 metres OR using high beams AND following another vehicle less than 60 metres away, the DRIVER MUST switch to low beams on any road, including a divided road, UNLESS passing the vehicle ahead AND no oncoming vehicle is within 150 metres.",
+   "penalty": "Two demerit points for failing to lower the headlight beam.",
+   "vague_terms": [],
+   "note": "The passing exception applies only to the vehicle being followed; it does not remove the duty to dim for oncoming traffic.",
+   "evidence": [
+    "4.65",
+    "14.8",
+    "22.134",
+    "22.135"
+   ]
+  },
+  {
+   "id": "PASS-PROC-02",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "02",
+   "title": "Use hand signals if vehicle signals fail",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "signalling a lane change to pass or return after passing AND the vehicle turn signals are not working",
+   "action": "signal with the left arm straight out for a move left or with the left arm extended and bent upward at a right angle for a move right",
+   "unless": "",
+   "statement": "WHEN signalling a lane change to pass or return after passing AND the vehicle turn signals are not working, the DRIVER MUST signal with the left arm straight out for a move left or with the left arm extended and bent upward at a right angle for a move right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The arm positions are shown in the diagram.",
+   "evidence": [
+    "5.7",
+    "5.9",
+    "5.10"
+   ]
+  },
+  {
+   "id": "PASS-PROC-03",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "03",
+   "title": "Pass only when it is safe",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "considering overtaking another vehicle",
+   "action": "begin the pass",
+   "unless": "there is enough space and time AND the DRIVER is sure the pass can be completed without danger to anyone",
+   "statement": "WHEN considering overtaking another vehicle, the DRIVER MUST NOT begin the pass, UNLESS there is enough space and time AND the DRIVER is sure the pass can be completed without danger to anyone.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "enough space and time",
+     "explanation": "no minimum space or time is given"
+    },
+    {
+     "term": "without danger to anyone",
+     "explanation": "the driver must judge the risks of the manoeuvre"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "10.1",
+    "10.15"
+   ]
+  },
+  {
+   "id": "PASS-PROC-04",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "04",
+   "title": "Check and signal before moving out",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to change lanes to overtake another vehicle",
+   "action": "check ahead and behind and use the mirrors to find a safe gap, shoulder-check toward the intended lane for bicycles and other vehicles, signal the intended direction well before moving, and recheck that the way is clear, including for fast traffic from behind or traffic moving in from two lanes over",
+   "unless": "",
+   "statement": "WHEN preparing to change lanes to overtake another vehicle, the DRIVER MUST check ahead and behind and use the mirrors to find a safe gap, shoulder-check toward the intended lane for bicycles and other vehicles, signal the intended direction well before moving, and recheck that the way is clear, including for fast traffic from behind or traffic moving in from two lanes over.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "safe gap",
+     "explanation": "no minimum gap is given"
+    },
+    {
+     "term": "well before moving",
+     "explanation": "no signal lead time is specified"
+    },
+    {
+     "term": "the way is clear",
+     "explanation": "no minimum clearance is specified"
+    },
+    {
+     "term": "fast traffic",
+     "explanation": "no approach-speed threshold is given"
+    }
+   ],
+   "note": "The ordinary passing procedure describes a pass to the left; on a permitted pass to the right the signal must indicate the actual direction.",
+   "evidence": [
+    "5.9",
+    "5.11",
+    "10.4",
+    "10.6",
+    "10.7",
+    "10.8",
+    "10.12",
+    "10.17",
+    "10.21",
+    "10.40",
+    "28.17",
+    "28.19",
+    "28.42"
+   ]
+  },
+  {
+   "id": "PASS-PROC-05",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "05",
+   "title": "Change lanes gradually and yield",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "changing lanes to pass another vehicle OR changing lanes to return after a pass",
+   "action": "yield to traffic in the destination lane and steer gradually into it while maintaining speed or gently increasing it without exceeding the speed limit, without cutting in front of another vehicle or bicycle",
+   "unless": "",
+   "statement": "WHEN changing lanes to pass another vehicle OR changing lanes to return after a pass, the DRIVER MUST yield to traffic in the destination lane and steer gradually into it while maintaining speed or gently increasing it without exceeding the speed limit, without cutting in front of another vehicle or bicycle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "gradually",
+     "explanation": "no steering rate is specified"
+    },
+    {
+     "term": "gently increasing it",
+     "explanation": "no acceleration rate is specified"
+    },
+    {
+     "term": "cutting in front",
+     "explanation": "no minimum clearance is specified"
+    }
+   ],
+   "note": "Signalling does not give the lane-changing driver the right-of-way; the speed limit still applies.",
+   "evidence": [
+    "5.15",
+    "7.25",
+    "10.9",
+    "10.10",
+    "10.19",
+    "12.23"
+   ]
+  },
+  {
+   "id": "PASS-PROC-06",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "06",
+   "title": "Cancel the signal after changing lanes",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "a lane change made to pass or return after passing is complete",
+   "action": "make sure the turn signal is off",
+   "unless": "",
+   "statement": "WHEN a lane change made to pass or return after passing is complete, the DRIVER MUST make sure the turn signal is off.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Diagram 2-45 shows this as the final step; the road-test text also states it explicitly.",
+   "evidence": [
+    "10.12",
+    "29.165"
+   ]
+  },
+  {
+   "id": "PASS-PROC-07",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "07",
+   "title": "Look for hazards hidden by the vehicle ahead",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to overtake a vehicle",
+   "action": "watch for bicycles and small vehicles hidden ahead of it, vehicles that may turn left in front of the DRIVER, and vehicles or pedestrians entering from another road or driveway",
+   "unless": "",
+   "statement": "WHEN preparing to overtake a vehicle, the DRIVER MUST watch for bicycles and small vehicles hidden ahead of it, vehicles that may turn left in front of the DRIVER, and vehicles or pedestrians entering from another road or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.18"
+   ]
+  },
+  {
+   "id": "PASS-PROC-08",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "08",
+   "title": "Signal and leave clearance before returning",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "returning to the original lane after overtaking a vehicle",
+   "action": "signal before changing lanes and wait until the entire front of the overtaken vehicle is visible in the inside rear-view mirror before moving back without cutting it off",
+   "unless": "",
+   "statement": "WHEN returning to the original lane after overtaking a vehicle, the DRIVER MUST signal before changing lanes and wait until the entire front of the overtaken vehicle is visible in the inside rear-view mirror before moving back without cutting it off.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "without cutting it off",
+     "explanation": "no minimum physical clearance is given"
+    }
+   ],
+   "note": "The night-passing instructions repeat the same visual check.",
+   "evidence": [
+    "10.19",
+    "10.21",
+    "10.32"
+   ]
+  },
+  {
+   "id": "PASS-PROC-09",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "09",
+   "title": "Abandon the pass if the other vehicle speeds up",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the vehicle being overtaken speeds up",
+   "action": "return to the original lane instead of racing the other vehicle",
+   "unless": "",
+   "statement": "WHEN the vehicle being overtaken speeds up, the DRIVER MUST return to the original lane instead of racing the other vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.20"
+   ]
+  },
+  {
+   "id": "PASS-PROC-10",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "10",
+   "title": "Watch for doors when passing parked vehicles",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "passing parked vehicles",
+   "action": "watch for doors opening suddenly or already open for loading or unloading",
+   "unless": "",
+   "statement": "WHEN passing parked vehicles, the DRIVER MUST watch for doors opening suddenly or already open for loading or unloading.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.23"
+   ]
+  },
+  {
+   "id": "PASS-PROC-11",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "11",
+   "title": "Use low beams on the approach to a night pass",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a vehicle from behind at night to pass it",
+   "action": "switch to low beams",
+   "unless": "",
+   "statement": "WHEN approaching a vehicle from behind at night to pass it, the DRIVER MUST switch to low beams.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The night-passing sequence gives no separate distance for the approach; the general rule requires low beams when following less than 60 metres behind.",
+   "evidence": [
+    "4.65",
+    "10.29",
+    "10.30"
+   ]
+  },
+  {
+   "id": "PASS-PROC-12",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "12",
+   "title": "Switch to high beams when alongside at night",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "moving alongside a vehicle being passed at night",
+   "action": "switch on high beams to see farther ahead",
+   "unless": "an oncoming vehicle is within 150 metres",
+   "statement": "WHEN moving alongside a vehicle being passed at night, the DRIVER MUST switch on high beams to see farther ahead, UNLESS an oncoming vehicle is within 150 metres.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The exception comes from the general requirement to dim high beams for nearby oncoming traffic.",
+   "evidence": [
+    "4.65",
+    "10.29",
+    "10.31",
+    "14.8"
+   ]
+  },
+  {
+   "id": "PASS-LOC-01",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "01",
+   "title": "Do not pass a vehicle stopped at a crosswalk",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a vehicle is stopped at a CROSSWALK",
+   "action": "pass the stopped vehicle",
+   "unless": "",
+   "statement": "WHEN a vehicle is stopped at a CROSSWALK, the DRIVER MUST NOT pass the stopped vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "This applies to crosswalks generally, including unmarked crosswalks, not only to pedestrian crossovers.",
+   "evidence": [
+    "6.6",
+    "6.7",
+    "6.8",
+    "6.9"
+   ]
+  },
+  {
+   "id": "PASS-LOC-02",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "02",
+   "title": "Do not pass within 30 metres of a pedestrian crossover",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 30 metres of a PEDESTRIAN CROSSOVER",
+   "action": "pass any vehicle",
+   "unless": "",
+   "statement": "WHEN within 30 metres of a PEDESTRIAN CROSSOVER, the DRIVER MUST NOT pass any vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Both passages state a prohibition; neither makes it conditional on pedestrians being present.",
+   "evidence": [
+    "8.37",
+    "10.22"
+   ]
+  },
+  {
+   "id": "PASS-LOC-03",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "03",
+   "title": "Do not pass using a shared left-turn lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a TWO-WAY LEFT-TURN LANE is present",
+   "action": "use that lane to pass another vehicle",
+   "unless": "",
+   "statement": "WHEN a TWO-WAY LEFT-TURN LANE is present, the DRIVER MUST NOT use that lane to pass another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The regulatory sign reserves the lane for two-way left turns only.",
+   "evidence": [
+    "9.31",
+    "9.32",
+    "9.36",
+    "18.37",
+    "18.37-c"
+   ]
+  },
+  {
+   "id": "PASS-LOC-04",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "04",
+   "title": "Do not change lanes to pass in or near an intersection",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in or near an intersection",
+   "action": "change lanes to pass another vehicle",
+   "unless": "",
+   "statement": "WHEN in or near an intersection, the DRIVER MUST NOT change lanes to pass another vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "near an intersection",
+     "explanation": "no distance is specified"
+    }
+   ],
+   "note": "The handbook gives a direct instruction not to change lanes in or near an intersection, alongside softer advice against unnecessary lane changes generally.",
+   "evidence": [
+    "10.11",
+    "29.104"
+   ]
+  },
+  {
+   "id": "PASS-LOC-05",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "05",
+   "title": "Do not pass left of centre near a bridge, viaduct or tunnel",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 30 metres of a bridge, viaduct or tunnel",
+   "action": "pass another vehicle by driving left of the centreline",
+   "unless": "",
+   "statement": "WHEN within 30 metres of a bridge, viaduct or tunnel, the DRIVER MUST NOT pass another vehicle by driving left of the centreline.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook says “30 metres from” and does not distinguish the approach side from the departure side.",
+   "evidence": [
+    "10.22"
+   ]
+  },
+  {
+   "id": "PASS-LOC-06",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "06",
+   "title": "Do not pass with an obstructed view at a hill or curve",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching a hillcrest with an obstructed view of oncoming traffic and not enough clear distance ahead to pass safely OR on a curve with an obstructed view of oncoming traffic and not enough clear distance ahead to pass safely",
+   "action": "attempt to pass another vehicle",
+   "unless": "",
+   "statement": "WHEN approaching a hillcrest with an obstructed view of oncoming traffic and not enough clear distance ahead to pass safely OR on a curve with an obstructed view of oncoming traffic and not enough clear distance ahead to pass safely, the DRIVER MUST NOT attempt to pass another vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "not enough clear distance ahead to pass safely",
+     "explanation": "no minimum sight distance is specified"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "10.22"
+   ]
+  },
+  {
+   "id": "PASS-LOC-07",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "07",
+   "title": "Do not change lanes to overtake in a construction zone",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "driving through a construction zone",
+   "action": "change lanes to overtake another vehicle",
+   "unless": "",
+   "statement": "WHEN driving through a construction zone, the DRIVER MUST NOT change lanes to overtake another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "This applies the handbook's no-lane-change instruction to overtaking; it is not an instruction to ignore a lane closure or traffic direction.",
+   "evidence": [
+    "13.40",
+    "18.101-c"
+   ]
+  },
+  {
+   "id": "PASS-LOC-08",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "08",
+   "title": "Do not pass other vehicles in fog",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "driving in fog",
+   "action": "pass another vehicle or speed up to overtake a slower vehicle",
+   "unless": "",
+   "statement": "WHEN driving in fog, the DRIVER MUST NOT pass another vehicle or speed up to overtake a slower vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The initial tip says to avoid passing; the later reminder directly says not to pass.",
+   "evidence": [
+    "14.13",
+    "14.19",
+    "14.31",
+    "14.35"
+   ]
+  },
+  {
+   "id": "PASS-LOC-09",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "09",
+   "title": "Avoid passing in blowing snow or a whiteout",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "DRIVER",
+   "when": "driving in blowing snow OR driving in a WHITEOUT",
+   "action": "pass other vehicles",
+   "unless": "",
+   "statement": "WHEN driving in blowing snow OR driving in a WHITEOUT, the DRIVER SHOULD NOT pass other vehicles.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "A separate instruction specifically says not to attempt to pass a slow-moving vehicle in these conditions.",
+   "evidence": [
+    "14.61",
+    "14.63",
+    "14.68",
+    "14.76"
+   ]
+  },
+  {
+   "id": "PASS-LOC-10",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "10",
+   "title": "Do not attempt to pass a slow vehicle in blowing snow",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "following a slow-moving vehicle in blowing snow OR following a slow-moving vehicle in a WHITEOUT",
+   "action": "attempt to pass that vehicle",
+   "unless": "",
+   "statement": "WHEN following a slow-moving vehicle in blowing snow OR following a slow-moving vehicle in a WHITEOUT, the DRIVER MUST NOT attempt to pass that vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "slow-moving vehicle",
+     "explanation": "the whiteout guidance gives no speed threshold"
+    }
+   ],
+   "note": "The wording is stronger for this situation than the general advice to avoid passing in blowing snow.",
+   "evidence": [
+    "14.63",
+    "14.68",
+    "14.76"
+   ]
+  },
+  {
+   "id": "PASS-LOC-11",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "11",
+   "title": "Obey a no-passing sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "travelling on a road subject to a no-passing sign",
+   "action": "pass another vehicle",
+   "unless": "",
+   "statement": "WHEN travelling on a road subject to a no-passing sign, the DRIVER MUST NOT pass another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The sign shows two vehicles inside a slashed red circle.",
+   "evidence": [
+    "18.9",
+    "18.28",
+    "18.28-c"
+   ]
+  },
+  {
+   "id": "PASS-LOC-12",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "12",
+   "title": "Do not pass between a crossover sign and the crossing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "between a sign reading “No passing here to crossing” and the PEDESTRIAN CROSSOVER it identifies",
+   "action": "pass another vehicle",
+   "unless": "",
+   "statement": "WHEN between a sign reading “No passing here to crossing” and the PEDESTRIAN CROSSOVER it identifies, the DRIVER MUST NOT pass another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The words establishing the signed no-passing segment appear in the figure; the caption identifies the pedestrian crossover but does not state that segment.",
+   "evidence": [
+    "18.36",
+    "18.36-c"
+   ]
+  },
+  {
+   "id": "PASS-LOC-13",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "13",
+   "title": "Do not pass a pilot or pace vehicle displaying a flashing restriction",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a pilot or pace vehicle displays the no-passing sign marked “When flashing” AND the sign's warning is flashing",
+   "action": "pass that vehicle",
+   "unless": "",
+   "statement": "WHEN a pilot or pace vehicle displays the no-passing sign marked “When flashing” AND the sign's warning is flashing, the DRIVER MUST NOT pass that vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The caption directs drivers not to pass; the flashing condition appears on the sign face.",
+   "evidence": [
+    "18.103",
+    "18.103-c"
+   ]
+  },
+  {
+   "id": "PASS-LOC-14",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "14",
+   "title": "Slow or stop behind a vehicle blocking the intersection lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER taking the Level Two road test",
+   "when": "going through an intersection AND the driver's lane is blocked by a vehicle turning left or edging into the intersection from the right",
+   "action": "slow down or stop rather than pull out to pass the vehicle",
+   "unless": "",
+   "statement": "WHEN going through an intersection AND the driver's lane is blocked by a vehicle turning left or edging into the intersection from the right, the DRIVER taking the Level Two road test MUST slow down or stop rather than pull out to pass the vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "This specific blocked-lane instruction appears in the road-test guide.",
+   "evidence": [
+    "29.102",
+    "29.104"
+   ]
+  },
+  {
+   "id": "PASS-MARK-01",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "01",
+   "title": "Do not pass beside a solid line on the left",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "DRIVER",
+   "when": "the pavement line immediately to the left of the driver's lane is solid",
+   "action": "pass across that line",
+   "unless": "",
+   "statement": "WHEN the pavement line immediately to the left of the driver's lane is solid, the DRIVER SHOULD NOT pass across that line.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook calls passing unsafe and says the illustrated driver should not pass; it does not state a general legal prohibition here.",
+   "evidence": [
+    "21.4",
+    "21.5"
+   ]
+  },
+  {
+   "id": "PASS-MARK-02",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "02",
+   "title": "Pass beside a broken line only with clear space",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "the pavement line immediately to the left of the driver's lane is broken AND the way is clear AND there is enough broken line ahead to complete the pass safely",
+   "action": "pass across that line",
+   "unless": "",
+   "statement": "WHEN the pavement line immediately to the left of the driver's lane is broken AND the way is clear AND there is enough broken line ahead to complete the pass safely, the DRIVER MAY pass across that line.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "the way is clear",
+     "explanation": "no minimum gap is given"
+    },
+    {
+     "term": "enough broken line ahead to complete the pass safely",
+     "explanation": "no minimum length is given"
+    }
+   ],
+   "note": "The diagram shows that with paired lines the marking nearest the driver's lane governs this guidance.",
+   "evidence": [
+    "21.6",
+    "21.7"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-01",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "01",
+   "title": "Use a paved right shoulder only to pass a left-turning vehicle",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "the right shoulder is paved AND the vehicle to be overtaken is turning left",
+   "action": "use the right shoulder to pass that vehicle",
+   "unless": "",
+   "statement": "WHEN the right shoulder is paved AND the vehicle to be overtaken is turning left, the DRIVER MAY ONLY use the right shoulder to pass that vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MAY ONLY restricts the use of the shoulder; it does not require passing the left-turning vehicle on the shoulder.",
+   "evidence": [
+    "10.38"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-02",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "02",
+   "title": "Do not pass on the left shoulder",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "considering passing another vehicle using the left shoulder",
+   "action": "pass on the left shoulder whether it is paved or unpaved",
+   "unless": "",
+   "statement": "WHEN considering passing another vehicle using the left shoulder, the DRIVER MUST NOT pass on the left shoulder whether it is paved or unpaved.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.38"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-03",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "03",
+   "title": "Situations permitting a pass on the right",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "on a multi-lane road OR on a one-way road OR overtaking a streetcar OR overtaking a left-turning vehicle",
+   "action": "pass on the right",
+   "unless": "",
+   "statement": "WHEN on a multi-lane road OR on a one-way road OR overtaking a streetcar OR overtaking a left-turning vehicle, the DRIVER MAY pass on the right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The permissions do not override the separate restriction on using a shoulder or the conditions for passing safely.",
+   "evidence": [
+    "10.38",
+    "10.40"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-04",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "04",
+   "title": "Wait rather than dart right around slower traffic",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "following a slower vehicle in the leftmost lane",
+   "action": "wait for the vehicle to move right instead of suddenly changing lanes to pass it on the right",
+   "unless": "",
+   "statement": "WHEN following a slower vehicle in the leftmost lane, the DRIVER MUST wait for the vehicle to move right instead of suddenly changing lanes to pass it on the right.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "suddenly",
+     "explanation": "no timing or steering-rate threshold is given"
+    }
+   ],
+   "note": "The slower vehicle may move right at the same time to let the driver pass.",
+   "evidence": [
+    "10.41"
+   ]
+  },
+  {
+   "id": "PASS-USER-01",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "01",
+   "title": "Use the lane to discourage an unsafe pass",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER of a bicycle or moped",
+   "when": "travelling slower than surrounding traffic AND the lane is too narrow to be shared safely",
+   "action": "use any part of the lane as necessary to discourage passing",
+   "unless": "",
+   "statement": "WHEN travelling slower than surrounding traffic AND the lane is too narrow to be shared safely, the DRIVER of a bicycle or moped MAY use any part of the lane as necessary to discourage passing.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "too narrow to be shared safely",
+     "explanation": "no lane width is specified"
+    },
+    {
+     "term": "as necessary",
+     "explanation": "the rider must judge the needed lane position"
+    }
+   ],
+   "note": "The handbook states this as a safety exception to the usual right-side riding position.",
+   "evidence": [
+    "6.24",
+    "6.27"
+   ]
+  },
+  {
+   "id": "PASS-USER-02",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "02",
+   "title": "Leave at least one metre when passing a cyclist",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing a CYCLIST",
+   "action": "maintain at least 1 metre between the motor vehicle and the CYCLIST",
+   "unless": "maintaining 1 metre is not practical",
+   "statement": "WHEN passing a CYCLIST, the DRIVER of a motor vehicle MUST maintain at least 1 metre between the motor vehicle and the CYCLIST, UNLESS maintaining 1 metre is not practical.",
+   "penalty": "Possible fine and two demerit points.",
+   "vague_terms": [
+    {
+     "term": "not practical",
+     "explanation": "the handbook gives no criteria for this exception"
+    }
+   ],
+   "note": "The exception does not authorize a pass that would endanger the cyclist.",
+   "evidence": [
+    "6.31",
+    "6.32",
+    "10.15"
+   ]
+  },
+  {
+   "id": "PASS-USER-03",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "03",
+   "title": "Do not sound the horn unnecessarily when overtaking a cyclist",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "overtaking a CYCLIST",
+   "action": "sound the horn",
+   "unless": "the DRIVER judges that using the horn is necessary",
+   "statement": "WHEN overtaking a CYCLIST, the DRIVER MUST NOT sound the horn, UNLESS the DRIVER judges that using the horn is necessary.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "necessary",
+     "explanation": "no specific conditions for horn use are given"
+    }
+   ],
+   "note": "A horn may startle the cyclist and cause loss of control.",
+   "evidence": [
+    "6.38",
+    "13.9"
+   ]
+  },
+  {
+   "id": "PASS-USER-04",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "04",
+   "title": "Use a short, light horn tap at a distance",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "overtaking a CYCLIST AND horn use is necessary",
+   "action": "tap the horn quickly and lightly while still some distance from the CYCLIST",
+   "unless": "",
+   "statement": "WHEN overtaking a CYCLIST AND horn use is necessary, the DRIVER MUST tap the horn quickly and lightly while still some distance from the CYCLIST.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "necessary",
+     "explanation": "no specific conditions for horn use are given"
+    },
+    {
+     "term": "quickly and lightly",
+     "explanation": "no duration or sound level is specified"
+    },
+    {
+     "term": "some distance",
+     "explanation": "no distance is specified"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "6.38"
+   ]
+  },
+  {
+   "id": "PASS-USER-05",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "05",
+   "title": "Leave extra room before returning in front of a large vehicle",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "overtaking a large commercial vehicle",
+   "action": "allow extra room before moving back in front of it and do not cut in closely",
+   "unless": "",
+   "statement": "WHEN overtaking a large commercial vehicle, the DRIVER MUST allow extra room before moving back in front of it and do not cut in closely.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "extra room",
+     "explanation": "no additional clearance is specified"
+    },
+    {
+     "term": "closely",
+     "explanation": "no minimum return gap is specified"
+    }
+   ],
+   "note": "The stopping distances in the diagram are illustrative, not required gaps for returning after a pass.",
+   "evidence": [
+    "6.52",
+    "6.55",
+    "6.56"
+   ]
+  },
+  {
+   "id": "PASS-USER-06",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "06",
+   "title": "Do not move up inside a large vehicle's right turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a large vehicle ahead swings left to make a right turn AND space opens to its right",
+   "action": "move up into the space on its right before the large vehicle has completely cleared the lane",
+   "unless": "",
+   "statement": "WHEN a large vehicle ahead swings left to make a right turn AND space opens to its right, the DRIVER MUST NOT move up into the space on its right before the large vehicle has completely cleared the lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The trailer can move back into the open space as it follows the tractor around the corner.",
+   "evidence": [
+    "6.57"
+   ]
+  },
+  {
+   "id": "PASS-USER-07",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "07",
+   "title": "Do not move up inside a large vehicle's left turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a large vehicle ahead is turning left AND an adjacent left-turn lane is available on its left",
+   "action": "move up into the lane to its left before the large vehicle has cleared the turn",
+   "unless": "",
+   "statement": "WHEN a large vehicle ahead is turning left AND an adjacent left-turn lane is available on its left, the DRIVER MUST NOT move up into the lane to its left before the large vehicle has cleared the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook gives an expressway off-ramp with two left-turn lanes as an example.",
+   "evidence": [
+    "6.58"
+   ]
+  },
+  {
+   "id": "PASS-USER-08",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "08",
+   "title": "Slow down behind signed slow-moving vehicles",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a vehicle displaying a SLOW-MOVING VEHICLE SIGN from behind",
+   "action": "watch for the slow-moving vehicle and reduce speed as necessary",
+   "unless": "",
+   "statement": "WHEN approaching a vehicle displaying a SLOW-MOVING VEHICLE SIGN from behind, the DRIVER MUST watch for the slow-moving vehicle and reduce speed as necessary.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as necessary",
+     "explanation": "no target approach speed is specified"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "18.126",
+    "18.126-c"
+   ]
+  },
+  {
+   "id": "PASS-USER-09",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "09",
+   "title": "Wait behind farm machinery until safe to pass",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching farm machinery displaying a SLOW-MOVING VEHICLE SIGN from behind",
+   "action": "slow down, use caution, stay well back, and wait until it is safe to pass",
+   "unless": "",
+   "statement": "WHEN approaching farm machinery displaying a SLOW-MOVING VEHICLE SIGN from behind, the DRIVER MUST slow down, use caution, stay well back, and wait until it is safe to pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "use caution",
+     "explanation": "no particular precaution is specified beyond the listed actions"
+    },
+    {
+     "term": "well back",
+     "explanation": "no following distance is specified"
+    },
+    {
+     "term": "safe to pass",
+     "explanation": "no minimum passing gap or sight distance is specified"
+    }
+   ],
+   "note": "Farm machinery may be oversized or turn directly into fields.",
+   "evidence": [
+    "6.74",
+    "6.75"
+   ]
+  },
+  {
+   "id": "PASS-USER-10",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "10",
+   "title": "Pass horse-drawn vehicles slowly and with maximum clearance",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a horse-drawn vehicle from behind",
+   "action": "slow down, use extra caution, maintain a safe following distance, and pass only when safe while giving as much clearance as possible",
+   "unless": "",
+   "statement": "WHEN approaching a horse-drawn vehicle from behind, the DRIVER MUST slow down, use extra caution, maintain a safe following distance, and pass only when safe while giving as much clearance as possible.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "extra caution",
+     "explanation": "no additional manoeuvre is prescribed"
+    },
+    {
+     "term": "safe following distance",
+     "explanation": "no horse-specific following gap is given"
+    },
+    {
+     "term": "only when safe",
+     "explanation": "no minimum passing gap is given"
+    },
+    {
+     "term": "as much clearance as possible",
+     "explanation": "no minimum lateral distance is specified"
+    }
+   ],
+   "note": "Passing too closely can startle the horse and cause it to change direction suddenly.",
+   "evidence": [
+    "6.77",
+    "6.78"
+   ]
+  },
+  {
+   "id": "PASS-USER-11",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "11",
+   "title": "Wait before passing a smaller vehicle after a left turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a left turn behind a motorcycle, bicycle, limited-speed motorcycle or moped",
+   "action": "stay behind it rather than pull alongside to turn at the same time, turn when the way is clear, and wait for it to move right before passing",
+   "unless": "",
+   "statement": "WHEN making a left turn behind a motorcycle, bicycle, limited-speed motorcycle or moped, the DRIVER MUST stay behind it rather than pull alongside to turn at the same time, turn when the way is clear, and wait for it to move right before passing.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "the way is clear",
+     "explanation": "no minimum gap is specified"
+    }
+   ],
+   "note": "Moving right does not invite a pass within the same lane.",
+   "evidence": [
+    "9.18",
+    "10.24"
+   ]
+  },
+  {
+   "id": "PASS-USER-12",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "12",
+   "title": "Do not pass a moving snowplow",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a snowplow is moving",
+   "action": "overtake the snowplow, including by passing between staggered moving snowplows",
+   "unless": "",
+   "statement": "WHEN a snowplow is moving, the DRIVER MUST NOT overtake the snowplow, including by passing between staggered moving snowplows.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook prohibits passing a moving snowplow under any conditions and separately warns about attempting to pass between plows clearing lanes together; flashing blue lights identify snow-removal vehicles.",
+   "evidence": [
+    "10.15",
+    "14.88",
+    "14.89"
+   ]
+  },
+  {
+   "id": "PASS-USER-13",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "13",
+   "title": "Change lanes to pass a motorcycle, bicycle or moped",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "overtaking a motorcycle, bicycle, limited-speed motorcycle or moped",
+   "action": "change lanes to pass instead of passing in the same lane, even if the other vehicle moves to one side of its lane",
+   "unless": "",
+   "statement": "WHEN overtaking a motorcycle, bicycle, limited-speed motorcycle or moped, the DRIVER MUST change lanes to pass instead of passing in the same lane, even if the other vehicle moves to one side of its lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The cyclist-specific passage advises changing lanes whenever possible; the passing chapter gives the stronger direction to change lanes and illustrates it for a bicycle.",
+   "evidence": [
+    "6.32",
+    "6.50",
+    "10.24",
+    "10.27"
+   ]
+  },
+  {
+   "id": "PASS-USER-14",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "14",
+   "title": "Slow down and pass roadside workers and hazards cautiously",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "passing roadside workers, roadside-assistance vehicles or disabled vehicles posing a hazard on or near the road",
+   "action": "slow down and pass with caution, moving over one lane if safe to increase clearance",
+   "unless": "",
+   "statement": "WHEN passing roadside workers, roadside-assistance vehicles or disabled vehicles posing a hazard on or near the road, the DRIVER MUST slow down and pass with caution, moving over one lane if safe to increase clearance.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "with caution",
+     "explanation": "no target speed or clearance is specified"
+    },
+    {
+     "term": "if safe",
+     "explanation": "no minimum lane-change gap is specified"
+    }
+   ],
+   "note": "Separate requirements apply to stopped emergency vehicles and tow trucks displaying the specified lights.",
+   "evidence": [
+    "13.39",
+    "13.41",
+    "13.107",
+    "13.109"
+   ]
+  },
+  {
+   "id": "PASS-USER-15",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "15",
+   "title": "Slow for a stopped emergency vehicle or tow truck displaying warning lights",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching from the same direction of travel a stopped emergency vehicle flashing red or red and blue lights OR approaching from the same direction of travel a stopped tow truck flashing amber lights",
+   "action": "assess surrounding traffic speed and roadway conditions, brake early and gradually, and proceed at reduced speed with caution",
+   "unless": "",
+   "statement": "WHEN approaching from the same direction of travel a stopped emergency vehicle flashing red or red and blue lights OR approaching from the same direction of travel a stopped tow truck flashing amber lights, the DRIVER MUST assess surrounding traffic speed and roadway conditions, brake early and gradually, and proceed at reduced speed with caution.",
+   "penalty": "Three demerit points listed for failing to slow and carefully pass a stopped emergency vehicle.",
+   "vague_terms": [
+    {
+     "term": "early and gradually",
+     "explanation": "no braking point or deceleration rate is specified"
+    },
+    {
+     "term": "reduced speed",
+     "explanation": "no target speed is specified"
+    },
+    {
+     "term": "with caution",
+     "explanation": "no fixed clearance or additional measure is specified"
+    }
+   ],
+   "note": "The text requires slowing and assessing conditions, and directs early, gradual braking; it does not require a stop merely because the roadside vehicle is stopped.",
+   "evidence": [
+    "13.106",
+    "13.107",
+    "13.118",
+    "22.112",
+    "22.129"
+   ]
+  },
+  {
+   "id": "PASS-USER-16",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "16",
+   "title": "Use the brakes to show deceleration when driving a manual",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER of a manual-transmission vehicle",
+   "when": "slowing to pass a stopped emergency vehicle flashing red or red and blue lights OR slowing to pass a stopped tow truck flashing amber lights",
+   "action": "use the brakes rather than downshifting to show the reduction in speed with the brake lights",
+   "unless": "",
+   "statement": "WHEN slowing to pass a stopped emergency vehicle flashing red or red and blue lights OR slowing to pass a stopped tow truck flashing amber lights, the DRIVER of a manual-transmission vehicle SHOULD use the brakes rather than downshifting to show the reduction in speed with the brake lights.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "13.107",
+    "13.108"
+   ]
+  },
+  {
+   "id": "PASS-USER-17",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "17",
+   "title": "Move over for a stopped emergency vehicle or tow truck",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a stopped emergency vehicle flashing red or red and blue lights on a roadway with at least two lanes in the driver's direction OR approaching a stopped tow truck flashing amber lights on a roadway with at least two lanes in the driver's direction",
+   "action": "check surrounding traffic and roadway conditions, signal, recheck mirrors and blind spots, move into a lane away from the stopped vehicle well in advance, and continue slowing gradually as safe",
+   "unless": "a lane change cannot be made safely",
+   "statement": "WHEN approaching a stopped emergency vehicle flashing red or red and blue lights on a roadway with at least two lanes in the driver's direction OR approaching a stopped tow truck flashing amber lights on a roadway with at least two lanes in the driver's direction, the DRIVER MUST check surrounding traffic and roadway conditions, signal, recheck mirrors and blind spots, move into a lane away from the stopped vehicle well in advance, and continue slowing gradually as safe, UNLESS a lane change cannot be made safely.",
+   "penalty": "Three demerit points listed for failing to move over where possible for a stopped emergency vehicle.",
+   "vague_terms": [
+    {
+     "term": "well in advance",
+     "explanation": "no distance or time is specified"
+    },
+    {
+     "term": "gradually",
+     "explanation": "no deceleration rate is specified"
+    },
+    {
+     "term": "as safe",
+     "explanation": "no braking threshold is specified"
+    },
+    {
+     "term": "cannot be made safely",
+     "explanation": "no minimum lane-change gap is specified"
+    }
+   ],
+   "note": "The exception is to moving over, not to the separate duty to reduce speed and proceed with caution.",
+   "evidence": [
+    "13.106",
+    "13.107",
+    "13.109",
+    "13.118",
+    "22.112",
+    "22.130"
+   ]
+  },
+  {
+   "id": "PASS-USER-18",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "18",
+   "title": "Allow for the length and speed of a double-trailer vehicle",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to pass a LONG COMMERCIAL VEHICLE on a highway",
+   "action": "recognize its rear placard and allow for its extended length and limited speed when judging the pass",
+   "unless": "",
+   "statement": "WHEN preparing to pass a LONG COMMERCIAL VEHICLE on a highway, the DRIVER MUST recognize its rear placard and allow for its extended length and limited speed when judging the pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "extended length and limited speed",
+     "explanation": "the actual length and speed of the marked vehicle vary"
+    }
+   ],
+   "note": "The placard shows a double trailer, which can be up to 40 metres long; that is not a prescribed passing gap.",
+   "evidence": [
+    "18.129",
+    "18.129-c"
+   ]
+  },
+  {
+   "id": "PASS-BUS-01",
+   "topic": "PASS",
+   "group": "BUS",
+   "number": "01",
+   "title": "Yield to a municipal bus signalling to re-enter traffic",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching in the lane adjacent to a BUS BAY AND the municipal bus in the bay flashes its left-turn signal to re-enter traffic",
+   "action": "yield and allow the bus to re-enter the traffic lane",
+   "unless": "",
+   "statement": "WHEN approaching in the lane adjacent to a BUS BAY AND the municipal bus in the bay flashes its left-turn signal to re-enter traffic, the DRIVER MUST yield and allow the bus to re-enter the traffic lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The rear-of-bus yield sign reminds drivers of the rule at a dedicated bus stop.",
+   "evidence": [
+    "6.63",
+    "6.67",
+    "6.68",
+    "18.41",
+    "18.41-c"
+   ]
+  },
+  {
+   "id": "PASS-BUS-02",
+   "topic": "PASS",
+   "group": "BUS",
+   "number": "02",
+   "title": "Prepare to stop for a school bus flashing amber",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a SCHOOL BUS from the rear or front AND its overhead amber lights are flashing",
+   "action": "slow down and prepare to stop",
+   "unless": "approaching from the front on the opposite side of a MEDIAN",
+   "statement": "WHEN approaching a SCHOOL BUS from the rear or front AND its overhead amber lights are flashing, the DRIVER MUST slow down and prepare to stop, UNLESS approaching from the front on the opposite side of a MEDIAN.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Amber signals that the bus is coming to a stop to pick up or drop off passengers; it is distinct from the red-light or stop-arm stopping requirement.",
+   "evidence": [
+    "6.80",
+    "6.81",
+    "6.82",
+    "6.83",
+    "6.84"
+   ]
+  },
+  {
+   "id": "PASS-BUS-03",
+   "topic": "PASS",
+   "group": "BUS",
+   "number": "03",
+   "title": "Stop at least 20 metres behind a school bus displaying red lights or its stop arm",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a stopped SCHOOL BUS from behind with its overhead red lights flashing OR approaching a stopped SCHOOL BUS from behind with its stop arm activated",
+   "action": "stop at least 20 metres behind the bus",
+   "unless": "",
+   "statement": "WHEN approaching a stopped SCHOOL BUS from behind with its overhead red lights flashing OR approaching a stopped SCHOOL BUS from behind with its stop arm activated, the DRIVER MUST stop at least 20 metres behind the bus.",
+   "penalty": "Heavy fine and six demerit points for a first failure to stop; the fine may also apply to the registered owner.",
+   "vague_terms": [],
+   "note": "This applies on either an undivided road or the bus's side of a divided road, regardless of the number of lanes, speed limit or school hours.",
+   "evidence": [
+    "6.85",
+    "6.86",
+    "6.87",
+    "6.88",
+    "6.90",
+    "6.91",
+    "8.26",
+    "8.27",
+    "8.28",
+    "8.29",
+    "8.30",
+    "8.31",
+    "8.32",
+    "18.32",
+    "18.32-c",
+    "22.100",
+    "22.105"
+   ]
+  },
+  {
+   "id": "PASS-BUS-04",
+   "topic": "PASS",
+   "group": "BUS",
+   "number": "04",
+   "title": "Stop when meeting a school bus displaying red lights or its stop arm",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a stopped SCHOOL BUS from the front with its overhead red lights flashing OR approaching a stopped SCHOOL BUS from the front with its stop arm activated",
+   "action": "stop at a safe distance for children to get off the bus and cross in front of the vehicle",
+   "unless": "the SCHOOL BUS is on the opposite side of a MEDIAN",
+   "statement": "WHEN approaching a stopped SCHOOL BUS from the front with its overhead red lights flashing OR approaching a stopped SCHOOL BUS from the front with its stop arm activated, the DRIVER MUST stop at a safe distance for children to get off the bus and cross in front of the vehicle, UNLESS the SCHOOL BUS is on the opposite side of a MEDIAN.",
+   "penalty": "Heavy fine and six demerit points for a first failure to stop; the fine may also apply to the registered owner.",
+   "vague_terms": [
+    {
+     "term": "safe distance",
+     "explanation": "no numerical distance is specified for a front approach"
+    }
+   ],
+   "note": "The handbook's 20-metre requirement is for the rear approach, not the front approach; on undivided multi-lane highways drivers in both directions must stop.",
+   "evidence": [
+    "6.85",
+    "6.86",
+    "6.87",
+    "6.90",
+    "6.91",
+    "8.26",
+    "8.29",
+    "8.30",
+    "8.31",
+    "8.32",
+    "18.33",
+    "18.33-c",
+    "22.100",
+    "22.105"
+   ]
+  },
+  {
+   "id": "PASS-BUS-05",
+   "topic": "PASS",
+   "group": "BUS",
+   "number": "05",
+   "title": "Remain stopped until the school bus has finished signalling and moved",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "stopped for a SCHOOL BUS displaying overhead red lights or an activated stop arm",
+   "action": "proceed",
+   "unless": "the bus has moved AND its overhead red lights have stopped flashing AND its stop arm is no longer activated",
+   "statement": "WHEN stopped for a SCHOOL BUS displaying overhead red lights or an activated stop arm, the DRIVER MUST NOT proceed, UNLESS the bus has moved AND its overhead red lights have stopped flashing AND its stop arm is no longer activated.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The sharing-the-road passage expressly lists all three conditions. The stopping chapter says the bus moves or the lights stop, then separately directs drivers to remain stopped until the arm folds away and the lights stop flashing. This entry uses the stronger wording.",
+   "evidence": [
+    "6.85",
+    "6.89",
+    "8.26",
+    "8.31"
+   ]
+  },
+  {
+   "id": "PASS-CAR-01",
+   "topic": "PASS",
+   "group": "CAR",
+   "number": "01",
+   "title": "Pass a streetcar passenger island or zone cautiously",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "passing a streetcar stop with an area set aside for boarding and alighting passengers",
+   "action": "pass at a reasonable speed and be ready for sudden or unexpected pedestrian movements",
+   "unless": "",
+   "statement": "WHEN passing a streetcar stop with an area set aside for boarding and alighting passengers, the DRIVER MUST pass at a reasonable speed and be ready for sudden or unexpected pedestrian movements.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "reasonable speed",
+     "explanation": "no numerical passing speed is specified"
+    }
+   ],
+   "note": "The two-metre stopping rule does not apply at these stops.",
+   "evidence": [
+    "6.18",
+    "10.45"
+   ]
+  },
+  {
+   "id": "PASS-CAR-02",
+   "topic": "PASS",
+   "group": "CAR",
+   "number": "02",
+   "title": "Pass streetcars on the right",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "passing a streetcar",
+   "action": "pass it on the right",
+   "unless": "driving on a one-way road",
+   "statement": "WHEN passing a streetcar, the DRIVER MUST pass it on the right, UNLESS driving on a one-way road.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The exception removes the requirement to pass on the right on a one-way road; it does not remove any stopping requirement at a streetcar stop.",
+   "evidence": [
+    "10.40",
+    "10.44",
+    "10.45"
+   ]
+  },
+  {
+   "id": "PASS-CAR-03",
+   "topic": "PASS",
+   "group": "CAR",
+   "number": "03",
+   "title": "Stop two metres behind the rear doors at a streetcar stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching from behind a stopped streetcar while passengers are getting on or off",
+   "action": "stop and stay at least 2 metres behind the rear doors",
+   "unless": "an area is set aside for streetcar passengers at that stop",
+   "statement": "WHEN approaching from behind a stopped streetcar while passengers are getting on or off, the DRIVER MUST stop and stay at least 2 metres behind the rear doors, UNLESS an area is set aside for streetcar passengers at that stop.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The figure shows a vehicle stopped behind the rear doors, not two metres behind the rear bumper.",
+   "evidence": [
+    "10.43",
+    "10.45",
+    "29.205"
+   ]
+  },
+  {
+   "id": "PASS-BEING-01",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "01",
+   "title": "Do not speed up while another driver is passing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "another driver is trying to pass the driver's vehicle",
+   "action": "speed up to impede the pass or otherwise drive to prevent the other vehicle from passing",
+   "unless": "",
+   "statement": "WHEN another driver is trying to pass the driver's vehicle, the DRIVER MUST NOT speed up to impede the pass or otherwise drive to prevent the other vehicle from passing.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The passing chapter calls speeding up while another driver is trying to pass unlawful without requiring proof of intent; the sanctions chapter also identifies driving to prevent a pass as aggressive driving.",
+   "evidence": [
+    "10.20",
+    "23.19",
+    "23.22"
+   ]
+  },
+  {
+   "id": "PASS-BEING-02",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "02",
+   "title": "Move right and let faster traffic pass",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "a faster vehicle is about to overtake the driver's vehicle",
+   "action": "move to the right and allow the vehicle to pass in safety",
+   "unless": "",
+   "statement": "WHEN a faster vehicle is about to overtake the driver's vehicle, the DRIVER MUST move to the right and allow the vehicle to pass in safety.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "in safety",
+     "explanation": "no minimum clearance is specified"
+    }
+   ],
+   "note": "The passing chapter gives a direct command; the answered knowledge-test question states the action as a must.",
+   "evidence": [
+    "10.25",
+    "28.22",
+    "28.26",
+    "28.42"
+   ]
+  },
+  {
+   "id": "PASS-BEING-03",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "03",
+   "title": "Help a passing driver return on an undivided road",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "being passed on an undivided road AND the passing driver has moved into the oncoming lane",
+   "action": "watch oncoming traffic, move closer to the right edge of the lane, and be prepared to slow down to let the passing driver return sooner if needed to prevent a collision",
+   "unless": "",
+   "statement": "WHEN being passed on an undivided road AND the passing driver has moved into the oncoming lane, the DRIVER MUST watch oncoming traffic, move closer to the right edge of the lane, and be prepared to slow down to let the passing driver return sooner if needed to prevent a collision.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "closer to the right edge",
+     "explanation": "no offset is specified"
+    },
+    {
+     "term": "if needed to prevent a collision",
+     "explanation": "the driver must judge the closing gap and collision risk"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "10.25"
+   ]
+  },
+  {
+   "id": "PASS-BEING-04",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "04",
+   "title": "Check for passing traffic before opening a parked vehicle door",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "parked beside the roadway and about to open a vehicle door next to traffic",
+   "action": "open the door",
+   "unless": "the DRIVER has looked behind and checked mirrors and blind spots for passing cyclists and other traffic AND opening the door will not endanger anyone or interfere with traffic",
+   "statement": "WHEN parked beside the roadway and about to open a vehicle door next to traffic, the DRIVER MUST NOT open the door, UNLESS the DRIVER has looked behind and checked mirrors and blind spots for passing cyclists and other traffic AND opening the door will not endanger anyone or interfere with traffic.",
+   "penalty": "Three demerit points for improper opening of a vehicle door.",
+   "vague_terms": [
+    {
+     "term": "will not endanger anyone or interfere with traffic",
+     "explanation": "no minimum clearance or time gap is specified"
+    }
+   ],
+   "note": "The diagram shows the danger of opening a door into a passing cyclist's path.",
+   "evidence": [
+    "6.47",
+    "11.10",
+    "11.11",
+    "22.112",
+    "22.133"
+   ]
+  },
+  {
+   "id": "PASS-BEING-05",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "05",
+   "title": "Use the Dutch reach to check for passing traffic",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "opening the driver's door of a parked vehicle next to traffic",
+   "action": "use the right hand to open the door so that the movement prompts a shoulder check",
+   "unless": "",
+   "statement": "WHEN opening the driver's door of a parked vehicle next to traffic, the DRIVER SHOULD use the right hand to open the door so that the movement prompts a shoulder check.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook calls this the Dutch reach and presents it as good practice.",
+   "evidence": [
+    "11.10",
+    "11.11"
+   ]
+  },
+  {
+   "id": "PASS-BEING-06",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "06",
+   "title": "Limit how long a parked vehicle door stays open next to traffic",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "a parked vehicle door must be opened next to traffic to load or unload passengers",
+   "action": "keep the door open only long enough to load or unload the passengers",
+   "unless": "",
+   "statement": "WHEN a parked vehicle door must be opened next to traffic to load or unload passengers, the DRIVER MUST keep the door open only long enough to load or unload the passengers.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "only long enough",
+     "explanation": "no duration is specified beyond the time needed for passengers"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "11.10"
+   ]
+  },
+  {
+   "id": "PASS-BEING-07",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "07",
+   "title": "Check the blind spot if another vehicle may overtake during a turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER taking the Level Two road test",
+   "when": "preparing to turn at an intersection AND another vehicle could overtake during the turn",
+   "action": "check the blind spot before starting the turn",
+   "unless": "",
+   "statement": "WHEN preparing to turn at an intersection AND another vehicle could overtake during the turn, the DRIVER taking the Level Two road test MUST check the blind spot before starting the turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "could overtake during the turn",
+     "explanation": "the driver must judge whether another vehicle could get alongside"
+    }
+   ],
+   "note": "This specific trigger appears in the road-test guide; the general turning guidance also calls for checking blind spots.",
+   "evidence": [
+    "9.1",
+    "9.3",
+    "29.42",
+    "29.44"
+   ]
+  },
+  {
+   "id": "PASS-BEING-08",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "08",
+   "title": "Check for traffic overtaking on the right before pulling over",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER taking the Level Two road test",
+   "when": "preparing to pull over for a roadside stop AND traffic or pedestrians could overtake on the right",
+   "action": "check the right blind spot just before pulling over",
+   "unless": "",
+   "statement": "WHEN preparing to pull over for a roadside stop AND traffic or pedestrians could overtake on the right, the DRIVER taking the Level Two road test MUST check the right blind spot just before pulling over.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "could overtake on the right",
+     "explanation": "the driver must judge whether there is a possible path on the right"
+    },
+    {
+     "term": "just before",
+     "explanation": "no exact timing is specified"
+    }
+   ],
+   "note": "The general roadside-stop instructions call for a mirror and blind-spot check before slowing; the road-test passage adds this last check.",
+   "evidence": [
+    "11.44",
+    "11.45",
+    "29.169",
+    "29.171"
+   ]
+  },
+  {
+   "id": "PASS-TOW-01",
+   "topic": "PASS",
+   "group": "TOW",
+   "number": "01",
+   "title": "Allow for slower acceleration and greater length when towing",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER towing a trailer",
+   "when": "considering passing another vehicle",
+   "action": "check before passing that there is enough time and room to complete the pass given the combination's slower acceleration and greater length",
+   "unless": "",
+   "statement": "WHEN considering passing another vehicle, the DRIVER towing a trailer MUST check before passing that there is enough time and room to complete the pass given the combination's slower acceleration and greater length.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "enough time and room",
+     "explanation": "no trailer-specific gap or time is specified"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "27.45"
+   ]
+  },
+  {
+   "id": "PASS-TOW-02",
+   "topic": "PASS",
+   "group": "TOW",
+   "number": "02",
+   "title": "Leave more room before returning with a trailer",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER towing a trailer",
+   "when": "returning to the original lane after passing another vehicle",
+   "action": "allow more room before moving back and avoid cutting back too soon",
+   "unless": "",
+   "statement": "WHEN returning to the original lane after passing another vehicle, the DRIVER towing a trailer MUST allow more room before moving back and avoid cutting back too soon.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "more room",
+     "explanation": "no additional clearance is given"
+    },
+    {
+     "term": "too soon",
+     "explanation": "no minimum time is specified"
+    }
+   ],
+   "note": "Cutting back too soon can cause trailer sway.",
+   "evidence": [
+    "27.45"
+   ]
+  },
+  {
+   "id": "PASS-TOW-03",
+   "topic": "PASS",
+   "group": "TOW",
+   "number": "03",
+   "title": "Pull over to let queued traffic pass",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER towing a trailer",
+   "when": "holding up a line of traffic",
+   "action": "signal, pull over, and let the other vehicles pass",
+   "unless": "",
+   "statement": "WHEN holding up a line of traffic, the DRIVER towing a trailer MUST signal, pull over, and let the other vehicles pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "holding up a line of traffic",
+     "explanation": "no queue length or delay threshold is specified"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "27.47"
+   ]
+  },
+  {
+   "id": "PASS-TOW-04",
+   "topic": "PASS",
+   "group": "TOW",
+   "number": "04",
+   "title": "Steer rather than brake if a passing truck or bus pushes the trailer sideways",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER towing a trailer",
+   "when": "air turbulence from a passing large truck or bus pushes the trailer sideways",
+   "action": "steer the vehicle and trailer carefully back into position without braking",
+   "unless": "",
+   "statement": "WHEN air turbulence from a passing large truck or bus pushes the trailer sideways, the DRIVER towing a trailer MUST steer the vehicle and trailer carefully back into position without braking.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "carefully",
+     "explanation": "no steering rate is specified"
+    }
+   ],
+   "note": "The handbook says a slight increase in speed may help with the disturbance behind the passing vehicle; that is not permission to accelerate to impede a pass.",
+   "evidence": [
+    "10.20",
+    "27.47"
+   ]
+  }
+ ]
+}

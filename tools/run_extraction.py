@@ -14,7 +14,11 @@ repository root.
 --set       changes a model setting for this run: --set effort=low,
             --set extra_body.chat_template_kwargs.enable_thinking=false
 --save-to   also copies the answer to <dir>/<model>/<handbook>_<YYYY_MM_DD>.json (_2, _3 ... when a
-            file of that name exists), e.g. --save-to extraction_outputs
+            file of that name exists), e.g. --save-to extraction_outputs, and the run's meta.json
+            next to it as <handbook>_<YYYY_MM_DD>.meta.json (runs/ is not in git; this is the record
+            of the model, its settings and the prompt version that made the answer). A preset with
+            a `mode` (its thinking mode, e.g. thinking or no-thinking) saves to
+            <dir>/<model>/<mode>/, so one model's modes are kept apart.
 Each run writes runs/<time>-<preset>-<handbook>/: meta.json (settings, tokens, time, cost, citation
 matches), a copy of the prompt, the request as text, the response, the answer as JSON, and
 grounded.json (every cited block with its kind and sentence ids). See the README.
@@ -59,19 +63,21 @@ def dry_run(a, pages):
         print(line)
 
 
-def save_answer(folder, out_dir, model_id, handbook_id):
-    """Copy a run's answer to <out_dir>/<model>/<handbook>_<YYYY_MM_DD>.json, numbering on (_2, _3 ...)
-    rather than overwriting. Returns the path."""
+def save_answer(folder, out_dir, model_id, handbook_id, mode=None):
+    """Copy a run's answer to <out_dir>/<model>[/<mode>]/<handbook>_<YYYY_MM_DD>.json, numbering on
+    (_2, _3 ...) rather than overwriting, and its meta.json next to it as <...>.meta.json. Returns
+    the answer's path."""
     answer = os.path.join(folder, "output.json")
     if not os.path.exists(answer):
         raise SystemExit(f"no JSON answer to save; see {os.path.relpath(folder, ROOT)} (error.txt or output.txt)")
-    out = os.path.join(out_dir, model_id)
+    out = os.path.join(out_dir, model_id, mode or "")
     stem = f"{handbook_id}_{time.strftime('%Y_%m_%d')}"
     path, n = os.path.join(out, stem + ".json"), 2
     while os.path.exists(path):
         path, n = os.path.join(out, f"{stem}_{n}.json"), n + 1
     os.makedirs(out, exist_ok=True)
     shutil.copyfile(answer, path)
+    shutil.copyfile(os.path.join(folder, "meta.json"), path[:-len(".json")] + ".meta.json")
     return path
 
 
@@ -106,7 +112,8 @@ def main():
     except ModelError as e:
         raise SystemExit(f"error: {e}")
     if a.save_to:
-        path = save_answer(folder, os.path.join(ROOT, a.save_to), presets()[a.model]["model"], a.handbook)
+        preset = presets()[a.model]
+        path = save_answer(folder, os.path.join(ROOT, a.save_to), preset["model"], a.handbook, preset.get("mode"))
         print(f"-> {os.path.relpath(path, ROOT)}")
 
 

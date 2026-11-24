@@ -1,0 +1,318 @@
+{
+ "scope": "overtaking (passing another vehicle, and being passed)",
+ "vocabulary": [
+  {
+   "term": "PASS",
+   "definition": "Changing lanes to move past a slower vehicle, then returning to the original lane.",
+   "evidence": [
+    "10.14"
+   ]
+  },
+  {
+   "term": "PASSER",
+   "definition": "The driver making a PASS.",
+   "evidence": []
+  },
+  {
+   "term": "PEDESTRIAN CROSSOVER",
+   "definition": "A designated area for pedestrians to cross roads, marked by specific signs, overhead yellow lights, and pavement markings.",
+   "evidence": [
+    "21.17"
+   ]
+  },
+  {
+   "term": "BROKEN LINE",
+   "definition": "A line marking that separates lanes of traffic moving in the same direction and indicates that passing is allowed when safe.",
+   "evidence": [
+    "21.6"
+   ]
+  },
+  {
+   "term": "SOLID LINE",
+   "definition": "A line marking that separates lanes of traffic and indicates that passing is not allowed.",
+   "evidence": [
+    "21.5"
+   ]
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person riding a bicycle.",
+   "evidence": [
+    "6.23"
+   ]
+  },
+  {
+   "term": "MOTOR VEHICLE",
+   "definition": "A vehicle powered by a motor, as opposed to a bicycle or other human-powered vehicle.",
+   "evidence": [
+    "6.32"
+   ]
+  },
+  {
+   "term": "TRAILER",
+   "definition": "A vehicle without a motor that is towed by another vehicle.",
+   "evidence": [
+    "27.0"
+   ]
+  },
+  {
+   "term": "OFF-Road VEHICLE",
+   "definition": "A motorized vehicle intended for recreational use, such as an ATV or off-road motorcycle.",
+   "evidence": [
+    "30.185"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "PASS-LOC-01",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "01",
+   "title": "No passing near a pedestrian crossover",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "within 30 metres of a PEDESTRIAN CROSSOVER",
+   "action": "pass any vehicle",
+   "unless": "",
+   "statement": "WHEN within 30 metres of a PEDESTRIAN CROSSOVER, the PASSER MUST NOT pass any vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stated on two pages, both times as a prohibition.",
+   "evidence": [
+    "10.22",
+    "8.37"
+   ]
+  },
+  {
+   "id": "PASS-LOC-02",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "02",
+   "title": "No passing on a curve, hill, or near a bridge/tunnel",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "on a curve in the road OR on or near a railway crossing OR on a hilltop OR near a bridge or tunnel that blocks view",
+   "action": "pass another vehicle",
+   "unless": "",
+   "statement": "WHEN on a curve in the road OR on or near a railway crossing OR on a hilltop OR near a bridge or tunnel that blocks view, the PASSER MUST NOT pass another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "This rule applies to U-turns and three-point turns as well, as passing is not allowed in these situations.",
+   "evidence": [
+    "9.81",
+    "9.84"
+   ]
+  },
+  {
+   "id": "PASS-LOC-03",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "03",
+   "title": "No passing when visibility is insufficient",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "cannot see at least 150 metres in both directions",
+   "action": "make a U-turn",
+   "unless": "",
+   "statement": "WHEN cannot see at least 150 metres in both directions, the PASSER MUST NOT make a U-turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "This rule is specifically for U-turns, but the principle of visibility applies to passing as well.",
+   "evidence": [
+    "9.81"
+   ]
+  },
+  {
+   "id": "PASS-MARK-01",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "01",
+   "title": "Passing allowed with broken line",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "PASSER",
+   "when": "there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS",
+   "action": "pass",
+   "unless": "",
+   "statement": "WHEN there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS, the PASSER MAY pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "the way is clear",
+     "explanation": "no gap or sight distance given"
+    },
+    {
+     "term": "enough broken line remains ahead",
+     "explanation": "length not given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "21.6",
+    "21.7"
+   ]
+  },
+  {
+   "id": "PASS-MARK-02",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "02",
+   "title": "Passing not allowed with solid line",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "there is a SOLID LINE at the left of the PASSER's lane",
+   "action": "pass",
+   "unless": "",
+   "statement": "WHEN there is a SOLID LINE at the left of the PASSER's lane, the PASSER MUST NOT pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "21.5"
+   ]
+  },
+  {
+   "id": "PASS-USER-01",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "01",
+   "title": "Cyclists: one metre",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a MOTOR VEHICLE",
+   "when": "passing a CYCLIST",
+   "action": "keep at least 1 metre between the vehicle and the CYCLIST, where practical",
+   "unless": "",
+   "statement": "WHEN passing a CYCLIST, the DRIVER of a MOTOR VEHICLE MUST keep at least 1 metre between the vehicle and the CYCLIST, where practical.",
+   "penalty": "A fine and two demerit points.",
+   "vague_terms": [
+    {
+     "term": "where practical",
+     "explanation": "does not say when 1 metre is impractical"
+    }
+   ],
+   "note": "The same block states the penalty, and advises changing lanes to pass whenever possible; that is a separate ADVICE rule.",
+   "evidence": [
+    "6.32"
+   ]
+  },
+  {
+   "id": "PASS-USER-02",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "02",
+   "title": "Do not pass on the right except in specific cases",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing on the right",
+   "action": "pass",
+   "unless": "the PASSER is on a multi-lane or one-way road OR passing a streetcar OR passing a left-turning vehicle",
+   "statement": "WHEN passing on the right, the PASSER MUST NOT pass UNLESS the PASSER is on a multi-lane or one-way road OR passing a streetcar OR passing a left-turning vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.39"
+   ]
+  },
+  {
+   "id": "PASS-USER-03",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "03",
+   "title": "Do not pass on the shoulder",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing on the shoulder",
+   "action": "pass",
+   "unless": "passing a vehicle turning left",
+   "statement": "WHEN passing on the shoulder, the PASSER MUST NOT pass UNLESS passing a vehicle turning left.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.37"
+   ]
+  },
+  {
+   "id": "PASS-USER-04",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "04",
+   "title": "Do not pass a stopped school bus with flashing red lights",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "a school bus has its overhead red lights flashing OR its stop arm activated",
+   "action": "pass the school bus",
+   "unless": "the PASSER is on a road with a median strip AND is approaching from the opposite direction",
+   "statement": "WHEN a school bus has its overhead red lights flashing OR its stop arm activated, the PASSER MUST NOT pass the school bus UNLESS the PASSER is on a road with a median strip AND is approaching from the opposite direction.",
+   "penalty": "A fine and six demerit points for a first offence.",
+   "vague_terms": [],
+   "note": "The PASSER must stop at least 20 metres away from the school bus.",
+   "evidence": [
+    "6.80",
+    "6.85",
+    "6.89"
+   ]
+  },
+  {
+   "id": "PASS-BEING-01",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "01",
+   "title": "Yield to vehicle passing you",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "another vehicle is passing you",
+   "action": "move to the right and allow the passing vehicle to pass",
+   "unless": "",
+   "statement": "WHEN another vehicle is passing you, the DRIVER MUST move to the right and allow the passing vehicle to pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.25"
+   ]
+  },
+  {
+   "id": "PASS-PROC-01",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "01",
+   "title": "Procedure for passing",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "passing another vehicle",
+   "action": "signal, check mirrors and blind spot, ensure the way is clear, change lanes, accelerate to pass, and return to the original lane when safe",
+   "unless": "",
+   "statement": "WHEN passing another vehicle, the PASSER MUST signal, check mirrors and blind spot, ensure the way is clear, change lanes, accelerate to pass, and return to the original lane when safe.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "ensure the way is clear",
+     "explanation": "no specific distance or time given"
+    },
+    {
+     "term": "when safe",
+     "explanation": "no specific distance or time given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "10.17",
+    "10.18",
+    "10.19"
+   ]
+  }
+ ]
+}

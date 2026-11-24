@@ -1,0 +1,93 @@
+{
+ "run": "20261123-011101-local_gemma-4-31b-it-mto-overtaking",
+ "started": "2026-11-23 01:11:01",
+ "git": "8da1b05+changes",
+ "preset": "local/gemma-4-31b-it",
+ "provider": "openai",
+ "model": "google/gemma-4-31b-it",
+ "params": {
+  "extra_body": {
+   "chat_template_kwargs": {
+    "enable_thinking": true
+   },
+   "top_k": 64
+  },
+  "max_tokens": 58000,
+  "seed": 0,
+  "temperature": 1.0,
+  "top_p": 0.95
+ },
+ "vision": true,
+ "price_per_million": null,
+ "base_url": "http://localhost:8000/v1",
+ "serve": "CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve google/gemma-4-31B-it --revision 842da3794eaa0b77d5f08bae87a17459d91ff475 --served-model-name google/gemma-4-31b-it --tensor-parallel-size 4 --reasoning-parser gemma4 --max-model-len 240000 --limit-mm-per-prompt '{\"image\": 300}' --gpu-memory-utilization 0.95 --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000",
+ "reset": [
+  "reset_encoder_cache"
+ ],
+ "mode": "thinking-sampled-seed0",
+ "handbook": "mto",
+ "pages": "all",
+ "images": true,
+ "toc": true,
+ "per_page": false,
+ "prompt": "formal-rules",
+ "prompt_sha256": "3e330fa2b145f5efff320e6fc6c4782e5c1ff3ef61a5d92a109c98d466db9a00",
+ "calls": [
+  {
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "model": "google/gemma-4-31b-it",
+   "stop_reason": "stop",
+   "input_tokens": 180754,
+   "output_tokens": 9827,
+   "reasoning_tokens": 3274,
+   "seconds": 518.5,
+   "cost_usd": null,
+   "request_id": "chatcmpl-9f808e86902637a2",
+   "json": true,
+   "citations": {
+    "text": 34,
+    "heading": 4
+   }
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 180754,
+  "output_tokens": 9827,
+  "reasoning_tokens": 3274,
+  "seconds": 518.5,
+  "cost_usd": null
+ }
+}

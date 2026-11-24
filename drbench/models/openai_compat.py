@@ -1,8 +1,9 @@
-"""Any server that speaks the OpenAI chat-completions API: a local vLLM server, or OpenRouter
-(which serves Qwen, Gemini, GPT, Claude and others behind one key).
+"""Any server that speaks the OpenAI chat-completions API: a local vLLM server, the OpenAI API, or
+OpenRouter (which serves Qwen, Gemini, GPT, Claude and others behind one key).
 
 Settings (in models.yaml): base_url, api_key_env (the environment variable holding the key;
-none for a local server), timeout (seconds, default 3600), max_retries (default 2).
+none for a local server), timeout (seconds, default 3600), max_retries (default 2), reset (local
+vLLM only: cache-reset endpoints to call before every request, see _reset).
 
 Params are sent as they are (max_tokens, temperature, top_p, seed, reasoning_effort, ...), except
 extra_body, whose keys are added to the request body for options only that server knows: for vLLM
@@ -11,6 +12,8 @@ extra_body, whose keys are added to the request body for options only that serve
 """
 import os
 import time
+import urllib.error
+import urllib.request
 
 import openai
 
@@ -55,8 +58,22 @@ class OpenAICompatibleModel(ChatModel):
                                      "json_schema": {"name": "answer", "schema": json_schema, "strict": True}}
         return kw
 
+    def _reset(self):
+        """Call the server's cache-reset endpoints named in the preset's `reset` (vLLM development
+        endpoints, e.g. reset_encoder_cache; the server needs VLLM_SERVER_DEV_MODE=1). vLLM keeps the
+        image embeddings of earlier requests, and what is left of them changes how a long prompt
+        with many images is split into steps, which changes the answer even at temperature 0.
+        Starting every request from an empty cache makes the same request give the same answer."""
+        root = self.settings["base_url"].rstrip("/").removesuffix("/v1")
+        for name in self.settings.get("reset") or []:
+            try:
+                urllib.request.urlopen(urllib.request.Request(f"{root}/{name}", method="POST"), timeout=60).read()
+            except (urllib.error.URLError, OSError) as e:
+                raise ModelError(f"{self.name}: could not call {root}/{name} before the request: {e}") from e
+
     def complete(self, content, system=None, json_schema=None):
         kw = self.request(content, system, json_schema)
+        self._reset()
         start = time.time()
         try:
             resp = self.client.chat.completions.create(**kw)

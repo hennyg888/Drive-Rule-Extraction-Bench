@@ -1,0 +1,256 @@
+{
+ "scope": "overtaking (passing another vehicle, and being passed)",
+ "vocabulary": [
+  {
+   "term": "PASS",
+   "definition": "Changing lanes to move past a slower vehicle, then returning to the original lane.",
+   "evidence": [
+    "10.14"
+   ]
+  },
+  {
+   "term": "PASSER",
+   "definition": "The driver making a PASS.",
+   "evidence": []
+  },
+  {
+   "term": "PEDESTRIAN CROSSOVER",
+   "definition": "A designated area for pedestrians to cross roads, identified by signs, overhead lights, and pavement markings.",
+   "evidence": [
+    "8.34"
+   ]
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person riding a bicycle on the road.",
+   "evidence": [
+    "6.23"
+   ]
+  },
+  {
+   "term": "HIGH OCCUPANCY VEHICLE (HOV) LANE",
+   "definition": "A lane reserved for vehicles with at least two occupants, buses, licensed taxis, green-plate vehicles, airport limousines, motorcycles, HOT permit holders, and emergency vehicles.",
+   "evidence": [
+    "12.3"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "PASS-GEN-01",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "01",
+   "title": "General condition for passing another vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "you are not sure you can overtake and pass another vehicle without danger to yourself or others",
+   "action": "overtake and pass another vehicle",
+   "unless": "",
+   "statement": "WHEN you are not sure you can overtake and pass another vehicle without danger to yourself or others, the DRIVER MUST NOT overtake and pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "not sure you can pass without danger",
+     "explanation": "leaves judgment to driver on safety assessment"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "10.15"
+   ]
+  },
+  {
+   "id": "PASS-SPACE-01",
+   "topic": "PASS",
+   "group": "SPACE",
+   "number": "01",
+   "title": "Minimum following distance when following a vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "following another vehicle",
+   "action": "keep at least a two-second distance behind the vehicle in front",
+   "unless": "",
+   "statement": "WHEN following another vehicle, the DRIVER MUST keep at least a two-second distance behind the vehicle in front.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "5.24",
+    "5.26"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-01",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "01",
+   "title": "Passing on the right",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "PASSER",
+   "when": "on multi-lane or one-way roads AND the way is clear AND not prohibited by signs or markings, OR overtaking a streetcar OR overtaking a left-turning vehicle",
+   "action": "pass on the right",
+   "unless": "",
+   "statement": "WHEN on multi-lane or one-way roads AND the way is clear AND not prohibited by signs or markings, OR overtaking a streetcar OR overtaking a left-turning vehicle, the PASSER MAY pass on the right.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "the way is clear",
+     "explanation": "no specific gap or sight distance given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "10.39"
+   ]
+  },
+  {
+   "id": "PASS-USER-01",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "01",
+   "title": "Passing a cyclist",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing a CYCLIST",
+   "action": "keep at least 1 metre between the vehicle and the CYCLIST, where practical",
+   "unless": "",
+   "statement": "WHEN passing a CYCLIST, the DRIVER of a motor vehicle MUST keep at least 1 metre between the vehicle and the CYCLIST, where practical.",
+   "penalty": "A fine and two demerit points.",
+   "vague_terms": [
+    {
+     "term": "where practical",
+     "explanation": "does not specify when 1 metre is impractical"
+    }
+   ],
+   "note": "The same block states the penalty, and advises changing lanes to pass whenever possible; that is a separate ADVICE rule.",
+   "evidence": [
+    "6.32"
+   ]
+  },
+  {
+   "id": "PASS-USER-02",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "02",
+   "title": "Passing a streetcar",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "passing a stopped streetcar at a stop",
+   "action": "pass on the right unless the road is one-way",
+   "unless": "",
+   "statement": "WHEN passing a stopped streetcar at a stop, the DRIVER MUST pass on the right UNLESS the road is one-way.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.42"
+   ]
+  },
+  {
+   "id": "PASS-NIGHT-01",
+   "topic": "PASS",
+   "group": "NIGHT",
+   "number": "01",
+   "title": "Passing at night",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "passing another vehicle at night",
+   "action": "use low-beam headlights when approaching the vehicle to be passed, and switch to high-beam headlights as you move alongside the vehicle",
+   "unless": "",
+   "statement": "WHEN passing another vehicle at night, the DRIVER MUST use low-beam headlights when approaching the vehicle to be passed, and switch to high-beam headlights as you move alongside the vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.28"
+   ]
+  },
+  {
+   "id": "PASS-SHORE-01",
+   "topic": "PASS",
+   "group": "SHORE",
+   "number": "01",
+   "title": "Passing on the right shoulder",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "passing a vehicle turning left AND the shoulder is paved",
+   "action": "drive on the right shoulder to pass",
+   "unless": "",
+   "statement": "WHEN passing a vehicle turning left AND the shoulder is paved, the DRIVER MAY ONLY drive on the right shoulder to pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.37"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-02",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "02",
+   "title": "Passing on the right is more dangerous",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "PASSER",
+   "when": "passing on the right",
+   "action": "suddenly change lanes and pass on the right without waiting for the vehicle ahead to move right",
+   "unless": "",
+   "statement": "WHEN passing on the right, the PASSER SHOULD NOT suddenly change lanes and pass on the right without waiting for the vehicle ahead to move right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.39"
+   ]
+  },
+  {
+   "id": "PASS-PASSED-01",
+   "topic": "PASS",
+   "group": "PASSED",
+   "number": "01",
+   "title": "Being passed",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "being passed on an undivided road where the passing driver has pulled into the opposite lane",
+   "action": "move closer to the right side of the lane to allow the passing driver to get in front",
+   "unless": "",
+   "statement": "WHEN being passed on an undivided road where the passing driver has pulled into the opposite lane, the DRIVER SHOULD move closer to the right side of the lane to allow the passing driver to get in front.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.25"
+   ]
+  },
+  {
+   "id": "PASS-HOV-01",
+   "topic": "PASS",
+   "group": "HOV",
+   "number": "01",
+   "title": "Passing in a High Occupancy Vehicle (HOV) lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in a High Occupancy Vehicle (HOV) lane",
+   "action": "pass unless the vehicle is exempt (buses, licensed taxis, vehicles carrying at least two people, green-plate vehicles, airport limousines, motorcycles, High-Occupancy Toll (HOT) permit holders, emergency vehicles)",
+   "unless": "the vehicle is exempt (buses, licensed taxis, vehicles carrying at least two people, green-plate vehicles, airport limousines, motorcycles, High-Occupancy Toll (HOT) permit holders, emergency vehicles)",
+   "statement": "WHEN in a High Occupancy Vehicle (HOV) lane, the DRIVER MUST NOT pass unless the vehicle is exempt (buses, licensed taxis, vehicles carrying at least two people, green-plate vehicles, airport limousines, motorcycles, High-Occupancy Toll (HOT) permit holders, emergency vehicles).",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "12.44"
+   ]
+  }
+ ]
+}

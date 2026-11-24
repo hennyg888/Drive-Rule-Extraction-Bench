@@ -1,0 +1,293 @@
+{
+ "scope": "overtaking (passing another vehicle, and being passed)",
+ "vocabulary": [
+  {
+   "term": "PASS",
+   "definition": "Changing lanes to move past a slower vehicle, then returning to the original lane.",
+   "evidence": [
+    "10.14"
+   ]
+  },
+  {
+   "term": "PASSER",
+   "definition": "The driver making a PASS.",
+   "evidence": []
+  },
+  {
+   "term": "PEDESTRIAN CROSSOVER",
+   "definition": "A designated area that allows pedestrians to safely cross roads where there are no traffic lights, marked by two white double parallel lines across the road with an X in each lane approaching it.",
+   "evidence": [
+    "8.34",
+    "21.18"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "PASS-LOC-01",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "01",
+   "title": "No passing within 30 metres of a pedestrian crossover",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "within 30 metres of a PEDESTRIAN CROSSOVER",
+   "action": "pass any vehicle",
+   "unless": "",
+   "statement": "WHEN within 30 metres of a PEDESTRIAN CROSSOVER, the PASSER MUST NOT pass any vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stated on two pages, both times as a prohibition.",
+   "evidence": [
+    "10.22",
+    "8.37"
+   ]
+  },
+  {
+   "id": "PASS-LOC-02",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "02",
+   "title": "No passing left of a centreline 30 metres from a bridge, viaduct or tunnel",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "within 30 metres of a bridge, viaduct or tunnel, left of the centreline",
+   "action": "pass",
+   "unless": "",
+   "statement": "WHEN within 30 metres of a bridge, viaduct or tunnel, left of the centreline, the PASSER MUST NOT pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stated on two pages, both times as a prohibition.",
+   "evidence": [
+    "10.22"
+   ]
+  },
+  {
+   "id": "PASS-LOC-03",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "03",
+   "title": "No passing when approaching the crest of a hill or on a curve where vision is obstructed",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "approaching the crest of a hill OR on a curve where vision of oncoming traffic is obstructed",
+   "action": "pass",
+   "unless": "",
+   "statement": "WHEN approaching the crest of a hill OR on a curve where vision of oncoming traffic is obstructed, the PASSER MUST NOT pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stated on two pages, both times as a prohibition.",
+   "evidence": [
+    "10.22"
+   ]
+  },
+  {
+   "id": "PASS-PROC-01",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "01",
+   "title": "Steps for passing a vehicle",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "passing a vehicle",
+   "action": "use left-turn signal, check mirrors and blind spot, change lanes only after signalling, signal to return to original lane when far enough ahead, do not race if vehicle speeds up",
+   "unless": "",
+   "statement": "WHEN passing a vehicle, the PASSER MUST use left-turn signal, check mirrors and blind spot, change lanes only after signalling, signal to return to original lane when far enough ahead, and do not race if the vehicle speeds up.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.16"
+   ]
+  },
+  {
+   "id": "PASS-PROC-02",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "02",
+   "title": "Passing parked vehicles: watch for opening doors",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "passing parked vehicles",
+   "action": "watch carefully for people opening doors or loading/unloading",
+   "unless": "",
+   "statement": "WHEN passing parked vehicles, the PASSER MUST watch carefully for people opening doors or for doors opened to load and unload.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.23"
+   ]
+  },
+  {
+   "id": "PASS-PROC-03",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "03",
+   "title": "Passing motorcycles, bicycles, limited-speed motorcycles and mopeds: do not take as an invitation to pass in the same lane",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "PASSER",
+   "when": "passing a motorcycle, bicycle, limited-speed motorcycle or moped",
+   "action": "do not take the vehicle's movement to the left or right as an invitation to pass in the same lane",
+   "unless": "",
+   "statement": "WHEN passing a motorcycle, bicycle, limited-speed motorcycle or moped, the PASSER SHOULD NOT take the vehicle's movement to the left or right as an invitation to pass in the same lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.24"
+   ]
+  },
+  {
+   "id": "PASS-USER-01",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "01",
+   "title": "Passing cyclists: minimum 1 metre distance",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing a CYCLIST",
+   "action": "keep at least 1 metre between the vehicle and the CYCLIST, where practical",
+   "unless": "",
+   "statement": "WHEN passing a CYCLIST, the DRIVER of a motor vehicle MUST keep at least 1 metre between the vehicle and the CYCLIST, where practical.",
+   "penalty": "A fine and two demerit points.",
+   "vague_terms": [
+    {
+     "term": "where practical",
+     "explanation": "does not say when 1 metre is impractical"
+    }
+   ],
+   "note": "The same block states the penalty, and advises changing lanes to pass whenever possible; that is a separate ADVICE rule.",
+   "evidence": [
+    "6.32"
+   ]
+  },
+  {
+   "id": "PASS-USER-02",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "02",
+   "title": "Passing streetcars: on the right unless one-way",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing a streetcar",
+   "action": "pass on the right unless driving on a one-way road",
+   "unless": "",
+   "statement": "WHEN passing a streetcar, the DRIVER of a motor vehicle MUST pass on the right UNLESS driving on a one-way road.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.42"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-01",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "01",
+   "title": "Passing on the right: only on multi-lane or one-way roads and when overtaking a streetcar or left-turning vehicle",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "on a multi-lane road OR a one-way road OR overtaking a streetcar OR overtaking a left-turning vehicle",
+   "action": "pass on the right",
+   "unless": "",
+   "statement": "WHEN on a multi-lane road OR a one-way road OR overtaking a streetcar OR overtaking a left-turning vehicle, the DRIVER of a motor vehicle MAY pass on the right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.39"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-02",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "02",
+   "title": "Passing on the right: wait for vehicle ahead to move right before changing lanes",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing on the right when the vehicle ahead is moving slower",
+   "action": "wait for the vehicle ahead to move to the right before changing lanes",
+   "unless": "",
+   "statement": "WHEN passing on the right when the vehicle ahead is moving slower, the DRIVER of a motor vehicle SHOULD wait for the vehicle ahead to move to the right before changing lanes.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.41"
+   ]
+  },
+  {
+   "id": "PASS-SIDE-03",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "03",
+   "title": "Passing on the right: move to right lane when a truck wants to pass",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "in the left most lane and a truck wants to pass",
+   "action": "move to the right-hand lane as soon as possible",
+   "unless": "",
+   "statement": "WHEN in the left most lane and a truck wants to pass, the DRIVER of a motor vehicle SHOULD move to the right-hand lane as soon as possible.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.26"
+   ]
+  },
+  {
+   "id": "PASS-BEING-01",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "01",
+   "title": "Being passed: move to right and let faster traffic pass",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "faster traffic wants to pass",
+   "action": "move to the right and let the faster traffic pass in safety",
+   "unless": "",
+   "statement": "WHEN faster traffic wants to pass, the DRIVER of a motor vehicle SHOULD move to the right and let the faster traffic pass in safety.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.25"
+   ]
+  },
+  {
+   "id": "PASS-BEING-02",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "02",
+   "title": "Being passed: pay attention to oncoming traffic and move closer to right side when a truck passes on an undivided road",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "being passed on an undivided road where the passing driver has pulled into the opposite lane",
+   "action": "pay attention to oncoming traffic and move closer to the right side of the lane",
+   "unless": "",
+   "statement": "WHEN being passed on an undivided road where the passing driver has pulled into the opposite lane, the DRIVER of a motor vehicle SHOULD pay attention to oncoming traffic and move closer to the right side of the lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.25"
+   ]
+  }
+ ]
+}

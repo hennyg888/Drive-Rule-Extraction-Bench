@@ -207,7 +207,7 @@ Options of `run_extraction.py`:
 | `--prompt <folder>` | Which prompt to use (default `formal-rules`) |
 | `--set key=value` | Change a model setting for this run, e.g. `--set effort=low` or `--set extra_body.chat_template_kwargs.enable_thinking=false` |
 | `--label` | Add a name to the run folder |
-| `--save-to <dir>` | Also copy the answer to `<dir>/<model>/<handbook>_<YYYY_MM_DD>.json` (`_2`, `_3` … if that file exists) |
+| `--save-to <dir>` | Also copy the answer to `<dir>/<model>/<handbook>_<YYYY_MM_DD>.json` (`_2`, `_3` … if that file exists), and the run's `meta.json` next to it as `<handbook>_<YYYY_MM_DD>.meta.json`. A preset with a `mode` (its thinking mode) saves to `<dir>/<model>/<mode>/` |
 
 ## Prompts
 
@@ -297,13 +297,13 @@ The archived prompts cited with a block id and a quote copied from that block, a
 Every model is a preset in [`drbench/models/models.yaml`](drbench/models/models.yaml), and a run names one. Changing the model means changing the preset name. There are two kinds of API:
 
 - `anthropic`: Claude through the Anthropic API, using the official SDK. Requests are streamed. Thinking is on, and `effort` sets how much. Opus and Sonnet use `fallbacks: default`: if Claude's safety classifiers decline a request, the API reruns it on a fallback model.
-- `openai`: any OpenAI-compatible server. This covers the local vLLM server (`local/...` presets) and OpenRouter (`openrouter/...`), which serves Qwen, Gemini, GPT and Claude under one key.
+- `openai`: any OpenAI-compatible server. This covers the local vLLM server (`local/...` presets), the OpenAI API itself (`openai/...`) and OpenRouter (`openrouter/...`), which serves Qwen, Gemini, GPT and Claude under one key.
 
 Adding a model on one of these APIs takes only a new preset: copy one and change `model` (and `base_url` for another server). Another kind of API needs a new class in `drbench/models/`, next to `claude.py`.
 
-**Keys** go in `.env` at the repository root, one `NAME=value` per line. Git ignores the file. `ANTHROPIC_API_KEY` is needed for Claude, `OPENROUTER_API_KEY` for OpenRouter; local presets need no key. Instead of an Anthropic key, `ant auth login` also works.
+**Keys** go in `.env` at the repository root, one `NAME=value` per line. Git ignores the file. `ANTHROPIC_API_KEY` is needed for Claude, `OPENAI_API_KEY` for the OpenAI API, `OPENROUTER_API_KEY` for OpenRouter; local presets need no key. Instead of an Anthropic key, `ant auth login` also works.
 
-**Local models.** Start the server with `python tools/models.py serve local/qwen3.8-27b`, wait until it reports `Application startup complete`, then run with that preset. The `serve` line of each local preset shows how many GPUs it uses. Stop the server (Ctrl-C) when you are done, because the GPUs are shared. With thinking on, Qwen3.8-27B used 23K to 29K thinking tokens on one page, so its presets allow 64K output tokens.
+**Local models.** Start the server with `python tools/models.py serve local/qwen3.8-27b`, wait until it reports `Application startup complete`, then run with that preset. The `serve` line of each local preset shows how many GPUs it uses. Stop the server (Ctrl-C) when you are done, because the GPUs are shared. The presets of the benchmark's local models decode greedily and empty vLLM's image cache before every request, so that a fixed prompt gives the same answer; the comments in `models.yaml` explain each setting, and [`extraction_outputs/README.md`](extraction_outputs/README.md) records the runs made with them.
 
 ## Runs
 
@@ -332,7 +332,7 @@ The programs at the top level are short. The work is done in the package `drbenc
 | `stats.py` | The handbook analysis table | `report` |
 | `prompts.py` | Loads a prompt folder | `load` |
 | `messages.py` | Corpus pages → the user message: table of contents, pages as HTML, images after their `<img>`, the task | `build`, `page_html`, `contents_html`, `preview` |
-| `models/` | One interface for every model: `get_model(preset).complete(content, system, json_schema)` returns the answer, reasoning, tokens and time. `claude.py` is the Anthropic API; `openai_compat.py` is vLLM and OpenRouter | `get_model`, `ModelResponse` |
+| `models/` | One interface for every model: `get_model(preset).complete(content, system, json_schema)` returns the answer, reasoning, tokens and time. `claude.py` is the Anthropic API; `openai_compat.py` is vLLM, the OpenAI API and OpenRouter | `get_model`, `ModelResponse` |
 | `run.py` | One run: build the messages, call the model, save everything, resolve the citations | `run`, `reground` |
 | `grounding.py` | A citation (a block id, or a block id + quote) → what it points to and its sentence ids | `cite`, `resolve`, `resolve_output` |
 
@@ -350,6 +350,7 @@ The programs at the top level are short. The work is done in the package `drbenc
 | `scrapers/` | The scripts that made `handbooks/` |
 | `tests/` | Tests for `pytest` |
 | `legacy/` | Earlier material: the first Ontario passing rules (`ontario_passing_rules.yaml`, `Ontario passing rules.md`) that `formal-rules` follows, and the prompts the team gave Claude (`prompt.md`) |
+| `extraction_outputs/` | Model answers saved with `--save-to`, by vendor, model and thinking mode. Its [README](extraction_outputs/README.md) records the candidate model runs on Ontario overtaking |
 | `runs/`, `build/` | Run results and built messages; not committed |
 
 The earlier rule pipeline (rule language, census, rules database, extraction prompts and runs, the Qwen trial, review pages, and the first PDF-based Ontario rules) is kept on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).

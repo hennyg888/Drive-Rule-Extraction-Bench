@@ -1,0 +1,91 @@
+{
+ "run": "20261123-155243-local_glm-4.6v-flash-mto-overtaking",
+ "started": "2026-11-23 15:52:43",
+ "git": "8da1b05+changes",
+ "preset": "local/glm-4.6v-flash",
+ "provider": "openai",
+ "model": "z-ai/glm-4.6v-flash",
+ "params": {
+  "extra_body": {
+   "chat_template_kwargs": {
+    "enable_thinking": true
+   }
+  },
+  "max_tokens": 16900,
+  "temperature": 0
+ },
+ "vision": true,
+ "price_per_million": null,
+ "base_url": "http://localhost:8000/v1",
+ "serve": "CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve zai-org/GLM-4.6V-Flash --revision 411bb4d77144a3f03accbf4b780f5acb8b7cde4e --served-model-name z-ai/glm-4.6v-flash --tensor-parallel-size 4 --reasoning-parser glm45 --max-model-len 131072 --limit-mm-per-prompt '{\"image\": 300}' --gpu-memory-utilization 0.95 --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000",
+ "reset": [
+  "reset_encoder_cache"
+ ],
+ "mode": "thinking",
+ "handbook": "mto",
+ "pages": "all",
+ "images": true,
+ "toc": true,
+ "per_page": false,
+ "prompt": "formal-rules",
+ "prompt_sha256": "3e330fa2b145f5efff320e6fc6c4782e5c1ff3ef61a5d92a109c98d466db9a00",
+ "calls": [
+  {
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "model": "z-ai/glm-4.6v-flash",
+   "stop_reason": "stop",
+   "input_tokens": 114015,
+   "output_tokens": 4519,
+   "reasoning_tokens": 2188,
+   "seconds": 88.1,
+   "cost_usd": null,
+   "request_id": "chatcmpl-85379f742c91e26f",
+   "json": true,
+   "citations": {
+    "text": 7,
+    "heading": 7,
+    "figure": 1
+   }
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 114015,
+  "output_tokens": 4519,
+  "reasoning_tokens": 2188,
+  "seconds": 88.1,
+  "cost_usd": null
+ }
+}

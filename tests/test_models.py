@@ -25,7 +25,7 @@ def test_overrides_and_dotted_keys():
     m = get_model("local/qwen3.8-27b-nothink", temperature=0.1, **{"extra_body.top_k": 20})
     assert m.params["temperature"] == 0.1
     assert m.params["extra_body"] == {"chat_template_kwargs": {"enable_thinking": False}, "top_k": 20}
-    assert get_model("local/qwen3.8-27b-nothink").params["temperature"] == 0.7   # the preset is unchanged
+    assert get_model("local/qwen3.8-27b-nothink").params["temperature"] == 0   # the preset is unchanged
 
 
 def test_claude_request():

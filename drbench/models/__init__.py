@@ -20,7 +20,7 @@ from .base import ChatModel, ModelError, ModelResponse
 
 PRESETS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models.yaml")
 ENV_FILE = os.path.join(ROOT, ".env")
-SETTINGS = ("base_url", "api_key_env", "timeout", "max_retries")
+SETTINGS = ("base_url", "api_key_env", "timeout", "max_retries", "serve", "reset", "mode")
 
 
 def _provider(name):

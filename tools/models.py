@@ -5,9 +5,10 @@
     python tools/models.py serve local/qwen3.8-27b           # start that preset's local vLLM server
     python tools/models.py serve local/qwen3.8-27b --print   # only print the command
 
-Keys go in .env (ANTHROPIC_API_KEY=..., OPENROUTER_API_KEY=...). The GPUs are shared: stop a local
-server (Ctrl-C) when you are done.
-Code: drbench/models/ (claude.py for the Anthropic API, openai_compat.py for vLLM and OpenRouter).
+Keys go in .env (ANTHROPIC_API_KEY=..., OPENAI_API_KEY=..., OPENROUTER_API_KEY=...). The GPUs are
+shared: stop a local server (Ctrl-C) when you are done.
+Code: drbench/models/ (claude.py for the Anthropic API, openai_compat.py for vLLM, the OpenAI API
+and OpenRouter).
 """
 import argparse
 import os

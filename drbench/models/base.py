@@ -39,7 +39,7 @@ class ChatModel:
         self.params = dict(params or {})
         self.vision = vision
         self.price = price          # (input, output[, cache read]) in USD per million tokens, for estimates
-        self.settings = settings    # base_url, api_key_env, timeout, max_retries, ...
+        self.settings = settings    # base_url, api_key_env, timeout, max_retries, serve, reset, mode
 
     def complete(self, content, system=None, json_schema=None):
         """Send one user message and return a ModelResponse."""
@@ -67,4 +67,4 @@ class ChatModel:
     def describe(self):
         return {"preset": self.name, "provider": self.provider, "model": self.model, "params": self.params,
                 "vision": self.vision, "price_per_million": self.price,
-                **{k: v for k, v in self.settings.items() if k in ("base_url", "api_key_env")}}
+                **{k: v for k, v in self.settings.items() if k in ("base_url", "api_key_env", "serve", "reset", "mode")}}

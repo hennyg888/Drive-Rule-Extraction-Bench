@@ -2,7 +2,8 @@
 #
 # Each preset:
 #   provider     anthropic (the Anthropic API, drbench/models/claude.py) or
-#                openai (any OpenAI-compatible server: local vLLM, OpenRouter; drbench/models/openai_compat.py)
+#                openai (any OpenAI-compatible server: local vLLM, the OpenAI API, OpenRouter;
+#                drbench/models/openai_compat.py)
 #   model        the model id that API knows
 #   base_url     openai provider: where the server is
 #   api_key_env  openai provider: the environment variable holding the key (leave out for a local server)
@@ -14,9 +15,12 @@
 #   params       sent with every request; see the provider's file for what each API takes.
 #                Override one for a run with --set, e.g. --set effort=low
 #   serve        local presets: the command that starts the server (python tools/models.py serve <preset> runs it)
+#   reset        local vLLM presets: cache-reset endpoints called before every request (see the local section)
+#   mode         the preset's thinking mode (thinking-xhigh, no-thinking ...); --save-to keeps each mode in
+#                its own folder, extraction_outputs/<model>/<mode>/
 #
 # Keys go in .env at the repository root (ignored by git):
-#   ANTHROPIC_API_KEY=...      OPENROUTER_API_KEY=...
+#   ANTHROPIC_API_KEY=...      OPENAI_API_KEY=...      OPENROUTER_API_KEY=...
 
 # ------------------------------------------------------------------ Anthropic API (Claude)
 # Thinking is always on for these models; effort sets how much.
@@ -39,6 +43,55 @@ anthropic/claude-haiku-5-5:            # prompts over 100K tokens cost $0.50 / $
   model: claude-haiku-5-5
   price: [0.10, 0.50]
   params: {max_tokens: 64000, effort: medium}
+
+# ------------------------------------------------------------------ OpenAI API (GPT)
+# Needs an API key from platform.openai.com with credit on it (OPENAI_API_KEY); a ChatGPT
+# subscription does not cover API calls.
+# These models think before answering; reasoning_effort sets how much (medium is the API's default).
+# Neither model thought much on the whole MTO handbook (114,518 input tokens). Reasoning tokens of
+# all output tokens, time and cost:
+#   gpt-6.2-sol    medium    357 of 14,757   170 s  $0.38      high  2,924 of 18,526   227 s  $0.41
+#   gpt-6.2-astra  medium     34 of 10,755   131 s  $1.35      high  2,912 of 19,087   284 s  $1.68
+# One preset per effort, named by `mode`, as for the local models.
+# They take no temperature or top_p, so a repeated run may give a different answer.
+# max_completion_tokens covers the thinking and the answer together. Prices are for prompts up to
+# 272K input tokens. Save with --save-to extraction_outputs/openai, so the answers land in
+# extraction_outputs/openai/<model>/<mode>/.
+openai/gpt-6.2-astra:                  # the flagship
+  provider: openai
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  model: gpt-6.2-astra
+  mode: reasoning-medium
+  price: [8.00, 40.00, 0.40]
+  params: {max_completion_tokens: 128000, reasoning_effort: medium}
+
+openai/gpt-6.2-astra-high:
+  provider: openai
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  model: gpt-6.2-astra
+  mode: reasoning-high
+  price: [8.00, 40.00, 0.40]
+  params: {max_completion_tokens: 128000, reasoning_effort: high}
+
+openai/gpt-6.2-sol:
+  provider: openai
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  model: gpt-6.2-sol
+  mode: reasoning-medium
+  price: [2.00, 10.00, 0.10]
+  params: {max_completion_tokens: 128000, reasoning_effort: medium}
+
+openai/gpt-6.2-sol-high:
+  provider: openai
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  model: gpt-6.2-sol
+  mode: reasoning-high
+  price: [2.00, 10.00, 0.10]
+  params: {max_completion_tokens: 128000, reasoning_effort: high}
 
 # ------------------------------------------------------------------ OpenRouter (one key, many models)
 openrouter/qwen3.8-27b:
@@ -86,27 +139,151 @@ openrouter/claude-haiku-5.5:           # the same Claude model through OpenRoute
 
 # ------------------------------------------------------------------ local vLLM (this server's GPUs)
 # Start the server first (python tools/models.py serve <preset>, or the command below), one model at a time.
-# Weights are in ~/hf; vLLM is in ~/qwen-trial/.venv. Thinking is on by default for Qwen; the
-# -nothink presets turn it off. Qwen's recommended sampling: thinking 0.6/0.95, no thinking 0.7/0.8.
+# Weights are in ~/hf; vLLM is in ~/qwen-trial/.venv.
+#
+# The benchmark candidates (Qwen3.8-27B, Gemma 4 31B, Muse Glimmer 30B, MiniCPM-V 4.7, GLM-4.6V-Flash) are
+# all set the same way:
+# - the full-precision weights (BF16, no quantized build), pinned to one Hugging Face revision;
+# - the prompt and message that Claude gets;
+# - greedy decoding (temperature 0) in place of the model card's sampling settings, so that a fixed
+#   prompt gives the same answer on every run. One exception: Gemma's thinking mode loops under
+#   greedy decoding, so it uses its card's sampling with a fixed seed (see below);
+# - one preset per thinking mode, named by `mode`. A -nothink preset uses the server of the preset
+#   above it.
+#
+# Temperature 0 alone did not give the same answer twice (Qwen3.8-27B, MTO: two runs of the same
+# request differed from the 150th output token on, 65 and 68 rules). vLLM keeps image embeddings from
+# earlier requests in a cache of 16,384 tokens, less than one handbook's images (MTO: 245 images,
+# about 19,300 tokens for Qwen), and what is left in it changes how the long prompt is split into
+# steps, which changes the numbers. So each server takes one request at a time, keeps no prefix
+# cache, and `reset` empties that cache before every request (the endpoint needs
+# VLLM_SERVER_DEV_MODE=1; the server listens on localhost only). With this, repeated runs give the
+# same tokens and the same log-probabilities. vLLM's own switch for reproducible output,
+# VLLM_BATCH_INVARIANT=1, does not support Qwen3.8's linear-attention layers in vLLM 0.32.
+
+# Qwen3.8-27B. A whole handbook is about 132K input tokens (MTO), so the context is the model's
+# full 262,144. Thinking is on by default, at the model's default effort (xhigh).
 local/qwen3.8-27b:
   provider: openai
   base_url: http://localhost:8000/v1
-  model: qwen3.8-27b
-  params: {max_tokens: 64000, temperature: 0.6, top_p: 0.95}   # thinking needs room: a page took 23K-29K thinking tokens
+  model: qwen/qwen3.8-27b
+  mode: thinking-xhigh
+  params: {max_tokens: 100000, temperature: 0}
+  reset: [reset_encoder_cache]
   serve: >-
-    CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf vllm serve Qwen/Qwen3.8-27B-FP8 --served-model-name qwen3.8-27b
-    --tensor-parallel-size 4 --reasoning-parser qwen3 --max-model-len 131072
-    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.90 --port 8000
+    CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve Qwen/Qwen3.8-27B
+    --revision 37561816e66b5b9153b1b64c10968c18c1e6f4a0 --served-model-name qwen/qwen3.8-27b
+    --tensor-parallel-size 4 --reasoning-parser qwen3 --max-model-len 262144
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.95
+    --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000
 
 local/qwen3.8-27b-nothink:
   provider: openai
   base_url: http://localhost:8000/v1
-  model: qwen3.8-27b
+  model: qwen/qwen3.8-27b
+  mode: no-thinking
+  params: {max_tokens: 32000, temperature: 0, extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+  reset: [reset_encoder_cache]
+
+# Gemma 4 31B (the instruction-tuned weights). Thinking is off unless the chat template is given
+# enable_thinking; it has no levels. Every image is 280 tokens, so MTO is 180,754 input tokens. The
+# context is 240,000, not the model's 262,144, which needs more key-value cache than these GPUs have
+# left beside the weights (6.15 GiB per GPU; 5.8 GiB is free); that leaves 58,000 tokens of output.
+# With thinking on and greedy decoding the model looped: after about 200 lines of reasoning it
+# repeated one block of "double check" lines 32 times, until the output limit, and gave no answer.
+# So the thinking preset samples with the model card's settings (temperature 1.0, top_p 0.95,
+# top_k 64) and seed 0, which gave the same tokens on repeated runs; its mode name says so. The
+# no-thinking preset is greedy like the others.
+local/gemma-4-31b-it:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: google/gemma-4-31b-it
+  mode: thinking-sampled-seed0
   params:
-    max_tokens: 32000
-    temperature: 0.7
-    top_p: 0.8
-    extra_body: {chat_template_kwargs: {enable_thinking: false}}
+    max_tokens: 58000
+    temperature: 1.0
+    top_p: 0.95
+    seed: 0
+    extra_body: {top_k: 64, chat_template_kwargs: {enable_thinking: true}}
+  reset: [reset_encoder_cache]
+  serve: >-
+    CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve google/gemma-4-31B-it
+    --revision 842da3794eaa0b77d5f08bae87a17459d91ff475 --served-model-name google/gemma-4-31b-it
+    --tensor-parallel-size 4 --reasoning-parser gemma4 --max-model-len 240000
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.95
+    --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000
+
+local/gemma-4-31b-it-nothink:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: google/gemma-4-31b-it
+  mode: no-thinking
+  params: {max_tokens: 32000, temperature: 0, extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+  reset: [reset_encoder_cache]
+
+# Muse Glimmer 30B. Reasoning strength (low, medium, high, xhigh) is a chat-template setting; the
+# template's own default is high. MTO is 114,242 input tokens. The model's stated context is 131,072
+# ("131,072+" on its card), and the MTO input and high-reasoning output together are 132,096, so the
+# server is started with max_position_embeddings raised to 196,608. Nothing in the model is tied to
+# 131,072: its full-attention layers use no position encoding and the other layers a 2,048-token
+# sliding window. Users report it working this way up to 512K; Meta documents only 131,072.
+local/muse-glimmer-30b:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: meta/muse-glimmer-30b
+  mode: reasoning-high
+  params: {max_tokens: 75000, temperature: 0, extra_body: {chat_template_kwargs: {reasoning_strength: high}}}
+  reset: [reset_encoder_cache]
+  serve: >-
+    CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve meta-models/Muse-Glimmer-30B
+    --revision 1297fd7dfeac4598948a5d15886968435c81c2b7 --served-model-name meta/muse-glimmer-30b
+    --tensor-parallel-size 4 --reasoning-parser muse_glimmer
+    --hf-overrides '{"text_config": {"max_position_embeddings": 196608}}' --max-model-len 196608
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.95
+    --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000
+
+# MiniCPM-V 4.7 35B-A3B (a mixture-of-experts model on the Qwen3.5 text architecture). MTO is 131,561
+# input tokens. Its card documents the no-thinking ("instruct") mode only, and that is the one preset.
+# With enable_thinking the model did not reason: it wrote a 12-rule answer directly in the thinking
+# channel and stopped, so there was no final answer and nothing was checked against the schema.
+local/minicpm-v-4.7-35b-a3b:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: openbmb/minicpm-v-4.7-35b-a3b
+  mode: no-thinking
+  params: {max_tokens: 32000, temperature: 0, extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+  reset: [reset_encoder_cache]
+  serve: >-
+    CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve openbmb/MiniCPM-V-4.7-35B-A3B
+    --revision 98e79ba972b586ac6146d3505771ce1467e199ba --served-model-name openbmb/minicpm-v-4.7-35b-a3b
+    --tensor-parallel-size 4 --reasoning-parser minicpmv --max-model-len 262144
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.95
+    --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000
+
+# GLM-4.6V-Flash (10B). Thinking is on unless the chat template is given enable_thinking false; it has
+# no levels. The context is the model's 131,072: MTO is 114,015 input tokens, which leaves about
+# 17,000 for output. Both modes finished well inside that (4,519 and 2,773 output tokens).
+local/glm-4.6v-flash:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: z-ai/glm-4.6v-flash
+  mode: thinking
+  params: {max_tokens: 16900, temperature: 0, extra_body: {chat_template_kwargs: {enable_thinking: true}}}
+  reset: [reset_encoder_cache]
+  serve: >-
+    CUDA_VISIBLE_DEVICES=0,1,2,3 HF_HOME=~/hf VLLM_SERVER_DEV_MODE=1 vllm serve zai-org/GLM-4.6V-Flash
+    --revision 411bb4d77144a3f03accbf4b780f5acb8b7cde4e --served-model-name z-ai/glm-4.6v-flash
+    --tensor-parallel-size 4 --reasoning-parser glm45 --max-model-len 131072
+    --limit-mm-per-prompt '{"image": 300}' --gpu-memory-utilization 0.95
+    --max-num-seqs 1 --no-enable-prefix-caching --seed 0 --host 127.0.0.1 --port 8000
+
+local/glm-4.6v-flash-nothink:
+  provider: openai
+  base_url: http://localhost:8000/v1
+  model: z-ai/glm-4.6v-flash
+  mode: no-thinking
+  params: {max_tokens: 16900, temperature: 0, extra_body: {chat_template_kwargs: {enable_thinking: false}}}
+  reset: [reset_encoder_cache]
 
 local/qwen3.5-9b:
   provider: openai

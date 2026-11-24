@@ -1,0 +1,88 @@
+{
+ "run": "20261123-174422-openai_gpt-6.2-astra-mto",
+ "started": "2026-11-23 17:44:22",
+ "git": "8da1b05+changes",
+ "preset": "openai/gpt-6.2-astra",
+ "provider": "openai",
+ "model": "gpt-6.2-astra",
+ "params": {
+  "max_completion_tokens": 128000,
+  "reasoning_effort": "medium"
+ },
+ "vision": true,
+ "price_per_million": [
+  8.0,
+  40.0,
+  0.4
+ ],
+ "base_url": "https://api.openai.com/v1",
+ "api_key_env": "OPENAI_API_KEY",
+ "mode": "reasoning-medium",
+ "handbook": "mto",
+ "pages": "all",
+ "images": true,
+ "toc": true,
+ "per_page": false,
+ "prompt": "formal-rules",
+ "prompt_sha256": "3e330fa2b145f5efff320e6fc6c4782e5c1ff3ef61a5d92a109c98d466db9a00",
+ "calls": [
+  {
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "model": "gpt-6.2-astra",
+   "stop_reason": "stop",
+   "input_tokens": 114518,
+   "output_tokens": 10755,
+   "reasoning_tokens": 34,
+   "seconds": 131.2,
+   "cost_usd": 1.3463,
+   "request_id": "chatcmpl-EnX3pnJHxAeE9kYge8nfVFp9rjhfd",
+   "json": true,
+   "citations": {
+    "text": 160,
+    "figure": 36,
+    "caption": 11,
+    "heading": 7
+   }
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 114518,
+  "output_tokens": 10755,
+  "reasoning_tokens": 34,
+  "seconds": 131.2,
+  "cost_usd": 1.3463
+ }
+}
