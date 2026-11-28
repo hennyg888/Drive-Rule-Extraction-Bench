@@ -1,0 +1,1549 @@
+{
+ "scope": "parking (parking, stopping and standing a vehicle, and where each is not allowed)",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "The person operating the vehicle that is being parked, stopped or stood, or is about to be.",
+   "evidence": []
+  },
+  {
+   "term": "PARK",
+   "definition": "To stop and leave a vehicle for any purpose other than loading or unloading passengers or merchandise; PARKED describes a vehicle in that state.",
+   "evidence": [
+    "18.17-c"
+   ]
+  },
+  {
+   "term": "STAND",
+   "definition": "To stop a vehicle for any purpose other than loading or unloading passengers.",
+   "evidence": [
+    "18.16-c"
+   ]
+  },
+  {
+   "term": "TRAVELLED PART OF THE ROAD",
+   "definition": "The portion of the road used by moving traffic, as distinct from the shoulder or the area off the road.",
+   "evidence": []
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "A portion of the roadway that connects sidewalks on opposite sides into a continuous path, or that has signs, lines or other markings for pedestrian crossing; it may be marked or unmarked.",
+   "evidence": [
+    "6.6",
+    "6.7",
+    "6.8",
+    "21.12"
+   ]
+  },
+  {
+   "term": "PEDESTRIAN CROSSOVER",
+   "definition": "A designated area, identified by specific signs, overhead yellow lights and pavement markings, that allows pedestrians to cross a road where there are no traffic lights.",
+   "evidence": [
+    "8.36",
+    "21.16"
+   ]
+  },
+  {
+   "term": "ACCESSIBLE PARKING PERMIT",
+   "definition": "A laminated permit issued to a person with a disability that entitles the vehicle in which the named person is travelling to park, stand or stop in designated disabled areas.",
+   "evidence": [
+    "11.16"
+   ]
+  },
+  {
+   "term": "PARALLEL PARKING",
+   "definition": "Parking a vehicle with its wheels parallel and next to the curb or side of the road.",
+   "evidence": [
+    "11.28"
+   ]
+  },
+  {
+   "term": "ROADSIDE STOP",
+   "definition": "Stopping by the side of the road for a short time, for example to check something outside the vehicle or to look at a map.",
+   "evidence": [
+    "11.44"
+   ]
+  },
+  {
+   "term": "HAZARD LIGHTS",
+   "definition": "The vehicle's emergency flashers, which flash all turn signals at once.",
+   "evidence": []
+  },
+  {
+   "term": "DUTCH REACH",
+   "definition": "Opening the driver's door with the right hand, which forces a shoulder check at the same time.",
+   "evidence": [
+    "11.10"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "PARK-GEN-01",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "01",
+   "title": "Obey stopping, standing and parking signs",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "signs say the DRIVER may not stop or limit stopping, standing or parking",
+   "action": "obey those signs",
+   "unless": "",
+   "statement": "WHEN signs say the DRIVER may not stop or limit stopping, standing or parking, the DRIVER MUST obey those signs.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.1"
+   ]
+  },
+  {
+   "id": "PARK-GEN-02",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "02",
+   "title": "Unposted parking by-laws",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "choosing where to PARK",
+   "action": "be aware that not all parking by-laws are posted on signs",
+   "unless": "",
+   "statement": "WHEN choosing where to PARK, the DRIVER SHOULD be aware that not all parking by-laws are posted on signs.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Parking rules change from road to road and place to place.",
+   "evidence": [
+    "11.1"
+   ]
+  },
+  {
+   "id": "PARK-GEN-03",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "03",
+   "title": "Shut down and lock after parking",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the vehicle has been PARKED",
+   "action": "turn off the ignition and the lights, remove the key and lock the door",
+   "unless": "",
+   "statement": "WHEN the vehicle has been PARKED, the DRIVER MUST turn off the ignition and the lights, remove the key and lock the door.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason given: to deter theft. Repeated in the parallel-parking and hill-parking steps.",
+   "evidence": [
+    "11.12",
+    "11.36",
+    "11.41"
+   ]
+  },
+  {
+   "id": "PARK-GEN-04",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "04",
+   "title": "No children or animals left in a parked vehicle",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle has been PARKED",
+   "action": "leave children or animals in the vehicle",
+   "unless": "",
+   "statement": "WHEN the vehicle has been PARKED, the DRIVER MUST NOT leave children or animals in the vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.12"
+   ]
+  },
+  {
+   "id": "PARK-GEN-05",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "05",
+   "title": "Parking lights only for parking",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "driving in low light",
+   "action": "use parking lights instead of headlights",
+   "unless": "",
+   "statement": "WHEN driving in low light, the DRIVER MUST NOT use parking lights instead of headlights.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "low light",
+     "explanation": "no light level given"
+    }
+   ],
+   "note": "The handbook says parking lights are only for parking.",
+   "evidence": [
+    "4.68"
+   ]
+  },
+  {
+   "id": "PARK-GEN-06",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "06",
+   "title": "Turn off engine when parked over 10 seconds",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the vehicle is PARKED for more than 10 seconds",
+   "action": "turn off the vehicle",
+   "unless": "",
+   "statement": "WHEN the vehicle is PARKED for more than 10 seconds, the DRIVER MUST turn off the vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Given as a fuel-efficiency and emissions tip; reason given: engines warm up within 30 seconds even in cold weather.",
+   "evidence": [
+    "16.15"
+   ]
+  },
+  {
+   "id": "PARK-LOC-01",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "01",
+   "title": "Never park on the travelled part of a road",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "stopping to PARK",
+   "action": "PARK on the TRAVELLED PART OF THE ROAD",
+   "unless": "",
+   "statement": "WHEN stopping to PARK, the DRIVER MUST NOT PARK on the TRAVELLED PART OF THE ROAD.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The parallel-park road-test task likewise says that where there is no curb, park off the travelled part of the road.",
+   "evidence": [
+    "11.3",
+    "29.246"
+   ]
+  },
+  {
+   "id": "PARK-LOC-02",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "02",
+   "title": "Use the shoulder if you must stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the DRIVER must stop for some reason",
+   "action": "drive off the road onto the shoulder",
+   "unless": "",
+   "statement": "WHEN the DRIVER must stop for some reason, the DRIVER MUST drive off the road onto the shoulder.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "for some reason",
+     "explanation": "the reasons are not listed"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "11.3"
+   ]
+  },
+  {
+   "id": "PARK-LOC-03",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "03",
+   "title": "No parking on curves, hills or without 125 m view",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the location is on a curve OR on a hill OR anywhere without a clear view for at least 125 metres in both directions",
+   "action": "PARK there",
+   "unless": "",
+   "statement": "WHEN the location is on a curve OR on a hill OR anywhere without a clear view for at least 125 metres in both directions, the DRIVER MUST NOT PARK there.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "clear view",
+     "explanation": "does not say what counts as an obstruction"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "11.4"
+   ]
+  },
+  {
+   "id": "PARK-LOC-04",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "04",
+   "title": "Do not block vehicles, sidewalks, crossings or entrances",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "choosing where to PARK",
+   "action": "PARK where the vehicle will block a vehicle already PARKED, a sidewalk, a CROSSWALK, a pedestrian crossing or a road entrance",
+   "unless": "",
+   "statement": "WHEN choosing where to PARK, the DRIVER MUST NOT PARK where the vehicle will block a vehicle already PARKED, a sidewalk, a CROSSWALK, a pedestrian crossing or a road entrance.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.5"
+   ]
+  },
+  {
+   "id": "PARK-LOC-05",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "05",
+   "title": "Fire hydrant: 3 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 3 metres of a fire hydrant",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 3 metres of a fire hydrant, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.6"
+   ]
+  },
+  {
+   "id": "PARK-LOC-06",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "06",
+   "title": "Bridge: 100 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a bridge OR within 100 metres of a bridge",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN on a bridge OR within 100 metres of a bridge, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.6"
+   ]
+  },
+  {
+   "id": "PARK-LOC-07",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "07",
+   "title": "Public entrances: 6 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 6 metres of a public entrance to a hotel, theatre or public hall AND that building is open to the public",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 6 metres of a public entrance to a hotel, theatre or public hall AND that building is open to the public, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.6"
+   ]
+  },
+  {
+   "id": "PARK-LOC-08",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "08",
+   "title": "Intersection: 9 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 9 metres of an intersection",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 9 metres of an intersection, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.7"
+   ]
+  },
+  {
+   "id": "PARK-LOC-09",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "09",
+   "title": "Signalized intersection: 15 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 15 metres of an intersection controlled by traffic lights",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 15 metres of an intersection controlled by traffic lights, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.7"
+   ]
+  },
+  {
+   "id": "PARK-LOC-10",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "10",
+   "title": "Railway crossing: 15 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 15 metres of the nearest rail of a level railway crossing",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 15 metres of the nearest rail of a level railway crossing, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.8"
+   ]
+  },
+  {
+   "id": "PARK-LOC-11",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "11",
+   "title": "Not in the way of traffic or snow clearing",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "choosing where to PARK",
+   "action": "PARK where the vehicle will get in the way of traffic or snow clearing",
+   "unless": "",
+   "statement": "WHEN choosing where to PARK, the DRIVER MUST NOT PARK where the vehicle will get in the way of traffic or snow clearing.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "get in the way of",
+     "explanation": "no clearance or distance given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "11.9"
+   ]
+  },
+  {
+   "id": "PARK-LOC-12",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "12",
+   "title": "Watching an animal: pull completely off the road",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the DRIVER wishes to watch an animal",
+   "action": "first find a safe place to pull completely off the road and PARK, and not PARK on the shoulder of the road",
+   "unless": "",
+   "statement": "WHEN the DRIVER wishes to watch an animal, the DRIVER MUST first find a safe place to pull completely off the road and PARK, and not PARK on the shoulder of the road.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "safe place",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Reason given: other drivers may be distracted by the animal and hit the PARKED vehicle.",
+   "evidence": [
+    "13.58"
+   ]
+  },
+  {
+   "id": "PARK-LOC-13",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "13",
+   "title": "Freeway trouble: never stop in driving lanes",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle has trouble on a freeway",
+   "action": "stop in the driving lanes",
+   "unless": "",
+   "statement": "WHEN the vehicle has trouble on a freeway, the DRIVER MUST NOT stop in the driving lanes.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The same block says to check mirrors, put on HAZARD LIGHTS, ease off the gas and pull over to the nearest shoulder as quickly as possible; see PARK-COND-03.",
+   "evidence": [
+    "15.9"
+   ]
+  },
+  {
+   "id": "PARK-LOC-14",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "14",
+   "title": "Missed freeway exit: do not stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the DRIVER misses a freeway exit",
+   "action": "stop or reverse on the freeway",
+   "unless": "",
+   "statement": "WHEN the DRIVER misses a freeway exit, the DRIVER MUST NOT stop or reverse on the freeway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook says to take the next exit instead.",
+   "evidence": [
+    "12.27"
+   ]
+  },
+  {
+   "id": "PARK-LOC-15",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "15",
+   "title": "Fog or whiteout: do not stop on the road",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "driving in fog OR in blowing snow OR in a whiteout",
+   "action": "stop on the TRAVELLED PART OF THE ROAD",
+   "unless": "",
+   "statement": "WHEN driving in fog OR in blowing snow OR in a whiteout, the DRIVER MUST NOT stop on the TRAVELLED PART OF THE ROAD.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason given: the vehicle could become the first link in a chain-reaction collision. Stated for fog and for blowing snow and whiteouts.",
+   "evidence": [
+    "14.29",
+    "14.36",
+    "14.75",
+    "14.81"
+   ]
+  },
+  {
+   "id": "PARK-SIGN-01",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "01",
+   "title": "Permissive parking sign",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "in the area between permissive parking signs (a green circle around a P)",
+   "action": "PARK there during the times posted",
+   "unless": "",
+   "statement": "WHEN in the area between permissive parking signs (a green circle around a P), the DRIVER MAY ONLY PARK there during the times posted.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The signs are used in pairs or groups; the example shows 30 min, 9 AM-6 PM, MON-FRI. MAY ONLY is read from 'during the times posted'.",
+   "evidence": [
+    "18.12",
+    "18.12-c"
+   ]
+  },
+  {
+   "id": "PARK-SIGN-02",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "02",
+   "title": "No stopping sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in the area between no-stopping signs",
+   "action": "stop the vehicle, even for a moment",
+   "unless": "",
+   "statement": "WHEN in the area between no-stopping signs, the DRIVER MUST NOT stop the vehicle, even for a moment.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Regulatory sign used in pairs or groups: a red circle with a slash over a stop-sign symbol, with arrows.",
+   "evidence": [
+    "18.15",
+    "18.15-c"
+   ]
+  },
+  {
+   "id": "PARK-SIGN-03",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "03",
+   "title": "No standing sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in the area between NO STANDING signs",
+   "action": "STAND",
+   "unless": "",
+   "statement": "WHEN in the area between NO STANDING signs, the DRIVER MUST NOT STAND.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stopping while loading or unloading passengers is allowed. Regulatory sign used in pairs or groups.",
+   "evidence": [
+    "18.16",
+    "18.16-c"
+   ]
+  },
+  {
+   "id": "PARK-SIGN-04",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "04",
+   "title": "No parking sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in the area between no-parking signs",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN in the area between no-parking signs, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stopping to load or unload passengers or merchandise is allowed. Regulatory sign used in pairs or groups: a red circle with a slash over a P.",
+   "evidence": [
+    "18.17",
+    "18.17-c"
+   ]
+  },
+  {
+   "id": "PARK-ACC-01",
+   "topic": "PARK",
+   "group": "ACC",
+   "number": "01",
+   "title": "Accessible parking spaces",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "at a parking space designated for people with disabilities",
+   "action": "PARK there",
+   "unless": "an ACCESSIBLE PARKING PERMIT belonging to the DRIVER or to one of the passengers is displayed in the windshield",
+   "statement": "WHEN at a parking space designated for people with disabilities, the DRIVER MUST NOT PARK there, UNLESS an ACCESSIBLE PARKING PERMIT belonging to the DRIVER or to one of the passengers is displayed in the windshield.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Worded as 'never' in the text; the regulatory sign (BY PERMIT ONLY) makes it a requirement. Misuse of a permit results in fines and revoked privileges. The permit may be displayed on the dashboard or the turned-down sun visor.",
+   "evidence": [
+    "11.26",
+    "11.16",
+    "11.24",
+    "18.23",
+    "18.23-c"
+   ]
+  },
+  {
+   "id": "PARK-ACC-02",
+   "topic": "PARK",
+   "group": "ACC",
+   "number": "02",
+   "title": "Accessible pick-up and drop-off curb areas",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "at a curb area reserved for picking up and dropping off passengers with disabilities",
+   "action": "STAND or stop there",
+   "unless": "the vehicle displays a valid ACCESSIBLE PARKING PERMIT belonging to the DRIVER or to one of the passengers AND the stop is to pick up or drop off passengers with disabilities",
+   "statement": "WHEN at a curb area reserved for picking up and dropping off passengers with disabilities, the DRIVER MUST NOT STAND or stop there, UNLESS the vehicle displays a valid ACCESSIBLE PARKING PERMIT belonging to the DRIVER or to one of the passengers AND the stop is to pick up or drop off passengers with disabilities.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Combines the text with the NO STANDING / BY PERMIT ONLY sign.",
+   "evidence": [
+    "11.26",
+    "18.38",
+    "18.38-c"
+   ]
+  },
+  {
+   "id": "PARK-ACC-03",
+   "topic": "PARK",
+   "group": "ACC",
+   "number": "03",
+   "title": "Permit entitles parking in designated areas",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "the person named on an ACCESSIBLE PARKING PERMIT is travelling in the vehicle AND the permit is displayed on the dashboard or the turned-down sun visor",
+   "action": "PARK, STAND or stop in designated disabled parking, standing and stopping areas",
+   "unless": "",
+   "statement": "WHEN the person named on an ACCESSIBLE PARKING PERMIT is travelling in the vehicle AND the permit is displayed on the dashboard or the turned-down sun visor, the DRIVER MAY PARK, STAND or stop in designated disabled parking, standing and stopping areas.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The permit is issued to the person, not to a specific vehicle.",
+   "evidence": [
+    "11.16"
+   ]
+  },
+  {
+   "id": "PARK-DOOR-01",
+   "topic": "PARK",
+   "group": "DOOR",
+   "number": "01",
+   "title": "Open doors only when safe",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is PARKED",
+   "action": "open a door without first making sure it will not endanger any other person or vehicle or interfere with traffic",
+   "unless": "",
+   "statement": "WHEN the vehicle is PARKED, the DRIVER MUST NOT open a door without first making sure it will not endanger any other person or vehicle or interfere with traffic.",
+   "penalty": "Three demerit points (improper opening of a vehicle door).",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.10",
+    "11.11",
+    "22.133"
+   ]
+  },
+  {
+   "id": "PARK-DOOR-02",
+   "topic": "PARK",
+   "group": "DOOR",
+   "number": "02",
+   "title": "Dutch reach",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "opening the driver's door of a PARKED vehicle",
+   "action": "use the DUTCH REACH",
+   "unless": "",
+   "statement": "WHEN opening the driver's door of a PARKED vehicle, the DRIVER SHOULD use the DUTCH REACH.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Described as generally a good practice.",
+   "evidence": [
+    "11.10"
+   ]
+  },
+  {
+   "id": "PARK-DOOR-03",
+   "topic": "PARK",
+   "group": "DOOR",
+   "number": "03",
+   "title": "Check traffic and cyclists before opening a door",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "PARKED at the side of the roadway AND about to open a door",
+   "action": "check traffic, look behind, and check the mirrors and blind spots for passing cyclists, taking extra precautions not to open the door in a cyclist's path",
+   "unless": "",
+   "statement": "WHEN PARKED at the side of the roadway AND about to open a door, the DRIVER MUST check traffic, look behind, and check the mirrors and blind spots for passing cyclists, taking extra precautions not to open the door in a cyclist's path.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "extra precautions",
+     "explanation": "precautions not specified"
+    }
+   ],
+   "note": "Cyclists often ride close to parked cars. Diagram 2-50 shows a door opened into a cyclist's path, marked as prohibited.",
+   "evidence": [
+    "6.47",
+    "11.10",
+    "11.11",
+    "11.36",
+    "11.41"
+   ]
+  },
+  {
+   "id": "PARK-DOOR-04",
+   "topic": "PARK",
+   "group": "DOOR",
+   "number": "04",
+   "title": "Door next to traffic: minimum time",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "a door of the PARKED vehicle must be opened next to traffic",
+   "action": "keep it open only long enough to load or unload passengers",
+   "unless": "",
+   "statement": "WHEN a door of the PARKED vehicle must be opened next to traffic, the DRIVER MUST keep it open only long enough to load or unload passengers.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.10"
+   ]
+  },
+  {
+   "id": "PARK-PAR-01",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "01",
+   "title": "Park parallel to the curb",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking on a road where parking is allowed",
+   "action": "PARK parallel to the curb",
+   "unless": "signs say that vehicles should be PARKED at an angle",
+   "statement": "WHEN parking on a road where parking is allowed, the DRIVER MUST PARK parallel to the curb, UNLESS signs say that vehicles should be PARKED at an angle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.28"
+   ]
+  },
+  {
+   "id": "PARK-PAR-02",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "02",
+   "title": "Park on the right side",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking on a road",
+   "action": "PARK on the right side of the road in the direction of traffic",
+   "unless": "the road is a one-way road",
+   "statement": "WHEN parking on a road, the DRIVER MUST PARK on the right side of the road in the direction of traffic, UNLESS the road is a one-way road.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The one-way exception is taken from the next sentence in the same block (PARK-PAR-03).",
+   "evidence": [
+    "11.28"
+   ]
+  },
+  {
+   "id": "PARK-PAR-03",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "03",
+   "title": "One-way roads: both sides",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "on a one-way road where parking is allowed",
+   "action": "use PARALLEL PARKING on either side of the road",
+   "unless": "signs say otherwise",
+   "statement": "WHEN on a one-way road where parking is allowed, the DRIVER MAY use PARALLEL PARKING on either side of the road, UNLESS signs say otherwise.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.28"
+   ]
+  },
+  {
+   "id": "PARK-PAR-04",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "04",
+   "title": "Choosing a parallel-parking space",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "PARALLEL PARKING on the right-hand side of the road",
+   "action": "find a space about one and one-half times longer than the vehicle",
+   "unless": "",
+   "statement": "WHEN PARALLEL PARKING on the right-hand side of the road, the DRIVER MUST find a space about one and one-half times longer than the vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "about",
+     "explanation": "approximate length only"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "11.30"
+   ]
+  },
+  {
+   "id": "PARK-PAR-05",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "05",
+   "title": "Check traffic and signal before pulling over to park",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to pull over to PARALLEL PARK",
+   "action": "check the traffic beside and behind, signal the intention to pull over and stop, check the mirror before slowing down and check the blind spot before pulling into position",
+   "unless": "",
+   "statement": "WHEN about to pull over to PARALLEL PARK, the DRIVER MUST check the traffic beside and behind, signal the intention to pull over and stop, check the mirror before slowing down and check the blind spot before pulling into position.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Combines the handbook steps with the road-test checks. The road test adds: signal before slowing down unless vehicles are waiting to enter from side roads or driveways before the stopping point (see PARK-RS-02).",
+   "evidence": [
+    "11.30",
+    "29.234",
+    "29.236"
+   ]
+  },
+  {
+   "id": "PARK-PAR-06",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "06",
+   "title": "Starting position for parallel parking",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "getting into position to PARALLEL PARK",
+   "action": "drive alongside the vehicle ahead of the empty space, leaving about a metre and at least 60 centimetres between the vehicles, and stop when the rear bumper is in line with that vehicle",
+   "unless": "",
+   "statement": "WHEN getting into position to PARALLEL PARK, the DRIVER MUST drive alongside the vehicle ahead of the empty space, leaving about a metre and at least 60 centimetres between the vehicles, and stop when the rear bumper is in line with that vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "about a metre",
+     "explanation": "approximate gap"
+    }
+   ],
+   "note": "The handbook says about a metre (11.30); the road-test task says at least 60 cm and to stop when completely in front of the empty space (29.240).",
+   "evidence": [
+    "11.30",
+    "29.240"
+   ]
+  },
+  {
+   "id": "PARK-PAR-07",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "07",
+   "title": "Check before reversing into the space",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "about to reverse into a parallel-parking space",
+   "action": "start reversing before looking all around the vehicle, checking the mirrors and both blind spots, and before the way is clear or traffic has stopped to let the DRIVER PARK",
+   "unless": "",
+   "statement": "WHEN about to reverse into a parallel-parking space, the DRIVER MUST NOT start reversing before looking all around the vehicle, checking the mirrors and both blind spots, and before the way is clear or traffic has stopped to let the DRIVER PARK.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "the way is clear",
+     "explanation": "no gap given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "29.244"
+   ]
+  },
+  {
+   "id": "PARK-PAR-08",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "08",
+   "title": "Reversing into the space",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "reversing into a parallel-parking space",
+   "action": "reverse slowly with the steering wheel turned fully toward the curb, straighten the wheels when the outside rear corner of the vehicle in front can be seen, turn the wheel fully toward the road to bring the vehicle in line with the curb, and drive forward to straighten if not parallel",
+   "unless": "",
+   "statement": "WHEN reversing into a parallel-parking space, the DRIVER MUST reverse slowly with the steering wheel turned fully toward the curb, straighten the wheels when the outside rear corner of the vehicle in front can be seen, turn the wheel fully toward the road to bring the vehicle in line with the curb, and drive forward to straighten if not parallel.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Diagram 2-52 shows the sequence.",
+   "evidence": [
+    "11.31",
+    "11.32",
+    "11.33",
+    "11.34",
+    "11.29",
+    "29.246"
+   ]
+  },
+  {
+   "id": "PARK-PAR-09",
+   "topic": "PARK",
+   "group": "PAR",
+   "number": "09",
+   "title": "Final position in the space",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "in a parallel-parking space",
+   "action": "move forward or backward to fit within the pavement markings or to leave room for the vehicles in front and behind to pull out, without hitting the curb or touching another vehicle",
+   "unless": "",
+   "statement": "WHEN in a parallel-parking space, the DRIVER MUST move forward or backward to fit within the pavement markings or to leave room for the vehicles in front and behind to pull out, without hitting the curb or touching another vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "room",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "From the road-test task description.",
+   "evidence": [
+    "29.246"
+   ]
+  },
+  {
+   "id": "PARK-SEC-01",
+   "topic": "PARK",
+   "group": "SEC",
+   "number": "01",
+   "title": "Secure the parked vehicle",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "properly PARKED, including on a hill",
+   "action": "set the parking brake and move the gear selector into park, or shift into first or reverse gear if the vehicle has a manual transmission",
+   "unless": "",
+   "statement": "WHEN properly PARKED, including on a hill, the DRIVER MUST set the parking brake and move the gear selector into park, or shift into first or reverse gear if the vehicle has a manual transmission.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Road-test text allows a manual vehicle to be left in neutral if the engine is not turned off (see PARK-RS-08).",
+   "evidence": [
+    "11.35",
+    "11.41",
+    "29.248"
+   ]
+  },
+  {
+   "id": "PARK-HILL-01",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "01",
+   "title": "Facing downhill",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking facing downhill",
+   "action": "turn the front wheels towards the curb or right shoulder",
+   "unless": "",
+   "statement": "WHEN parking facing downhill, the DRIVER MUST turn the front wheels towards the curb or right shoulder.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason: keeps the vehicle from rolling into traffic if the brakes disengage. Diagram 2-53 A.",
+   "evidence": [
+    "11.38",
+    "11.42"
+   ]
+  },
+  {
+   "id": "PARK-HILL-02",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "02",
+   "title": "Facing uphill with a curb",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking facing uphill with a curb",
+   "action": "turn the steering wheel to the left so the wheels are turned towards the road",
+   "unless": "",
+   "statement": "WHEN parking facing uphill with a curb, the DRIVER MUST turn the steering wheel to the left so the wheels are turned towards the road.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason: the tires catch the curb if the vehicle rolls backward. Diagram 2-53 B.",
+   "evidence": [
+    "11.39",
+    "11.42"
+   ]
+  },
+  {
+   "id": "PARK-HILL-03",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "03",
+   "title": "Facing uphill without a curb",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking facing uphill without a curb",
+   "action": "turn the wheels sharply to the right",
+   "unless": "",
+   "statement": "WHEN parking facing uphill without a curb, the DRIVER MUST turn the wheels sharply to the right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason: if the vehicle rolls it goes off the road rather than into traffic. Diagram 2-53 C.",
+   "evidence": [
+    "11.40",
+    "11.42"
+   ]
+  },
+  {
+   "id": "PARK-RS-01",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "01",
+   "title": "Checks before a roadside stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to slow down for a ROADSIDE STOP",
+   "action": "check the mirrors and blind spot to see when the way is clear, and scan for signs to see whether the stop is legal",
+   "unless": "",
+   "statement": "WHEN about to slow down for a ROADSIDE STOP, the DRIVER MUST check the mirrors and blind spot to see when the way is clear, and scan for signs to see whether the stop is legal.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "the way is clear",
+     "explanation": "the road test says a 150-metre gap in both directions is enough, but the handbook gives no required gap"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "11.45",
+    "29.171"
+   ]
+  },
+  {
+   "id": "PARK-RS-02",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "02",
+   "title": "Signal timing for a roadside stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a ROADSIDE STOP",
+   "action": "turn on the signal before slowing down",
+   "unless": "vehicles are waiting to enter the road from side roads or driveways between the vehicle and the stopping point, in which case wait until past those entrances before signalling",
+   "statement": "WHEN making a ROADSIDE STOP, the DRIVER MUST turn on the signal before slowing down, UNLESS vehicles are waiting to enter the road from side roads or driveways between the vehicle and the stopping point, in which case wait until past those entrances before signalling.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason: so drivers will not think the vehicle is turning before the stopping point. The same rule applies before parallel parking and before a three-point turn.",
+   "evidence": [
+    "11.46",
+    "29.173",
+    "29.236",
+    "29.268"
+   ]
+  },
+  {
+   "id": "PARK-RS-03",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "03",
+   "title": "Roadside stop position",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a ROADSIDE STOP where there is a curb",
+   "action": "steer to the side, steadily reducing speed, and stop parallel to the curb and not more than about 30 centimetres from it",
+   "unless": "",
+   "statement": "WHEN making a ROADSIDE STOP where there is a curb, the DRIVER MUST steer to the side, steadily reducing speed, and stop parallel to the curb and not more than about 30 centimetres from it.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "11.47 uses 'should not be more than about 30 cm'; the road test states it as a command. 11.47 also says curb or edge of the road.",
+   "evidence": [
+    "11.47",
+    "29.175",
+    "29.177"
+   ]
+  },
+  {
+   "id": "PARK-RS-04",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "04",
+   "title": "Roadside stop without a curb",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a ROADSIDE STOP where there is no curb",
+   "action": "stop as far as possible off the TRAVELLED PART OF THE ROAD",
+   "unless": "",
+   "statement": "WHEN making a ROADSIDE STOP where there is no curb, the DRIVER MUST stop as far as possible off the TRAVELLED PART OF THE ROAD.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as far as possible",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "29.177",
+    "29.272"
+   ]
+  },
+  {
+   "id": "PARK-RS-05",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "05",
+   "title": "Do not block entrances or traffic",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "making a ROADSIDE STOP",
+   "action": "stop where the vehicle will block an entrance or other traffic",
+   "unless": "",
+   "statement": "WHEN making a ROADSIDE STOP, the DRIVER MUST NOT stop where the vehicle will block an entrance or other traffic.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.47",
+    "29.177",
+    "29.272"
+   ]
+  },
+  {
+   "id": "PARK-RS-06",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "06",
+   "title": "Hazard lights after a roadside stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopped for a ROADSIDE STOP",
+   "action": "turn off the signal and turn on the HAZARD LIGHTS",
+   "unless": "",
+   "statement": "WHEN stopped for a ROADSIDE STOP, the DRIVER MUST turn off the signal and turn on the HAZARD LIGHTS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.48",
+    "29.181"
+   ]
+  },
+  {
+   "id": "PARK-RS-07",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "07",
+   "title": "Secure an automatic vehicle at a roadside stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopped for a ROADSIDE STOP in a vehicle with an automatic transmission",
+   "action": "put the gear selector in park and set the parking brake",
+   "unless": "",
+   "statement": "WHEN stopped for a ROADSIDE STOP in a vehicle with an automatic transmission, the DRIVER MUST put the gear selector in park and set the parking brake.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.49",
+    "29.183"
+   ]
+  },
+  {
+   "id": "PARK-RS-08",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "08",
+   "title": "Secure a manual vehicle at a roadside stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopped for a ROADSIDE STOP in a vehicle with a manual transmission",
+   "action": "set the parking brake and shift into neutral if not turning off the engine, or into low or reverse if turning off the engine",
+   "unless": "",
+   "statement": "WHEN stopped for a ROADSIDE STOP in a vehicle with a manual transmission, the DRIVER MUST set the parking brake and shift into neutral if not turning off the engine, or into low or reverse if turning off the engine.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.49",
+    "29.183",
+    "29.248"
+   ]
+  },
+  {
+   "id": "PARK-RS-09",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "09",
+   "title": "Roadside stop on a hill",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a ROADSIDE STOP on a hill",
+   "action": "set the wheels against the curb in the appropriate direction to keep the vehicle from rolling",
+   "unless": "",
+   "statement": "WHEN making a ROADSIDE STOP on a hill, the DRIVER MUST set the wheels against the curb in the appropriate direction to keep the vehicle from rolling.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The appropriate directions are given in PARK-HILL-01 to PARK-HILL-03.",
+   "evidence": [
+    "11.49",
+    "29.183",
+    "29.248"
+   ]
+  },
+  {
+   "id": "PARK-RS-10",
+   "topic": "PARK",
+   "group": "RS",
+   "number": "10",
+   "title": "Right blind spot before pulling over",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to pull over for a ROADSIDE STOP AND traffic or pedestrians could overtake the vehicle on the right",
+   "action": "check the right blind spot just before pulling over",
+   "unless": "",
+   "statement": "WHEN about to pull over for a ROADSIDE STOP AND traffic or pedestrians could overtake the vehicle on the right, the DRIVER MUST check the right blind spot just before pulling over.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "From the road-test task.",
+   "evidence": [
+    "29.171"
+   ]
+  },
+  {
+   "id": "PARK-OUT-01",
+   "topic": "PARK",
+   "group": "OUT",
+   "number": "01",
+   "title": "Signal and check before leaving a parked position",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "moving from a PARKED position",
+   "action": "signal, check for traffic, and pull out only when it is safe",
+   "unless": "",
+   "statement": "WHEN moving from a PARKED position, the DRIVER MUST signal, check for traffic, and pull out only when it is safe.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "when it is safe",
+     "explanation": "no gap or criteria given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "11.13",
+    "5.9",
+    "29.254",
+    "29.256"
+   ]
+  },
+  {
+   "id": "PARK-OUT-02",
+   "topic": "PARK",
+   "group": "OUT",
+   "number": "02",
+   "title": "Prepare the vehicle to leave a roadside stop",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "pulling out from a ROADSIDE STOP or a parking space",
+   "action": "release the parking brake and move the gear selector to drive or shift into first gear",
+   "unless": "",
+   "statement": "WHEN pulling out from a ROADSIDE STOP or a parking space, the DRIVER MUST release the parking brake and move the gear selector to drive or shift into first gear.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The road-test tasks also say to turn on the engine first.",
+   "evidence": [
+    "11.52",
+    "29.187",
+    "29.252"
+   ]
+  },
+  {
+   "id": "PARK-OUT-03",
+   "topic": "PARK",
+   "group": "OUT",
+   "number": "03",
+   "title": "Hazard lights off, left signal on",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "pulling out from a ROADSIDE STOP",
+   "action": "turn off the HAZARD LIGHTS and turn on the left-turn signal",
+   "unless": "",
+   "statement": "WHEN pulling out from a ROADSIDE STOP, the DRIVER MUST turn off the HAZARD LIGHTS and turn on the left-turn signal.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.53",
+    "29.189"
+   ]
+  },
+  {
+   "id": "PARK-OUT-04",
+   "topic": "PARK",
+   "group": "OUT",
+   "number": "04",
+   "title": "Mirror and blind-spot check before pulling away",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "just before pulling away from a ROADSIDE STOP or a parking space",
+   "action": "check the mirrors and blind spot to make sure the way is clear of vehicles and cyclists",
+   "unless": "",
+   "statement": "WHEN just before pulling away from a ROADSIDE STOP or a parking space, the DRIVER MUST check the mirrors and blind spot to make sure the way is clear of vehicles and cyclists.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The road test specifies the left blind spot for a roadside stop.",
+   "evidence": [
+    "11.54",
+    "29.191",
+    "29.256"
+   ]
+  },
+  {
+   "id": "PARK-OUT-05",
+   "topic": "PARK",
+   "group": "OUT",
+   "number": "05",
+   "title": "Accelerate smoothly to blend with traffic",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "pulling out from a ROADSIDE STOP or a parking space",
+   "action": "return to normal traffic speed by accelerating smoothly to blend with the traffic around the vehicle, accelerating moderately in light traffic and more quickly in heavier traffic",
+   "unless": "",
+   "statement": "WHEN pulling out from a ROADSIDE STOP or a parking space, the DRIVER MUST return to normal traffic speed by accelerating smoothly to blend with the traffic around the vehicle, accelerating moderately in light traffic and more quickly in heavier traffic.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "moderately",
+     "explanation": "no rate given"
+    },
+    {
+     "term": "more quickly",
+     "explanation": "no rate given"
+    },
+    {
+     "term": "light traffic",
+     "explanation": "no density given"
+    }
+   ],
+   "note": "In a manual vehicle, shift gears as speed increases.",
+   "evidence": [
+    "11.55",
+    "29.193",
+    "29.258"
+   ]
+  },
+  {
+   "id": "PARK-OUT-06",
+   "topic": "PARK",
+   "group": "OUT",
+   "number": "06",
+   "title": "Cancel the signal after pulling out",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the vehicle is back on the road after a ROADSIDE STOP or leaving a parking space",
+   "action": "turn off the left-turn signal",
+   "unless": "",
+   "statement": "WHEN the vehicle is back on the road after a ROADSIDE STOP or leaving a parking space, the DRIVER MUST turn off the left-turn signal.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "11.56",
+    "29.195",
+    "29.260"
+   ]
+  },
+  {
+   "id": "PARK-COND-01",
+   "topic": "PARK",
+   "group": "COND",
+   "number": "01",
+   "title": "Drowsy: pull off and park safely",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the DRIVER has any warning sign of serious drowsiness",
+   "action": "pull off the road, PARK in a safe, secure place such as a well-lit rest stop or truck stop on a busy road, lock the doors, roll up the windows and take a nap",
+   "unless": "",
+   "statement": "WHEN the DRIVER has any warning sign of serious drowsiness, the DRIVER MUST pull off the road, PARK in a safe, secure place such as a well-lit rest stop or truck stop on a busy road, lock the doors, roll up the windows and take a nap.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "safe, secure place",
+     "explanation": "no criteria beyond the examples"
+    }
+   ],
+   "note": "The warning signs are listed in 13.28-13.35.",
+   "evidence": [
+    "13.36"
+   ]
+  },
+  {
+   "id": "PARK-COND-02",
+   "topic": "PARK",
+   "group": "COND",
+   "number": "02",
+   "title": "Dense fog or near-zero visibility: get off the road",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the fog is too dense to continue OR visibility is decreasing rapidly in fog or blowing snow",
+   "action": "pull completely off the road into a safe parking area if possible, and wait for conditions to improve",
+   "unless": "",
+   "statement": "WHEN the fog is too dense to continue OR visibility is decreasing rapidly in fog or blowing snow, the DRIVER MUST pull completely off the road into a safe parking area if possible, and wait for conditions to improve.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "too dense to continue",
+     "explanation": "no visibility threshold given"
+    },
+    {
+     "term": "decreasing rapidly",
+     "explanation": "no rate given"
+    },
+    {
+     "term": "safe parking area",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "For whiteouts, 14.73 uses softer wording ('try to get off the road when visibility is near zero'); the stronger command wording from the fog passage and 14.81 is recorded.",
+   "evidence": [
+    "14.11",
+    "14.27",
+    "14.36",
+    "14.73",
+    "14.81"
+   ]
+  },
+  {
+   "id": "PARK-COND-03",
+   "topic": "PARK",
+   "group": "COND",
+   "number": "03",
+   "title": "Lights when stopped off the road in fog",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopped off the road because the fog is too dense to continue",
+   "action": "turn on the emergency flashers and keep the low-beam headlights on",
+   "unless": "",
+   "statement": "WHEN stopped off the road because the fog is too dense to continue, the DRIVER MUST turn on the emergency flashers and keep the low-beam headlights on.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "14.27"
+   ]
+  },
+  {
+   "id": "PARK-COND-04",
+   "topic": "PARK",
+   "group": "COND",
+   "number": "04",
+   "title": "Freeway trouble: pull onto the nearest shoulder",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "there is a first sign of vehicle trouble on a freeway",
+   "action": "check the mirrors, put on the HAZARD LIGHTS, take the foot off the gas pedal and pull over to the nearest shoulder as quickly as possible",
+   "unless": "",
+   "statement": "WHEN there is a first sign of vehicle trouble on a freeway, the DRIVER MUST check the mirrors, put on the HAZARD LIGHTS, take the foot off the gas pedal and pull over to the nearest shoulder as quickly as possible.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "first sign of vehicle trouble",
+     "explanation": "no symptoms specified"
+    }
+   ],
+   "note": "The handbook says not to wait for the vehicle to stall on the freeway.",
+   "evidence": [
+    "15.9"
+   ]
+  }
+ ]
+}

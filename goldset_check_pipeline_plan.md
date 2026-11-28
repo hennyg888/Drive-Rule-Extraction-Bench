@@ -1,6 +1,6 @@
 # Gold set construction and evaluation: plan
 
-How draft rules extracted by Opus 5.5 become ground-truth gold sets, one for each of two scopes (overtaking and all rules; see "Two scopes, one procedure"). The first is overtaking: `gold_set\mto\overtaking\00_raw_rules.json`, identical to `extraction_outputs\anthropic\claude-opus-5.5\mto_2026_11_14.json`, now refined into `gold_set\mto\overtaking\gold_set.json`. The plan also covers how those gold sets are then used to evaluate other extractions (Qwen VL models, several input modalities: text only, text and images, whole pages as images).
+How draft rules extracted by Opus 5.5 become ground-truth gold sets, one for each of two scopes (overtaking and all rules; see "Two scopes, one procedure"). The first is overtaking: `gold_set\mto\overtaking\00_raw_rules.json`, identical to `extraction_outputs\anthropic\claude-opus-5.5\mto_overtaking_full-corpus_2026_11_14.json`, now refined into `gold_set\mto\overtaking\gold_set.json`. The plan also covers how those gold sets are then used to evaluate other extractions (Qwen VL models, several input modalities: text only, text and images, whole pages as images).
 
 ## The basic idea
 
@@ -143,7 +143,7 @@ tools/extract.sh ca               # the real call; handbook: mto, ca or tx (defa
 
 Anything after the handbook is passed on to `tools/run_extraction.py` (e.g. `--set extra_body.reasoning.effort=high`). The topic comes from the extraction prompt (`prompts\formal-rules\task.md`), so the overtaking topic is the default.
 
-- The answer is saved as `extraction_outputs\claude-opus-5-5\<handbook>_<YYYY_MM_DD>.json`, and the whole call goes to `runs\<time>-anthropic_claude-opus-5-5-<handbook>-draft-gold\`. (The script's header comment names `extraction_outputs\anthropic\claude-opus-5.5\`, where the MTO draft is, but the current `--model anthropic/claude-opus-5-5` saves it to the folder above.)
+- The answer is saved as `extraction_outputs\anthropic\claude-opus-5.5\<handbook>_<topic>_full-corpus_<YYYY_MM_DD>.json` (with its `.meta.json`; the preset's `folder` setting puts it there), and the whole call goes to `runs\<time>-anthropic_claude-opus-5-5-<handbook>-<topic>-draft-gold\`.
 - Copy the answer unchanged into the scope folder as `gold_set\<handbook>\<scope>\00_raw_rules.json`. It is never edited; round a0 works on a copy.
 - Optionally, run the format check on it at once (`check_format.py ... --handbook <handbook>`) for an early view of its mechanical errors. The format check that counts is still a1.
 
@@ -357,7 +357,7 @@ Built:
 
 Overtaking (`gold_set\mto\overtaking\`): done. Rounds a and b ran all four checks; the final freeform check `c0_freeform_report.md` found no major errors, and its 4 minor findings were ignored. The gold set is frozen as `gold_set.json` (75 rules, 20 vocabulary terms), a copy of `b3_aggregate.json`. The triage records are `allow_list.md` and `error_set.md`. Superseded test files are in `archive\`.
 
-Texas overtaking (`gold_set\tx\overtaking\`): done, by the same procedure. The raw draft `00_raw_rules.json` (52 rules, 14 vocabulary terms) is `extraction_outputs\anthropic\claude-opus-5.5\tx_2026_11_21.json`, extracted on 2026-11-21. Rounds a and b ran all four checks; the final freeform check `c0_freeform_report.md` found no major errors and 3 minor ones. One of them (GEN-06's note wording) was fixed in `c0_freeform.json`, and the other two were ignored. The gold set is frozen as `gold_set.json` (58 rules, 16 vocabulary terms), a copy of `c0_freeform.json`. The triage records are `allow_list.md` and `error_set.md`. Rounds b2 and b3 ran with the fix to `check_atomic.py` that labels each cited block with its full heading path, so their run folders record git `484bdd3+changes`; the fix is committed with this gold set.
+Texas overtaking (`gold_set\tx\overtaking\`): done, by the same procedure. The raw draft `00_raw_rules.json` (52 rules, 14 vocabulary terms) is `extraction_outputs\anthropic\claude-opus-5.5\tx_overtaking_full-corpus_2026_11_21.json`, extracted on 2026-11-21. Rounds a and b ran all four checks; the final freeform check `c0_freeform_report.md` found no major errors and 3 minor ones. One of them (GEN-06's note wording) was fixed in `c0_freeform.json`, and the other two were ignored. The gold set is frozen as `gold_set.json` (58 rules, 16 vocabulary terms), a copy of `c0_freeform.json`. The triage records are `allow_list.md` and `error_set.md`. Rounds b2 and b3 ran with the fix to `check_atomic.py` that labels each cited block with its full heading path, so their run folders record git `484bdd3+changes`; the fix is committed with this gold set.
 
 Record (§A4), 2026-11-22:
 

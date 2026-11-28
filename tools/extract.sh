@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # The draft gold-set extraction: a whole handbook, with the formal-rules prompt, on one topic, sent to
 # Claude Opus 5.5 in one request. The answer is saved to
-# extraction_outputs/claude-opus-5-5/<handbook>_<topic>_<YYYY_MM_DD>.json, and the whole call to
+# extraction_outputs/anthropic/claude-opus-5.5/<handbook>_<topic>_<modality>_<YYYY_MM_DD>.json (modality:
+# full-corpus, or no-images / no-handbook with those prompts), and the whole call to
 # runs/<time>-anthropic_claude-opus-5-5-<handbook>-<topic>-draft-gold/ (both at the repository root).
 # It can be run from any folder:
 #

@@ -1,0 +1,80 @@
+{
+ "run": "20261127-194845-anthropic_claude-opus-5-5-tx-turning-draft-gold",
+ "started": "2026-11-27 19:48:45",
+ "git": "a2a41b6",
+ "preset": "anthropic/claude-opus-5-5",
+ "provider": "anthropic",
+ "model": "claude-opus-5-5",
+ "params": {
+  "effort": "medium",
+  "fallbacks": "default",
+  "max_tokens": 128000
+ },
+ "vision": true,
+ "price_per_million": [
+  4.0,
+  20.0,
+  0.2
+ ],
+ "handbook": "tx",
+ "pages": "all",
+ "images": true,
+ "toc": true,
+ "per_page": false,
+ "prompt": "formal-rules",
+ "prompt_sha256": "630b20e56ea866e7b28c3b03dfa2e5e4e9a561ae21c1324a34bfc2b96bfc2216",
+ "topic": "turning",
+ "region": null,
+ "closed_book": false,
+ "figures": true,
+ "calls": [
+  {
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "model": "claude-opus-5-5",
+   "stop_reason": "end_turn",
+   "input_tokens": 154452,
+   "output_tokens": 28396,
+   "reasoning_tokens": 12079,
+   "seconds": 216.1,
+   "cost_usd": 1.1857,
+   "request_id": "req_011ChUQWrF5djZq5cNHvkXcm",
+   "json": true,
+   "citations": {
+    "text": 101,
+    "figure": 31,
+    "caption": 6
+   }
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 154452,
+  "output_tokens": 28396,
+  "reasoning_tokens": 12079,
+  "seconds": 216.1,
+  "cost_usd": 1.1857
+ }
+}

@@ -70,6 +70,12 @@ class Prompt:
     figures: bool = True            # options.yaml figures: false: send the pages with every <figure> removed
 
     @property
+    def modality(self):
+        """What the model is given of the handbook: full-corpus (pages and images), no-images (pages
+        with every <figure> removed) or no-handbook (task.md alone). Used in saved file names."""
+        return "no-handbook" if self.closed_book else "full-corpus" if self.figures else "no-images"
+
+    @property
     def sha256(self):
         """One hash of the three files together, to tell prompt versions apart in runs."""
         h = hashlib.sha256()

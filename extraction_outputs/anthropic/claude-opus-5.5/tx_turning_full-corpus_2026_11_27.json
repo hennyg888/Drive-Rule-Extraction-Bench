@@ -1,0 +1,1505 @@
+{
+ "scope": "turning (right turns, left turns and U-turns, at intersections and elsewhere)",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "The person operating a motor vehicle who is making, or preparing to make, a turn.",
+   "evidence": []
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person riding a bicycle, which is a device propelled by human power with two tandem wheels, either of which is more than 14 inches in diameter.",
+   "evidence": [
+    "16.14",
+    "10.176"
+   ]
+  },
+  {
+   "term": "YIELD",
+   "definition": "To allow another vehicle or roadway user to proceed first.",
+   "evidence": [
+    "16.183"
+   ]
+  },
+  {
+   "term": "RIGHT-OF-WAY",
+   "definition": "The privilege of having immediate use of a certain part of a road.",
+   "evidence": [
+    "16.137"
+   ]
+  },
+  {
+   "term": "ONCOMING TRAFFIC",
+   "definition": "Vehicles approaching from the opposite direction, including those coming straight through the intersection.",
+   "evidence": []
+  },
+  {
+   "term": "PEDESTRIAN",
+   "definition": "A person on foot.",
+   "evidence": [
+    "16.111"
+   ]
+  },
+  {
+   "term": "PROTECTED LEFT TURN",
+   "definition": "A left turn made on a left-turn green arrow or delayed green light while oncoming traffic is stopped.",
+   "evidence": [
+    "16.121"
+   ]
+  },
+  {
+   "term": "SHARED LEFT-TURN LANE",
+   "definition": "The center lane of a street, marked with left-turn arrows in both directions, that is used only by vehicles from either direction making left turns.",
+   "evidence": [
+    "16.146",
+    "6.149",
+    "6.194"
+   ]
+  },
+  {
+   "term": "U-TURN",
+   "definition": "A turn reversing the direction of travel, as shown by the U-shaped arrow on the no-U-turn sign.",
+   "evidence": []
+  },
+  {
+   "term": "MOTORCYCLE",
+   "definition": "A motor vehicle, other than a tractor, equipped with a rider's saddle and designed to have not more than three wheels on the ground when propelled.",
+   "evidence": [
+    "16.98"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "TURN-SIG-01",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "01",
+   "title": "Right turn on steady red",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a steady red light AND having stopped before entering the crosswalk or intersection",
+   "action": "turn right",
+   "unless": "turning is prohibited by law",
+   "statement": "WHEN facing a steady red light AND having stopped before entering the crosswalk or intersection, the DRIVER MAY turn right, UNLESS turning is prohibited by law.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The glossary defines right turn on red as turning right after stopping behind the intersection guides unless specifically prohibited.",
+   "evidence": [
+    "6.4",
+    "6.5",
+    "16.138"
+   ]
+  },
+  {
+   "id": "TURN-SIG-02",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "02",
+   "title": "Left turn on red between one-way streets",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a steady red light AND having stopped before entering the crosswalk or intersection AND both the street being left and the street being entered are one-way",
+   "action": "turn left",
+   "unless": "turning is prohibited by law",
+   "statement": "WHEN facing a steady red light AND having stopped before entering the crosswalk or intersection AND both the street being left and the street being entered are one-way, the DRIVER MAY turn left, UNLESS turning is prohibited by law.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "6.4"
+   ]
+  },
+  {
+   "id": "TURN-SIG-03",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "03",
+   "title": "Yield when turning on red",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning on a steady red light",
+   "action": "YIELD the RIGHT-OF-WAY to all PEDESTRIANS and other traffic lawfully using the intersection",
+   "unless": "",
+   "statement": "WHEN turning on a steady red light, the DRIVER MUST YIELD the RIGHT-OF-WAY to all PEDESTRIANS and other traffic lawfully using the intersection.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "6.4"
+   ]
+  },
+  {
+   "id": "TURN-SIG-04",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "04",
+   "title": "Turning on steady green",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a steady green light AND it is safe to do so",
+   "action": "turn",
+   "unless": "another sign or signal prohibits the turn",
+   "statement": "WHEN facing a steady green light AND it is safe to do so, the DRIVER MAY turn, UNLESS another sign or signal prohibits the turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "it is safe to do so",
+     "explanation": "no criteria for safety given"
+    }
+   ],
+   "note": "The same block advises watching for cars and pedestrians in the intersection and for drivers racing to beat a red light.",
+   "evidence": [
+    "6.18",
+    "6.19"
+   ]
+  },
+  {
+   "id": "TURN-SIG-05",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "05",
+   "title": "Left turn on green: yield to opposing traffic",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning left on a steady green light",
+   "action": "YIELD the RIGHT-OF-WAY to all traffic approaching from the opposite direction before turning",
+   "unless": "",
+   "statement": "WHEN turning left on a steady green light, the DRIVER MUST YIELD the RIGHT-OF-WAY to all traffic approaching from the opposite direction before turning.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Also shown by the regulatory sign LEFT TURN YIELD ON GREEN with a green ball.",
+   "evidence": [
+    "6.24",
+    "6.25"
+   ]
+  },
+  {
+   "id": "TURN-SIG-06",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "06",
+   "title": "Flashing yellow left-turn arrow",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning left on a flashing yellow arrow",
+   "action": "YIELD the RIGHT-OF-WAY to ONCOMING TRAFFIC",
+   "unless": "",
+   "statement": "WHEN turning left on a flashing yellow arrow, the DRIVER MUST YIELD the RIGHT-OF-WAY to ONCOMING TRAFFIC.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The flashing yellow arrow permits the left turn; the obligation is to yield to oncoming traffic.",
+   "evidence": [
+    "6.16"
+   ]
+  },
+  {
+   "id": "TURN-SIG-07",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "07",
+   "title": "Green arrow with red light",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "a green arrow is displayed at the same time as a red light",
+   "action": "YIELD the RIGHT-OF-WAY to other vehicles and PEDESTRIANS and then proceed carefully in the direction of the arrow",
+   "unless": "",
+   "statement": "WHEN a green arrow is displayed at the same time as a red light, the DRIVER MAY YIELD the RIGHT-OF-WAY to other vehicles and PEDESTRIANS and then proceed carefully in the direction of the arrow.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "carefully",
+     "explanation": "no specific behaviour defined"
+    }
+   ],
+   "note": "Permission to proceed in the arrow's direction only after yielding.",
+   "evidence": [
+    "6.21",
+    "6.22"
+   ]
+  },
+  {
+   "id": "TURN-SIG-08",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "08",
+   "title": "Protected left on green arrow",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "a \"Protected Left on Green Arrow\" sign is posted AND the DRIVER faces the signal showing a green arrow",
+   "action": "proceed into the intersection and turn left",
+   "unless": "",
+   "statement": "WHEN a \"Protected Left on Green Arrow\" sign is posted AND the DRIVER faces the signal showing a green arrow, the DRIVER MAY proceed into the intersection and turn left.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook explains that oncoming traffic must stop during the protected turn.",
+   "evidence": [
+    "6.140",
+    "6.140-f1",
+    "16.121"
+   ]
+  },
+  {
+   "id": "TURN-SIG-09",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "09",
+   "title": "Caution on a protected turn",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "making a PROTECTED LEFT TURN",
+   "action": "use caution",
+   "unless": "",
+   "statement": "WHEN making a PROTECTED LEFT TURN, the DRIVER SHOULD use caution.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "use caution",
+     "explanation": "no specific behaviour defined"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "6.140",
+    "6.140-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIG-10",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "10",
+   "title": "Left turn signal sign",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "a \"Left Turn Signal\" sign is posted at the intersection",
+   "action": "turn left when the green signal indicates the left turn",
+   "unless": "",
+   "statement": "WHEN a \"Left Turn Signal\" sign is posted at the intersection, the DRIVER MAY ONLY turn left when the green signal indicates the left turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "6.150",
+    "6.150-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-01",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "01",
+   "title": "One-way sign: turn with the arrow",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning at an intersection where a one-way sign is posted",
+   "action": "turn only in the direction indicated by the arrow on the sign",
+   "unless": "",
+   "statement": "WHEN turning at an intersection where a one-way sign is posted, the DRIVER MUST turn only in the direction indicated by the arrow on the sign.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Regulatory sign.",
+   "evidence": [
+    "6.118",
+    "6.118-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-02",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "02",
+   "title": "No left turn sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "at an intersection where a no-left-turn sign (a left-turn arrow in a red circle with a red slash) is posted",
+   "action": "turn left",
+   "unless": "",
+   "statement": "WHEN at an intersection where a no-left-turn sign (a left-turn arrow in a red circle with a red slash) is posted, the DRIVER MUST NOT turn left.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "6.123",
+    "6.123-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-03",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "03",
+   "title": "No U-turn sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "at an intersection where a no-U-turn sign (a U-shaped arrow in a red circle with a red slash) is posted",
+   "action": "make a U-TURN",
+   "unless": "",
+   "statement": "WHEN at an intersection where a no-U-turn sign (a U-shaped arrow in a red circle with a red slash) is posted, the DRIVER MUST NOT make a U-TURN.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "6.124",
+    "6.124-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-04",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "04",
+   "title": "Dual left-turn lanes: left lane must turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "a sign shows two lanes permitted to turn left (a left arrow marked ONLY over the left lane and left-and-straight arrows over the next lane) AND the DRIVER is in the left lane",
+   "action": "turn left",
+   "unless": "",
+   "statement": "WHEN a sign shows two lanes permitted to turn left (a left arrow marked ONLY over the left lane and left-and-straight arrows over the next lane) AND the DRIVER is in the left lane, the DRIVER MUST turn left.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "6.121",
+    "6.121-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-05",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "05",
+   "title": "Dual left-turn lanes: second lane has a choice",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "a sign shows two lanes permitted to turn left (a left arrow marked ONLY over the left lane and left-and-straight arrows over the next lane) AND the DRIVER is in the other lane",
+   "action": "either turn left or go straight",
+   "unless": "",
+   "statement": "WHEN a sign shows two lanes permitted to turn left (a left arrow marked ONLY over the left lane and left-and-straight arrows over the next lane) AND the DRIVER is in the other lane, the DRIVER MAY either turn left or go straight.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The text says traffic in the other lane 'has a choice'; the sign image shows the choice is left or straight.",
+   "evidence": [
+    "6.121",
+    "6.121-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-06",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "06",
+   "title": "Right lane must turn right",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "driving in the right lane where a \"Right Lane Must Turn Right\" sign is posted",
+   "action": "turn right at the next intersection",
+   "unless": "the sign indicates a different turning point",
+   "statement": "WHEN driving in the right lane where a \"Right Lane Must Turn Right\" sign is posted, the DRIVER MUST turn right at the next intersection, UNLESS the sign indicates a different turning point.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "6.151",
+    "6.151-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-07",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "07",
+   "title": "No turning across double white lines",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a \"Do Not Cross Double White Line\" sign is posted OR the pavement is marked with double solid white lines",
+   "action": "turn across the double white lines",
+   "unless": "",
+   "statement": "WHEN a \"Do Not Cross Double White Line\" sign is posted OR the pavement is marked with double solid white lines, the DRIVER MUST NOT turn across the double white lines.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The sign description says drivers 'should not' turn across; the pavement-marking passage says crossing double solid white lines is prohibited, and the sign is regulatory, so the stronger wording is recorded.",
+   "evidence": [
+    "6.139",
+    "6.139-f1",
+    "6.211",
+    "6.212"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-08",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "08",
+   "title": "Shared left-turn lane: no through or passing use",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a road has a SHARED LEFT-TURN LANE",
+   "action": "use the SHARED LEFT-TURN LANE for passing or as a through-traffic lane",
+   "unless": "",
+   "statement": "WHEN a road has a SHARED LEFT-TURN LANE, the DRIVER MUST NOT use the SHARED LEFT-TURN LANE for passing or as a through-traffic lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook words this as 'should never'. The CENTER LANE ONLY sign is regulatory, and regulatory signs must be obeyed (6.115), so it is recorded as a requirement.",
+   "evidence": [
+    "6.149",
+    "6.149-f1",
+    "6.195",
+    "6.194",
+    "6.194-c"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-09",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "09",
+   "title": "When to enter the shared left-turn lane",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "intending to turn left from a road with a SHARED LEFT-TURN LANE",
+   "action": "enter the SHARED LEFT-TURN LANE only at a point where the vehicle will have time to slow down or stop to make a safe left turn",
+   "unless": "",
+   "statement": "WHEN intending to turn left from a road with a SHARED LEFT-TURN LANE, the DRIVER SHOULD enter the SHARED LEFT-TURN LANE only at a point where the vehicle will have time to slow down or stop to make a safe left turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "have time to slow down or stop",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "Stated in two places with the same wording.",
+   "evidence": [
+    "6.149",
+    "6.193",
+    "6.194",
+    "6.194-c"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-10",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "10",
+   "title": "T-intersection arrow sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a T intersection marked by a yellow sign with a double-headed horizontal arrow",
+   "action": "turn left or right and be prepared to YIELD the RIGHT-OF-WAY at the intersection if necessary",
+   "unless": "",
+   "statement": "WHEN approaching a T intersection marked by a yellow sign with a double-headed horizontal arrow, the DRIVER MUST turn left or right and be prepared to YIELD the RIGHT-OF-WAY at the intersection if necessary.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "if necessary",
+     "explanation": "does not say when yielding is required"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "6.90",
+    "6.90-f1"
+   ]
+  },
+  {
+   "id": "TURN-SIGN-11",
+   "topic": "TURN",
+   "group": "SIGN",
+   "number": "11",
+   "title": "Watch for turn-lane markings and signs",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to turn",
+   "action": "watch for pavement markings and signs that permit turning right or left from or into two or more traffic lanes or that give other special turning or lane information",
+   "unless": "",
+   "statement": "WHEN preparing to turn, the DRIVER MUST watch for pavement markings and signs that permit turning right or left from or into two or more traffic lanes or that give other special turning or lane information.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "7.86",
+    "7.87",
+    "7.88"
+   ]
+  },
+  {
+   "id": "TURN-PROC-01",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "01",
+   "title": "Decide early; no last-minute turns",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a turning point",
+   "action": "decide on the turn before reaching the turning point rather than making a last-minute turn",
+   "unless": "",
+   "statement": "WHEN approaching a turning point, the DRIVER MUST decide on the turn before reaching the turning point rather than making a last-minute turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "last-minute",
+     "explanation": "no time or distance given"
+    }
+   ],
+   "note": "The handbook says a last-minute turn is dangerous.",
+   "evidence": [
+    "7.58"
+   ]
+  },
+  {
+   "id": "TURN-PROC-02",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "02",
+   "title": "Look before changing lanes to turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to turn AND about to change lanes",
+   "action": "look behind and to both sides to see where other vehicles are",
+   "unless": "",
+   "statement": "WHEN preparing to turn AND about to change lanes, the DRIVER MUST look behind and to both sides to see where other vehicles are.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "7.59"
+   ]
+  },
+  {
+   "id": "TURN-PROC-03",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "03",
+   "title": "Get into the proper lane early",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to turn",
+   "action": "move into the proper lane as soon as possible",
+   "unless": "",
+   "statement": "WHEN preparing to turn, the DRIVER MUST move into the proper lane as soon as possible.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "proper lane",
+     "explanation": "lane not specified in general"
+    },
+    {
+     "term": "as soon as possible",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.60"
+   ]
+  },
+  {
+   "id": "TURN-PROC-04",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "04",
+   "title": "Faster traffic: change lanes sooner",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "preparing to turn AND traffic is moving fast",
+   "action": "move into the proper lane sooner the faster the traffic is moving",
+   "unless": "",
+   "statement": "WHEN preparing to turn AND traffic is moving fast, the DRIVER SHOULD move into the proper lane sooner the faster the traffic is moving.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "proper lane",
+     "explanation": "lane not specified in general"
+    },
+    {
+     "term": "sooner",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.60"
+   ]
+  },
+  {
+   "id": "TURN-PROC-05",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "05",
+   "title": "Cannot reach proper lane: go straight",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "preparing to turn AND the DRIVER cannot get into the proper lane within one-half block before the turn",
+   "action": "make the turn, and must continue straight ahead instead",
+   "unless": "",
+   "statement": "WHEN preparing to turn AND the DRIVER cannot get into the proper lane within one-half block before the turn, the DRIVER MUST NOT make the turn, and must continue straight ahead instead.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "proper lane",
+     "explanation": "lane not specified in general"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.60"
+   ]
+  },
+  {
+   "id": "TURN-PROC-06",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "06",
+   "title": "Turning from a one-way road",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to turn from a one-way road",
+   "action": "move into the lane closest to the turn well in advance of the turn",
+   "unless": "",
+   "statement": "WHEN about to turn from a one-way road, the DRIVER MUST move into the lane closest to the turn well in advance of the turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "well in advance",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "6.190",
+    "6.191"
+   ]
+  },
+  {
+   "id": "TURN-PROC-07",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "07",
+   "title": "Slow down at least 100 feet from the corner",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a corner to turn right or left",
+   "action": "slow down beginning at least 100 feet from the corner, to a reasonable turning speed before making the turn",
+   "unless": "",
+   "statement": "WHEN approaching a corner to turn right or left, the DRIVER MUST slow down beginning at least 100 feet from the corner, to a reasonable turning speed before making the turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "reasonable turning speed",
+     "explanation": "no speed given"
+    }
+   ],
+   "note": "Combines the general step (7.62) with the right-turn and left-turn procedures (7.67, 7.74).",
+   "evidence": [
+    "7.62",
+    "7.67",
+    "7.74"
+   ]
+  },
+  {
+   "id": "TURN-PROC-08",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "08",
+   "title": "No braking or clutch during the turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in the middle of a turn",
+   "action": "use the brake or clutch",
+   "unless": "",
+   "statement": "WHEN in the middle of a turn, the DRIVER MUST NOT use the brake or clutch.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "7.62"
+   ]
+  },
+  {
+   "id": "TURN-PROC-09",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "09",
+   "title": "Stay in the proper turn lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a turn",
+   "action": "stay in the proper turn lane at all times",
+   "unless": "",
+   "statement": "WHEN making a turn, the DRIVER MUST stay in the proper turn lane at all times.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "proper turn lane",
+     "explanation": "lane not specified in general"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.63"
+   ]
+  },
+  {
+   "id": "TURN-PROC-10",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "10",
+   "title": "Finish in the proper lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "completing a turn",
+   "action": "finish the turn in the proper lane",
+   "unless": "",
+   "statement": "WHEN completing a turn, the DRIVER MUST finish the turn in the proper lane.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "proper lane",
+     "explanation": "lane not specified in general"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.64"
+   ]
+  },
+  {
+   "id": "TURN-PROC-11",
+   "topic": "TURN",
+   "group": "PROC",
+   "number": "11",
+   "title": "Both hands on the wheel",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a turn",
+   "action": "keep both hands on the steering wheel",
+   "unless": "",
+   "statement": "WHEN making a turn, the DRIVER MUST keep both hands on the steering wheel.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stated in the general turning steps and in the right-turn procedure.",
+   "evidence": [
+    "7.61",
+    "7.70"
+   ]
+  },
+  {
+   "id": "TURN-IND-01",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "01",
+   "title": "Signal at least 100 feet before turning",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to make a turn",
+   "action": "signal continuously for at least 100 feet before turning",
+   "unless": "",
+   "statement": "WHEN about to make a turn, the DRIVER MUST signal continuously for at least 100 feet before turning.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stated in the signaling section and in the turning steps for right and left turns.",
+   "evidence": [
+    "7.3",
+    "7.5",
+    "7.13",
+    "7.61",
+    "7.67",
+    "7.74"
+   ]
+  },
+  {
+   "id": "TURN-IND-02",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "02",
+   "title": "Signal lights or hand signals",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "signaling a turn",
+   "action": "use either turn signal lights or hand and arm signals",
+   "unless": "",
+   "statement": "WHEN signaling a turn, the DRIVER MAY use either turn signal lights or hand and arm signals.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "7.11"
+   ]
+  },
+  {
+   "id": "TURN-IND-03",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "03",
+   "title": "Visible, timely signals",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "signaling a turn",
+   "action": "make sure the signal can be easily seen by others and give it in plenty of time",
+   "unless": "",
+   "statement": "WHEN signaling a turn, the DRIVER MUST make sure the signal can be easily seen by others and give it in plenty of time.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "easily seen",
+     "explanation": "no visibility criterion given"
+    },
+    {
+     "term": "in plenty of time",
+     "explanation": "no time given beyond the 100-foot rule"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.11"
+   ]
+  },
+  {
+   "id": "TURN-IND-04",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "04",
+   "title": "Hand and arm turn signals",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "signaling a turn by hand",
+   "action": "extend the left hand and arm well out of the car window, held horizontally to signal a left turn and bent upward to signal a right turn",
+   "unless": "",
+   "statement": "WHEN signaling a turn by hand, the DRIVER MUST extend the left hand and arm well out of the car window, held horizontally to signal a left turn and bent upward to signal a right turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "well out",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "The arm positions come from the diagram, which shows the driver's left arm out horizontally for Left Turn and bent upward for Right Turn.",
+   "evidence": [
+    "7.11",
+    "7.14",
+    "7.14-c"
+   ]
+  },
+  {
+   "id": "TURN-IND-05",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "05",
+   "title": "Holding a hand signal",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "using a hand signal for a turn",
+   "action": "hold the signal until close enough to the intersection for others to know the intention, and not hold it while making the turn",
+   "unless": "",
+   "statement": "WHEN using a hand signal for a turn, the DRIVER MUST hold the signal until close enough to the intersection for others to know the intention, and not hold it while making the turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "close enough",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "Reason given: both hands are needed on the wheel.",
+   "evidence": [
+    "7.61"
+   ]
+  },
+  {
+   "id": "TURN-IND-06",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "06",
+   "title": "Cancel the signal after the turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the turn is complete",
+   "action": "turn off the turn signal",
+   "unless": "",
+   "statement": "WHEN the turn is complete, the DRIVER MUST turn off the turn signal.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason given: an unintended signal still means 'turn' to other drivers.",
+   "evidence": [
+    "7.13"
+   ]
+  },
+  {
+   "id": "TURN-IND-07",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "07",
+   "title": "Working signal lights at night",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "signaling a turn during non-daylight hours",
+   "action": "make sure the signal lights are working properly",
+   "unless": "",
+   "statement": "WHEN signaling a turn during non-daylight hours, the DRIVER SHOULD make sure the signal lights are working properly.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason given: hand and arm signals are usually difficult to see during non-daylight hours.",
+   "evidence": [
+    "7.12"
+   ]
+  },
+  {
+   "id": "TURN-IND-08",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "08",
+   "title": "Signal the right turn out of a roundabout",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "exiting a roundabout",
+   "action": "make a right turn out of the circle using the turn signal",
+   "unless": "",
+   "statement": "WHEN exiting a roundabout, the DRIVER MUST make a right turn out of the circle using the turn signal.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "10.92",
+    "10.94"
+   ]
+  },
+  {
+   "id": "TURN-IND-09",
+   "topic": "TURN",
+   "group": "IND",
+   "number": "09",
+   "title": "Cyclist turn signals",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "CYCLIST",
+   "when": "about to turn",
+   "action": "signal a right turn with the left arm pointing up or the right arm pointing horizontally, and signal a left turn with the left arm pointing horizontally",
+   "unless": "",
+   "statement": "WHEN about to turn, the CYCLIST MUST signal a right turn with the left arm pointing up or the right arm pointing horizontally, and signal a left turn with the left arm pointing horizontally.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "14.11",
+    "14.12",
+    "14.13"
+   ]
+  },
+  {
+   "id": "TURN-RT-01",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "01",
+   "title": "Move to the far right lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to turn right",
+   "action": "signal for a lane change well ahead of the turning point and, when it is safe, move into the far right lane",
+   "unless": "",
+   "statement": "WHEN preparing to turn right, the DRIVER MUST signal for a lane change well ahead of the turning point and, when it is safe, move into the far right lane.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "well ahead",
+     "explanation": "no distance given"
+    },
+    {
+     "term": "when it is safe",
+     "explanation": "no gap or criterion given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.66"
+   ]
+  },
+  {
+   "id": "TURN-RT-02",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "02",
+   "title": "Look both ways before turning right",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to start a right turn",
+   "action": "look both ways",
+   "unless": "",
+   "statement": "WHEN about to start a right turn, the DRIVER MUST look both ways.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "7.68"
+   ]
+  },
+  {
+   "id": "TURN-RT-03",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "03",
+   "title": "Keep close to the right edge",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a right turn",
+   "action": "keep as close as possible to the right edge of the road, without swinging wide into the far lanes",
+   "unless": "",
+   "statement": "WHEN making a right turn, the DRIVER MUST keep as close as possible to the right edge of the road, without swinging wide into the far lanes.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as close as possible",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "The 'without swinging wide' part rests on the diagram, which marks as 'Incorrect right turn' a path that swings out and ends in a far lane of the cross street.",
+   "evidence": [
+    "7.69",
+    "7.71",
+    "7.71-c"
+   ]
+  },
+  {
+   "id": "TURN-LT-01",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "01",
+   "title": "Move into the center lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "preparing to turn left",
+   "action": "signal for a lane change well ahead of the turning point and, when it is safe, move into the center lane",
+   "unless": "",
+   "statement": "WHEN preparing to turn left, the DRIVER MUST signal for a lane change well ahead of the turning point and, when it is safe, move into the center lane.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "well ahead",
+     "explanation": "no distance given"
+    },
+    {
+     "term": "when it is safe",
+     "explanation": "no gap or criterion given"
+    },
+    {
+     "term": "center lane",
+     "explanation": "not defined; the diagram shows the lane nearest the center line"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.73",
+    "7.78"
+   ]
+  },
+  {
+   "id": "TURN-LT-02",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "02",
+   "title": "Look in all directions before a left turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to start a left turn",
+   "action": "look in all directions",
+   "unless": "",
+   "statement": "WHEN about to start a left turn, the DRIVER MUST look in all directions.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "7.75"
+   ]
+  },
+  {
+   "id": "TURN-LT-03",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "03",
+   "title": "Stay right of the center line on entry",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "entering an intersection to turn left",
+   "action": "stay to the right of the center line",
+   "unless": "",
+   "statement": "WHEN entering an intersection to turn left, the DRIVER MUST stay to the right of the center line.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "",
+   "evidence": [
+    "7.75",
+    "7.78"
+   ]
+  },
+  {
+   "id": "TURN-LT-04",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "04",
+   "title": "Yield to oncoming traffic",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning left",
+   "action": "YIELD the RIGHT-OF-WAY to any vehicle coming straight through or approaching from the opposite direction",
+   "unless": "",
+   "statement": "WHEN turning left, the DRIVER MUST YIELD the RIGHT-OF-WAY to any vehicle coming straight through or approaching from the opposite direction.",
+   "penalty": "A fine of $500 to $2,000 if failure to yield causes bodily injury; $1,000 to $4,000 if it causes serious bodily injury.",
+   "vague_terms": [],
+   "note": "Stated in the right-of-way chapter ('always yield') and in the left-turn procedure. The diagram shows a left-turning car and an oncoming car going straight. The penalties are the general ones for failure to yield in Table 14.",
+   "evidence": [
+    "5.18",
+    "5.19",
+    "7.75",
+    "5.4",
+    "5.5"
+   ]
+  },
+  {
+   "id": "TURN-LT-05",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "05",
+   "title": "Complete the left turn right of the center line",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "completing a left turn",
+   "action": "turn to the right of the center line of the road being entered, into the lane in which it will interfere the least with other traffic",
+   "unless": "",
+   "statement": "WHEN completing a left turn, the DRIVER SHOULD turn to the right of the center line of the road being entered, into the lane in which it will interfere the least with other traffic.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "interfere the least",
+     "explanation": "no criterion for choosing the lane"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.76",
+    "7.78"
+   ]
+  },
+  {
+   "id": "TURN-LT-06",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "06",
+   "title": "Lane change after a left turn",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "the left turn has been completed",
+   "action": "signal and change lanes if necessary",
+   "unless": "",
+   "statement": "WHEN the left turn has been completed, the DRIVER MAY signal and change lanes if necessary.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "if necessary",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "",
+   "evidence": [
+    "7.77"
+   ]
+  },
+  {
+   "id": "TURN-LT-07",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "07",
+   "title": "Left turn from a one-way onto a two-way street",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "turning left from a one-way street onto a two-way street",
+   "action": "turn from the left lane into the right lane moving in the same direction",
+   "unless": "",
+   "statement": "WHEN turning left from a one-way street onto a two-way street, the DRIVER SHOULD turn from the left lane into the right lane moving in the same direction.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The diagram shows the turn starting from the left lane of the one-way street and ending in the lane of the two-way street that carries traffic in the new direction.",
+   "evidence": [
+    "7.80",
+    "7.81"
+   ]
+  },
+  {
+   "id": "TURN-LT-08",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "08",
+   "title": "Left turn from a two-way onto a one-way street",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning left from a two-way street onto a one-way street",
+   "action": "enter the street in the lane in which it will interfere the least with other traffic",
+   "unless": "",
+   "statement": "WHEN turning left from a two-way street onto a one-way street, the DRIVER MUST enter the street in the lane in which it will interfere the least with other traffic.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "interfere the least",
+     "explanation": "no criterion for choosing the lane"
+    }
+   ],
+   "note": "The diagram shows paths into either lane of the one-way street.",
+   "evidence": [
+    "7.83",
+    "7.84"
+   ]
+  },
+  {
+   "id": "TURN-USER-01",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "01",
+   "title": "Second look for motorcycles",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to turn at an intersection",
+   "action": "take a second look for a MOTORCYCLE before turning, particularly when making a left turn",
+   "unless": "",
+   "statement": "WHEN about to turn at an intersection, the DRIVER MUST take a second look for a MOTORCYCLE before turning, particularly when making a left turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The handbook notes the most common car-motorcycle crash is a car turning left in front of a motorcycle.",
+   "evidence": [
+    "10.156",
+    "10.143"
+   ]
+  },
+  {
+   "id": "TURN-USER-02",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "02",
+   "title": "Look for motorcycles when turning left across traffic",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a left turn across lanes of approaching traffic",
+   "action": "look carefully in all directions for approaching MOTORCYCLES",
+   "unless": "",
+   "statement": "WHEN making a left turn across lanes of approaching traffic, the DRIVER MUST look carefully in all directions for approaching MOTORCYCLES.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The same block also advises being careful in this situation.",
+   "evidence": [
+    "10.158"
+   ]
+  },
+  {
+   "id": "TURN-USER-03",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "03",
+   "title": "Do not trust a motorcycle's turn signal",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "a MOTORCYCLE shows a flashing turn signal AND the DRIVER intends to proceed in a way that depends on the MOTORCYCLE turning",
+   "action": "wait to be sure the MOTORCYCLE is going to turn before proceeding",
+   "unless": "",
+   "statement": "WHEN a MOTORCYCLE shows a flashing turn signal AND the DRIVER intends to proceed in a way that depends on the MOTORCYCLE turning, the DRIVER MUST wait to be sure the MOTORCYCLE is going to turn before proceeding.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Reason given: motorcycle signals usually do not cancel themselves and riders sometimes forget to turn them off.",
+   "evidence": [
+    "10.158"
+   ]
+  },
+  {
+   "id": "TURN-USER-04",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "04",
+   "title": "Merge with bicycle traffic before turning right",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "preparing to turn right AND a CYCLIST is traveling in the same direction",
+   "action": "slow down and merge with the bicycle traffic before turning",
+   "unless": "",
+   "statement": "WHEN preparing to turn right AND a CYCLIST is traveling in the same direction, the DRIVER SHOULD slow down and merge with the bicycle traffic before turning.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The diagram 'Turning right, merge right!' shows the car moving right behind the bicycle before turning.",
+   "evidence": [
+    "10.179",
+    "10.188",
+    "10.190",
+    "10.190-c"
+   ]
+  },
+  {
+   "id": "TURN-USER-05",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "05",
+   "title": "Do not cut across a bicycle's path",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "DRIVER",
+   "when": "turning right AND a CYCLIST is traveling in the same direction",
+   "action": "turn directly across the path of the CYCLIST",
+   "unless": "",
+   "statement": "WHEN turning right AND a CYCLIST is traveling in the same direction, the DRIVER SHOULD NOT turn directly across the path of the CYCLIST.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "The diagram labelled 'Wrong way' shows a car turning right across a bicycle's path.",
+   "evidence": [
+    "10.179",
+    "10.188",
+    "10.191",
+    "10.191-c"
+   ]
+  },
+  {
+   "id": "TURN-USER-06",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "06",
+   "title": "Watch for oncoming cyclists when turning left",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "turning left at an intersection",
+   "action": "look out for oncoming CYCLISTS and judge their speed before turning in front of them",
+   "unless": "",
+   "statement": "WHEN turning left at an intersection, the DRIVER SHOULD look out for oncoming CYCLISTS and judge their speed before turning in front of them.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Inferred from the advice to look out for cyclists, especially at intersections, and the listed common crash where a motorist turns left in front of oncoming bicycle traffic that is overlooked or whose speed is misjudged.",
+   "evidence": [
+    "10.186",
+    "10.187"
+   ]
+  },
+  {
+   "id": "TURN-USER-07",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "07",
+   "title": "Do not pass a right-turning truck on the right",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "there is a possibility that a truck ahead might make a right turn",
+   "action": "pass the truck on the right",
+   "unless": "",
+   "statement": "WHEN there is a possibility that a truck ahead might make a right turn, the DRIVER MUST NOT pass the truck on the right.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a possibility",
+     "explanation": "no cue given beyond paying attention to turn signals"
+    }
+   ],
+   "note": "Reason given: trucks make wide right turns and sometimes leave an open space to the right just before the turn. The block also tells drivers to pay attention to turn signals.",
+   "evidence": [
+    "10.123"
+   ]
+  },
+  {
+   "id": "TURN-USER-08",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "08",
+   "title": "Cyclist preparing a left turn",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "CYCLIST",
+   "when": "preparing for a left turn at an intersection or onto a private road or driveway",
+   "action": "leave the right side of the road, change lanes and take the full lane, following the same path any other vehicle would take",
+   "unless": "",
+   "statement": "WHEN preparing for a left turn at an intersection or onto a private road or driveway, the CYCLIST MAY leave the right side of the road, change lanes and take the full lane, following the same path any other vehicle would take.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Combined from the motorist chapter (10.178, 10.182) and the bicycle chapter (14.15, 14.17), which both list this exception to riding near the right edge.",
+   "evidence": [
+    "10.178",
+    "10.180",
+    "10.182",
+    "14.15",
+    "14.17"
+   ]
+  },
+  {
+   "id": "TURN-COND-01",
+   "topic": "TURN",
+   "group": "COND",
+   "number": "01",
+   "title": "Winter: slow before turns",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "approaching a turn on snow or ice",
+   "action": "take precautions and start slowing down before reaching the turn",
+   "unless": "",
+   "statement": "WHEN approaching a turn on snow or ice, the DRIVER SHOULD take precautions and start slowing down before reaching the turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "take precautions",
+     "explanation": "precautions not specified"
+    }
+   ],
+   "note": "From the winter driving safety tips table, introduced as precautions 'you should follow'.",
+   "evidence": [
+    "10.77",
+    "10.83",
+    "10.84"
+   ]
+  }
+ ]
+}

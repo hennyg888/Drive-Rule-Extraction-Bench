@@ -186,7 +186,7 @@ The programs you run are in `tools/`. Each one starts with its usage. They can b
 | [`tools/build_corpus.py`](tools/build_corpus.py) | Builds `corpus/` from `handbooks/`. `--check` lists the pages whose files would change, `--stats` prints the handbook analysis above |
 | [`tools/build_messages.py`](tools/build_messages.py) | Writes the exact request a model gets to `build/messages/`, to read it before running anything |
 | [`tools/run_extraction.py`](tools/run_extraction.py) | Runs a model on handbook pages with a prompt and saves everything in `runs/`. `--dry-run` only counts tokens |
-| [`tools/extract.sh`](tools/extract.sh) | The draft gold-set extraction in one command: `tools/extract.sh [handbook] [topic]` (default `mto overtaking`; topics `overtaking`, `turning`, `parking`) runs `run_extraction.py` with Claude Opus 5.5, the `formal-rules` prompt and the whole handbook, and saves the answer to `extraction_outputs/<model>/<handbook>_<topic>_<YYYY_MM_DD>.json`. Options after the topic are passed on, e.g. `tools/extract.sh mto turning --dry-run` or `--prompt no-handbook-rules` |
+| [`tools/extract.sh`](tools/extract.sh) | The draft gold-set extraction in one command: `tools/extract.sh [handbook] [topic]` (default `mto overtaking`; topics `overtaking`, `turning`, `parking`) runs `run_extraction.py` with Claude Opus 5.5, the `formal-rules` prompt and the whole handbook, and saves the answer to `extraction_outputs/anthropic/claude-opus-5.5/<handbook>_<topic>_full-corpus_<YYYY_MM_DD>.json`. Options after the topic are passed on, e.g. `tools/extract.sh mto turning --dry-run` or `--prompt no-handbook-rules` |
 | [`tools/models.py`](tools/models.py) | Lists the model presets and whether each one's key is set; `ping` checks one; `serve` starts a local vLLM server |
 | [`drbench/models/models.yaml`](drbench/models/models.yaml) | The model presets |
 | [`prompts/`](prompts/) | The prompts, one folder each |
@@ -194,8 +194,8 @@ The programs you run are in `tools/`. Each one starts with its usage. They can b
 **Tests:** `pytest` (no API is called).
 
 ```bash
-python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10
-python tools/run_extraction.py --model anthropic/claude-haiku-5-5 --handbook ca --dry-run
+python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --topic overtaking --pages 10
+python tools/run_extraction.py --model anthropic/claude-haiku-5-5 --handbook ca --topic parking --dry-run
 ```
 
 Options of `run_extraction.py`:
@@ -208,7 +208,34 @@ Options of `run_extraction.py`:
 | `--region <id>` | Fills `{{region}}` in a closed-book prompt (`no-handbook-rules`): `ca`, `tx` or `mto`; defaults to `--handbook`. No pages are sent |
 | `--set key=value` | Change a model setting for this run, e.g. `--set effort=low` or `--set extra_body.chat_template_kwargs.enable_thinking=false` |
 | `--label` | Add a name to the run folder |
-| `--save-to <dir>` | Also copy the answer to `<dir>/<model>/<handbook>_<topic>[_<prompt>]_<YYYY_MM_DD>.json` (`_2`, `_3` … if that file exists; `<prompt>` is left out for `formal-rules`), and the run's `meta.json` next to it as `<...>.meta.json`. A preset with a `mode` (its thinking mode) saves to `<dir>/<model>/<mode>/` |
+| `--save-to <dir>` | Also copy the answer to `<dir>/<model>/<handbook>_<topic>_<modality>_<YYYY_MM_DD>.json` (`<dir>/<folder>/…` for a preset with a `folder`), where `<modality>` is `full-corpus`, `no-images` or `no-handbook` according to the prompt (`_2`, `_3` … if that file exists; another prompt's name is added before the date), and the run's `meta.json` next to it as `<...>.meta.json`. A preset with a `mode` (its thinking mode) saves to `<dir>/<model>/<mode>/` |
+
+### Handbook, topic and input modality
+
+Every extraction is one handbook, one topic and one input modality:
+
+| Choice | Values | Set with |
+|---|---|---|
+| handbook | `mto` (Ontario), `ca` (California), `tx` (Texas) | `--handbook`; for a no-handbook run, `--region` (which defaults to `--handbook`) |
+| topic | `overtaking`, `turning`, `parking` | `--topic`; the sentence each one puts in the prompt is in `TOPICS` in [`drbench/prompts.py`](drbench/prompts.py) |
+| input modality | `full-corpus`: every page with its images<br>`no-images`: every page with each `<figure>` (image, alt text, caption) removed<br>`no-handbook`: no pages, only the topic and region (closed book) | `--prompt`: `formal-rules`, `no-image-rules` or `no-handbook-rules`. The modality comes from the prompt folder (`figures: false` in its `options.yaml`, or `{{region}}` in its `task.md`) |
+
+```bash
+tools/extract.sh ca turning                                       # ca, turning, full-corpus
+tools/extract.sh tx parking --prompt no-image-rules               # tx, parking, no-images
+python tools/run_extraction.py --model anthropic/claude-opus-5-5 --prompt no-handbook-rules --region mto --topic overtaking
+```
+
+**Saved names.** `--save-to` names each answer after the three choices and the date, and puts the run's `meta.json` next to it:
+
+```
+<save-to>/<model or preset folder>/[<mode>/]<handbook>_<topic>_<modality>_<YYYY_MM_DD>[_<n>].json
+                                            <handbook>_<topic>_<modality>_<YYYY_MM_DD>[_<n>].meta.json
+```
+
+`_2`, `_3` … are added when a file of that name exists. A prompt other than the three above adds its name before the date (`tx_full-corpus_smoke-test_…`).
+
+**Reading them back.** The file name holds all three choices: split it on `_` (handbook, topic, modality, then the date). Each run's `meta.json` (in `runs/` and next to the saved answer) also records `handbook`, `prompt`, `topic`, `region` and `modality`. Some older meta files lack fields: the 2026-11-27 turning and parking drafts have no `modality` (they are full-corpus), and earlier ones have only `handbook` and `prompt` (they are all overtaking with the full corpus). So the file name is the one place that always has all three.
 
 ## Prompts
 

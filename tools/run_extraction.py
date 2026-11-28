@@ -17,8 +17,11 @@ repository root.
             take it; they send task.md alone, no pages. It defaults to --handbook.
 --set       changes a model setting for this run: --set effort=low,
             --set extra_body.chat_template_kwargs.enable_thinking=false
---save-to   also copies the answer to <dir>/<model>/<handbook>_<topic>[_<prompt>]_<YYYY_MM_DD>.json
-            (_2, _3 ... when a file of that name exists; <prompt> is left out for formal-rules),
+--save-to   also copies the answer to
+            <dir>/<model>/<handbook>_<topic>_<modality>[_<prompt>]_<YYYY_MM_DD>.json, where modality
+            is full-corpus, no-images or no-handbook (from the prompt: see Prompt.modality) and
+            <prompt> is added only for prompts other than formal-rules, no-image-rules and
+            no-handbook-rules (_2, _3 ... when a file of that name exists),
             e.g. --save-to extraction_outputs, and the run's meta.json next to it as
             <...>.meta.json (runs/ is not in git; this is the record of the model, its settings and
             the prompt version that made the answer). A preset with a `mode` (its thinking mode,
@@ -69,6 +72,15 @@ def dry_run(a, pages):
         print(line)
 
 
+MODALITY_PROMPTS = ("formal-rules", "no-image-rules", "no-handbook-rules")   # their names are implied by the modality
+
+
+def answer_stem(handbook_id, p):
+    """<handbook>_<topic>_<modality>[_<prompt>]: the saved answer's name, without the date."""
+    return "_".join([handbook_id] + ([p.topic] if p.topic else []) + [p.modality]
+                    + ([p.name] if p.name not in MODALITY_PROMPTS else []))
+
+
 def save_answer(folder, out_dir, model_id, stem, mode=None):
     """Copy a run's answer to <out_dir>/<model>[/<mode>]/<stem>_<YYYY_MM_DD>.json, numbering on
     (_2, _3 ...) rather than overwriting, and its meta.json next to it as <...>.meta.json. Returns
@@ -101,7 +113,7 @@ def main():
     # ap.add_argument("--no-toc", action="store_true")
     ap.add_argument("--set", action="append", metavar="KEY=VALUE", help="change a model setting for this run")
     ap.add_argument("--label", help="added to the run folder name")
-    ap.add_argument("--save-to", metavar="DIR", help="also copy the answer and meta.json to DIR/<model>[/<mode>]/<handbook>_<topic>_<YYYY_MM_DD>.json")
+    ap.add_argument("--save-to", metavar="DIR", help="also copy the answer and meta.json to DIR/<model>[/<mode>]/<handbook>_<topic>_<modality>_<YYYY_MM_DD>.json")
     ap.add_argument("--dry-run", action="store_true", help="build the messages and count tokens; call no model")
     # ap.add_argument("--reground", metavar="RUN_DIR", help="resolve the citations of a finished run again")
     a = ap.parse_args()
@@ -132,9 +144,9 @@ def main():
         raise SystemExit(f"error: {e}")
     if a.save_to:
         preset = presets()[a.model]
-        stem = "_".join([a.handbook] + ([a.topic] if a.topic else [])
-                        + ([os.path.basename(os.path.normpath(a.prompt))] if a.prompt != prompts.DEFAULT else []))
-        path = save_answer(folder, os.path.join(ROOT, a.save_to), preset["model"], stem, preset.get("mode"))
+        stem = answer_stem(a.handbook, prompts.load(a.prompt, topic=a.topic, region=a.region))
+        path = save_answer(folder, os.path.join(ROOT, a.save_to), preset.get("folder", preset["model"]), stem,
+                           preset.get("mode"))
         print(f"-> {os.path.relpath(path, ROOT)}")
 
 

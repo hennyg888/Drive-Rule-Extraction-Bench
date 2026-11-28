@@ -247,43 +247,55 @@ run's `.meta.json`.
 
 ## Where things are
 
-In this folder, each result is at `<vendor>/<model>/<mode>/<handbook>_<date>.json`:
+In this folder, each result is at `<vendor>/<model>/<mode>/<handbook>_<topic>_<modality>_<date>.json`:
+
+| Part | Values | Set with |
+|---|---|---|
+| `<handbook>` | `mto`, `ca`, `tx` | `--handbook` (`--region` for `no-handbook`) |
+| `<topic>` | `overtaking`, `turning`, `parking` | `--topic` |
+| `<modality>` | `full-corpus` (pages and images), `no-images` (pages with every figure removed), `no-handbook` (closed book, no pages) | `--prompt` `formal-rules`, `no-image-rules` or `no-handbook-rules` |
+| `<date>` | `YYYY_MM_DD`, then `_2`, `_3` … for a second run that day | |
+
+To read the choices back, split the name on `_`; new `.meta.json` files also record `handbook`, `topic` and `modality` (older ones lack `topic` and `modality`, which the name always has). The [main README](../README.md#handbook-topic-and-input-modality) explains the options.
+
+Every result is from `formal-rules` with the full corpus. The other models' results are Ontario overtaking; the Claude folder holds the nine gold-set drafts, one per handbook and topic:
 
 ```
 anthropic/
-  claude-opus-5.5/
-    mto_2026_11_14.json
-    tx_2026_11_21.json
+  claude-opus-5.5/            the gold-set drafts: <handbook>_<topic>_full-corpus_<date>.json
+    ca_overtaking_full-corpus_2026_11_18.json   mto_overtaking_full-corpus_2026_11_14.json   tx_overtaking_full-corpus_2026_11_21.json
+    ca_turning_full-corpus_2026_11_27.json      mto_turning_full-corpus_2026_11_27.json      tx_turning_full-corpus_2026_11_27.json
+    ca_parking_full-corpus_2026_11_27.json      mto_parking_full-corpus_2026_11_27.json      tx_parking_full-corpus_2026_11_27.json
 google/
   gemma-4-31b-it/
-    no-thinking/              mto_2026_11_23.json
-    thinking-sampled-seed0/   mto_2026_11_23.json
+    no-thinking/              mto_overtaking_full-corpus_2026_11_23.json
+    thinking-sampled-seed0/   mto_overtaking_full-corpus_2026_11_23.json
 meta/
   muse-glimmer-30b/
-    reasoning-high/           mto_2026_11_23.json
+    reasoning-high/           mto_overtaking_full-corpus_2026_11_23.json
 openai/
   gpt-6.2-astra/
-    reasoning-high/           mto_2026_11_23.json
-    reasoning-medium/         mto_2026_11_23.json
+    reasoning-high/           mto_overtaking_full-corpus_2026_11_23.json
+    reasoning-medium/         mto_overtaking_full-corpus_2026_11_23.json
   gpt-6.2-sol/
-    reasoning-high/           mto_2026_11_23.json
-    reasoning-medium/         mto_2026_11_23.json
+    reasoning-high/           mto_overtaking_full-corpus_2026_11_23.json
+    reasoning-medium/         mto_overtaking_full-corpus_2026_11_23.json
 openbmb/
   minicpm-v-4.7-35b-a3b/
-    no-thinking/              mto_2026_11_23.json
+    no-thinking/              mto_overtaking_full-corpus_2026_11_23.json
 qwen/
   qwen3.8-27b/
-    no-thinking/              mto_2026_11_22.json
-    thinking-xhigh/           mto_2026_11_22.json
+    no-thinking/              mto_overtaking_full-corpus_2026_11_22.json
+    thinking-xhigh/           mto_overtaking_full-corpus_2026_11_22.json
 z-ai/
   glm-4.6v-flash/
-    no-thinking/              mto_2026_11_23.json
-    thinking/                 mto_2026_11_23.json
+    no-thinking/              mto_overtaking_full-corpus_2026_11_23.json
+    thinking/                 mto_overtaking_full-corpus_2026_11_23.json
 ```
 
-- **`<handbook>_<date>.json`** is the model's answer.
-- **`<handbook>_<date>.meta.json`** next to it records the preset, the model, every setting, the server's start command (local models), the prompt's SHA-256, the token counts, the time and the cost.
-- **The two Claude Opus 5.5 files** are the earlier raw drafts behind the gold sets. They predate the mode folders and have no `.meta.json`.
+- **`<handbook>_<topic>_<modality>_<date>.json`** is the model's answer.
+- **`<...>.meta.json`** next to it records the preset, the model, every setting, the server's start command (local models), the prompt's SHA-256, the token counts, the time and the cost.
+- **The Claude Opus 5.5 files** are the raw drafts behind the gold sets, each identical to `gold_set/<handbook>/<topic>/00_raw_rules.json`. `tools/extract.sh` saves here (the preset's `folder` setting). The Texas overtaking draft has no `.meta.json`: its run folder is not in this copy of `runs/`.
 
 Elsewhere:
 
@@ -296,8 +308,8 @@ To repeat a run and check it:
 
 ```
 python tools/models.py serve local/qwen3.8-27b          # local models only; stop it when done
-python tools/run_extraction.py --model local/qwen3.8-27b --handbook mto --save-to extraction_outputs
-python tools/run_extraction.py --model openai/gpt-6.2-sol --handbook mto --save-to extraction_outputs/openai
+python tools/run_extraction.py --model local/qwen3.8-27b --handbook mto --topic overtaking --save-to extraction_outputs
+python tools/run_extraction.py --model openai/gpt-6.2-sol --handbook mto --topic overtaking --save-to extraction_outputs/openai
 python error_check_pipelines/goldset/check_format.py <answer.json> --handbook mto
 ```
 

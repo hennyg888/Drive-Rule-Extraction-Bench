@@ -107,7 +107,7 @@ def run(model_name, handbook_id, pages=None, prompt=prompts.DEFAULT, images=True
     meta = {"run": name, "started": time.strftime("%Y-%m-%d %H:%M:%S"), "git": git_commit(), **model.describe(),
             "handbook": handbook_id, "pages": sorted(pages) if pages else "all", "images": images, "toc": toc,
             "per_page": per_page, "prompt": p.name, "prompt_sha256": p.sha256, "topic": topic, "region": region,
-            "closed_book": p.closed_book, "figures": p.figures}
+            "closed_book": p.closed_book, "figures": p.figures, "modality": p.modality}
     if p.closed_book:
         meta.update(pages="none", images=False, toc=False, figures=False)
     elif not p.figures:

@@ -1,6 +1,6 @@
 # Claude Opus 5.5 medium Goldset Draft Error Report
 
-first extraction output: `extraction_outputs\anthropic\claude-opus-5.5\mto_2026_11_14.json`
+first extraction output: `extraction_outputs\anthropic\claude-opus-5.5\mto_overtaking_full-corpus_2026_11_14.json`
 
 corresponding run: `runs\20261114-214852-openrouter_claude-opus-5.5-mto-draft-gold`
 

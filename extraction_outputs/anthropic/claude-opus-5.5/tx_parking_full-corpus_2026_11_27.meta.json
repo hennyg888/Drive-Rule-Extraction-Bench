@@ -1,0 +1,81 @@
+{
+ "run": "20261127-194850-anthropic_claude-opus-5-5-tx-parking-draft-gold",
+ "started": "2026-11-27 19:48:50",
+ "git": "a2a41b6",
+ "preset": "anthropic/claude-opus-5-5",
+ "provider": "anthropic",
+ "model": "claude-opus-5-5",
+ "params": {
+  "effort": "medium",
+  "fallbacks": "default",
+  "max_tokens": 128000
+ },
+ "vision": true,
+ "price_per_million": [
+  4.0,
+  20.0,
+  0.2
+ ],
+ "handbook": "tx",
+ "pages": "all",
+ "images": true,
+ "toc": true,
+ "per_page": false,
+ "prompt": "formal-rules",
+ "prompt_sha256": "a215f1b78c54d0fde2c6465d12fa07f80632ef41adebc8da414d35520b416827",
+ "topic": "parking",
+ "region": null,
+ "closed_book": false,
+ "figures": true,
+ "calls": [
+  {
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "model": "claude-opus-5-5",
+   "stop_reason": "end_turn",
+   "input_tokens": 154452,
+   "output_tokens": 22587,
+   "reasoning_tokens": 6398,
+   "seconds": 169.7,
+   "cost_usd": 1.0695,
+   "request_id": "req_011ChUQXMfPYBA6KJ4GT2xgD",
+   "json": true,
+   "citations": {
+    "text": 109,
+    "heading": 25,
+    "figure": 12,
+    "caption": 4
+   }
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 154452,
+  "output_tokens": 22587,
+  "reasoning_tokens": 6398,
+  "seconds": 169.7,
+  "cost_usd": 1.0695
+ }
+}
