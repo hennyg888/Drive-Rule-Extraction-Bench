@@ -228,8 +228,6 @@ The prompts in `prompts/`:
 | [`smoke-test/`](prompts/smoke-test/) | A small, cheap prompt (at most three rules, cited by block id) for checking that a model and the pipeline work. Its output is not meant to be used. |
 | [`archive/`](prompts/archive/) | Earlier prompts (`extract-rules`), kept for reference. Not used, and not kept up to date with the corpus or the citation format. |
 
-The earlier rule pipeline (rule language, census, rules database, the first PDF-based Ontario rules) is on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).
-
 [`prompts/Prompt_Notes.md`](prompts/Prompt_Notes.md) sums up Anthropic's advice on laying out prompts for Claude. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
 
 ## What a model is sent
@@ -316,6 +314,23 @@ A run writes `runs/<time>-<preset>-<handbook>/`:
 Runs are not committed (`runs/` is in `.gitignore`). To keep a run, copy it somewhere tracked, or add it with `git add -f`.
 
 Answers saved with `--save-to extraction_outputs` are committed, with their `.meta.json`, in [`extraction_outputs/`](extraction_outputs/), by vendor, model and thinking mode. Its [README](extraction_outputs/README.md) records the candidate model runs on Ontario overtaking.
+
+## Repository layout
+
+| Path | What it holds |
+|---|---|
+| `tools/` | The programs: `build_corpus.py`, `build_messages.py`, `run_extraction.py`, `extract.sh`, `models.py` (see [Programs](#programs)) |
+| `prompts/` | The prompts, one folder each |
+| `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` (see [below](#the-handbook-copies-handbooks)) |
+| `corpus/` | The handbooks with an id on every block and sentence, with each handbook's manual decisions and screening list |
+| `drbench/` | The code behind the programs: corpus building, messages, prompts, models, runs and grounding |
+| `scrapers/` | The scripts that made `handbooks/` |
+| `tests/` | Tests for `pytest` |
+| `legacy/` | Earlier material: the first Ontario passing rules (`ontario_passing_rules.yaml`, `Ontario passing rules.md`) that `formal-rules` follows, and the prompts the team gave Claude (`prompt.md`) |
+| `extraction_outputs/` | Model answers saved with `--save-to`, by vendor, model and thinking mode. Its [README](extraction_outputs/README.md) records the candidate model runs on Ontario overtaking |
+| `runs/`, `build/` | Run results and built messages; not committed |
+
+The earlier rule pipeline (rule language, census, rules database, extraction prompts and runs, the Qwen trial, review pages, and the first PDF-based Ontario rules) is kept on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).
 
 ## The handbook copies (`handbooks/`)
 
