@@ -1,0 +1,79 @@
+{
+ "run": "20261127-203614-anthropic_claude-opus-5-5-tx-overtaking-no-images",
+ "started": "2026-11-27 20:36:14",
+ "git": "1448972",
+ "preset": "anthropic/claude-opus-5-5",
+ "provider": "anthropic",
+ "model": "claude-opus-5-5",
+ "params": {
+  "effort": "medium",
+  "fallbacks": "default",
+  "max_tokens": 128000
+ },
+ "vision": true,
+ "price_per_million": [
+  4.0,
+  20.0,
+  0.2
+ ],
+ "handbook": "tx",
+ "pages": "all",
+ "images": false,
+ "toc": true,
+ "per_page": false,
+ "prompt": "no-image-rules",
+ "prompt_sha256": "7ff32ef3dddd18500cae3e95dec3452b30e15158605ba65f73122a0568b5dc73",
+ "topic": "overtaking",
+ "region": null,
+ "closed_book": false,
+ "figures": false,
+ "modality": "no-images",
+ "calls": [
+  {
+   "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "model": "claude-opus-5-5",
+   "stop_reason": "end_turn",
+   "input_tokens": 128131,
+   "output_tokens": 23176,
+   "reasoning_tokens": 8342,
+   "seconds": 170.5,
+   "cost_usd": 0.976,
+   "request_id": "req_011ChUU8sbHg7NJP3yAkAbHY",
+   "json": true,
+   "citations": {
+    "text": 105
+   }
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 128131,
+  "output_tokens": 23176,
+  "reasoning_tokens": 8342,
+  "seconds": 170.5,
+  "cost_usd": 0.976
+ }
+}

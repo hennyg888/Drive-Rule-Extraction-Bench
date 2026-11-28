@@ -1,0 +1,673 @@
+{
+ "scope": "parking (parking, stopping and standing a vehicle, and where each is not allowed)",
+ "region": "Ontario, Canada",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "A person who drives or has care and control of a vehicle on a HIGHWAY."
+  },
+  {
+   "term": "HIGHWAY",
+   "definition": "A common and public highway, street, avenue, parkway, driveway, square, place, bridge, viaduct or trestle, any part of which is intended for or used by the general public for the passage of vehicles, including the area between the lateral property lines."
+  },
+  {
+   "term": "ROADWAY",
+   "definition": "The part of the HIGHWAY that is improved, designed or ordinarily used for vehicular traffic, not including the SHOULDER."
+  },
+  {
+   "term": "SHOULDER",
+   "definition": "The part of the HIGHWAY beside the ROADWAY that is not ordinarily used for vehicular traffic."
+  },
+  {
+   "term": "PARK",
+   "definition": "When prohibited, the standing of a vehicle, whether occupied or not, except when standing temporarily for the purpose of and while actually engaged in loading or unloading merchandise or passengers."
+  },
+  {
+   "term": "STAND",
+   "definition": "When prohibited, the halting of a vehicle, whether occupied or not, except for the purpose of and while actually engaged in receiving or discharging passengers."
+  },
+  {
+   "term": "STOP",
+   "definition": "When prohibited, the halting of a vehicle, even momentarily, whether occupied or not, except when necessary to avoid conflict with other traffic or in compliance with the directions of a police officer or a traffic control sign or signal."
+  },
+  {
+   "term": "INTERSECTION",
+   "definition": "The area embraced within the prolongation or connection of the lateral curb lines, or if none, of the lateral boundary lines, of two or more HIGHWAYS that join one another at an angle."
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "The part of a HIGHWAY at an INTERSECTION included within the connections of the lateral lines of the sidewalks on opposite sides of the HIGHWAY, or any part of a ROADWAY distinctly indicated for pedestrian crossing by signs or by lines or other markings on the surface."
+  },
+  {
+   "term": "ACCESSIBLE PARKING PERMIT",
+   "definition": "A permit issued by the Province of Ontario (or a recognised equivalent) to a person with a disability, displayed in the vehicle to allow parking in a designated accessible parking space."
+  },
+  {
+   "term": "FREEWAY",
+   "definition": "A high-speed, multi-lane, controlled-access HIGHWAY such as a 400-series highway."
+  }
+ ],
+ "rules": [
+  {
+   "id": "PARK-GEN-01",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "01",
+   "title": "Rural roads: park off the roadway when practicable",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a HIGHWAY outside a city, town or village AND it is practicable to PARK, STAND or STOP the vehicle off the ROADWAY",
+   "action": "PARK, STAND or STOP the vehicle on the ROADWAY",
+   "unless": "the vehicle is so disabled that it is impossible to avoid temporarily leaving it on the ROADWAY",
+   "statement": "WHEN on a HIGHWAY outside a city, town or village AND it is practicable to PARK, STAND or STOP the vehicle off the ROADWAY, the DRIVER MUST NOT PARK, STAND or STOP the vehicle on the ROADWAY, UNLESS the vehicle is so disabled that it is impossible to avoid temporarily leaving it on the ROADWAY.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "practicable",
+     "explanation": "does not say what makes parking off the roadway practicable"
+    }
+   ],
+   "note": "Highway Traffic Act s.170(1)-(2). The exact geographic scope (outside cities, towns, villages / built-up areas) is from memory and should be checked."
+  },
+  {
+   "id": "PARK-GEN-02",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "02",
+   "title": "Rural roads: clear view of 125 m when roadway parking unavoidable",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a HIGHWAY outside a city, town or village AND it is not practicable to PARK, STAND or STOP the vehicle off the ROADWAY",
+   "action": "PARK, STAND or STOP the vehicle on the ROADWAY",
+   "unless": "a clear view of the vehicle and of the ROADWAY for at least 125 metres beyond the vehicle can be obtained from a distance of at least 125 metres from the vehicle in each direction OR the vehicle is so disabled that it is impossible to avoid temporarily leaving it on the ROADWAY",
+   "statement": "WHEN on a HIGHWAY outside a city, town or village AND it is not practicable to PARK, STAND or STOP the vehicle off the ROADWAY, the DRIVER MUST NOT PARK, STAND or STOP the vehicle on the ROADWAY, UNLESS a clear view of the vehicle and of the ROADWAY for at least 125 metres beyond the vehicle can be obtained from a distance of at least 125 metres from the vehicle in each direction OR the vehicle is so disabled that it is impossible to avoid temporarily leaving it on the ROADWAY.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "not practicable",
+     "explanation": "does not say what makes parking off the roadway impracticable"
+    }
+   ],
+   "note": "Highway Traffic Act s.170(1)(b)."
+  },
+  {
+   "id": "PARK-GEN-03",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "03",
+   "title": "Never park on the travelled section of a highway",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the DRIVER needs to stop on a HIGHWAY",
+   "action": "PARK on the travelled section of the HIGHWAY, and MUST instead drive off the ROADWAY onto the SHOULDER",
+   "unless": "",
+   "statement": "WHEN the DRIVER needs to stop on a HIGHWAY, the DRIVER MUST NOT PARK on the travelled section of the HIGHWAY, and MUST instead drive off the ROADWAY onto the SHOULDER.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Official MTO Driver's Handbook wording; applies where a shoulder is available."
+  },
+  {
+   "id": "PARK-GEN-04",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "04",
+   "title": "Do not interfere with traffic or snow clearing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "leaving a vehicle on a HIGHWAY",
+   "action": "PARK or STAND the vehicle in a manner that interferes with the movement of traffic or the clearing of snow from the HIGHWAY",
+   "unless": "",
+   "statement": "WHEN leaving a vehicle on a HIGHWAY, the DRIVER MUST NOT PARK or STAND the vehicle in a manner that interferes with the movement of traffic or the clearing of snow from the HIGHWAY.",
+   "penalty": "The vehicle may be removed and impounded at the owner's expense.",
+   "vague_terms": [
+    {
+     "term": "interferes with",
+     "explanation": "degree of obstruction not given"
+    }
+   ],
+   "note": "Highway Traffic Act s.170(12); police or authorised officers may remove the vehicle under s.170(15)."
+  },
+  {
+   "id": "PARK-GEN-05",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "05",
+   "title": "Do not block traffic or create a hazard",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "choosing a place to PARK",
+   "action": "PARK where the vehicle would block traffic or create a hazard",
+   "unless": "",
+   "statement": "WHEN choosing a place to PARK, the DRIVER MUST NOT PARK where the vehicle would block traffic or create a hazard.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "create a hazard",
+     "explanation": "what counts as a hazard is not defined"
+    }
+   ],
+   "note": "MTO Driver's Handbook; municipal by-laws add further local restrictions."
+  },
+  {
+   "id": "PARK-LOC-01",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "01",
+   "title": "Fire hydrant: 3 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 3 metres of a fire hydrant",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 3 metres of a fire hydrant, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Listed in the MTO Driver's Handbook; enforced by municipal by-laws, which set fines and may use a larger distance."
+  },
+  {
+   "id": "PARK-LOC-02",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "02",
+   "title": "No parking on a curve",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a curve",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN on a curve, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a curve",
+     "explanation": "no degree of curvature given"
+    }
+   ],
+   "note": "MTO Driver's Handbook."
+  },
+  {
+   "id": "PARK-LOC-03",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "03",
+   "title": "No parking on or near the top of a hill",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on or near the top of a hill",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN on or near the top of a hill, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "near the top of a hill",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "MTO Driver's Handbook."
+  },
+  {
+   "id": "PARK-LOC-04",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "04",
+   "title": "No parking on a bridge",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a bridge",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN on a bridge, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook."
+  },
+  {
+   "id": "PARK-LOC-05",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "05",
+   "title": "No parking on a crosswalk",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a CROSSWALK",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN on a CROSSWALK, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook; also prohibited by municipal by-laws."
+  },
+  {
+   "id": "PARK-LOC-06",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "06",
+   "title": "Intersection without signals: 9 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 9 metres of an INTERSECTION that is not controlled by traffic lights",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 9 metres of an INTERSECTION that is not controlled by traffic lights, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook; municipal by-laws may set different distances."
+  },
+  {
+   "id": "PARK-LOC-07",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "07",
+   "title": "Signalized intersection: 15 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 15 metres of an INTERSECTION controlled by traffic lights",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 15 metres of an INTERSECTION controlled by traffic lights, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook; municipal by-laws may set different distances."
+  },
+  {
+   "id": "PARK-LOC-08",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "08",
+   "title": "Railway crossing: 15 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 15 metres of the nearest rail of a level railway crossing",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 15 metres of the nearest rail of a level railway crossing, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook."
+  },
+  {
+   "id": "PARK-LOC-09",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "09",
+   "title": "Public entrances: 6 metres",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "within 6 metres of a public entrance to a hotel, theatre or public hall AND the building is open to the public",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN within 6 metres of a public entrance to a hotel, theatre or public hall AND the building is open to the public, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook; recalled from memory, check the current edition."
+  },
+  {
+   "id": "PARK-LOC-10",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "10",
+   "title": "Do not block a lane or driveway",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in front of a lane or driveway",
+   "action": "PARK so as to block the lane or driveway",
+   "unless": "",
+   "statement": "WHEN in front of a lane or driveway, the DRIVER MUST NOT PARK so as to block the lane or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook; enforced by municipal by-laws."
+  },
+  {
+   "id": "PARK-LOC-11",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "11",
+   "title": "Do not hide traffic signs or signals",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "near a traffic sign or traffic signal",
+   "action": "PARK where the vehicle would hide the sign or signal from other road users",
+   "unless": "",
+   "statement": "WHEN near a traffic sign or traffic signal, the DRIVER MUST NOT PARK where the vehicle would hide the sign or signal from other road users.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "near",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "MTO Driver's Handbook."
+  },
+  {
+   "id": "PARK-LOC-12",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "12",
+   "title": "No parking in a bicycle lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "at a designated bicycle lane",
+   "action": "PARK or STOP in the bicycle lane",
+   "unless": "",
+   "statement": "WHEN at a designated bicycle lane, the DRIVER MUST NOT PARK or STOP in the bicycle lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Stated in MTO handbook guidance on sharing the road; legal prohibition and fines come from municipal by-laws (e.g. Toronto) and vary."
+  },
+  {
+   "id": "PARK-LOC-13",
+   "topic": "PARK",
+   "group": "LOC",
+   "number": "13",
+   "title": "Freeway shoulder: emergencies only",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a FREEWAY",
+   "action": "STOP on the SHOULDER",
+   "unless": "there is an emergency",
+   "statement": "WHEN on a FREEWAY, the DRIVER MUST NOT STOP on the SHOULDER, UNLESS there is an emergency.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "an emergency",
+     "explanation": "what qualifies as an emergency is not defined"
+    }
+   ],
+   "note": "MTO Driver's Handbook freeway guidance; regulatory signs on many provincial highways also prohibit stopping except in emergencies."
+  },
+  {
+   "id": "PARK-SIGN-01",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "01",
+   "title": "No Parking sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in an area governed by a No Parking sign AND within the times shown on the sign",
+   "action": "PARK",
+   "unless": "",
+   "statement": "WHEN in an area governed by a No Parking sign AND within the times shown on the sign, the DRIVER MUST NOT PARK.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Regulatory sign; stopping briefly to load or unload passengers or merchandise is allowed under the definition of PARK. Fines set by municipal by-laws."
+  },
+  {
+   "id": "PARK-SIGN-02",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "02",
+   "title": "No Standing sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in an area governed by a No Standing sign AND within the times shown on the sign",
+   "action": "STAND",
+   "unless": "",
+   "statement": "WHEN in an area governed by a No Standing sign AND within the times shown on the sign, the DRIVER MUST NOT STAND.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Regulatory sign; stopping only while actually picking up or dropping off passengers is allowed under the definition of STAND."
+  },
+  {
+   "id": "PARK-SIGN-03",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "03",
+   "title": "No Stopping sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in an area governed by a No Stopping sign AND within the times shown on the sign",
+   "action": "STOP",
+   "unless": "",
+   "statement": "WHEN in an area governed by a No Stopping sign AND within the times shown on the sign, the DRIVER MUST NOT STOP.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Regulatory sign; halting to avoid conflict with traffic or on the direction of a police officer or traffic signal is not prohibited stopping."
+  },
+  {
+   "id": "PARK-SIGN-04",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "04",
+   "title": "Time-limited parking sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in an area where a sign permits parking for a limited time",
+   "action": "PARK longer than the time shown on the sign",
+   "unless": "",
+   "statement": "WHEN in an area where a sign permits parking for a limited time, the DRIVER MUST NOT PARK longer than the time shown on the sign.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Regulatory sign; fines set by municipal by-laws."
+  },
+  {
+   "id": "PARK-SIGN-05",
+   "topic": "PARK",
+   "group": "SIGN",
+   "number": "05",
+   "title": "Accessible parking spaces",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "at a parking space designated by an accessible parking sign",
+   "action": "PARK in the space if a valid ACCESSIBLE PARKING PERMIT is displayed in the vehicle AND the permit holder is being transported in the vehicle",
+   "unless": "",
+   "statement": "WHEN at a parking space designated by an accessible parking sign, the DRIVER MAY ONLY PARK in the space if a valid ACCESSIBLE PARKING PERMIT is displayed in the vehicle AND the permit holder is being transported in the vehicle.",
+   "penalty": "Municipal fines (often several hundred dollars); misuse of a permit can bring fines of up to $5,000 under the HTA regulation.",
+   "vague_terms": [],
+   "note": "Highway Traffic Act and O. Reg. 581; parking fine amounts are set by municipalities. Force is REQUIREMENT but expressed as MAY ONLY."
+  },
+  {
+   "id": "PARK-HILL-01",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "01",
+   "title": "Facing downhill: wheels toward curb",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "PARKING facing downhill",
+   "action": "turn the front wheels toward the curb or the right SHOULDER",
+   "unless": "",
+   "statement": "WHEN PARKING facing downhill, the DRIVER MUST turn the front wheels toward the curb or the right SHOULDER.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook; reason given is to keep the vehicle from rolling into traffic if the brakes fail."
+  },
+  {
+   "id": "PARK-HILL-02",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "02",
+   "title": "Facing uphill with curb: wheels to the left",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "PARKING facing uphill AND there is a curb",
+   "action": "turn the front wheels to the left so that they rest against the curb",
+   "unless": "",
+   "statement": "WHEN PARKING facing uphill AND there is a curb, the DRIVER MUST turn the front wheels to the left so that they rest against the curb.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook."
+  },
+  {
+   "id": "PARK-HILL-03",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "03",
+   "title": "Facing uphill without curb: wheels to the right",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "PARKING facing uphill AND there is no curb",
+   "action": "turn the front wheels sharply to the right",
+   "unless": "",
+   "statement": "WHEN PARKING facing uphill AND there is no curb, the DRIVER MUST turn the front wheels sharply to the right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook; keeps the vehicle rolling off the road rather than into traffic."
+  },
+  {
+   "id": "PARK-HILL-04",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "04",
+   "title": "Set the parking brake on a hill",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "PARKING on a hill",
+   "action": "set the parking brake",
+   "unless": "",
+   "statement": "WHEN PARKING on a hill, the DRIVER MUST set the parking brake.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook."
+  },
+  {
+   "id": "PARK-LEAVE-01",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "01",
+   "title": "Open doors only with due precautions",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER or passenger",
+   "when": "the vehicle is on a HIGHWAY",
+   "action": "open a door of the vehicle without taking due precautions to ensure that doing so will not interfere with the movement of or endanger any other person or vehicle",
+   "unless": "",
+   "statement": "WHEN the vehicle is on a HIGHWAY, the DRIVER or passenger MUST NOT open a door of the vehicle without taking due precautions to ensure that doing so will not interfere with the movement of or endanger any other person or vehicle.",
+   "penalty": "Fine of $300 to $1,000 and 3 demerit points.",
+   "vague_terms": [
+    {
+     "term": "due precautions",
+     "explanation": "specific checks not stated in law"
+    }
+   ],
+   "note": "Highway Traffic Act s.165(a); demerit points apply to the driver."
+  },
+  {
+   "id": "PARK-LEAVE-02",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "02",
+   "title": "Do not leave a door open on the traffic side",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER or passenger",
+   "when": "a door of the vehicle is open on the side available to moving traffic on a HIGHWAY",
+   "action": "leave the door open longer than necessary to load or unload passengers",
+   "unless": "",
+   "statement": "WHEN a door of the vehicle is open on the side available to moving traffic on a HIGHWAY, the DRIVER or passenger MUST NOT leave the door open longer than necessary to load or unload passengers.",
+   "penalty": "Fine of $300 to $1,000 and 3 demerit points.",
+   "vague_terms": [
+    {
+     "term": "longer than necessary",
+     "explanation": "no time given"
+    }
+   ],
+   "note": "Highway Traffic Act s.165(b)."
+  },
+  {
+   "id": "PARK-LEAVE-03",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "03",
+   "title": "Check for cyclists before opening a door",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to open a door after PARKING on a HIGHWAY",
+   "action": "check mirrors and look over the shoulder for approaching cyclists and other traffic",
+   "unless": "",
+   "statement": "WHEN about to open a door after PARKING on a HIGHWAY, the DRIVER MUST check mirrors and look over the shoulder for approaching cyclists and other traffic.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "MTO Driver's Handbook guidance on sharing the road with cyclists; exact wording (command vs. advice) uncertain."
+  },
+  {
+   "id": "PARK-LEAVE-04",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "04",
+   "title": "Signal and check before pulling out",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "moving a parked vehicle from the SHOULDER or curb into traffic",
+   "action": "first see that the movement can be made safely and, if other traffic may be affected, give a signal",
+   "unless": "",
+   "statement": "WHEN moving a parked vehicle from the SHOULDER or curb into traffic, the DRIVER MUST first see that the movement can be made safely and, if other traffic may be affected, give a signal.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "can be made safely",
+     "explanation": "no gap or distance given"
+    }
+   ],
+   "note": "Based on Highway Traffic Act s.142 signalling duties and the handbook; whether s.142 explicitly covers starting from a parked position should be checked."
+  },
+  {
+   "id": "PARK-PROC-01",
+   "topic": "PARK",
+   "group": "PROC",
+   "number": "01",
+   "title": "Parallel parking: signal and check traffic",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to parallel PARK at the curb",
+   "action": "check traffic behind, signal the intention to stop and PARK, and stop beside the vehicle ahead of the empty space before reversing into it",
+   "unless": "",
+   "statement": "WHEN about to parallel PARK at the curb, the DRIVER MUST check traffic behind, signal the intention to stop and PARK, and stop beside the vehicle ahead of the empty space before reversing into it.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Summarises the MTO Driver's Handbook parallel-parking steps; the handbook also says to keep checking traffic and finish parallel and close to the curb."
+  },
+  {
+   "id": "PARK-EMER-01",
+   "topic": "PARK",
+   "group": "EMER",
+   "number": "01",
+   "title": "Breakdown: get off the road and use hazard lights",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the vehicle breaks down on a HIGHWAY",
+   "action": "move the vehicle off the ROADWAY onto the SHOULDER as far as possible and turn on the emergency flashers",
+   "unless": "",
+   "statement": "WHEN the vehicle breaks down on a HIGHWAY, the DRIVER MUST move the vehicle off the ROADWAY onto the SHOULDER as far as possible and turn on the emergency flashers.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as far as possible",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "MTO Driver's Handbook emergency guidance."
+  }
+ ]
+}

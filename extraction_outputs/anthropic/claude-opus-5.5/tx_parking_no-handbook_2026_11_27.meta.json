@@ -1,0 +1,55 @@
+{
+ "run": "20261127-204431-anthropic_claude-opus-5-5-tx-parking-no-handbook",
+ "started": "2026-11-27 20:44:31",
+ "git": "1448972",
+ "preset": "anthropic/claude-opus-5-5",
+ "provider": "anthropic",
+ "model": "claude-opus-5-5",
+ "params": {
+  "effort": "medium",
+  "fallbacks": "default",
+  "max_tokens": 128000
+ },
+ "vision": true,
+ "price_per_million": [
+  4.0,
+  20.0,
+  0.2
+ ],
+ "handbook": "tx",
+ "pages": "none",
+ "images": false,
+ "toc": false,
+ "per_page": false,
+ "prompt": "no-handbook-rules",
+ "prompt_sha256": "2ef381805d9dafd88cac6c47a21f6de45be4542c3bad126166a02ac4a406882a",
+ "topic": "parking",
+ "region": "tx",
+ "closed_book": true,
+ "figures": false,
+ "modality": "no-handbook",
+ "calls": [
+  {
+   "pages": [],
+   "model": "claude-opus-5-5",
+   "stop_reason": "end_turn",
+   "input_tokens": 4717,
+   "output_tokens": 22373,
+   "reasoning_tokens": 5914,
+   "seconds": 171.6,
+   "cost_usd": 0.4663,
+   "request_id": "req_011ChUUmXaZEuszFXcp8YnE8",
+   "json": true,
+   "citations": {}
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 4717,
+  "output_tokens": 22373,
+  "reasoning_tokens": 5914,
+  "seconds": 171.6,
+  "cost_usd": 0.4663
+ }
+}

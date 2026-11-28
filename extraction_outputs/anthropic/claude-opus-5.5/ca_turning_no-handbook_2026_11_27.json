@@ -1,0 +1,1102 @@
+{
+ "scope": "turning (right turns, left turns and U-turns, at intersections and elsewhere)",
+ "region": "California, United States",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "A person who drives or is in actual physical control of a vehicle."
+  },
+  {
+   "term": "INTERSECTION",
+   "definition": "The area within the prolongation of the lateral curb lines, or the lateral boundary lines of the roadways, of two highways that join one another at approximately right angles or any other angle."
+  },
+  {
+   "term": "ROADWAY",
+   "definition": "The portion of a highway improved, designed, or ordinarily used for vehicular travel."
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "The portion of a roadway at an intersection that is an extension of the sidewalk or curb lines, whether marked or not, or any portion of a roadway marked for pedestrian crossing by lines or other markings."
+  },
+  {
+   "term": "PEDESTRIAN",
+   "definition": "A person on foot, or a person using a means of conveyance propelled by human power other than a bicycle, or a person using a motorized wheelchair or similar device because of a disability."
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person riding a bicycle."
+  },
+  {
+   "term": "BICYCLE LANE",
+   "definition": "A lane of a roadway marked and signed for the preferential use of bicycles."
+  },
+  {
+   "term": "LIMIT LINE",
+   "definition": "A solid white line, not less than 12 inches wide, marking the point where a vehicle must stop in obedience to a stop sign or signal."
+  },
+  {
+   "term": "U-TURN",
+   "definition": "A turn made to reverse the direction of travel on the same highway."
+  },
+  {
+   "term": "TWO-WAY LEFT-TURN LANE",
+   "definition": "A lane near the center of a highway, marked on each side by an inner broken yellow line and an outer solid yellow line, set aside for left turns or U-turns by traffic moving in either direction."
+  },
+  {
+   "term": "DIVIDED HIGHWAY",
+   "definition": "A highway divided into two or more roadways by an intermediate space, physical barrier, or a section clearly indicated by two sets of double yellow lines, each set at least two feet apart."
+  },
+  {
+   "term": "BUSINESS DISTRICT",
+   "definition": "An area where 50 percent or more of the frontage along a highway for a distance of 300 feet or more is occupied by buildings in use for business; the handbook also treats areas with churches, apartments, multiple dwelling houses and public buildings (except schools) as business districts."
+  },
+  {
+   "term": "RESIDENCE DISTRICT",
+   "definition": "The portion of a highway and the property contiguous to it, other than a business district, upon one side of which within a quarter of a mile the contiguous property fronting thereon is occupied by 13 or more separate dwelling houses or business structures, or upon both sides of which collectively within a quarter mile there are 16 or more such houses or structures."
+  },
+  {
+   "term": "OFFICIAL TRAFFIC CONTROL DEVICE",
+   "definition": "Any sign, signal, marking, or device placed or erected by authority of a public body or official having jurisdiction to regulate, warn, or guide traffic."
+  },
+  {
+   "term": "GREEN ARROW",
+   "definition": "A steady green arrow signal indication."
+  },
+  {
+   "term": "YELLOW ARROW",
+   "definition": "A steady yellow arrow signal indication, warning that the protected turning period is ending."
+  },
+  {
+   "term": "FLASHING YELLOW ARROW",
+   "definition": "A flashing yellow arrow signal indication permitting a turn in the direction of the arrow after yielding to oncoming traffic and pedestrians."
+  },
+  {
+   "term": "RED ARROW",
+   "definition": "A steady red arrow signal indication."
+  },
+  {
+   "term": "ONE-WAY STREET",
+   "definition": "A highway on which vehicular traffic is permitted to travel in one direction only."
+  },
+  {
+   "term": "ROUNDABOUT",
+   "definition": "A circular intersection where traffic travels counterclockwise around a center island."
+  }
+ ],
+ "rules": [
+  {
+   "id": "TURN-GEN-01",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "01",
+   "title": "Turn only with reasonable safety",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "intending to turn a vehicle from a direct course or move right or left upon a ROADWAY",
+   "action": "make the movement",
+   "unless": "it can be made with reasonable safety",
+   "statement": "WHEN intending to turn a vehicle from a direct course or move right or left upon a ROADWAY, the DRIVER MUST NOT make the movement, UNLESS it can be made with reasonable safety.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "reasonable safety",
+     "explanation": "no gap, distance or speed criterion given"
+    }
+   ],
+   "note": "CVC 22107."
+  },
+  {
+   "id": "TURN-GEN-02",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "02",
+   "title": "Signal when others may be affected",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning right or left or moving right or left upon a ROADWAY AND any other vehicle may be affected by the movement",
+   "action": "give an appropriate signal before making the movement",
+   "unless": "",
+   "statement": "WHEN turning right or left or moving right or left upon a ROADWAY AND any other vehicle may be affected by the movement, the DRIVER MUST give an appropriate signal before making the movement.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "may be affected",
+     "explanation": "does not say which vehicles count as affected"
+    }
+   ],
+   "note": "CVC 22107. The handbook advises signalling even when no one is seen."
+  },
+  {
+   "id": "TURN-GEN-03",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "03",
+   "title": "Signal during last 100 feet",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "a signal of intention to turn right or left is required",
+   "action": "give the signal continuously during the last 100 feet traveled before turning",
+   "unless": "",
+   "statement": "WHEN a signal of intention to turn right or left is required, the DRIVER MUST give the signal continuously during the last 100 feet traveled before turning.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22108."
+  },
+  {
+   "id": "TURN-GEN-04",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "04",
+   "title": "Hand signal for left turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "signalling a left turn by hand and arm",
+   "action": "extend the hand and arm beyond the left side of the vehicle horizontally",
+   "unless": "",
+   "statement": "WHEN signalling a left turn by hand and arm, the DRIVER MUST extend the hand and arm beyond the left side of the vehicle horizontally.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22111."
+  },
+  {
+   "id": "TURN-GEN-05",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "05",
+   "title": "Hand signal for right turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "signalling a right turn by hand and arm",
+   "action": "extend the left hand and arm upward beyond the left side of the vehicle",
+   "unless": "",
+   "statement": "WHEN signalling a right turn by hand and arm, the DRIVER MUST extend the left hand and arm upward beyond the left side of the vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22111. Bicyclists may alternatively extend the right arm horizontally to the right; this alternative is not stated for motor vehicle drivers."
+  },
+  {
+   "id": "TURN-GEN-06",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "06",
+   "title": "Look over shoulder before turning",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to make a right or left turn",
+   "action": "look over the shoulder on the side of the turn for vehicles, motorcycles, CYCLISTS and PEDESTRIANS",
+   "unless": "",
+   "statement": "WHEN about to make a right or left turn, the DRIVER MUST look over the shoulder on the side of the turn for vehicles, motorcycles, CYCLISTS and PEDESTRIANS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook turning steps."
+  },
+  {
+   "id": "TURN-GEN-07",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "07",
+   "title": "Slow or stop before turning",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching the point of a right or left turn",
+   "action": "slow down, or stop if necessary, before turning",
+   "unless": "",
+   "statement": "WHEN approaching the point of a right or left turn, the DRIVER MUST slow down, or stop if necessary, before turning.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "if necessary",
+     "explanation": "does not say when a stop is needed"
+    }
+   ],
+   "note": "California Driver Handbook turning steps."
+  },
+  {
+   "id": "TURN-GEN-08",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "08",
+   "title": "Obey turn-control devices",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "OFFICIAL TRAFFIC CONTROL DEVICES are placed requiring and directing that a turn be made in a specific manner",
+   "action": "make the turn only as directed by the devices",
+   "unless": "",
+   "statement": "WHEN OFFICIAL TRAFFIC CONTROL DEVICES are placed requiring and directing that a turn be made in a specific manner, the DRIVER MUST make the turn only as directed by the devices.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22101."
+  },
+  {
+   "id": "TURN-GEN-09",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "09",
+   "title": "No-turn signs",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a sign prohibiting a right turn, a left turn or a U-TURN is posted at a location",
+   "action": "make the prohibited turn at that location",
+   "unless": "",
+   "statement": "WHEN a sign prohibiting a right turn, a left turn or a U-TURN is posted at a location, the DRIVER MUST NOT make the prohibited turn at that location.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22101 and 21461; some no-turn signs apply only at posted times."
+  },
+  {
+   "id": "TURN-GEN-10",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "10",
+   "title": "Entering highway from driveway or alley",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "about to enter or cross a highway from any public or private property or from an alley",
+   "action": "yield the right-of-way to all traffic approaching on the highway close enough to constitute an immediate hazard, and continue to yield until it is reasonably safe to proceed",
+   "unless": "",
+   "statement": "WHEN about to enter or cross a highway from any public or private property or from an alley, the DRIVER MUST yield the right-of-way to all traffic approaching on the highway close enough to constitute an immediate hazard, and continue to yield until it is reasonably safe to proceed.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "close enough to constitute an immediate hazard",
+     "explanation": "no distance or time gap given"
+    },
+    {
+     "term": "reasonably safe",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "CVC 21804."
+  },
+  {
+   "id": "TURN-GEN-11",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "11",
+   "title": "Yield to pedestrians on sidewalk when turning into or out of driveway",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning into or out of a driveway, alley or private road AND crossing a sidewalk",
+   "action": "yield the right-of-way to any PEDESTRIAN approaching on the sidewalk",
+   "unless": "",
+   "statement": "WHEN turning into or out of a driveway, alley or private road AND crossing a sidewalk, the DRIVER MUST yield the right-of-way to any PEDESTRIAN approaching on the sidewalk.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21952."
+  },
+  {
+   "id": "TURN-RT-01",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "01",
+   "title": "Right turn close to right curb",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a right turn",
+   "action": "make both the approach for the turn and the turn as close as practicable to the right-hand curb or edge of the ROADWAY",
+   "unless": "",
+   "statement": "WHEN making a right turn, the DRIVER MUST make both the approach for the turn and the turn as close as practicable to the right-hand curb or edge of the ROADWAY.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as close as practicable",
+     "explanation": "no distance from the curb given"
+    }
+   ],
+   "note": "CVC 22100(a)."
+  },
+  {
+   "id": "TURN-RT-02",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "02",
+   "title": "Finish right turn in right lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "completing a right turn",
+   "action": "end the turn in the right lane of the road entered without swinging wide into another lane of traffic",
+   "unless": "",
+   "statement": "WHEN completing a right turn, the DRIVER MUST end the turn in the right lane of the road entered without swinging wide into another lane of traffic.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook. Large trucks and buses may need to swing wide; see TURN-USER-04."
+  },
+  {
+   "id": "TURN-RT-03",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "03",
+   "title": "Enter bicycle lane before right turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "it is necessary to cross a BICYCLE LANE adjacent to the DRIVER's lane to make a turn",
+   "action": "drive into the BICYCLE LANE before making the turn, no more than 200 feet from the INTERSECTION or place of the turn",
+   "unless": "",
+   "statement": "WHEN it is necessary to cross a BICYCLE LANE adjacent to the DRIVER's lane to make a turn, the DRIVER of a motor vehicle MUST drive into the BICYCLE LANE before making the turn, no more than 200 feet from the INTERSECTION or place of the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21717 and 21209. Where the bicycle lane line is solid rather than dashed, local markings may differ."
+  },
+  {
+   "id": "TURN-RT-04",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "04",
+   "title": "Check bicycle lane before merging",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "about to merge into a BICYCLE LANE to make a right turn",
+   "action": "look over the right shoulder for CYCLISTS and merge only when no CYCLIST is in the way",
+   "unless": "",
+   "statement": "WHEN about to merge into a BICYCLE LANE to make a right turn, the DRIVER of a motor vehicle MUST look over the right shoulder for CYCLISTS and merge only when no CYCLIST is in the way.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook; CVC 21209 also requires the merge to be made safely."
+  },
+  {
+   "id": "TURN-RT-05",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "05",
+   "title": "Right turn on red after stop",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a steady circular red signal AND the DRIVER has stopped at the LIMIT LINE, or before the CROSSWALK if there is no LIMIT LINE, or before the INTERSECTION if there is neither",
+   "action": "turn right after yielding to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION",
+   "unless": "a sign prohibits the turn",
+   "statement": "WHEN facing a steady circular red signal AND the DRIVER has stopped at the LIMIT LINE, or before the CROSSWALK if there is no LIMIT LINE, or before the INTERSECTION if there is neither, the DRIVER MAY turn right after yielding to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION, UNLESS a sign prohibits the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21453(b). Failure to stop fully before a right turn on red is a red-light violation (base fine reported lower than for running a red light); penalty amount not stated here."
+  },
+  {
+   "id": "TURN-RT-06",
+   "topic": "TURN",
+   "group": "RT",
+   "number": "06",
+   "title": "No turn on red arrow",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "facing a steady RED ARROW",
+   "action": "enter the INTERSECTION to make the movement indicated by the arrow",
+   "unless": "a signal permitting that movement is shown",
+   "statement": "WHEN facing a steady RED ARROW, the DRIVER MUST NOT enter the INTERSECTION to make the movement indicated by the arrow, UNLESS a signal permitting that movement is shown.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21453(c). In California a right turn on a red arrow is not allowed even after stopping."
+  },
+  {
+   "id": "TURN-LT-01",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "01",
+   "title": "Left turn from extreme left lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a left turn",
+   "action": "make the approach as close as practicable to the left-hand edge of the extreme left-hand lane or portion of the ROADWAY lawfully available to traffic moving in the DRIVER's direction",
+   "unless": "",
+   "statement": "WHEN making a left turn, the DRIVER MUST make the approach as close as practicable to the left-hand edge of the extreme left-hand lane or portion of the ROADWAY lawfully available to traffic moving in the DRIVER's direction.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as close as practicable",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "CVC 22100(b). On a two-way road this means near the center line or in the left-turn lane; on a one-way road, near the left curb."
+  },
+  {
+   "id": "TURN-LT-02",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "02",
+   "title": "Do not start left turn before intersection",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "making a left turn at an INTERSECTION",
+   "action": "begin the left turn before entering the INTERSECTION",
+   "unless": "",
+   "statement": "WHEN making a left turn at an INTERSECTION, the DRIVER MUST NOT begin the left turn before entering the INTERSECTION.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22100(b)."
+  },
+  {
+   "id": "TURN-LT-03",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "03",
+   "title": "Leave intersection in a lawful lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a left turn after entering an INTERSECTION",
+   "action": "make the turn so as to leave the INTERSECTION in a lane lawfully available to traffic moving in that direction on the ROADWAY being entered",
+   "unless": "",
+   "statement": "WHEN making a left turn after entering an INTERSECTION, the DRIVER MUST make the turn so as to leave the INTERSECTION in a lane lawfully available to traffic moving in that direction on the ROADWAY being entered.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22100(b). The handbook instructs turning into the left lane of the road entered (TURN-LT-04)."
+  },
+  {
+   "id": "TURN-LT-04",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "04",
+   "title": "End left turn in left lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "completing a left turn from a single left-turn lane",
+   "action": "end the turn in the left lane for traffic moving in the DRIVER's direction on the road entered",
+   "unless": "",
+   "statement": "WHEN completing a left turn from a single left-turn lane, the DRIVER MUST end the turn in the left lane for traffic moving in the DRIVER's direction on the road entered.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook."
+  },
+  {
+   "id": "TURN-LT-05",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "05",
+   "title": "Yield to oncoming traffic",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "intending to turn left or complete a U-TURN upon a highway, or to turn left into public or private property or an alley",
+   "action": "yield the right-of-way to all vehicles approaching from the opposite direction that are close enough to constitute a hazard at any time during the turning movement, and continue to yield until the turn can be made with reasonable safety",
+   "unless": "",
+   "statement": "WHEN intending to turn left or complete a U-TURN upon a highway, or to turn left into public or private property or an alley, the DRIVER MUST yield the right-of-way to all vehicles approaching from the opposite direction that are close enough to constitute a hazard at any time during the turning movement, and continue to yield until the turn can be made with reasonable safety.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "close enough to constitute a hazard",
+     "explanation": "no distance or gap given"
+    },
+    {
+     "term": "reasonable safety",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "CVC 21801(a)."
+  },
+  {
+   "id": "TURN-LT-06",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "06",
+   "title": "Keep wheels straight while waiting",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopped or waiting to make a left turn",
+   "action": "keep the front wheels pointed straight ahead until it is safe to start the turn",
+   "unless": "",
+   "statement": "WHEN stopped or waiting to make a left turn, the DRIVER MUST keep the front wheels pointed straight ahead until it is safe to start the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook; reason given: if hit from behind with wheels turned, the vehicle could be pushed into oncoming traffic."
+  },
+  {
+   "id": "TURN-LT-07",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "07",
+   "title": "Left turn on red only one-way to one-way",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "facing a steady circular red signal",
+   "action": "turn left after stopping and after yielding to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION, and only when turning from a ONE-WAY STREET onto a ONE-WAY STREET",
+   "unless": "a sign prohibits the turn",
+   "statement": "WHEN facing a steady circular red signal, the DRIVER MAY ONLY turn left after stopping and after yielding to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION, and only when turning from a ONE-WAY STREET onto a ONE-WAY STREET, UNLESS a sign prohibits the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21453(b)."
+  },
+  {
+   "id": "TURN-LT-08",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "08",
+   "title": "Left turn across double yellow line",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "turning left into or out of a private road or driveway AND the center of the ROADWAY is marked with a single or double solid yellow line",
+   "action": "cross the solid yellow line to make the turn",
+   "unless": "",
+   "statement": "WHEN turning left into or out of a private road or driveway AND the center of the ROADWAY is marked with a single or double solid yellow line, the DRIVER MAY cross the solid yellow line to make the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21460(b) exception; California Driver Handbook."
+  },
+  {
+   "id": "TURN-LT-09",
+   "topic": "TURN",
+   "group": "LT",
+   "number": "09",
+   "title": "No turn across two sets of double yellow lines",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "two sets of solid double yellow lines spaced two feet or more apart separate the lanes",
+   "action": "drive over them or make a left turn or U-TURN across them",
+   "unless": "crossing at an opening or crossover designated for that purpose",
+   "statement": "WHEN two sets of solid double yellow lines spaced two feet or more apart separate the lanes, the DRIVER MUST NOT drive over them or make a left turn or U-TURN across them, UNLESS crossing at an opening or crossover designated for that purpose.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21651(a); the handbook treats such lines as a solid wall."
+  },
+  {
+   "id": "TURN-LANE-01",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "01",
+   "title": "Multiple turn lanes",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "signs or lane arrows show that turns may be made from more than one lane",
+   "action": "turn from any lane so marked",
+   "unless": "",
+   "statement": "WHEN signs or lane arrows show that turns may be made from more than one lane, the DRIVER MAY turn from any lane so marked.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22100(c) and 22101; California Driver Handbook."
+  },
+  {
+   "id": "TURN-LANE-02",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "02",
+   "title": "Stay in lane through a multi-lane turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning from one of two or more marked turn lanes",
+   "action": "stay in the corresponding lane through the turn and end the turn in that lane",
+   "unless": "",
+   "statement": "WHEN turning from one of two or more marked turn lanes, the DRIVER MUST stay in the corresponding lane through the turn and end the turn in that lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook (shown in turn diagrams); unsafe lane changes in the intersection also violate CVC 21658."
+  },
+  {
+   "id": "TURN-LANE-03",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "03",
+   "title": "Use of two-way left-turn lane",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "a TWO-WAY LEFT-TURN LANE is marked",
+   "action": "drive in the TWO-WAY LEFT-TURN LANE when preparing for or making a left turn from or into the highway, or a lawful U-TURN, and for no more than 200 feet while preparing for or making the turn or preparing to merge into the adjacent lanes",
+   "unless": "",
+   "statement": "WHEN a TWO-WAY LEFT-TURN LANE is marked, the DRIVER MAY ONLY drive in the TWO-WAY LEFT-TURN LANE when preparing for or making a left turn from or into the highway, or a lawful U-TURN, and for no more than 200 feet while preparing for or making the turn or preparing to merge into the adjacent lanes.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21460.5(c). Force is REQUIREMENT; MAY ONLY expresses the restriction."
+  },
+  {
+   "id": "TURN-LANE-04",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "04",
+   "title": "No passing in two-way left-turn lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a TWO-WAY LEFT-TURN LANE is marked",
+   "action": "use the TWO-WAY LEFT-TURN LANE for passing or as a regular traffic lane",
+   "unless": "",
+   "statement": "WHEN a TWO-WAY LEFT-TURN LANE is marked, the DRIVER MUST NOT use the TWO-WAY LEFT-TURN LANE for passing or as a regular traffic lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21460.5; California Driver Handbook."
+  },
+  {
+   "id": "TURN-LANE-05",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "05",
+   "title": "Watch for oncoming vehicles in center lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "entering or driving in a TWO-WAY LEFT-TURN LANE",
+   "action": "look for vehicles coming toward the DRIVER in the same lane and enter the lane only when it is safe",
+   "unless": "",
+   "statement": "WHEN entering or driving in a TWO-WAY LEFT-TURN LANE, the DRIVER MUST look for vehicles coming toward the DRIVER in the same lane and enter the lane only when it is safe.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "when it is safe",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "California Driver Handbook."
+  },
+  {
+   "id": "TURN-LANE-06",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "06",
+   "title": "Turning left out of a side street via center lane",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "turning left from a side street or driveway onto a road with a TWO-WAY LEFT-TURN LANE AND the DRIVER has signalled and waited until it is safe",
+   "action": "drive into the TWO-WAY LEFT-TURN LANE and then merge into traffic when it is safe",
+   "unless": "",
+   "statement": "WHEN turning left from a side street or driveway onto a road with a TWO-WAY LEFT-TURN LANE AND the DRIVER has signalled and waited until it is safe, the DRIVER MAY drive into the TWO-WAY LEFT-TURN LANE and then merge into traffic when it is safe.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "until it is safe",
+     "explanation": "no criterion given"
+    },
+    {
+     "term": "when it is safe",
+     "explanation": "no gap given for merging"
+    }
+   ],
+   "note": "California Driver Handbook; the 200-foot limit of TURN-LANE-03 still applies."
+  },
+  {
+   "id": "TURN-LANE-07",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "07",
+   "title": "Roundabout lane for right turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a multi-lane ROUNDABOUT intending to turn right",
+   "action": "choose the right lane, or follow lane signs and markings",
+   "unless": "",
+   "statement": "WHEN approaching a multi-lane ROUNDABOUT intending to turn right, the DRIVER MUST choose the right lane, or follow lane signs and markings.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook roundabout guidance."
+  },
+  {
+   "id": "TURN-LANE-08",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "08",
+   "title": "Roundabout lane for left turn or U-turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a multi-lane ROUNDABOUT intending to turn left or make a U-TURN",
+   "action": "choose the left lane, or follow lane signs and markings",
+   "unless": "",
+   "statement": "WHEN approaching a multi-lane ROUNDABOUT intending to turn left or make a U-TURN, the DRIVER MUST choose the left lane, or follow lane signs and markings.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook roundabout guidance."
+  },
+  {
+   "id": "TURN-SIG-01",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "01",
+   "title": "Turning on circular green",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a circular green signal",
+   "action": "turn right or left after yielding to other traffic and to PEDESTRIANS lawfully within the INTERSECTION or an adjacent CROSSWALK",
+   "unless": "a sign prohibits the turn",
+   "statement": "WHEN facing a circular green signal, the DRIVER MAY turn right or left after yielding to other traffic and to PEDESTRIANS lawfully within the INTERSECTION or an adjacent CROSSWALK, UNLESS a sign prohibits the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21451(a). Left turns on a circular green also require yielding to oncoming traffic (TURN-LT-05)."
+  },
+  {
+   "id": "TURN-SIG-02",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "02",
+   "title": "Turning on green arrow",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a GREEN ARROW",
+   "action": "cautiously enter the INTERSECTION to make the movement indicated by the arrow after yielding to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully in the INTERSECTION",
+   "unless": "",
+   "statement": "WHEN facing a GREEN ARROW, the DRIVER MAY cautiously enter the INTERSECTION to make the movement indicated by the arrow after yielding to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully in the INTERSECTION.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "cautiously",
+     "explanation": "no speed given"
+    }
+   ],
+   "note": "CVC 21451(b)."
+  },
+  {
+   "id": "TURN-SIG-03",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "03",
+   "title": "Flashing yellow arrow",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "facing a FLASHING YELLOW ARROW",
+   "action": "first yield to oncoming traffic and PEDESTRIANS and then make the turn with caution",
+   "unless": "",
+   "statement": "WHEN facing a FLASHING YELLOW ARROW, the DRIVER MUST first yield to oncoming traffic and PEDESTRIANS and then make the turn with caution.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "with caution",
+     "explanation": "no speed or gap given"
+    }
+   ],
+   "note": "California Driver Handbook; the turn is permitted but not protected."
+  },
+  {
+   "id": "TURN-SIG-04",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "04",
+   "title": "Steady yellow arrow",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "facing a YELLOW ARROW AND the DRIVER cannot stop safely or is already in the INTERSECTION",
+   "action": "cautiously complete the turn and pay attention to the next signal",
+   "unless": "",
+   "statement": "WHEN facing a YELLOW ARROW AND the DRIVER cannot stop safely or is already in the INTERSECTION, the DRIVER SHOULD cautiously complete the turn and pay attention to the next signal.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "cannot stop safely",
+     "explanation": "no distance or speed criterion"
+    },
+    {
+     "term": "cautiously",
+     "explanation": "no speed given"
+    }
+   ],
+   "note": "California Driver Handbook: the protected turning period is ending; a driver able to stop safely is expected to stop."
+  },
+  {
+   "id": "TURN-UT-01",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "01",
+   "title": "U-turn on green at intersection",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "at an INTERSECTION facing a green light or GREEN ARROW AND it is safe",
+   "action": "make a U-TURN",
+   "unless": "a No U-Turn sign is posted",
+   "statement": "WHEN at an INTERSECTION facing a green light or GREEN ARROW AND it is safe, the DRIVER MAY make a U-TURN, UNLESS a No U-Turn sign is posted.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "it is safe",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "California Driver Handbook; CVC 22100.5 limits U-turns at signal-controlled intersections to those permitted by the signal."
+  },
+  {
+   "id": "TURN-UT-02",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "02",
+   "title": "U-turn across double yellow line",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "it is safe and legal",
+   "action": "make a U-TURN across a double yellow line",
+   "unless": "",
+   "statement": "WHEN it is safe and legal, the DRIVER MAY make a U-TURN across a double yellow line.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "safe",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "California Driver Handbook; does not apply to two sets of double yellow lines (TURN-LT-09)."
+  },
+  {
+   "id": "TURN-UT-03",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "03",
+   "title": "U-turns in business districts",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "in a BUSINESS DISTRICT",
+   "action": "make a U-TURN at an INTERSECTION or at an opening provided for turns in a DIVIDED HIGHWAY",
+   "unless": "",
+   "statement": "WHEN in a BUSINESS DISTRICT, the DRIVER MAY ONLY make a U-TURN at an INTERSECTION or at an opening provided for turns in a DIVIDED HIGHWAY.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22102; any posted No U-Turn sign still applies."
+  },
+  {
+   "id": "TURN-UT-04",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "04",
+   "title": "U-turns in residence districts",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in a RESIDENCE DISTRICT AND any vehicle is approaching within 200 feet",
+   "action": "make a U-TURN",
+   "unless": "the U-TURN is made at an INTERSECTION where an OFFICIAL TRAFFIC CONTROL DEVICE controls traffic and protects the DRIVER from approaching vehicles",
+   "statement": "WHEN in a RESIDENCE DISTRICT AND any vehicle is approaching within 200 feet, the DRIVER MUST NOT make a U-TURN, UNLESS the U-TURN is made at an INTERSECTION where an OFFICIAL TRAFFIC CONTROL DEVICE controls traffic and protects the DRIVER from approaching vehicles.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22103."
+  },
+  {
+   "id": "TURN-UT-05",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "05",
+   "title": "No U-turn in front of fire station",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in front of the driveway entrance or approach to a fire station",
+   "action": "make a U-TURN or use the fire station driveway to turn around",
+   "unless": "",
+   "statement": "WHEN in front of the driveway entrance or approach to a fire station, the DRIVER MUST NOT make a U-TURN or use the fire station driveway to turn around.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22104; California Driver Handbook."
+  },
+  {
+   "id": "TURN-UT-06",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "06",
+   "title": "No U-turn without 200 feet of view",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the DRIVER cannot see clearly for 200 feet in each direction because of a curve, hill, rain, fog or other reason",
+   "action": "make a U-TURN",
+   "unless": "",
+   "statement": "WHEN the DRIVER cannot see clearly for 200 feet in each direction because of a curve, hill, rain, fog or other reason, the DRIVER MUST NOT make a U-TURN.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22105; California Driver Handbook."
+  },
+  {
+   "id": "TURN-UT-07",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "07",
+   "title": "No U-turn where sign prohibits",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a No U-Turn sign is posted",
+   "action": "make a U-TURN where the sign applies",
+   "unless": "",
+   "statement": "WHEN a No U-Turn sign is posted, the DRIVER MUST NOT make a U-TURN where the sign applies.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 22100.5 and 21461."
+  },
+  {
+   "id": "TURN-UT-08",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "08",
+   "title": "No U-turn at railroad crossing",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "at or on a railroad crossing",
+   "action": "make a U-TURN",
+   "unless": "",
+   "statement": "WHEN at or on a railroad crossing, the DRIVER MUST NOT make a U-TURN.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Listed as an illegal U-turn in the California Driver Handbook."
+  },
+  {
+   "id": "TURN-UT-09",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "09",
+   "title": "U-turn on divided highway only at opening",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "on a DIVIDED HIGHWAY",
+   "action": "make a U-TURN through an opening provided in the center divider, and not by crossing a dividing section, curb, strip of land or two sets of double yellow lines",
+   "unless": "",
+   "statement": "WHEN on a DIVIDED HIGHWAY, the DRIVER MAY ONLY make a U-TURN through an opening provided in the center divider, and not by crossing a dividing section, curb, strip of land or two sets of double yellow lines.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21651; California Driver Handbook."
+  },
+  {
+   "id": "TURN-UT-10",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "10",
+   "title": "No U-turn on one-way street",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a ONE-WAY STREET",
+   "action": "make a U-TURN",
+   "unless": "",
+   "statement": "WHEN on a ONE-WAY STREET, the DRIVER MUST NOT make a U-TURN.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Listed as an illegal U-turn in the California Driver Handbook; also violates CVC 21657 (driving against one-way traffic)."
+  },
+  {
+   "id": "TURN-UT-11",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "11",
+   "title": "No U-turn when other vehicles may hit you",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "other vehicles may hit the DRIVER's vehicle during the turn",
+   "action": "make a U-TURN",
+   "unless": "",
+   "statement": "WHEN other vehicles may hit the DRIVER's vehicle during the turn, the DRIVER MUST NOT make a U-TURN.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "may hit",
+     "explanation": "no distance or speed of other vehicles given"
+    }
+   ],
+   "note": "Listed as an illegal U-turn in the California Driver Handbook."
+  },
+  {
+   "id": "TURN-UT-12",
+   "topic": "TURN",
+   "group": "UT",
+   "number": "12",
+   "title": "U-turn in residence district when protected",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "in a RESIDENCE DISTRICT AND no vehicles are approaching within 200 feet, OR a traffic sign, light or signal protects the DRIVER from approaching vehicles",
+   "action": "make a U-TURN",
+   "unless": "a No U-Turn sign is posted",
+   "statement": "WHEN in a RESIDENCE DISTRICT AND no vehicles are approaching within 200 feet, OR a traffic sign, light or signal protects the DRIVER from approaching vehicles, the DRIVER MAY make a U-TURN, UNLESS a No U-Turn sign is posted.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook; CVC 22103. The 200-foot visibility rule (TURN-UT-06) also applies."
+  },
+  {
+   "id": "TURN-USER-01",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "01",
+   "title": "Yield to pedestrians in crosswalk when turning",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning at an INTERSECTION AND a PEDESTRIAN is crossing the ROADWAY within any marked or unmarked CROSSWALK",
+   "action": "yield the right-of-way to the PEDESTRIAN",
+   "unless": "",
+   "statement": "WHEN turning at an INTERSECTION AND a PEDESTRIAN is crossing the ROADWAY within any marked or unmarked CROSSWALK, the DRIVER MUST yield the right-of-way to the PEDESTRIAN.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21950(a); also CVC 21451 and 21453 for signal-controlled turns."
+  },
+  {
+   "id": "TURN-USER-02",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "02",
+   "title": "Watch between vehicle and curb on right turn",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a right turn",
+   "action": "watch for PEDESTRIANS, CYCLISTS and motorcycles between the vehicle and the curb",
+   "unless": "",
+   "statement": "WHEN making a right turn, the DRIVER MUST watch for PEDESTRIANS, CYCLISTS and motorcycles between the vehicle and the curb.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook."
+  },
+  {
+   "id": "TURN-USER-03",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "03",
+   "title": "Watch for pedestrians when turning",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning at an INTERSECTION",
+   "action": "look for PEDESTRIANS crossing or about to cross the street being entered",
+   "unless": "",
+   "statement": "WHEN turning at an INTERSECTION, the DRIVER MUST look for PEDESTRIANS crossing or about to cross the street being entered.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook."
+  },
+  {
+   "id": "TURN-USER-04",
+   "topic": "TURN",
+   "group": "USER",
+   "number": "04",
+   "title": "Do not squeeze beside a turning truck",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a large truck or bus ahead is making a wide right turn",
+   "action": "try to squeeze between the truck or bus and the curb or pass it on the right",
+   "unless": "",
+   "statement": "WHEN a large truck or bus ahead is making a wide right turn, the DRIVER MUST NOT try to squeeze between the truck or bus and the curb or pass it on the right.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "wide right turn",
+     "explanation": "no measure of how wide"
+    }
+   ],
+   "note": "California Driver Handbook (sharing the road with large vehicles), which explains that large trucks may swing left or use more than one lane to turn right."
+  }
+ ]
+}

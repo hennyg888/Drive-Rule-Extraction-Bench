@@ -1,0 +1,871 @@
+{
+ "scope": "parking (parking, stopping and standing a vehicle, and where each is not allowed)",
+ "region": "Texas, United States",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "The operator: a person who drives or has physical control of a vehicle."
+  },
+  {
+   "term": "STOP",
+   "definition": "Where stopping is prohibited, to halt a vehicle, occupied or unoccupied, even for a moment."
+  },
+  {
+   "term": "STAND",
+   "definition": "To halt an occupied or unoccupied vehicle, other than for a short time while picking up or letting off passengers."
+  },
+  {
+   "term": "PARK",
+   "definition": "To stand an occupied or unoccupied vehicle, other than for a short time while loading or unloading goods or passengers."
+  },
+  {
+   "term": "ROADWAY",
+   "definition": "The part of a highway, other than the berm or shoulder, that is improved, designed, or ordinarily used for vehicular travel."
+  },
+  {
+   "term": "HIGHWAY",
+   "definition": "The width between the boundary lines of a publicly maintained way, any part of which is open to the public for vehicular travel."
+  },
+  {
+   "term": "SIDEWALK",
+   "definition": "The part of a street between the curb or the side of the roadway and the property line that is meant for pedestrian use."
+  },
+  {
+   "term": "INTERSECTION",
+   "definition": "The area where two or more highways join or cross, within the extensions of their lateral curb lines or boundary lines."
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "Part of a roadway at an intersection within the extensions of the sidewalk lines, or any part of a roadway marked for pedestrian crossing by lines or other markings."
+  },
+  {
+   "term": "SAFETY ZONE",
+   "definition": "An area or space officially set apart in a roadway for pedestrians only and marked or indicated by adequate signs as plainly visible at all times."
+  },
+  {
+   "term": "OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "definition": "A sign, signal, marking, or device placed or erected by a public body or officer having jurisdiction to regulate, warn, or guide traffic."
+  },
+  {
+   "term": "BUSINESS OR RESIDENCE DISTRICT",
+   "definition": "A territory next to a highway that is built up with business or residential buildings as defined in the Texas Transportation Code, generally with buildings in use along at least 300 feet of the highway."
+  },
+  {
+   "term": "UNATTENDED",
+   "definition": "Left with no licensed driver present in or immediately beside the vehicle."
+  },
+  {
+   "term": "DISABLED PARKING SPACE",
+   "definition": "A parking space designated for persons with disabilities by a sign showing the International Symbol of Access."
+  },
+  {
+   "term": "ACCESS AISLE",
+   "definition": "The striped space beside a DISABLED PARKING SPACE that gives room for entering and leaving a vehicle, including by wheelchair."
+  },
+  {
+   "term": "DISABLED PARKING IDENTIFICATION",
+   "definition": "A disabled parking placard, or a specialty license plate for persons with disabilities or disabled veterans, issued under Texas law."
+  },
+  {
+   "term": "AUTHORIZED EMERGENCY VEHICLE",
+   "definition": "A fire department, police, ambulance, or other vehicle authorized under Texas law as an emergency vehicle."
+  }
+ ],
+ "rules": [
+  {
+   "id": "PARK-STOP-01",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "01",
+   "title": "No double parking",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a vehicle is stopped or parked at the edge or curb of a street",
+   "action": "STOP, STAND, or PARK on the ROADWAY side of that vehicle",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN a vehicle is stopped or parked at the edge or curb of a street, the DRIVER MUST NOT STOP, STAND, or PARK on the ROADWAY side of that vehicle, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a)(1). Fine range is the general penalty of 545/542.401; local ordinances may set parking fines."
+  },
+  {
+   "id": "PARK-STOP-02",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "02",
+   "title": "Not on a sidewalk",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is on a SIDEWALK",
+   "action": "STOP, STAND, or PARK the vehicle",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is on a SIDEWALK, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a)(2)."
+  },
+  {
+   "id": "PARK-STOP-03",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "03",
+   "title": "Not in an intersection",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is in an INTERSECTION",
+   "action": "STOP, STAND, or PARK the vehicle",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is in an INTERSECTION, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a)(3)."
+  },
+  {
+   "id": "PARK-STOP-04",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "04",
+   "title": "Not on a crosswalk",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is on a CROSSWALK",
+   "action": "STOP, STAND, or PARK the vehicle",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is on a CROSSWALK, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a)(4)."
+  },
+  {
+   "id": "PARK-STOP-05",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "05",
+   "title": "Not at a safety zone",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is between a SAFETY ZONE and the adjacent curb OR within 30 feet of a place on the curb immediately opposite the ends of a SAFETY ZONE",
+   "action": "STOP, STAND, or PARK the vehicle",
+   "unless": "a local authority has set a different length by sign or marking OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is between a SAFETY ZONE and the adjacent curb OR within 30 feet of a place on the curb immediately opposite the ends of a SAFETY ZONE, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle, UNLESS a local authority has set a different length by sign or marking OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a)(5); the governing body may designate a different length."
+  },
+  {
+   "id": "PARK-STOP-06",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "06",
+   "title": "Not beside an excavation or obstruction",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is alongside or opposite a street excavation or obstruction AND stopping there would obstruct traffic",
+   "action": "STOP, STAND, or PARK the vehicle",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is alongside or opposite a street excavation or obstruction AND stopping there would obstruct traffic, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "would obstruct traffic",
+     "explanation": "no measure of obstruction given"
+    }
+   ],
+   "note": "Transportation Code 545.302(a)(6)."
+  },
+  {
+   "id": "PARK-STOP-07",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "07",
+   "title": "Not on a bridge or in a tunnel",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is on a bridge or other elevated structure on a HIGHWAY OR in a HIGHWAY tunnel",
+   "action": "STOP, STAND, or PARK the vehicle",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is on a bridge or other elevated structure on a HIGHWAY OR in a HIGHWAY tunnel, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a)(7)."
+  },
+  {
+   "id": "PARK-STOP-08",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "08",
+   "title": "Not on a railroad track",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is on a railroad track",
+   "action": "STOP, STAND, or PARK the vehicle",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is on a railroad track, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a)(8)."
+  },
+  {
+   "id": "PARK-STOP-09",
+   "topic": "PARK",
+   "group": "STOP",
+   "number": "09",
+   "title": "No Stopping sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits stopping at the place",
+   "action": "STOP, STAND, or PARK the vehicle there",
+   "unless": "avoiding conflict with other traffic is necessary OR the DRIVER is complying with the directions of a police officer",
+   "statement": "WHEN an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits stopping at the place, the DRIVER MUST NOT STOP, STAND, or PARK the vehicle there, UNLESS avoiding conflict with other traffic is necessary OR the DRIVER is complying with the directions of a police officer.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(a). Fire lanes are typically marked by signs or red curbs under local ordinance or fire code; their fines are set locally."
+  },
+  {
+   "id": "PARK-STAND-01",
+   "topic": "PARK",
+   "group": "STAND",
+   "number": "01",
+   "title": "Not in front of a driveway",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is in front of a public or private driveway",
+   "action": "STAND or PARK the vehicle, occupied or unoccupied",
+   "unless": "the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is in front of a public or private driveway, the DRIVER MUST NOT STAND or PARK the vehicle, occupied or unoccupied, UNLESS the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "momentarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(b)(1)."
+  },
+  {
+   "id": "PARK-STAND-02",
+   "topic": "PARK",
+   "group": "STAND",
+   "number": "02",
+   "title": "15 feet from a fire hydrant",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is within 15 feet of a fire hydrant",
+   "action": "STAND or PARK the vehicle, occupied or unoccupied",
+   "unless": "the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is within 15 feet of a fire hydrant, the DRIVER MUST NOT STAND or PARK the vehicle, occupied or unoccupied, UNLESS the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "momentarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(b)(2)."
+  },
+  {
+   "id": "PARK-STAND-03",
+   "topic": "PARK",
+   "group": "STAND",
+   "number": "03",
+   "title": "20 feet from a crosswalk at an intersection",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is within 20 feet of a CROSSWALK at an INTERSECTION",
+   "action": "STAND or PARK the vehicle, occupied or unoccupied",
+   "unless": "the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is within 20 feet of a CROSSWALK at an INTERSECTION, the DRIVER MUST NOT STAND or PARK the vehicle, occupied or unoccupied, UNLESS the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "momentarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(b)(3)."
+  },
+  {
+   "id": "PARK-STAND-04",
+   "topic": "PARK",
+   "group": "STAND",
+   "number": "04",
+   "title": "30 feet before a signal or stop/yield sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is within 30 feet on the approach to a flashing signal, stop sign, yield sign, or traffic-control signal located at the side of a ROADWAY",
+   "action": "STAND or PARK the vehicle, occupied or unoccupied",
+   "unless": "the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is within 30 feet on the approach to a flashing signal, stop sign, yield sign, or traffic-control signal located at the side of a ROADWAY, the DRIVER MUST NOT STAND or PARK the vehicle, occupied or unoccupied, UNLESS the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "momentarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(b)(4)."
+  },
+  {
+   "id": "PARK-STAND-05",
+   "topic": "PARK",
+   "group": "STAND",
+   "number": "05",
+   "title": "20 feet from a fire station driveway",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is within 20 feet of the driveway entrance to a fire station",
+   "action": "STAND or PARK the vehicle, occupied or unoccupied",
+   "unless": "the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is within 20 feet of the driveway entrance to a fire station, the DRIVER MUST NOT STAND or PARK the vehicle, occupied or unoccupied, UNLESS the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "momentarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(b)(5)."
+  },
+  {
+   "id": "PARK-STAND-06",
+   "topic": "PARK",
+   "group": "STAND",
+   "number": "06",
+   "title": "75 feet opposite a signed fire station entrance",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is on the side of the street opposite the entrance to a fire station AND within 75 feet of that entrance AND the entrance is properly marked with a sign",
+   "action": "STAND or PARK the vehicle, occupied or unoccupied",
+   "unless": "the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is on the side of the street opposite the entrance to a fire station AND within 75 feet of that entrance AND the entrance is properly marked with a sign, the DRIVER MUST NOT STAND or PARK the vehicle, occupied or unoccupied, UNLESS the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "momentarily",
+     "explanation": "no time limit given"
+    },
+    {
+     "term": "properly marked",
+     "explanation": "sign form not specified"
+    }
+   ],
+   "note": "Transportation Code 545.302(b)(5)."
+  },
+  {
+   "id": "PARK-STAND-07",
+   "topic": "PARK",
+   "group": "STAND",
+   "number": "07",
+   "title": "No Standing sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits standing at the place",
+   "action": "STAND or PARK the vehicle there, occupied or unoccupied",
+   "unless": "the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the directions of a police officer",
+   "statement": "WHEN an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits standing at the place, the DRIVER MUST NOT STAND or PARK the vehicle there, occupied or unoccupied, UNLESS the DRIVER is momentarily picking up or letting off a passenger OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the directions of a police officer.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "momentarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(b)(6)."
+  },
+  {
+   "id": "PARK-NOPK-01",
+   "topic": "PARK",
+   "group": "NOPK",
+   "number": "01",
+   "title": "50 feet from a railroad crossing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is within 50 feet of the nearest rail of a railroad crossing",
+   "action": "PARK the vehicle, occupied or unoccupied",
+   "unless": "the DRIVER is temporarily loading or unloading merchandise or passengers OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN the vehicle is within 50 feet of the nearest rail of a railroad crossing, the DRIVER MUST NOT PARK the vehicle, occupied or unoccupied, UNLESS the DRIVER is temporarily loading or unloading merchandise or passengers OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the law or the directions of a police officer or OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "temporarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(c)(1)."
+  },
+  {
+   "id": "PARK-NOPK-02",
+   "topic": "PARK",
+   "group": "NOPK",
+   "number": "02",
+   "title": "No Parking sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits parking at the place",
+   "action": "PARK the vehicle there, occupied or unoccupied",
+   "unless": "the DRIVER is temporarily loading or unloading merchandise or passengers OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the directions of a police officer",
+   "statement": "WHEN an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits parking at the place, the DRIVER MUST NOT PARK the vehicle there, occupied or unoccupied, UNLESS the DRIVER is temporarily loading or unloading merchandise or passengers OR avoiding conflict with other traffic is necessary OR the DRIVER is complying with the directions of a police officer.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "temporarily",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Transportation Code 545.302(c)(2). Time limits, meters and fire lanes are set by local ordinance and shown by signs or curb markings; Texas has no statewide curb-colour code."
+  },
+  {
+   "id": "PARK-GEN-01",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "01",
+   "title": "Moving another's vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "person",
+   "when": "moving a vehicle that is not lawfully under the person's control",
+   "action": "move it into an area where stopping, standing, or parking is prohibited OR away from a curb to a distance that is unlawful",
+   "unless": "",
+   "statement": "WHEN moving a vehicle that is not lawfully under the person's control, the person MUST NOT move it into an area where stopping, standing, or parking is prohibited OR away from a curb to a distance that is unlawful.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.302(d)."
+  },
+  {
+   "id": "PARK-GEN-02",
+   "topic": "PARK",
+   "group": "GEN",
+   "number": "02",
+   "title": "Emergency vehicles exempt",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER of an AUTHORIZED EMERGENCY VEHICLE",
+   "when": "responding to an emergency call OR pursuing a suspected violator OR responding to a fire alarm",
+   "action": "PARK or STAND the vehicle irrespective of the stopping, standing and parking prohibitions",
+   "unless": "",
+   "statement": "WHEN responding to an emergency call OR pursuing a suspected violator OR responding to a fire alarm, the DRIVER of an AUTHORIZED EMERGENCY VEHICLE MAY PARK or STAND the vehicle irrespective of the stopping, standing and parking prohibitions.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Transportation Code 546.001; the driver must still drive with appropriate regard for the safety of all persons, and warning signals requirements apply."
+  },
+  {
+   "id": "PARK-HWY-01",
+   "topic": "PARK",
+   "group": "HWY",
+   "number": "01",
+   "title": "Off the main traveled part outside districts",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "outside a BUSINESS OR RESIDENCE DISTRICT AND it is practicable to stop, park, or leave the vehicle off the main traveled part of the HIGHWAY",
+   "action": "STOP, PARK, or leave standing the vehicle, attended or UNATTENDED, on the main traveled part of the HIGHWAY",
+   "unless": "the vehicle is disabled so that it is impossible to avoid stopping and temporarily leaving it there",
+   "statement": "WHEN outside a BUSINESS OR RESIDENCE DISTRICT AND it is practicable to stop, park, or leave the vehicle off the main traveled part of the HIGHWAY, the DRIVER MUST NOT STOP, PARK, or leave standing the vehicle, attended or UNATTENDED, on the main traveled part of the HIGHWAY, UNLESS the vehicle is disabled so that it is impossible to avoid stopping and temporarily leaving it there.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "practicable",
+     "explanation": "no test of practicability given"
+    },
+    {
+     "term": "main traveled part",
+     "explanation": "not defined by lane or width"
+    }
+   ],
+   "note": "Transportation Code 545.301."
+  },
+  {
+   "id": "PARK-HWY-02",
+   "topic": "PARK",
+   "group": "HWY",
+   "number": "02",
+   "title": "Clear width and 200-foot view",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopping, parking, or leaving standing a vehicle on a HIGHWAY outside a BUSINESS OR RESIDENCE DISTRICT",
+   "action": "leave a clear width of HIGHWAY opposite the vehicle for other vehicles to pass AND leave the vehicle in clear view from a distance of 200 feet in each direction",
+   "unless": "the vehicle is disabled so that it is impossible to avoid stopping and temporarily leaving it there",
+   "statement": "WHEN stopping, parking, or leaving standing a vehicle on a HIGHWAY outside a BUSINESS OR RESIDENCE DISTRICT, the DRIVER MUST leave a clear width of HIGHWAY opposite the vehicle for other vehicles to pass AND leave the vehicle in clear view from a distance of 200 feet in each direction, UNLESS the vehicle is disabled so that it is impossible to avoid stopping and temporarily leaving it there.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "a clear width",
+     "explanation": "no width given"
+    }
+   ],
+   "note": "Transportation Code 545.301(b)."
+  },
+  {
+   "id": "PARK-HWY-03",
+   "topic": "PARK",
+   "group": "HWY",
+   "number": "03",
+   "title": "Disabled vehicle off the road with hazard lamps",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "the vehicle breaks down on a HIGHWAY",
+   "action": "move the vehicle as far off the ROADWAY as possible AND turn on the hazard warning lamps",
+   "unless": "",
+   "statement": "WHEN the vehicle breaks down on a HIGHWAY, the DRIVER SHOULD move the vehicle as far off the ROADWAY as possible AND turn on the hazard warning lamps.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as far off the ROADWAY as possible",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "Texas Driver Handbook advice; wording paraphrased. Texas law permits use of hazard lamps when a vehicle is stopped as a hazard."
+  },
+  {
+   "id": "PARK-POS-01",
+   "topic": "PARK",
+   "group": "POS",
+   "number": "01",
+   "title": "Two-way road: within 18 inches of the right curb",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopping or parking on a two-way ROADWAY",
+   "action": "stop or park with the right-hand wheels parallel to and within 18 inches of the right-hand curb or edge of the ROADWAY",
+   "unless": "a local authority permits angle parking there by OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "statement": "WHEN stopping or parking on a two-way ROADWAY, the DRIVER MUST stop or park with the right-hand wheels parallel to and within 18 inches of the right-hand curb or edge of the ROADWAY, UNLESS a local authority permits angle parking there by OFFICIAL TRAFFIC-CONTROL DEVICE.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.303(a); this also forbids parking facing against traffic on a two-way road."
+  },
+  {
+   "id": "PARK-POS-02",
+   "topic": "PARK",
+   "group": "POS",
+   "number": "02",
+   "title": "One-way road: within 18 inches of either curb",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "stopping or parking on a one-way ROADWAY",
+   "action": "stop or park with the wheels on the curb side parallel to and within 18 inches of the right-hand or left-hand curb or edge of the ROADWAY",
+   "unless": "a local authority permits angle parking there by OFFICIAL TRAFFIC-CONTROL DEVICE OR an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits parking on that side",
+   "statement": "WHEN stopping or parking on a one-way ROADWAY, the DRIVER MUST stop or park with the wheels on the curb side parallel to and within 18 inches of the right-hand or left-hand curb or edge of the ROADWAY, UNLESS a local authority permits angle parking there by OFFICIAL TRAFFIC-CONTROL DEVICE OR an OFFICIAL TRAFFIC-CONTROL DEVICE prohibits parking on that side.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.303(b)."
+  },
+  {
+   "id": "PARK-POS-03",
+   "topic": "PARK",
+   "group": "POS",
+   "number": "03",
+   "title": "Angle parking where authorized",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "a local authority has permitted angle parking on the ROADWAY AND it is indicated by OFFICIAL TRAFFIC-CONTROL DEVICE",
+   "action": "angle park the vehicle",
+   "unless": "",
+   "statement": "WHEN a local authority has permitted angle parking on the ROADWAY AND it is indicated by OFFICIAL TRAFFIC-CONTROL DEVICE, the DRIVER MAY ONLY angle park the vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Transportation Code 545.303(c); angle parking on a state highway requires state approval. Read as: angle parking is allowed only where so authorized and marked."
+  },
+  {
+   "id": "PARK-POS-04",
+   "topic": "PARK",
+   "group": "POS",
+   "number": "04",
+   "title": "Signal and check before parallel parking",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "about to parallel park in a space at the curb",
+   "action": "signal, check traffic behind, stop beside the vehicle ahead of the space, and back slowly into the space watching for traffic and pedestrians",
+   "unless": "",
+   "statement": "WHEN about to parallel park in a space at the curb, the DRIVER SHOULD signal, check traffic behind, stop beside the vehicle ahead of the space, and back slowly into the space watching for traffic and pedestrians.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "slowly",
+     "explanation": "no speed given"
+    }
+   ],
+   "note": "Texas Driver Handbook procedure, summarized; exact steps and distances in the handbook may differ."
+  },
+  {
+   "id": "PARK-HILL-01",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "01",
+   "title": "Wheels to the curb on a grade",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "leaving a motor vehicle UNATTENDED standing on a grade",
+   "action": "turn the front wheels to the curb or side of the HIGHWAY",
+   "unless": "",
+   "statement": "WHEN leaving a motor vehicle UNATTENDED standing on a grade, the DRIVER MUST turn the front wheels to the curb or side of the HIGHWAY.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "grade",
+     "explanation": "no slope given"
+    }
+   ],
+   "note": "Transportation Code 545.404(a)(5)."
+  },
+  {
+   "id": "PARK-HILL-02",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "02",
+   "title": "Downhill: wheels toward the curb",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking facing downhill",
+   "action": "turn the front wheels toward the curb or edge of the road AND set the parking brake",
+   "unless": "",
+   "statement": "WHEN parking facing downhill, the DRIVER MUST turn the front wheels toward the curb or edge of the road AND set the parking brake.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook."
+  },
+  {
+   "id": "PARK-HILL-03",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "03",
+   "title": "Uphill with curb: wheels away from curb",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking facing uphill AND there is a curb",
+   "action": "turn the front wheels away from the curb and let the vehicle roll back until the rear of the front wheel rests against the curb AND set the parking brake",
+   "unless": "",
+   "statement": "WHEN parking facing uphill AND there is a curb, the DRIVER MUST turn the front wheels away from the curb and let the vehicle roll back until the rear of the front wheel rests against the curb AND set the parking brake.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook."
+  },
+  {
+   "id": "PARK-HILL-04",
+   "topic": "PARK",
+   "group": "HILL",
+   "number": "04",
+   "title": "Uphill without curb: wheels toward the edge",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parking facing uphill AND there is no curb",
+   "action": "turn the front wheels toward the edge of the road AND set the parking brake",
+   "unless": "",
+   "statement": "WHEN parking facing uphill AND there is no curb, the DRIVER MUST turn the front wheels toward the edge of the road AND set the parking brake.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook."
+  },
+  {
+   "id": "PARK-LEAVE-01",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "01",
+   "title": "Securing an unattended vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "leaving a motor vehicle UNATTENDED",
+   "action": "stop the engine, lock the ignition, remove the key from the ignition, and effectively set the parking brake",
+   "unless": "the engine was started by a remote starter and the vehicle cannot be driven without the key",
+   "statement": "WHEN leaving a motor vehicle UNATTENDED, the DRIVER MUST stop the engine, lock the ignition, remove the key from the ignition, and effectively set the parking brake, UNLESS the engine was started by a remote starter and the vehicle cannot be driven without the key.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "effectively",
+     "explanation": "no test of effectiveness given"
+    }
+   ],
+   "note": "Transportation Code 545.404. The remote-start exception is stated from memory; check its exact wording."
+  },
+  {
+   "id": "PARK-LEAVE-02",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "02",
+   "title": "Child left in vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "person",
+   "when": "a child younger than 7 years is in a motor vehicle AND no individual 14 years of age or older is in the vehicle with the child",
+   "action": "intentionally or knowingly leave the child in the vehicle for longer than 5 minutes",
+   "unless": "",
+   "statement": "WHEN a child younger than 7 years is in a motor vehicle AND no individual 14 years of age or older is in the vehicle with the child, the person MUST NOT intentionally or knowingly leave the child in the vehicle for longer than 5 minutes.",
+   "penalty": "Class C misdemeanor.",
+   "vague_terms": [],
+   "note": "Texas Penal Code 22.10; more serious offenses may apply if the child is endangered."
+  },
+  {
+   "id": "PARK-LEAVE-03",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "03",
+   "title": "Opening doors safely",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "person",
+   "when": "in a stopped or parked vehicle",
+   "action": "open a door on the side available to moving traffic",
+   "unless": "it is reasonably safe to do so AND it can be done without interfering with the movement of other traffic",
+   "statement": "WHEN in a stopped or parked vehicle, the person MUST NOT open a door on the side available to moving traffic, UNLESS it is reasonably safe to do so AND it can be done without interfering with the movement of other traffic.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "reasonably safe",
+     "explanation": "no gap or distance given"
+    }
+   ],
+   "note": "Transportation Code 545.418."
+  },
+  {
+   "id": "PARK-LEAVE-04",
+   "topic": "PARK",
+   "group": "LEAVE",
+   "number": "04",
+   "title": "Door open no longer than needed",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "person",
+   "when": "a door of a stopped or parked vehicle is on the side available to moving traffic",
+   "action": "leave the door open longer than necessary to load or unload passengers",
+   "unless": "",
+   "statement": "WHEN a door of a stopped or parked vehicle is on the side available to moving traffic, the person MUST NOT leave the door open longer than necessary to load or unload passengers.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "longer than necessary",
+     "explanation": "no time given"
+    }
+   ],
+   "note": "Transportation Code 545.418."
+  },
+  {
+   "id": "PARK-EXIT-01",
+   "topic": "PARK",
+   "group": "EXIT",
+   "number": "01",
+   "title": "Signal when pulling out",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "starting from a parked position",
+   "action": "use the turn signal to indicate the intention to start",
+   "unless": "",
+   "statement": "WHEN starting from a parked position, the DRIVER MUST use the turn signal to indicate the intention to start.",
+   "penalty": "Misdemeanor, fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Transportation Code 545.104(a)."
+  },
+  {
+   "id": "PARK-EXIT-02",
+   "topic": "PARK",
+   "group": "EXIT",
+   "number": "02",
+   "title": "Check and yield when pulling out",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "pulling away from a parked position into traffic",
+   "action": "check mirrors and blind spots and yield the right-of-way to approaching traffic",
+   "unless": "",
+   "statement": "WHEN pulling away from a parked position into traffic, the DRIVER MUST check mirrors and blind spots and yield the right-of-way to approaching traffic.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook; stated as instruction, wording paraphrased."
+  },
+  {
+   "id": "PARK-DIS-01",
+   "topic": "PARK",
+   "group": "DIS",
+   "number": "01",
+   "title": "Disabled parking spaces",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "at a DISABLED PARKING SPACE",
+   "action": "PARK the vehicle in the space",
+   "unless": "the vehicle displays DISABLED PARKING IDENTIFICATION AND is being operated by or for the transportation of a person with a disability",
+   "statement": "WHEN at a DISABLED PARKING SPACE, the DRIVER MUST NOT PARK the vehicle in the space, UNLESS the vehicle displays DISABLED PARKING IDENTIFICATION AND is being operated by or for the transportation of a person with a disability.",
+   "penalty": "Fine of $500 to $750 for a first offense, higher for repeat offenses; community service may be required.",
+   "vague_terms": [],
+   "note": "Transportation Code 681.011; fine amounts from memory."
+  },
+  {
+   "id": "PARK-DIS-02",
+   "topic": "PARK",
+   "group": "DIS",
+   "number": "02",
+   "title": "Do not block access aisles or ramps",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "near an ACCESS AISLE, curb ramp, or other architectural improvement designed to aid persons with disabilities",
+   "action": "PARK the vehicle in the ACCESS AISLE or so that it blocks access to the ACCESS AISLE, curb ramp, or improvement",
+   "unless": "",
+   "statement": "WHEN near an ACCESS AISLE, curb ramp, or other architectural improvement designed to aid persons with disabilities, the DRIVER MUST NOT PARK the vehicle in the ACCESS AISLE or so that it blocks access to the ACCESS AISLE, curb ramp, or improvement.",
+   "penalty": "Fine of $500 to $750 for a first offense, higher for repeat offenses.",
+   "vague_terms": [],
+   "note": "Transportation Code 681.011; applies even to vehicles with DISABLED PARKING IDENTIFICATION."
+  },
+  {
+   "id": "PARK-DIS-03",
+   "topic": "PARK",
+   "group": "DIS",
+   "number": "03",
+   "title": "Display the placard",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "parked in a DISABLED PARKING SPACE using a disabled parking placard",
+   "action": "display the placard hanging from the rearview mirror, or on the dashboard if there is no rearview mirror",
+   "unless": "",
+   "statement": "WHEN parked in a DISABLED PARKING SPACE using a disabled parking placard, the DRIVER MUST display the placard hanging from the rearview mirror, or on the dashboard if there is no rearview mirror.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Transportation Code 681; the law also says the placard is not to hang from the mirror while the vehicle is moving. Check exact wording."
+  },
+  {
+   "id": "PARK-DIS-04",
+   "topic": "PARK",
+   "group": "DIS",
+   "number": "04",
+   "title": "Meter fee exemption",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "the vehicle displays DISABLED PARKING IDENTIFICATION AND is being operated by or for the transportation of a person with a disability AND is parked at a parking meter of a governmental unit",
+   "action": "park without paying the meter fee",
+   "unless": "",
+   "statement": "WHEN the vehicle displays DISABLED PARKING IDENTIFICATION AND is being operated by or for the transportation of a person with a disability AND is parked at a parking meter of a governmental unit, the DRIVER MAY park without paying the meter fee.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Transportation Code 681.008; whether the exemption also covers time limits and government garages is uncertain and may vary locally."
+  }
+ ]
+}

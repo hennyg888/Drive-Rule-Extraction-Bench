@@ -1,0 +1,798 @@
+{
+ "scope": "overtaking (passing another vehicle, and being passed)",
+ "region": "Ontario, Canada",
+ "vocabulary": [
+  {
+   "term": "PASS",
+   "definition": "Changing lanes to move past a slower vehicle going in the same direction, then returning to the original lane."
+  },
+  {
+   "term": "PASSER",
+   "definition": "The driver making a PASS."
+  },
+  {
+   "term": "DRIVER",
+   "definition": "A person who drives or is in charge of a vehicle on a highway."
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person riding a bicycle or motor-assisted bicycle."
+  },
+  {
+   "term": "ROADWAY",
+   "definition": "The part of the highway that is improved, designed or ordinarily used for vehicular traffic, not including the shoulder."
+  },
+  {
+   "term": "SHOULDER",
+   "definition": "The part of the highway beside the ROADWAY, paved or unpaved, that is not the ROADWAY."
+  },
+  {
+   "term": "BROKEN LINE",
+   "definition": "A broken (dashed) painted line separating lanes of traffic."
+  },
+  {
+   "term": "SOLID LINE",
+   "definition": "A continuous painted line separating lanes of traffic."
+  },
+  {
+   "term": "PEDESTRIAN CROSSOVER",
+   "definition": "A portion of a roadway designated by by-law, marked with signs and pavement markings, where pedestrians may cross and drivers must yield to them."
+  },
+  {
+   "term": "LEVEL RAILWAY CROSSING",
+   "definition": "A place where a railway track crosses a highway at the same level."
+  },
+  {
+   "term": "SCHOOL BUS",
+   "definition": "A chrome-yellow bus marked 'School Bus' that carries children or developmentally disabled persons and is equipped with overhead red signal-lights and a stop arm."
+  },
+  {
+   "term": "STREETCAR",
+   "definition": "A car of an electric railway operated on rails on a highway."
+  },
+  {
+   "term": "SAFETY ISLAND",
+   "definition": "A raised or marked area in the roadway beside a STREETCAR stop where passengers wait or get on and off."
+  },
+  {
+   "term": "EMERGENCY VEHICLE",
+   "definition": "A police, fire, ambulance or other emergency vehicle, or a tow truck, showing flashing red, red and blue, or amber lights as prescribed."
+  },
+  {
+   "term": "DO NOT PASS SIGN",
+   "definition": "A regulatory sign telling drivers not to pass other vehicles."
+  },
+  {
+   "term": "NO PASSING ZONE SIGN",
+   "definition": "A yellow pennant-shaped warning sign on the left side of the road marking the start of a no-passing zone."
+  },
+  {
+   "term": "LARGE VEHICLE",
+   "definition": "A truck, tractor-trailer or bus."
+  },
+  {
+   "term": "SLOW-MOVING VEHICLE",
+   "definition": "A farm tractor, self-propelled implement of husbandry or other vehicle that travels at 40 km/h or less and displays the orange-and-red triangular slow-moving vehicle sign."
+  }
+ ],
+ "rules": [
+  {
+   "id": "PASS-GEN-01",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "01",
+   "title": "Pass only when the way is clear",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "intending to pass another vehicle going in the same direction",
+   "action": "pass or attempt to pass",
+   "unless": "the ROADWAY in front of and to the left of the vehicle to be passed is safely free from approaching traffic AND the ROADWAY to the left of the DRIVER is safely free from overtaking traffic",
+   "statement": "WHEN intending to pass another vehicle going in the same direction, the DRIVER MUST NOT pass or attempt to pass, UNLESS the ROADWAY in front of and to the left of the vehicle to be passed is safely free from approaching traffic AND the ROADWAY to the left of the DRIVER is safely free from overtaking traffic.",
+   "penalty": "A fine and 3 demerit points (improper passing).",
+   "vague_terms": [
+    {
+     "term": "safely free",
+     "explanation": "no gap, time or sight distance given"
+    }
+   ],
+   "note": "HTA s.148(8). Demerit value is from the improper-passing entry and may differ by charge."
+  },
+  {
+   "id": "PASS-GEN-02",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "02",
+   "title": "Turn out left far enough",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "overtaking another vehicle or a person on horseback",
+   "action": "turn out to the left as far as necessary to avoid a collision with the vehicle or person being overtaken",
+   "unless": "",
+   "statement": "WHEN overtaking another vehicle or a person on horseback, the PASSER MUST turn out to the left as far as necessary to avoid a collision with the vehicle or person being overtaken.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as far as necessary",
+     "explanation": "no lateral distance given"
+    }
+   ],
+   "note": "HTA s.148(5)."
+  },
+  {
+   "id": "PASS-GEN-03",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "03",
+   "title": "Do not speed to pass",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "making a PASS",
+   "action": "exceed the speed limit",
+   "unless": "",
+   "statement": "WHEN making a PASS, the PASSER MUST NOT exceed the speed limit.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook: never exceed the speed limit to pass; speeding is separately an offence."
+  },
+  {
+   "id": "PASS-PROC-01",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "01",
+   "title": "Check mirrors and blind spot",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "about to move out to PASS",
+   "action": "check the mirrors and the blind spot for vehicles in the passing lane ahead and behind",
+   "unless": "",
+   "statement": "WHEN about to move out to PASS, the PASSER MUST check the mirrors and the blind spot for vehicles in the passing lane ahead and behind.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook passing procedure."
+  },
+  {
+   "id": "PASS-PROC-02",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "02",
+   "title": "Signal before moving out",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "moving from the PASSER's lane into the passing lane",
+   "action": "signal the lane change with the turn signal",
+   "unless": "",
+   "statement": "WHEN moving from the PASSER's lane into the passing lane, the PASSER MUST signal the lane change with the turn signal.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.142 requires a signal when moving from one lane to another where other traffic may be affected; the handbook says to signal before passing."
+  },
+  {
+   "id": "PASS-PROC-03",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "03",
+   "title": "Signal before returning",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "returning to the original lane after passing",
+   "action": "signal the lane change to the right",
+   "unless": "",
+   "statement": "WHEN returning to the original lane after passing, the PASSER MUST signal the lane change to the right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.142; handbook passing procedure."
+  },
+  {
+   "id": "PASS-PROC-04",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "04",
+   "title": "Do not cut back in too soon",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "returning to the original lane after passing",
+   "action": "move back in front of the passed vehicle before being able to see the front of that vehicle in the inside rear-view mirror",
+   "unless": "",
+   "statement": "WHEN returning to the original lane after passing, the PASSER MUST NOT move back in front of the passed vehicle before being able to see the front of that vehicle in the inside rear-view mirror.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook passing procedure."
+  },
+  {
+   "id": "PASS-PROC-05",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "05",
+   "title": "Cancel signal",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "the PASS is complete",
+   "action": "cancel the turn signal",
+   "unless": "",
+   "statement": "WHEN the PASS is complete, the PASSER MUST cancel the turn signal.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook passing procedure."
+  },
+  {
+   "id": "PASS-LOC-01",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "01",
+   "title": "No passing on hills, curves, near bridges or tunnels",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a ROADWAY with traffic in both directions AND approaching the crest of a grade OR on a curve OR within 30 metres of a bridge, viaduct or tunnel AND the DRIVER's view is obstructed so as to create a potential hazard",
+   "action": "drive to the left of the centre of the ROADWAY",
+   "unless": "the highway is one-way OR the highway is marked with more lanes for the DRIVER's direction than for the other direction",
+   "statement": "WHEN on a ROADWAY with traffic in both directions AND approaching the crest of a grade OR on a curve OR within 30 metres of a bridge, viaduct or tunnel AND the DRIVER's view is obstructed so as to create a potential hazard, the DRIVER MUST NOT drive to the left of the centre of the ROADWAY, UNLESS the highway is one-way OR the highway is marked with more lanes for the DRIVER's direction than for the other direction.",
+   "penalty": "A fine and 3 demerit points (improper passing).",
+   "vague_terms": [
+    {
+     "term": "view is obstructed so as to create a potential hazard",
+     "explanation": "no sight distance given"
+    }
+   ],
+   "note": "HTA s.149. Exact wording of the exceptions is from memory."
+  },
+  {
+   "id": "PASS-LOC-02",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "02",
+   "title": "No passing near a railway crossing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a ROADWAY with traffic in both directions AND within 30 metres of a LEVEL RAILWAY CROSSING",
+   "action": "drive to the left of the centre of the ROADWAY",
+   "unless": "the highway is one-way OR the highway is marked with more lanes for the DRIVER's direction than for the other direction",
+   "statement": "WHEN on a ROADWAY with traffic in both directions AND within 30 metres of a LEVEL RAILWAY CROSSING, the DRIVER MUST NOT drive to the left of the centre of the ROADWAY, UNLESS the highway is one-way OR the highway is marked with more lanes for the DRIVER's direction than for the other direction.",
+   "penalty": "A fine and 3 demerit points (improper passing).",
+   "vague_terms": [],
+   "note": "HTA s.149."
+  },
+  {
+   "id": "PASS-LOC-03",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "03",
+   "title": "No passing near a pedestrian crossover",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching a PEDESTRIAN CROSSOVER",
+   "action": "pass any vehicle that is within 30 metres of the PEDESTRIAN CROSSOVER",
+   "unless": "",
+   "statement": "WHEN approaching a PEDESTRIAN CROSSOVER, the DRIVER MUST NOT pass any vehicle that is within 30 metres of the PEDESTRIAN CROSSOVER.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.140. Fines for crossover offences are doubled in community safety zones."
+  },
+  {
+   "id": "PASS-LOC-04",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "04",
+   "title": "Do not pass a vehicle stopped at a crossover",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "another vehicle is stopped at a PEDESTRIAN CROSSOVER",
+   "action": "overtake and pass the stopped vehicle",
+   "unless": "",
+   "statement": "WHEN another vehicle is stopped at a PEDESTRIAN CROSSOVER, the DRIVER MUST NOT overtake and pass the stopped vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.140; subsection numbering not certain."
+  },
+  {
+   "id": "PASS-LOC-05",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "05",
+   "title": "Do Not Pass sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in the area governed by a DO NOT PASS SIGN",
+   "action": "pass other vehicles",
+   "unless": "",
+   "statement": "WHEN in the area governed by a DO NOT PASS SIGN, the DRIVER MUST NOT pass other vehicles.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Regulatory sign shown in the handbook."
+  },
+  {
+   "id": "PASS-LOC-06",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "06",
+   "title": "No passing zone pennant",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "DRIVER",
+   "when": "passing a NO PASSING ZONE SIGN",
+   "action": "pass other vehicles in the no-passing zone that follows",
+   "unless": "",
+   "statement": "WHEN passing a NO PASSING ZONE SIGN, the DRIVER SHOULD NOT pass other vehicles in the no-passing zone that follows.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Warning sign; the zone is normally also marked with a SOLID LINE. Strength recorded as advice because it is a warning sign, not a regulatory one."
+  },
+  {
+   "id": "PASS-MARK-01",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "01",
+   "title": "Solid line: unsafe to pass",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "DRIVER",
+   "when": "there is a SOLID LINE at the left of the DRIVER's lane",
+   "action": "pass",
+   "unless": "",
+   "statement": "WHEN there is a SOLID LINE at the left of the DRIVER's lane, the DRIVER SHOULD NOT pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook: a solid line at the left of your lane means it is unsafe to pass. Applies also where a solid line is paired with a broken line and the solid line is on the DRIVER's side."
+  },
+  {
+   "id": "PASS-MARK-02",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "02",
+   "title": "Broken line: passing allowed",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "PASSER",
+   "when": "there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS safely",
+   "action": "pass",
+   "unless": "",
+   "statement": "WHEN there is a BROKEN LINE at the left of the PASSER's lane AND the way is clear AND enough broken line remains ahead to complete the PASS safely, the PASSER MAY pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "the way is clear",
+     "explanation": "no gap or sight distance given"
+    },
+    {
+     "term": "enough broken line remains ahead",
+     "explanation": "length not given"
+    }
+   ],
+   "note": "Applies also where a broken line is paired with a solid line and the broken line is on the PASSER's side."
+  },
+  {
+   "id": "PASS-MARK-03",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "03",
+   "title": "Double solid lines: no passing",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "there are double SOLID LINEs between the lanes",
+   "action": "pass",
+   "unless": "",
+   "statement": "WHEN there are double SOLID LINEs between the lanes, the DRIVER MUST NOT pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook: with double solid lines neither driver may pass. Not certain this is stated as law in the HTA."
+  },
+  {
+   "id": "PASS-SIDE-01",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "01",
+   "title": "Passing on the right",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "the movement can be made in safety AND the vehicle being passed is making or signalling a left turn OR the highway has unobstructed pavement wide enough for two or more lanes moving in the DRIVER's direction OR the highway is one-way",
+   "action": "overtake and pass to the right of a vehicle or STREETCAR",
+   "unless": "",
+   "statement": "WHEN the movement can be made in safety AND the vehicle being passed is making or signalling a left turn OR the highway has unobstructed pavement wide enough for two or more lanes moving in the DRIVER's direction OR the highway is one-way, the DRIVER of a motor vehicle MAY ONLY overtake and pass to the right of a vehicle or STREETCAR.",
+   "penalty": "A fine and 3 demerit points (improper passing).",
+   "vague_terms": [
+    {
+     "term": "can be made in safety",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "HTA s.150(1). Read as: passing on the right is allowed only when safe and one of the three conditions holds."
+  },
+  {
+   "id": "PASS-SIDE-02",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "02",
+   "title": "Never pass on the shoulder",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing a vehicle on the right",
+   "action": "drive off the ROADWAY or onto the SHOULDER, paved or not, to make the PASS",
+   "unless": "",
+   "statement": "WHEN passing a vehicle on the right, the PASSER MUST NOT drive off the ROADWAY or onto the SHOULDER, paved or not, to make the PASS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.150 prohibits passing on the right by driving off the roadway; the handbook says never pass on the shoulder, paved or not. There may be narrow statutory exceptions (e.g. direction by police or signs) not listed here."
+  },
+  {
+   "id": "PASS-USER-01",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "01",
+   "title": "Cyclists: one metre",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "overtaking a CYCLIST",
+   "action": "leave at least 1 metre between the motor vehicle and the bicycle, as nearly as practicable, and keep that distance until safely past",
+   "unless": "",
+   "statement": "WHEN overtaking a CYCLIST, the DRIVER of a motor vehicle MUST leave at least 1 metre between the motor vehicle and the bicycle, as nearly as practicable, and keep that distance until safely past.",
+   "penalty": "$110 fine and 2 demerit points.",
+   "vague_terms": [
+    {
+     "term": "as nearly as practicable",
+     "explanation": "does not say when 1 metre is impractical"
+    },
+    {
+     "term": "safely past",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "HTA s.148(6.1)."
+  },
+  {
+   "id": "PASS-USER-02",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "02",
+   "title": "Change lanes to pass a cyclist",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "passing a CYCLIST AND the lane is too narrow to share",
+   "action": "change lanes to pass",
+   "unless": "",
+   "statement": "WHEN passing a CYCLIST AND the lane is too narrow to share, the DRIVER SHOULD change lanes to pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "too narrow to share",
+     "explanation": "no width given"
+    }
+   ],
+   "note": "Handbook advice; exact wording not certain."
+  },
+  {
+   "id": "PASS-USER-03",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "03",
+   "title": "School bus from behind",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching from behind a stopped SCHOOL BUS with its overhead red signal-lights flashing",
+   "action": "stop at least 20 metres before reaching the bus and not proceed until the bus moves or the lights stop flashing",
+   "unless": "",
+   "statement": "WHEN approaching from behind a stopped SCHOOL BUS with its overhead red signal-lights flashing, the DRIVER MUST stop at least 20 metres before reaching the bus and not proceed until the bus moves or the lights stop flashing.",
+   "penalty": "First offence $400 to $2,000 and 6 demerit points; higher fines and possible jail for repeat offences.",
+   "vague_terms": [],
+   "note": "HTA s.175. Applies on all roads, including multi-lane roads, for traffic behind the bus."
+  },
+  {
+   "id": "PASS-USER-04",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "04",
+   "title": "School bus from the front",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching from the front a stopped SCHOOL BUS with its overhead red signal-lights flashing",
+   "action": "stop before reaching the bus and not proceed until the bus moves or the lights stop flashing",
+   "unless": "the highway is divided by a median strip",
+   "statement": "WHEN approaching from the front a stopped SCHOOL BUS with its overhead red signal-lights flashing, the DRIVER MUST stop before reaching the bus and not proceed until the bus moves or the lights stop flashing, UNLESS the highway is divided by a median strip.",
+   "penalty": "First offence $400 to $2,000 and 6 demerit points.",
+   "vague_terms": [],
+   "note": "HTA s.175."
+  },
+  {
+   "id": "PASS-USER-05",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "05",
+   "title": "Stopped streetcar",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "overtaking a STREETCAR that is stopped to take on or let off passengers",
+   "action": "stop at least 2 metres behind the rear doors and not proceed until the passengers have got on or off and reached the side of the road",
+   "unless": "there is a SAFETY ISLAND at the stop",
+   "statement": "WHEN overtaking a STREETCAR that is stopped to take on or let off passengers, the DRIVER MUST stop at least 2 metres behind the rear doors and not proceed until the passengers have got on or off and reached the side of the road, UNLESS there is a SAFETY ISLAND at the stop.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.166; handbook."
+  },
+  {
+   "id": "PASS-USER-06",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "06",
+   "title": "Streetcar with safety island",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "overtaking a stopped STREETCAR AND there is a SAFETY ISLAND at the stop",
+   "action": "pass at a reasonable speed while watching for pedestrians",
+   "unless": "",
+   "statement": "WHEN overtaking a stopped STREETCAR AND there is a SAFETY ISLAND at the stop, the DRIVER MAY pass at a reasonable speed while watching for pedestrians.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "reasonable speed",
+     "explanation": "no speed given"
+    }
+   ],
+   "note": "Handbook wording; HTA s.166 may set a specific maximum speed (possibly 10 km/h) that is not confirmed here."
+  },
+  {
+   "id": "PASS-USER-07",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "07",
+   "title": "Streetcar on the left",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "overtaking a STREETCAR",
+   "action": "pass on the left side of the STREETCAR",
+   "unless": "the street is one-way",
+   "statement": "WHEN overtaking a STREETCAR, the DRIVER MUST NOT pass on the left side of the STREETCAR, UNLESS the street is one-way.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook."
+  },
+  {
+   "id": "PASS-USER-08",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "08",
+   "title": "Slow down for stopped emergency vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a stopped EMERGENCY VEHICLE with its lights flashing in the same direction of travel",
+   "action": "slow down and pass with caution, having due regard for traffic, road and weather conditions",
+   "unless": "",
+   "statement": "WHEN approaching a stopped EMERGENCY VEHICLE with its lights flashing in the same direction of travel, the DRIVER MUST slow down and pass with caution, having due regard for traffic, road and weather conditions.",
+   "penalty": "First offence $400 to $2,000, 3 demerit points and possible licence suspension up to 2 years.",
+   "vague_terms": [
+    {
+     "term": "slow down",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "with caution",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "HTA s.159(2). Tow trucks with amber lights are included; coverage of other roadside vehicles not confirmed."
+  },
+  {
+   "id": "PASS-USER-09",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "09",
+   "title": "Move over for stopped emergency vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a stopped EMERGENCY VEHICLE with its lights flashing in the same direction of travel AND the highway has two or more lanes in that direction",
+   "action": "move into a lane away from the EMERGENCY VEHICLE if it can be done safely",
+   "unless": "",
+   "statement": "WHEN approaching a stopped EMERGENCY VEHICLE with its lights flashing in the same direction of travel AND the highway has two or more lanes in that direction, the DRIVER MUST move into a lane away from the EMERGENCY VEHICLE if it can be done safely.",
+   "penalty": "First offence $400 to $2,000, 3 demerit points and possible licence suspension up to 2 years.",
+   "vague_terms": [
+    {
+     "term": "if it can be done safely",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "HTA s.159(3)."
+  },
+  {
+   "id": "PASS-USER-10",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "10",
+   "title": "Returning after passing a large vehicle",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "returning to the lane in front of a LARGE VEHICLE that has been passed",
+   "action": "move back in until the whole front of the LARGE VEHICLE is visible in the inside rear-view mirror, or slow down after moving in front of it",
+   "unless": "",
+   "statement": "WHEN returning to the lane in front of a LARGE VEHICLE that has been passed, the PASSER MUST NOT move back in until the whole front of the LARGE VEHICLE is visible in the inside rear-view mirror, or slow down after moving in front of it.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook guidance on sharing the road with large vehicles."
+  },
+  {
+   "id": "PASS-USER-11",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "11",
+   "title": "Do not pass snowplows",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "following a snowplow that is working OR snowplows working side by side in a staggered formation",
+   "action": "pass the snowplow or drive between the snowplows",
+   "unless": "",
+   "statement": "WHEN following a snowplow that is working OR snowplows working side by side in a staggered formation, the DRIVER MUST NOT pass the snowplow or drive between the snowplows.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "From MTO winter driving guidance ('never pass a snowplow'); not certain it appears in the same words in the driver's handbook. Not an HTA rule."
+  },
+  {
+   "id": "PASS-USER-12",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "12",
+   "title": "Care passing slow-moving vehicles",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "coming up behind a SLOW-MOVING VEHICLE",
+   "action": "slow down, keep well back, and pass only when it is safe",
+   "unless": "",
+   "statement": "WHEN coming up behind a SLOW-MOVING VEHICLE, the DRIVER SHOULD slow down, keep well back, and pass only when it is safe.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "well back",
+     "explanation": "no distance given"
+    },
+    {
+     "term": "when it is safe",
+     "explanation": "no criterion given"
+    }
+   ],
+   "note": "Handbook advice; exact wording not certain."
+  },
+  {
+   "id": "PASS-BEING-01",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "01",
+   "title": "Move right and let the vehicle pass",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "being overtaken by a vehicle or person on horseback travelling at a greater speed",
+   "action": "turn out to the right and allow the overtaking vehicle or person to pass",
+   "unless": "",
+   "statement": "WHEN being overtaken by a vehicle or person on horseback travelling at a greater speed, the DRIVER MUST turn out to the right and allow the overtaking vehicle or person to pass.",
+   "penalty": "A fine and 2 demerit points (failing to share the road).",
+   "vague_terms": [],
+   "note": "HTA s.148(2)."
+  },
+  {
+   "id": "PASS-BEING-02",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "02",
+   "title": "Half the roadway is enough",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "being overtaken",
+   "action": "keep up to one-half of the ROADWAY, without leaving more than one-half free for the PASSER",
+   "unless": "",
+   "statement": "WHEN being overtaken, the DRIVER MAY keep up to one-half of the ROADWAY, without leaving more than one-half free for the PASSER.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.148(5): the person overtaken is not required to leave more than one-half of the roadway free."
+  },
+  {
+   "id": "PASS-BEING-03",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "03",
+   "title": "Do not speed up when being passed",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "being passed",
+   "action": "speed up",
+   "unless": "",
+   "statement": "WHEN being passed, the DRIVER MUST NOT speed up.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Handbook; not confirmed as a separate HTA offence."
+  },
+  {
+   "id": "PASS-BEING-04",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "04",
+   "title": "Cyclist being overtaken",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "CYCLIST",
+   "when": "being overtaken by a vehicle or person on horseback travelling at a greater speed",
+   "action": "turn out to the right and allow the vehicle or person to pass",
+   "unless": "",
+   "statement": "WHEN being overtaken by a vehicle or person on horseback travelling at a greater speed, the CYCLIST MUST turn out to the right and allow the vehicle or person to pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "HTA s.148(6); the overtaking vehicle must also turn out left as far as necessary to avoid a collision."
+  },
+  {
+   "id": "PASS-BEING-05",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "05",
+   "title": "Slower traffic keep right",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "travelling at less than the normal speed of traffic at that time and place",
+   "action": "drive in the right-hand lane then available for traffic, or as close as practicable to the right-hand curb or edge of the roadway, where practicable",
+   "unless": "",
+   "statement": "WHEN travelling at less than the normal speed of traffic at that time and place, the DRIVER MUST drive in the right-hand lane then available for traffic, or as close as practicable to the right-hand curb or edge of the roadway, where practicable.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "normal speed of traffic",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "where practicable",
+     "explanation": "does not say when it is impractical"
+    },
+    {
+     "term": "as close as practicable",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "HTA s.147(1); does not apply to a vehicle overtaking or preparing for a left turn."
+  },
+  {
+   "id": "PASS-BEING-06",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "06",
+   "title": "Help large vehicles pass",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "being passed by a LARGE VEHICLE",
+   "action": "keep to the right and slow down slightly",
+   "unless": "",
+   "statement": "WHEN being passed by a LARGE VEHICLE, the DRIVER SHOULD keep to the right and slow down slightly.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "slightly",
+     "explanation": "no speed reduction given"
+    }
+   ],
+   "note": "Handbook advice on sharing the road with large vehicles; exact wording not certain."
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "run": "20261127-204110-anthropic_claude-opus-5-5-ca-turning-no-handbook",
+ "started": "2026-11-27 20:41:10",
+ "git": "1448972",
+ "preset": "anthropic/claude-opus-5-5",
+ "provider": "anthropic",
+ "model": "claude-opus-5-5",
+ "params": {
+  "effort": "medium",
+  "fallbacks": "default",
+  "max_tokens": 128000
+ },
+ "vision": true,
+ "price_per_million": [
+  4.0,
+  20.0,
+  0.2
+ ],
+ "handbook": "ca",
+ "pages": "none",
+ "images": false,
+ "toc": false,
+ "per_page": false,
+ "prompt": "no-handbook-rules",
+ "prompt_sha256": "24efddd32b2cc9e2b60cf8bf8f51af86ae968832bfb01d4c1b1cd766f13e5956",
+ "topic": "turning",
+ "region": "ca",
+ "closed_book": true,
+ "figures": false,
+ "modality": "no-handbook",
+ "calls": [
+  {
+   "pages": [],
+   "model": "claude-opus-5-5",
+   "stop_reason": "end_turn",
+   "input_tokens": 4701,
+   "output_tokens": 24434,
+   "reasoning_tokens": 8189,
+   "seconds": 197.8,
+   "cost_usd": 0.5075,
+   "request_id": "req_011ChUUWjz1wDWQ83jeNKSXe",
+   "json": true,
+   "citations": {}
+  }
+ ],
+ "totals": {
+  "calls": 1,
+  "failed": 0,
+  "input_tokens": 4701,
+  "output_tokens": 24434,
+  "reasoning_tokens": 8189,
+  "seconds": 197.8,
+  "cost_usd": 0.5075
+ }
+}

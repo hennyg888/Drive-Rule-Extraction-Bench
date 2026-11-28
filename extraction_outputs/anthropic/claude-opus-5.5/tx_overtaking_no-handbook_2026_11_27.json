@@ -1,0 +1,800 @@
+{
+ "scope": "overtaking (passing another vehicle, and being passed)",
+ "region": "Texas, United States",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "The operator of a vehicle, meaning a person who drives or has physical control of the vehicle (Texas Transportation Code uses 'operator')."
+  },
+  {
+   "term": "PASS",
+   "definition": "To overtake and move past another vehicle going in the same direction, then return to an authorized lane of travel."
+  },
+  {
+   "term": "PASSER",
+   "definition": "The DRIVER making a PASS."
+  },
+  {
+   "term": "OVERTAKEN VEHICLE",
+   "definition": "The vehicle going in the same direction that the PASSER is moving past."
+  },
+  {
+   "term": "ROADWAY",
+   "definition": "The portion of a highway, other than the berm or shoulder, that is improved, designed, or ordinarily used for vehicular travel."
+  },
+  {
+   "term": "MAIN TRAVELED PORTION",
+   "definition": "The lanes of the ROADWAY intended for through vehicle travel, excluding shoulders."
+  },
+  {
+   "term": "IMPROVED SHOULDER",
+   "definition": "A paved shoulder next to the MAIN TRAVELED PORTION of a highway."
+  },
+  {
+   "term": "NO-PASSING ZONE",
+   "definition": "A section of highway designated by signs or pavement markings where passing or driving on the left side of the ROADWAY is prohibited."
+  },
+  {
+   "term": "INTERSECTION",
+   "definition": "The common area where two or more highways join or cross, within the lateral boundary lines of the ROADWAYs."
+  },
+  {
+   "term": "MUNICIPALITY",
+   "definition": "An incorporated city, town, or village."
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "The part of a ROADWAY at an INTERSECTION within the prolongation of the sidewalk lines, or any part of a ROADWAY distinctly marked for pedestrian crossing by lines or other markings."
+  },
+  {
+   "term": "SCHOOL BUS",
+   "definition": "A motor vehicle used to transport children to or from school or a school-related activity, marked and equipped with visual signals (flashing red lights and stop arm)."
+  },
+  {
+   "term": "AUTHORIZED EMERGENCY VEHICLE",
+   "definition": "A fire department, police, ambulance or other vehicle designated by law as an emergency vehicle."
+  },
+  {
+   "term": "MOVE-OVER VEHICLE",
+   "definition": "A stationary authorized emergency vehicle, tow truck, TxDOT vehicle, or other vehicle listed in Texas Transportation Code §545.157 that is using visual signals (flashing lights)."
+  },
+  {
+   "term": "BICYCLIST",
+   "definition": "A person riding a bicycle on the road, who is the operator of a vehicle under Texas law."
+  },
+  {
+   "term": "BROKEN YELLOW LINE",
+   "definition": "A dashed yellow center line separating opposing traffic that permits passing when safe."
+  },
+  {
+   "term": "SOLID YELLOW LINE",
+   "definition": "A continuous yellow center line separating opposing traffic that marks a no-passing restriction for traffic on the side of the line nearest to it."
+  },
+  {
+   "term": "NO-ZONE",
+   "definition": "The blind-spot areas around a large truck or bus where the driver of that vehicle cannot see other vehicles."
+  }
+ ],
+ "rules": [
+  {
+   "id": "PASS-GEN-01",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "01",
+   "title": "Pass on the left at a safe distance",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "passing another vehicle going in the same direction",
+   "action": "pass to the left of the OVERTAKEN VEHICLE at a safe distance",
+   "unless": "passing on the right is permitted",
+   "statement": "WHEN passing another vehicle going in the same direction, the PASSER MUST pass to the left of the OVERTAKEN VEHICLE at a safe distance, UNLESS passing on the right is permitted.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a safe distance",
+     "explanation": "no lateral distance given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.053(a)."
+  },
+  {
+   "id": "PASS-GEN-02",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "02",
+   "title": "Do not cut back in too soon",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing another vehicle on the left",
+   "action": "move back to the right until safely clear of the OVERTAKEN VEHICLE",
+   "unless": "",
+   "statement": "WHEN passing another vehicle on the left, the PASSER MUST NOT move back to the right until safely clear of the OVERTAKEN VEHICLE.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "safely clear",
+     "explanation": "no gap or distance given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.053(a)."
+  },
+  {
+   "id": "PASS-GEN-03",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "03",
+   "title": "Signal the lane change",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "changing lanes to pass or to return after passing",
+   "action": "use a turn signal to indicate the intention to change lanes",
+   "unless": "",
+   "statement": "WHEN changing lanes to pass or to return after passing, the PASSER MUST use a turn signal to indicate the intention to change lanes.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.104(a) requires a signal for a lane change; the 100-foot continuous signal distance in §545.104(b) applies to turns."
+  },
+  {
+   "id": "PASS-GEN-04",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "04",
+   "title": "Leave a lane only when safe",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a ROADWAY divided into two or more clearly marked lanes AND intending to pass",
+   "action": "move from the lane being driven in",
+   "unless": "the movement can be made safely",
+   "statement": "WHEN on a ROADWAY divided into two or more clearly marked lanes AND intending to pass, the DRIVER MUST NOT move from the lane being driven in, UNLESS the movement can be made safely.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "can be made safely",
+     "explanation": "no gap or check procedure given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.060(a)."
+  },
+  {
+   "id": "PASS-GEN-05",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "05",
+   "title": "Slower traffic keep right",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "moving more slowly than the normal speed of other vehicles at the time and place under the existing conditions",
+   "action": "drive in the right-hand lane available for vehicles, or as close as practicable to the right-hand curb or edge of the ROADWAY",
+   "unless": "passing another vehicle OR preparing for a left turn at an INTERSECTION or into a private road or driveway",
+   "statement": "WHEN moving more slowly than the normal speed of other vehicles at the time and place under the existing conditions, the DRIVER MUST drive in the right-hand lane available for vehicles, or as close as practicable to the right-hand curb or edge of the ROADWAY, UNLESS passing another vehicle OR preparing for a left turn at an INTERSECTION or into a private road or driveway.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "normal speed of other vehicles",
+     "explanation": "no speed difference given"
+    },
+    {
+     "term": "as close as practicable",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.051(b)."
+  },
+  {
+   "id": "PASS-GEN-06",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "06",
+   "title": "Stay within the speed limit while passing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing another vehicle",
+   "action": "exceed the posted or statutory speed limit",
+   "unless": "",
+   "statement": "WHEN passing another vehicle, the PASSER MUST NOT exceed the posted or statutory speed limit.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas has no exception to speed limits for passing (Transportation Code §545.351-.352); the handbook also tells drivers not to speed up beyond the limit to pass. Exact handbook wording uncertain."
+  },
+  {
+   "id": "PASS-PROC-01",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "01",
+   "title": "Clear view and room before using the opposing side",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "on a two-way ROADWAY",
+   "action": "drive to the left side of the center of the ROADWAY to pass",
+   "unless": "the left side is clearly visible AND free of approaching traffic for a distance sufficient to permit the PASS to be made without interfering with the safe operation of any approaching vehicle or the OVERTAKEN VEHICLE",
+   "statement": "WHEN on a two-way ROADWAY, the PASSER MUST NOT drive to the left side of the center of the ROADWAY to pass, UNLESS the left side is clearly visible AND free of approaching traffic for a distance sufficient to permit the PASS to be made without interfering with the safe operation of any approaching vehicle or the OVERTAKEN VEHICLE.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a distance sufficient",
+     "explanation": "no sight distance given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.054(a)."
+  },
+  {
+   "id": "PASS-PROC-02",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "02",
+   "title": "Return before 200 feet of oncoming vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "the PASS uses a lane authorized for vehicles approaching from the opposite direction",
+   "action": "return to an authorized lane of travel as soon as practicable and before coming within 200 feet of an approaching vehicle",
+   "unless": "",
+   "statement": "WHEN the PASS uses a lane authorized for vehicles approaching from the opposite direction, the PASSER MUST return to an authorized lane of travel as soon as practicable and before coming within 200 feet of an approaching vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as soon as practicable",
+     "explanation": "no time or distance given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.054(b)."
+  },
+  {
+   "id": "PASS-PROC-03",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "03",
+   "title": "Check mirrors and blind spot before passing",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "about to move out to pass",
+   "action": "check the mirrors and look over the shoulder for vehicles in the blind spot or about to pass",
+   "unless": "",
+   "statement": "WHEN about to move out to pass, the PASSER MUST check the mirrors and look over the shoulder for vehicles in the blind spot or about to pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook passing procedure; exact wording may differ."
+  },
+  {
+   "id": "PASS-PROC-04",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "04",
+   "title": "Return when overtaken vehicle seen in mirror",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "PASSER",
+   "when": "completing a PASS",
+   "action": "return to the right lane only when the OVERTAKEN VEHICLE can be seen in the inside rearview mirror",
+   "unless": "",
+   "statement": "WHEN completing a PASS, the PASSER SHOULD return to the right lane only when the OVERTAKEN VEHICLE can be seen in the inside rearview mirror.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook advice; exact wording uncertain."
+  },
+  {
+   "id": "PASS-PROC-05",
+   "topic": "PASS",
+   "group": "PROC",
+   "number": "05",
+   "title": "Four-lane two-way roads: stay right of center",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a ROADWAY with four or more lanes for moving vehicles that provides for two-way movement",
+   "action": "drive left of the center line of the ROADWAY, including to pass",
+   "unless": "an official traffic-control device designates a lane left of center for that vehicle OR an obstruction makes it necessary to drive left of center and the DRIVER yields the right-of-way OR crossing the center line to turn left into or out of an alley, private road, or driveway",
+   "statement": "WHEN on a ROADWAY with four or more lanes for moving vehicles that provides for two-way movement, the DRIVER MUST NOT drive left of the center line of the ROADWAY, including to pass, UNLESS an official traffic-control device designates a lane left of center for that vehicle OR an obstruction makes it necessary to drive left of center and the DRIVER yields the right-of-way OR crossing the center line to turn left into or out of an alley, private road, or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.051(c)."
+  },
+  {
+   "id": "PASS-LOC-01",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "01",
+   "title": "No left-of-center near hill crests or curves",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching the crest of a grade or a curve in the highway where the DRIVER's view is obstructed for a distance that creates a hazard if another vehicle approaches from the opposite direction",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a one-way ROADWAY OR turning left into or from an alley, private road, or driveway",
+   "statement": "WHEN approaching the crest of a grade or a curve in the highway where the DRIVER's view is obstructed for a distance that creates a hazard if another vehicle approaches from the opposite direction, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a one-way ROADWAY OR turning left into or from an alley, private road, or driveway.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a distance that creates a hazard",
+     "explanation": "no sight distance given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.056; exact subsection numbering and exception list should be checked."
+  },
+  {
+   "id": "PASS-LOC-02",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "02",
+   "title": "No left-of-center near intersections or rail crossings in cities",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching within 100 feet of or traversing an INTERSECTION or railroad grade crossing in a MUNICIPALITY",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a one-way ROADWAY OR turning left into or from an alley, private road, or driveway",
+   "statement": "WHEN approaching within 100 feet of or traversing an INTERSECTION or railroad grade crossing in a MUNICIPALITY, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a one-way ROADWAY OR turning left into or from an alley, private road, or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.056."
+  },
+  {
+   "id": "PASS-LOC-03",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "03",
+   "title": "No left-of-center near marked intersections or rail crossings outside cities",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "outside a MUNICIPALITY AND approaching within 100 feet of or traversing an INTERSECTION or railroad grade crossing that is shown by a sign or marking",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a one-way ROADWAY OR turning left into or from an alley, private road, or driveway",
+   "statement": "WHEN outside a MUNICIPALITY AND approaching within 100 feet of or traversing an INTERSECTION or railroad grade crossing that is shown by a sign or marking, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a one-way ROADWAY OR turning left into or from an alley, private road, or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.056; outside municipalities the restriction applies where the intersection or crossing is indicated by an official sign or marking."
+  },
+  {
+   "id": "PASS-LOC-04",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "04",
+   "title": "No left-of-center near bridges, viaducts, tunnels",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching within 100 feet of a bridge, viaduct, or tunnel",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a one-way ROADWAY",
+   "statement": "WHEN approaching within 100 feet of a bridge, viaduct, or tunnel, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a one-way ROADWAY.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.056; some versions limit this to where the view is obstructed—check current text."
+  },
+  {
+   "id": "PASS-LOC-05",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "05",
+   "title": "Obey no-passing zones",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "in a NO-PASSING ZONE that is marked by a sign or marking clearly visible to an ordinarily observant person",
+   "action": "drive on the left side of the ROADWAY or on the left side of any pavement striping designed to mark the NO-PASSING ZONE",
+   "unless": "crossing the striping or center line to turn left into or out of an alley, private road, or driveway",
+   "statement": "WHEN in a NO-PASSING ZONE that is marked by a sign or marking clearly visible to an ordinarily observant person, the DRIVER MUST NOT drive on the left side of the ROADWAY or on the left side of any pavement striping designed to mark the NO-PASSING ZONE, UNLESS crossing the striping or center line to turn left into or out of an alley, private road, or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.055."
+  },
+  {
+   "id": "PASS-LOC-06",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "06",
+   "title": "No passing in the center two-way left-turn lane",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "there is a center lane marked for two-way left turns",
+   "action": "use the center left-turn lane to pass",
+   "unless": "",
+   "statement": "WHEN there is a center lane marked for two-way left turns, the PASSER MUST NOT use the center left-turn lane to pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook states the shared center lane is for left turns only; may also be enforced as disobeying a traffic-control device. Whether it is law or handbook instruction is uncertain."
+  },
+  {
+   "id": "PASS-MARK-01",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "01",
+   "title": "Solid yellow line on your side: no passing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "there is a SOLID YELLOW LINE on the PASSER's side of the center line",
+   "action": "cross the center line to pass",
+   "unless": "turning left into or out of an alley, private road, or driveway",
+   "statement": "WHEN there is a SOLID YELLOW LINE on the PASSER's side of the center line, the PASSER MUST NOT cross the center line to pass, UNLESS turning left into or out of an alley, private road, or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook pavement markings; legal basis §545.055."
+  },
+  {
+   "id": "PASS-MARK-02",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "02",
+   "title": "Double solid yellow: no passing either direction",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "the center line is a double SOLID YELLOW LINE",
+   "action": "cross the center line to pass, in either direction of travel",
+   "unless": "turning left into or out of an alley, private road, or driveway",
+   "statement": "WHEN the center line is a double SOLID YELLOW LINE, the PASSER MUST NOT cross the center line to pass, in either direction of travel, UNLESS turning left into or out of an alley, private road, or driveway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook pavement markings; legal basis §545.055."
+  },
+  {
+   "id": "PASS-MARK-03",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "03",
+   "title": "Broken yellow line: passing allowed when safe",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "PASSER",
+   "when": "there is a BROKEN YELLOW LINE on the PASSER's side of the center line AND the left side is clearly visible and free of approaching traffic for a distance sufficient to complete the PASS",
+   "action": "cross the center line to pass",
+   "unless": "",
+   "statement": "WHEN there is a BROKEN YELLOW LINE on the PASSER's side of the center line AND the left side is clearly visible and free of approaching traffic for a distance sufficient to complete the PASS, the PASSER MAY cross the center line to pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a distance sufficient",
+     "explanation": "no sight distance given"
+    }
+   ],
+   "note": "Texas Driver Handbook; the location limits in group LOC still apply."
+  },
+  {
+   "id": "PASS-MARK-04",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "04",
+   "title": "No-passing zone sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "a DO NOT PASS sign or a yellow pennant-shaped NO PASSING ZONE sign marks the start of a NO-PASSING ZONE",
+   "action": "pass on the left side of the ROADWAY until the end of the NO-PASSING ZONE",
+   "unless": "",
+   "statement": "WHEN a DO NOT PASS sign or a yellow pennant-shaped NO PASSING ZONE sign marks the start of a NO-PASSING ZONE, the PASSER MUST NOT pass on the left side of the ROADWAY until the end of the NO-PASSING ZONE.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.055 and Texas Driver Handbook signs section. The pennant sign is placed on the left side of the road."
+  },
+  {
+   "id": "PASS-MARK-05",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "05",
+   "title": "Solid white lane line discourages lane change",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "PASSER",
+   "when": "lanes of traffic in the same direction are separated by a solid white line",
+   "action": "cross the line to change lanes to pass",
+   "unless": "",
+   "statement": "WHEN lanes of traffic in the same direction are separated by a solid white line, the PASSER SHOULD NOT cross the line to change lanes to pass.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook describes solid white lines as discouraging lane changes; double solid white lines prohibit crossing."
+  },
+  {
+   "id": "PASS-MARK-06",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "06",
+   "title": "Left lane for passing only sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a LEFT LANE FOR PASSING ONLY sign is posted",
+   "action": "drive in the left lane",
+   "unless": "passing another vehicle",
+   "statement": "WHEN a LEFT LANE FOR PASSING ONLY sign is posted, the DRIVER MUST NOT drive in the left lane, UNLESS passing another vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Enforced as an official traffic-control device (Transportation Code §544.004); commonly posted on Texas multilane highways."
+  },
+  {
+   "id": "PASS-SIDE-01",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "01",
+   "title": "When passing on the right is allowed",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "PASSER",
+   "when": "conditions permit safely passing on the right AND (the OVERTAKEN VEHICLE is making or about to make a left turn OR the highway has unobstructed pavement not occupied by parked vehicles and of sufficient width for two or more lines of moving vehicles in each direction OR the ROADWAY is one-way and free from obstructions and wide enough for two or more lines of moving vehicles)",
+   "action": "pass to the right of another vehicle",
+   "unless": "",
+   "statement": "WHEN conditions permit safely passing on the right AND (the OVERTAKEN VEHICLE is making or about to make a left turn OR the highway has unobstructed pavement not occupied by parked vehicles and of sufficient width for two or more lines of moving vehicles in each direction OR the ROADWAY is one-way and free from obstructions and wide enough for two or more lines of moving vehicles), the PASSER MAY ONLY pass to the right of another vehicle.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "conditions permit safely passing",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.057(a). Read as: passing on the right is allowed only under these conditions."
+  },
+  {
+   "id": "PASS-SIDE-02",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "02",
+   "title": "No passing on the right off the pavement",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing another vehicle on the right",
+   "action": "leave the MAIN TRAVELED PORTION of the highway to do so",
+   "unless": "driving on an IMPROVED SHOULDER is allowed under §545.058",
+   "statement": "WHEN passing another vehicle on the right, the PASSER MUST NOT leave the MAIN TRAVELED PORTION of the highway to do so, UNLESS driving on an IMPROVED SHOULDER is allowed under §545.058.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.057(b)."
+  },
+  {
+   "id": "PASS-SIDE-03",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "03",
+   "title": "Passing on an improved shoulder",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "PASSER",
+   "when": "driving on the IMPROVED SHOULDER is necessary AND can be done safely AND the vehicle being passed is slowing or stopped on the MAIN TRAVELED PORTION, is disabled, or is preparing to make a left turn",
+   "action": "drive on the IMPROVED SHOULDER to the right of the MAIN TRAVELED PORTION to pass",
+   "unless": "",
+   "statement": "WHEN driving on the IMPROVED SHOULDER is necessary AND can be done safely AND the vehicle being passed is slowing or stopped on the MAIN TRAVELED PORTION, is disabled, or is preparing to make a left turn, the PASSER MAY ONLY drive on the IMPROVED SHOULDER to the right of the MAIN TRAVELED PORTION to pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "necessary",
+     "explanation": "no criteria given"
+    },
+    {
+     "term": "can be done safely",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.058(a); other permitted shoulder uses (stopping, accelerating, decelerating for a right turn, avoiding a collision, as directed by a traffic-control device) are outside this topic."
+  },
+  {
+   "id": "PASS-USER-01",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "01",
+   "title": "Stop for a school bus with signals on",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching from either direction a SCHOOL BUS stopped on the highway to receive or discharge a student AND the SCHOOL BUS is operating its flashing red visual signal",
+   "action": "stop before reaching the SCHOOL BUS and not proceed until the SCHOOL BUS resumes motion, the SCHOOL BUS driver signals the DRIVER to proceed, or the visual signal is no longer actuated",
+   "unless": "the SCHOOL BUS is on a different ROADWAY of a highway with separate ROADWAYs OR the DRIVER is on a controlled-access highway and the SCHOOL BUS is stopped in a loading zone that is part of or adjacent to the highway where pedestrians are not permitted to cross",
+   "statement": "WHEN approaching from either direction a SCHOOL BUS stopped on the highway to receive or discharge a student AND the SCHOOL BUS is operating its flashing red visual signal, the DRIVER MUST stop before reaching the SCHOOL BUS and not proceed until the SCHOOL BUS resumes motion, the SCHOOL BUS driver signals the DRIVER to proceed, or the visual signal is no longer actuated, UNLESS the SCHOOL BUS is on a different ROADWAY of a highway with separate ROADWAYs OR the DRIVER is on a controlled-access highway and the SCHOOL BUS is stopped in a loading zone that is part of or adjacent to the highway where pedestrians are not permitted to cross.",
+   "penalty": "Fine of $500 to $1,250; second conviction within 5 years can bring license suspension of up to 6 months.",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.066. Texas Driver Handbook notes that a highway is not 'separate roadways' merely because of a center turn lane or painted lines."
+  },
+  {
+   "id": "PASS-USER-02",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "02",
+   "title": "Do not pass a vehicle stopped for a pedestrian at a crosswalk",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching from the rear a vehicle that is stopped at a marked CROSSWALK or at an unmarked CROSSWALK at an INTERSECTION to permit a pedestrian to cross the ROADWAY",
+   "action": "overtake and pass the stopped vehicle",
+   "unless": "",
+   "statement": "WHEN approaching from the rear a vehicle that is stopped at a marked CROSSWALK or at an unmarked CROSSWALK at an INTERSECTION to permit a pedestrian to cross the ROADWAY, the DRIVER MUST NOT overtake and pass the stopped vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §552.003."
+  },
+  {
+   "id": "PASS-USER-03",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "03",
+   "title": "Move over or slow down for stopped emergency and service vehicles",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a MOVE-OVER VEHICLE that is stationary and using visual signals",
+   "action": "vacate the lane closest to the MOVE-OVER VEHICLE when the highway has two or more lanes traveling in the direction of the DRIVER, or slow to a speed not more than 20 miles per hour below the posted speed limit, or to 5 miles per hour when the posted speed limit is 25 miles per hour or less",
+   "unless": "directed otherwise by a police officer",
+   "statement": "WHEN approaching a MOVE-OVER VEHICLE that is stationary and using visual signals, the DRIVER MUST vacate the lane closest to the MOVE-OVER VEHICLE when the highway has two or more lanes traveling in the direction of the DRIVER, or slow to a speed not more than 20 miles per hour below the posted speed limit, or to 5 miles per hour when the posted speed limit is 25 miles per hour or less, UNLESS directed otherwise by a police officer.",
+   "penalty": "Fine up to $200; higher penalties if property damage or bodily injury results.",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.157 ('Move Over/Slow Down'). The list of covered vehicles (police, fire, EMS, tow trucks, TxDOT, utility and other vehicles) has been expanded by recent legislatures; check current text."
+  },
+  {
+   "id": "PASS-USER-04",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "04",
+   "title": "Passing a bicyclist at a safe distance",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "passing a BICYCLIST traveling in the same direction",
+   "action": "pass to the left at a safe distance and not move back to the right until safely clear of the BICYCLIST",
+   "unless": "",
+   "statement": "WHEN passing a BICYCLIST traveling in the same direction, the PASSER MUST pass to the left at a safe distance and not move back to the right until safely clear of the BICYCLIST.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a safe distance",
+     "explanation": "no lateral distance given"
+    },
+    {
+     "term": "safely clear",
+     "explanation": "no gap given"
+    }
+   ],
+   "note": "A bicycle is a vehicle under Texas law, so §545.053 applies. Texas has no statewide fixed passing distance for bicyclists; some cities (e.g., Austin, San Antonio, Houston) have vulnerable road user ordinances requiring 3 feet (6 feet for commercial vehicles)."
+  },
+  {
+   "id": "PASS-USER-05",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "05",
+   "title": "Passing large trucks: avoid the No-Zone",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "PASSER",
+   "when": "passing a large truck or bus",
+   "action": "linger in the NO-ZONE beside the truck or bus, or move back in front of it before the whole front of the truck or bus can be seen in the rearview mirror",
+   "unless": "",
+   "statement": "WHEN passing a large truck or bus, the PASSER SHOULD NOT linger in the NO-ZONE beside the truck or bus, or move back in front of it before the whole front of the truck or bus can be seen in the rearview mirror.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "linger",
+     "explanation": "no time limit given"
+    }
+   ],
+   "note": "Texas Driver Handbook 'Sharing the Road' with trucks; exact wording uncertain."
+  },
+  {
+   "id": "PASS-USER-06",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "06",
+   "title": "Give a motorcycle a full lane",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "PASSER",
+   "when": "passing a motorcycle",
+   "action": "use the adjacent lane and leave the motorcycle the full width of its lane",
+   "unless": "",
+   "statement": "WHEN passing a motorcycle, the PASSER SHOULD use the adjacent lane and leave the motorcycle the full width of its lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook motorcycle-sharing advice; Texas law does not authorize lane splitting (§545.060)."
+  },
+  {
+   "id": "PASS-BEING-01",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "01",
+   "title": "Move right on audible signal",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER being passed on the left",
+   "when": "the PASSER gives an audible signal",
+   "action": "move to or remain to the right in favor of the PASSER",
+   "unless": "passing on the right is permitted",
+   "statement": "WHEN the PASSER gives an audible signal, the DRIVER being passed on the left MUST move to or remain to the right in favor of the PASSER, UNLESS passing on the right is permitted.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.053(b)."
+  },
+  {
+   "id": "PASS-BEING-02",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "02",
+   "title": "Do not speed up while being passed",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER being passed",
+   "when": "another vehicle is passing",
+   "action": "accelerate until completely passed by the PASSER",
+   "unless": "",
+   "statement": "WHEN another vehicle is passing, the DRIVER being passed MUST NOT accelerate until completely passed by the PASSER.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Transportation Code §545.053(b)."
+  },
+  {
+   "id": "PASS-BEING-03",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "03",
+   "title": "Shoulder use to let faster traffic pass",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "another vehicle traveling faster is approaching from behind AND there is an IMPROVED SHOULDER AND driving on it is necessary AND can be done safely",
+   "action": "drive on the IMPROVED SHOULDER to the right of the MAIN TRAVELED PORTION to allow the faster vehicle to pass",
+   "unless": "",
+   "statement": "WHEN another vehicle traveling faster is approaching from behind AND there is an IMPROVED SHOULDER AND driving on it is necessary AND can be done safely, the DRIVER MAY drive on the IMPROVED SHOULDER to the right of the MAIN TRAVELED PORTION to allow the faster vehicle to pass.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "necessary",
+     "explanation": "no criteria given"
+    },
+    {
+     "term": "can be done safely",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.058(a)."
+  },
+  {
+   "id": "PASS-BEING-04",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "04",
+   "title": "Yield to approaching emergency vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "an AUTHORIZED EMERGENCY VEHICLE approaches using audible and visual signals",
+   "action": "yield the right-of-way, immediately drive to a position parallel to and as close as possible to the right-hand edge or curb of the ROADWAY clear of any INTERSECTION, and stop and remain standing until the AUTHORIZED EMERGENCY VEHICLE has passed",
+   "unless": "otherwise directed by a police officer",
+   "statement": "WHEN an AUTHORIZED EMERGENCY VEHICLE approaches using audible and visual signals, the DRIVER MUST yield the right-of-way, immediately drive to a position parallel to and as close as possible to the right-hand edge or curb of the ROADWAY clear of any INTERSECTION, and stop and remain standing until the AUTHORIZED EMERGENCY VEHICLE has passed, UNLESS otherwise directed by a police officer.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as close as possible",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "Texas Transportation Code §545.156."
+  },
+  {
+   "id": "PASS-BEING-05",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "05",
+   "title": "Help the passer get back in",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER being passed",
+   "when": "another vehicle is passing AND the PASSER needs room to return to the lane",
+   "action": "stay in the lane and slow down if necessary to let the PASSER return safely",
+   "unless": "",
+   "statement": "WHEN another vehicle is passing AND the PASSER needs room to return to the lane, the DRIVER being passed SHOULD stay in the lane and slow down if necessary to let the PASSER return safely.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "if necessary",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Texas Driver Handbook advice; exact wording uncertain."
+  }
+ ]
+}

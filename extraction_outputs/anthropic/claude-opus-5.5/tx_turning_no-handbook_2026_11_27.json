@@ -1,0 +1,777 @@
+{
+ "scope": "turning (right turns, left turns and U-turns, at intersections and elsewhere)",
+ "region": "Texas, United States",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "The operator of a vehicle, meaning a person who drives or has physical control of the vehicle (Texas Transportation Code uses 'operator')."
+  },
+  {
+   "term": "INTERSECTION",
+   "definition": "The common area at the junction of two highways or roadways, within the lateral curb lines or, without curbs, the lateral boundary lines of the roadways, as defined in Texas Transportation Code Section 541.303."
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "The portion of a roadway at an INTERSECTION within the connections of the lateral lines of the sidewalks, or any portion of a roadway distinctly indicated for pedestrian crossing by lines or other markings, as defined in Section 541.302."
+  },
+  {
+   "term": "PEDESTRIAN",
+   "definition": "A person on foot."
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person riding a bicycle."
+  },
+  {
+   "term": "U-TURN",
+   "definition": "A turn made so that the vehicle moves in the opposite direction on the same roadway."
+  },
+  {
+   "term": "ONE-WAY ROADWAY",
+   "definition": "A roadway on which vehicular traffic is allowed to move in only one direction."
+  },
+  {
+   "term": "CIRCULAR GREEN SIGNAL",
+   "definition": "A steady green circular indication of a traffic-control signal."
+  },
+  {
+   "term": "GREEN ARROW",
+   "definition": "A steady green arrow indication of a traffic-control signal, alone or with another indication."
+  },
+  {
+   "term": "STEADY RED SIGNAL",
+   "definition": "A steady red circular indication of a traffic-control signal."
+  },
+  {
+   "term": "FLASHING YELLOW ARROW",
+   "definition": "A flashing yellow arrow indication of a traffic-control signal permitting a turn in the direction of the arrow after yielding."
+  },
+  {
+   "term": "TWO-WAY LEFT-TURN LANE",
+   "definition": "A center lane marked on each side by a solid yellow line and a broken yellow line, with left-turn arrows, reserved for left turns by vehicles travelling in either direction."
+  },
+  {
+   "term": "IMPROVED SHOULDER",
+   "definition": "A paved shoulder, as defined in Section 541.302."
+  },
+  {
+   "term": "TURN SIGNAL",
+   "definition": "A signal given by the vehicle's signal lamps or by hand and arm to show an intention to turn, change lanes or start from a parked position."
+  },
+  {
+   "term": "WHITE CANE",
+   "definition": "A cane or walking stick that is white or metallic in color, with or without a red tip, carried by a pedestrian who is blind or visually impaired."
+  },
+  {
+   "term": "ASSISTANCE ANIMAL",
+   "definition": "An animal specially trained or equipped to help a person with a disability."
+  }
+ ],
+ "rules": [
+  {
+   "id": "TURN-GEN-01",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "01",
+   "title": "Turn only when safe",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "about to turn the vehicle to enter a private road or driveway OR otherwise turn the vehicle from a direct course OR move right or left on a roadway",
+   "action": "make the movement",
+   "unless": "the movement can be made safely",
+   "statement": "WHEN about to turn the vehicle to enter a private road or driveway OR otherwise turn the vehicle from a direct course OR move right or left on a roadway, the DRIVER MUST NOT make the movement, UNLESS the movement can be made safely.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "can be made safely",
+     "explanation": "no gap or distance given"
+    }
+   ],
+   "note": "Texas Transportation Code Section 545.103."
+  },
+  {
+   "id": "TURN-GEN-02",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "02",
+   "title": "Follow turn markers in intersection",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning at an INTERSECTION AND authorized markers, buttons or signs within or next to the INTERSECTION direct a course for turning vehicles different from the normal course",
+   "action": "turn only as directed by the markers, buttons or signs",
+   "unless": "",
+   "statement": "WHEN turning at an INTERSECTION AND authorized markers, buttons or signs within or next to the INTERSECTION direct a course for turning vehicles different from the normal course, the DRIVER MUST turn only as directed by the markers, buttons or signs.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.101; exact subsection lettering uncertain."
+  },
+  {
+   "id": "TURN-GEN-03",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "03",
+   "title": "Obey turn prohibition signs",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "an official sign prohibits a right turn, a left turn or a U-TURN at a location",
+   "action": "make the prohibited turn at that location",
+   "unless": "",
+   "statement": "WHEN an official sign prohibits a right turn, a left turn or a U-TURN at a location, the DRIVER MUST NOT make the prohibited turn at that location.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Based on the general duty to comply with official traffic-control devices (Section 544.004)."
+  },
+  {
+   "id": "TURN-GEN-04",
+   "topic": "TURN",
+   "group": "GEN",
+   "number": "04",
+   "title": "Plan the turn ahead",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "intending to turn",
+   "action": "move into the proper lane well before the turn, slow down, and look for vehicles, PEDESTRIANS and CYCLISTS before turning",
+   "unless": "",
+   "statement": "WHEN intending to turn, the DRIVER SHOULD move into the proper lane well before the turn, slow down, and look for vehicles, PEDESTRIANS and CYCLISTS before turning.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "well before the turn",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "Texas Driver Handbook guidance; exact wording may differ."
+  },
+  {
+   "id": "TURN-POS-01",
+   "topic": "TURN",
+   "group": "POS",
+   "number": "01",
+   "title": "Right turn close to right edge",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a right turn at an INTERSECTION",
+   "action": "make both the approach and the turn as closely as practicable to the right-hand curb or edge of the roadway",
+   "unless": "",
+   "statement": "WHEN making a right turn at an INTERSECTION, the DRIVER MUST make both the approach and the turn as closely as practicable to the right-hand curb or edge of the roadway.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "as closely as practicable",
+     "explanation": "no distance from curb given"
+    }
+   ],
+   "note": "Section 545.101(a)."
+  },
+  {
+   "id": "TURN-POS-02",
+   "topic": "TURN",
+   "group": "POS",
+   "number": "02",
+   "title": "Left turn from leftmost lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a left turn at an INTERSECTION",
+   "action": "approach the INTERSECTION in the extreme left-hand lane lawfully available to traffic moving in the vehicle's direction",
+   "unless": "",
+   "statement": "WHEN making a left turn at an INTERSECTION, the DRIVER MUST approach the INTERSECTION in the extreme left-hand lane lawfully available to traffic moving in the vehicle's direction.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.101(b)(1). Where lane markings allow left turns from more than one lane, the marked lanes are lawfully available."
+  },
+  {
+   "id": "TURN-POS-03",
+   "topic": "TURN",
+   "group": "POS",
+   "number": "03",
+   "title": "Left turn ends in lawful position",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a left turn at an INTERSECTION",
+   "action": "after entering the INTERSECTION, turn left and leave the INTERSECTION so as to arrive in a position to lawfully move in the new direction",
+   "unless": "",
+   "statement": "WHEN making a left turn at an INTERSECTION, the DRIVER MUST after entering the INTERSECTION, turn left and leave the INTERSECTION so as to arrive in a position to lawfully move in the new direction.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.101(b)(2)."
+  },
+  {
+   "id": "TURN-POS-04",
+   "topic": "TURN",
+   "group": "POS",
+   "number": "04",
+   "title": "Left turn to left of intersection center",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "making a left turn at an INTERSECTION",
+   "action": "turn in the portion of the INTERSECTION to the left of the center of the INTERSECTION, to the extent practicable",
+   "unless": "",
+   "statement": "WHEN making a left turn at an INTERSECTION, the DRIVER MUST turn in the portion of the INTERSECTION to the left of the center of the INTERSECTION, to the extent practicable.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "to the extent practicable",
+     "explanation": "does not say when it is impracticable"
+    }
+   ],
+   "note": "Section 545.101; subsection lettering and exact wording uncertain."
+  },
+  {
+   "id": "TURN-POS-05",
+   "topic": "TURN",
+   "group": "POS",
+   "number": "05",
+   "title": "Shoulder to slow for right turn",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "about to make a right turn AND there is an IMPROVED SHOULDER to the right of the main traveled portion of the roadway AND it is necessary AND it can be done safely",
+   "action": "drive on the IMPROVED SHOULDER to decelerate before making the right turn",
+   "unless": "",
+   "statement": "WHEN about to make a right turn AND there is an IMPROVED SHOULDER to the right of the main traveled portion of the roadway AND it is necessary AND it can be done safely, the DRIVER MAY ONLY drive on the IMPROVED SHOULDER to decelerate before making the right turn.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "it is necessary",
+     "explanation": "necessity not defined"
+    },
+    {
+     "term": "it can be done safely",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Section 545.058(a) lists several permitted shoulder uses; this rule covers the turning one. Section 545.058 also permits shoulder use to pass a vehicle that is slowing, stopped or preparing to make a left turn."
+  },
+  {
+   "id": "TURN-POS-06",
+   "topic": "TURN",
+   "group": "POS",
+   "number": "06",
+   "title": "Shoulder to pass a left-turning vehicle",
+   "force": "PERMISSION",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "a vehicle ahead on the main traveled portion of the highway is slowing, stopped or preparing to make a left turn AND there is an IMPROVED SHOULDER to the right AND it is necessary AND it can be done safely",
+   "action": "drive on the IMPROVED SHOULDER to pass that vehicle",
+   "unless": "",
+   "statement": "WHEN a vehicle ahead on the main traveled portion of the highway is slowing, stopped or preparing to make a left turn AND there is an IMPROVED SHOULDER to the right AND it is necessary AND it can be done safely, the DRIVER MAY ONLY drive on the IMPROVED SHOULDER to pass that vehicle.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "it is necessary",
+     "explanation": "necessity not defined"
+    },
+    {
+     "term": "it can be done safely",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Section 545.058(a)."
+  },
+  {
+   "id": "TURN-SIG-01",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "01",
+   "title": "Signal intention to turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "intending to turn, change lanes or start from a parked position",
+   "action": "give a TURN SIGNAL by signal lamps or by hand and arm",
+   "unless": "",
+   "statement": "WHEN intending to turn, change lanes or start from a parked position, the DRIVER MUST give a TURN SIGNAL by signal lamps or by hand and arm.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.104(a)."
+  },
+  {
+   "id": "TURN-SIG-02",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "02",
+   "title": "Signal for last 100 feet",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "intending to turn the vehicle right or left",
+   "action": "signal continuously for not less than the last 100 feet of movement of the vehicle before the turn",
+   "unless": "",
+   "statement": "WHEN intending to turn the vehicle right or left, the DRIVER MUST signal continuously for not less than the last 100 feet of movement of the vehicle before the turn.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.104(b)."
+  },
+  {
+   "id": "TURN-SIG-03",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "03",
+   "title": "Signal lamps when hand signal not visible",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "the vehicle is constructed or loaded so that a hand and arm signal would not be visible to the front and rear",
+   "action": "give the TURN SIGNAL by signal lamps",
+   "unless": "",
+   "statement": "WHEN the vehicle is constructed or loaded so that a hand and arm signal would not be visible to the front and rear, the DRIVER MUST give the TURN SIGNAL by signal lamps.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.106."
+  },
+  {
+   "id": "TURN-SIG-04",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "04",
+   "title": "Hand signal for left turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "giving a hand and arm TURN SIGNAL for a left turn",
+   "action": "extend the hand and arm horizontally from the left side of the vehicle",
+   "unless": "",
+   "statement": "WHEN giving a hand and arm TURN SIGNAL for a left turn, the DRIVER MUST extend the hand and arm horizontally from the left side of the vehicle.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.107."
+  },
+  {
+   "id": "TURN-SIG-05",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "05",
+   "title": "Hand signal for right turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "giving a hand and arm TURN SIGNAL for a right turn",
+   "action": "extend the hand and arm upward from the left side of the vehicle",
+   "unless": "",
+   "statement": "WHEN giving a hand and arm TURN SIGNAL for a right turn, the DRIVER MUST extend the hand and arm upward from the left side of the vehicle.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.107. Cyclists are separately allowed to signal a right turn with the right arm extended horizontally."
+  },
+  {
+   "id": "TURN-SIG-06",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "06",
+   "title": "Hand signal for slowing to turn",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "giving a hand and arm signal to stop or decrease speed before a turn",
+   "action": "extend the hand and arm downward from the left side of the vehicle",
+   "unless": "",
+   "statement": "WHEN giving a hand and arm signal to stop or decrease speed before a turn, the DRIVER MUST extend the hand and arm downward from the left side of the vehicle.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Sections 545.105 and 545.107. Section 545.105 requires a signal before stopping or suddenly decreasing speed."
+  },
+  {
+   "id": "TURN-SIG-07",
+   "topic": "TURN",
+   "group": "SIG",
+   "number": "07",
+   "title": "No misleading turn signals",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the vehicle is not about to turn or change lanes",
+   "action": "use the turn signal lamps as a courtesy or 'do pass' signal to the operator of another vehicle",
+   "unless": "",
+   "statement": "WHEN the vehicle is not about to turn or change lanes, the DRIVER MUST NOT use the turn signal lamps as a courtesy or 'do pass' signal to the operator of another vehicle.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.104(c), which also bars lighting the signals on only one side of a parked or disabled vehicle."
+  },
+  {
+   "id": "TURN-YLD-01",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "01",
+   "title": "Left turn: yield to oncoming traffic",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning left at an INTERSECTION OR into an alley, private road or driveway",
+   "action": "yield the right-of-way to a vehicle approaching from the opposite direction that is in the INTERSECTION or so close to it as to be an immediate hazard",
+   "unless": "",
+   "statement": "WHEN turning left at an INTERSECTION OR into an alley, private road or driveway, the DRIVER MUST yield the right-of-way to a vehicle approaching from the opposite direction that is in the INTERSECTION or so close to it as to be an immediate hazard.",
+   "penalty": "Misdemeanor; fine of $1 to $200; higher fines if failure to yield causes bodily injury or serious bodily injury.",
+   "vague_terms": [
+    {
+     "term": "so close to it as to be an immediate hazard",
+     "explanation": "no distance or time gap given"
+    }
+   ],
+   "note": "Section 545.152. Enhanced penalty amounts for injury are not stated here because they are uncertain."
+  },
+  {
+   "id": "TURN-YLD-02",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "02",
+   "title": "Turning on green: yield",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning right or left while facing a CIRCULAR GREEN SIGNAL",
+   "action": "yield the right-of-way to other vehicles and to PEDESTRIANS lawfully in the INTERSECTION or an adjacent CROSSWALK",
+   "unless": "",
+   "statement": "WHEN turning right or left while facing a CIRCULAR GREEN SIGNAL, the DRIVER MUST yield the right-of-way to other vehicles and to PEDESTRIANS lawfully in the INTERSECTION or an adjacent CROSSWALK.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 544.007(b)."
+  },
+  {
+   "id": "TURN-YLD-03",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "03",
+   "title": "Turning after a stop sign: yield",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning into or across a roadway after stopping at a stop sign",
+   "action": "yield the right-of-way to a vehicle that has entered the INTERSECTION from another highway or that is approaching so closely as to be an immediate hazard",
+   "unless": "",
+   "statement": "WHEN turning into or across a roadway after stopping at a stop sign, the DRIVER MUST yield the right-of-way to a vehicle that has entered the INTERSECTION from another highway or that is approaching so closely as to be an immediate hazard.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "approaching so closely as to be an immediate hazard",
+     "explanation": "no distance or time gap given"
+    }
+   ],
+   "note": "Section 545.153."
+  },
+  {
+   "id": "TURN-YLD-04",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "04",
+   "title": "Turning after a yield sign",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning at an INTERSECTION controlled by a yield sign facing the DRIVER",
+   "action": "slow to a reasonable speed, stop if necessary, and yield the right-of-way to vehicles in the INTERSECTION or approaching so closely as to be an immediate hazard",
+   "unless": "",
+   "statement": "WHEN turning at an INTERSECTION controlled by a yield sign facing the DRIVER, the DRIVER MUST slow to a reasonable speed, stop if necessary, and yield the right-of-way to vehicles in the INTERSECTION or approaching so closely as to be an immediate hazard.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "reasonable speed",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "if necessary",
+     "explanation": "leaves when to stop to the driver"
+    },
+    {
+     "term": "approaching so closely as to be an immediate hazard",
+     "explanation": "no distance or time gap given"
+    }
+   ],
+   "note": "Sections 544.010 and 545.153."
+  },
+  {
+   "id": "TURN-YLD-05",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "05",
+   "title": "Turning from a driveway",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning onto a highway from a private road or driveway",
+   "action": "yield the right-of-way to each vehicle approaching on the highway",
+   "unless": "",
+   "statement": "WHEN turning onto a highway from a private road or driveway, the DRIVER MUST yield the right-of-way to each vehicle approaching on the highway.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.155."
+  },
+  {
+   "id": "TURN-YLD-06",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "06",
+   "title": "Pedestrians in crosswalk when turning",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "turning across a CROSSWALK where a PEDESTRIAN is crossing on the half of the roadway the vehicle is on OR approaching so closely from the opposite half as to be in danger",
+   "action": "yield the right-of-way to the PEDESTRIAN, slowing or stopping if necessary",
+   "unless": "",
+   "statement": "WHEN turning across a CROSSWALK where a PEDESTRIAN is crossing on the half of the roadway the vehicle is on OR approaching so closely from the opposite half as to be in danger, the DRIVER MUST yield the right-of-way to the PEDESTRIAN, slowing or stopping if necessary.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "approaching so closely from the opposite half as to be in danger",
+     "explanation": "no distance given"
+    },
+    {
+     "term": "if necessary",
+     "explanation": "leaves when to stop to the driver"
+    }
+   ],
+   "note": "Section 552.003 applies where traffic-control signals are not in place or not in operation; at signals, Section 544.007 and 552.002 apply."
+  },
+  {
+   "id": "TURN-YLD-07",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "07",
+   "title": "Blind or disabled pedestrians",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching an INTERSECTION or CROSSWALK where a PEDESTRIAN carrying a WHITE CANE or accompanied by an ASSISTANCE ANIMAL is crossing or attempting to cross",
+   "action": "yield the right-of-way to the PEDESTRIAN and take necessary precautions to avoid injuring or endangering the PEDESTRIAN, stopping if necessary",
+   "unless": "",
+   "statement": "WHEN approaching an INTERSECTION or CROSSWALK where a PEDESTRIAN carrying a WHITE CANE or accompanied by an ASSISTANCE ANIMAL is crossing or attempting to cross, the DRIVER MUST yield the right-of-way to the PEDESTRIAN and take necessary precautions to avoid injuring or endangering the PEDESTRIAN, stopping if necessary.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "necessary precautions",
+     "explanation": "precautions not specified"
+    },
+    {
+     "term": "if necessary",
+     "explanation": "leaves when to stop to the driver"
+    }
+   ],
+   "note": "Section 552.008; applies to all approaching drivers, including turning drivers."
+  },
+  {
+   "id": "TURN-YLD-08",
+   "topic": "TURN",
+   "group": "YLD",
+   "number": "08",
+   "title": "Watch for cyclists and motorcyclists when turning",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "DRIVER",
+   "when": "turning right or left",
+   "action": "check for CYCLISTS and motorcyclists, including those approaching from behind on the right or from the opposite direction, and not turn across their path",
+   "unless": "",
+   "statement": "WHEN turning right or left, the DRIVER SHOULD check for CYCLISTS and motorcyclists, including those approaching from behind on the right or from the opposite direction, and not turn across their path.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook sharing-the-road guidance; wording paraphrased."
+  },
+  {
+   "id": "TURN-SGNL-01",
+   "topic": "TURN",
+   "group": "SGNL",
+   "number": "01",
+   "title": "Turn permitted on circular green",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a CIRCULAR GREEN SIGNAL",
+   "action": "turn right or left",
+   "unless": "a sign prohibits the turn",
+   "statement": "WHEN facing a CIRCULAR GREEN SIGNAL, the DRIVER MAY turn right or left, UNLESS a sign prohibits the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Section 544.007(b). The yield duty is rule TURN-YLD-02."
+  },
+  {
+   "id": "TURN-SGNL-02",
+   "topic": "TURN",
+   "group": "SGNL",
+   "number": "02",
+   "title": "Green arrow: only the arrow movement",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "facing a GREEN ARROW",
+   "action": "cautiously enter the INTERSECTION to make the movement shown by the arrow or another movement permitted by other indications shown at the same time, yielding the right-of-way to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully in the INTERSECTION",
+   "unless": "",
+   "statement": "WHEN facing a GREEN ARROW, the DRIVER MAY ONLY cautiously enter the INTERSECTION to make the movement shown by the arrow or another movement permitted by other indications shown at the same time, yielding the right-of-way to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully in the INTERSECTION.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [
+    {
+     "term": "cautiously",
+     "explanation": "no speed or behaviour given"
+    }
+   ],
+   "note": "Section 544.007(c). Force is REQUIREMENT because the movement limit is law; MAY ONLY expresses the limit."
+  },
+  {
+   "id": "TURN-SGNL-03",
+   "topic": "TURN",
+   "group": "SGNL",
+   "number": "03",
+   "title": "Stop before turning on red",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "facing a STEADY RED SIGNAL AND intending to turn",
+   "action": "stop at a clearly marked stop line or, if none, before entering the CROSSWALK on the near side of the INTERSECTION or, if none, before entering the INTERSECTION, before turning",
+   "unless": "",
+   "statement": "WHEN facing a STEADY RED SIGNAL AND intending to turn, the DRIVER MUST stop at a clearly marked stop line or, if none, before entering the CROSSWALK on the near side of the INTERSECTION or, if none, before entering the INTERSECTION, before turning.",
+   "penalty": "Misdemeanor; fine of $1 to $200; red-light camera civil penalties may apply where cameras operated before 2019 contracts ended.",
+   "vague_terms": [],
+   "note": "Section 544.007(d)-(e). Texas banned new red-light cameras in 2019; penalty note uncertain for camera enforcement."
+  },
+  {
+   "id": "TURN-SGNL-04",
+   "topic": "TURN",
+   "group": "SGNL",
+   "number": "04",
+   "title": "Right turn on red",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a STEADY RED SIGNAL AND the DRIVER has stopped as required",
+   "action": "turn right, after yielding the right-of-way to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION",
+   "unless": "a sign prohibits the turn",
+   "statement": "WHEN facing a STEADY RED SIGNAL AND the DRIVER has stopped as required, the DRIVER MAY turn right, after yielding the right-of-way to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION, UNLESS a sign prohibits the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Section 544.007(f)."
+  },
+  {
+   "id": "TURN-SGNL-05",
+   "topic": "TURN",
+   "group": "SGNL",
+   "number": "05",
+   "title": "Left turn on red, one-way to one-way",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "facing a STEADY RED SIGNAL on a ONE-WAY ROADWAY AND turning left onto a ONE-WAY ROADWAY on which traffic moves to the DRIVER's left AND the DRIVER has stopped as required",
+   "action": "turn left, after yielding the right-of-way to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION",
+   "unless": "a sign prohibits the turn",
+   "statement": "WHEN facing a STEADY RED SIGNAL on a ONE-WAY ROADWAY AND turning left onto a ONE-WAY ROADWAY on which traffic moves to the DRIVER's left AND the DRIVER has stopped as required, the DRIVER MAY turn left, after yielding the right-of-way to PEDESTRIANS lawfully in an adjacent CROSSWALK and to other traffic lawfully using the INTERSECTION, UNLESS a sign prohibits the turn.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Section 544.007(f)."
+  },
+  {
+   "id": "TURN-SGNL-06",
+   "topic": "TURN",
+   "group": "SGNL",
+   "number": "06",
+   "title": "Flashing yellow arrow",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "facing a FLASHING YELLOW ARROW AND turning in the direction of the arrow",
+   "action": "yield to oncoming traffic and to PEDESTRIANS before turning",
+   "unless": "",
+   "statement": "WHEN facing a FLASHING YELLOW ARROW AND turning in the direction of the arrow, the DRIVER MUST yield to oncoming traffic and to PEDESTRIANS before turning.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook and TxDOT guidance; the left-turn yield duty is also law under Section 545.152."
+  },
+  {
+   "id": "TURN-LANE-01",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "01",
+   "title": "Lane-use arrows",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "in a lane marked with lane-use arrows or a sign showing the movements allowed from that lane",
+   "action": "make only a movement shown for that lane",
+   "unless": "",
+   "statement": "WHEN in a lane marked with lane-use arrows or a sign showing the movements allowed from that lane, the DRIVER MUST make only a movement shown for that lane.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Based on the duty to obey official traffic-control devices (Section 544.004) and Section 545.101."
+  },
+  {
+   "id": "TURN-LANE-02",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "02",
+   "title": "Two-way left-turn lane: left turns only",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "using a TWO-WAY LEFT-TURN LANE",
+   "action": "use it only to turn left into or out of the roadway",
+   "unless": "",
+   "statement": "WHEN using a TWO-WAY LEFT-TURN LANE, the DRIVER MUST use it only to turn left into or out of the roadway.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook; it is unclear whether a separate statute covers this lane."
+  },
+  {
+   "id": "TURN-LANE-03",
+   "topic": "TURN",
+   "group": "LANE",
+   "number": "03",
+   "title": "Two-way left-turn lane: no passing or travel",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "there is a TWO-WAY LEFT-TURN LANE",
+   "action": "use the TWO-WAY LEFT-TURN LANE for passing or as a travel lane",
+   "unless": "",
+   "statement": "WHEN there is a TWO-WAY LEFT-TURN LANE, the DRIVER MUST NOT use the TWO-WAY LEFT-TURN LANE for passing or as a travel lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "Texas Driver Handbook."
+  },
+  {
+   "id": "TURN-UTRN-01",
+   "topic": "TURN",
+   "group": "UTRN",
+   "number": "01",
+   "title": "No U-turn near curve or crest",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching a curve or the crest of a grade AND the vehicle is not visible to the operator of another vehicle approaching from either direction within 500 feet",
+   "action": "make a U-TURN",
+   "unless": "",
+   "statement": "WHEN approaching a curve or the crest of a grade AND the vehicle is not visible to the operator of another vehicle approaching from either direction within 500 feet, the DRIVER MUST NOT make a U-TURN.",
+   "penalty": "Misdemeanor; fine of $1 to $200.",
+   "vague_terms": [],
+   "note": "Section 545.102."
+  },
+  {
+   "id": "TURN-UTRN-02",
+   "topic": "TURN",
+   "group": "UTRN",
+   "number": "02",
+   "title": "U-turn only when legal and safe",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "DRIVER",
+   "when": "considering a U-TURN",
+   "action": "make the U-TURN",
+   "unless": "it is permitted at that location AND it can be made safely without interfering with other traffic",
+   "statement": "WHEN considering a U-TURN, the DRIVER SHOULD NOT make the U-TURN, UNLESS it is permitted at that location AND it can be made safely without interfering with other traffic.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "made safely",
+     "explanation": "no criteria given"
+    },
+    {
+     "term": "interfering with other traffic",
+     "explanation": "no gap or distance given"
+    }
+   ],
+   "note": "Texas Driver Handbook guidance; the safe-movement duty is also law under Section 545.103. Local ordinances may prohibit U-turns in business districts or at signalized intersections. Dedicated U-turn lanes ('Texas U-turns') are provided at many frontage-road interchanges."
+  }
+ ]
+}

@@ -1,0 +1,1082 @@
+{
+ "scope": "overtaking (passing another vehicle, and being passed)",
+ "region": "California, United States",
+ "vocabulary": [
+  {
+   "term": "DRIVER",
+   "definition": "A person who drives or is in actual physical control of a vehicle."
+  },
+  {
+   "term": "PASS",
+   "definition": "To overtake and move past a vehicle or other road user proceeding in the same direction, including any change of lane or position needed to do so and the return to the original lane or position."
+  },
+  {
+   "term": "PASSER",
+   "definition": "The DRIVER making a PASS."
+  },
+  {
+   "term": "OVERTAKEN VEHICLE",
+   "definition": "The vehicle that a PASSER is passing or about to pass."
+  },
+  {
+   "term": "OVERTAKEN DRIVER",
+   "definition": "The DRIVER of an OVERTAKEN VEHICLE."
+  },
+  {
+   "term": "HIGHWAY",
+   "definition": "A way or place of whatever nature, publicly maintained and open to the use of the public for purposes of vehicular travel, including a street."
+  },
+  {
+   "term": "ROADWAY",
+   "definition": "The portion of a HIGHWAY improved, designed, or ordinarily used for vehicular travel."
+  },
+  {
+   "term": "TWO-LANE HIGHWAY",
+   "definition": "A HIGHWAY with one lane for traffic in each direction."
+  },
+  {
+   "term": "ONE-WAY ROADWAY",
+   "definition": "A ROADWAY on which all vehicles are required to travel in one direction."
+  },
+  {
+   "term": "INTERSECTION",
+   "definition": "The area embraced within the prolongation of the lateral curb lines, or if none, the lateral boundary lines, of the ROADWAYS of two HIGHWAYS that join one another at approximately right angles or any other angle."
+  },
+  {
+   "term": "RAILROAD GRADE CROSSING",
+   "definition": "A place where a HIGHWAY crosses railroad tracks at the same level."
+  },
+  {
+   "term": "BUSINESS DISTRICT",
+   "definition": "That portion of a HIGHWAY and the property contiguous to it where at least 50 percent of the frontage over a distance of 600 feet is occupied by buildings in use for business, as defined in the California Vehicle Code."
+  },
+  {
+   "term": "RESIDENCE DISTRICT",
+   "definition": "That portion of a HIGHWAY and the property contiguous to it, other than a BUSINESS DISTRICT, where the frontage is mainly occupied by dwellings or by dwellings and buildings in use for business, as defined in the California Vehicle Code."
+  },
+  {
+   "term": "DOUBLE SOLID YELLOW LINES",
+   "definition": "Two parallel solid yellow lines marked on the ROADWAY separating traffic moving in opposite directions."
+  },
+  {
+   "term": "SOLID LINE",
+   "definition": "An unbroken painted line on the ROADWAY."
+  },
+  {
+   "term": "BROKEN LINE",
+   "definition": "A painted line on the ROADWAY made of dashes separated by gaps."
+  },
+  {
+   "term": "TWO-WAY LEFT-TURN LANE",
+   "definition": "A center lane marked on each side by a SOLID yellow line on the outside and a BROKEN yellow line on the inside, reserved for left turns and U-turns by traffic from either direction."
+  },
+  {
+   "term": "BICYCLE LANE",
+   "definition": "A lane on the ROADWAY established and marked for the exclusive or preferential use of BICYCLES."
+  },
+  {
+   "term": "BICYCLE",
+   "definition": "A device upon which a person may ride, propelled exclusively by human power through a belt, chain, or gears, and having one or more wheels."
+  },
+  {
+   "term": "CYCLIST",
+   "definition": "A person operating a BICYCLE."
+  },
+  {
+   "term": "CROSSWALK",
+   "definition": "The portion of a ROADWAY at an INTERSECTION included within the prolongation of the sidewalk lines, or any portion of a ROADWAY distinctly marked for pedestrian crossing by lines or other markings."
+  },
+  {
+   "term": "PEDESTRIAN",
+   "definition": "A person on foot, or a person using a wheelchair or similar conveyance other than a BICYCLE."
+  },
+  {
+   "term": "SCHOOL BUS",
+   "definition": "A motor vehicle designed, used, or maintained for transporting school pupils, equipped with flashing red light signals and a stop signal arm as required by the California Vehicle Code."
+  },
+  {
+   "term": "STREETCAR",
+   "definition": "An interurban electric car or streetcar running on rails on or along the HIGHWAY."
+  },
+  {
+   "term": "SAFETY ZONE",
+   "definition": "The area or space officially set apart within a ROADWAY for the exclusive use of PEDESTRIANS and protected or marked by signs or markings so as to be plainly visible."
+  },
+  {
+   "term": "AUTHORIZED EMERGENCY VEHICLE",
+   "definition": "A police, fire, ambulance or other vehicle designated as an authorized emergency vehicle under the California Vehicle Code."
+  },
+  {
+   "term": "SLOW-MOVING VEHICLE",
+   "definition": "A vehicle proceeding at a rate of speed less than the normal flow of traffic at the particular time and place."
+  },
+  {
+   "term": "TURNOUT",
+   "definition": "A place beside a TWO-LANE HIGHWAY designated by signs as a turnout, where slow vehicles may pull off to let following vehicles pass."
+  },
+  {
+   "term": "MOTORCYCLE",
+   "definition": "A motor vehicle having a seat or saddle for the use of the rider, designed to travel on not more than three wheels in contact with the ground."
+  },
+  {
+   "term": "MOTORCYCLIST",
+   "definition": "A person operating a MOTORCYCLE."
+  },
+  {
+   "term": "LANE SPLITTING",
+   "definition": "Driving a MOTORCYCLE that has two wheels in contact with the ground between rows of stopped or moving vehicles in the same lane, including on divided and undivided streets, roads, or HIGHWAYS."
+  }
+ ],
+ "rules": [
+  {
+   "id": "PASS-GEN-01",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "01",
+   "title": "Pass on the left at a safe distance",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "overtaking a vehicle proceeding in the same direction",
+   "action": "pass to the left of the OVERTAKEN VEHICLE at a safe distance and not drive back to the right side of the ROADWAY until safely clear of the OVERTAKEN VEHICLE",
+   "unless": "passing on the right is permitted",
+   "statement": "WHEN overtaking a vehicle proceeding in the same direction, the PASSER MUST pass to the left of the OVERTAKEN VEHICLE at a safe distance and not drive back to the right side of the ROADWAY until safely clear of the OVERTAKEN VEHICLE, UNLESS passing on the right is permitted.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "safe distance",
+     "explanation": "no lateral distance given"
+    },
+    {
+     "term": "safely clear",
+     "explanation": "no gap or distance given"
+    }
+   ],
+   "note": "California Vehicle Code (CVC) 21750. Passing a BICYCLE is also governed by CVC 21760 (see PASS-USER rules)."
+  },
+  {
+   "id": "PASS-GEN-02",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "02",
+   "title": "Two-lane highway: left of center only when clear",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "on a TWO-LANE HIGHWAY",
+   "action": "drive to the left of the center of the ROADWAY to PASS another vehicle",
+   "unless": "the left side is clearly visible and free of oncoming traffic for a sufficient distance ahead to permit the PASS to be completed without interfering with the safe operation of any vehicle approaching from the opposite direction or of any OVERTAKEN VEHICLE",
+   "statement": "WHEN on a TWO-LANE HIGHWAY, the DRIVER MUST NOT drive to the left of the center of the ROADWAY to PASS another vehicle, UNLESS the left side is clearly visible and free of oncoming traffic for a sufficient distance ahead to permit the PASS to be completed without interfering with the safe operation of any vehicle approaching from the opposite direction or of any OVERTAKEN VEHICLE.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "clearly visible",
+     "explanation": "no sight distance given"
+    },
+    {
+     "term": "a sufficient distance ahead",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "CVC 21751. The handbook notes that at 55 mph about 10 to 12 seconds are needed to pass."
+  },
+  {
+   "id": "PASS-GEN-03",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "03",
+   "title": "Signal and move only with reasonable safety",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "moving the vehicle left or right on the ROADWAY to begin or end a PASS",
+   "action": "make the movement only when it can be made with reasonable safety and only after giving an appropriate signal if any other vehicle may be affected by the movement",
+   "unless": "",
+   "statement": "WHEN moving the vehicle left or right on the ROADWAY to begin or end a PASS, the PASSER MUST make the movement only when it can be made with reasonable safety and only after giving an appropriate signal if any other vehicle may be affected by the movement.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "reasonable safety",
+     "explanation": "no gap or margin given"
+    },
+    {
+     "term": "may be affected",
+     "explanation": "does not say which vehicles count"
+    }
+   ],
+   "note": "CVC 22107. CVC 22108 requires a turn signal to be given continuously during the last 100 feet before turning; whether that distance applies to lane changes for passing is not certain."
+  },
+  {
+   "id": "PASS-GEN-04",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "04",
+   "title": "Look ahead before passing",
+   "force": "INSTRUCTION",
+   "modal": "MUST",
+   "actor": "PASSER",
+   "when": "about to PASS",
+   "action": "look ahead for road conditions and traffic that may cause other vehicles to move into the PASSER's lane",
+   "unless": "",
+   "statement": "WHEN about to PASS, the PASSER MUST look ahead for road conditions and traffic that may cause other vehicles to move into the PASSER's lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook."
+  },
+  {
+   "id": "PASS-GEN-05",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "05",
+   "title": "Avoid passing on two-lane roads",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "DRIVER",
+   "when": "on a TWO-LANE HIGHWAY",
+   "action": "PASS other vehicles, including MOTORCYCLES and BICYCLES",
+   "unless": "",
+   "statement": "WHEN on a TWO-LANE HIGHWAY, the DRIVER SHOULD NOT PASS other vehicles, including MOTORCYCLES and BICYCLES.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook says to avoid passing on two-lane roads because it is dangerous; it is advice, not a prohibition."
+  },
+  {
+   "id": "PASS-GEN-06",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "06",
+   "title": "Enough space to complete the pass",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "PASSER",
+   "when": "there is not enough space ahead to complete the PASS and return to the original lane before meeting oncoming traffic",
+   "action": "start the PASS",
+   "unless": "",
+   "statement": "WHEN there is not enough space ahead to complete the PASS and return to the original lane before meeting oncoming traffic, the PASSER SHOULD NOT start the PASS.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "enough space ahead",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "California Driver Handbook; it gives about 10 to 12 seconds as the time needed to pass at 55 mph."
+  },
+  {
+   "id": "PASS-GEN-07",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "07",
+   "title": "Do not count on passing several cars at once",
+   "force": "ADVICE",
+   "modal": "SHOULD NOT",
+   "actor": "PASSER",
+   "when": "there is oncoming traffic on a TWO-LANE HIGHWAY",
+   "action": "count on having enough time to PASS several vehicles at once",
+   "unless": "",
+   "statement": "WHEN there is oncoming traffic on a TWO-LANE HIGHWAY, the PASSER SHOULD NOT count on having enough time to PASS several vehicles at once.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "enough time",
+     "explanation": "no time given"
+    }
+   ],
+   "note": "California Driver Handbook."
+  },
+  {
+   "id": "PASS-GEN-08",
+   "topic": "PASS",
+   "group": "GEN",
+   "number": "08",
+   "title": "Return only when clear of the passed vehicle",
+   "force": "ADVICE",
+   "modal": "SHOULD",
+   "actor": "PASSER",
+   "when": "about to return to the original lane after a PASS",
+   "action": "make sure the PASSER is not dangerously close to the OVERTAKEN VEHICLE, for example by waiting until both headlights of the OVERTAKEN VEHICLE are visible in the inside rearview mirror",
+   "unless": "",
+   "statement": "WHEN about to return to the original lane after a PASS, the PASSER SHOULD make sure the PASSER is not dangerously close to the OVERTAKEN VEHICLE, for example by waiting until both headlights of the OVERTAKEN VEHICLE are visible in the inside rearview mirror.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "dangerously close",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "California Driver Handbook; seeing both headlights in the mirror is given as a way to judge that there may be enough room."
+  },
+  {
+   "id": "PASS-LOC-01",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "01",
+   "title": "No passing near a hill crest or on a curve",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching the crest of a grade OR on a curve in the HIGHWAY where the DRIVER's view is obstructed within such distance as to create a hazard if another vehicle approached from the opposite direction",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a ONE-WAY ROADWAY",
+   "statement": "WHEN approaching the crest of a grade OR on a curve in the HIGHWAY where the DRIVER's view is obstructed within such distance as to create a hazard if another vehicle approached from the opposite direction, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a ONE-WAY ROADWAY.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "within such distance as to create a hazard",
+     "explanation": "no sight distance given"
+    }
+   ],
+   "note": "CVC 21752(a)."
+  },
+  {
+   "id": "PASS-LOC-02",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "02",
+   "title": "No passing near a bridge, viaduct or tunnel with obstructed view",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the view is obstructed while approaching within 100 feet of any bridge, viaduct, or tunnel",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a ONE-WAY ROADWAY",
+   "statement": "WHEN the view is obstructed while approaching within 100 feet of any bridge, viaduct, or tunnel, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a ONE-WAY ROADWAY.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21752(b)."
+  },
+  {
+   "id": "PASS-LOC-03",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "03",
+   "title": "No passing near a railroad crossing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching within 100 feet of OR traversing any RAILROAD GRADE CROSSING",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a ONE-WAY ROADWAY",
+   "statement": "WHEN approaching within 100 feet of OR traversing any RAILROAD GRADE CROSSING, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a ONE-WAY ROADWAY.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21752(c)."
+  },
+  {
+   "id": "PASS-LOC-04",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "04",
+   "title": "No passing near an intersection",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "approaching within 100 feet of OR traversing any INTERSECTION",
+   "action": "drive to the left side of the ROADWAY",
+   "unless": "on a ONE-WAY ROADWAY",
+   "statement": "WHEN approaching within 100 feet of OR traversing any INTERSECTION, the DRIVER MUST NOT drive to the left side of the ROADWAY, UNLESS on a ONE-WAY ROADWAY.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21752(d)."
+  },
+  {
+   "id": "PASS-LOC-05",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "05",
+   "title": "Obey Do Not Pass signs",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a 'Do Not Pass' sign or other official sign prohibiting passing applies to the DRIVER's lane",
+   "action": "PASS another vehicle within the zone the sign governs",
+   "unless": "",
+   "statement": "WHEN a 'Do Not Pass' sign or other official sign prohibiting passing applies to the DRIVER's lane, the DRIVER MUST NOT PASS another vehicle within the zone the sign governs.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21461 requires obeying official traffic control devices; the extent of the zone is shown by the signs and markings."
+  },
+  {
+   "id": "PASS-LOC-06",
+   "topic": "PASS",
+   "group": "LOC",
+   "number": "06",
+   "title": "Three-lane highway: center lane only for passing",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER",
+   "when": "on a HIGHWAY with three lanes for two-way traffic whose center lane is not allocated exclusively to traffic in the DRIVER's direction",
+   "action": "drive in the center lane to PASS another vehicle where the ROADWAY ahead is clearly visible and the center lane is clear of traffic within a safe distance, or when preparing for a left turn",
+   "unless": "",
+   "statement": "WHEN on a HIGHWAY with three lanes for two-way traffic whose center lane is not allocated exclusively to traffic in the DRIVER's direction, the DRIVER MAY ONLY drive in the center lane to PASS another vehicle where the ROADWAY ahead is clearly visible and the center lane is clear of traffic within a safe distance, or when preparing for a left turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "clearly visible",
+     "explanation": "no sight distance given"
+    },
+    {
+     "term": "a safe distance",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "CVC 21659. The force is REQUIREMENT stated as a restriction; MAY ONLY means the center lane is not to be used otherwise. The extreme left lane may not be used at any time on such a highway."
+  },
+  {
+   "id": "PASS-MARK-01",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "01",
+   "title": "Double solid yellow lines: no passing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "DOUBLE SOLID YELLOW LINES separate the DRIVER's lane from opposing traffic",
+   "action": "drive to the left of the lines to PASS",
+   "unless": "",
+   "statement": "WHEN DOUBLE SOLID YELLOW LINES separate the DRIVER's lane from opposing traffic, the DRIVER MUST NOT drive to the left of the lines to PASS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21460(a). Crossing the lines is allowed only for a left turn at an INTERSECTION or into or out of a driveway or private road, or for a U-turn, not for passing."
+  },
+  {
+   "id": "PASS-MARK-02",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "02",
+   "title": "Solid line on your side: no passing",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "the center marking is a SOLID LINE next to a BROKEN LINE AND the SOLID LINE is on the DRIVER's side",
+   "action": "cross the lines to PASS",
+   "unless": "",
+   "statement": "WHEN the center marking is a SOLID LINE next to a BROKEN LINE AND the SOLID LINE is on the DRIVER's side, the DRIVER MUST NOT cross the lines to PASS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21460(b)."
+  },
+  {
+   "id": "PASS-MARK-03",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "03",
+   "title": "Broken line on your side: passing allowed",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "PASSER",
+   "when": "the center line next to the PASSER's lane is a BROKEN LINE AND it is safe to pass",
+   "action": "cross the line to PASS",
+   "unless": "",
+   "statement": "WHEN the center line next to the PASSER's lane is a BROKEN LINE AND it is safe to pass, the PASSER MAY cross the line to PASS.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "it is safe to pass",
+     "explanation": "no gap or sight distance given"
+    }
+   ],
+   "note": "CVC 21460(b) and California Driver Handbook."
+  },
+  {
+   "id": "PASS-MARK-04",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "04",
+   "title": "Single solid yellow line: do not pass",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "there is only a single SOLID yellow line marking the center of a two-way ROADWAY on the DRIVER's side",
+   "action": "PASS the vehicle in front",
+   "unless": "",
+   "statement": "WHEN there is only a single SOLID yellow line marking the center of a two-way ROADWAY on the DRIVER's side, the DRIVER MUST NOT PASS the vehicle in front.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook; not certain this is stated in the Vehicle Code as such."
+  },
+  {
+   "id": "PASS-MARK-05",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "05",
+   "title": "Two sets of double yellow lines: barrier",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "two sets of DOUBLE SOLID YELLOW LINES spaced two or more feet apart separate the ROADWAY",
+   "action": "drive on or over them, including to PASS",
+   "unless": "",
+   "statement": "WHEN two sets of DOUBLE SOLID YELLOW LINES spaced two or more feet apart separate the ROADWAY, the DRIVER MUST NOT drive on or over them, including to PASS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook treats these as a barrier; left turns across them are allowed only at designated openings. CVC 21651 also prohibits driving over a dividing section."
+  },
+  {
+   "id": "PASS-MARK-06",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "06",
+   "title": "Double solid white lines: no lane change",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "double SOLID white lines separate the DRIVER's lane from an adjacent lane",
+   "action": "change lanes across the lines to PASS",
+   "unless": "",
+   "statement": "WHEN double SOLID white lines separate the DRIVER's lane from an adjacent lane, the DRIVER MUST NOT change lanes across the lines to PASS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook; for carpool (HOV) lanes, CVC 21655.8 makes crossing double parallel solid lines a legal prohibition."
+  },
+  {
+   "id": "PASS-MARK-07",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "07",
+   "title": "No passing in a two-way left-turn lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a TWO-WAY LEFT-TURN LANE is present",
+   "action": "drive in the TWO-WAY LEFT-TURN LANE to PASS",
+   "unless": "",
+   "statement": "WHEN a TWO-WAY LEFT-TURN LANE is present, the DRIVER MUST NOT drive in the TWO-WAY LEFT-TURN LANE to PASS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21460.5 permits use of the lane only for preparing for or making a left turn or U-turn (the handbook says to enter it no more than 200 feet before the turn)."
+  },
+  {
+   "id": "PASS-MARK-08",
+   "topic": "PASS",
+   "group": "MARK",
+   "number": "08",
+   "title": "No passing in a bicycle lane",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "a BICYCLE LANE is next to the DRIVER's lane",
+   "action": "drive in the BICYCLE LANE to PASS",
+   "unless": "",
+   "statement": "WHEN a BICYCLE LANE is next to the DRIVER's lane, the DRIVER of a motor vehicle MUST NOT drive in the BICYCLE LANE to PASS.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21209 allows driving in a BICYCLE LANE only to park where permitted, to enter or leave the ROADWAY, or to prepare for a turn within 200 feet of the INTERSECTION."
+  },
+  {
+   "id": "PASS-SIDE-01",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "01",
+   "title": "When passing on the right is permitted",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "PASSER",
+   "when": "the OVERTAKEN VEHICLE is making or about to make a left turn OR on a HIGHWAY in a BUSINESS DISTRICT or RESIDENCE DISTRICT with unobstructed width for two or more lines of moving vehicles in the PASSER's direction OR on a HIGHWAY outside a BUSINESS DISTRICT or RESIDENCE DISTRICT with unobstructed width for two or more lines of moving vehicles in each direction OR on a ONE-WAY ROADWAY with unobstructed width for two or more lines of moving vehicles",
+   "action": "PASS on the right",
+   "unless": "",
+   "statement": "WHEN the OVERTAKEN VEHICLE is making or about to make a left turn OR on a HIGHWAY in a BUSINESS DISTRICT or RESIDENCE DISTRICT with unobstructed width for two or more lines of moving vehicles in the PASSER's direction OR on a HIGHWAY outside a BUSINESS DISTRICT or RESIDENCE DISTRICT with unobstructed width for two or more lines of moving vehicles in each direction OR on a ONE-WAY ROADWAY with unobstructed width for two or more lines of moving vehicles, the PASSER MAY ONLY PASS on the right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21754. MAY ONLY means passing on the right is allowed under these conditions and not otherwise; it does not require passing on the right."
+  },
+  {
+   "id": "PASS-SIDE-02",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "02",
+   "title": "Pass on the right only when safe and on the pavement",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing on the right",
+   "action": "PASS unless conditions permit doing so in safety, and never by driving off the paved or main-traveled portion of the ROADWAY, including onto the shoulder",
+   "unless": "",
+   "statement": "WHEN passing on the right, the PASSER MUST NOT PASS unless conditions permit doing so in safety, and never by driving off the paved or main-traveled portion of the ROADWAY, including onto the shoulder.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "conditions permit doing so in safety",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "CVC 21755(a)."
+  },
+  {
+   "id": "PASS-SIDE-03",
+   "topic": "PASS",
+   "group": "SIDE",
+   "number": "03",
+   "title": "Cyclists may use the bike lane or paved shoulder",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "CYCLIST",
+   "when": "there is a BICYCLE LANE or paved shoulder to the right of slower or stopped traffic",
+   "action": "ride past that traffic in the BICYCLE LANE or on the paved shoulder",
+   "unless": "",
+   "statement": "WHEN there is a BICYCLE LANE or paved shoulder to the right of slower or stopped traffic, the CYCLIST MAY ride past that traffic in the BICYCLE LANE or on the paved shoulder.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21755(b) states that the ban on passing off the main-traveled portion does not prohibit use of a BICYCLE in a BICYCLE LANE or on a shoulder."
+  },
+  {
+   "id": "PASS-USER-01",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "01",
+   "title": "Passing a bicycle: safe distance",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing a BICYCLE proceeding in the same direction",
+   "action": "pass at a safe distance that does not interfere with the safe operation of the BICYCLE, having due regard for the size and speed of the motor vehicle and the BICYCLE, traffic conditions, weather, visibility, and the surface and width of the HIGHWAY",
+   "unless": "",
+   "statement": "WHEN passing a BICYCLE proceeding in the same direction, the DRIVER of a motor vehicle MUST pass at a safe distance that does not interfere with the safe operation of the BICYCLE, having due regard for the size and speed of the motor vehicle and the BICYCLE, traffic conditions, weather, visibility, and the surface and width of the HIGHWAY.",
+   "penalty": "$35 base fine; $220 base fine if a collision causes bodily injury to the CYCLIST.",
+   "vague_terms": [
+    {
+     "term": "a safe distance",
+     "explanation": "beyond the 3-foot minimum no distance given"
+    }
+   ],
+   "note": "CVC 21760(b), Three Feet for Safety Act."
+  },
+  {
+   "id": "PASS-USER-02",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "02",
+   "title": "Passing a bicycle: three feet minimum",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing a BICYCLE proceeding in the same direction",
+   "action": "pass at a distance of less than three feet between any part of the motor vehicle and any part of the BICYCLE or the CYCLIST",
+   "unless": "traffic or ROADWAY conditions prevent a three-foot clearance AND the DRIVER slows to a reasonable and prudent speed and passes only when doing so would not endanger the safety of the CYCLIST",
+   "statement": "WHEN passing a BICYCLE proceeding in the same direction, the DRIVER of a motor vehicle MUST NOT pass at a distance of less than three feet between any part of the motor vehicle and any part of the BICYCLE or the CYCLIST, UNLESS traffic or ROADWAY conditions prevent a three-foot clearance AND the DRIVER slows to a reasonable and prudent speed and passes only when doing so would not endanger the safety of the CYCLIST.",
+   "penalty": "$35 base fine; $220 base fine if a collision causes bodily injury to the CYCLIST.",
+   "vague_terms": [
+    {
+     "term": "a reasonable and prudent speed",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "would not endanger the safety",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "CVC 21760(c) and (d)."
+  },
+  {
+   "id": "PASS-USER-03",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "03",
+   "title": "Passing a bicycle when three feet is not possible",
+   "force": "REQUIREMENT",
+   "modal": "MAY ONLY",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "traffic or ROADWAY conditions prevent passing a BICYCLE with a clearance of at least three feet",
+   "action": "pass after slowing to a speed that is reasonable and prudent and when doing so would not endanger the safety of the CYCLIST, taking into account the size and speed of the motor vehicle and BICYCLE, traffic conditions, weather, visibility, and surface and width of the HIGHWAY",
+   "unless": "",
+   "statement": "WHEN traffic or ROADWAY conditions prevent passing a BICYCLE with a clearance of at least three feet, the DRIVER of a motor vehicle MAY ONLY pass after slowing to a speed that is reasonable and prudent and when doing so would not endanger the safety of the CYCLIST, taking into account the size and speed of the motor vehicle and BICYCLE, traffic conditions, weather, visibility, and surface and width of the HIGHWAY.",
+   "penalty": "$35 base fine; $220 base fine if a collision causes bodily injury to the CYCLIST.",
+   "vague_terms": [
+    {
+     "term": "reasonable and prudent",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "would not endanger the safety",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "CVC 21760(d). This does not authorize crossing DOUBLE SOLID YELLOW LINES to pass."
+  },
+  {
+   "id": "PASS-USER-04",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "04",
+   "title": "Change lanes to pass a bicycle when a lane is available",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a motor vehicle",
+   "when": "passing a BICYCLE proceeding in the same direction AND another lane for traffic in the same direction is available",
+   "action": "change into the other lane before passing, with due regard for safety and traffic conditions",
+   "unless": "the lane change is impracticable or prohibited by law",
+   "statement": "WHEN passing a BICYCLE proceeding in the same direction AND another lane for traffic in the same direction is available, the DRIVER of a motor vehicle MUST change into the other lane before passing, with due regard for safety and traffic conditions, UNLESS the lane change is impracticable or prohibited by law.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "due regard for safety and traffic conditions",
+     "explanation": "no criteria given"
+    },
+    {
+     "term": "impracticable",
+     "explanation": "does not say when"
+    }
+   ],
+   "note": "Added to CVC 21760 by AB 1909, effective January 1, 2023; the exact wording of the exception is uncertain. The handbook also tells drivers to change lanes to pass a CYCLIST where there is more than one lane."
+  },
+  {
+   "id": "PASS-USER-05",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "05",
+   "title": "Do not pass a vehicle stopped for a pedestrian",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a vehicle has stopped at a marked CROSSWALK or at an unmarked CROSSWALK at an INTERSECTION to permit a PEDESTRIAN to cross AND the DRIVER approaches it from the rear",
+   "action": "PASS the stopped vehicle",
+   "unless": "",
+   "statement": "WHEN a vehicle has stopped at a marked CROSSWALK or at an unmarked CROSSWALK at an INTERSECTION to permit a PEDESTRIAN to cross AND the DRIVER approaches it from the rear, the DRIVER MUST NOT PASS the stopped vehicle.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21951."
+  },
+  {
+   "id": "PASS-USER-06",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "06",
+   "title": "Stop for a school bus with flashing red lights",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "meeting or overtaking, from either direction, a SCHOOL BUS that is stopped and displays flashing red light signals and a stop signal arm",
+   "action": "stop immediately before passing the SCHOOL BUS and not proceed past it until the flashing red lights and stop signal arm stop operating",
+   "unless": "the DRIVER is on a divided HIGHWAY or multiple-lane HIGHWAY AND the SCHOOL BUS is on the other ROADWAY",
+   "statement": "WHEN meeting or overtaking, from either direction, a SCHOOL BUS that is stopped and displays flashing red light signals and a stop signal arm, the DRIVER MUST stop immediately before passing the SCHOOL BUS and not proceed past it until the flashing red lights and stop signal arm stop operating, UNLESS the DRIVER is on a divided HIGHWAY or multiple-lane HIGHWAY AND the SCHOOL BUS is on the other ROADWAY.",
+   "penalty": "Fine of up to $1,000 and possible license suspension of up to one year.",
+   "vague_terms": [],
+   "note": "CVC 22454 and 22454.5. The handbook also advises extra caution when a SCHOOL BUS shows flashing yellow lights (preparing to stop)."
+  },
+  {
+   "id": "PASS-USER-07",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "07",
+   "title": "Stop behind a streetcar loading passengers",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "overtaking a STREETCAR stopped or about to stop to receive or discharge passengers",
+   "action": "stop to the rear of the nearest running board or door of the STREETCAR and remain stopped until all passengers have boarded or have reached a place of safety",
+   "unless": "a SAFETY ZONE has been established at the stop",
+   "statement": "WHEN overtaking a STREETCAR stopped or about to stop to receive or discharge passengers, the DRIVER MUST stop to the rear of the nearest running board or door of the STREETCAR and remain stopped until all passengers have boarded or have reached a place of safety, UNLESS a SAFETY ZONE has been established at the stop.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "a place of safety",
+     "explanation": "not defined"
+    }
+   ],
+   "note": "CVC 21756(a). Applies only where streetcars or light rail run in the street."
+  },
+  {
+   "id": "PASS-USER-08",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "08",
+   "title": "Passing a streetcar at a safety zone",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "DRIVER",
+   "when": "a STREETCAR is stopped to receive or discharge passengers AND a SAFETY ZONE has been established at the stop",
+   "action": "pass the STREETCAR without stopping, at a speed not greater than is reasonable and proper and with due caution for the safety of PEDESTRIANS",
+   "unless": "",
+   "statement": "WHEN a STREETCAR is stopped to receive or discharge passengers AND a SAFETY ZONE has been established at the stop, the DRIVER MAY pass the STREETCAR without stopping, at a speed not greater than is reasonable and proper and with due caution for the safety of PEDESTRIANS.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "reasonable and proper",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "due caution",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "CVC 21756(b)."
+  },
+  {
+   "id": "PASS-USER-09",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "09",
+   "title": "Do not pass a streetcar on the left",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a STREETCAR is proceeding in the same direction, whether moving or temporarily at rest",
+   "action": "PASS the STREETCAR on the left or drive on the left side of it",
+   "unless": "directed to do so by a traffic officer OR on a ONE-WAY ROADWAY OR the tracks are so located as to prevent passing on the right",
+   "statement": "WHEN a STREETCAR is proceeding in the same direction, whether moving or temporarily at rest, the DRIVER MUST NOT PASS the STREETCAR on the left or drive on the left side of it, UNLESS directed to do so by a traffic officer OR on a ONE-WAY ROADWAY OR the tracks are so located as to prevent passing on the right.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21757."
+  },
+  {
+   "id": "PASS-USER-10",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "10",
+   "title": "Passing horses and livestock",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching or passing a horse-drawn vehicle, a ridden animal, or livestock",
+   "action": "exercise proper control of the vehicle and reduce speed or stop as appears necessary, or as signalled or requested by the person in charge of the animal, to avoid frightening the animal and to ensure the safety of the animal and of the persons with it",
+   "unless": "",
+   "statement": "WHEN approaching or passing a horse-drawn vehicle, a ridden animal, or livestock, the DRIVER MUST exercise proper control of the vehicle and reduce speed or stop as appears necessary, or as signalled or requested by the person in charge of the animal, to avoid frightening the animal and to ensure the safety of the animal and of the persons with it.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "as appears necessary",
+     "explanation": "no speed or distance given"
+    },
+    {
+     "term": "proper control",
+     "explanation": "not defined"
+    }
+   ],
+   "note": "CVC 21759. The handbook adds not to honk near horses."
+  },
+  {
+   "id": "PASS-USER-11",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "11",
+   "title": "Move over for stationary emergency and service vehicles",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "approaching a stationary AUTHORIZED EMERGENCY VEHICLE displaying emergency lights, OR a stationary tow truck or marked Caltrans vehicle displaying flashing amber warning lights, AND about to pass it in the lane immediately adjacent to it",
+   "action": "approach with due caution and change into an available lane not immediately adjacent to the stationary vehicle, with due regard for safety and traffic conditions",
+   "unless": "the lane change would be unsafe or impracticable OR is prohibited by law OR a peace officer directs otherwise",
+   "statement": "WHEN approaching a stationary AUTHORIZED EMERGENCY VEHICLE displaying emergency lights, OR a stationary tow truck or marked Caltrans vehicle displaying flashing amber warning lights, AND about to pass it in the lane immediately adjacent to it, the DRIVER MUST approach with due caution and change into an available lane not immediately adjacent to the stationary vehicle, with due regard for safety and traffic conditions, UNLESS the lane change would be unsafe or impracticable OR is prohibited by law OR a peace officer directs otherwise.",
+   "penalty": "Base fine of $50 (plus assessments).",
+   "vague_terms": [
+    {
+     "term": "due caution",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "unsafe or impracticable",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "CVC 21809. Originally limited to freeways; later amended to apply on all HIGHWAYS including local streets and roads, and recent amendments may extend it to other stationary vehicles displaying hazard lights; the exact current scope and fine amount are uncertain."
+  },
+  {
+   "id": "PASS-USER-12",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "12",
+   "title": "Slow down when unable to move over",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "passing a stationary AUTHORIZED EMERGENCY VEHICLE displaying emergency lights, OR a stationary tow truck or marked Caltrans vehicle displaying flashing amber warning lights, in the lane immediately adjacent to it because a lane change would be unsafe or impracticable",
+   "action": "slow to a reasonable and prudent speed that is safe for existing weather, road, and vehicular or pedestrian traffic conditions",
+   "unless": "a peace officer directs otherwise",
+   "statement": "WHEN passing a stationary AUTHORIZED EMERGENCY VEHICLE displaying emergency lights, OR a stationary tow truck or marked Caltrans vehicle displaying flashing amber warning lights, in the lane immediately adjacent to it because a lane change would be unsafe or impracticable, the DRIVER MUST slow to a reasonable and prudent speed that is safe for existing weather, road, and vehicular or pedestrian traffic conditions, UNLESS a peace officer directs otherwise.",
+   "penalty": "Base fine of $50 (plus assessments).",
+   "vague_terms": [
+    {
+     "term": "a reasonable and prudent speed",
+     "explanation": "no speed given"
+    }
+   ],
+   "note": "CVC 21809(a)(2); see note on PASS-USER-11 about scope."
+  },
+  {
+   "id": "PASS-USER-13",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "13",
+   "title": "Large trucks: do not linger beside",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "passing a large truck or bus",
+   "action": "linger alongside it in its blind spots",
+   "unless": "",
+   "statement": "WHEN passing a large truck or bus, the PASSER MUST NOT linger alongside it in its blind spots.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "linger",
+     "explanation": "no time given"
+    }
+   ],
+   "note": "California Driver Handbook (No Zones / large vehicles section); wording may be advice rather than command."
+  },
+  {
+   "id": "PASS-USER-14",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "14",
+   "title": "Large trucks: do not cut in front",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "PASSER",
+   "when": "returning to the lane in front of a large truck after passing it",
+   "action": "cut in front of the truck before there is enough room, such as before the front of the truck is visible in the rearview mirror",
+   "unless": "",
+   "statement": "WHEN returning to the lane in front of a large truck after passing it, the PASSER MUST NOT cut in front of the truck before there is enough room, such as before the front of the truck is visible in the rearview mirror.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "enough room",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "California Driver Handbook; large trucks need much more distance to stop."
+  },
+  {
+   "id": "PASS-USER-15",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "15",
+   "title": "Do not share a lane with a motorcycle",
+   "force": "INSTRUCTION",
+   "modal": "MUST NOT",
+   "actor": "DRIVER of a vehicle other than a MOTORCYCLE",
+   "when": "passing a MOTORCYCLE",
+   "action": "share the MOTORCYCLE's lane or pass it within the same lane",
+   "unless": "",
+   "statement": "WHEN passing a MOTORCYCLE, the DRIVER of a vehicle other than a MOTORCYCLE MUST NOT share the MOTORCYCLE's lane or pass it within the same lane.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "California Driver Handbook: motorcycles are entitled to the full lane width."
+  },
+  {
+   "id": "PASS-USER-16",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "16",
+   "title": "Lane splitting by motorcyclists",
+   "force": "PERMISSION",
+   "modal": "MAY",
+   "actor": "MOTORCYCLIST",
+   "when": "riding a two-wheeled MOTORCYCLE among slower or stopped traffic",
+   "action": "engage in LANE SPLITTING",
+   "unless": "",
+   "statement": "WHEN riding a two-wheeled MOTORCYCLE among slower or stopped traffic, the MOTORCYCLIST MAY engage in LANE SPLITTING.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21658.1 defines LANE SPLITTING and lets the California Highway Patrol issue safety guidelines; it is not prohibited, but the MOTORCYCLIST remains subject to the basic speed law and safe-movement rules. No numeric limits are set in statute."
+  },
+  {
+   "id": "PASS-USER-17",
+   "topic": "PASS",
+   "group": "USER",
+   "number": "17",
+   "title": "Do not block a lane-splitting motorcyclist",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "DRIVER",
+   "when": "a MOTORCYCLIST is passing between lanes of traffic",
+   "action": "intentionally block or impede the MOTORCYCLIST in a manner that could cause harm",
+   "unless": "",
+   "statement": "WHEN a MOTORCYCLIST is passing between lanes of traffic, the DRIVER MUST NOT intentionally block or impede the MOTORCYCLIST in a manner that could cause harm.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "in a manner that could cause harm",
+     "explanation": "no criteria given"
+    }
+   ],
+   "note": "Stated as illegal in the California Driver Handbook and Motorcycle Handbook; the exact Vehicle Code section is uncertain."
+  },
+  {
+   "id": "PASS-BEING-01",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "01",
+   "title": "Do not speed up when being passed",
+   "force": "REQUIREMENT",
+   "modal": "MUST NOT",
+   "actor": "OVERTAKEN DRIVER",
+   "when": "being passed by another vehicle",
+   "action": "increase speed until completely passed by the PASSER",
+   "unless": "",
+   "statement": "WHEN being passed by another vehicle, the OVERTAKEN DRIVER MUST NOT increase speed until completely passed by the PASSER.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21753."
+  },
+  {
+   "id": "PASS-BEING-02",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "02",
+   "title": "Move right for an overtaking vehicle",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "OVERTAKEN DRIVER",
+   "when": "the driver of an overtaking vehicle gives an audible signal",
+   "action": "safely move to the right-hand side of the HIGHWAY in favor of the overtaking vehicle",
+   "unless": "passing on the right is permitted",
+   "statement": "WHEN the driver of an overtaking vehicle gives an audible signal, the OVERTAKEN DRIVER MUST safely move to the right-hand side of the HIGHWAY in favor of the overtaking vehicle, UNLESS passing on the right is permitted.",
+   "penalty": "",
+   "vague_terms": [],
+   "note": "CVC 21753."
+  },
+  {
+   "id": "PASS-BEING-03",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "03",
+   "title": "Slower traffic keep right",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER",
+   "when": "driving at a speed less than the normal speed of traffic moving in the same direction",
+   "action": "drive in the right-hand lane for traffic or as close as practicable to the right-hand edge or curb",
+   "unless": "passing another vehicle proceeding in the same direction OR preparing for a left turn",
+   "statement": "WHEN driving at a speed less than the normal speed of traffic moving in the same direction, the DRIVER MUST drive in the right-hand lane for traffic or as close as practicable to the right-hand edge or curb, UNLESS passing another vehicle proceeding in the same direction OR preparing for a left turn.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "normal speed of traffic",
+     "explanation": "no speed given"
+    },
+    {
+     "term": "as close as practicable",
+     "explanation": "no distance given"
+    }
+   ],
+   "note": "CVC 21654; often posted as 'Slower Traffic Keep Right'."
+  },
+  {
+   "id": "PASS-BEING-04",
+   "topic": "PASS",
+   "group": "BEING",
+   "number": "04",
+   "title": "Use turnouts when five or more vehicles follow",
+   "force": "REQUIREMENT",
+   "modal": "MUST",
+   "actor": "DRIVER of a SLOW-MOVING VEHICLE",
+   "when": "on a TWO-LANE HIGHWAY where passing is unsafe because of oncoming traffic or other conditions AND five or more vehicles are formed in line behind the SLOW-MOVING VEHICLE",
+   "action": "turn off the ROADWAY at the nearest TURNOUT or wherever sufficient area for a safe turnout exists, to let the following vehicles proceed",
+   "unless": "",
+   "statement": "WHEN on a TWO-LANE HIGHWAY where passing is unsafe because of oncoming traffic or other conditions AND five or more vehicles are formed in line behind the SLOW-MOVING VEHICLE, the DRIVER of a SLOW-MOVING VEHICLE MUST turn off the ROADWAY at the nearest TURNOUT or wherever sufficient area for a safe turnout exists, to let the following vehicles proceed.",
+   "penalty": "",
+   "vague_terms": [
+    {
+     "term": "sufficient area for a safe turnout",
+     "explanation": "no size given"
+    },
+    {
+     "term": "other conditions",
+     "explanation": "not listed"
+    }
+   ],
+   "note": "CVC 21656; applies to passenger vehicles as well as trucks and recreational vehicles."
+  }
+ ]
+}
