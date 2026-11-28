@@ -4,10 +4,11 @@ The rules are to be output in JSON format.
 ## What counts as a rule
 
 A rule says what a driver or other road user must, must not, should, should not or may do, and in
-what situation. Include advice as well as obligations, conditions and exceptions, and rules shown
-only by a sign, a road marking, a diagram, a table or a list. Leave out text that states no rule:
-introductions, history, statistics, explanations of why a rule exists, and contact details. Do not
-add rules the handbook does not state, even ones that are true elsewhere.
+what situation. Include advice as well as obligations, conditions and exceptions, and rules stated
+only in a table, a list, or a description of a sign or road marking. Leave out text that states no
+rule: introductions, history, statistics, explanations of why a rule exists, and contact details.
+Do not add rules the handbook does not state, even ones that are true elsewhere, and do not add
+details that would only be shown in a missing image.
 
 ## Rule grammar
 
@@ -81,21 +82,13 @@ group in the handbook's order. Give each rule a short `title`.
 
 ## Evidence and citations
 
-A rule's `evidence` is a list of one or more block ids, such as `["21.6", "21.7"]`. A cited block
-can be:
-
-- a text block: a paragraph, list item, table row or table caption, such as `"10.22"`;
-- a figure, which holds one image, such as `"21.7"`, or `"6.35-f1"` for an image inside a table
-  row or paragraph (`-f2`, `-f3` for more images in the same block);
-- a figure's caption, whose id is the figure's id followed by `-c`, such as `"21.7-c"`.
-
-Cite a figure when its image supports the rule, and its caption when the caption's words are directly
-relevant to the rule; cite both when both are relevant. Copy each id exactly as it appears in an `id` 
-attribute.
+A rule's `evidence` is a list of one or more block ids, such as `["10.22", "8.37"]`. A cited block
+is a paragraph, list item, table row or table caption. Copy each id exactly as it appears in an
+`id` attribute, and cite only ids that appear in the pages.
 
 A rule that draws on several blocks (a rule and its exception, a list and the line that introduces
-it, a passage and its diagram, the same rule on two pages) lists each of them. Cite only the
-materials directly relevant to the rule. Do not cite unrelated text and diagrams unless they are in
+it, the same rule on two pages) lists each of them. Cite only the
+materials directly relevant to the rule. Do not cite unrelated text unless it is in
 the same block as the relevant materials. 
 
 ## Vague words
@@ -115,9 +108,9 @@ in `vocabulary`, use that vocabulary term in the rule instead of listing it here
 
 ## Notes
 
-Use `note` for anything a checker should know: a rule inferred from two places, a rule resting on
-a diagram alone (say what the diagram shows), a reason the handbook gives, or wording that could be
-read two ways. Otherwise `""`.
+Use `note` for anything a checker should know: a rule inferred from two places, a rule whose text
+points to a missing image for some of its details, a reason the handbook gives, or wording that
+could be read two ways. Otherwise `""`.
 
 ## Examples
 
@@ -151,7 +144,7 @@ out. Follow its form, not its content:
       {"term": "the way is clear", "explanation": "no gap or sight distance given"},
       {"term": "enough broken line remains ahead", "explanation": "length not given"}],
     "note": "",
-    "evidence": ["21.6", "21.7"]},
+    "evidence": ["21.6"]},
    ...,
    {"id": "PASS-USER-01", "topic": "PASS", "group": "USER", "number": "01", "title": "Cyclists: one metre",
     "force": "REQUIREMENT", "modal": "MUST", "actor": "DRIVER of a motor vehicle",
@@ -159,7 +152,7 @@ out. Follow its form, not its content:
     "statement": "WHEN passing a CYCLIST, the DRIVER of a motor vehicle MUST keep at least 1 metre between the vehicle and the CYCLIST, where practical.",
     "penalty": "A fine and two demerit points.",
     "vague_terms": [{"term": "where practical", "explanation": "does not say when 1 metre is impractical"}],
-    "note": "The same block states the penalty, and advises changing lanes to pass whenever possible; that is a separate ADVICE rule.",
+    "note": "The same block states the penalty, and advises changing lanes to pass whenever possible; that is a separate ADVICE rule. It also points to Diagram 2-11, which is not given.",
     "evidence": ["6.32"]},
    ...]}
 ```
@@ -173,4 +166,4 @@ use `...`.
 Before you answer, go through the pages again, block by block, and check that every rule they
 state about the topic is in your list. Leaving out a rule is worse than writing one rule twice.
 
-Topic: extract formal rules about overtaking (passing another vehicle, and being passed) only.
+Topic: extract formal rules about {{topic}} only.

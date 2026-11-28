@@ -173,4 +173,4 @@ use `...`.
 Before you answer, go through the pages again, block by block, and check that every rule they
 state about the topic is in your list. Leaving out a rule is worse than writing one rule twice.
 
-Topic: extract formal rules about overtaking (passing another vehicle, and being passed) only.
+Topic: extract formal rules about {{topic}} only.

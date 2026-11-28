@@ -32,9 +32,15 @@ def _same(a, b):
     return n(a) == n(b)
 
 
-def page_html(handbook_id, meta):
-    """One page as the model sees it: <article data-page> with the title and blocks, no sentence spans."""
+def page_html(handbook_id, meta, figures=True):
+    """One page as the model sees it: <article data-page> with the title and blocks, no sentence spans.
+    With figures=False every <figure> is removed whole: its <img> (and alt text) and its <figcaption>.
+    The text around an inline figure (-f1, in a table row or paragraph) stays; block ids skip where
+    figures were."""
     soup = page_soup(handbook_id, meta)
+    if not figures:
+        for fig in soup.find_all("figure"):
+            fig.decompose()
     for span in soup.find_all("span", id=True):
         span.unwrap()
     for img in soup.find_all("img"):                 # drop alt text that only repeats the caption or cell text
@@ -91,10 +97,15 @@ def to_parts(handbook_id, html, images=True):
     return parts
 
 
-def build(handbook_id, page_numbers=None, images=True, per_page=False, toc=True, task=""):
+def build(handbook_id, page_numbers=None, images=True, per_page=False, toc=True, task="", closed_book=False,
+          figures=True):
     """[{"pages": [10], "content": [parts]}]: one user message for the chosen pages (all if None), or
     one per page with per_page. Each message is: the table of contents (unless toc=False), the
-    pages, then `task` (the prompt's task.md) as the last text."""
+    pages, then `task` (the prompt's task.md) as the last text. With closed_book, the one message
+    is `task` alone, with no pages. images=False leaves out the image files but keeps the <figure>
+    markup (alt text, captions); figures=False removes every <figure> whole (see page_html)."""
+    if closed_book:
+        return [{"pages": [], "content": [{"type": "text", "text": task}]}]
     pages = load_pages(handbook_id)
     chosen = [p for p in pages if page_numbers is None or p["page"] in page_numbers]
     if not chosen:
@@ -103,7 +114,7 @@ def build(handbook_id, page_numbers=None, images=True, per_page=False, toc=True,
     out = []
     for group in groups:
         html = "\n\n".join(([contents_html(handbook_id, pages)] if toc else [])
-                           + [page_html(handbook_id, p) for p in group])
+                           + [page_html(handbook_id, p, figures) for p in group])
         content = to_parts(handbook_id, html, images)
         if task:
             content.append({"type": "text", "text": "\n\n" + task})

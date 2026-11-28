@@ -4,9 +4,6 @@ This is a dataset and framework for benchmarking how well visual language models
 
 Project for VLM CS886 F26 by Michael Lee and Henry Guo.
 
-TODO:
-simplify README
-
 ## Handbooks
 
 The three handbooks are kept as local HTML pages with their images. These HTML copies are the source of truth: everything given to a model is built from them, in their page order with the images where they appear. Each handbook folder also keeps the published PDF, for people to read; the PDFs are not used as model input for now.
@@ -189,10 +186,12 @@ The programs you run are in `tools/`. Each one starts with its usage. They can b
 | [`tools/build_corpus.py`](tools/build_corpus.py) | Builds `corpus/` from `handbooks/`. `--check` lists the pages whose files would change, `--stats` prints the handbook analysis above |
 | [`tools/build_messages.py`](tools/build_messages.py) | Writes the exact request a model gets to `build/messages/`, to read it before running anything |
 | [`tools/run_extraction.py`](tools/run_extraction.py) | Runs a model on handbook pages with a prompt and saves everything in `runs/`. `--dry-run` only counts tokens |
-| [`tools/extract.sh`](tools/extract.sh) | The draft gold-set extraction in one command: `tools/extract.sh [handbook]` (default `mto`) runs `run_extraction.py` with Claude Opus 5.5, the `formal-rules` prompt and the whole handbook, and saves the answer to `extraction_outputs/<model>/<handbook>_<YYYY_MM_DD>.json`. Options after the handbook are passed on, e.g. `tools/extract.sh mto --dry-run` |
+| [`tools/extract.sh`](tools/extract.sh) | The draft gold-set extraction in one command: `tools/extract.sh [handbook] [topic]` (default `mto overtaking`; topics `overtaking`, `turning`, `parking`) runs `run_extraction.py` with Claude Opus 5.5, the `formal-rules` prompt and the whole handbook, and saves the answer to `extraction_outputs/<model>/<handbook>_<topic>_<YYYY_MM_DD>.json`. Options after the topic are passed on, e.g. `tools/extract.sh mto turning --dry-run` or `--prompt no-handbook-rules` |
 | [`tools/models.py`](tools/models.py) | Lists the model presets and whether each one's key is set; `ping` checks one; `serve` starts a local vLLM server |
 | [`drbench/models/models.yaml`](drbench/models/models.yaml) | The model presets |
 | [`prompts/`](prompts/) | The prompts, one folder each |
+
+**Tests:** `pytest` (no API is called).
 
 ```bash
 python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10
@@ -205,9 +204,11 @@ Options of `run_extraction.py`:
 |---|---|
 | `--pages 9-11`, or a page file name | Which pages to send (default: the whole handbook). They go in one request, with their images and the table of contents |
 | `--prompt <folder>` | Which prompt to use (default `formal-rules`) |
+| `--topic <topic>` | Fills `{{topic}}` in the prompt: `overtaking`, `turning` or `parking` (see `TOPICS` in `drbench/prompts.py`) |
+| `--region <id>` | Fills `{{region}}` in a closed-book prompt (`no-handbook-rules`): `ca`, `tx` or `mto`; defaults to `--handbook`. No pages are sent |
 | `--set key=value` | Change a model setting for this run, e.g. `--set effort=low` or `--set extra_body.chat_template_kwargs.enable_thinking=false` |
 | `--label` | Add a name to the run folder |
-| `--save-to <dir>` | Also copy the answer to `<dir>/<model>/<handbook>_<YYYY_MM_DD>.json` (`_2`, `_3` … if that file exists), and the run's `meta.json` next to it as `<handbook>_<YYYY_MM_DD>.meta.json`. A preset with a `mode` (its thinking mode) saves to `<dir>/<model>/<mode>/` |
+| `--save-to <dir>` | Also copy the answer to `<dir>/<model>/<handbook>_<topic>[_<prompt>]_<YYYY_MM_DD>.json` (`_2`, `_3` … if that file exists; `<prompt>` is left out for `formal-rules`), and the run's `meta.json` next to it as `<...>.meta.json`. A preset with a `mode` (its thinking mode) saves to `<dir>/<model>/<mode>/` |
 
 ## Prompts
 
@@ -223,9 +224,11 @@ The prompts in `prompts/`:
 
 | Folder | What it is |
 |---|---|
-| [`formal-rules/`](prompts/formal-rules/) | The current draft of the prompt for the gold set: the ground-truth rules, extracted with Claude. It is the default prompt. It writes rules in the formal grammar of the legacy Ontario passing rules: ids, force and modal, a vocabulary of defined terms, vague words with explanations, and evidence given as block ids of text, figures and captions. It covers one topic, named in the last line of its `task.md` (overtaking for now). [`Note.md`](prompts/formal-rules/Note.md) explains how it is built. |
+| [`formal-rules/`](prompts/formal-rules/) | The current draft of the prompt for the gold set: the ground-truth rules, extracted with Claude. It is the default prompt. It writes rules in the formal grammar of the legacy Ontario passing rules: ids, force and modal, a vocabulary of defined terms, vague words with explanations, and evidence given as block ids of text, figures and captions. It covers one topic, chosen with `--topic` (overtaking, turning or parking). `no-image-rules/` (text only) and `no-handbook-rules/` (closed book, with `--region`) are variants of it. [`Note.md`](prompts/formal-rules/Note.md) explains how it is built. |
 | [`smoke-test/`](prompts/smoke-test/) | A small, cheap prompt (at most three rules, cited by block id) for checking that a model and the pipeline work. Its output is not meant to be used. |
 | [`archive/`](prompts/archive/) | Earlier prompts (`extract-rules`), kept for reference. Not used, and not kept up to date with the corpus or the citation format. |
+
+The earlier rule pipeline (rule language, census, rules database, the first PDF-based Ontario rules) is on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).
 
 [`prompts/Prompt_Notes.md`](prompts/Prompt_Notes.md) sums up Anthropic's advice on laying out prompts for Claude. To try a variant, copy a folder, edit it, and pass its name with `--prompt`. Every run saves a copy of the prompt it used and a hash of it, so runs with different prompt versions can be told apart.
 
@@ -271,7 +274,7 @@ Ontario page 10 alone comes to about 9,800 input tokens with its 5 images; a who
 
 ## Grounding
 
-The `formal-rules` prompt cites by block id alone: `"evidence": ["21.6", "21.7"]`. The grounding step replaces each id with `{"block", "kind", "sentences"}`:
+After every call, `drbench/grounding.py` checks the answer's citations against the corpus and writes the result to `grounded.json`, with a count of each kind in `meta.json`. The prompts cite by block id alone (`"evidence": ["21.6", "21.7"]`), and each id is replaced with `{"block", "kind", "sentences"}`:
 
 | Kind | Meaning |
 |---|---|
@@ -281,16 +284,9 @@ The `formal-rules` prompt cites by block id alone: `"evidence": ["21.6", "21.7"]
 | `heading` | A heading |
 | `no-block` | The page or block does not exist |
 
-The archived prompts cited with a block id and a quote copied from that block, and grounding still handles that form: `{"block": "10.22", "quote": "Passing left of a centreline is not permitted ..."}`. The grounding step finds the quote in the block and adds the ids of the sentences it covers (`10.22.2`), and how it was found:
-
-| Match | Meaning |
-|---|---|
-| `exact` | Word for word, ignoring case, spacing, curly quotes and dashes. A quote with "..." is matched piece by piece |
-| `fuzzy` | Most of the quote is in a sentence, or most of a sentence is in the quote |
-| `other-block` | The quote is on the same page but in another block (`found_in` gives which) |
-| `heading` | The quote is the cited heading |
-| `not-found` | The quote is not on the page |
-| `no-block` | The page or block does not exist |
+- **no-image-rules:** ids are checked against the full corpus, so a `figure` or `caption` citation in one of these runs is an id the model was never sent.
+- **no-handbook-rules:** the answer has no evidence, so there is nothing to ground.
+- **Quotes:** grounding also accepts the older `{"block": "10.22", "quote": "..."}` form, used by the archived prompts. It finds the quote in the block and adds the sentence ids it covers and a `match` (`exact`, `fuzzy`, `other-block`, `heading`, `not-found` or `no-block`).
 
 ## Models
 
@@ -315,180 +311,14 @@ A run writes `runs/<time>-<preset>-<handbook>/`:
 | `prompt/` | A copy of the prompt folder used |
 | `request.md` | The user message as text, with `[image: src]` where each image was |
 | `response.json`, `output.txt`, `reasoning.txt` | The whole API response, the answer, and the model's reasoning when the API returns it |
-| `output.json`, `grounded.json` | The answer as JSON, and the same with the sentence ids and match added to every citation |
+| `output.json`, `grounded.json` | The answer as JSON, and the same with every cited block id expanded to its kind and sentence ids (see [Grounding](#grounding)) |
 
 Runs are not committed (`runs/` is in `.gitignore`). To keep a run, copy it somewhere tracked, or add it with `git add -f`.
 
-## Core code
+Answers saved with `--save-to extraction_outputs` are committed, with their `.meta.json`, in [`extraction_outputs/`](extraction_outputs/), by vendor, model and thinking mode. Its [README](extraction_outputs/README.md) records the candidate model runs on Ontario overtaking.
 
-The programs at the top level are short. The work is done in the package `drbench/`:
+## The handbook copies (`handbooks/`)
 
-| Module | What it does | Main functions |
-|---|---|---|
-| `handbooks.py` | The three handbooks: names, folders, page order | `get`, `page_order`, `read_page` |
-| `sentences.py` | Where sentences end, and wrapping each in `<span id>` | `split`, `wrap` |
-| `corpus.py` | `handbooks/` → `corpus/`: cleaning, figures, block and sentence ids; reading the corpus | `build`, `load_pages`, `page_soup`, `parse_pages` |
-| `screening.py` | The list of places to check by hand (`screening.md`) | `screening` |
-| `stats.py` | The handbook analysis table | `report` |
-| `prompts.py` | Loads a prompt folder | `load` |
-| `messages.py` | Corpus pages → the user message: table of contents, pages as HTML, images after their `<img>`, the task | `build`, `page_html`, `contents_html`, `preview` |
-| `models/` | One interface for every model: `get_model(preset).complete(content, system, json_schema)` returns the answer, reasoning, tokens and time. `claude.py` is the Anthropic API; `openai_compat.py` is vLLM, the OpenAI API and OpenRouter | `get_model`, `ModelResponse` |
-| `run.py` | One run: build the messages, call the model, save everything, resolve the citations | `run`, `reground` |
-| `grounding.py` | A citation (a block id, or a block id + quote) → what it points to and its sentence ids | `cite`, `resolve`, `resolve_output` |
+`handbooks/<id>/` (`mto`, `ca`, `tx`) holds each handbook as downloaded, before any corpus processing: one HTML page per handbook page, its `images/`, a `style.css`, and `index.html` to browse it in a browser. `source/` holds the published PDF. The scripts in `scrapers/` made these folders, and `tools/build_corpus.py` builds `corpus/` from them.
 
-**Tests**: `pytest`. They check sentence splitting; that rebuilding the corpus gives the committed files byte for byte; that every image is a figure of its own with figure, caption and `-f<n>` ids as described above; citations by block id; the message; the prompts; and the model requests (no API is called).
-
-## Repository layout
-
-| Path | What it holds |
-|---|---|
-| `tools/` | The programs: `build_corpus.py`, `build_messages.py`, `run_extraction.py`, `extract.sh`, `models.py` (see [Programs](#programs)) |
-| `prompts/` | The prompts, one folder each |
-| `handbooks/` | The three handbooks: `mto/` (Ontario), `ca/` (California), `tx/` (Texas). Each has its HTML pages, `images/` and the PDF in `source/` |
-| `corpus/` | The handbooks with an id on every block and sentence, with each handbook's manual decisions and screening list |
-| `drbench/` | The code behind the programs (see [Core code](#core-code)) |
-| `scrapers/` | The scripts that made `handbooks/` |
-| `tests/` | Tests for `pytest` |
-| `legacy/` | Earlier material: the first Ontario passing rules (`ontario_passing_rules.yaml`, `Ontario passing rules.md`) that `formal-rules` follows, and the prompts the team gave Claude (`prompt.md`) |
-| `extraction_outputs/` | Model answers saved with `--save-to`, by vendor, model and thinking mode. Its [README](extraction_outputs/README.md) records the candidate model runs on Ontario overtaking |
-| `runs/`, `build/` | Run results and built messages; not committed |
-
-The earlier rule pipeline (rule language, census, rules database, extraction prompts and runs, the Qwen trial, review pages, and the first PDF-based Ontario rules) is kept on the branch [`archive/rule-pipeline`](https://github.com/hennyg888/Drive-Rule-Extraction-Bench/tree/archive/rule-pipeline).
-
-## MTO Driver's Handbook – Offline Copy
-
-A local, offline copy of [The Official MTO Driver's Handbook](https://www.ontario.ca/document/official-mto-drivers-handbook) from ontario.ca. Each page is saved as clean HTML, and every image is saved with it.
-
-### Contents
-
-```
-scrapers/scrape_mto_handbook.py   # downloads the handbook
-handbooks/mto/
-├── index.html              # cover page (start here)
-├── <chapter>.html          # one file per page, 29 in total (e.g. signs.html)
-├── images/                 # all 241 images used in the content
-├── source/MTO-drivers-handbook-ontario.ca.pdf   # the handbook as a PDF from ontario.ca
-└── style.css               # shared stylesheet
-```
-
-### Usage
-
-```sh
-pip install requests beautifulsoup4
-python scrapers/scrape_mto_handbook.py
-```
-
-Open `handbooks/mto/index.html` in a browser. Running the script again downloads every page again. Images already in `images/` are skipped.
-
-### Differences from the online version
-
-The handbook content matches the live site. Checked against ontario.ca on 2026-10-06: the text of all 30 pages is the same word for word, and all 241 images are byte-identical with the same alt text. The only differences are these deliberate changes:
-
-**Added**
-- A table-of-contents sidebar, previous/next buttons and an "On this page" list on every page.
-- Anchor ids on section headings, so the "On this page" list can link to them.
-- An Updated/Published dates line, and a "Source:" link to the page on ontario.ca.
-
-**Removed**
-- The site's header, footer, breadcrumbs, menus, scripts and tracking code.
-- Inline `style` and `data-*` attributes.
-- The site's empty "On this page" placeholder, which is filled in by JavaScript on the live site.
-
-**Changed**
-- **Links:** links between handbook pages point to the local `.html` files, including `#section` jumps. All other links stay as they are on the site, changed to full addresses.
-- **Images:** image paths point to the local `images/` folder.
-- **Formatting:** the HTML is indented so it's easy to read. Text inside paragraphs is kept on one line, so spacing doesn't change.
-
-## California Driver's Handbook – Offline Copy
-
-A local, offline copy of the [California Driver's Handbook](https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/) from dmv.ca.gov, plus the DMV's PDF edition of the same handbook (DL 600, Rev. 6/2025). It is made the same way as the MTO copy and reuses its page template and stylesheet.
-
-### Contents
-
-```
-scrapers/scrape_ca_handbook.py    # downloads the handbook and the PDF
-handbooks/ca/
-├── index.html              # cover page with the Secretary's message (start here)
-├── <page>.html             # one file per web page, 22 in total (e.g. navigating-the-roads.html)
-├── images/                 # all 74 images used in the content
-├── source/DL-600.pdf       # the DMV's PDF edition, 92 pages
-└── style.css               # the MTO stylesheet, plus nested "On this page" lists
-```
-
-The pages follow the site's own order: the front matter (DMV Services, Copyright, Disclaimer), then Sections 1 to 14. Long sections are split across several web pages on the site, and keep that split here: Section 6 is `navigating-the-roads.html` and `navigating-the-roads-cont1.html`, Section 7 is `laws-and-rules-of-the-road.html` plus `-cont1` and `-cont2`, and Section 8 is `safe-driving.html` plus `-cont1` and `-cont2`.
-
-### Usage
-
-```sh
-pip install requests beautifulsoup4
-python scrapers/scrape_ca_handbook.py
-```
-
-Open `handbooks/ca/index.html` in a browser. The script waits a second between requests. Running it again downloads every page again; the PDF is downloaded only if `source/DL-600.pdf` is missing.
-
-### Differences from the online version
-
-The handbook content matches the live site. Checked against dmv.ca.gov on 2026-10-20: the text of all 23 pages (21,413 words) is the same word for word, the headings match level for level, and all 74 images are byte-identical with the same alt text. None of the 955 links between the local files is broken. The web pages were last updated between November 2024 and September 2026, so in places they may differ from the June 2025 PDF; the two were not compared.
-
-**Added**
-- A table-of-contents sidebar, previous/next buttons and an "On this page" list on every page.
-- An anchor id on every heading (h2 to h4), so citations can point to subsections.
-- An Updated/Published/Retrieved dates line, from each page's metadata, and a "Source:" link to the page on dmv.ca.gov.
-
-**Removed**
-- The site's header, footer, breadcrumbs, menus, chat assistant, scripts and tracking code.
-- Table labels that the site shows only on phones (they repeat the column headers), and empty spacer paragraphs.
-- Two-column layout wrappers. Content keeps the site's source order, so an image may come just before the text it sits beside.
-- Inline `style`, `class` and `data-*` attributes.
-
-**Changed**
-- **Links:** links between handbook pages point to the local `.html` files. All other links stay as they are on the site, changed to full addresses.
-- **Images:** image paths point to the local `images/` folder.
-- **Formatting:** the HTML is indented so it's easy to read. Text inside paragraphs is kept on one line. Non-breaking spaces became ordinary spaces.
-
-Notes for readers: captions are the paragraph after their image, and some are a single word ("Right", "Wrong"). Nine images have no alt text on the site. The "DO NOT PASS" and "SLOWER TRAFFIC KEEP RIGHT" signs appear only inside the image `Sign-Sample-1.png`.
-
-## Texas Driver Handbook – Offline Copy
-
-A local copy of the [Texas Driver Handbook](https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf) (DL-7, revised January 2026) from the Texas Department of Public Safety. Texas publishes the handbook only as a PDF, so the script downloads the PDF and converts it into the same kind of HTML pages as the other two handbooks.
-
-### Contents
-
-```
-scrapers/scrape_tx_handbook.py    # downloads the PDF and converts it
-handbooks/tx/
-├── index.html              # cover, introduction, contact details, the Colonel's letter and the contents (start here)
-├── chapter-<n>-<title>.html   # Chapters 1 to 14 (e.g. chapter-6-signaling-passing-and-turning.html)
-├── appendix-<x>-<title>.html  # Appendices A to E
-├── back-cover.html
-├── images/                 # 203 images rendered from the PDF
-├── source/DL-7.pdf         # the original PDF, 91 pages
-└── style.css               # the MTO stylesheet, plus notes and captions
-```
-
-### Usage
-
-```sh
-pip install requests beautifulsoup4 pymupdf
-python scrapers/scrape_tx_handbook.py   # add --verify to print the checks below
-```
-
-Open `handbooks/tx/index.html` in a browser. The PDF is downloaded only if `source/DL-7.pdf` is missing; the conversion runs every time.
-
-### How the PDF was converted
-
-- **Reading order and headings** come from the PDF's own tags (it is a tagged PDF with no bookmarks). Paragraphs and lists that continue across a page break are joined, and words hyphenated at line ends are rejoined.
-- **Running headers, footers and page numbers** are left out, as are table headers and "(Continued)" titles that the PDF repeats on every page of a long table.
-- **Page references:** every paragraph, list item, heading and table row carries `data-pdf-page` (the PDF page) and `data-page-label` (the page number printed on it). Each page's "Source:" link opens the PDF at its first page.
-- **Images:** the 203 images are rendered from the PDF: 84 figures and 119 sign, shape and colour cells from the sign tables. The PDF has no alt text, so each image's alt text comes from its caption (134), from text next to it (41), or was written by hand from the picture (28, mostly signs whose lettering is drawn as shapes). The `data-alt-source` attribute on each image says which.
-- **Sign tables** (Tables 16 to 21) are two-column Sign | Description tables, one sign per row, with each table's title as its caption.
-- **Special Notes** are paragraphs with class `note`, placed after the paragraph or list they sit beside in the PDF.
-- **Text is kept as printed**, including its typos.
-
-### Checks
-
-Checked on 2026-10-20 with `--verify`:
-
-- **Text:** the HTML holds 98.2% of the PDF's words (99.8% counting list numbers, which the browser draws, and alt text). What is left out is the chapter titles, which are in each page's `<h1>` rather than its text, and the repeated table headers. No run of four or more words from the PDF is missing on any page, and the HTML adds no words.
-- **Order:** every one of the 1,557 text blocks starts with words found on the PDF page it names. Page breaks, two-column pages and figures with text wrapped around them were spot-checked by hand.
-- **Images:** all 203 images referenced by the pages exist, and each of the 119 sign images was checked against its description.
+The HTML text and images are unedited. The scrapers only removed the site's header, footer, menus and scripts, pointed links and images at the local files, and added navigation. Ontario and California were checked word for word against the live sites (October 2026). Texas publishes only a PDF, so its pages are converted from `source/DL-7.pdf` (`scrapers/scrape_tx_handbook.py --verify` checks the conversion).

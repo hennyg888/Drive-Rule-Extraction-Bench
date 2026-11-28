@@ -1,0 +1,4 @@
+# How the corpus is sent with this prompt (read by drbench/prompts.py; not sent to the model).
+# figures: false removes every <figure> block whole: the image, its <img alt> text and its
+# <figcaption>. Text blocks stay, and block ids skip where figures were.
+figures: false

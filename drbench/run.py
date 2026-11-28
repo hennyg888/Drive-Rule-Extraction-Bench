@@ -82,23 +82,36 @@ def call(model, handbook_id, message, system, schema, folder, log=print):
     log(f"  pages {message['pages']}: {r.input_tokens:,} in / {r.output_tokens:,} out tokens, {r.seconds}s, "
         f"stop: {r.stop_reason}" + (f", ${rec['cost_usd']}" if rec["cost_usd"] is not None else "")
         + (f", citations: {rec['citations']}" if rec.get("citations") else "") + ("" if rec["json"] else ", answer is not JSON"))
+    if r.stop_reason in ("max_tokens", "length"):
+        rec["truncated"] = True
+        log(f"  WARNING: pages {message['pages']}: the answer hit the output limit "
+            f"(max_tokens={model.params.get('max_tokens')}) and is cut off; raise max_tokens or split the pages")
     return rec
 
 
 def run(model_name, handbook_id, pages=None, prompt=prompts.DEFAULT, images=True, toc=True, per_page=False,
-        overrides=None, label=None, out_root=RUNS, log=print):
+        overrides=None, label=None, out_root=RUNS, log=print, topic=None, region=None):
     """Run a model on handbook pages (page numbers; None for all) with a prompt (a folder name in
-    prompts/, or a folder path). Returns the run folder."""
+    prompts/, or a folder path), its task.md filled with `topic` and `region` (see prompts.py).
+    A closed-book prompt (one with a region) sends task.md alone; handbook_id then only names the
+    run. Returns the run folder."""
     model = get_model(model_name, **(overrides or {}))
-    p = prompts.load(prompt)
-    msgs = messages.build(handbook_id, pages, images=images, per_page=per_page, toc=toc, task=p.task)
-    name = f"{time.strftime('%Y%m%d-%H%M%S')}-{model_name.replace('/', '_')}-{handbook_id}" + (f"-{label}" if label else "")
+    p = prompts.load(prompt, topic=topic, region=region)
+    msgs = messages.build(handbook_id, pages, images=images, per_page=per_page, toc=toc, task=p.task,
+                          closed_book=p.closed_book, figures=p.figures)
+    name = (f"{time.strftime('%Y%m%d-%H%M%S')}-{model_name.replace('/', '_')}-{handbook_id}"
+            + (f"-{topic}" if topic else "") + (f"-{label}" if label else ""))
     folder = os.path.join(out_root, name)
     os.makedirs(folder)
     shutil.copytree(p.folder, os.path.join(folder, "prompt"))
     meta = {"run": name, "started": time.strftime("%Y-%m-%d %H:%M:%S"), "git": git_commit(), **model.describe(),
             "handbook": handbook_id, "pages": sorted(pages) if pages else "all", "images": images, "toc": toc,
-            "per_page": per_page, "prompt": p.name, "prompt_sha256": p.sha256}
+            "per_page": per_page, "prompt": p.name, "prompt_sha256": p.sha256, "topic": topic, "region": region,
+            "closed_book": p.closed_book, "figures": p.figures}
+    if p.closed_book:
+        meta.update(pages="none", images=False, toc=False, figures=False)
+    elif not p.figures:
+        meta.update(images=False)
     log(f"{name}: {len(msgs)} call(s)")
     calls = []
     for m in msgs:

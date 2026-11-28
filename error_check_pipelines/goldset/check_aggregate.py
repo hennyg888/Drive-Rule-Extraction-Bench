@@ -153,6 +153,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("rules", help="rules JSON file")
     ap.add_argument("--handbook", default="mto")
+    ap.add_argument("--topic", default="overtaking", choices=list(prompts.TOPICS),
+                    help="the topic the rules are on, filled into the extraction prompt (default overtaking)")
     ap.add_argument("--model", default=DEFAULT_MODEL, help=f"preset in drbench/models/models.yaml (default {DEFAULT_MODEL})")
     ap.add_argument("--no-images", action="store_true", help="send the corpus without images (alt text stays)")
     ap.add_argument("--set", action="append", default=[], metavar="KEY=VALUE", help="override a model param")
@@ -177,7 +179,7 @@ def main():
             sys.exit(text + "\n\nStage 1 must pass before stage 3 (or use --skip-format-check).")
 
     judge = prompts.load(JUDGE_PROMPT)
-    extraction = prompts.load(EXTRACTION_PROMPT)
+    extraction = prompts.load(EXTRACTION_PROMPT, topic=a.topic)
     overrides = dict(kv.split("=", 1) for kv in a.set)
     model = get_model(a.model, **{k: parse_value(v) for k, v in overrides.items()})
 

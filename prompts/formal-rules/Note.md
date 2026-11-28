@@ -14,20 +14,22 @@ This prompt writes rules in the grammar of the legacy Ontario passing rules
 
 ## Changing the topic
 
-The last line of `task.md` sets the topic:
+The last line of `task.md` is a template:
 
 ```
-Topic: extract formal rules about overtaking (passing another vehicle, and being passed) only.
+Topic: extract formal rules about {{topic}} only.
 ```
 
-To change the topic, edit only that line, e.g. `Topic: extract formal rules about turning at
-intersections only.` or `Topic: extract all rules of the road.` Ids and groups adapt to it, because
-the prompt asks for a topic code rather than hard-coding PASS.
+`{{topic}}` is filled in from `TOPICS` in `drbench/prompts.py` by the `--topic` option
+(`overtaking`, `turning` or `parking`); a run without `--topic` is refused. To add a topic, add it
+to `TOPICS`. Ids and groups adapt to it, because the prompt asks for a topic code rather than
+hard-coding PASS. With `--topic overtaking` the filled prompt is the same text, and hash, as the
+one the overtaking gold sets were made with.
 
 ## Running it
 
 ```
-python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10 --prompt formal-rules
+python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto --pages 10 --prompt formal-rules --topic overtaking
 ```
 
 ## Checked so far
@@ -41,9 +43,8 @@ python tools/run_extraction.py --model anthropic/claude-opus-5-5 --handbook mto 
 
 ## Things to know
 
-- **Changing the topic line changes the prompt hash.** Runs on different topics are recorded as
-  different prompt versions. If topics will be switched often, the topic could become a
-  `--topic` flag instead.
+- **The hash is of the filled prompt**, so runs on different topics are recorded as different
+  prompt versions. `meta.json` also records `topic`.
 - **Vague words** are listed per rule as `{term, explanation}`: the words as they appear in the
   statement, and why they are vague.
 - **Citations are block ids only.** There are no quotes, and no image descriptions in the evidence.
